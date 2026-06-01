@@ -16,6 +16,7 @@ Treat the vault as three layers:
 
 ```text
 raw/          immutable source material
+research/     AI-generated research reports and other uncertain secondary syntheses
 wiki/         Codex-maintained knowledge pages
 AGENTS.md     operating rules for Codex
 ```
@@ -24,11 +25,16 @@ Additional support folders:
 
 ```text
 templates/       reusable Markdown templates
+raw/assets/      locally downloaded source attachments from clips, such as images
+research/assets/ attachments that belong to AI-generated research reports
 wiki/_assets/    generated or locally saved images and attachments used by wiki pages
 wiki/_outputs/   generated exports such as charts, tables, reports, slide outlines, or analysis files
 ```
 
 Never modify files in `raw/`. If a source needs cleaning, create a derived note or output in `wiki/` or `wiki/_outputs/`.
+For Obsidian Web Clipper attachments, prefer Obsidian's fixed attachment folder `raw/assets/`, following Karpathy's suggested pattern.
+
+Treat `research/` differently from `raw/`: AI-generated research can be useful, but it is not primary evidence. Preserve it as received, track uncertainty, and verify important claims against primary sources before promoting them into durable wiki claims.
 
 ## Source types
 
@@ -40,10 +46,29 @@ Handle many source formats, including:
 - PowerPoint, slide decks, presentation notes, and exported slide text
 - Charts, screenshots, images, diagrams, and other visual artifacts
 - Meeting notes, transcripts, emails, project docs, and mixed folders
+- AI-generated deep-research reports, model-generated summaries, and third-party AI syntheses
 
 For spreadsheets and tables, preserve important column names, units, filters, formulas, and caveats.
 For slide decks, preserve the main narrative, slide-level claims, visual evidence, and audience/purpose when available.
 For charts and images, describe what is visible, what is inferred, and what cannot be verified from the image alone.
+For AI-generated research, separate reported claims from verified facts, record the model/tool if known, and mark uncertain claims as `needs verification`.
+
+## AI-generated research workflow
+
+Put AI-generated deep-research reports in `research/`, not `raw/`, unless the user explicitly wants to treat a specific report as a raw source.
+
+When ingesting from `research/`:
+
+1. Create a source summary page with `type: ai-research-summary`.
+2. Record provenance when available: tool/model, prompt/topic, generation date, exported date, and cited sources.
+3. Assign a trust level: `unverified`, `partially-verified`, or `verified`.
+4. Extract useful leads, claims, entities, and cited sources.
+5. Do not treat uncited AI-generated claims as facts. Mark them `needs verification`.
+6. Prefer following citations back to primary sources before updating core concept pages.
+7. If the research contains citations, record whether citations were checked, unavailable, or contradicted.
+8. Update `wiki/sources.md` under an AI research section.
+
+Use AI research as a map, not as the territory.
 
 ## Ingest workflow
 
@@ -123,6 +148,7 @@ Include:
 - Every factual claim should reference a source.
 - Use `(source: filename.ext)` for concise citations in prose.
 - For claims drawn from generated analysis, cite the underlying raw file and mention that the conclusion is analysis.
+- For claims drawn from AI-generated research, cite the research file and mark the claim as unverified unless independently checked.
 - If sources disagree, state the contradiction explicitly.
 - If a claim has no source, mark it as `needs verification`.
 - Do not hide uncertainty. Use "the source claims", "the data suggests", or "this is inferred" when appropriate.
@@ -158,8 +184,10 @@ When asked to lint or audit the wiki:
 - Identify important concepts mentioned without their own page.
 - Flag stale or time-sensitive claims.
 - Check missing citations.
+- Check AI-generated research claims that were promoted without verification.
 - Check pages that do not follow the page format.
 - Check source files in `raw/` that are not listed in `wiki/sources.md`.
+- Check research files in `research/` that are not listed in `wiki/sources.md`.
 - Report findings as a numbered list with suggested fixes.
 
 ## Log format
@@ -181,8 +209,11 @@ Append entries to `wiki/log.md` using this pattern:
 ## Rules
 
 - Never modify anything in `raw/`.
+- Never silently treat AI-generated research as primary evidence.
 - Always update `wiki/index.md`, `wiki/sources.md`, and `wiki/log.md` after ingesting sources.
-- Keep generated outputs in `wiki/_outputs/` and wiki media in `wiki/_assets/`.
+- Keep downloaded source attachments in `raw/assets/`.
+- Keep AI-generated deep-research reports in `research/` and their attachments in `research/assets/`.
+- Keep generated outputs in `wiki/_outputs/` and curated wiki media in `wiki/_assets/`.
 - Keep page names lowercase and hyphenated.
 - Write in clear, plain language.
 - Prefer durable structure over over-organization.

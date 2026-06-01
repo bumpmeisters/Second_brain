@@ -28,6 +28,28 @@ updated: 2026-06-01
   - Added canonical Codex instructions, templates, source register, generated asset/output folders, and Git ignore rules.
   - Kept `agent.md` as a compatibility pointer to `AGENTS.md`.
 
+## 2026-06-01 | setup | add raw assets folder
+
+- Sources:
+  - AGENTS.md
+- Changed:
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Added `raw/assets/` for locally downloaded Obsidian Web Clipper attachments, matching Karpathy's suggested `raw/assets/` pattern.
+
+## 2026-06-01 | setup | add AI research intake zone
+
+- Sources:
+  - AGENTS.md
+- Changed:
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Added `research/` and `research/assets/` for AI-generated deep-research reports.
+  - Added rules to treat AI-generated research as uncertain secondary synthesis unless independently verified.
+
 ## 2026-05-30
 
 - Created initial wiki structure with `raw/`, `wiki/`, `wiki/index.md`, and `wiki/log.md`.

@@ -8,7 +8,7 @@ updated: 2026-06-01
 
 # Sources
 
-**Summary**: Register of raw files and their ingest status.
+**Summary**: Register of raw files, AI-generated research, and their ingest status. Downloaded source attachments belong in `raw/assets/`; AI-research attachments belong in `research/assets/`.
 
 ---
 
@@ -23,6 +23,12 @@ updated: 2026-06-01
 ## Pending
 
 No pending sources are currently registered.
+
+## AI-generated research
+
+| Source | Tool/model | Trust level | Status | Summary page | Verification notes |
+|---|---|---|---|---|---|
+| None registered yet. |  |  |  |  |  |
 
 ## Related pages
 

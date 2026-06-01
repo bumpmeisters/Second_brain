@@ -26,6 +26,12 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
 
+## Input zones
+
+- `raw/` - Primary or original source files, including clippings, PDFs, tables, slides, and source attachments.
+- `research/` - AI-generated deep-research reports and other uncertain secondary syntheses.
+- `wiki/` - Codex-maintained pages created from sources and analysis.
+
 ## Source summaries
 
 - [[karpathys-llm-wiki-full-beginner-setup-guide]] - Video transcript explaining how an AI agent maintains a persistent Markdown wiki instead of answering from raw documents every time.
