@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Work Blueprint"
+  short_description: "Plan, verify, and improve repeatable AI work."
+  default_prompt: "Use this skill to turn a meaningful AI task into a small spec, verification plan, and environment update."

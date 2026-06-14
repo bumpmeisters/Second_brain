@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DSV Initiative Brief</title>
+  <style>
+    :root {
+      --dsv-blue: #002664;
+      --dsv-blue-2: #004b93;
+      --dsv-red: #e30613;
+      --ink: #162033;
+      --muted: #5f6b7d;
+      --line: #d8dee8;
+      --soft: #f4f7fb;
+      --soft-2: #eaf0f7;
+      --white: #ffffff;
+      --green: #0f7b52;
+      --amber: #9a6515;
+      --shadow: 0 18px 48px rgba(0, 38, 100, 0.14);
+      --radius: 8px;
+      --focus: 0 0 0 3px rgba(0, 75, 147, 0.2);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(0, 38, 100, 0.08), rgba(227, 6, 19, 0.03) 34%, transparent 60%),
+        var(--white);
+      min-height: 100vh;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 54px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: var(--dsv-blue);
+      border-bottom: 4px solid var(--dsv-red);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .brand p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .progress-wrap {
+      display: grid;
+      gap: 6px;
+      min-width: 220px;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .progress-track {
+      height: 8px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--soft-2);
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--dsv-blue), var(--dsv-blue-2), var(--dsv-red));
+      transition: width 0.25s ease;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 9px 12px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: #b9c5d6;
+      background: #fbfcff;
+    }
+
+    .btn.primary {
+      background: var(--dsv-blue);
+      color: var(--white);
+      border-color: var(--dsv-blue);
+    }
+
+    .btn.danger {
+      color: var(--dsv-red);
+    }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.2;
+    }
+
+    main {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 22px 42px;
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr) 380px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    nav,
+    aside,
+    .panel {
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 32px rgba(0, 38, 100, 0.08);
+    }
+
+    nav,
+    aside {
+      position: sticky;
+      top: 82px;
+      max-height: calc(100vh - 104px);
+      overflow: auto;
+    }
+
+    nav {
+      padding: 10px;
+    }
+
+    .nav-button {
+      width: 100%;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      padding: 11px 10px;
+      display: grid;
+      grid-template-columns: 22px 1fr auto;
+      align-items: center;
+      gap: 9px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .nav-button svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .nav-button span:last-child {
+      color: #99a4b5;
+      font-size: 11px;
+    }
+
+    .nav-button.active {
+      color: var(--white);
+      background: var(--dsv-blue);
+    }
+
+    .nav-button.active span:last-child {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .intro {
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(0, 38, 100, 0.98), rgba(0, 75, 147, 0.92)),
+        var(--dsv-blue);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro::after {
+      content: "";
+      position: absolute;
+      inset: auto -70px -90px auto;
+      width: 260px;
+      height: 180px;
+      transform: rotate(-18deg);
+      background: rgba(227, 6, 19, 0.85);
+    }
+
+    .intro h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(27px, 4vw, 44px);
+      line-height: 1.04;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .intro p {
+      position: relative;
+      z-index: 1;
+      margin: 14px 0 0;
+      max-width: 720px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .panel {
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .panel h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .panel .hint {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 700px;
+    }
+
+    .quality {
+      min-width: 112px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: #26364f;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .micro {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #cbd5e4;
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--ink);
+      padding: 10px 11px;
+      font-size: 14px;
+      line-height: 1.35;
+      outline: none;
+      transition: border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    textarea {
+      min-height: 108px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--dsv-blue-2);
+      box-shadow: var(--focus);
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .choice {
+      min-height: 40px;
+      border: 1px solid #cbd5e4;
+      border-radius: 6px;
+      padding: 9px 10px;
+      background: var(--white);
+      color: var(--muted);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .choice.active {
+      color: var(--white);
+      background: var(--dsv-blue);
+      border-color: var(--dsv-blue);
+    }
+
+    .questions {
+      margin: 16px 0 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .question {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .question::before {
+      content: "?";
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      color: var(--dsv-blue);
+      background: var(--soft);
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    aside {
+      padding: 18px;
+    }
+
+    .summary-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .summary-title h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .status {
+      border-radius: 999px;
+      padding: 6px 9px;
+      background: #fff4f4;
+      color: var(--dsv-red);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .status.ready {
+      background: #e8f6ef;
+      color: var(--green);
+    }
+
+    .summary {
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-block {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .summary-block h4 {
+      margin: 0 0 5px;
+      color: var(--dsv-blue);
+      font-size: 12px;
+      line-height: 1.25;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .summary-block p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+    }
+
+    .empty {
+      color: #9aa5b5 !important;
+      font-style: italic;
+    }
+
+    .score-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .score {
+      padding: 10px;
+      border-radius: 6px;
+      background: var(--soft);
+    }
+
+    .score strong {
+      display: block;
+      color: var(--dsv-blue);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .score span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 9px;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 8px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .check input {
+      width: 16px;
+      height: 16px;
+      margin: 1px 0 0;
+      accent-color: var(--dsv-blue);
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.45;
+      margin-top: 14px;
+    }
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      transform: translateY(16px);
+      opacity: 0;
+      pointer-events: none;
+      padding: 12px 14px;
+      border-radius: 6px;
+      color: var(--white);
+      background: var(--dsv-blue);
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      font-weight: 800;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      z-index: 30;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1180px) {
+      main {
+        grid-template-columns: 220px minmax(0, 1fr);
+      }
+
+      aside {
+        position: static;
+        grid-column: 1 / -1;
+        max-height: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      header {
+        position: static;
+      }
+
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        justify-content: flex-start;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+
+      nav {
+        position: static;
+        max-height: none;
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+      }
+
+      .nav-button {
+        min-width: 180px;
+      }
+
+      .grid,
+      .choice-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--white);
+      }
+
+      header,
+      nav,
+      .intro,
+      .actions,
+      .toast {
+        display: none !important;
+      }
+
+      main {
+        display: block;
+        padding: 0;
+      }
+
+      aside {
+        position: static;
+        max-height: none;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .content {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="topbar">
+        <div class="brand">
+          <div class="mark" aria-label="DSV">DSV</div>
+          <div>
+            <h1>Initiative Brief</h1>
+            <p>Interaktive Marketing-Vorlage für DSV Logistics</p>
+          </div>
+        </div>
+
+        <div class="progress-wrap" aria-label="Vollständigkeit">
+          <div class="progress-meta">
+            <span>Brief-Fortschritt</span>
+            <span id="progressText">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" id="copyBtn" type="button" title="Brief als Markdown kopieren">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Kopieren
+          </button>
+          <button class="btn" id="printBtn" type="button" title="Brief drucken oder als PDF speichern">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
+            PDF
+          </button>
+          <button class="btn danger" id="resetBtn" type="button" title="Alle Eingaben zurücksetzen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 3v6h6"></path></svg>
+            Reset
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav aria-label="Brief-Abschnitte">
+        <button class="nav-button active" type="button" data-target="context">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16v16H4z"></path><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h4"></path></svg>
+          <span>Kontext</span>
+          <span>01</span>
+        </button>
+        <button class="nav-button" type="button" data-target="objective">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 2v4"></path><path d="M22 12h-4"></path></svg>
+          <span>Ziel</span>
+          <span>02</span>
+        </button>
+        <button class="nav-button" type="button" data-target="audience">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-8 0v2"></path><circle cx="12" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.8"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg>
+          <span>Zielgruppe</span>
+          <span>03</span>
+        </button>
+        <button class="nav-button" type="button" data-target="message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path></svg>
+          <span>Message</span>
+          <span>04</span>
+        </button>
+        <button class="nav-button" type="button" data-target="activation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 11l18-8-8 18-2-8-8-2z"></path></svg>
+          <span>Aktivierung</span>
+          <span>05</span>
+        </button>
+        <button class="nav-button" type="button" data-target="governance">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          <span>Governance</span>
+          <span>06</span>
+        </button>
+      </nav>
+
+      <div class="content">
+        <section class="intro">
+          <h2>Ein Brief, der Strategie in umsetzbares Marketing übersetzt.</h2>
+          <p>Nutze diese Vorlage für größere DSV-Marketinginitiativen wie Branchenkampagnen, Produktlaunches, Trade-Lane-Aktivierung, Sales Enablement, Nachhaltigkeitskommunikation oder kundenspezifische Wachstumsprogramme.</p>
+        </section>
+
+        <section class="section active" id="context">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>01 Kontext und Initiative</h3>
+                <p class="hint">Beschreibe knapp, warum diese Initiative existiert und welchen Logistik-Kontext sie berührt.</p>
+              </div>
+              <div class="quality" data-quality="context">0/5 Felder</div>
+            </div>
+            <div class="grid">
+              <div class="field">
+                <label for="initiativeName">Name der Initiative</label>
+                <input id="initiativeName" data-field placeholder="z. B. Healthcare Cold Chain Growth Program">
+              </div>
+              <div class="field">
+                <label for="owner">Owner</label>
+                <input id="owner" data-field placeholder="Name, Team, Markt oder Region">
+              </div>
+              <div class="field">
+                <label for="businessArea">DSV-Geschäftsbereich</label>
+                <select id="businessArea" data-field>
+                  <option value="">Bitte wählen</option>
+                  <option>Air</option>
+                  <option>Ocean</option>
+                  <option>Road</option>
+                  <option>Solutions / Contract Logistics</option>
+                  <option>Customs / Compliance</option>
+                  <option>Integrated Supply Chain</option>
+                  <option>Cross-divisional</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="marketScope">Markt / Region</label>
+                <input id="marketScope" data-field placeholder="z. B. DACH, Nordics, Global, Germany">
+              </div>
+              <div class="field full">
+                <label for="situation">Ausgangslage</label>
+                <textarea id="situation" data-field placeholder="Was hat sich im Markt, bei Kunden, im Wettbewerb oder intern verändert?"></textarea>
+                <span class="micro">Gute Antwort: ein konkreter Business-Kontext, kein allgemeiner Marketingwunsch.</span>
+              </div>
+            </div>
+            <div class="questions">
+              <div class="question">Welche Kunden- oder Marktentwicklung macht diese Initiative jetzt relevant?</div>
+              <div class="question">Geht es um Wachstum, Retention, Awareness, Pipeline, Enablement oder Effizienz?</div>
+              <div class="question">Welche DSV-Fähigkeit soll sichtbarer, glaubwürdiger oder leichter verkäuflich werden?</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="objective">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>02 Ziel, Erfolg und Funnel-Rolle</h3>
+                <p class="hint">Lege fest, woran Erfolg gemessen wird und welche Rolle die Initiative im Marketing-Funnel hat.</p>
+              </div>
+              <div class="quality" data-quality="objective">0/5 Felder</div>
+            </div>
+            <div class="grid">
+              <div class="field full">
+                <label>Primäre Funnel-Rolle</label>
+                <div class="choice-grid" data-choice-group="funnelRole">
+                  <button class="choice" type="button" data-value="Brand">Brand</button>
+                  <button class="choice" type="button" data-value="Demand Generation">Demand Gen</button>
+                  <button class="choice" type="button" data-value="Lead Generation">Lead Gen</button>
+                  <button class="choice" type="button" data-value="Conversion">Conversion</button>
+                  <button class="choice" type="button" data-value="Nurture">Nurture</button>
+                  <button class="choice" type="button" data-value="Sales Enablement">Sales Enablement</button>
+                </div>
+              </div>
+              <div class="field full">
+                <label for="businessObjective">Business-Ziel</label>
+                <textarea id="businessObjective" data-field placeholder="Welches kommerzielle oder strategische Ziel soll unterstützt werden?"></textarea>
+              </div>
+              <div class="field">
+                <label for="primaryKpi">Primärer KPI</label>
+                <input id="primaryKpi" data-field placeholder="z. B. qualified opportunities, meetings, pipeline value">
+              </div>
+              <div class="field">
+                <label for="targetMetric">Zielwert</label>
+                <input id="targetMetric" data-field placeholder="z. B. 120 MQLs, 25 SQLs, EUR 5m pipeline">
+              </div>
+              <div class="field">
+                <label for="timing">Timing</label>
+                <input id="timing" data-field placeholder="z. B. Q3 2026, 12 Wochen, Launch im September">
+              </div>
+              <div class="field">
+                <label for="budget">Budget / Ressourcenrahmen</label>
+                <input id="budget" data-field placeholder="z. B. EUR 80k media, 0.5 FTE, agency support">
+              </div>
+            </div>
+            <div class="questions">
+              <div class="question">Was soll nach der Initiative anders sein als vorher?</div>
+              <div class="question">Ist der KPI ein echter Business-Indikator oder nur Aktivitätsmessung?</div>
+              <div class="question">Welche Sales-, Operations- oder Produktteams müssen Erfolg mittragen?</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="audience">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>03 Zielgruppe und Kaufkontext</h3>
+                <p class="hint">Definiere nicht nur Branchen, sondern die konkreten Rollen im B2B-Kaufprozess.</p>
+              </div>
+              <div class="quality" data-quality="audience">0/5 Felder</div>
+            </div>
+            <div class="grid">
+              <div class="field">
+                <label for="industry">Branche / Segment</label>
+                <input id="industry" data-field placeholder="z. B. Automotive, Healthcare, Retail, Industrial">
+              </div>
+              <div class="field">
+                <label for="accountType">Account-Typ</label>
+                <select id="accountType" data-field>
+                  <option value="">Bitte wählen</option>
+                  <option>Strategic accounts</option>
+                  <option>Enterprise prospects</option>
+                  <option>Existing customers</option>
+                  <option>SMB / Mid-market</option>
+                  <option>Named ABM accounts</option>
+                  <option>Channel / partner audience</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="buyingRoles">Buying Committee</label>
+                <textarea id="buyingRoles" data-field placeholder="Welche Rollen entscheiden, beeinflussen oder blockieren? z. B. Logistics Director, Procurement, Supply Chain, Finance, Sustainability, Compliance."></textarea>
+              </div>
+              <div class="field full">
+                <label for="customerProblem">Kundenproblem / Trigger</label>
+                <textarea id="customerProblem" data-field placeholder="Welches konkrete Risiko, Ziel oder Ereignis macht DSV relevant?"></textarea>
+              </div>
+              <div class="field full">
+                <label for="objections">Einwände und Hürden</label>
+                <textarea id="objections" data-field placeholder="Was könnte die Zielgruppe zurückhalten? Preis, Risiko, Komplexität, Vertrauen, Migration, Proof, interne Priorität?"></textarea>
+              </div>
+            </div>
+            <div class="questions">
+              <div class="question">Welche Rolle hat den Schmerz, welche hat das Budget und welche muss überzeugt werden?</div>
+              <div class="question">Welche Logistikentscheidung steht an: Provider-Wechsel, Ausschreibung, Expansion, Stabilisierung, Kostenreduktion?</div>
+              <div class="question">Was muss die Zielgruppe glauben, bevor sie mit DSV spricht?</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="message">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>04 Messaging und Proof</h3>
+                <p class="hint">Formuliere die Kernbotschaft und die Belege, die sie glaubwürdig machen.</p>
+              </div>
+              <div class="quality" data-quality="message">0/5 Felder</div>
+            </div>
+            <div class="grid">
+              <div class="field full">
+                <label for="coreMessage">Kernbotschaft</label>
+                <textarea id="coreMessage" data-field placeholder="Eine klare Aussage, die Kundennutzen und DSV-Stärke verbindet."></textarea>
+              </div>
+              <div class="field full">
+                <label for="valueProps">Value Proposition</label>
+                <textarea id="valueProps" data-field placeholder="Welche 2 bis 4 Nutzenargumente sollen im Zentrum stehen?"></textarea>
+              </div>
+              <div class="field full">
+                <label for="proofPoints">Proof Points</label>
+                <textarea id="proofPoints" data-field placeholder="Welche Belege gibt es? Netzwerk, Expertise, Cases, SLAs, Tools, Zertifizierungen, Nachhaltigkeitsdaten, Branchenlösungen."></textarea>
+              </div>
+              <div class="field">
+                <label for="tone">Tonalität</label>
+                <select id="tone" data-field>
+                  <option value="">Bitte wählen</option>
+                  <option>Confident and expert</option>
+                  <option>Practical and operational</option>
+                  <option>Consultative and strategic</option>
+                  <option>Urgent and action-oriented</option>
+                  <option>Reassuring and risk-reducing</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="avoidWords">Nicht sagen / vermeiden</label>
+                <input id="avoidWords" data-field placeholder="z. B. leere Superlative, unbewiesene Claims">
+              </div>
+            </div>
+            <div class="questions">
+              <div class="question">Ist die Botschaft eher über DSV oder über den Kundennutzen geschrieben?</div>
+              <div class="question">Welche Behauptung kann Sales im Kundengespräch verteidigen?</div>
+              <div class="question">Welche Daten oder Cases fehlen noch, um aus einer Behauptung einen Proof Point zu machen?</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="activation">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>05 Aktivierung, Kanäle und Deliverables</h3>
+                <p class="hint">Plane, wie die Initiative sichtbar, messbar und für Sales nutzbar wird.</p>
+              </div>
+              <div class="quality" data-quality="activation">0/5 Felder</div>
+            </div>
+            <div class="grid">
+              <div class="field full">
+                <label for="channels">Kanäle</label>
+                <textarea id="channels" data-field placeholder="z. B. LinkedIn, paid media, email nurture, landing page, webinar, event, sales outreach, trade media."></textarea>
+              </div>
+              <div class="field full">
+                <label for="deliverables">Deliverables</label>
+                <textarea id="deliverables" data-field placeholder="Welche Assets werden gebraucht? Landingpage, one-pager, deck, email flow, paid ads, organic posts, case study, event materials."></textarea>
+              </div>
+              <div class="field">
+                <label for="cta">Primary CTA</label>
+                <input id="cta" data-field placeholder="z. B. Book a consultation, Download guide, Request assessment">
+              </div>
+              <div class="field">
+                <label for="salesMotion">Sales Motion</label>
+                <select id="salesMotion" data-field>
+                  <option value="">Bitte wählen</option>
+                  <option>Inbound follow-up</option>
+                  <option>Named-account outreach</option>
+                  <option>Event-to-sales handover</option>
+                  <option>Opportunity acceleration</option>
+                  <option>Customer expansion</option>
+                  <option>No direct sales motion</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="handover">Sales Handover</label>
+                <textarea id="handover" data-field placeholder="Wann wird ein Lead oder Account übergeben? Welche Informationen braucht Sales?"></textarea>
+              </div>
+            </div>
+            <div class="questions">
+              <div class="question">Welche Assets helfen Sales wirklich im Gespräch und nicht nur im Kampagnenlaunch?</div>
+              <div class="question">Was ist der nächste sinnvolle Schritt für eine B2B-Zielperson?</div>
+              <div class="question">Welche Kanäle erzeugen Nachfrage, welche konvertieren und welche nurturen?</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="governance">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h3>06 Governance, Risiken und Entscheidungen</h3>
+                <p class="hint">Halte fest, wer entscheiden muss und welche offenen Punkte die Initiative gefährden könnten.</p>
+              </div>
+              <div class="quality" data-quality="governance">0/5 Felder</div>
+            </div>
+            <div class="grid">
+              <div class="field full">
+                <label for="stakeholders">Stakeholder und Approver</label>
+                <textarea id="stakeholders" data-field placeholder="Marketing, Sales, Product, Operations, Legal, Sustainability, Region, Country, Agency."></textarea>
+              </div>
+              <div class="field full">
+                <label for="dependencies">Abhängigkeiten</label>
+                <textarea id="dependencies" data-field placeholder="Welche Daten, Freigaben, Sales-Listen, Cases, Landingpages, Tracking-Setups oder Agenturleistungen fehlen?"></textarea>
+              </div>
+              <div class="field full">
+                <label for="risks">Risiken</label>
+                <textarea id="risks" data-field placeholder="Was kann schiefgehen? Unklare Zielgruppe, schwacher Proof, fehlende Sales-Kapazität, lange Freigaben, Tracking-Lücken."></textarea>
+              </div>
+              <div class="field">
+                <label for="decisionDate">Entscheidungsdatum</label>
+                <input id="decisionDate" data-field type="date">
+              </div>
+              <div class="field">
+                <label for="nextStep">Nächster Schritt</label>
+                <input id="nextStep" data-field placeholder="z. B. Messaging Workshop, Sales Alignment, Media Brief">
+              </div>
+            </div>
+            <div class="questions">
+              <div class="question">Welche Entscheidung muss getroffen werden, bevor Content oder Creative startet?</div>
+              <div class="question">Welche Annahmen müssen noch validiert werden?</div>
+              <div class="question">Wer kann die Initiative stoppen und warum?</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside aria-label="Live Brief Zusammenfassung">
+        <div class="summary-title">
+          <h2>Live Summary</h2>
+          <span class="status" id="statusText">Draft</span>
+        </div>
+
+        <div class="score-card">
+          <div class="score">
+            <strong id="filledCount">0</strong>
+            <span>Felder gefüllt</span>
+          </div>
+          <div class="score">
+            <strong id="riskCount">0</strong>
+            <span>Risiko-Hinweise</span>
+          </div>
+          <div class="score">
+            <strong id="readyCount">0</strong>
+            <span>Checks erledigt</span>
+          </div>
+        </div>
+
+        <div class="summary" id="summary"></div>
+
+        <div class="summary-block">
+          <h4>Readiness Checklist</h4>
+          <div class="checklist">
+            <label class="check"><input type="checkbox" data-check="objectiveClear"> Ziel ist messbar und mit Business Outcome verbunden.</label>
+            <label class="check"><input type="checkbox" data-check="audienceClear"> Zielgruppe ist als Buying Committee beschrieben.</label>
+            <label class="check"><input type="checkbox" data-check="proofClear"> Kernbotschaft hat belastbare Proof Points.</label>
+            <label class="check"><input type="checkbox" data-check="salesClear"> Sales Handover und CTA sind geklärt.</label>
+            <label class="check"><input type="checkbox" data-check="trackingClear"> Tracking, KPIs und Reporting sind machbar.</label>
+          </div>
+        </div>
+
+        <p class="footer-note">Automatisch lokal im Browser gespeichert. Beim Kopieren entsteht eine Markdown-Zusammenfassung für Abstimmung, Agenturbriefing oder Workshop-Dokumentation.</p>
+      </aside>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Kopiert</div>
+
+  <script>
+    const storageKey = "dsv-initiative-brief-v1";
+
+    const fields = [
+      ["initiativeName", "Initiative"],
+      ["owner", "Owner"],
+      ["businessArea", "Geschäftsbereich"],
+      ["marketScope", "Markt / Region"],
+      ["situation", "Ausgangslage"],
+      ["businessObjective", "Business-Ziel"],
+      ["primaryKpi", "Primärer KPI"],
+      ["targetMetric", "Zielwert"],
+      ["timing", "Timing"],
+      ["budget", "Budget"],
+      ["industry", "Branche / Segment"],
+      ["accountType", "Account-Typ"],
+      ["buyingRoles", "Buying Committee"],
+      ["customerProblem", "Kundenproblem / Trigger"],
+      ["objections", "Einwände"],
+      ["coreMessage", "Kernbotschaft"],
+      ["valueProps", "Value Proposition"],
+      ["proofPoints", "Proof Points"],
+      ["tone", "Tonalität"],
+      ["avoidWords", "Nicht sagen"],
+      ["channels", "Kanäle"],
+      ["deliverables", "Deliverables"],
+      ["cta", "Primary CTA"],
+      ["salesMotion", "Sales Motion"],
+      ["handover", "Sales Handover"],
+      ["stakeholders", "Stakeholder"],
+      ["dependencies", "Abhängigkeiten"],
+      ["risks", "Risiken"],
+      ["decisionDate", "Entscheidungsdatum"],
+      ["nextStep", "Nächster Schritt"]
+    ];
+
+    const sectionFields = {
+      context: ["initiativeName", "owner", "businessArea", "marketScope", "situation"],
+      objective: ["businessObjective", "primaryKpi", "targetMetric", "timing", "budget"],
+      audience: ["industry", "accountType", "buyingRoles", "customerProblem", "objections"],
+      message: ["coreMessage", "valueProps", "proofPoints", "tone", "avoidWords"],
+      activation: ["channels", "deliverables", "cta", "salesMotion", "handover"],
+      governance: ["stakeholders", "dependencies", "risks", "decisionDate", "nextStep"]
+    };
+
+    const summaryGroups = [
+      ["Context", ["initiativeName", "businessArea", "marketScope", "situation"]],
+      ["Objective", ["funnelRole", "businessObjective", "primaryKpi", "targetMetric"]],
+      ["Audience", ["industry", "accountType", "buyingRoles", "customerProblem"]],
+      ["Message", ["coreMessage", "valueProps", "proofPoints"]],
+      ["Activation", ["channels", "deliverables", "cta", "salesMotion"]],
+      ["Governance", ["stakeholders", "dependencies", "risks", "nextStep"]]
+    ];
+
+    const labels = Object.fromEntries(fields);
+    labels.funnelRole = "Funnel-Rolle";
+
+    const getState = () => {
+      const state = {};
+      fields.forEach(([id]) => {
+        const element = document.getElementById(id);
+        state[id] = element ? element.value.trim() : "";
+      });
+      const activeChoice = document.querySelector("[data-choice-group='funnelRole'] .choice.active");
+      state.funnelRole = activeChoice ? activeChoice.dataset.value : "";
+      document.querySelectorAll("[data-check]").forEach((check) => {
+        state[check.dataset.check] = check.checked;
+      });
+      return state;
+    };
+
+    const saveState = () => {
+      localStorage.setItem(storageKey, JSON.stringify(getState()));
+    };
+
+    const loadState = () => {
+      const raw = localStorage.getItem(storageKey);
+      if (!raw) return;
+      try {
+        const state = JSON.parse(raw);
+        fields.forEach(([id]) => {
+          const element = document.getElementById(id);
+          if (element && state[id]) element.value = state[id];
+        });
+        if (state.funnelRole) {
+          document.querySelectorAll("[data-choice-group='funnelRole'] .choice").forEach((choice) => {
+            choice.classList.toggle("active", choice.dataset.value === state.funnelRole);
+          });
+        }
+        document.querySelectorAll("[data-check]").forEach((check) => {
+          check.checked = Boolean(state[check.dataset.check]);
+        });
+      } catch {
+        localStorage.removeItem(storageKey);
+      }
+    };
+
+    const filled = (value) => Boolean(String(value || "").trim());
+
+    const formatLines = (state, ids) => {
+      return ids
+        .filter((id) => filled(state[id]))
+        .map((id) => `${labels[id]}: ${state[id]}`)
+        .join("\n");
+    };
+
+    const buildMarkdown = (state) => {
+      const title = state.initiativeName || "DSV Initiative Brief";
+      const lines = [`# ${title}`, "", `Owner: ${state.owner || "offen"}`, `Stand: ${new Date().toLocaleDateString("de-DE")}`, ""];
+      summaryGroups.forEach(([group, ids]) => {
+        lines.push(`## ${group}`);
+        const groupLines = formatLines(state, ids);
+        lines.push(groupLines || "offen");
+        lines.push("");
+      });
+      lines.push("## Readiness Checklist");
+      document.querySelectorAll("[data-check]").forEach((check) => {
+        lines.push(`- ${check.checked ? "[x]" : "[ ]"} ${check.parentElement.textContent.trim()}`);
+      });
+      return lines.join("\n");
+    };
+
+    const renderSummary = () => {
+      const state = getState();
+      const summary = document.getElementById("summary");
+      summary.innerHTML = "";
+
+      summaryGroups.forEach(([group, ids]) => {
+        const block = document.createElement("div");
+        block.className = "summary-block";
+        const title = document.createElement("h4");
+        title.textContent = group;
+        const content = document.createElement("p");
+        const text = formatLines(state, ids);
+        content.textContent = text || "Noch offen";
+        if (!text) content.className = "empty";
+        block.append(title, content);
+        summary.append(block);
+      });
+
+      const filledFields = fields.filter(([id]) => filled(state[id])).length + (state.funnelRole ? 1 : 0);
+      const totalFields = fields.length + 1;
+      const progress = Math.round((filledFields / totalFields) * 100);
+      document.getElementById("progressBar").style.width = `${progress}%`;
+      document.getElementById("progressText").textContent = `${progress}%`;
+      document.getElementById("filledCount").textContent = filledFields;
+
+      const riskSignals = ["objections", "dependencies", "risks"].filter((id) => filled(state[id])).length;
+      document.getElementById("riskCount").textContent = riskSignals;
+
+      const readyChecks = Array.from(document.querySelectorAll("[data-check]")).filter((check) => check.checked).length;
+      document.getElementById("readyCount").textContent = readyChecks;
+
+      const status = document.getElementById("statusText");
+      const isReady = progress >= 75 && readyChecks >= 4;
+      status.textContent = isReady ? "Ready" : "Draft";
+      status.classList.toggle("ready", isReady);
+
+      Object.entries(sectionFields).forEach(([section, ids]) => {
+        const complete = ids.filter((id) => filled(state[id])).length;
+        const badge = document.querySelector(`[data-quality="${section}"]`);
+        if (badge) badge.textContent = `${complete}/${ids.length} Felder`;
+      });
+    };
+
+    const showToast = (message) => {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      window.setTimeout(() => toast.classList.remove("show"), 1800);
+    };
+
+    document.querySelectorAll("[data-field]").forEach((element) => {
+      element.addEventListener("input", () => {
+        saveState();
+        renderSummary();
+      });
+      element.addEventListener("change", () => {
+        saveState();
+        renderSummary();
+      });
+    });
+
+    document.querySelectorAll("[data-choice-group]").forEach((group) => {
+      group.querySelectorAll(".choice").forEach((choice) => {
+        choice.addEventListener("click", () => {
+          group.querySelectorAll(".choice").forEach((item) => item.classList.remove("active"));
+          choice.classList.add("active");
+          saveState();
+          renderSummary();
+        });
+      });
+    });
+
+    document.querySelectorAll("[data-check]").forEach((check) => {
+      check.addEventListener("change", () => {
+        saveState();
+        renderSummary();
+      });
+    });
+
+    document.querySelectorAll(".nav-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.dataset.target;
+        document.querySelectorAll(".nav-button").forEach((item) => item.classList.remove("active"));
+        document.querySelectorAll(".section").forEach((section) => section.classList.remove("active"));
+        button.classList.add("active");
+        document.getElementById(target).classList.add("active");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      const markdown = buildMarkdown(getState());
+      try {
+        await navigator.clipboard.writeText(markdown);
+        showToast("Brief als Markdown kopiert");
+      } catch {
+        const area = document.createElement("textarea");
+        area.value = markdown;
+        document.body.append(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+        showToast("Brief kopiert");
+      }
+    });
+
+    document.getElementById("printBtn").addEventListener("click", () => {
+      window.print();
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      const confirmed = window.confirm("Alle Eingaben in dieser Vorlage zurücksetzen?");
+      if (!confirmed) return;
+      localStorage.removeItem(storageKey);
+      fields.forEach(([id]) => {
+        const element = document.getElementById(id);
+        if (element) element.value = "";
+      });
+      document.querySelectorAll(".choice.active").forEach((choice) => choice.classList.remove("active"));
+      document.querySelectorAll("[data-check]").forEach((check) => {
+        check.checked = false;
+      });
+      renderSummary();
+      showToast("Zurückgesetzt");
+    });
+
+    loadState();
+    renderSummary();
+  </script>
+</body>
+</html>

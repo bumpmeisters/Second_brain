@@ -8,6 +8,7 @@
 
 # Codex/plugin runtime scratch
 .agents/
+.git-publish-temp*/
 .tmp/
 .env/
 plugins/

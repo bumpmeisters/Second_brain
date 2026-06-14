@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Output Verifier"
+  short_description: "Review AI outputs against criteria and evidence."
+  default_prompt: "Use this skill to define evaluation criteria, critique an output, and identify evidence gaps or next checks."

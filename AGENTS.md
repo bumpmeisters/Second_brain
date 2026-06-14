@@ -25,6 +25,7 @@ Additional support folders:
 
 ```text
 templates/       reusable Markdown templates
+skills/          local Codex skill folders; each skill lives in its own folder with a SKILL.md
 raw/assets/      locally downloaded source attachments from clips, such as images
 research/assets/ attachments that belong to AI-generated research reports
 wiki/_assets/    generated or locally saved images and attachments used by wiki pages
@@ -214,6 +215,7 @@ Append entries to `wiki/log.md` using this pattern:
 - Keep downloaded source attachments in `raw/assets/`.
 - Keep AI-generated deep-research reports in `research/` and their attachments in `research/assets/`.
 - Keep generated outputs in `wiki/_outputs/` and curated wiki media in `wiki/_assets/`.
+- Keep local reusable skills in `skills/`, using one lowercase hyphenated folder per skill and a required `SKILL.md`.
 - Keep page names lowercase and hyphenated.
 - Write in clear, plain language.
 - Prefer durable structure over over-organization.

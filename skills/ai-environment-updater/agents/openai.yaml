@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Environment Updater"
+  short_description: "Turn repeated AI work into durable rules and templates."
+  default_prompt: "Use this skill after a repeated AI workflow to update templates, wiki pages, rules, or skill ideas."

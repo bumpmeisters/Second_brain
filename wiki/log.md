@@ -3,7 +3,7 @@ type: log
 status: active
 sources: []
 created: 2026-05-30
-updated: 2026-06-01
+updated: 2026-06-13
 ---
 
 # Wiki Log
@@ -12,9 +12,364 @@ updated: 2026-06-01
 
 **Sources**: None.
 
-**Last updated**: 2026-06-01
+**Last updated**: 2026-06-13
 
 ---
+
+## 2026-06-13 | research | connect Claude.md and WAT framework knowledge
+
+- Sources:
+  - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260605_CLAUDE.Design.md
+  - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260606_CLAUDE_WAT.md
+  - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/INitialize Prompt_Folder/20260606_Executive Assistant Initialize Prompt.txt
+  - https://code.claude.com/docs/en/memory
+  - https://code.claude.com/docs/en/how-claude-code-works
+  - https://code.claude.com/docs/en/best-practices
+  - https://code.claude.com/docs/en/skills
+  - https://code.claude.com/docs/en/sub-agents
+  - https://code.claude.com/docs/en/settings
+  - https://code.claude.com/docs/en/hooks
+  - https://agents.md/
+  - https://aider.chat/docs/usage/conventions.html
+  - https://arxiv.org/abs/2509.14744
+  - https://arxiv.org/abs/2602.11988
+- Changed:
+  - [[claude-md-frameworks-research-2026-06-13]]
+  - [[claude-md-project-instructions]]
+  - [[wat-framework]]
+  - [[claude-code-executive-assistant-setup]]
+  - `templates/claude-md-project-instructions.md`
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Promoted the local WAT and Claude setup examples into a broader creation framework for project instruction files.
+  - Current guidance favors concise always-on instructions, modular rules, on-demand skills/workflows, and deterministic guardrails for high-cost boundaries.
+  - Research evidence is mixed: context files can help orientation, but unnecessary requirements can increase cost or reduce success.
+
+## 2026-06-11 | ingest | promote Karpathy blueprint refinements into related pages and template
+
+- Sources:
+  - C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt
+  - C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
+- Changed:
+  - [[context-engineering]]
+  - [[agentic-prompting]]
+  - `templates/ai-work-blueprint.md`
+  - [[log]]
+- Notes:
+  - Promoted the useful synthesis from the additional blueprint sources into related concept pages.
+  - Added spec maturity, verification escalation, environment subsystem, and hard-guardrail prompts to the reusable template.
+  - Kept product-specific claims marked as unverified secondary synthesis.
+
+## 2026-06-11 | refine | incorporate additional Karpathy blueprint sources
+
+- Sources:
+  - C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt
+  - C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
+- Changed:
+  - [[ai-work-blueprint]]
+  - [[karpathy-spec-verifier-environment-source-summary]]
+  - [[sources]]
+  - `skills/ai-work-blueprint/SKILL.md`
+  - `skills/ai-work-blueprint/references/framework.md`
+  - `skills/ai-spec-builder/SKILL.md`
+  - `skills/ai-output-verifier/SKILL.md`
+  - `skills/ai-environment-updater/SKILL.md`
+  - [[log]]
+- Notes:
+  - Added spec maturity levels, environment subsystems, verification escalation, and an environment audit prompt.
+  - Treated both new sources as secondary synthesis; product-specific Claude Code and hook claims remain unverified.
+
+## 2026-06-11 | ingest | newly uploaded clippings, agentic workflow assets, and AI research variants
+
+- Sources:
+  - raw/Clippings/How to Build Claude Subagents Better Than 99% of People.md
+  - raw/Clippings/How to Build Claude Subagents Better Than 99% of People 1.md
+  - raw/Clippings/How to Build Claude Subagents Better Than 99% of People 2.md
+  - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
+  - raw/Clippings/Only the best are using them.md
+  - raw/assets/00_README_START_HERE.md
+  - raw/assets/10_Agentic_Workflows
+  - research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_Evals&Observe.docx
+  - research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_Minimal Evaluation and Observability Framework_GEMINI.docx
+- Changed:
+  - [[how-to-build-claude-subagents-better-than-99-percent-of-people]]
+  - [[claude-subagents]]
+  - [[i-turned-claude-fable-into-the-ultimate-second-brain]]
+  - [[ai-operating-system]]
+  - [[only-the-best-are-using-them]]
+  - [[loop-engineering]]
+  - [[agentic-workflows-library]]
+  - [[claude-code-executive-assistant-setup]]
+  - [[marketing-and-frameworks-library-readme]]
+  - [[minimal-evaluation-and-observability-framework-gemini-2026-06-05]]
+  - [[minimal-evaluation-and-observability-framework-for-ai-marketing-workflows]]
+  - [[ai-marketing-workflow-assurance]]
+  - [[agentic-prompting]]
+  - [[ai-work-blueprint]]
+  - [[personal-ai-cowork-system]]
+  - [[cowork-system-build-workflow]]
+  - [[marketing-assets-library]]
+  - [[ai-research-library]]
+  - [[ai-prompting-research-library]]
+  - [[ai-research-validation]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+  - wiki/_outputs/new-sources-inventory-2026-06-11.md
+- Notes:
+  - Found five new raw clippings, one raw marketing README, three unregistered raw agentic workflow setup files, and two research-path/addendum items.
+  - Registered duplicate subagent transcript variants as one source bundle; variants `1` and `2` are byte-identical.
+  - Corrected the local path for the previously summarized minimal evaluation and observability DOCX.
+  - Treated YouTube transcripts and AI-generated research as unverified unless independently checked.
+
+## 2026-06-10 | skill | create AI work blueprint skill system
+
+- Sources:
+  - [[ai-work-blueprint]]
+  - `templates/ai-work-blueprint.md`
+- Changed:
+  - `skills/index.md`
+  - `skills/ai-work-blueprint/SKILL.md`
+  - `skills/ai-work-blueprint/references/framework.md`
+  - `skills/ai-spec-builder/SKILL.md`
+  - `skills/ai-output-verifier/SKILL.md`
+  - `skills/ai-environment-updater/SKILL.md`
+  - AGENTS.md
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Created a local `skills/` folder for vault-specific skills.
+  - Split the concept into one orchestrator skill plus three focused building-block skills: spec building, output verification, and environment updating.
+  - Kept each skill concise so it can act as procedural guidance rather than long-form documentation.
+
+## 2026-06-10 | refine | finalize AI work blueprint
+
+- Sources:
+  - C:/Users/rolfp/.codex/attachments/5c84d478-8fdd-402f-b320-5a418197c1c3/pasted-text.txt
+  - user-provided concept critique/synthesis in chat
+- Changed:
+  - [[ai-work-blueprint]]
+  - `templates/ai-work-blueprint.md`
+  - [[karpathy-spec-verifier-environment-source-summary]]
+  - [[log]]
+- Notes:
+  - Made the blueprint more self-explanatory with three guiding questions, a layer table, clearer usage guidance, and broader examples.
+  - Generalized the environment layer beyond Claude-specific tooling.
+  - Broadened verification beyond hard facts to include usefulness, fit-for-purpose, tone, risk, and external signals.
+
+## 2026-06-10 | ingest | create reusable AI work blueprint from video transcript
+
+- Sources:
+  - C:/Users/rolfp/.codex/attachments/5c84d478-8fdd-402f-b320-5a418197c1c3/pasted-text.txt
+  - https://youtu.be/7zZy1QTvokM?si=KFWYVpOrNlHZeDjD
+- Changed:
+  - [[karpathy-spec-verifier-environment-source-summary]]
+  - [[ai-work-blueprint]]
+  - `templates/ai-work-blueprint.md`
+  - [[agentic-prompting]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Treated the transcript as a secondary explanation, not as independently verified evidence of Karpathy's exact words or current tool behavior.
+  - Converted the dense concept into a reusable visual and practical loop: spec, verifier, environment.
+  - Added a template for applying the blueprint to future AI tasks.
+
+## 2026-06-08 | audit | identify second-brain gap and create Gemini research prompt
+
+- Sources:
+  - wiki/index.md
+  - wiki/sources.md
+  - wiki/log.md
+  - wiki/personal-ai-cowork-system.md
+  - wiki/cowork-system-build-workflow.md
+  - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260605_CLAUDE.Design.md
+  - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260606_CLAUDE_WAT.md
+  - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/INitialize Prompt_Folder/20260606_Executive Assistant Initialize Prompt.txt
+- Changed:
+  - wiki/_outputs/gemini-deep-research-second-brain-gap-prompt-2026-06-08.md
+  - [[log]]
+- Notes:
+  - Identified the strongest current gap as the unsynthesized agentic cowork / executive assistant / WAT setup material under `raw/assets/10_Agentic_Workflows`.
+  - Created a Gemini Deep Research prompt to gather current primary-source guidance before promoting this architecture into durable wiki pages.
+
+## 2026-06-06 | ingest | Gemini AI marketing workflow assurance research
+
+- Sources:
+  - research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_AI Marketing Workflow Assurance Research.docx
+- Changed:
+  - [[ai-marketing-workflow-assurance-research-gemini-2026-06-05]]
+  - [[ai-marketing-workflow-assurance]]
+  - `templates/ai-workflow-spec.md`
+  - `templates/ai-workflow-run-manifest.md`
+  - `templates/ai-evidence-ledger.md`
+  - `templates/ai-review-decision.md`
+  - `templates/ai-marketing-workflow-eval-set.md`
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Copied the Gemini output into `research/` and extracted text to `wiki/_outputs/ai-marketing-workflow-assurance-research-gemini-2026-06-05.txt`.
+  - Treated the report as AI-generated research, not primary evidence.
+  - Partially checked OpenAI and Google Cloud product-mechanics claims against official documentation.
+  - Kept non-primary ISO-related sources as research leads rather than durable facts.
+
+## 2026-06-06 | template | add AI marketing workflow assurance starter pack
+
+- Sources:
+  - AGENTS.md
+- Changed:
+  - `templates/ai-workflow-spec.md`
+  - `templates/ai-workflow-run-manifest.md`
+  - `templates/ai-evidence-ledger.md`
+  - `templates/ai-review-decision.md`
+  - `templates/ai-marketing-workflow-eval-set.md`
+  - [[log]]
+- Notes:
+  - Added a small local-first template pack for turning AI-assisted marketing workflows into reviewable runs with evidence, evaluation, and human approval.
+  - Did not modify `raw/` or promote any AI-generated research claims.
+
+## 2026-06-06 | ingest | new AI marketing workflow assurance research
+
+- Sources:
+  - research/assets/06_AI_Prompting/06_Agentic_Prompting/Minimal Evaluation and Observability Framework for AI Marketing Workflows.docx
+- Changed:
+  - [[minimal-evaluation-and-observability-framework-for-ai-marketing-workflows]]
+  - [[ai-marketing-workflow-assurance]]
+  - [[agentic-prompting]]
+  - [[agentic-and-applied-ai-gap-review]]
+  - [[ai-prompting-research-library]]
+  - [[ai-research-library]]
+  - [[ai-research-validation]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Treated the document as AI-generated research, not primary evidence.
+  - Added it as a partially verifiable source because it includes citations, but did not externally verify those citations during this ingest.
+  - Promoted only the durable operating pattern into [[ai-marketing-workflow-assurance]] and marked current product and regulatory claims as requiring verification.
+
+## 2026-06-05 | ingest | new marketing framework and working library raw assets
+
+- Sources:
+  - raw/assets/A_frameworks_templates
+  - raw/assets/B_MKT_working_library
+- Changed:
+  - [[index]]
+  - [[sources]]
+  - [[marketing-assets-library]]
+  - [[marketing-operating-system]]
+  - [[ai-research-library]]
+  - [[frameworks-templates-reference-library]]
+  - [[marketing-working-library]]
+  - [[marketing-strategy-and-planning-working-library]]
+  - [[brand-messaging-company-library]]
+  - [[marketing-content-social-pr-library]]
+  - [[marketing-campaigns-missions-and-projects-library]]
+  - [[marketing-automation-analytics-ops-library]]
+  - [[marketing-sales-and-buyer-enablement-library]]
+  - [[marketing-presentations-meetings-alignment-library]]
+- Notes:
+  - Cataloged 1,370 files across the two new raw asset bundles.
+  - Wrote generated inventory outputs to `wiki/_outputs/raw-assets-new-marketing-inventory-2026-06-05.md` and companion CSV files.
+  - Treated AI-labeled and model-labeled files as secondary synthesis requiring verification before durable factual reuse.
+  - Cataloged audio, video, `.msg`, archive, web-download, and extensionless files but did not deeply extract them in this pass.
+
+## 2026-06-04 | organize | marketing and frameworks folder restructure
+
+- Sources:
+  - `C:\Users\rolfp\Google Drive\2_Marketing and frameworks`
+- Changed:
+  - `wiki/_outputs/marketing-folder-restructure-2026-06-04.md`
+- Notes:
+  - Used the second-brain marketing operating-system model to restructure the external marketing folder.
+  - Preserved originals under `_archive_originals` and kept date prefixes in filenames.
+  - Generated inventory, version-candidate, duplicate-candidate, and restructure-summary reports in the external folder.
+
+## 2026-06-03 | ingest | Tina Claude Cowork setup pattern
+
+- Sources:
+  - raw/assets/10_Agentic_Workflows/tina-claude-cowork-system-2026-06-03.png
+- Changed:
+  - [[tina-claude-cowork-system-source-summary]]
+  - [[personal-ai-cowork-system]]
+  - [[cowork-system-build-workflow]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Preserved the screenshot as a raw source under `raw/assets/10_Agentic_Workflows/`.
+  - Migrated the reusable concept, framework, and workflow from Tina's source into Rolf-specific second-brain pages.
+  - Added `templates/cowork-prd-template.md` for a future personal cowork-space PRD.
+  - Treated Tina's system as inspiration for later adaptation, not as a literal implementation plan.
+
+## 2026-06-03 | audit | agentic and applied AI knowledge gaps
+
+- Sources:
+  - wiki/index.md
+  - wiki/ai-research-library.md
+  - wiki/ai-research-validation.md
+  - wiki/agentic-prompting.md
+  - wiki/context-engineering.md
+  - wiki/deep-research-workflows.md
+  - wiki/ai-marketing-prompts.md
+  - wiki/ai-strategy-frameworks-research.md
+- Changed:
+  - [[agentic-and-applied-ai-gap-review]]
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Reviewed the current agentic and applied AI coverage in the wiki.
+  - Checked current external anchors from Anthropic, OpenAI, OWASP, MCP, and NIST.
+  - Identified gaps in agent taxonomy, evaluation, observability, security, tool authorization, applied workflows, RAG quality, and governance.
+
+## 2026-06-03 | ingest | AI research folders with validation
+
+- Sources:
+  - research/assets/06_AI_Prompting
+  - research/assets/07_AI_fuer_Marketing
+- Changed:
+  - [[index]]
+  - [[sources]]
+  - [[ai-research-library]]
+  - [[ai-prompting-research-library]]
+  - [[ai-marketing-research-library]]
+  - [[ai-research-validation]]
+- Notes:
+  - Cataloged 134 files from `research/assets`.
+  - Wrote generated validation outputs to `wiki/_outputs/ai-research-validation-2026-06-03.md` and `wiki/_outputs/ai-research-ingest-2026-06-03.json`.
+  - Marked AI research as unverified secondary synthesis unless later checked against primary sources.
+  - Validation counts: 42 partially verifiable, 49 needing update checks, 37 unverified, four cataloged, one needing manual review, and one needing transcription.
+
+## 2026-06-03 | ingest | raw assets marketing library
+
+- Sources:
+  - raw/assets/01_Marketing_Strategie
+  - raw/assets/02_Briefing_Templates
+  - raw/assets/03_Brand
+  - raw/assets/04_Persona_und_Audience
+  - raw/assets/05_Content
+  - raw/assets/08_Reporting_und_Ops
+  - raw/assets/09_Beispiele_HP
+- Changed:
+  - [[index]]
+  - [[sources]]
+  - [[marketing-assets-library]]
+  - [[marketing-strategy-library]]
+  - [[briefing-template-library]]
+  - [[brand-library]]
+  - [[persona-and-audience-library]]
+  - [[content-library]]
+  - [[reporting-and-ops-library]]
+  - [[hp-examples-library]]
+  - [[marketing-operating-system]]
+- Notes:
+  - Cataloged 112 files from the seven visible `raw/assets` folders.
+  - Extracted text/metadata from supported DOCX, PPTX, PDF, and XLSX files.
+  - Wrote generated extraction outputs to `wiki/_outputs/raw-assets-ingest-inventory-2026-06-03.md` and `wiki/_outputs/raw-assets-ingest-2026-06-03.json`.
+  - Cataloged but did not deeply extract one MP4, one XLSB file, and one legacy DOC file.
 
 ## 2026-06-01 | setup | future-proof vault structure
 

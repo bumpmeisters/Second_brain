@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Spec Builder"
+  short_description: "Turn vague tasks into clear AI-ready specs."
+  default_prompt: "Use this skill to interview me and create a precise, small, reviewable spec before AI execution."
