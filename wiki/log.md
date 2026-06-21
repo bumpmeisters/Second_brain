@@ -3,7 +3,7 @@ type: log
 status: active
 sources: []
 created: 2026-05-30
-updated: 2026-06-13
+updated: 2026-06-14
 ---
 
 # Wiki Log
@@ -12,9 +12,47 @@ updated: 2026-06-13
 
 **Sources**: None.
 
-**Last updated**: 2026-06-13
+**Last updated**: 2026-06-14
 
 ---
+
+## 2026-06-14 | output | create agent project initializer starter system
+
+- Sources:
+  - [[claude-md-project-instructions]]
+  - [[wat-framework]]
+  - [[ai-work-blueprint]]
+  - [[context-engineering]]
+  - [[agentic-prompting]]
+  - [[deep-research-workflows]]
+  - [[ai-research-validation]]
+  - [[claude-md-frameworks-research-2026-06-13]]
+  - `templates/claude-md-project-instructions.md`
+  - https://code.claude.com/docs/en/memory
+  - https://code.claude.com/docs/en/skills
+  - https://code.claude.com/docs/en/sub-agents
+  - https://code.claude.com/docs/en/settings
+  - https://code.claude.com/docs/en/hooks
+  - https://developers.openai.com/codex/guides/agents-md
+  - https://developers.openai.com/codex/rules
+  - https://developers.openai.com/codex/skills
+  - https://developers.openai.com/codex/subagents
+  - https://developers.openai.com/codex/hooks
+  - https://agents.md/
+  - https://aider.chat/docs/usage/conventions.html
+  - https://developers.openai.com/api/docs/guides/deep-research
+  - https://ai.google.dev/gemini-api/docs/interactions/deep-research
+  - https://arxiv.org/abs/2509.14744
+  - https://arxiv.org/abs/2601.20404
+  - https://arxiv.org/abs/2602.11988
+  - https://arxiv.org/abs/2605.05584
+- Changed:
+  - `wiki/_outputs/agent-project-initializer-starter-system-2026-06-14.md`
+  - [[log]]
+- Notes:
+  - Created a reusable starter system for initializing non-code and low-code AI-agent projects with `AGENTS.md`, a thin `CLAUDE.md` adapter, WAT separation, evidence rules, guardrails, and verification checks.
+  - Treated existing AI-generated research as leads and re-checked product-specific claims against current official OpenAI, Anthropic, AGENTS.md, Aider, and Gemini documentation.
+  - Recorded current caveats for fast-moving product mechanics, deep research claims, and mixed empirical evidence on repository context files.
 
 ## 2026-06-13 | research | connect Claude.md and WAT framework knowledge
 
@@ -412,7 +450,75 @@ updated: 2026-06-13
 - Added source summary pages for each clipping.
 - Added concept pages for LLM wiki workflows, Obsidian vault design, review workflows, scraping tools, and anti-blocking caveats.
 
+## 2026-06-20 | ingest | new raw clippings, DeepMind AGI-to-ASI report, and logistics markets library
+
+- Sources:
+  - 18 files in `raw/Clippings` uploaded 2026-06-19
+  - raw/assets/20260619_Deepmind_from AGI to ASI.pdf
+  - raw/assets/11_Markets
+- Changed:
+  - [[production-agent-engineering-clippings-june-2026]]
+  - [[ai-workflow-builder-clippings-june-2026]]
+  - [[agentic-marketing-intelligence-clippings-june-2026]]
+  - [[frontier-ecosystem-human-and-token-capital]]
+  - [[from-agi-to-asi-google-deepmind-2026]]
+  - [[logistics-market-intelligence-library]]
+  - [[merchant-of-record-vs-payment-service-provider]]
+  - [[loop-engineering]]
+  - [[context-engineering]]
+  - [[ai-operating-system]]
+  - [[ai-work-blueprint]]
+  - [[ai-marketing-workflow-assurance]]
+  - [[marketing-operating-system]]
+  - [[messaging-frameworks]]
+  - [[marketing-assets-library]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Confirmed that `Forget Agent Skills.md` and `Forget Agent Skills 1.md` are byte-identical and ingested them as one source bundle.
+  - Reconciled `research/assets` against the prior inventory; no new unregistered research sources remain.
+  - Cataloged 597 files in `raw/assets/11_Markets` at inventory and thematic level; ZIP, legacy XLS, and LNK files were not deeply extracted.
+  - Treated model claims, creator transcripts, commercial payment claims, and AI-generated market reports as unverified or time-sensitive.
+  - Wrote the intake inventory to `wiki/_outputs/new-sources-inventory-2026-06-20.md`.
+
 ## Related pages
 
 - [[index]]
 - [[sources]]
+
+## 2026-06-20 | correction | classify logistics market library as AI-generated deep research
+
+- Sources:
+  - raw/assets/11_Markets
+  - User clarification on 2026-06-20
+- Changed:
+  - [[logistics-market-intelligence-library]]
+  - [[ai-research-library]]
+  - [[marketing-assets-library]]
+  - [[marketing-operating-system]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Corrected the classification of all 597 files: they are AI-generated deep-research reports and corresponding prompts.
+  - Their physical placement under `raw/assets/` is a storage exception and does not make their internal claims primary evidence.
+  - Set the collection trust level to `unverified`; promoted claims require verification against cited primary sources.
+
+## 2026-06-20 | move | relocate logistics AI research to canonical research folder
+
+- Sources:
+  - raw/assets/11_Markets
+- Changed:
+  - Moved `raw/assets/11_Markets` to `research/assets/11_Markets`
+  - [[logistics-market-intelligence-library]]
+  - [[ai-research-library]]
+  - [[marketing-assets-library]]
+  - [[marketing-operating-system]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Preserved the complete internal folder structure and all 597 files.
+  - Verified the destination contains 597 files totaling 1,723,514,809 bytes.
+  - Removed the empty source directory tree after the move.

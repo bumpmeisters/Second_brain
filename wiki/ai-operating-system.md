@@ -4,8 +4,11 @@ status: active
 trust: unverified
 sources:
   - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
+  - raw/Clippings/How to 10x Your Claude Code Projects (Karpathy's Method).md
+  - raw/Clippings/Stop Watching Tutorials - Build These 4 Claude Projects to 10x Output.md
+  - raw/Clippings/Stop outsourcing your marketing intelligence to AI. Do this instead.md
 created: 2026-06-11
-updated: 2026-06-11
+updated: 2026-06-20
 ---
 
 # AI Operating System
@@ -29,6 +32,8 @@ This vault already has the context layer: `raw/`, `research/`, `wiki/`, `templat
 
 The next operating-system layer should be cautious: build reusable templates and skills first, then add live connections or scheduled automation only when the permission boundary, evidence ledger, and review loop are clear (source: I Turned Claude Fable Into The Ultimate Second Brain.md; source: [[ai-marketing-workflow-assurance]]).
 
+The newer sources emphasize an improvement loop: accepted corrections should update durable instructions, knowledge, or reusable procedures rather than disappear inside a chat. They also distinguish the owned intelligence layer from the rented model, allowing the execution engine to change without losing accumulated context and judgment (source: How to 10x Your Claude Code Projects (Karpathy's Method).md; source: Stop Watching Tutorials - Build These 4 Claude Projects to 10x Output.md; source: Stop outsourcing your marketing intelligence to AI. Do this instead.md).
+
 ## Open questions
 
 - Which live connections would be worth adding first?
@@ -42,3 +47,6 @@ The next operating-system layer should be cautious: build reusable templates and
 - [[ai-work-blueprint]]
 - [[claude-code-executive-assistant-setup]]
 - [[ai-marketing-workflow-assurance]]
+- [[frontier-ecosystem-human-and-token-capital]]
+- [[agentic-marketing-intelligence-clippings-june-2026]]
+- [[ai-workflow-builder-clippings-june-2026]]

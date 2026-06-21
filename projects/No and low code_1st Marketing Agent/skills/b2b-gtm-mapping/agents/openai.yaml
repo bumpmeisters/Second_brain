@@ -1,0 +1,4 @@
+interface:
+  display_name: "B2B GTM Mapping"
+  short_description: "Map personas, journeys, campaigns, sales"
+  default_prompt: "Use $b2b-gtm-mapping to translate this positioning into personas, journey stages, campaigns, and sales enablement."

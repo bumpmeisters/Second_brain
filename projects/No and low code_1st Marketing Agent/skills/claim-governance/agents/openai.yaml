@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claim Governance"
+  short_description: "Classify claims and safe wording"
+  default_prompt: "Use $claim-governance to classify these claims by evidence, risk, and allowed use."

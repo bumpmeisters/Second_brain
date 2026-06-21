@@ -1,0 +1,4 @@
+interface:
+  display_name: "Segmentation Strategy"
+  short_description: "Compare segmentation strategies by business case"
+  default_prompt: "Use $segmentation-strategy to compare segmentation frameworks and recommend the strongest strategy for the next marketing iterations."

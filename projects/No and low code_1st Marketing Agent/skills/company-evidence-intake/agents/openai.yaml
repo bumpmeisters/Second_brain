@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Evidence Intake"
+  short_description: "Ingest and classify company evidence"
+  default_prompt: "Use $company-evidence-intake to ingest these company/product sources into the project wiki."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ContextOps Validator"
+  short_description: "Validate ContextOps artifacts and revision loops"
+  default_prompt: "Use $contextops-validator to validate this ContextOps artifact and return PASS, REVISE, or BLOCK with actionable findings."

@@ -6,8 +6,10 @@ sources:
   - research/assets/06_AI_Prompting/02_Context_Engineering
   - "C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt"
   - "C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx"
+  - raw/Clippings/AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md
+  - raw/Clippings/AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md
 created: 2026-06-03
-updated: 2026-06-11
+updated: 2026-06-20
 ---
 
 # Context Engineering
@@ -23,6 +25,8 @@ The core idea to preserve is that output quality depends heavily on the quality 
 The later Karpathy-method blueprint sources sharpen this into a broader operating principle: context engineering is not only prompt writing, but the design of the whole working environment around the model. A good AI environment supplies the goal, sources, examples, rules, verification routines, reusable skills, and hard guardrails so the model has less room to invent missing context (source: The Karpathy Method Blueprint (1).docx; source: pasted-text.txt; product-specific claims unverified).
 
 In this vault, [[ai-work-blueprint]] is the practical entry point for applying context engineering: define the spec, define the verifier, and decide what should be preserved in the environment for the next run.
+
+The production-agent clippings add three operational verbs: **reduce** irrelevant or redundant context, **offload** durable state to files and tools, and **isolate** subtasks that do not need the full conversation history. Context engineering is therefore also context budgeting: deciding what belongs in the active window, what belongs in persistent memory, and what belongs in a separate worker context (source: AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md; source: AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md).
 
 ## Useful Leads
 
@@ -46,3 +50,5 @@ In this vault, [[ai-work-blueprint]] is the practical entry point for applying c
 - [[agentic-prompting]]
 - [[briefing-system]]
 - [[brand-system]]
+- [[production-agent-engineering-clippings-june-2026]]
+- [[ai-workflow-builder-clippings-june-2026]]

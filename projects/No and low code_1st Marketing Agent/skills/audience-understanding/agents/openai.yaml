@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audience Understanding"
+  short_description: "Deep audience intelligence for downstream strategy"
+  default_prompt: "Use $audience-understanding to build an evidence-backed audience context packet for selected segments before positioning or campaign work."

@@ -8,8 +8,9 @@ sources:
   - raw/assets/A_frameworks_templates/06_AI_Prompting
   - raw/assets/A_frameworks_templates/07_AI_fuer_Marketing
   - raw/assets/A_frameworks_templates/_Archiv_AI_veraltet
+  - research/assets/11_Markets
 created: 2026-06-03
-updated: 2026-06-11
+updated: 2026-06-20
 ---
 
 # AI Research Library
@@ -25,6 +26,8 @@ The source set is useful as a map of ideas and workflows, but it should not be t
 Use these materials to identify promising frameworks, prompts, and research directions. Before promoting a claim into durable wiki knowledge, check cited sources, current product documentation, or primary sources (source: AGENTS.md; source: [[ai-research-validation]]).
 
 The raw reference library also contains AI prompting, AI-for-marketing, and archived AI material under `raw/assets/A_frameworks_templates`; these files are cataloged as raw assets because they were placed there, but AI-generated or model-labeled claims still require the same verification discipline as `research/assets` material (source: raw/assets/A_frameworks_templates/06_AI_Prompting; source: raw/assets/A_frameworks_templates/07_AI_fuer_Marketing; source: raw/assets/A_frameworks_templates/_Archiv_AI_veraltet; source: AGENTS.md).
+
+The user confirmed that `research/assets/11_Markets` is an AI-research collection: 597 AI-generated logistics deep-research reports and their corresponding prompts. It was moved from `raw/assets/11_Markets` to the canonical research layer on 2026-06-20. Use [[logistics-market-intelligence-library]] as a map to research leads, and mark claims `needs verification` until cited primary sources are checked (source: user clarification, 2026-06-20; source: research/assets/11_Markets).
 
 The newest research addendum introduces [[ai-marketing-workflow-assurance]], a proposed Markdown-native review layer for applied AI marketing workflows. It should be used as a design lead until its current vendor and regulatory claims are checked against cited primary sources (source: Minimal Evaluation and Observability Framework for AI Marketing Workflows.docx).
 
@@ -45,6 +48,7 @@ The 2026-06-11 addendum corrected the local path for the minimal evaluation sour
 - [[ai-strategy-frameworks-research]] - AI strategy frameworks, ABLE, AI transformation, and marketing playbooks.
 - [[ai-writing-and-style-research]] - AI writing guides, style guides, and LLM writing frameworks.
 - [[ai-briefing-templates-research]] - AI-adjacent briefing templates and reusable brief structures.
+- [[logistics-market-intelligence-library]] - AI-generated logistics market, vertical, persona, journey, product, and trend research plus its prompts.
 
 ## Validation Stance
 
@@ -61,4 +65,5 @@ The 2026-06-11 addendum corrected the local path for the minimal evaluation sour
 - [[ai-marketing-research-library]]
 - [[ai-marketing-workflow-assurance]]
 - [[minimal-evaluation-and-observability-framework-gemini-2026-06-05]]
+- [[logistics-market-intelligence-library]]
 - [[sources]]

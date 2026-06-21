@@ -11,8 +11,11 @@ sources:
   - raw/assets/09_Beispiele_HP
   - raw/assets/A_frameworks_templates
   - raw/assets/B_MKT_working_library
+  - research/assets/11_Markets
+  - raw/Clippings/Stop outsourcing your marketing intelligence to AI. Do this instead.md
+  - raw/Clippings/How to Rebuild Your Marketing Team for the Agentic Age. Full Breakdown.md
 created: 2026-06-03
-updated: 2026-06-05
+updated: 2026-06-20
 ---
 
 # Marketing Operating System
@@ -43,6 +46,10 @@ The expanded raw assets split this operating system into a reusable reference la
 
 AI-labeled or model-labeled working files in the reference and working libraries should be treated as secondary synthesis until verified against primary sources or current product/platform documentation (source: raw/assets/A_frameworks_templates; source: raw/assets/B_MKT_working_library; source: AGENTS.md).
 
+[[logistics-market-intelligence-library]] adds 597 AI-generated deep-research reports and corresponding prompts for business units, vertical markets, personas, buyer journeys, products, trends, content pillars, and Connect spot booking. It is a source of hypotheses, research leads, and workflow inputs—not verified market evidence—until cited primary sources are checked (source: user clarification, 2026-06-20; source: research/assets/11_Markets).
+
+The agentic-marketing sources add a compounding intelligence loop around the operating system: human judgment selects what matters; the owned knowledge layer stores customer, market, positioning, and performance evidence; AI executes against that context; and reviewed learning returns to the system (source: Stop outsourcing your marketing intelligence to AI. Do this instead.md; source: How to Rebuild Your Marketing Team for the Agentic Age. Full Breakdown.md).
+
 ## Related pages
 
 - [[marketing-assets-library]]
@@ -57,3 +64,5 @@ AI-labeled or model-labeled working files in the reference and working libraries
 - [[marketing-strategy-and-planning-working-library]]
 - [[marketing-campaigns-missions-and-projects-library]]
 - [[marketing-sales-and-buyer-enablement-library]]
+- [[logistics-market-intelligence-library]]
+- [[agentic-marketing-intelligence-clippings-june-2026]]

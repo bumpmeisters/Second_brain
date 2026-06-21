@@ -1,0 +1,4 @@
+interface:
+  display_name: "Buying Contexts"
+  short_description: "Build buyer-context packets"
+  default_prompt: "Use $buying-contexts to create modular buyer-context packets for this company or product."

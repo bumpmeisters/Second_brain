@@ -1,0 +1,27 @@
+My goal is to collaborate with you to create a high-leverage <final_prompt>. This prompt will instruct another AI model to generate a synthetic vertical market report. The report's ultimate purpose is to serve as a foundational context for DSV x DB Schenker's content strategy and for creating advanced marketing prompts.
+The vertical market for this report is: [Insert Vertical Market Here, e.g., The Battery Supply Chain]
+To streamline our process, I have compiled all the standard requirements and constraints for this project below. Please consider this the master brief.
+1. Report Profile & Constraints:
+Primary Goal: To generate a synthetic vertical market report that informs the creation of our content strategy and serves as a reusable context for future, advanced marketing prompts.
+Audience: The internal marketing team, including the Head of Marketing, content strategists, and campaign strategists who need detailed, actionable insights.
+Narrator Persona: The report must be written from the perspective of "DSV x DB Schenker's internal Head of Strategy." The voice must be business-focused, practical, strategic, and geared towards internal decision-making, using "we" and "our" to address company goals.
+Exemplar & Format: The final output must precisely emulate the structure, tone, length, and data-driven nature of the attached exemplar report: 20250828_Battery Supply Chain Strategy Report.docx. This includes a formal structure with an executive summary, numbered sections, data tables, and strategic recommendations.
+Scope (Geography): Primary focus on the European Union and US markets, with a secondary focus on China.
+Scope (Timeframe): The analysis must cover trends from the last 3 years and provide a forward-looking perspective for the next 5 years.
+Scope (Segmentation): The report must include a comparative analysis of the core sub-sectors within the specified vertical market.
+Source Requirements: The analysis must be informed by data and reports published after January 1, 2023, from reputable industry journals, government agencies, and top-tier consulting firms.
+2. AI Reasoning & Quality Control:
+Reasoning Mode: Please use a combined Least-to-Most and Self-Consistency (k=3) reasoning approach. This will ensure a logical, scaffolded argument with enhanced accuracy and depth.
+Success Criteria: The <final_prompt> must instruct the model to self-evaluate against these criteria:
+The report identifies at least 3 distinct customer pain points that can be turned into content pillars.
+The "Strategic Opportunities/Implications" section proposes at least 5 key success factors for marketing.
+All key claims are plausibly based on data from post-2023 sources.
+[add/provide more if appropriate]
+Guardrails: The <final_prompt> must include the following safety guardrails:
+Brand Safety: Avoid direct, unsubstantiated, or negative comparisons to named competitors.
+Legal/Compliance: Do not provide advice that could be construed as legal or financial guidance.
+Speculation: Avoid definitive predictions about geopolitical events; frame them as potential risks or scenarios.
+Commitments: Do not make specific service-level promises that are not already public.
+[add/provide more if appropriate]
+
+

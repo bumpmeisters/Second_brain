@@ -1,0 +1,4 @@
+interface:
+  display_name: "Framework Fit"
+  short_description: "Select fitting local strategy frameworks"
+  default_prompt: "Use $second-brain-framework-fit to choose the best canonical local frameworks for this company/product case."

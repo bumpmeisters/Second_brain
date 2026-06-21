@@ -1,0 +1,1 @@
+https://hk-das-familienbuch.myshopify.com/admin/oauth/authorize?client_id=7e9cb568cfd431c538f36d1ad3f2b4f6&scope=read_products&redirect_uri=http%3A%2F%2F127.0.0.1%3A13387%2Fauth%2Fcallback&state=bi7CG3KHC187B89W0qEwcCGuBfwoSGrL&response_type=code&code_challenge=z9mIRamB_m3wgqwhp4XS40dy6Y6jdZDCtxYjRQg8Di8&code_challenge_method=S256

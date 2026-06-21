@@ -9,8 +9,10 @@ sources:
   - https://developers.openai.com/api/docs/guides/evaluation-best-practices
   - https://developers.openai.com/api/docs/guides/graders
   - https://docs.cloud.google.com/generative-ai-app-builder/docs/check-grounding
+  - raw/Clippings/AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md
+  - raw/Clippings/Stop outsourcing your marketing intelligence to AI. Do this instead.md
 created: 2026-06-06
-updated: 2026-06-11
+updated: 2026-06-20
 ---
 
 # AI Marketing Workflow Assurance
@@ -49,6 +51,8 @@ For a brand consistency reviewer, the source emphasizes current brand-guide auth
 ## Operating rule
 
 An AI-assisted marketing output should not become durable knowledge unless its claims can be traced to an evidence row and its review decision explains why it was trusted, rejected, or kept as a lead (source: Minimal Evaluation and Observability Framework for AI Marketing Workflows.docx).
+
+The June 2026 production and marketing clippings reinforce two assurance requirements: agents can fail silently while reporting success, so completion must be checked independently; and only reviewed lessons should return to the owned intelligence layer, so low-quality or unsupported output does not compound (source: AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md; source: Stop outsourcing your marketing intelligence to AI. Do this instead.md).
 
 ## 2026-06-06 Gemini research addendum
 
@@ -89,3 +93,5 @@ The later Gemini variant adds a useful warning for local-first workflows: final-
 - [[agentic-and-applied-ai-gap-review]]
 - [[ai-research-validation]]
 - [[marketing-operating-system]]
+- [[production-agent-engineering-clippings-june-2026]]
+- [[agentic-marketing-intelligence-clippings-june-2026]]

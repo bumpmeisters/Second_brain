@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company Strategy Orchestrator"
+  short_description: "Coordinate company/product strategy analysis"
+  default_prompt: "Use $company-strategy-orchestrator to analyze this company/product and choose the next strategy workflow."

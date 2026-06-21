@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proof-Led Positioning"
+  short_description: "Evidence-safe positioning and messaging"
+  default_prompt: "Use $proof-led-positioning to turn this company evidence into a message house and proof-led positioning."

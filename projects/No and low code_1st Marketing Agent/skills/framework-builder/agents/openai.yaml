@@ -1,0 +1,4 @@
+interface:
+  display_name: "Framework Builder"
+  short_description: "Engineer and evolve inference-ready frameworks"
+  default_prompt: "Use $framework-builder to research, build, evaluate, and evolve a canonical inference-ready framework."

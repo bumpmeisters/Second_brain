@@ -6,7 +6,7 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-06-13
+updated: 2026-06-20
 ---
 
 # Wiki Index
@@ -15,11 +15,11 @@ updated: 2026-06-13
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-06-13
+**Last updated**: 2026-06-20
 
 ---
 
-This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], [[web-scraping-tools]], a marketing knowledge library organized in [[marketing-assets-library]], a reorganized [[frameworks-templates-reference-library]], an active [[marketing-working-library]], an unverified AI research library organized in [[ai-research-library]], and reusable agentic work patterns including [[ai-work-blueprint]], [[claude-md-project-instructions]], [[wat-framework]], [[claude-subagents]], [[loop-engineering]], and [[ai-operating-system]] (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md; source: The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md; source: Post by @cyrilXBT on X.md; source: pasted-text.txt; source: raw/assets; source: research/assets; source: [[claude-md-frameworks-research-2026-06-13]]).
+This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], [[web-scraping-tools]], a marketing knowledge library organized in [[marketing-assets-library]], an unverified AI-generated logistics and vertical-market research collection in [[logistics-market-intelligence-library]], an AI research library organized in [[ai-research-library]], and reusable agentic work patterns including [[ai-work-blueprint]], [[claude-md-project-instructions]], [[wat-framework]], [[claude-subagents]], [[loop-engineering]], [[context-engineering]], and [[ai-operating-system]]. New June 2026 sources add production-agent lessons, an agentic marketing intelligence loop, and Google DeepMind's four-pathway map from AGI to ASI (source: raw/Clippings; source: research/assets/11_Markets; source: 20260619_Deepmind_from AGI to ASI.pdf).
 
 ## Operating pages
 
@@ -69,6 +69,13 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[agentic-workflows-library]] - Source summary for raw agentic workflow setup assets.
 - [[claude-md-frameworks-research-2026-06-13]] - Research summary connecting local WAT/Claude setup files with current Claude Code docs, AGENTS.md, Aider conventions, and agent-manifest research.
 - [[marketing-and-frameworks-library-readme]] - README source summary for the restructured marketing/frameworks raw asset library.
+- [[production-agent-engineering-clippings-june-2026]] - Production lessons on agent harnesses, context reduction/offloading/isolation, verification, memory, observability, and cost controls.
+- [[ai-workflow-builder-clippings-june-2026]] - Seven transcripts on planning, roles, skills, parallel sessions, bounded loops, and file-based AI operating systems.
+- [[agentic-marketing-intelligence-clippings-june-2026]] - Marketing judgment, proprietary intelligence layers, evidence-backed positioning, and model selection.
+- [[frontier-ecosystem-human-and-token-capital]] - Essay on compounding human and organizational AI capability in a model-independent learning loop.
+- [[from-agi-to-asi-google-deepmind-2026]] - Google DeepMind report on four possible pathways from AGI to ASI and their bottlenecks.
+- [[logistics-market-intelligence-library]] - Inventory-level summary of 597 unverified AI-generated logistics deep-research reports and corresponding prompts.
+- [[merchant-of-record-vs-payment-service-provider]] - Commercial-source comparison of owning a commerce stack versus outsourcing merchant-of-record responsibilities.
 
 ## Analysis pages
 
@@ -164,3 +171,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[loop-engineering]]
 - [[obsidian-vault-design]]
 - [[web-scraping-tools]]
+- [[production-agent-engineering-clippings-june-2026]]
+- [[agentic-marketing-intelligence-clippings-june-2026]]
+- [[from-agi-to-asi-google-deepmind-2026]]
+- [[logistics-market-intelligence-library]]

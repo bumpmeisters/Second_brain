@@ -3,8 +3,10 @@ type: concept
 status: active
 sources:
   - raw/assets/03_Brand/Messaging_Frameworks
+  - raw/Clippings/positioning-strategy-prompt.pdf.md
+  - raw/Clippings/In the Age of AI, You Need a Point of View.md
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-06-20
 ---
 
 # Messaging Frameworks
@@ -19,9 +21,14 @@ Because several files include `PROMPT_GEN_AI` in the filename, claims from these
 
 In this vault, [[messaging-frameworks]] connect [[brand-system]], [[briefing-system]], [[creative-briefs]], and [[content-quality]].
 
+The positioning master prompt adds an evidence-first workflow: collect verbatim competitor and customer evidence, compare what the company says with what buyers say, derive principles from desired customer outcomes plus competitor weakness plus provable company strength, red-team each principle, and retain rejected principles with reasons (source: positioning-strategy-prompt.pdf.md).
+
+The point-of-view source adds a strategic layer above product messaging: articulate a defensible belief about the future of the market, rooted in the company's distinctive strengths, so buyers can understand the logic behind product and roadmap choices (source: In the Age of AI, You Need a Point of View.md).
+
 ## Related pages
 
 - [[brand-library]]
 - [[brand-system]]
 - [[briefing-system]]
 - [[content-quality]]
+- [[agentic-marketing-intelligence-clippings-june-2026]]

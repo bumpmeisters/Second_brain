@@ -3,7 +3,7 @@ type: source-register
 status: active
 sources: []
 created: 2026-06-01
-updated: 2026-06-13
+updated: 2026-06-20
 ---
 
 # Sources
@@ -43,6 +43,13 @@ updated: 2026-06-13
 | `C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt` | User-provided AI synthesis | ingested | [[karpathy-spec-verifier-environment-source-summary]] | Adds detail on spec-driven development, LLM wikis, skills, and deterministic guardrails; product-specific claims remain unverified. |
 | `C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx` | External DOCX blueprint | ingested | [[karpathy-spec-verifier-environment-source-summary]] | Adds concise prompt patterns, environment audit prompt, and CLAUDE.md/knowledge-base/skills/guardrail structure; treated as secondary synthesis. |
 | Local CLAUDE/WAT setup files plus external web research checked 2026-06-13 | Mixed local raw files and external docs/research | ingested | [[claude-md-frameworks-research-2026-06-13]] | Connects WAT, `CLAUDE.md`, AGENTS.md, skills, rules, hooks, settings, subagents, and empirical context-file research. Product mechanics are time-sensitive. |
+| `raw/Clippings/AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md`; `AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md`; duplicate `Forget Agent Skills` pair | Markdown clipping bundle | ingested | [[production-agent-engineering-clippings-june-2026]] | Production agent engineering themes: thin harnesses, context management, verification, memory, observability, cost, and review. Duplicate pair is byte-identical. |
+| Seven Claude Code, loop engineering, and vibe-coding transcript clippings uploaded 2026-06-19 | Markdown clipping bundle | ingested | [[ai-workflow-builder-clippings-june-2026]] | Planning, roles, isolated parallel work, skills, verifiers, bounded loops, and file-based improvement systems; creator claims unverified. |
+| Five marketing intelligence, positioning, point-of-view, and agentic marketing clippings uploaded 2026-06-19 | Markdown clipping bundle | ingested | [[agentic-marketing-intelligence-clippings-june-2026]] | Human judgment plus an owned intelligence layer, evidence-grounded AI execution, red-team positioning, and model routing. |
+| `raw/Clippings/A frontier without an ecosystem is not stable.md` | Markdown clipping | ingested | [[frontier-ecosystem-human-and-token-capital]] | Essay on human capital, token capital, model-independent learning loops, digital sovereignty, and broad value creation. |
+| `raw/Clippings/Stripe Alternative for SaaS When to Consider an MoR.md` | Markdown clipping | ingested | [[merchant-of-record-vs-payment-service-provider]] | Commercial comparison of payment-service-provider and merchant-of-record operating models; fees and product claims need verification. |
+| `raw/assets/20260619_Deepmind_from AGI to ASI.pdf` | Research paper PDF | ingested | [[from-agi-to-asi-google-deepmind-2026]] | 57-page Google DeepMind report mapping scaling, paradigm shifts, recursive improvement, and agent collectives as pathways from AGI to ASI. |
+| `research/assets/11_Markets` | AI research folder bundle | ingested | [[logistics-market-intelligence-library]] | 597 AI-generated deep-research reports and corresponding prompts. Moved from `raw/assets/11_Markets` on 2026-06-20; treat all claims as `needs verification` until cited primary sources are checked. |
 
 ## Generated Extraction Outputs
 
@@ -58,6 +65,7 @@ updated: 2026-06-13
 | `wiki/_outputs/raw-assets-new-marketing-extension-summary-2026-06-05.csv` | CSV inventory | Extension counts for the new marketing raw asset bundles. |
 | `wiki/_outputs/ai-marketing-workflow-assurance-research-gemini-2026-06-05.txt` | DOCX text extraction | Extracted text from the Gemini Deep Research DOCX for local review and source-summary creation. |
 | `wiki/_outputs/new-sources-inventory-2026-06-11.md` | Markdown inventory | Human-readable inventory of newly identified and corrected source paths from the 2026-06-11 ingest. |
+| `wiki/_outputs/new-sources-inventory-2026-06-20.md` | Markdown inventory | Intake reconciliation for 18 clippings, the DeepMind PDF, the 597-file markets bundle, and the no-new-research finding. |
 
 ## Pending
 
@@ -75,6 +83,7 @@ No pending sources are currently registered.
 | `raw/assets/A_frameworks_templates/06_AI_Prompting` | Mixed/unknown AI tools and models | unverified / partially-verifiable | ingested as raw folder content | [[frameworks-templates-reference-library]] | Treat AI-generated claims as secondary synthesis despite raw-folder placement. |
 | `raw/assets/A_frameworks_templates/07_AI_fuer_Marketing` | Mixed/unknown AI tools and models | unverified / partially-verifiable | ingested as raw folder content | [[frameworks-templates-reference-library]] | Treat AI marketing claims as secondary synthesis unless independently checked. |
 | `raw/assets/A_frameworks_templates/_Archiv_AI_veraltet` | Mixed/unknown AI tools and models | unverified / stale-risk | ingested as raw folder content | [[frameworks-templates-reference-library]] | Archive naming signals old AI material; verify before reuse. |
+| `research/assets/11_Markets` | Mixed/unknown AI tools and models | unverified | ingested | [[logistics-market-intelligence-library]] | User confirmed the 597 files are AI-generated deep-research reports and corresponding prompts. Record model/tool and check cited primary sources during deeper ingestion. |
 
 ## Related pages
 

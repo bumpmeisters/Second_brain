@@ -1,0 +1,4 @@
+interface:
+  display_name: "Marktanalyse"
+  short_description: "Build narrow market-context packets"
+  default_prompt: "Use $marktanalyse to create a narrow market-analysis context packet for this company or product."

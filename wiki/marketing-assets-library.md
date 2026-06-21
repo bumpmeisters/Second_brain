@@ -12,8 +12,9 @@ sources:
   - raw/assets/A_frameworks_templates
   - raw/assets/B_MKT_working_library
   - raw/assets/00_README_START_HERE.md
+  - research/assets/11_Markets
 created: 2026-06-03
-updated: 2026-06-11
+updated: 2026-06-20
 ---
 
 # Marketing Assets Library
@@ -35,6 +36,8 @@ The extraction inventory is stored as a generated analysis output in `wiki/_outp
 The expanded working/reference inventory is stored in `wiki/_outputs/raw-assets-new-marketing-inventory-2026-06-05.md`, `wiki/_outputs/raw-assets-new-marketing-file-inventory-2026-06-05.csv`, `wiki/_outputs/raw-assets-new-marketing-folder-summary-2026-06-05.csv`, and `wiki/_outputs/raw-assets-new-marketing-extension-summary-2026-06-05.csv` (analysis: wiki/_outputs/raw-assets-new-marketing-inventory-2026-06-05.md).
 
 The added `raw/assets/00_README_START_HERE.md` is now registered as a navigation source for the restructured marketing and frameworks library. It points to the active working library, reference library, preserved originals, and restructure reports, and it records the date-priority rule for interpreting multiple file versions (source: raw/assets/00_README_START_HERE.md; see [[marketing-and-frameworks-library-readme]]).
+
+The new [[logistics-market-intelligence-library]] adds 597 AI-generated deep-research reports and corresponding prompts focused on logistics business units, vertical markets, personas, target audiences, customer journeys, products, trends, content pillars, and Connect spot booking. The collection now lives under `research/assets/11_Markets` and is treated as unverified secondary synthesis under the vault's AI-research rules (source: user clarification, 2026-06-20; source: research/assets/11_Markets).
 
 ## High-Level Patterns
 
@@ -67,3 +70,4 @@ The added `raw/assets/00_README_START_HERE.md` is now registered as a navigation
 - [[marketing-working-library]]
 - [[marketing-and-frameworks-library-readme]]
 - [[marketing-operating-system]]
+- [[logistics-market-intelligence-library]]

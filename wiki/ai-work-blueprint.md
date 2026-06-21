@@ -8,8 +8,10 @@ sources:
   - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
   - raw/Clippings/Only the best are using them.md
   - raw/Clippings/How to Build Claude Subagents Better Than 99% of People.md
+  - raw/Clippings/AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md
+  - raw/Clippings/Stop Prompting Claude. Start Loop Engineering.md
 created: 2026-06-10
-updated: 2026-06-11
+updated: 2026-06-20
 ---
 
 # AI Work Blueprint
@@ -161,6 +163,8 @@ Für wiederverwendbare oder externe Arbeit verbindet sich diese Schicht mit [[ai
 
 Die neuen Agentic-Clippings passen in denselben Blueprint: [[claude-subagents]] helfen, spezialisierte Arbeit mit frischem Kontext auszuführen; [[loop-engineering]] braucht eine besonders klare Spezifikation und einen prüfbaren Stop-Zustand; [[ai-operating-system]] beschreibt die dauerhafte Umgebung aus Kontext, Verbindungen, Fähigkeiten und Kadenz (source: How to Build Claude Subagents Better Than 99% of People.md; source: Only the best are using them.md; source: I Turned Claude Fable Into The Ultimate Second Brain.md).
 
+Die Juni-2026-Quellen ergänzen zwei praktische Regeln: Kontext aktiv reduzieren, auslagern und isolieren; und Schleifen nur dann autonom laufen lassen, wenn Ziel, Verifizierer, Budget und Abbruchbedingung explizit sind (source: AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md; source: Stop Prompting Claude. Start Loop Engineering.md).
+
 ## Layer 3: Umgebung
 
 Die Umgebung verhindert, dass du bei jedem Prompt wieder bei null anfängst. Sie ist der dauerhafte Rahmen um die Arbeit: Regeln, Wissensbasis, Vorlagen, Beispiele, Skills, Logs und Guardrails.
@@ -286,3 +290,5 @@ Du kannst Ausführung an KI delegieren, aber nicht dein Verständnis. Die KI kan
 - [[claude-subagents]]
 - [[loop-engineering]]
 - [[llm-wiki]]
+- [[production-agent-engineering-clippings-june-2026]]
+- [[ai-workflow-builder-clippings-june-2026]]

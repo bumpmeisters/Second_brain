@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recursive Learning Update"
+  short_description: "Distill reusable learning after each run"
+  default_prompt: "Use $recursive-learning-update to review this company-analysis run and update reusable patterns and improvements."
