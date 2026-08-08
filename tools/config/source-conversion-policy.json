@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "approved_roots": ["raw/assets", "research/assets"],
+  "eligible_extensions": [".txt", ".csv", ".json", ".yaml", ".yml", ".html", ".htm", ".docx", ".pdf", ".pptx", ".xlsx"],
+  "native_markdown_extensions": [".md", ".markdown"],
+  "automatic_actions": {
+    "create_missing_sidecars": true, "validate_sidecars": true, "update_registry": true,
+    "overwrite_sidecars": false, "run_ocr": false, "modify_sources": false,
+    "delete_files": false, "semantic_ingest": false
+  },
+  "backend": "auto",
+  "converter_profile_version": "2026-07-16.1",
+  "thresholds": {
+    "maximum_failure_rate_percent": 5,
+    "maximum_unresolved_amber": 10,
+    "minimum_free_disk_gib": 2,
+    "lock_timeout_minutes": 360
+  },
+  "backfill_wave_sizes": [25, 100, 250],
+  "manual_only_actions": ["overwrite", "regenerate", "ocr", "new_backend", "policy_change", "schedule_change", "semantic_promotion"]
+}

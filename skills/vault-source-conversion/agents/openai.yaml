@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vault Source Conversion"
+  short_description: "Inventory and convert vault sources to Markdown"
+  default_prompt: "Use $vault-source-conversion to inventory raw and research sources, create safe Markdown derivatives, and audit conversion quality."

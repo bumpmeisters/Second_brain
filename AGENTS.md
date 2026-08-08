@@ -15,7 +15,7 @@ The goal is compounding synthesis: every source should make the wiki easier to q
 Treat the vault as three layers:
 
 ```text
-raw/          immutable source material
+raw/          immutable source material, including Markdown clippings and local binary assets
 research/     AI-generated research reports and other uncertain secondary syntheses
 wiki/         Codex-maintained knowledge pages
 AGENTS.md     operating rules for Codex
@@ -24,16 +24,24 @@ AGENTS.md     operating rules for Codex
 Additional support folders:
 
 ```text
-templates/       reusable Markdown templates
-skills/          local Codex skill folders; each skill lives in its own folder with a SKILL.md
-raw/assets/      locally downloaded source attachments from clips, such as images
-research/assets/ attachments that belong to AI-generated research reports
-wiki/_assets/    generated or locally saved images and attachments used by wiki pages
-wiki/_outputs/   generated exports such as charts, tables, reports, slide outlines, or analysis files
+templates/          reusable Markdown templates
+skills/             local Codex skill folders; each skill lives in its own folder with a SKILL.md
+raw/Clippings/      Markdown web clippings and their small inline images
+raw/assets/         local binary raw-source library; ignored by Git except for its README
+research/assets/    local binary attachments for AI-generated research; ignored by Git except for its README
+wiki/_assets/       generated or locally saved images and attachments used by wiki pages
+wiki/_outputs/      generated exports such as charts, tables, reports, slide outlines, or analysis files
+wiki/_extractions/  searchable Markdown extractions of binary sources
 ```
 
-Never modify files in `raw/`. If a source needs cleaning, create a derived note or output in `wiki/` or `wiki/_outputs/`.
-For Obsidian Web Clipper attachments, prefer Obsidian's fixed attachment folder `raw/assets/`, following Karpathy's suggested pattern.
+The binary libraries use stable repository-relative paths while remaining local and outside Git. Never modify files in `raw/`, `raw/assets/`, or `research/assets/`. If a source needs cleaning, create a derived note or output in `wiki/` or `wiki/_outputs/`.
+For Obsidian Web Clipper attachments, keep small clipping attachments with `raw/Clippings/`; do not write them into the binary source libraries.
+
+## Sidecar extraction rule
+
+Obsidian cannot search inside binary files. Whenever a binary source is ingested at content level, also create a readable Markdown extraction under `wiki/_extractions/`, mirroring the source path and recording the original repository-relative source path in frontmatter. Inventory-only work does not require an extraction.
+
+Routine create-only conversion may discover sources, create missing derivatives, validate results, and update conversion status. Overwrite, regeneration, OCR, source mutation, policy changes, schedule changes, and semantic promotion remain manual actions. Before reading a binary at content level, run `tools/assert-source-ingest-ready.ps1`.
 
 Treat `research/` differently from `raw/`: AI-generated research can be useful, but it is not primary evidence. Preserve it as received, track uncertainty, and verify important claims against primary sources before promoting them into durable wiki claims.
 
@@ -209,11 +217,12 @@ Append entries to `wiki/log.md` using this pattern:
 
 ## Rules
 
-- Never modify anything in `raw/`.
+- Never modify anything in `raw/`, `raw/assets/`, or `research/assets/`.
 - Never silently treat AI-generated research as primary evidence.
 - Always update `wiki/index.md`, `wiki/sources.md`, and `wiki/log.md` after ingesting sources.
-- Keep downloaded source attachments in `raw/assets/`.
-- Keep AI-generated deep-research reports in `research/` and their attachments in `research/assets/`.
+- Keep binary source files in the local, Git-ignored `raw/assets/` library and cite them with repository-relative paths.
+- Keep AI-generated deep-research reports in `research/` and their binary attachments in the local, Git-ignored `research/assets/` library.
+- When ingesting a binary source at content level, also write a Markdown extraction to `wiki/_extractions/`.
 - Keep generated outputs in `wiki/_outputs/` and curated wiki media in `wiki/_assets/`.
 - Keep local reusable skills in `skills/`, using one lowercase hyphenated folder per skill and a required `SKILL.md`.
 - Keep page names lowercase and hyphenated.

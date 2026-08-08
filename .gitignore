@@ -32,3 +32,15 @@ Desktop.ini
 __pycache__/
 .pytest_cache/
 node_modules/
+
+# Local binary source libraries (available to the vault, never published)
+/raw/assets/*
+!/raw/assets/README.md
+/research/assets/*
+!/research/assets/README.md
+
+# Local source-conversion runtime state
+wiki/_outputs/source-conversions/logs/*.log
+wiki/_outputs/source-conversions/runs/
+wiki/_outputs/source-conversions/latest-run.json
+wiki/_outputs/source-conversions/.conversion.lock
