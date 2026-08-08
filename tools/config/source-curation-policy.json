@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "policy_status": "wave-active",
+  "snapshot_id": "starter-pack-2026-08-07",
+  "approved_roots": [
+    "raw/assets",
+    "research/assets"
+  ],
+  "automatic_actions": {
+    "inventory": true,
+    "fingerprint": true,
+    "map_citations": true,
+    "detect_exact_duplicates": true,
+    "propose_curation_status": true,
+    "create_or_overwrite_sidecars": false,
+    "run_ocr": false,
+    "modify_sources": false,
+    "move_sources": false,
+    "delete_sources": false,
+    "semantic_ingest": false
+  },
+  "curation_statuses": [
+    "active-evidence",
+    "cold-retain",
+    "duplicate-candidate",
+    "superseded-version",
+    "research-secondary",
+    "exception-on-demand",
+    "discard-candidate",
+    "protected"
+  ],
+  "proposal_rules": {
+    "cited_source": "protected",
+    "noncanonical_exact_duplicate": "duplicate-candidate",
+    "research_source": "research-secondary",
+    "conversion_exception": "exception-on-demand",
+    "default": "cold-retain"
+  },
+  "duplicate_canonical_order": [
+    "prefer_research_root",
+    "lexical_repository_path"
+  ],
+  "pilot": {
+    "total": 50,
+    "per_stratum": 10,
+    "strata": [
+      "cited-green",
+      "uncited-green",
+      "exact-duplicate",
+      "conversion-exception",
+      "visual-research-unsupported"
+    ]
+  },
+  "classification_waves": [100, 100, 250],
+  "classification_progress": {
+    "pilot": "completed",
+    "wave_001": "completed",
+    "wave_002": "completed",
+    "wave_003": "completed",
+    "classified_unique_sources": 500,
+    "remaining_manifest_sources": 2618,
+    "open_content_readiness_decisions": 34,
+    "completed_readiness_regenerations": 12
+  },
+  "manual_only_actions": [
+    "approve_final_curation_status",
+    "approve_canonical_version_when_ambiguous",
+    "accept_amber_or_red_for_content_ingest",
+    "overwrite_or_regenerate_sidecar",
+    "run_ocr",
+    "change_policy",
+    "move_source",
+    "delete_source",
+    "semantic_promotion"
+  ],
+  "hard_guards": {
+    "physical_action_default": "none",
+    "protect_any_cited_source": true,
+    "protect_canonical_duplicate": true,
+    "require_verified_backup_before_physical_action": true,
+    "require_explicit_user_approval_before_physical_action": true,
+    "never_treat_sidecar_as_full_replacement": true
+  }
+}
