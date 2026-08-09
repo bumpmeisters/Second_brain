@@ -34,8 +34,8 @@ try {
     }
 
     & (Join-Path $vault "tools\sync-source-converter.ps1") -Check | Out-Null
-    $python = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
-    if (-not (Test-Path -LiteralPath $python)) { throw "Bundled Python runtime not found: $python" }
+    $python = & (Join-Path $vault "tools\resolve-python-runtime.ps1") -Purpose Agent -PathOnly
+    if (-not (Test-Path -LiteralPath $python)) { throw "Approved Python runtime not found: $python" }
 
     $tempRoot = [System.IO.Path]::GetFullPath((Join-Path $vault ".tmp"))
     $testRoot = [System.IO.Path]::GetFullPath((Join-Path $tempRoot "source-library-contract"))

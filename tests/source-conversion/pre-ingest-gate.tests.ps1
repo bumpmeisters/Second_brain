@@ -3,9 +3,10 @@ $repo=Resolve-Path (Join-Path $PSScriptRoot "..\..")
 $vault=Join-Path $repo ".tmp\pre-ingest-vault"
 if(Test-Path $vault){Remove-Item -Recurse -Force $vault}
 New-Item -ItemType Directory -Force (Join-Path $vault "tools\config"),(Join-Path $vault "raw\assets"),(Join-Path $vault "research\assets"),(Join-Path $vault "wiki\_extractions")|Out-Null
-$toolFiles=@("assert-source-ingest-ready.ps1","run-vault-source-conversion.ps1","run-source-extraction.ps1","source-conversion-readiness.ps1","source-to-markdown.py","test-content-ingest-sidecars.ps1","test-source-conversion-policy.ps1")
+$toolFiles=@("assert-source-ingest-ready.ps1","run-vault-source-conversion.ps1","run-source-extraction.ps1","source-conversion-readiness.ps1","source-to-markdown.py","test-content-ingest-sidecars.ps1","test-source-conversion-policy.ps1","resolve-python-runtime.ps1")
 foreach($name in $toolFiles){Copy-Item (Join-Path $repo "tools\$name") (Join-Path $vault "tools\$name")}
 Copy-Item (Join-Path $repo "tools\config\source-conversion-policy.json") (Join-Path $vault "tools\config\source-conversion-policy.json")
+Copy-Item (Join-Path $repo "tools\config\python-runtime-contract.json") (Join-Path $vault "tools\config\python-runtime-contract.json")
 $gate=Join-Path $vault "tools\assert-source-ingest-ready.ps1"
 $runner=Join-Path $vault "tools\run-vault-source-conversion.ps1"
 $lint=Join-Path $vault "tools\test-content-ingest-sidecars.ps1"

@@ -1,6 +1,6 @@
 $ErrorActionPreference="Stop"
 $vault=Resolve-Path (Join-Path $PSScriptRoot "..\..")
-$python=Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
+$python=& (Join-Path $vault "tools\resolve-python-runtime.ps1") -Purpose Agent -PathOnly
 $converter=Join-Path $vault "tools\source-to-markdown.py"
 $root=Join-Path $vault ".tmp\incremental-selection"
 if(Test-Path $root){Remove-Item -Recurse -Force $root}
