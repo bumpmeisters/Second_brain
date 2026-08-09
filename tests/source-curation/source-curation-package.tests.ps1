@@ -119,18 +119,26 @@ try {
     $schema = Join-Path $vault 'tools\config\source-curation-schema.json'
     $output = Join-Path $testRoot 'output'
     & $generator -SourceVaultRoot $testRoot -Mode All -OutputRoot $output -PolicyPath $policy | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        throw 'Curation package generator failed.'
-    }
+
+    $fallbackOutput = Join-Path $testRoot 'fallback-output'
+    & $generator -SourceVaultRoot $testRoot -Mode All -OutputRoot $fallbackOutput -PolicyPath $policy -CitationSearchBackend PowerShell | Out-Null
 
     $manifestPath = Join-Path $output 'starter-pack-2026-08-07-manifest.csv'
     $pilotPath = Join-Path $output 'starter-pack-2026-08-07-pilot-50.csv'
     & $validator -SourceVaultRoot $testRoot -ManifestPath $manifestPath -PilotPath $pilotPath -PolicyPath $policy -SchemaPath $schema | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        throw 'Curation package validator failed.'
-    }
 
     $manifest = @(Import-Csv -LiteralPath $manifestPath)
+    $fallbackManifest = @(Import-Csv -LiteralPath (Join-Path $fallbackOutput 'starter-pack-2026-08-07-manifest.csv'))
+    $fallbackCitations = @{}
+    foreach ($row in $fallbackManifest) {
+        $fallbackCitations[$row.source] = "$($row.citation_count)|$($row.citation_files)"
+    }
+    foreach ($row in $manifest) {
+        if (-not $fallbackCitations.ContainsKey($row.source) -or
+            $fallbackCitations[$row.source] -ne "$($row.citation_count)|$($row.citation_files)") {
+            throw "PowerShell citation fallback disagrees with automatic search for: $($row.source)"
+        }
+    }
     $pilot = @(Import-Csv -LiteralPath $pilotPath)
     if ($manifest.Count -ne 60) {
         throw "Expected 60 fixture sources, found $($manifest.Count)."

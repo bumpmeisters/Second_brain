@@ -10,7 +10,10 @@ param(
 
     [string]$OutputRoot = '',
 
-    [string]$PolicyPath = ''
+    [string]$PolicyPath = '',
+
+    [ValidateSet('Auto', 'Ripgrep', 'PowerShell')]
+    [string]$CitationSearchBackend = 'Auto'
 )
 
 Set-StrictMode -Version Latest
@@ -107,7 +110,8 @@ function Get-LatestRegistryIndex {
 function Get-CitationMap {
     param(
         [Parameter(Mandatory = $true)][string]$VaultRoot,
-        [Parameter(Mandatory = $true)][hashtable]$KnownSources
+        [Parameter(Mandatory = $true)][hashtable]$KnownSources,
+        [ValidateSet('Auto', 'Ripgrep', 'PowerShell')][string]$SearchBackend = 'Auto'
     )
 
     $map = @{}
@@ -131,40 +135,78 @@ function Get-CitationMap {
         $referencePattern
     ) + $searchRoots
 
-    Push-Location $VaultRoot
-    try {
-        $rgLines = @(& rg @arguments 2>$null)
+    $citations = [System.Collections.Generic.List[object]]::new()
+    $ripgrep = Get-Command 'rg' -CommandType Application -ErrorAction SilentlyContinue |
+        Select-Object -First 1
+    if ($SearchBackend -eq 'Ripgrep' -and -not $ripgrep) {
+        throw 'Ripgrep citation search was requested, but rg is unavailable.'
     }
-    finally {
-        Pop-Location
-    }
-
-    foreach ($line in $rgLines) {
-        if ([string]::IsNullOrWhiteSpace($line)) {
-            continue
-        }
+    $useRipgrep = $SearchBackend -eq 'Ripgrep' -or ($SearchBackend -eq 'Auto' -and $ripgrep)
+    if ($useRipgrep) {
+        Push-Location $VaultRoot
         try {
-            $event = $line | ConvertFrom-Json
+            $rgLines = @(& $ripgrep.Source @arguments 2>$null)
         }
-        catch {
-            continue
+        finally {
+            Pop-Location
         }
-        if ($event.type -ne 'match') {
-            continue
-        }
-        $referenceFile = $event.data.path.text.Replace('\', '/')
-        foreach ($submatch in $event.data.submatches) {
-            $candidate = $submatch.match.text.Replace('\', '/')
-            $key = $candidate.ToLowerInvariant()
-            if (-not $KnownSources.ContainsKey($key)) {
+
+        foreach ($line in $rgLines) {
+            if ([string]::IsNullOrWhiteSpace($line)) {
                 continue
             }
-            $source = $KnownSources[$key]
-            if (-not $map[$source].ContainsKey($referenceFile)) {
-                $map[$source][$referenceFile] = 0
+            try {
+                $event = $line | ConvertFrom-Json
             }
-            $map[$source][$referenceFile] += 1
+            catch {
+                continue
+            }
+            if ($event.type -ne 'match') {
+                continue
+            }
+            $referenceFile = $event.data.path.text.Replace('\', '/')
+            foreach ($submatch in $event.data.submatches) {
+                $citations.Add([pscustomobject]@{
+                    reference_file = $referenceFile
+                    candidate = $submatch.match.text.Replace('\', '/')
+                })
+            }
         }
+    }
+    else {
+        $allowedExtensions = @('.md', '.csv', '.json', '.yaml', '.yml')
+        $regex = [regex]::new($referencePattern, [Text.RegularExpressions.RegexOptions]::IgnoreCase)
+        foreach ($root in $searchRoots) {
+            foreach ($file in (Get-ChildItem -LiteralPath (Join-Path $VaultRoot $root) -Recurse -File)) {
+                $referenceFile = Get-RelativeVaultPath -VaultRoot $VaultRoot -LiteralPath $file.FullName
+                if ($file.Extension.ToLowerInvariant() -notin $allowedExtensions -or
+                    $referenceFile -like 'wiki/_extractions/*' -or
+                    $referenceFile -like 'wiki/_outputs/*' -or
+                    $referenceFile -like 'research/assets/*' -or
+                    $referenceFile -like 'raw/assets/*') {
+                    continue
+                }
+                $text = [IO.File]::ReadAllText($file.FullName, [Text.Encoding]::UTF8)
+                foreach ($match in $regex.Matches($text)) {
+                    $citations.Add([pscustomobject]@{
+                        reference_file = $referenceFile
+                        candidate = $match.Value.Replace('\', '/')
+                    })
+                }
+            }
+        }
+    }
+
+    foreach ($citation in $citations) {
+        $key = $citation.candidate.ToLowerInvariant()
+        if (-not $KnownSources.ContainsKey($key)) {
+            continue
+        }
+        $source = $KnownSources[$key]
+        if (-not $map[$source].ContainsKey($citation.reference_file)) {
+            $map[$source][$citation.reference_file] = 0
+        }
+        $map[$source][$citation.reference_file] += 1
     }
 
     return $map
@@ -258,7 +300,7 @@ foreach ($file in $sourceFiles) {
     $relative = Get-RelativeVaultPath -VaultRoot $sourceVault -LiteralPath $file.FullName
     $knownSources[$relative.ToLowerInvariant()] = $relative
 }
-$citationMap = Get-CitationMap -VaultRoot $sourceVault -KnownSources $knownSources
+$citationMap = Get-CitationMap -VaultRoot $sourceVault -KnownSources $knownSources -SearchBackend $CitationSearchBackend
 
 $rows = [System.Collections.Generic.List[object]]::new()
 $newHashesComputed = 0
