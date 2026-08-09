@@ -10,6 +10,10 @@ if (-not $VaultRoot) { $VaultRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')
 $VaultRoot = [IO.Path]::GetFullPath($VaultRoot)
 if (-not $SourceRoot) { $SourceRoot = $VaultRoot }
 $SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
+if (-not (Test-Path -LiteralPath $VaultRoot -PathType Container)) { throw "Vault root does not exist: $VaultRoot" }
+if (-not (Test-Path -LiteralPath $SourceRoot -PathType Container)) { throw "Source root does not exist: $SourceRoot" }
+$sourceLanes = @(@('raw', 'research') | Where-Object { Test-Path -LiteralPath (Join-Path $SourceRoot $_) -PathType Container })
+if (-not $sourceLanes.Count) { throw "Source root contains neither raw nor research: $SourceRoot" }
 if (-not $OutputPath) { $OutputPath = Join-Path $VaultRoot 'wiki\_outputs\source-coverage\source-inventory.csv' }
 
 function Get-RelativePath([string]$Base, [string]$Path) {
@@ -23,7 +27,8 @@ function Get-StatusFromText([string]$Text) {
     if ($Text -match '(?i)inventory[- ]only|catalog|out-of-scope') { return 'inventory-only' }
     if ($Text -match '(?i)partially|pending|undecided|review') { return 'pending-review' }
     if ($Text -match '(?i)duplicate|superseded') { return 'duplicate' }
-    return 'content-ingested'
+    if ($Text -match '(?i)content[- ]ingested|\bingested\b') { return 'content-ingested' }
+    return 'pending-review'
 }
 
 $exactCoverage = @{}
@@ -50,7 +55,7 @@ if (Test-Path -LiteralPath $sourcesPath -PathType Leaf) {
                 status = $candidateStatus
                 reference = "wiki/sources.md:$lineNumber"
             }
-            $absolute = Join-Path $VaultRoot $candidate
+            $absolute = Join-Path $SourceRoot $candidate
             if (Test-Path -LiteralPath $absolute -PathType Container) {
                 if ($line -match '(?i)inventory[- ]level|inventory refreshed|inventory-only|cataloged') { $record.status = 'inventory-only' }
                 $prefixCoverage.Add([pscustomobject]@{ prefix = "$candidate/"; record = $record })
@@ -67,7 +72,7 @@ foreach ($decisionFile in $decisionFiles) {
         $source = ([string]$row.canonical_source).Replace('\', '/').Trim()
         if (-not $source -or $source -notmatch '^(raw|research)/') { continue }
         $decision = [string]$row.semantic_decision
-        $status = if ($decision -match '(?i)registered-only') { 'registered-only' } elseif ($decision -match '(?i)duplicate') { 'duplicate' } else { 'content-ingested' }
+        $status = if ($decision -match '(?i)^registered-only$') { 'registered-only' } elseif ($decision -match '(?i)duplicate') { 'duplicate' } elseif ($decision -match '(?i)^out-of-scope$') { 'inventory-only' } elseif ($decision -match '(?i)^(new-claim|extended-claim|corroborating)$') { 'content-ingested' } else { 'pending-review' }
         $exactCoverage[$source.ToLowerInvariant()] = [pscustomobject]@{
             status = $status
             reference = (Get-RelativePath $VaultRoot $decisionFile.FullName)
@@ -76,7 +81,7 @@ foreach ($decisionFile in $decisionFiles) {
 }
 
 $rows = [Collections.Generic.List[object]]::new()
-foreach ($lane in @('raw', 'research')) {
+foreach ($lane in $sourceLanes) {
     $laneRoot = Join-Path $SourceRoot $lane
     if (-not (Test-Path -LiteralPath $laneRoot -PathType Container)) { continue }
     foreach ($file in Get-ChildItem -LiteralPath $laneRoot -Recurse -File -Force | Sort-Object FullName) {
