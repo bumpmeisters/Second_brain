@@ -70,12 +70,16 @@ The standing policy in tools/config/source-conversion-policy.json authorizes cre
 
 ## Standing Workflow
 
+- Put new primary sources in `inbox/raw/` and AI-generated or secondary research in `inbox/research/`. `tools/import-source-inbox.ps1` admits stable files without overwriting existing sources, routes binaries to the asset libraries and directly readable formats to `raw/imports/` or `research/imports/`, quarantines duplicates/conflicts/unsupported files, and then runs incremental conversion for binaries.
+
+- Commit-pinned repository ZIPs are a narrow inventory-only exception. Admit them to `raw/assets/` only when `tools/config/source-inbox-policy.json` names the exact raw-lane relative path and SHA-256. Unlisted or hash-mismatched ZIPs must be quarantined. Never expand repository archives inside the protected source library or create routine searchable sidecars for their contents.
+
 - Run `tools/run-vault-source-conversion.ps1 -Mode Incremental` for unattended reconciliation.
 - Run `tools/assert-source-ingest-ready.ps1 -SourcePath <path> -Intent ContentLevel` before reading a binary for content ingest.
 - Use `-Mode Inventory` for inventory-only work. Use `-Mode Backfill -Limit <n>` for bounded historical waves.
 - Review `source-conversion-exceptions.csv` for missing, stale, amber, or red items. Stale outputs are never overwritten automatically.
 - Rebuild a damaged registry with `tools/run-vault-source-conversion.ps1 -Mode Rebuild`; this mode ignores existing registry contents and reconstructs state from sources, sidecars, and fresh audits.
-- Inspect a scheduled-task definition with `tools/install-vault-source-conversion-task.ps1 -InspectOnly`. Installing, changing, or disabling the task remains an explicit operating-system action.
+- Inspect a scheduled-task definition with `tools/install-vault-source-conversion-task.ps1 -InspectOnly`. Add `-UserBound` for the limited interactive variant. Installing, changing, or disabling the task remains an explicit operating-system action.
 
 ## Exception Actions
 

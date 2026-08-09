@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "stability_seconds": 30,
+  "conversion_limit": 250,
+  "lanes": {
+    "raw": {
+      "binary": "raw/assets",
+      "native": "raw/imports"
+    },
+    "research": {
+      "binary": "research/assets",
+      "native": "research/imports"
+    }
+  },
+  "binary_extensions": [".docx", ".pdf", ".pptx", ".xlsx"],
+  "native_extensions": [".txt", ".csv", ".json", ".yaml", ".yml", ".html", ".htm", ".md", ".markdown"],
+  "repository_archives": [
+    {
+      "lane": "raw",
+      "relative_path": "gbrain/repositories/gbrain-15b9863d13635d173562a54f55a1d388bfcf546b.zip",
+      "sha256": "97c2893e4ed98c0f80cad507561fcf16fc9a36380fc1f0c097104790c641fdd6"
+    },
+    {
+      "lane": "raw",
+      "relative_path": "gbrain/repositories/gbrain-evals-565b80754ffa6abb9afb041026f2fab048aa7553.zip",
+      "sha256": "961ac062df6681dc436c43c7863eb60f2a5f06eb4477941345a6352315a34109"
+    },
+    {
+      "lane": "raw",
+      "relative_path": "repositories/garrytan/gstack/gstack-94993f74012782fd94416dd44b8314f6363a13a4.zip",
+      "sha256": "9da816aa293883b2cf2fbf4d274cb79f3b31349a8a4fedd725ca73a40c172cd9"
+    },
+    {
+      "lane": "raw",
+      "relative_path": "repositories/everyinc/compound-engineering-plugin/compound-engineering-plugin-0a2957852e2034d04eb01120fd7da6ed5307dc56.zip",
+      "sha256": "7f57704ee2507046de67ca6dc8dab339b17f19ea5bed88b215ac02dd3afa14b5"
+    }
+  ],
+  "automatic_actions": {
+    "admit_new_sources": true,
+    "preserve_relative_paths": true,
+    "quarantine_duplicates": true,
+    "quarantine_conflicts": true,
+    "quarantine_unsupported": true,
+    "run_incremental_conversion": true,
+    "overwrite_existing_sources": false,
+    "modify_admitted_sources": false,
+    "run_ocr": false,
+    "semantic_ingest": false
+  }
+}

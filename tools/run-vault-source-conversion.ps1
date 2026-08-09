@@ -54,6 +54,7 @@ function Get-StateRows($Inventory,$Audits,$OldBySource){
   else{$sha=(Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash.ToLowerInvariant()}
   $state="unsupported";$auditStatus=""
   if($item.extension -in @($policy.native_markdown_extensions)){$state="native"}
+  elseif($item.category -eq "archive"){$state="archive"}
   elseif($item.action -eq "convert" -and $item.extension -notin @($policy.eligible_extensions)){$state="policy-blocked"}
   elseif($item.action -eq "convert"){
    $targetPath=Join-Path $vaultRoot $target
@@ -158,7 +159,7 @@ try{
  }})
  Publish-Csv $exceptions $exceptionPath
  $counts=@{};foreach($group in $rows|Group-Object state){$counts[$group.Name]=$group.Count}
- $summary=[ordered]@{run_id=$runId;mode=$Mode;scanned=$rows.Count;selected=$selection.Count;green=[int]$counts.green;native=[int]$counts.native;amber=[int]$counts.amber;red=[int]$counts.red;missing=[int]$counts.missing;stale_blocked=[int]$counts["stale-blocked"];exceptions=$exceptions.Count;failure_count=$conversionFailureCount;run_directory=$runRelative}
+ $summary=[ordered]@{run_id=$runId;mode=$Mode;scanned=$rows.Count;selected=$selection.Count;green=[int]$counts.green;native=[int]$counts.native;archive=[int]$counts.archive;amber=[int]$counts.amber;red=[int]$counts.red;missing=[int]$counts.missing;stale_blocked=[int]$counts["stale-blocked"];exceptions=$exceptions.Count;failure_count=$conversionFailureCount;run_directory=$runRelative}
  Publish-Json $summary $summaryPath
  $summary|ConvertTo-Json
  if($conversionFailureCount -and $Mode -ne "Backfill"){throw "One or more source conversions failed; see the exception queue and run report."}

@@ -43,6 +43,10 @@ Obsidian cannot search inside binary files. Whenever a binary source is ingested
 
 Routine create-only conversion may discover sources, create missing derivatives, validate results, and update conversion status. Overwrite, regeneration, OCR, source mutation, policy changes, schedule changes, and semantic promotion remain manual actions. Before reading a binary at content level, run `tools/assert-source-ingest-ready.ps1`.
 
+### Source inbox admission exception
+
+The user-approved importer `tools/import-source-inbox.ps1` may run unattended and add stable new files from `inbox/raw/` and `inbox/research/` only to the exact destinations in `tools/config/source-inbox-policy.json`. Binary sources go to `raw/assets/` or `research/assets/`; directly readable sources go to `raw/imports/` or `research/imports/`. This is the only exception to the protected-source write rule: admission may create missing directories and move a new file into place, but it must never overwrite, mutate, rename, or delete an admitted source. Duplicates, conflicts, and unsupported files remain quarantined. Inbox admission does not authorize OCR, regeneration, semantic ingest, or claim promotion.
+
 Treat `research/` differently from `raw/`: AI-generated research can be useful, but it is not primary evidence. Preserve it as received, track uncertainty, and verify important claims against primary sources before promoting them into durable wiki claims.
 
 ## Source types
