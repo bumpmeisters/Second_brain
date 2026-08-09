@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "minimum_version": "3.11.0",
+  "required_modules": [
+    "sqlite3"
+  ],
+  "purposes": {
+    "Agent": [
+      "%USERPROFILE%\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "%LOCALAPPDATA%\\Programs\\Python\\Python311\\python.exe",
+      "python.exe"
+    ],
+    "ScheduledTask": [
+      "%LOCALAPPDATA%\\Programs\\Python\\Python311\\python.exe",
+      "python.exe"
+    ]
+  }
+}

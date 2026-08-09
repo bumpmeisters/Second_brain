@@ -40,3 +40,13 @@ The review combined commit/path inventory, diff statistics, unique-blob size ins
 ## Residual risk
 
 Removing binary files from the current tree does not erase objects already present in Git or Git LFS history. Historical purge or LFS-object deletion is a separate destructive operation and requires its own reviewed plan, backup, and explicit approval.
+
+## Merge-readiness controls added on 2026-08-09
+
+The draft PR now carries a read-only Windows CI workflow and deterministic publication-boundary checks. The workflow checks out without LFS payloads, resolves Python through a versioned runtime contract, runs all source-conversion and source-curation contract tests, and fails if tests leave repository changes behind. Third-party actions are pinned to immutable commit SHAs and the workflow receives only `contents: read` permission.
+
+The publication-boundary contract fails closed when protected source roots contain anything beyond their README contracts, when source extractions or generated source ledgers enter the tracked tree, or when a tracked blob exceeds 10 MiB. This converts the publication allowlist from a one-time review into a repeatable merge gate.
+
+Local verification used a fresh checkout with Git LFS smudging disabled. At the reviewed head it contained no LFS object payloads, no worktree file above 10 MiB, and only `raw/assets/README.md` plus `research/assets/README.md` under the protected roots. The complete serial contract suite passed locally, including runtime, publication-boundary, policy, source-library, incremental-conversion, orchestration, pre-ingest, and curation-package tests.
+
+The authoritative final merge gate is the `Source governance / contracts` GitHub check for the exact PR head. The PR remains a draft until that check is green and the user explicitly approves moving it to ready-for-review. Existing mixed line endings are recorded as a separate repository-wide cleanup and are intentionally not normalized in this source-governance change.

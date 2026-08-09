@@ -215,6 +215,10 @@ Append entries to `wiki/log.md` using this pattern:
   - Important caveats or decisions.
 ```
 
+## Local Python runtime
+
+Before invoking Python for source-conversion work, resolve and validate it through `tools/resolve-python-runtime.ps1 -Purpose Agent`. The machine-readable candidate and minimum-version contract is `tools/config/python-runtime-contract.json`; wrappers should request `-PathOnly` and invoke the returned absolute path. Do not infer that Python is absent from ambient `PATH` alone.
+
 ## Rules
 
 - Never modify anything in `raw/`, `raw/assets/`, or `research/assets/`.

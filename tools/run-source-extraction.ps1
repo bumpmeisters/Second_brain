@@ -4,11 +4,8 @@ param(
 )
 $ErrorActionPreference="Stop"
 $vault=Split-Path -Parent $PSScriptRoot
-$candidates=@(
- (Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"),
- (Join-Path (Split-Path -Parent $vault) ".venvs\sb-extract\Scripts\python.exe")
-)|Select-Object -Unique
-$python=$candidates|Where-Object{Test-Path -LiteralPath $_}|Select-Object -First 1
+$resolver=Join-Path $vault "tools\resolve-python-runtime.ps1"
+$python=& $resolver -Purpose Agent -PathOnly
 if(-not $python){throw "No approved Python runtime found."}
 Push-Location $vault
 try{
