@@ -1,5 +1,6 @@
 param(
     [string]$VaultRoot = "",
+    [string]$SourceRoot = "",
     [ValidateSet('Fast', 'Full')][string]$Profile = 'Fast',
     [switch]$Json,
     [switch]$Strict
@@ -8,6 +9,8 @@ param(
 $ErrorActionPreference = 'Stop'
 if (-not $VaultRoot) { $VaultRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path }
 $VaultRoot = [IO.Path]::GetFullPath($VaultRoot)
+if (-not $SourceRoot) { $SourceRoot = $VaultRoot }
+$SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
 $findings = [Collections.Generic.List[object]]::new()
 
 function Add-Finding([string]$RuleId, [string]$Severity, [string]$Path, [int]$Line, [string]$Message, [string]$SuggestedFix) {
@@ -123,7 +126,7 @@ if (-not (Test-Path -LiteralPath $coverageTool)) {
 } else {
     $previousErrorActionPreference = $ErrorActionPreference
     $ErrorActionPreference = 'Continue'
-    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $coverageTool -VaultRoot $VaultRoot -Check 2>&1 | Out-Null
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $coverageTool -VaultRoot $VaultRoot -SourceRoot $SourceRoot -Check 2>&1 | Out-Null
     $coverageExit = $LASTEXITCODE
     $ErrorActionPreference = $previousErrorActionPreference
     if ($coverageExit -ne 0) { Add-Finding 'sources.coverage-stale' 'error' 'wiki/_outputs/source-coverage/source-inventory.csv' 0 'Source coverage inventory is missing or stale.' 'Regenerate the inventory after source admission or registration changes.' }
@@ -152,7 +155,7 @@ foreach ($page in $activePages) {
     $frontmatter = Get-Frontmatter $text
     foreach ($match in [regex]::Matches($frontmatter, '(?m)^\s*-\s*"?((?:raw|research)/.+?\.(?:docx|pdf|pptx|xlsx))"?\s*$')) {
         $source = $match.Groups[1].Value.Replace('\', '/')
-        $sourcePath = Join-Path $VaultRoot $source
+        $sourcePath = Join-Path $SourceRoot $source
         if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) {
             Add-Finding 'source.cited-missing' 'error' $relative 0 "Cited binary source does not exist: $source" 'Correct the citation or restore the source through the approved inbox.'
             continue

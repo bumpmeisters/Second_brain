@@ -54,3 +54,6 @@ wiki/_outputs/source-conversions/runs/
 wiki/_outputs/source-conversions/latest-run.json
 wiki/_outputs/source-conversions/.conversion.lock
 wiki/_outputs/source-conversions/.inbox.lock
+
+# Local source coverage inventory (contains ignored source filenames)
+wiki/_outputs/source-coverage/source-inventory.csv
