@@ -7,6 +7,7 @@ if(Test-Path $root){Remove-Item -Recurse -Force $root}
 New-Item -ItemType Directory -Force (Join-Path $root "sources")|Out-Null
 Set-Content -Encoding UTF8 (Join-Path $root "sources\native.md") "# native"
 Set-Content -Encoding UTF8 (Join-Path $root "sources\new.txt") "new source"
+Set-Content -Encoding Byte (Join-Path $root "sources\repository.zip") ([byte[]](80,75,3,4))
 try{
  Push-Location $vault
  & $python $converter --external-root "raw/assets=$($root)\sources" --sidecar --output-dir .tmp/incremental-selection/out --report-dir .tmp/incremental-selection/report
@@ -14,6 +15,8 @@ try{
  $rows=@(Import-Csv (Join-Path $root "report\source-inventory.csv"))
  $native=$rows|Where-Object source -eq "raw/assets/native.md"
  if($native.action -ne "native" -or $native.target){throw "Native Markdown must not create a derivative."}
+ $archive=$rows|Where-Object source -eq "raw/assets/repository.zip"
+ if($archive.category -ne "archive" -or $archive.action -ne "inventory-only" -or $archive.target){throw "Repository archives must remain inventory-only without a derivative."}
  & $python $converter --external-root "raw/assets=$($root)\sources" --sidecar --output-dir .tmp/incremental-selection/out --report-dir .tmp/incremental-selection/report --convert --include-source raw/assets/new.txt
  if($LASTEXITCODE -ne 0){throw "Selected conversion failed."}
  $target=(Get-ChildItem (Join-Path $root "out") -Recurse -Filter "new.txt.md"|Select-Object -First 1).FullName

@@ -10,9 +10,10 @@ $runner=Join-Path $vault "tools\run-vault-source-conversion.ps1"
 function Read-Summary { Get-Content -Raw (Join-Path $vault "wiki\_outputs\source-conversions\latest-run.json")|ConvertFrom-Json }
 try{
  $one=Join-Path $vault "raw\assets\one.txt";Set-Content -Encoding UTF8 $one (("one source content. "*30).Trim());$hash=(Get-FileHash $one).Hash
+ $archive=Join-Path $vault "raw\assets\repository.zip";Set-Content -Encoding Byte $archive ([byte[]](80,75,3,4))
  & $runner -Mode Incremental|Out-Null
  $summary=Read-Summary
- if($summary.selected -ne 1 -or $summary.green -ne 1){throw "Incremental run did not convert exactly one missing source."}
+ if($summary.selected -ne 1 -or $summary.green -ne 1 -or $summary.archive -ne 1){throw "Incremental run did not convert exactly one missing source while preserving one inventory-only archive."}
  if((Get-FileHash $one).Hash -ne $hash){throw "Incremental conversion modified its source."}
  $registryBeforeNoop=(Get-FileHash (Join-Path $vault "wiki\_outputs\source-conversions\source-conversion-registry.csv")).Hash
  & $runner -Mode Incremental|Out-Null

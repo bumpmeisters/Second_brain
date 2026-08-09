@@ -45,6 +45,7 @@ ASSET_EXTENSIONS = {
     ".avi",
 }
 UNSUPPORTED_OFFICE_EXTENSIONS = {".doc", ".xls", ".xlsb", ".ppt", ".potx", ".msg", ".eml"}
+ARCHIVE_EXTENSIONS = {".zip"}
 SKIP_DIRS = {
     ".git",
     ".tmp",
@@ -635,6 +636,8 @@ def categorize(extension: str, filename: str) -> tuple[str, str, str]:
         return "convertible", "convert", "can create Markdown derivative"
     if extension in ASSET_EXTENSIONS:
         return "asset", "inventory-only", "media should be described or transcribed separately"
+    if extension in ARCHIVE_EXTENSIONS:
+        return "archive", "inventory-only", "immutable source archive; no searchable derivative required"
     if extension in UNSUPPORTED_OFFICE_EXTENSIONS:
         return "unsupported", "inventory-only", "legacy or container format needs specialist handling"
     if extension == ".download":

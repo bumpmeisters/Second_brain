@@ -39,8 +39,18 @@ node_modules/
 /research/assets/*
 !/research/assets/README.md
 
+# Local source inbox payloads and quarantine
+/inbox/raw/*
+!/inbox/raw/.gitkeep
+/inbox/research/*
+!/inbox/research/.gitkeep
+/inbox/_quarantine/*
+!/inbox/_quarantine/.gitkeep
+
 # Local source-conversion runtime state
 wiki/_outputs/source-conversions/logs/*.log
+wiki/_outputs/source-conversions/logs/*.csv
 wiki/_outputs/source-conversions/runs/
 wiki/_outputs/source-conversions/latest-run.json
 wiki/_outputs/source-conversions/.conversion.lock
+wiki/_outputs/source-conversions/.inbox.lock
