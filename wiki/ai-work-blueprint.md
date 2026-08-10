@@ -1,6 +1,7 @@
 ---
 type: framework
 status: active
+trust: partially-verified
 sources:
   - raw/imports/karpathy-spec-verifier-environment-video-transcript-2026-06-10.txt
   - research/imports/karpathy-method-agentic-workflows-ai-synthesis-2026-06-10.txt
@@ -11,7 +12,7 @@ sources:
   - raw/Clippings/AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md
   - raw/Clippings/Stop Prompting Claude. Start Loop Engineering.md
 created: 2026-06-10
-updated: 2026-06-20
+updated: 2026-08-10
 ---
 
 # AI Work Blueprint

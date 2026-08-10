@@ -1,6 +1,7 @@
 ---
 type: concept
 status: active
+trust: partially-verified
 sources:
   - raw/assets/01_Marketing_Strategie
   - raw/assets/02_Briefing_Templates
@@ -15,7 +16,7 @@ sources:
   - raw/Clippings/Stop outsourcing your marketing intelligence to AI. Do this instead.md
   - raw/Clippings/How to Rebuild Your Marketing Team for the Agentic Age. Full Breakdown.md
 created: 2026-06-03
-updated: 2026-06-20
+updated: 2026-08-10
 ---
 
 # Marketing Operating System

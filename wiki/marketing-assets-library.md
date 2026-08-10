@@ -1,6 +1,7 @@
 ---
 type: source-summary
 status: active
+trust: partially-verified
 sources:
   - raw/assets/01_Marketing_Strategie
   - raw/assets/02_Briefing_Templates
@@ -14,7 +15,7 @@ sources:
   - raw/assets/00_README_START_HERE.md
   - research/assets/11_Markets
 created: 2026-06-03
-updated: 2026-06-20
+updated: 2026-08-10
 ---
 
 # Marketing Assets Library
