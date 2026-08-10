@@ -1,10 +1,15 @@
+---
+type: workflow
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Ingest Workflow
 
 **Summary**: The ingest workflow converts a new raw source into source summaries, concept pages, links, index entries, and a log entry.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

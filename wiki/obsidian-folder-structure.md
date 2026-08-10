@@ -1,10 +1,16 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Obsidian Folder Structure
 
 **Summary**: The sources recommend simple folder structures, with one workflow separating raw/wiki material and another separating inbox, notes, projects, and resources.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

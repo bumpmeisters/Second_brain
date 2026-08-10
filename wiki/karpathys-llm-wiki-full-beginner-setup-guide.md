@@ -1,10 +1,15 @@
+---
+type: source-summary
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Karpathy's LLM Wiki - Full Beginner Setup Guide
 
 **Summary**: A video transcript explaining the LLM wiki pattern, where an AI agent turns raw sources into a persistent, linked Markdown knowledge base.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

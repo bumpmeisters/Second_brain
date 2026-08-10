@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Obsidian Plugins
 
 **Summary**: The recommended Obsidian plugin stack is Templater, Dataview, Tasks, QuickAdd, and Obsidian Git.
-
-**Sources**: raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

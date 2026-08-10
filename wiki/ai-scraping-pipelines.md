@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Post by @cyrilXBT on X.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # AI Scraping Pipelines
 
 **Summary**: AI scraping pipelines collect, render, clean, or structure web content so it can be used by LLMs and RAG systems.
-
-**Sources**: raw/Clippings/Post by @cyrilXBT on X.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

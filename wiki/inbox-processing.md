@@ -1,10 +1,15 @@
+---
+type: workflow
+status: active
+sources:
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Inbox Processing
 
 **Summary**: Inbox processing is the recurring cleanup step that turns raw captures into notes, project material, resources, or deletions.
-
-**Sources**: raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

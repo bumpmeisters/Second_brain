@@ -1,10 +1,15 @@
+---
+type: source-summary
+status: active
+sources:
+  - "raw/Clippings/Post by @cyrilXBT on X.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Post by @cyrilXBT on X
 
 **Summary**: An X post listing nine scraping and crawling repositories, with comments warning that anti-blocking depends on more than the scraper library.
-
-**Sources**: raw/Clippings/Post by @cyrilXBT on X.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

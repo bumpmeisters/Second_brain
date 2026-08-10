@@ -1,12 +1,14 @@
 ---
 type: ai-research-summary
 status: active
+sources:
+  - "research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_AI Marketing Workflow Assurance Research.docx"
 trust: partially-verified
 source_path: "research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_AI Marketing Workflow Assurance Research.docx"
 source_type: docx
 tool_model: Gemini Deep Research
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-08-10
 ---
 
 # AI Marketing Workflow Assurance Research Gemini 2026-06-05

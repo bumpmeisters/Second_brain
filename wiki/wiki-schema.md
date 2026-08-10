@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+created: 2026-06-01
+updated: 2026-08-10
+---
+
 # Wiki Schema
 
 **Summary**: The wiki schema is the rules file that tells the AI agent how to maintain the wiki.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
-
-**Last updated**: 2026-06-01
 
 ---
 

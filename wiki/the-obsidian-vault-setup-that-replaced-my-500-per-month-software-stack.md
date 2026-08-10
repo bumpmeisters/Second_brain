@@ -1,10 +1,15 @@
+---
+type: source-summary
+status: active
+sources:
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack
 
 **Summary**: An X post describing a local-first Obsidian setup with simple folders, practical templates, five plugins, and daily/weekly workflows.
-
-**Sources**: raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 
