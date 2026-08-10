@@ -2,9 +2,9 @@
 type: framework
 status: active
 sources:
-  - "C:/Users/rolfp/.codex/attachments/5c84d478-8fdd-402f-b320-5a418197c1c3/pasted-text.txt"
-  - "C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt"
-  - "C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx"
+  - raw/imports/karpathy-spec-verifier-environment-video-transcript-2026-06-10.txt
+  - research/imports/karpathy-method-agentic-workflows-ai-synthesis-2026-06-10.txt
+  - raw/assets/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
   - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
   - raw/Clippings/Only the best are using them.md
   - raw/Clippings/How to Build Claude Subagents Better Than 99% of People.md

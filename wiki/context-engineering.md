@@ -4,8 +4,8 @@ status: active
 trust: unverified
 sources:
   - research/assets/06_AI_Prompting/02_Context_Engineering
-  - "C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt"
-  - "C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx"
+  - research/imports/karpathy-method-agentic-workflows-ai-synthesis-2026-06-10.txt
+  - raw/assets/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
   - raw/Clippings/AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md
   - raw/Clippings/AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md
 created: 2026-06-03
