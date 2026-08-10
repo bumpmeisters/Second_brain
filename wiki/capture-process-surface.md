@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Capture Process Surface
 
 **Summary**: Capture fast, process occasionally, and surface automatically is the behavioral model behind the Obsidian vault setup.
-
-**Sources**: raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

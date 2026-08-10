@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Post by @cyrilXBT on X.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Web Scraping Tools
 
 **Summary**: The source lists repositories for AI crawling, Markdown extraction, browser automation, scraping frameworks, reconnaissance crawling, and no-code scraping.
-
-**Sources**: raw/Clippings/Post by @cyrilXBT on X.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

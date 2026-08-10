@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Local First Notes
 
 **Summary**: Local-first notes are plain files stored on the user's machine, making the vault portable and tool-independent.
-
-**Sources**: raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

@@ -1,10 +1,16 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+  - "raw/Clippings/Post by @cyrilXBT on X.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # RAG
 
 **Summary**: Retrieval augmented generation is described as a document-question workflow that retrieves relevant chunks at answer time.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

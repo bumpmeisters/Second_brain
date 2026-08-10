@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # LLM Wiki
 
 **Summary**: An LLM wiki is a persistent Markdown knowledge base that an AI agent reads, writes, links, and maintains over time.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

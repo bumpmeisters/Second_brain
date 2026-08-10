@@ -1,10 +1,15 @@
+---
+type: workflow
+status: active
+sources:
+  - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Daily Workflow
 
 **Summary**: The daily workflow uses a daily note to set priorities, capture throughout the day, and close the loop in the evening.
-
-**Sources**: raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

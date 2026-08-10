@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Wiki Linting
 
 **Summary**: Wiki linting is the practice of auditing the wiki for structural and factual problems.
-
-**Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
-
-**Last updated**: 2026-05-30
 
 ---
 

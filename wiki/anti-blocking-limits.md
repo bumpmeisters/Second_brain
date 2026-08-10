@@ -1,10 +1,15 @@
+---
+type: concept
+status: active
+sources:
+  - "raw/Clippings/Post by @cyrilXBT on X.md"
+created: 2026-05-30
+updated: 2026-08-10
+---
+
 # Anti Blocking Limits
 
 **Summary**: The comments on the scraping tools post warn that scraper libraries do not fully solve blocking because production blocking also depends on network and fingerprint factors.
-
-**Sources**: raw/Clippings/Post by @cyrilXBT on X.md.
-
-**Last updated**: 2026-05-30
 
 ---
 
