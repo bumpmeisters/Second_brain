@@ -2,10 +2,10 @@
 type: source-summary
 status: active
 sources:
-  - "C:/Users/rolfp/.codex/attachments/5c84d478-8fdd-402f-b320-5a418197c1c3/pasted-text.txt"
+  - raw/imports/karpathy-spec-verifier-environment-video-transcript-2026-06-10.txt
   - "https://youtu.be/7zZy1QTvokM?si=KFWYVpOrNlHZeDjD"
-  - "C:/Users/rolfp/.codex/attachments/3aa81799-2507-4799-aa58-246f57e73f7a/pasted-text.txt"
-  - "C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx"
+  - research/imports/karpathy-method-agentic-workflows-ai-synthesis-2026-06-10.txt
+  - raw/assets/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
 created: 2026-06-10
 updated: 2026-06-11
 ---
