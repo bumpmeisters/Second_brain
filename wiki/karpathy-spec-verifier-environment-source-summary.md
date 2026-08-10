@@ -1,13 +1,14 @@
 ---
 type: source-summary
 status: active
+trust: unverified
 sources:
   - raw/imports/karpathy-spec-verifier-environment-video-transcript-2026-06-10.txt
   - "https://youtu.be/7zZy1QTvokM?si=KFWYVpOrNlHZeDjD"
   - research/imports/karpathy-method-agentic-workflows-ai-synthesis-2026-06-10.txt
   - raw/assets/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
 created: 2026-06-10
-updated: 2026-06-11
+updated: 2026-08-10
 ---
 
 # Karpathy Spec Verifier Environment Source Summary
