@@ -47,13 +47,10 @@ node_modules/
 /inbox/_quarantine/*
 !/inbox/_quarantine/.gitkeep
 
-# Local source-conversion runtime state
-wiki/_outputs/source-conversions/logs/*.log
-wiki/_outputs/source-conversions/logs/*.csv
-wiki/_outputs/source-conversions/runs/
-wiki/_outputs/source-conversions/latest-run.json
-wiki/_outputs/source-conversions/.conversion.lock
-wiki/_outputs/source-conversions/.inbox.lock
+# Local source-derived artifacts and ledgers (publication boundary)
+wiki/_extractions/
+wiki/_outputs/source-conversions/
+wiki/_outputs/source-curation/
 
 # Local source coverage inventory (contains ignored source filenames)
 wiki/_outputs/source-coverage/source-inventory.csv
