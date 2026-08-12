@@ -1,0 +1,77 @@
+{
+    "manifest_version":  "historical-workspace-recovery-manifest/v1",
+    "snapshot_date":  "2026-08-12",
+    "historical_branch":  "codex/abm-operating-system",
+    "historical_head":  "64eccfa93a4861d857630f4dbdf0c1bdf2fbbd23",
+    "baseline_ref":  "origin/main",
+    "baseline_commit":  "42dc219dc301455729109e598e72d36ee9fad174",
+    "candidate_count":  2210,
+    "tracked_change_count":  113,
+    "untracked_count":  2097,
+    "private_manifest_sha256":  "b92173346bada598a7fad4e038a74b2826ac3435e6d72c9d9c5cc4ac560f3fb5",
+    "disposition_counts":  [
+                               {
+                                   "disposition":  "archive",
+                                   "count":  32
+                               },
+                               {
+                                   "disposition":  "discard",
+                                   "count":  78
+                               },
+                               {
+                                   "disposition":  "local-only",
+                                   "count":  1751
+                               },
+                               {
+                                   "disposition":  "recover",
+                                   "count":  349
+                               }
+                           ],
+    "wave_counts":  [
+                        {
+                            "wave":  "04-ai-core-delta",
+                            "disposition":  "recover",
+                            "count":  5
+                        },
+                        {
+                            "wave":  "05-ai-project",
+                            "disposition":  "recover",
+                            "count":  56
+                        },
+                        {
+                            "wave":  "06-content-operating-system",
+                            "disposition":  "recover",
+                            "count":  49
+                        },
+                        {
+                            "wave":  "07-abm-operating-system",
+                            "disposition":  "recover",
+                            "count":  27
+                        },
+                        {
+                            "wave":  "08-knowledge-workflow-governance",
+                            "disposition":  "recover",
+                            "count":  56
+                        },
+                        {
+                            "wave":  "09-newsletter-intelligence",
+                            "disposition":  "recover",
+                            "count":  46
+                        },
+                        {
+                            "wave":  "10-channel-automation-archive",
+                            "disposition":  "archive",
+                            "count":  30
+                        },
+                        {
+                            "wave":  "11-curated-wiki-delta",
+                            "disposition":  "recover",
+                            "count":  110
+                        },
+                        {
+                            "wave":  "archive-historical-plans",
+                            "disposition":  "archive",
+                            "count":  2
+                        }
+                    ]
+}

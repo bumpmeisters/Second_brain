@@ -54,3 +54,6 @@ wiki/_outputs/source-curation/
 
 # Local source coverage inventory (contains ignored source filenames)
 wiki/_outputs/source-coverage/source-inventory.csv
+
+# Local recovery manifest detail (contains private source and project filenames)
+wiki/_outputs/recovery-manifest/private/
