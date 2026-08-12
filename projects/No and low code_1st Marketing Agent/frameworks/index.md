@@ -45,7 +45,7 @@ Organize frameworks by the ContextOps stage that primarily uses them. A framewor
 - [Segmentation](segmentation/index.md): strategic segmentation basis, B2B nesting, outcomes, demand situations, and activation.
 - [Claim Governance](claim-governance/index.md): evidence, risk, and allowed-use decisions for claims.
 - [Positioning](positioning/index.md): proof-led and competitive-alternative positioning.
-- [Journey And GTM](journey-and-gtm/index.md): nonlinear journeys, campaign roles, and sales translation.
+- [Journey And GTM](journey-and-gtm/index.md): enterprise account-based growth, nonlinear journeys, campaign roles, and sales translation. Strategic Creative Direction and Content Execution are consumed from `projects/content-operating-system/frameworks/`.
 - [Growth And Planning](growth-and-planning/index.md): loops, lifecycle, funnel diagnosis, and OGSM.
 - [Orchestration And Learning](orchestration-and-learning/index.md): ContextOps contracts and recursive learning.
 

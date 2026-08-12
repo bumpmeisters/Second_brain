@@ -4,7 +4,7 @@ status: active
 sources:
   - AGENTS.md
 created: 2026-06-14
-updated: 2026-06-20
+updated: 2026-07-20
 ---
 
 # Sources
@@ -18,15 +18,16 @@ updated: 2026-06-20
 | Source | Type | Status | Summary page | Notes |
 |---|---|---|---|---|
 | `AGENTS.md` | agent instructions | active | none | Canonical operating rules for this vault. |
-| `C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/0. Initializer_Agent_md and Claude_md file/20260614_agent-project-initializer-starter-system.md` | generated-output / initializer | referenced | none | Used to shape the starter scaffold; not copied into the vault. |
+| `Backlog.md` | idea backlog / system memory | active | none | Durable anchor for possible future frameworks, skills, workflows, and system improvements; ideas are candidates, not commitments. |
+| Private agent-project initializer supplied by the user (not versioned; local path omitted) | generated-output / initializer | referenced | none | Used to shape the starter scaffold; not copied into the vault. |
 | User input, 2026-06-14 | project direction | active | [[project-brief]] | Defines the agent's company-context, marketing-strategy, Second-Brain, and trust goals. |
 | Parent Second Brain folder inventory, 2026-06-14 | local folder inventory | active | [[second-brain-source-map]] | Used to identify the parent `wiki/`, `raw/`, `research/`, `templates/`, `skills/`, and `tools/` folders. |
 | User input, 2026-06-14 | company/product workspace direction | active | `projects/Nadeln/wiki/project-brief.md` | Defines MirrorSoft / Atraumatische Premium-Kanuelen as the first dedicated workspace. |
 | User input, 2026-06-20 | company/product workspace and validation-pilot direction | active | `projects/Zelostat/wiki/project-brief.md` | Defines the Zelostat workspace and end-to-end ContextOps validation-loop pilot. |
 | `https://www.das-familienbuch.de` | official company website / ecommerce shop | summarized | `projects/Das-Familienbuch/wiki/das-familienbuch-website-source-summary-2026-06-14.md` | Firecrawl snapshot captured 2026-06-14 for Das Familienbuch company context. |
-| `C:/Users/rolfp/Google Drive/0_Business/Ricky/Ricky Business/Das Familienbuch/1_Main folder/000. Produktkatalog_Das Familienbuch/20260426_Links_Produktübersicht Das Familienbuch_Alle links.docx` | company/product document | summarized | `projects/Das-Familienbuch/wiki/das-familienbuch-product-links-source-summary-2026-04-26.md` | Product-link overview; 18 product URLs matched against the website snapshot. |
-| `C:/Users/rolfp/Google Drive/0_Business/Ricky/Ricky Business/Das Familienbuch/1_Main folder/0. Marktanalyse Familienbuch/20251224_Markt- und Positionierungsanalyse_ Erinnerungsbücher_deutsch.docx` | market/positioning / AI-assisted research | summarized | `projects/Das-Familienbuch/wiki/das-familienbuch-market-positioning-analysis-summary-2025-12-24.md` | Secondary strategic analysis; partially verified against shop evidence, external claims still need verification. |
-| `C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/0. Initializer_Agent_md and Claude_md file/20260614_agent-project-initializer-starter-system.md` | generated-output / initializer | applied | [Project Brief](../context/project-brief.md) | Used to build out the WAT-style operating shell, decision log, workflow index, tool scaffold, and remaining local skills. |
+| Private product-links DOCX supplied for Das Familienbuch (not versioned; local path omitted) | company/product document | summarized | `projects/Das-Familienbuch/wiki/das-familienbuch-product-links-source-summary-2026-04-26.md` | Product-link overview; 18 product URLs matched against the website snapshot. |
+| Private market-positioning DOCX supplied for Das Familienbuch (not versioned; local path omitted) | market/positioning / AI-assisted research | summarized | `projects/Das-Familienbuch/wiki/das-familienbuch-market-positioning-analysis-summary-2025-12-24.md` | Secondary strategic analysis; partially verified against shop evidence, external claims still need verification. |
+| Private agent-project initializer supplied by the user (not versioned; local path omitted) | generated-output / initializer | applied | [Project Brief](../context/project-brief.md) | Used to build out the WAT-style operating shell, decision log, workflow index, tool scaffold, and remaining local skills. |
 | [ContextOps Handoff Contract](../workflows/contextops-handoff-contract.md) | workflow / guardrail | active | none | Defines required inputs, outputs, evidence status, and leakage checks between ContextOps stages. |
 
 ## Trusted Knowledge Bases
@@ -43,25 +44,25 @@ updated: 2026-06-20
 
 | Skill | Status | Based on | Notes |
 |---|---|---|---|
-| [company-strategy-orchestrator](../skills/company-strategy-orchestrator/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1 | Coordinates staged company/product strategy analysis. |
+| company-strategy-orchestrator | merged 2026-07-06 | Marketing Agent Skill System Plan v0.1 | Merged into `workflows/marketing-agent-runbook.md` (+ `workflows/risk-classifier.md`, `workflows/output-menu.md`); no longer a separate skill. |
 | [company-evidence-intake](../skills/company-evidence-intake/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1 | Ingests and classifies company/product evidence. |
 | [marktanalyse](../skills/marktanalyse/SKILL.md) | draft | Das Familienbuch market-analysis correction and ContextOps decision | Creates narrow market-analysis context packets with explicit scope boundaries and handoff prompts. |
 | [buying-contexts](../skills/buying-contexts/SKILL.md) | draft | Das Familienbuch persona DOCX comparison and customer-context packet | Creates modular buyer-context packets from roles, triggers, jobs, barriers, proof needs, and observable signals without persona theater. |
 | [segmentation-strategy](../skills/segmentation-strategy/SKILL.md) | draft | User feedback on segmentierungsstrategie; public segmentation framework references | Compares alternative segmentation strategies before choosing the approach with the strongest downstream marketing potential. |
 | [audience-understanding](../skills/audience-understanding/SKILL.md) | draft | Second Brain persona/audience assets; Orbit/Crestodina, HubSpot, Buyer Persona Institute, SparkToro references | Deepens selected segments into audience questions, language, objections, proof needs, trusted sources, content/channel behavior, and validation gaps. |
-| [framework-builder](../skills/framework-builder/SKILL.md) | installed globally / evolving | Framework library retrospective; skill-creator guidance; user direction 2026-06-19 | Project source matches the installation at `C:/Users/rolfp/.codex/skills/framework-builder`; engineers, evaluates, versions, registers, and evolves inference-ready frameworks with controlled learning. |
+| [framework-builder](../skills/framework-builder/SKILL.md) | installed globally / evolving | Framework library retrospective; skill-creator guidance; user direction 2026-06-19 | Project source matches the installation in the user's global Codex skill directory (local path omitted); engineers, evaluates, versions, registers, and evolves inference-ready frameworks with controlled learning. |
 | [contextops-validator](../skills/contextops-validator/SKILL.md) | active / project-local | Existing quality gates, ContextOps handoff contract, stage profiles, skill-creator guidance; user direction 2026-06-19 | Independently validates artifacts with `PASS`, `REVISE`, or `BLOCK` and structured revision loops. |
 | [claim-governance](../skills/claim-governance/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1; MirrorSoft claim workflow | Classifies claims by evidence, risk, and allowed use. |
 | [second-brain-framework-fit](../skills/second-brain-framework-fit/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1; local framework-library decision | Selects canonical local frameworks and uses the parent Second Brain only for genuine gaps. |
 | [proof-led-positioning](../skills/proof-led-positioning/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1 | Converts evidence and claim constraints into positioning, message house, and proof pillars. |
 | [b2b-gtm-mapping](../skills/b2b-gtm-mapping/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1 | Translates positioning into personas, journeys, campaign architecture, and sales enablement. |
-| [recursive-learning-update](../skills/recursive-learning-update/SKILL.md) | draft | Marketing Agent Skill System Plan v0.1 | Turns completed runs into reusable patterns, workflow improvements, and quality learning. |
+| recursive-learning-update | merged 2026-07-06 | Marketing Agent Skill System Plan v0.1 | Merged into `workflows/evaluation-and-learning-contract.md` (single learning location); no longer a separate skill. |
 
 ## Raw Source Inventory
 
-No raw sources have been registered yet.
-
-When raw sources are added, list them here with source type, date, status, and summary page.
+| Source | Type | Date | Status | Summary |
+|---|---|---|---|---|
+| `raw/assets/A_frameworks_templates/01_Marketing_Strategie/1. ABM_Enterprise Growth Model/nach DMT prozess/` | Three-DOCX original framework bundle | 2026-07-18 to 2026-07-20 | content-ingested; validated sidecars | Source summary pending approved recovery wave 11. |
 
 ## Generated Outputs
 
@@ -77,9 +78,12 @@ When raw sources are added, list them here with source type, date, status, and s
 | [Marktanalyse Skill Retrospective - 2026-06-16](_outputs/marktanalyse-skill-retrospective-2026-06-16.md) | active | Das Familienbuch market-analysis conversation and correction | Captures lessons used to create the local `marktanalyse` skill. |
 | [Audience Understanding Strategy v0.1](_outputs/audience-understanding-strategy-v0-1.md) | draft | Second Brain persona/audience assets and public expert references | Defines Audience Understanding as the ContextOps stage after segmentation strategy and before positioning/content/SEO/GEO/campaign work. |
 | [Framework Builder Retrospective - 2026-06-19](_outputs/framework-builder-retrospective-2026-06-19.md) | active | Audience framework creation and migration | Critical review that informed the universal framework-builder architecture and evolution model. |
+| Enterprise Growth System Framework Engineering - 2026-07-20 | local-only / not versioned | Three-part Enterprise Growth System v1.1 | Historical provenance packet was not included in the versioned recovery manifest. |
 | [ContextOps Validation Architecture v0.1](_outputs/contextops-validation-architecture-v0-1.md) | active | Existing skill quality gates, orchestration, handoff contract, and user approval | Defines the producer-validator-orchestrator separation, verdict schema, revision loop, profiles, and evolution path. |
 | [Project Framework Inventory - 2026-06-19](_outputs/project-framework-inventory-2026-06-19.md) | active | Full project search across skills, workflows, outputs, and workspaces | Classifies canonical migrations, non-framework templates, and deferred named frameworks; records 29 lint-valid canonical frameworks across eight domains. |
 | [Zelostat Recursive Learning Update - 2026-06-20](../projects/Zelostat/wiki/_outputs/zelostat-recursive-learning-update-2026-06-20.md) | active | Zelostat evidence, market packets, validation reports, and handoff check | First full end-to-end test of the producer–validator–revision loop; passed after one revision. |
+| Creative Prompting Merge Review - 2026-06-23 | historical / not recovered | Parent Second Brain creative prompting synthesis and project ContextOps rules | Provenance retained in logs; no active file dependency. |
+| [Creative Prompting Template Library](_outputs/creative-prompting-template-library.md) | deprecated | Human-Led Creative Marketing Loop and parent prompt-library synthesis | Historical prompt cards retained for provenance; new runs use the Content Operating System. |
 
 ## Local Framework Artifacts
 
@@ -99,13 +103,19 @@ When raw sources are added, list them here with source type, date, status, and s
 | [Segmentation Frameworks](../frameworks/segmentation/index.md) | active domain | Segmentation skill and expert traditions | Seven canonical segmentation frameworks plus JTBD cross-link. |
 | [Claim Governance Frameworks](../frameworks/claim-governance/index.md) | active domain | Claim-governance skill and project claim matrices | Claim-level evidence, risk, and allowed-use reasoning. |
 | [Positioning Frameworks](../frameworks/positioning/index.md) | active domain | Proof-led positioning and April Dunford tradition | Proof-led and alternative-based positioning. |
-| [Journey And GTM Frameworks](../frameworks/journey-and-gtm/index.md) | active domain | B2B GTM skill and journey materials | Journey questions/proof, campaign roles, and sales translation. |
+| [Journey And GTM Frameworks](../frameworks/journey-and-gtm/index.md) | active domain | B2B GTM skill and journey materials | Enterprise account-based growth, journey questions/proof, campaign roles, and sales translation. |
+| Enterprise Growth System | pending recovery wave 07 | Rolf's Strategic Blueprint, Model Legend, and Implementation Playbook v1.1 | Canonical ABM framework link will be restored only after its approved recovery wave closes. |
+| [Human-Led Creative Marketing Loop](../frameworks/journey-and-gtm/human-led-creative-marketing-loop.md) | deprecated | Parent Second Brain creative-prompting synthesis and local ContextOps rules | Compatibility record that routes current work to Strategic Creative Direction and Content Execution in the Content Operating System. |
 | [Growth And Planning Frameworks](../frameworks/growth-and-planning/index.md) | mixed active/draft domain | Reforge, Klaviyo, D2C scorecard, OGSM | Growth loops, lifecycle, funnel diagnosis, and strategy translation. |
 | [Orchestration And Learning Frameworks](../frameworks/orchestration-and-learning/index.md) | active domain | ContextOps contract and recursive-learning skill | Stage handoffs and evidence-led system learning. |
 
 ## AI Research Inventory
 
 Das Familienbuch's 2025-12-24 market-positioning analysis is tracked in the project workspace as AI-assisted or AI-generated secondary research with `partially-verified` trust.
+
+| Research | Trust | Summary page | Notes |
+|---|---|---|---|
+| Parent Second Brain `research/2026-06-23-creative-prompting-frameworks-for-marketing.md` | partially-verified | [[creative-prompting-frameworks-research-summary-2026-06-23]] | Used as a discovery and synthesis source for the project-local creative prompting framework; not treated as primary evidence. |
 
 When AI research is added to `research/`, list each report here with trust level: `unverified`, `partially-verified`, or `verified`.
 
