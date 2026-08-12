@@ -561,3 +561,21 @@ updated: 2026-06-14
   - Compared all five frozen post-PR-10 page deltas with current `main`.
   - Closed all five rows as `superseded`; no unapproved local-source claims, unresolved cross-wave links, or citation regressions were copied.
   - Preserved source-specific recovery authority in waves 09 and 11 and left the historical workspace unchanged.
+
+## 2026-08-12 | recovery | restore and close the bounded AI project wave
+
+- Sources:
+  - verified historical backup `second-brain-historical-backup-2026-08-11`
+  - wiki/_outputs/recovery-manifest/private/historical-workspace-recovery-manifest.csv
+- Changed:
+  - `projects/ai/`
+  - `wiki/_outputs/recovery-manifest/README.md`
+  - `wiki/_outputs/recovery-manifest/recovery-wave-closures.csv`
+  - `wiki/_outputs/recovery-manifest/closures/05-ai-project.md`
+  - `wiki/_outputs/recovery-manifest/closures/05-ai-project.csv`
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Verified that all 56 manifest candidates are byte-identical between the historical workspace and the tested 2026-08-11 full backup before recovery.
+  - Preserved draft, review, approval, supersession, and publication-boundary states; no external publication was authorized.
+  - Curated only current project navigation and one user-specific absolute path; dependencies assigned to waves 06 and 11 remain explicit.

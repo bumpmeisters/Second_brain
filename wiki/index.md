@@ -6,7 +6,7 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-06-20
+updated: 2026-08-12
 ---
 
 # Wiki Index
@@ -15,7 +15,7 @@ updated: 2026-06-20
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-06-20
+**Last updated**: 2026-08-12
 
 ---
 
@@ -25,6 +25,10 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
+
+## Project workspaces
+
+- `projects/ai/README.md` - Recovered internal AI project for governed context, Creative Directions, briefs, draft assets, approval records, reviews, and pilot learning. Recovery does not authorize publication.
 
 ## Input zones
 
