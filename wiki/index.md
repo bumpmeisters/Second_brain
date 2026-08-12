@@ -85,6 +85,12 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 - [[account-based-marketing]] - Named account, pipeline acceleration, and buying committee patterns.
 - [[agentic-prompting]] - Agentic skills, NotebookLM/agent workflows, and task decomposition.
+- [[agentic-systems]] - Controlled agent harnesses connecting loops, tools, context, memory, verification, and recovery.
+- [[agent-evaluation]] - Evaluation across outcomes, trajectories, safety, cost, and production reliability.
+- [[agent-security]] - Threat models and controls for prompt injection, privileged tools, secrets, and incident response.
+- [[mcp-and-tool-access]] - Secure MCP and tool access across authorization, scopes, registries, containment, and observability.
+- [[applied-ai-use-cases]] - Evidence-aware selection of bounded AI workflows with clear verification and escalation.
+- [[ai-governance]] - Operational governance connecting accountability, risk tiers, approvals, evidence, and incidents.
 - [[ai-marketing-workflow-assurance]] - Run manifests, evidence ledgers, evaluation gates, and human approval records for AI-assisted marketing workflows.
 - [[ai-work-blueprint]] - Reusable mental and practical blueprint for shaping AI work through a spec, verifier, and durable environment.
 - [[ai-operating-system]] - File-based working environment made of context, connections, capabilities, and cadence.

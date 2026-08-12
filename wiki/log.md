@@ -522,3 +522,28 @@ updated: 2026-06-14
   - Preserved the complete internal folder structure and all 597 files.
   - Verified the destination contains 597 files totaling 1,723,514,809 bytes.
   - Removed the empty source directory tree after the move.
+
+## 2026-08-12 | recovery | restore six source-backed AI core pages from the historical branch
+
+- Sources:
+  - research/2026-07-01-agent-evaluation-recent-research.md
+  - research/2026-07-01-agentic-systems-recent-research.md
+  - research/2026-07-01-agent-security-recent-research.md
+  - research/2026-07-01-ai-governance-recent-research.md
+  - research/2026-07-01-applied-ai-use-cases-recent-research.md
+  - research/2026-07-01-mcp-and-tool-access-recent-research.md
+  - raw/Clippings/Inside The AI Race DeepMind, OpenAI, Anthropic, China, and The Race to Superintelligence.md
+- Changed:
+  - [[agentic-systems]]
+  - [[agent-evaluation]]
+  - [[agent-security]]
+  - [[mcp-and-tool-access]]
+  - [[applied-ai-use-cases]]
+  - [[ai-governance]]
+  - [[ai-race-superintelligence-clipping-2026]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Restored only versions already committed on `codex/abm-operating-system` plus their committed provenance files.
+  - Five newer uncommitted page revisions remain preserved in the historical workspace and backup for a separate dependency-aware recovery wave.
