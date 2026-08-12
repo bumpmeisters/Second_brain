@@ -1,0 +1,45 @@
+{
+  "contract_version": "content-object-contract/v1",
+  "project": "projects/content-operating-system",
+  "canonical_storage": "markdown",
+  "id_fields": {
+    "content-context-packet": "context_packet_id",
+    "creative-direction": "direction_id",
+    "content-brief": "brief_id",
+    "performance-record": "performance_id"
+  },
+  "statuses": {
+    "creative-direction": ["draft", "in-review", "approved-for-draft", "approved", "held", "superseded"],
+    "content-brief": ["draft", "in-review", "approved-for-draft", "approved", "superseded"],
+    "performance-record": ["recorded", "reviewed", "closed"],
+    "publication": ["idea", "briefed", "draft", "in-review", "approved-not-published", "published", "retired"]
+  },
+  "brief_forbidden_fields": [
+    "audience",
+    "thesis",
+    "strategic_angle",
+    "desired_change",
+    "narrative",
+    "proof",
+    "counterarguments",
+    "fit_non_fit",
+    "evidence_boundary",
+    "personal_take"
+  ],
+  "required_fields": {
+    "content-context-packet": ["context_packet_id", "source_project", "version", "readiness", "created", "updated"],
+    "creative-direction": ["content_id", "direction_id", "source_project", "version", "status", "created", "updated"],
+    "content-brief": ["content_id", "direction_id", "brief_id", "source_project", "channel", "format", "purpose", "version", "status", "created", "updated"],
+    "performance-record": ["content_id", "direction_id", "brief_id", "variant_id", "performance_id", "source_project", "observation_window", "status", "created", "updated"]
+  },
+  "publication_register": "projects/content-operating-system/publishing/publication-register.md",
+  "metadata_modes": ["embedded", "registered-legacy"],
+  "legacy_metadata_mode": "registered-legacy",
+  "protected_source_roots": ["raw", "research/assets"],
+  "service_now_fingerprints": {},
+  "deferred_recovery_fingerprints": {
+    "projects/abm-operating-system/authority/testing-enterprise-growth-system-01-servicenow.md": "891cba3e2e9a7c28b935a6ee125ca8e04534c08b356ee777b0a7ab9ce9af5eb2",
+    "projects/abm-operating-system/authority/qualified-pursuit-sprint-operator-playbook.md": "0a11bf05c199b41bbb9c490d9c0ba09e6de69b1b5099effe40db7e6754f19852",
+    "projects/abm-operating-system/authority/linkedin/servicenow-pursuit-marketing-derivatives.md": "9315c64356d707a7b56d6ad76b37a7c5a8b4d507668257ebe04212680d555c9b"
+  }
+}

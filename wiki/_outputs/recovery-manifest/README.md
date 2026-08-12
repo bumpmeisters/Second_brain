@@ -16,13 +16,12 @@ The historical workspace contains 2,210 Git-visible candidates: 113 tracked chan
 | `archive` | 32 | Existing backup is the only retained copy; no recovery PR will be opened. |
 | `discard` | 78 | Already on `main`, temporary, redundant, or third-party material; no recovery action remains. |
 
-This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-core-delta` and `05-ai-project` are closed; five recovery waves remain active. The archived channel-automation group is already decided and creates no recovery PR.
+This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-core-delta`, `05-ai-project`, and `06-content-operating-system` are closed; four recovery waves remain active. The archived channel-automation group is already decided and creates no recovery PR.
 
 ## Active recovery waves
 
 | Wave | Candidates | Required outcome |
 |---|---:|---|
-| `06-content-operating-system` | 49 | Recover the content operating-system project and its related legacy project delta. |
 | `07-abm-operating-system` | 27 | Recover the ABM project without mixing in the general wiki delta. |
 | `08-knowledge-workflow-governance` | 56 | Reconcile tools, tests, skills, templates, and governance contracts. |
 | `09-newsletter-intelligence` | 46 | Reconcile the newsletter pipeline, tests, research, and newsletter wiki files. |
@@ -33,7 +32,8 @@ This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-c
 | Wave | Candidates | Closure |
 |---|---:|---|
 | `04-ai-core-delta` | 5 | All five mixed page deltas were superseded by the current `main` pages and the source-specific recovery work assigned to waves 09 and 11. No unsupported semantic additions or broken cross-wave links were copied. See `closures/04-ai-core-delta.md`. |
-| `05-ai-project` | 56 | Recovered the bounded AI project from the verified historical backup, preserving artifact and publication states. Three files received limited curation for current navigation or private-path removal. See `closures/05-ai-project.md` and `closures/05-ai-project.csv`. |
+| `05-ai-project` | 56 | Recovered the bounded AI project from the verified historical backup, preserving artifact and publication states. Fourteen files received bounded curation for current navigation, lifecycle consistency, private-path removal, or whitespace safety. See `closures/05-ai-project.md` and `closures/05-ai-project.csv`. |
+| `06-content-operating-system` | 49 | Recovered the Content Operating System and its related Marketing ContextOps delta. Active AI lineage was reconciled, missing cross-wave dependencies were isolated, and no publication authority was added. See `closures/06-content-operating-system.md` and `closures/06-content-operating-system.csv`. |
 
 ## Closed without a recovery PR
 
@@ -68,4 +68,4 @@ This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-c
 
 ## Completion criterion
 
-The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. Sixty-one rows are now closed and 288 remain. At that point the historical workspace may be removed without further archaeological review.
+The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. One hundred ten rows are now closed and 239 remain. At that point the historical workspace may be removed without further archaeological review.

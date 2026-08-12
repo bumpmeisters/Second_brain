@@ -37,7 +37,22 @@ try{
  if($blockedExit -ne 2 -or $blocked.status -ne "blocked" -or $blocked.reason -ne "stale-blocked"){throw "Authoritative gate did not block stale source."}
  try{& $lint -SourcePath "raw/assets/fresh.txt"|Out-Null;throw "Post-ingest lint unexpectedly passed stale source."}catch{if($_.Exception.Message -like "Post-ingest lint unexpectedly*"){throw}}
  $diskSource=Join-Path $vault "raw\assets\disk.txt";Set-Content -Encoding UTF8 $diskSource (("disk source content. "*20).Trim())
- $policyPath=Join-Path $vault "tools\config\source-conversion-policy.json";$policy=Get-Content -Raw $policyPath|ConvertFrom-Json;$policy.thresholds.minimum_free_disk_gib=999999;$policy|ConvertTo-Json -Depth 8|Set-Content -Encoding UTF8 $policyPath
+ $policyPath=Join-Path $vault "tools\config\source-conversion-policy.json"
+ $policy=Get-Content -Raw $policyPath|ConvertFrom-Json
+ $policy.thresholds.minimum_free_disk_gib=999999
+ $policyJson=$policy|ConvertTo-Json -Depth 8
+ $policyWritten=$false
+ for($attempt=1;$attempt -le 20;$attempt++){
+  try{
+   Set-Content -Encoding UTF8 $policyPath $policyJson
+   $policyWritten=$true
+   break
+  }catch [System.IO.IOException]{
+   if($attempt -eq 20){throw}
+   Start-Sleep -Milliseconds 100
+  }
+ }
+ if(-not $policyWritten){throw "Temporary policy fixture could not be written."}
  $ErrorActionPreference="Continue";$errorOutput=& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $gate -SourcePath "raw/assets/disk.txt" -Intent ContentLevel -Json 2>$null;$errorCode=$LASTEXITCODE;$ErrorActionPreference="Stop"
  $errorResult=($errorOutput|Out-String)|ConvertFrom-Json
  if($errorCode -ne 2 -or $errorResult.status -ne "blocked" -or $errorResult.reason -notlike "reconciliation-error:*"){throw "Gate did not return a structured reconciliation error."}

@@ -29,6 +29,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 ## Project workspaces
 
 - `projects/ai/README.md` - Recovered internal AI project for governed context, Creative Directions, briefs, draft assets, approval records, reviews, and pilot learning. Recovery does not authorize publication.
+- `projects/content-operating-system/README.md` - Shared internal contracts for creative direction, content execution, controlled publication states, and bounded learning. Recovery does not authorize publication.
+- `projects/No and low code_1st Marketing Agent/README.md` - Marketing ContextOps workspace and legacy provenance that hands approved upstream context to the Content Operating System.
 
 ## Input zones
 

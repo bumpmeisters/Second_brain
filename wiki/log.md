@@ -579,3 +579,23 @@ updated: 2026-06-14
   - Verified that all 56 manifest candidates are byte-identical between the historical workspace and the tested 2026-08-11 full backup before recovery.
   - Preserved draft, review, approval, supersession, and publication-boundary states; no external publication was authorized.
   - Curated only current project navigation and one user-specific absolute path; dependencies assigned to waves 06 and 11 remain explicit.
+
+## 2026-08-13 | recovery | restore and close the Content Operating System wave
+
+- Sources:
+  - verified historical backup `second-brain-historical-backup-2026-08-11`
+  - wiki/_outputs/recovery-manifest/private/historical-workspace-recovery-manifest.csv
+- Changed:
+  - `projects/content-operating-system/`
+  - `projects/No and low code_1st Marketing Agent/`
+  - `wiki/_outputs/recovery-manifest/README.md`
+  - `wiki/_outputs/recovery-manifest/recovery-wave-closures.csv`
+  - `wiki/_outputs/recovery-manifest/closures/06-content-operating-system.md`
+  - `wiki/_outputs/recovery-manifest/closures/06-content-operating-system.csv`
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Verified all 49 manifest candidates against the tested backup before recovery and closed each row explicitly.
+  - Reconciled the active publication register to current AI assets; seven ABM rows and their fingerprints remain deferred to wave 07.
+  - Removed user-specific absolute paths from the recovered delta and converted unavailable historical components into explicit provenance rather than active dependencies.
+  - Preserved all draft, review, approval, and publication boundaries; this recovery authorizes no external publication.

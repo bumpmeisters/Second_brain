@@ -4,10 +4,166 @@ status: active
 sources:
   - AGENTS.md
 created: 2026-06-14
-updated: 2026-06-20
+updated: 2026-07-14
 ---
 
 # Log
+
+## 2026-07-14 | decide | keep evaluation personal and on demand
+
+- Sources:
+  - User decision, 2026-07-14
+- Changed:
+  - `Backlog.md`
+  - `decisions/log.md`
+  - [[log]]
+- Notes:
+  - Retained the six insight-quality criteria and a lightweight quarterly compounding question.
+  - Deferred a fixed monthly cadence and a complete evaluation system until repeated real work provides stable test requirements.
+
+## 2026-07-07 | fix | Codex skill discovery via .agents/skills wrappers at vault root
+
+- Sources:
+  - Rolf's live test 2026-07-07: `$seg` in Codex → "No skills or apps found" with skills in `skills/`
+  - Official Codex skill docs (https://developers.openai.com/codex/skills): discovery scans only `.agents/skills`, CWD upward to repo root
+  - `decisions/log.md` 2026-07-07 (discovery-bridge entry)
+- Changed:
+  - `second brain/.agents/skills/` (vault root) — NEW: 17 auto-generated discovery wrappers (11 project skills + 6 parent-vault skills), each carrying the canonical name+description and routing to the canonical SKILL.md
+  - `tools/sync_agents_skills.py` — NEW generator; re-run after adding or editing any canonical skill description
+  - removed an empty stray `.git` directory inside this project folder (misled repo-root detection; contained zero files)
+  - `Backlog.md` trigger-test item updated; [[log]]
+- Notes:
+  - Canonical skills remain in `skills/` (this project) and the parent vault's `skills/` — nothing moved; the wrappers are a discovery bridge only.
+  - The wrapper frontmatter IS the Codex trigger; keep it in sync by re-running the script, never by editing wrappers (they carry an AUTO-GENERATED marker and are overwritten).
+
+## 2026-07-07 | revert | skills back to skills/ with Codex interfaces — Codex is primary
+
+- Sources:
+  - User decision, 2026-07-07 ("Codex ist mein primäres Tool; Codex-Trigger unbedingt zurückholen")
+  - `decisions/log.md` 2026-07-07
+  - Codex skill-discovery documentation (https://developers.openai.com/codex/skills)
+- Changed:
+  - `skills/` — all 11 skills moved back from `.claude/skills/`; `agents/openai.yaml` restored for each from commit `240bda2`; relative paths re-normalized (SKILL.md: `../../`, references: `../../../`) and machine-verified
+  - `.claude/` — removed (empty after the move)
+  - `AGENTS.md`, `README.md`, `wiki/index.md`, `wiki/sources.md`, framework provenance sections — all skill paths repointed to `skills/`
+  - `Backlog.md` — trigger-test item rewritten for Codex; risk entry flipped (Claude Code auto-trigger unavailable, accepted)
+  - [[log]]
+- Notes:
+  - **This supersedes the 2026-07-06 entry below regarding skill location.** Skills live in `skills/` (one folder per skill: `SKILL.md` + `agents/openai.yaml`). This is the exact pre-migration state this vault was built and operated with under Codex.
+  - Everything else from the 2026-07-06 consolidation remains valid: slim AGENTS.md, `workflows/knowledge-base-operations.md`, merged orchestrator/learning skills, two-gate validation default, packet brevity rule, run dashboard requirement, `tools/lint_artifact.py`.
+  - Claude Code sessions work via the AGENTS.md routing table and the runbook (proven in run 2026-07-05); they do not auto-trigger these skills, and that is accepted.
+
+## 2026-07-06 | restructure | system review, consolidation package, skill migration
+
+- Sources:
+  - Independent architecture review after run `2026-07-05-das-familienbuch-positioning-pdp` (delivered in chat 2026-07-06; verdict on the core idea: PROCEED)
+  - User approvals, 2026-07-06: (1) consolidation package, (2) delete `.shopify-cli-appdata/`, (3) migrate skills to `.claude/skills/`; declined: Zelostat regression run
+  - `decisions/log.md` (two entries, 2026-07-06)
+- Changed:
+  - `AGENTS.md` — reduced 199 → 55 lines; now: identity, core rules, ContextOps essentials, routing table, history note
+  - `workflows/knowledge-base-operations.md` — NEW; absorbed the procedural AGENTS.md content (source types, ingest, AI-research, citation rules, Q&A, outputs, page naming, lint/audit)
+  - `workflows/risk-classifier.md`, `workflows/output-menu.md` — moved from the deleted `company-strategy-orchestrator` skill
+  - `workflows/marketing-agent-runbook.md` — absorbed orchestrator routing; framework-fit stage marked optional; two-gate validation default; context-core and packet-brevity conventions; Finding Resolution Note + point-of-use minor disposition; selective git staging; run dashboard as required closing artifact
+  - `workflows/contextops-handoff-contract.md` — packet brevity rule; two-gate validation envelope; revision-note requirement
+  - `workflows/evaluation-and-learning-contract.md` — now the single learning location (absorbed `recursive-learning-update`)
+  - `.claude/skills/` — NEW location for all 11 skills (moved from `skills/`; `company-strategy-orchestrator` and `recursive-learning-update` deleted as merged; all `agents/openai.yaml` removed; relative paths depth-corrected and machine-verified; frontmatter structurally validated)
+  - `tools/lint_artifact.py`, `templates/run-dashboard.md` — NEW (from the review's immediate measures, commit `dc6d235`)
+  - `Backlog.md` — open items and residual risks from the review registered
+  - `README.md`, `decisions/log.md`, `.gitignore` (vault root), deleted `.shopify-cli-appdata/`
+  - [[log]]
+- Notes:
+  - **For future agents (Codex included): skills now live in `.claude/skills/`, not `skills/`.** They remain readable procedure documents; Claude Code discovers them automatically, Codex does not — Codex should follow `AGENTS.md` routing and read the SKILL.md files directly. Codex auto-trigger compatibility was deliberately dropped (user decision 2026-07-06).
+  - Every rule introduced by this consolidation that rests on single-run evidence carries a hypothesis-stage label; promotion requires a second, meaningfully different case (see `Backlog.md` §System Review 2026-07-06).
+  - Rationale in one line: the first end-to-end run proved the producer/validator/contract core works but showed over-layering (orchestrator ≈ runbook, three learning locations), high context cost (every-stage validation, repeated packet context), and weak user-facing output — this restructure removes duplication without touching the proven core.
+  - Baseline for the run remains commit `603afa9`; consolidation commits: `dc6d235`, `1e7544f`.
+
+## 2026-07-06 | run | first end-to-end evaluated run completed (Das Familienbuch)
+
+- Sources:
+  - `workflows/evaluation-and-learning-contract.md`
+  - `workflows/marketing-agent-runbook.md`
+  - `workflows/contextops-handoff-contract.md`
+  - `projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-run-manifest-2026-07-05.md`
+- Changed:
+  - `projects/Das-Familienbuch/wiki/_outputs/` (run manifest, run validation rules, 4 stage artifacts + 2 revisions, 6 validation reports, learning capture)
+  - `projects/Das-Familienbuch/wiki/index.md`
+  - `projects/Das-Familienbuch/wiki/log.md`
+  - `frameworks/_meta/usage-log.md`
+  - [[log]]
+- Notes:
+  - Run `2026-07-05-das-familienbuch-positioning-pdp` is the first complete pipeline execution: evidence base → segmentation strategy → audience understanding → proof-led positioning → priority PDP diagnostic, with a frozen baseline (`603afa9`), a run manifest, run-scoped validation rules, independent subagent validation per stage, and a completed measurement table.
+  - Overall verdict PASS (self-assessed): 6 validation cycles, 13 findings (2 major, 11 minor, 0 critical, 0 BLOCK), both majors resolved within one revision; zero leakage and zero fabrication findings.
+  - The evaluation-and-learning contract, run-manifest template, and learning-capture template were exercised for the first time; `contextops-validator` stage profiles for segmentation, audience understanding, and positioning were exercised for the first time; `competitive-alternative-positioning` received its first real application (proposed draft → candidate).
+  - Systemic producer-defect candidates recorded (citation hygiene, quote fidelity, evidence-label precision); all system changes deferred per change thresholds pending a second case (recommended: Zelostat continuation).
+  - User disposition: not yet reviewed — Rolf's review of the positioning direction and PDP open items is the next gate.
+
+## 2026-07-02 | build | add run measurement and learning-capture skeleton
+
+- Sources:
+  - User decision, 2026-07-02
+  - `wiki/_outputs/contextops-validation-architecture-v0-1.md`
+  - `skills/recursive-learning-update/SKILL.md`
+- Changed:
+  - `workflows/evaluation-and-learning-contract.md`
+  - `templates/marketing-agent-run-manifest.md`
+  - `templates/marketing-agent-learning-capture.md`
+  - `workflows/marketing-agent-runbook.md`
+  - `workflows/README.md`
+  - `Backlog.md`
+  - `decisions/log.md`
+  - `README.md`
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Added comparable whole-run measures without duplicating the artifact-level `contextops-validator`.
+  - Required baseline version freezing, explicit user feedback states, framework usage records, and controlled change proposals.
+  - Deferred cross-case baseline execution and automated compounding machinery to the backlog.
+
+## 2026-06-23 | create | add system idea backlog
+
+- Sources:
+  - User input, 2026-06-23
+  - `AGENTS.md`
+  - [Human-Led Creative Marketing Loop](../frameworks/journey-and-gtm/human-led-creative-marketing-loop.md)
+- Changed:
+  - [Backlog](../Backlog.md)
+  - `AGENTS.md`
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+  - `decisions/log.md`
+- Notes:
+  - Added a durable idea anchor for possible future frameworks, skills, workflows, and system improvements.
+  - Captured the creative execution skill-system ideas as candidates, not commitments.
+  - Anchored `Backlog.md` in `AGENTS.md` so future agents review it before promoting chat-born ideas into system artifacts.
+
+## 2026-06-23 | merge | add human-led creative prompting framework
+
+- Sources:
+  - `../../../research/2026-06-23-creative-prompting-frameworks-for-marketing.md`
+  - `../../../wiki/creative-prompting-for-marketing.md`
+  - `../../../wiki/_outputs/creative-prompting-template-library.md`
+  - `workflows/contextops-handoff-contract.md`
+  - `frameworks/framework-document-standard.md`
+- Changed:
+  - [[creative-prompting-frameworks-research-summary-2026-06-23]]
+  - [[creative-prompting-for-marketing]]
+  - Historical Creative Prompting Merge Review - 2026-06-23 (not recovered; backup provenance only)
+  - [Creative Prompting Template Library](_outputs/creative-prompting-template-library.md)
+  - [Human-Led Creative Marketing Loop](../frameworks/journey-and-gtm/human-led-creative-marketing-loop.md)
+  - [Journey And GTM Frameworks](../frameworks/journey-and-gtm/index.md)
+  - [Framework Library](../frameworks/index.md)
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+  - `frameworks/_meta/usage-log.md`
+  - `frameworks/_meta/improvement-backlog.md`
+  - `decisions/log.md`
+- Notes:
+  - Critically reviewed the parent Second Brain output before merging.
+  - Converted the synthesis into a draft downstream framework, not an active upstream company-context method.
+  - Added prompt templates with upstream evidence, claim, and testing guardrails.
+  - No `raw/` files were modified and no parent Second Brain files were changed.
 
 ## 2026-06-20 | pilot | complete Zelostat ContextOps validation loop
 
@@ -39,7 +195,7 @@ updated: 2026-06-20
   - `workflows/contextops-handoff-contract.md`
   - `skills/company-strategy-orchestrator/SKILL.md`
   - `skills/recursive-learning-update/SKILL.md`
-  - `C:/Users/rolfp/.codex/skills/.system/skill-creator/SKILL.md`
+  - Codex system `skill-creator` skill (environment-managed; local path omitted)
 - Changed:
   - [ContextOps Validation Architecture v0.1](_outputs/contextops-validation-architecture-v0-1.md)
   - `skills/contextops-validator/`
@@ -102,7 +258,7 @@ updated: 2026-06-20
 
 - Sources:
   - User input, 2026-06-19
-  - `C:/Users/rolfp/.codex/skills/.system/skill-creator/SKILL.md`
+  - Codex system `skill-creator` skill (environment-managed; local path omitted)
   - `frameworks/framework-document-standard.md`
   - `frameworks/audience-understanding`
   - `skills/recursive-learning-update/SKILL.md`
@@ -131,16 +287,16 @@ updated: 2026-06-20
   - Added framework types: source-faithful, adapted, composite, and original.
   - Added deterministic lint and demonstrated it: the migrated Crestodina framework passes, while an older framework produces specific migration findings.
   - Continuous improvement records every meaningful use but requires review before global skill behavior changes.
-  - Installed the verified skill globally at `C:/Users/rolfp/.codex/skills/framework-builder`; file hashes match the project source.
+  - Installed the verified skill in the user's global Codex skill directory (local path omitted); file hashes match the project source.
 
 ## 2026-06-19 | architecture | add canonical local framework library
 
 - Sources:
   - User input, 2026-06-19
-  - `raw/assets/04_Persona_und_Audience/Persona_Analysis/20250730_Orbit Media Analysis_questions.docx`
-  - `raw/assets/04_Persona_und_Audience/Persona_Analysis/20250826_PROMPT_AI Persona.docx`
-  - `raw/assets/09_Beispiele_HP/Agency brief HP/Agency_Briefing Template.pptx`
-  - `raw/assets/09_Beispiele_HP/ABM campaign/ABM Company Campagin Samples.pptx`
+  - `quellen/raw-assets/04_Persona_und_Audience/Persona_Analysis/20250730_Orbit Media Analysis_questions.docx`
+  - `quellen/raw-assets/04_Persona_und_Audience/Persona_Analysis/20250826_PROMPT_AI Persona.docx`
+  - `quellen/raw-assets/09_Beispiele_HP/Agency brief HP/Agency_Briefing Template.pptx`
+  - `quellen/raw-assets/09_Beispiele_HP/ABM campaign/ABM Company Campagin Samples.pptx`
   - `https://www.orbitmedia.com/blog/ai-visitor-psychology/`
   - `https://buyerpersona.com/what-is-a-buyer-persona/`
   - `https://blog.hubspot.com/marketing/buyer-persona-research`
@@ -188,13 +344,13 @@ updated: 2026-06-20
 
 - Sources:
   - User input, 2026-06-17
-  - `raw/assets/04_Persona_und_Audience/Persona_Analysis/20250730_Orbit Media Analysis_questions.docx`
-  - `raw/assets/04_Persona_und_Audience/Persona_Analysis/20250826_PROMPT_AI Persona.docx`
-  - `raw/assets/04_Persona_und_Audience/Persona_Analysis/20250626_B2B Persona Blueprint Creation_Gemini.docx`
-  - `raw/assets/04_Persona_und_Audience/Persona_Templates`
-  - `raw/assets/04_Persona_und_Audience/Customer_Journey/HP_Customer Journey Template.pptx`
-  - `raw/assets/09_Beispiele_HP/Agency brief HP/Agency_Briefing Template.pptx`
-  - `raw/assets/09_Beispiele_HP/ABM campaign/ABM Company Campagin Samples.pptx`
+  - `quellen/raw-assets/04_Persona_und_Audience/Persona_Analysis/20250730_Orbit Media Analysis_questions.docx`
+  - `quellen/raw-assets/04_Persona_und_Audience/Persona_Analysis/20250826_PROMPT_AI Persona.docx`
+  - `quellen/raw-assets/04_Persona_und_Audience/Persona_Analysis/20250626_B2B Persona Blueprint Creation_Gemini.docx`
+  - `quellen/raw-assets/04_Persona_und_Audience/Persona_Templates`
+  - `quellen/raw-assets/04_Persona_und_Audience/Customer_Journey/HP_Customer Journey Template.pptx`
+  - `quellen/raw-assets/09_Beispiele_HP/Agency brief HP/Agency_Briefing Template.pptx`
+  - `quellen/raw-assets/09_Beispiele_HP/ABM campaign/ABM Company Campagin Samples.pptx`
   - `https://www.orbitmedia.com/blog/ai-visitor-psychology/`
   - `https://buyerpersona.com/what-is-a-buyer-persona/`
   - `https://blog.hubspot.com/marketing/buyer-persona-research`
@@ -287,7 +443,7 @@ updated: 2026-06-20
 - Sources:
   - User input, 2026-06-17
   - `projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-kunden-segmentierung-context-packet-v0-1.md`
-  - `C:/Users/rolfp/Google Drive/0_Business/Ricky/Ricky Business/Das Familienbuch/1_Main folder/1. Persona Analyse/20260320_überarbeitete Version/20260320_Persona_md_ChatGPT/20260320_überarbeite_Persona_md_ChatGPT.docx`
+  - Private Das Familienbuch persona-analysis DOCX supplied by the user (not versioned; local path omitted)
 - Changed:
   - `skills/buying-contexts/SKILL.md`
   - `skills/buying-contexts/references/boundary-rules.md`
@@ -412,7 +568,7 @@ updated: 2026-06-20
 ## 2026-06-14 | implement | build out marketing-agent operating shell and remaining skills
 
 - Sources:
-  - `C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/0. Initializer_Agent_md and Claude_md file/20260614_agent-project-initializer-starter-system.md`
+  - Private agent-project initializer supplied by the user (not versioned; local path omitted)
   - [Marketing Agent Skill System Plan v0.1](_outputs/marketing-agent-skill-system-plan-v0-1.md)
   - AGENTS.md
 - Changed:
@@ -495,7 +651,7 @@ updated: 2026-06-20
 
 - Sources:
   - [Marketing Agent Skill System Plan v0.1](_outputs/marketing-agent-skill-system-plan-v0-1.md)
-  - `C:/Users/rolfp/.codex/skills/.system/skill-creator/SKILL.md`
+  - Codex system `skill-creator` skill (environment-managed; local path omitted)
 - Changed:
   - `skills/company-strategy-orchestrator/SKILL.md`
   - `skills/company-strategy-orchestrator/references/stage-gate.md`
@@ -525,7 +681,7 @@ updated: 2026-06-20
 
 - Sources:
   - AGENTS.md
-  - C:/Users/rolfp/Google Drive/2_Marketing and frameworks/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/0. Initializer_Agent_md and Claude_md file/20260614_agent-project-initializer-starter-system.md
+  - Private agent-project initializer supplied by the user (not versioned; local path omitted)
 - Changed:
   - `AGENTS.md`
   - `CLAUDE.md`
@@ -580,3 +736,59 @@ updated: 2026-06-20
   - Created `projects/Nadeln` as the dedicated workspace for MirrorSoft / Atraumatische Premium-Kanuelen.
   - Added local `raw/`, `research/`, `wiki/_assets/`, and `wiki/_outputs/` folders for MirrorSoft-specific evidence and outputs.
   - No MirrorSoft source documents or URLs have been ingested yet.
+
+## 2026-07-20 | framework migration | register Enterprise Growth System North Star
+
+- Sources:
+  - `raw/assets/A_frameworks_templates/01_Marketing_Strategie/1. ABM_Enterprise Growth Model/nach DMT prozess/20260718_Teil 1_HP_Enterprise_Growth_System_Strategischer_Blueprint_.docx`
+  - `raw/assets/A_frameworks_templates/01_Marketing_Strategie/1. ABM_Enterprise Growth Model/nach DMT prozess/20260718_Tei 2_HP_Enterprise_Growth_System_Modell_Legende_2.docx`
+  - `raw/assets/A_frameworks_templates/01_Marketing_Strategie/1. ABM_Enterprise Growth Model/nach DMT prozess/20260718_Teil 3_HP_Enterprise_Growth_System_Implementation_Playbook.docx`
+- Changed:
+  - `frameworks/journey-and-gtm/enterprise-growth-system.md`
+  - `frameworks/journey-and-gtm/index.md`
+  - `frameworks/index.md`
+  - `frameworks/_meta/usage-log.md`
+  - `frameworks/_meta/improvement-backlog.md`
+  - [[sources]]
+- Notes:
+  - Classified the system as an original internal framework and kept HP attribution qualified.
+  - Selected a modular two-axis architecture: motion routing plus the gated Growth Execution Loop.
+  - Registered the framework as draft pending one live portfolio or pilot application.
+
+## 2026-07-22 | framework ownership | consume the project-owned Enterprise Growth System
+
+- Sources:
+  - `../../../wiki/hp-enterprise-growth-system-source-summary.md`
+- Changed:
+  - `AGENTS.md`
+  - `frameworks/journey-and-gtm/index.md`
+  - `wiki/sources.md`
+  - `wiki/log.md`
+- Notes:
+  - Transferred canonical ownership to `../abm-operating-system/frameworks/enterprise-growth-system.md` after Gate G1 approval.
+  - The Marketing Agent now reads the cross-project canonical file directly and maintains no local copy.
+  - Historical Enterprise Growth System entries remain in the shared usage log and improvement backlog; post-cutover observations belong to the ABM Operating System registers dated 2026-07-22.
+  - No raw source, seed playbook, or unrelated framework record was moved.
+
+## 2026-07-26 | ContextOps handoff | add terminal Content OS packet
+
+- Changed:
+  - `README.md`
+  - `frameworks/index.md`
+  - `frameworks/journey-and-gtm/index.md`
+  - `frameworks/journey-and-gtm/human-led-creative-marketing-loop.md`
+  - `frameworks/_meta/usage-log.md`
+  - `frameworks/_meta/improvement-backlog.md`
+  - `workflows/contextops-handoff-contract.md`
+  - `workflows/marketing-agent-runbook.md`
+  - `workflows/output-menu.md`
+  - `wiki/creative-prompting-for-marketing.md`
+  - `wiki/_outputs/creative-prompting-template-library.md`
+  - `wiki/index.md`
+  - `wiki/sources.md`
+  - `decisions/log.md`
+- Notes:
+  - Marketing ContextOps now hands off a referenced Content Context Packet after its upstream decisions are complete.
+  - Strategic Creative Direction and Content Execution are owned by the Content Operating System.
+  - Campaign Role Architecture remains in this project and does not cross into creative production.
+  - No new skill, specialist agent, publication action, or production automation was introduced.

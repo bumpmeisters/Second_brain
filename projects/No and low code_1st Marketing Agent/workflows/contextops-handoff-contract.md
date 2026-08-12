@@ -21,9 +21,13 @@ Every substantial ContextOps artifact should include:
 | `Forbidden Leakage Check` | Statements that would belong to a later step. |
 | `Handoff Questions` | Questions the next agent or next iteration must preserve or answer. |
 
+## Packet Brevity Rule
+
+Packets reference the company context core instead of repeating it. `Consumes` entries cite files with at most 1–2 lines of summary per input. Repeating upstream content beyond that is a validator finding (context cost without information gain). *(Hypothesis-stage rule from run 2026-07-05.)*
+
 ## Validation Envelope
 
-Use `contextops-validator` when a substantial artifact will become input to another ContextOps stage.
+Default gates (two) per `workflows/marketing-agent-runbook.md` step 12: the pivotal context decision artifact and any externally usable artifact. Use `contextops-validator` at additional stages only for high-risk cases or on user request.
 
 The validator must receive:
 
@@ -51,7 +55,7 @@ Do not let the validator rewrite the artifact during the same pass. The producer
 - `REVISE`: available inputs are sufficient for the producer to correct the artifact.
 - `BLOCK`: correction requires missing external evidence, specialist review, or a user decision.
 
-Allow at most two automatic revisions in one cycle. Persistent failures must be diagnosed and handed to `recursive-learning-update`.
+Allow at most two automatic revisions in one cycle. Every revision artifact carries a Finding Resolution Note (finding ID → state → resolution, plus an explicit no-changes-to-passed-sections declaration) so the validator can delta-revalidate. Persistent failures are diagnosed and recorded in the run output and, when they change durable policy, in `decisions/log.md`.
 
 ## Stage Contracts
 
@@ -249,6 +253,33 @@ Out of scope:
 
 Acceptance check:
 - A later agent can translate the positioning into execution while preserving evidence limits.
+
+### Content Operating System Intake Packet
+
+Use the canonical downstream contract at `projects/content-operating-system/workflows/contextops-intake-contract.md` and its template at `projects/content-operating-system/templates/content-context-packet.md`.
+
+Consumes:
+- Business objective and source-project context.
+- Selected audience or buying-context artifacts.
+- Approved positioning or an explicit reason it is not required.
+- Approved, blocked, uncertain, and missing claims plus proof references.
+- Campaign role or another explicit communication job.
+- Brand, rights, confidentiality, freshness, and production constraints.
+
+Produces:
+- A reference-only Content Context Packet.
+- Readiness verdict: `ready`, `ready-with-hypotheses`, or `blocked`.
+- Exact upstream references and unresolved questions.
+
+Out of scope:
+- Final thesis.
+- Creative angle or narrative route.
+- Personal Take.
+- Format or channel execution.
+- Copy or publication.
+
+Acceptance check:
+- The Content Operating System can create a Strategic Creative Direction without rereading the complete company workspace or inventing an upstream decision.
 
 ## Business-Model Lens Check
 
