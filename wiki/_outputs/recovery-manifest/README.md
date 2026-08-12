@@ -16,19 +16,24 @@ The historical workspace contains 2,210 Git-visible candidates: 113 tracked chan
 | `archive` | 32 | Existing backup is the only retained copy; no recovery PR will be opened. |
 | `discard` | 78 | Already on `main`, temporary, redundant, or third-party material; no recovery action remains. |
 
-This reduces 2,210 file-level candidates to seven active recovery waves. The archived channel-automation group is already decided and creates no recovery PR.
+This reduces 2,210 file-level candidates to seven recovery waves. Wave `04-ai-core-delta` is closed; six recovery waves remain active. The archived channel-automation group is already decided and creates no recovery PR.
 
 ## Active recovery waves
 
 | Wave | Candidates | Required outcome |
 |---|---:|---|
-| `04-ai-core-delta` | 5 | Compare only the post-PR-10 edits and retain supported improvements. |
 | `05-ai-project` | 56 | Curate the AI project as one bounded project recovery. |
 | `06-content-operating-system` | 49 | Recover the content operating-system project and its related legacy project delta. |
 | `07-abm-operating-system` | 27 | Recover the ABM project without mixing in the general wiki delta. |
 | `08-knowledge-workflow-governance` | 56 | Reconcile tools, tests, skills, templates, and governance contracts. |
 | `09-newsletter-intelligence` | 46 | Reconcile the newsletter pipeline, tests, research, and newsletter wiki files. |
 | `11-curated-wiki-delta` | 110 | Curate durable wiki/research candidates with current citations and index fit. |
+
+## Closed recovery waves
+
+| Wave | Candidates | Closure |
+|---|---:|---|
+| `04-ai-core-delta` | 5 | All five mixed page deltas were superseded by the current `main` pages and the source-specific recovery work assigned to waves 09 and 11. No unsupported semantic additions or broken cross-wave links were copied. See `closures/04-ai-core-delta.md`. |
 
 ## Closed without a recovery PR
 
@@ -55,10 +60,12 @@ This reduces 2,210 file-level candidates to seven active recovery waves. The arc
 
 - `private/historical-workspace-recovery-manifest.csv`: one decision per Git-visible historical candidate; deliberately excluded from Git because paths can reveal private source and project names.
 - `recovery-wave-summary.csv`: counts by recovery wave and disposition.
+- `recovery-wave-closures.csv`: versioned closure state and outcome counts for processed recovery waves.
+- `closures/`: evidence-backed decision reports for closed recovery waves.
 - `recovery-manifest-metadata.json`: snapshot provenance and aggregate counts.
 - `historical-branch-dispositions.csv`: branch and worktree retirement decisions.
 - `tools/new-historical-recovery-manifest.ps1`: deterministic inventory and classification generator.
 
 ## Completion criterion
 
-The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. At that point the historical workspace may be removed without further archaeological review.
+The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. Five rows are now closed and 344 remain. At that point the historical workspace may be removed without further archaeological review.

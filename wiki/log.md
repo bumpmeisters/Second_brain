@@ -547,3 +547,17 @@ updated: 2026-06-14
 - Notes:
   - Restored only versions already committed on `codex/abm-operating-system` plus their committed provenance files.
   - Five newer uncommitted page revisions remain preserved in the historical workspace and backup for a separate dependency-aware recovery wave.
+
+## 2026-08-12 | recovery | close the dependency-aware AI core delta wave
+
+- Sources:
+  - wiki/_outputs/recovery-manifest/private/historical-workspace-recovery-manifest.csv
+- Changed:
+  - `wiki/_outputs/recovery-manifest/README.md`
+  - `wiki/_outputs/recovery-manifest/recovery-wave-closures.csv`
+  - `wiki/_outputs/recovery-manifest/closures/04-ai-core-delta.md`
+  - [[log]]
+- Notes:
+  - Compared all five frozen post-PR-10 page deltas with current `main`.
+  - Closed all five rows as `superseded`; no unapproved local-source claims, unresolved cross-wave links, or citation regressions were copied.
+  - Preserved source-specific recovery authority in waves 09 and 11 and left the historical workspace unchanged.
