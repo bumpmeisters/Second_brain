@@ -599,3 +599,28 @@ updated: 2026-06-14
   - Reconciled the active publication register to current AI assets; seven ABM rows and their fingerprints remain deferred to wave 07.
   - Removed user-specific absolute paths from the recovered delta and converted unavailable historical components into explicit provenance rather than active dependencies.
   - Preserved all draft, review, approval, and publication boundaries; this recovery authorizes no external publication.
+
+## 2026-08-13 | recovery | restore and close the ABM Operating System wave
+
+- Sources:
+  - verified historical backup `second-brain-historical-backup-2026-08-11`
+  - wiki/_outputs/recovery-manifest/private/historical-workspace-recovery-manifest.csv
+  - historical committed project baseline at `64eccfa93a4861d857630f4dbdf0c1bdf2fbbd23`
+- Changed:
+  - `projects/abm-operating-system/`
+  - `projects/content-operating-system/publishing/publication-register.md`
+  - `projects/content-operating-system/tools/config/content-object-contract.json`
+  - `projects/content-operating-system/tools/test-content-object-contract.ps1`
+  - `tests/publication/publication-boundary.tests.ps1`
+  - `wiki/_outputs/recovery-manifest/README.md`
+  - `wiki/_outputs/recovery-manifest/recovery-wave-closures.csv`
+  - `wiki/_outputs/recovery-manifest/closures/07-abm-operating-system.md`
+  - `wiki/_outputs/recovery-manifest/closures/07-abm-operating-system.csv`
+  - `wiki/_outputs/recovery-manifest/closures/07-abm-operating-system-baseline-support.csv`
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Closed all 27 manifest candidates and restored the 17 clean historical project-baseline files required to make the project complete.
+  - Verified and reactivated seven historical ABM publication-register rows and three byte-exact ServiceNow fingerprints without publishing any artifact.
+  - Replaced unavailable cross-wave navigation with explicit paths to wave 11 and kept two generated outputs local-only.
+  - Preserved Gate G4, G5, and pending G6 boundaries; this recovery adds no publication authority, real-client approval, or framework promotion.

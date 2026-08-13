@@ -36,10 +36,10 @@
   "metadata_modes": ["embedded", "registered-legacy"],
   "legacy_metadata_mode": "registered-legacy",
   "protected_source_roots": ["raw", "research/assets"],
-  "service_now_fingerprints": {},
-  "deferred_recovery_fingerprints": {
+  "service_now_fingerprints": {
     "projects/abm-operating-system/authority/testing-enterprise-growth-system-01-servicenow.md": "891cba3e2e9a7c28b935a6ee125ca8e04534c08b356ee777b0a7ab9ce9af5eb2",
     "projects/abm-operating-system/authority/qualified-pursuit-sprint-operator-playbook.md": "0a11bf05c199b41bbb9c490d9c0ba09e6de69b1b5099effe40db7e6754f19852",
     "projects/abm-operating-system/authority/linkedin/servicenow-pursuit-marketing-derivatives.md": "9315c64356d707a7b56d6ad76b37a7c5a8b4d507668257ebe04212680d555c9b"
-  }
+  },
+  "deferred_recovery_fingerprints": {}
 }

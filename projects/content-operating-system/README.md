@@ -86,7 +86,7 @@ Markdown remains canonical. The machine-readable contract validates relationship
 
 Version `0.4.0` retains the Content Operating System boundary and Direction/Brief split, adds a triggered Execution Calibration Layer, corrects the first pilot's false-positive voice/expression review, and adds a provisional evidence-aware personal content-audience profile without activating a queue, pattern learner, or new agent architecture. Strategic Creative Direction and Content Execution remain the only canonical project frameworks and stay `draft` until two real end-to-end runs are reviewed. Audience, voice, and channel rules remain provisional until calibrated against real reader and creator evidence.
 
-Recovery state (closed 2026-08-13): the project was restored from the verified historical backup under the binding recovery manifest. The active publication register is reconciled to the current AI project; seven historical ABM rows and their three protected fingerprints remain explicitly deferred until recovery wave 07 restores and verifies their source-owned artifacts. This recovery grants no publication authority.
+Recovery state (closed 2026-08-13): the project was restored from the verified historical backup under the binding recovery manifest. Recovery wave 07 restored the source-owned ABM artifacts, reactivated the seven historical register rows at their verified states, and re-enabled the three byte-exact ServiceNow fingerprints. No artifact was published and this recovery grants no publication authority.
 
 The system does not include autonomous publishing, a content calendar, analytics dashboards, a format library, specialist agents, a database, or production automation.
 

@@ -57,6 +57,21 @@ try {
         'projects/content-operating-system/tools/validate-content-objects.ps1',
         'projects/content-operating-system/tools/config/content-object-contract.json',
         'projects/content-operating-system/publishing/publication-register.md',
+        'projects/abm-operating-system/authority/directions/servicenow-authority-pilot-direction.md',
+        'projects/abm-operating-system/authority/directions/enterprise-growth-system-linkedin-test-pack-direction.md',
+        'projects/abm-operating-system/authority/directions/hp-demandgen-box-model-direction.md',
+        'projects/abm-operating-system/authority/briefs/servicenow-website-analysis-brief.md',
+        'projects/abm-operating-system/authority/briefs/servicenow-website-playbook-brief.md',
+        'projects/abm-operating-system/authority/briefs/servicenow-linkedin-bundle-brief.md',
+        'projects/abm-operating-system/authority/briefs/enterprise-growth-system-linkedin-test-pack-execution-brief.md',
+        'projects/abm-operating-system/authority/briefs/hp-demandgen-box-model-linkedin-article-brief.md',
+        'projects/abm-operating-system/authority/testing-enterprise-growth-system-01-servicenow.md',
+        'projects/abm-operating-system/authority/qualified-pursuit-sprint-operator-playbook.md',
+        'projects/abm-operating-system/authority/linkedin/servicenow-pursuit-marketing-derivatives.md',
+        'projects/abm-operating-system/authority/linkedin/enterprise-growth-system-linkedin-test-posts-v0-1.md',
+        'projects/abm-operating-system/authority/linkedin/hp-demandgen-box-model-article.md',
+        'projects/abm-operating-system/authority/servicenow-authority-pilot-g4-review.md',
+        'projects/abm-operating-system/authority/hp-demandgen-box-model-direction-approval.md',
         'projects/ai/authority/directions/llm-thinking-emergence-direction-v1.md',
         'projects/ai/authority/llm-thinking-emergence-direction-approval.md',
         'projects/ai/authority/directions/llm-thinking-emergence-direction-v6.md',
@@ -81,7 +96,7 @@ try {
     $registerPath = Join-Path $fixtureRoot 'projects\content-operating-system\publishing\publication-register.md'
     $registerBaseline = Get-Content -Raw -LiteralPath $registerPath
     $duplicateRow = ($registerBaseline -split "`r?`n" | Where-Object { $_ -match 'ai-j-space-silent-reasoning-03-linkedin-article-v0' } | Select-Object -First 1)
-    $registerWithDuplicate = $registerBaseline.Replace("`n## Pending recovery: wave 07", "`n$duplicateRow`n`n## Pending recovery: wave 07")
+    $registerWithDuplicate = $registerBaseline.Replace($duplicateRow, "$duplicateRow`n$duplicateRow")
     Set-Content -LiteralPath $registerPath -Value $registerWithDuplicate -NoNewline
     Invoke-FixtureValidator -Name 'duplicate variant rejection' -ExpectedExitCode 1 -ExpectedText "Duplicate variant_id"
     Set-Content -LiteralPath $registerPath -Value $registerBaseline -NoNewline
