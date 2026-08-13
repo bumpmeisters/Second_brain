@@ -1,0 +1,160 @@
+{
+  "schema_version": "vault-transaction/v2",
+  "contract_status": "accepted-for-disposable-spike",
+  "spike_guardrails": {
+    "integration_allowed": false,
+    "default_switch_allowed": false,
+    "real_vault_content_edits_allowed": false,
+    "implemented_operation_limit": 1,
+    "fixture_first": true,
+    "stop_decision_required": true,
+    "stop_if": [
+      "safeguards-are-weaker-than-v1",
+      "payload-leaks-or-persists",
+      "failure-can-corrupt-target",
+      "caller-surface-is-not-simpler"
+    ]
+  },
+  "implemented_operations": [
+    "exact-replace"
+  ],
+  "reserved_operations": [
+    "insert-section-before-heading",
+    "upsert-frontmatter-field",
+    "append-log-entry",
+    "csv-upsert-by-key",
+    "json-set-path"
+  ],
+  "input_transport": {
+    "cli": "stdin-json",
+    "in_process": "powershell-object",
+    "request_encoding": "UTF-8",
+    "payload_in_command_arguments": false,
+    "external_payload_files": false
+  },
+  "target_encoding": {
+    "accepted": "UTF-8",
+    "output": "UTF-8",
+    "output_bom": false,
+    "invalid_input": "reject"
+  },
+  "limits": {
+    "max_request_utf8_bytes": 10485760,
+    "max_find_text_utf8_bytes": 4194304,
+    "max_replacement_text_utf8_bytes": 4194304,
+    "max_target_utf8_bytes": 33554432,
+    "max_expected_match_count": 100000
+  },
+  "request": {
+    "required_fields": [
+      "schema_version",
+      "operation",
+      "path",
+      "expected_sha256",
+      "expected_match_count",
+      "payload"
+    ],
+    "optional_fields": [
+      "newline"
+    ],
+    "additional_fields_allowed": false,
+    "path_format": "vault-relative",
+    "expected_sha256_pattern": "^[0-9A-Fa-f]{64}$",
+    "newline_default": "Preserve",
+    "newline_values": [
+      "Preserve",
+      "LF",
+      "CRLF"
+    ],
+    "operation_payloads": {
+      "exact-replace": {
+        "required_fields": [
+          "find_text",
+          "replacement_text"
+        ],
+        "additional_fields_allowed": false,
+        "find_text_must_be_nonempty": true,
+        "empty_replacement_allowed": true,
+        "comparison": "ordinal"
+      }
+    }
+  },
+  "receipt": {
+    "common_fields": [
+      "schema_version",
+      "status",
+      "operation",
+      "path",
+      "error_code"
+    ],
+    "success_fields": [
+      "old_sha256",
+      "new_sha256",
+      "matches",
+      "old_bytes",
+      "new_bytes",
+      "changed_lines",
+      "newline",
+      "payload_persisted",
+      "external_payload_files",
+      "atomic_temp_scope"
+    ],
+    "status_values": [
+      "success",
+      "failure"
+    ],
+    "success_error_code": null,
+    "failure_optional_fields": [
+      "message",
+      "old_sha256",
+      "new_sha256",
+      "target_state"
+    ],
+    "forbidden_fields": [
+      "payload",
+      "find_text",
+      "replacement_text"
+    ],
+    "payload_persisted": false,
+    "external_payload_files": 0,
+    "atomic_temp_scope": "target-directory",
+    "error_message_policy": "sanitized-metadata-only"
+  },
+  "atomic_write": {
+    "external_payload_helper_files_allowed": false,
+    "internal_sibling_file_required": true,
+    "internal_sibling_lifetime": "single-transaction",
+    "post_write_hash_confirmation": true,
+    "cleanup_required": true,
+    "pre_replace_failure_target_unchanged": true,
+    "post_replace_cleanup_failure": "failure-with-target-state-reported",
+    "fail_closed": true
+  },
+  "error_codes": [
+    "invalid-request",
+    "unsupported-schema-version",
+    "unsupported-operation",
+    "request-too-large",
+    "payload-too-large",
+    "invalid-encoding",
+    "invalid-path",
+    "outside-vault",
+    "protected-path",
+    "target-not-found",
+    "target-too-large",
+    "target-hash-mismatch",
+    "invalid-precondition",
+    "exact-match-count-mismatch",
+    "transformation-failed",
+    "write-failed",
+    "post-write-hash-mismatch",
+    "cleanup-failed"
+  ],
+  "compatibility": {
+    "v1_entry_point": "tools/set-file-transactional.ps1",
+    "v1_behavior_changed_in_phase_0": false,
+    "v1_retained_until_gate": "T1",
+    "v2_preferred_before_gate_t1": false,
+    "representative_edits_required_before_preference": 20
+  }
+}

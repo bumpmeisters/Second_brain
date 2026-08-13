@@ -1,0 +1,4 @@
+interface:
+  display_name: "Semantic Ingest"
+  short_description: "Validate and execute evidence-led vault ingests"
+  default_prompt: "Use $semantic-ingest to prepare and validate this source package before promoting claims."

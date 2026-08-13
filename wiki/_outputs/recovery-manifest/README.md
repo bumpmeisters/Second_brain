@@ -16,13 +16,12 @@ The historical workspace contains 2,210 Git-visible candidates: 113 tracked chan
 | `archive` | 32 | Existing backup is the only retained copy; no recovery PR will be opened. |
 | `discard` | 78 | Already on `main`, temporary, redundant, or third-party material; no recovery action remains. |
 
-This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-core-delta`, `05-ai-project`, `06-content-operating-system`, and `07-abm-operating-system` are closed; three recovery waves remain active. The archived channel-automation group is already decided and creates no recovery PR.
+This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-core-delta`, `05-ai-project`, `06-content-operating-system`, `07-abm-operating-system`, and `08-knowledge-workflow-governance` are closed; two recovery waves remain active. The archived channel-automation group is already decided and creates no recovery PR.
 
 ## Active recovery waves
 
 | Wave | Candidates | Required outcome |
 |---|---:|---|
-| `08-knowledge-workflow-governance` | 56 | Reconcile tools, tests, skills, templates, and governance contracts. |
 | `09-newsletter-intelligence` | 46 | Reconcile the newsletter pipeline, tests, research, and newsletter wiki files. |
 | `11-curated-wiki-delta` | 110 | Curate durable wiki/research candidates with current citations and index fit. |
 
@@ -34,6 +33,7 @@ This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-c
 | `05-ai-project` | 56 | Recovered the bounded AI project from the verified historical backup, preserving artifact and publication states. Fourteen files received bounded curation for current navigation, lifecycle consistency, private-path removal, or whitespace safety. See `closures/05-ai-project.md` and `closures/05-ai-project.csv`. |
 | `06-content-operating-system` | 49 | Recovered the Content Operating System and its related Marketing ContextOps delta. Active AI lineage was reconciled, missing cross-wave dependencies were isolated, and no publication authority was added. See `closures/06-content-operating-system.md` and `closures/06-content-operating-system.csv`. |
 | `07-abm-operating-system` | 27 | Recovered the complete ABM project, restored its clean committed baseline, reactivated only verified register rows and fingerprints, and preserved all gate and publication boundaries. See `closures/07-abm-operating-system.md`, `closures/07-abm-operating-system.csv`, and `closures/07-abm-operating-system-baseline-support.csv`. |
+| `08-knowledge-workflow-governance` | 56 | Restored the governed semantic-ingest, clipping-selection, runtime, transactional-editing, and reusable-practice contracts. Fifty candidates were recovered or boundedly curated; six older variants were superseded by later `main` fixes. See `closures/08-knowledge-workflow-governance.md`, `closures/08-knowledge-workflow-governance.csv`, and `closures/08-knowledge-workflow-governance-integration-support.csv`. |
 
 ## Closed without a recovery PR
 
@@ -68,4 +68,4 @@ This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-c
 
 ## Completion criterion
 
-The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. One hundred thirty-seven rows are now closed and 212 remain. At that point the historical workspace may be removed without further archaeological review.
+The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. One hundred ninety-three rows are now closed and 156 remain. At that point the historical workspace may be removed without further archaeological review.

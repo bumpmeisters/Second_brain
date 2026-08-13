@@ -1,0 +1,117 @@
+{
+  "schema_version": "semantic-ingest/v1",
+  "validator_version": "semantic-ingest-validator/2.3",
+  "validation_profiles": [
+    "Fast",
+    "Full"
+  ],
+  "manifest_validation_fields": [
+    "validator_version",
+    "validated_at",
+    "validation_mode",
+    "validation_profile",
+    "validation_status",
+    "decision_ledger_sha256",
+    "evidence_matrix_sha256"
+  ],
+  "decision_fields": [
+    "canonical_source",
+    "sha256",
+    "original_title",
+    "canonical_content_title",
+    "title_mismatch",
+    "source_type",
+    "trust_class",
+    "semantic_decision",
+    "routing",
+    "claim_risk",
+    "target_pages",
+    "source_summary",
+    "rationale",
+    "review_status"
+  ],
+  "semantic_decisions": [
+    "pending",
+    "new-claim",
+    "extended-claim",
+    "corroborating",
+    "registered-only",
+    "duplicate-variant",
+    "blocked",
+    "out-of-scope"
+  ],
+  "promotional_decisions": [
+    "new-claim",
+    "extended-claim",
+    "corroborating"
+  ],
+  "trust_classes": [
+    "pending",
+    "primary",
+    "practitioner",
+    "vendor",
+    "sponsored-research",
+    "ai-research",
+    "mixed",
+    "unknown"
+  ],
+  "claim_risks": [
+    "pending",
+    "low",
+    "medium",
+    "high"
+  ],
+  "review_statuses": [
+    "pending",
+    "reviewed",
+    "approved",
+    "rejected"
+  ],
+  "knowledge_deltas": [
+    "new-claim",
+    "extended-claim",
+    "corroborating",
+    "registered-only"
+  ],
+  "planned_actions": [
+    "create-page",
+    "update-page",
+    "summary-only",
+    "none"
+  ],
+  "routing_pattern": "^(stay-P[0-9]+|rerouted-P[0-9]+|out-of-scope)$",
+  "source_roots": [
+    "raw/",
+    "research/"
+  ],
+  "protected_roots": [
+    "raw/",
+    "research/assets/"
+  ],
+  "required_registers": [
+    "wiki/index.md",
+    "wiki/sources.md",
+    "wiki/log.md"
+  ],
+  "reusable_practices": {
+    "library": "wiki/reusable-practices-library.md",
+    "router": "wiki/reusable-practices-router.md",
+    "required_frontmatter_fields": [
+      "description",
+      "use_when",
+      "avoid_when",
+      "output"
+    ],
+    "artifact_types": [
+      "practice",
+      "workflow",
+      "playbook",
+      "checklist",
+      "assessment",
+      "operating-contract",
+      "decision-gate",
+      "operating-model",
+      "experiment"
+    ]
+  }
+}

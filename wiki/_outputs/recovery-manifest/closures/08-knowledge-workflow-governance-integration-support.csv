@@ -1,0 +1,2 @@
+"path","support_class","source_commit","recovered_sha256","curated_after_recovery","notes"
+".github/workflows/source-governance.yml","recovery-integration","eb9b838a0e848507c16f1298886f402df425bf2d","683a1385b5bdf9f0a369c5bf4d1df26daf0c6d2845667b3643dc67cf52299e72","true","Runs the recovered clipping-intake, semantic-ingest, and wiki-integrity contract suites on pull requests to main."
