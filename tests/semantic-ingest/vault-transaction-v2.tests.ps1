@@ -86,7 +86,8 @@ try {
     Write-Utf8 $target "alpha`nTOKEN`nomega`n"
     $hash = (Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash
     $sentinel = 'SENTINEL-DO-NOT-EXECUTE'
-    $special = "BETA`nGrüße 世界`n`$([IO.File]::WriteAllText('v2-payload-executed.txt','bad')); & whoami | Out-File bad # $sentinel"
+    $unicodeText = -join [char[]]@(0x47, 0x72, 0xFC, 0xDF, 0x65, 0x20, 0x4E16, 0x754C)
+    $special = "BETA`n$unicodeText`n`$([IO.File]::WriteAllText('v2-payload-executed.txt','bad')); & whoami | Out-File bad # $sentinel"
     $request = New-Request $relativeTarget $hash 'TOKEN' $special
     $run = Invoke-V2Json (Request-Json $request)
     Assert-V2 ($run.code -eq 0 -and $run.receipt.status -eq 'success') "Unicode and shell-character replacement did not succeed (exit=$($run.code), status=$($run.receipt.status), error_code=$($run.receipt.error_code), message=$($run.receipt.message))."
