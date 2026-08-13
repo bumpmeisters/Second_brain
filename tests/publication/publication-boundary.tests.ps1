@@ -27,7 +27,11 @@ try {
         throw 'Source-derived extractions or generated source ledgers crossed the publication boundary.'
     }
 
-    $treeRows = @(git ls-tree -r -l HEAD)
+    $indexTree = (& git write-tree).Trim()
+    if ($LASTEXITCODE -ne 0 -or -not $indexTree) {
+        throw 'Could not snapshot the tracked index for blob-size inspection.'
+    }
+    $treeRows = @(git ls-tree -r -l $indexTree)
     $oversized = [Collections.Generic.List[string]]::new()
     $parsedBlobs = 0
     foreach ($line in $treeRows) {
