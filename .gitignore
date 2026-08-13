@@ -47,13 +47,25 @@ node_modules/
 /inbox/_quarantine/*
 !/inbox/_quarantine/.gitkeep
 
+# Private derived newsletter staging (mail bodies remain in Gmail)
+wiki/_outputs/newsletter-intelligence/staging/
+.shopify-cli-appdata/
+
 # Local source-derived artifacts and ledgers (publication boundary)
 wiki/_extractions/
 wiki/_outputs/source-conversions/
 wiki/_outputs/source-curation/
+
+# Local semantic-ingest decisions and source-selection ledgers
+wiki/_outputs/semantic-ingest/
+wiki/_outputs/semantic-ingest-*-intake-ledger.csv
+wiki/_outputs/source-intake/
 
 # Local source coverage inventory (contains ignored source filenames)
 wiki/_outputs/source-coverage/source-inventory.csv
 
 # Local recovery manifest detail (contains private source and project filenames)
 wiki/_outputs/recovery-manifest/private/
+
+# Local Firecrawl research cache
+.firecrawl/

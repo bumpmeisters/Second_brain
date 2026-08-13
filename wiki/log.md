@@ -624,3 +624,29 @@ updated: 2026-06-14
   - Verified and reactivated seven historical ABM publication-register rows and three byte-exact ServiceNow fingerprints without publishing any artifact.
   - Replaced unavailable cross-wave navigation with explicit paths to wave 11 and kept two generated outputs local-only.
   - Preserved Gate G4, G5, and pending G6 boundaries; this recovery adds no publication authority, real-client approval, or framework promotion.
+
+## 2026-08-13 | recovery | restore and close knowledge-workflow governance
+
+- Sources:
+  - verified historical backup `second-brain-historical-backup-2026-08-11`
+  - wiki/_outputs/recovery-manifest/private/historical-workspace-recovery-manifest.csv
+- Changed:
+  - `skills/semantic-ingest/`
+  - `tools/`
+  - `tests/`
+  - `templates/`
+  - `docs/`
+  - [[semantic-ingest-workflow]]
+  - [[reusable-practices-router]]
+  - [[reusable-practices-library]]
+  - `wiki/_outputs/recovery-manifest/README.md`
+  - `wiki/_outputs/recovery-manifest/recovery-wave-closures.csv`
+  - `wiki/_outputs/recovery-manifest/closures/08-knowledge-workflow-governance.md`
+  - `wiki/_outputs/recovery-manifest/closures/08-knowledge-workflow-governance.csv`
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Verified all 56 manifest candidates against the tested backup before recovery and closed every row explicitly: 50 recovered or boundedly curated, six superseded by later `main` fixes.
+  - Restored fail-closed source-selection and semantic-ingest contracts without granting source-reading, claim-promotion, publication, or external-action authority.
+  - Kept the experimental Vault Transaction v2 contract inactive and marked the reusable-practice register and router recovery-pending until wave 11 restores their target pages.
+  - Added the recovered clipping, semantic-ingest, and wiki-integrity regression suites to pull-request CI.

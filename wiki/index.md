@@ -25,6 +25,9 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
+- [[semantic-ingest-workflow]] - Governed package workflow for approved semantic review, evidence decisions, validation, and explicit promotion checkpoints.
+- [[reusable-practices-router]] - Recovery-pending routing index; its registered practice pages remain unavailable until recovery wave 11.
+- [[reusable-practices-library]] - Recovery-pending provenance register for reusable practice pages assigned to recovery wave 11.
 
 ## Project workspaces
 

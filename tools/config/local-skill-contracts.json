@@ -1,0 +1,33 @@
+{
+  "contract_version": "local-skill-contract/v1",
+  "skills": {
+    "linkedin-dashboard-updater": {
+      "require_openai_yaml": true,
+      "required_paths": [
+        "skills/linkedin-dashboard-updater/references/data-schema.md",
+        "skills/linkedin-dashboard-updater/references/browser-collection.md",
+        "skills/linkedin-dashboard-updater/references/collection-report-schema.md",
+        "skills/linkedin-dashboard-updater/scripts/post-data-lib.js",
+        "skills/linkedin-dashboard-updater/scripts/validate-collection-report.js",
+        "skills/linkedin-dashboard-updater/scripts/validate-post-data.js",
+        "skills/linkedin-dashboard-updater/scripts/upsert-post-data.js",
+        "skills/linkedin-dashboard-updater/scripts/build-dashboard.js",
+        "tests/linkedin-dashboard-updater/dashboard-tools.test.js",
+        "wiki/_outputs/linkedin-dashboard/.gitignore"
+      ]
+    },
+    "semantic-ingest": {
+      "require_openai_yaml": true,
+      "required_paths": [
+        "skills/semantic-ingest/references/schema.md",
+        "tools/config/semantic-ingest-schema.json",
+        "tools/config/source-selection-policy.json",
+        "tools/manage-clipping-dispositions.ps1",
+        "tools/new-semantic-ingest-package.ps1",
+        "tools/test-semantic-ingest-package.ps1",
+        "templates/semantic-ingest-evidence-matrix.md",
+        "templates/semantic-ingest-source-bundle.md"
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "source-selection/v1",
+  "register_path": "wiki/_outputs/source-intake/clipping-dispositions.csv",
+  "applies_to_prefixes": [
+    "raw/Clippings/"
+  ],
+  "enforced_from_package_number": 32,
+  "required_availability": "available",
+  "required_selection_status": "approved-for-semantic-review",
+  "availability_values": [
+    "unknown",
+    "available",
+    "not-yet-live",
+    "invalid"
+  ],
+  "selection_status_values": [
+    "pending",
+    "approved-for-semantic-review",
+    "declined",
+    "deferred"
+  ],
+  "processing_status_values": [
+    "unread",
+    "reviewed"
+  ],
+  "semantic_disposition_values": [
+    "pending",
+    "promotional",
+    "registered-only",
+    "out-of-scope",
+    "duplicate",
+    "blocked"
+  ]
+}
