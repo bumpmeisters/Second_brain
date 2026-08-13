@@ -89,7 +89,7 @@ try {
     $special = "BETA`nGrüße 世界`n`$([IO.File]::WriteAllText('v2-payload-executed.txt','bad')); & whoami | Out-File bad # $sentinel"
     $request = New-Request $relativeTarget $hash 'TOKEN' $special
     $run = Invoke-V2Json (Request-Json $request)
-    Assert-V2 ($run.code -eq 0 -and $run.receipt.status -eq 'success') "Unicode and shell-character replacement did not succeed (exit=$($run.code), status=$($run.receipt.status), error_code=$($run.receipt.error_code))."
+    Assert-V2 ($run.code -eq 0 -and $run.receipt.status -eq 'success') "Unicode and shell-character replacement did not succeed (exit=$($run.code), status=$($run.receipt.status), error_code=$($run.receipt.error_code), message=$($run.receipt.message))."
     Assert-V2 ([IO.File]::ReadAllText($target) -eq "alpha`n$special`nomega`n") 'Replacement payload did not round-trip exactly.'
     Assert-V2 (-not (Test-Path -LiteralPath $executionMarker)) 'Replacement payload was executed as a command.'
     Assert-V2 ($run.receipt.operation -eq 'exact-replace' -and $run.receipt.matches -eq 1) 'Success receipt is incomplete.'
