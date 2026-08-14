@@ -24,6 +24,7 @@ def main() -> None:
         snapshot = transaction / "snapshot.bin"
         snapshot.write_text(
             "<html><body><nav>noise</nav><article><h1>Useful Article</h1>"
+            "<!-- extraction metadata -->"
             "<h2>Methods</h2><p>Useful evidence.</p>"
             "<a href='https://arxiv.org/pdf/1234.5678'>View PDF</a>"
             "</article></body></html>",
@@ -114,6 +115,7 @@ def main() -> None:
         assert build_review(proposals_path, scratch / "chat", None) == 1
         rendered = (scratch / "chat" / "chat-review.md").read_text(encoding="utf-8")
         assert "newsletter -> paper" in rendered
+        assert "1–N übernehmen" in rendered
         manifest = json.loads((scratch / "chat" / "decision-manifest-template.json").read_text())
         assert manifest["status"] == "provisional" and manifest["no_automatic_promotion"] is True
     finally:

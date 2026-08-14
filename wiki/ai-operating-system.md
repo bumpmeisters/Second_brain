@@ -20,8 +20,11 @@ sources:
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/CONCEPTS.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/ce-compound/SKILL.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/ce-compound-refresh/SKILL.md
+  - https://www.dwarkesh.com/p/era-of-continual-learning
+  - https://arxiv.org/abs/2604.27003
+  - https://proceedings.mlr.press/v330/abbes26a.html
 created: 2026-06-11
-updated: 2026-08-08
+updated: 2026-08-14
 ---
 
 # AI Operating System
@@ -52,6 +55,8 @@ The new BUILD bundle supplies a compatible sequencing model: establish the file-
 Its companion LOOPS deck further suggests that recurring runs should leave a deliverable plus inspectable run history, with independent verification and approval pauses retained until repeated evidence supports narrower automation (source: 20260629_LOOPS by Austin Marchese.pptx; analysis).
 
 The July 2026 second-brain clippings sharpen the distinction between a document dump and an operating system: useful agent memory needs curated context, multiple data sources, feedback, correction capture, observability, and recurring improvement loops (source: How to Use AI as Your Second Brain in 2026.md; source: The Rise of the 'AI Brains'. And Why Everyone Is Building One.md; analysis: [[ai-second-brain-and-agentic-coding-clippings-july-2026]]).
+
+The file layer is controlled external memory, not a claim that the model itself has learned a procedural skill. That distinction is a feature for governance: files remain inspectable, portable between models, versionable, and recoverable. It is also a limitation because stored experiences still compete during retrieval and can transfer poorly when represented or selected badly. Primary research supports treating external memory and continual weight updates as complementary architectures with different failure modes, not as substitutes ([Hu et al., 2026](https://arxiv.org/abs/2604.27003); [Abbes et al., 2026](https://proceedings.mlr.press/v330/abbes26a.html); analysis: [[newsletters/dwarkesh-patel/linked-sources/continual-learning-memory-boundary-2026-08-14|continual-learning-memory-boundary-2026-08-14]]).
 
 For this vault, that reinforces a conservative build order: strengthen the knowledge layer and reusable skills first, then connect live systems or scheduled runs only where there is a clear evidence trail, permission boundary, and human review path (source: How to Use AI as Your Second Brain in 2026.md; vault governance: AGENTS.md).
 

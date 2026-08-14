@@ -87,6 +87,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[public-evidence-cycle-01-source-summary]] - Qualified public evidence bundle for ABM and partner-marketing methods.
 - [[marketing-and-frameworks-library-readme]] - README source summary for the restructured marketing/frameworks raw asset library.
 - [[production-agent-engineering-clippings-june-2026]] - Production lessons on agent harnesses, context reduction/offloading/isolation, verification, memory, observability, and cost controls.
+- [[agent-session-verification-postmortem-2026-08-14]] - Practitioner postmortem on plan review, end-to-end verification, compaction handoffs, and exact artifact versions.
+- [[continual-learning-memory-boundary-2026-08-14]] - Primary-research-qualified distinction between external agent memory and parametric continual learning.
 - [[ai-workflow-builder-clippings-june-2026]] - Seven transcripts on planning, roles, skills, parallel sessions, bounded loops, and file-based AI operating systems.
 - [[agentic-marketing-intelligence-clippings-june-2026]] - Marketing judgment, proprietary intelligence layers, evidence-backed positioning, and model selection.
 - [[frontier-ecosystem-human-and-token-capital]] - Essay on compounding human and organizational AI capability in a model-independent learning loop.

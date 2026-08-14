@@ -7,7 +7,7 @@ canonical_id: publication-989b8c966b9c8e95
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-08-14
 ---
 
 # Dwarkesh Patel
@@ -55,15 +55,16 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-08-14 — Continual learning and external memory**: External memory and parametric learning serve different roles. Primary research supports retrieval and forgetting tradeoffs in both families but does not establish the essay's broader regulation, market, deployment, or lock-in forecasts (source: [[continual-learning-memory-boundary-2026-08-14]]; issue-19fdd4c096025a1d).
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[continual-learning-memory-boundary-2026-08-14]] - Primary-research correction of the boundary between inspectable external memory and parametric continual learning.
 
 ## Feedback and corrections
 
 - 2026-07-06: Rolf selected this newsletter for the intelligence pipeline and authorized creation of its dossier.
+- 2026-08-14: Rolf approved primary-source verification and the bounded architecture distinction; unverified forecasts were not promoted.
 
 ## Related pages
 
