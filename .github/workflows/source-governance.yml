@@ -85,6 +85,18 @@ jobs:
         shell: powershell
         run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/newsletter-index/newsletter-index.tests.ps1
 
+      - name: Verify newsletter intelligence contracts
+        shell: powershell
+        run: |
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/validate-local-skill.ps1 -SkillPath skills/newsletter-intelligence
+          if ($LASTEXITCODE -ne 0) {
+            throw 'Newsletter intelligence skill contract failed.'
+          }
+          powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/newsletter-intelligence/run-tests.ps1
+          if ($LASTEXITCODE -ne 0) {
+            throw 'Newsletter intelligence fixture suite failed.'
+          }
+
       - name: Verify test cleanup
         shell: powershell
         run: |

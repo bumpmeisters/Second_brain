@@ -1,0 +1,14 @@
+[permissions.newsletter-retrieval]
+description = "Workspace editing with network access limited to approved newsletter retrieval hosts."
+extends = ":workspace"
+
+[permissions.newsletter-retrieval.network]
+enabled = true
+
+[permissions.newsletter-retrieval.network.domains]
+"newsletter.pragmaticengineer.com" = "allow"
+"www.artificialintelligencemadesimple.com" = "allow"
+"www.latent.space" = "allow"
+"www.lennysnewsletter.com" = "allow"
+"youtu.be" = "allow"
+"www.youtube.com" = "allow"

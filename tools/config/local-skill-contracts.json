@@ -28,6 +28,27 @@
         "templates/semantic-ingest-evidence-matrix.md",
         "templates/semantic-ingest-source-bundle.md"
       ]
+    },
+    "newsletter-intelligence": {
+      "require_openai_yaml": true,
+      "required_paths": [
+        "skills/newsletter-intelligence/assets/review-workspace.html",
+        "skills/newsletter-intelligence/references/efficient-execution.md",
+        "skills/newsletter-intelligence/references/gmail-collection.md",
+        "skills/newsletter-intelligence/references/link-enrichment.md",
+        "skills/newsletter-intelligence/references/record-contracts.md",
+        "skills/newsletter-intelligence/references/retrieval-permissions.md",
+        "skills/newsletter-intelligence/references/signal-judging.md",
+        "skills/newsletter-intelligence/references/validation-contract.md",
+        "templates/newsletter-intelligence/run-manifest.json",
+        "tools/newsletter-intelligence.ps1",
+        "tools/newsletter-source-analysis.ps1",
+        "tools/newsletter_batch.py",
+        "tools/newsletter_retrieval.py",
+        "tools/newsletter_snapshot_extract.py",
+        "tools/test-newsletter-weekly-validation.ps1",
+        "tests/newsletter-intelligence/run-tests.ps1"
+      ]
     }
   }
 }

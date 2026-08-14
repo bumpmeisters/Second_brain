@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "record_type": "priority_context",
+  "context_id": "priority-context-2026-07-15",
+  "context_version": 2,
+  "confirmation_status": "confirmed",
+  "confirmed_priorities": [
+    {"priority_id":"priority-b2b-abm","label":"Strategic B2B marketing and ABM","description":"Strategic B2B marketing, ABM, and the supporting revenue technology stack.","rank":1,"match_terms":["b2b marketing","abm","account-based marketing","martech","revtech","marketing automation","revenue operations","ai search","aeo"]},
+    {"priority_id":"priority-applied-ai-agentic","label":"Applied AI and agentic systems","description":"Practical AI agents, system design, evaluation, and operating methods.","rank":2,"match_terms":["applied ai","agentic system","ai agent","agent harness","agent engineering","ai engineering","agent workflow","agentic workflow","loop engineering","agent rl","agent evaluation"]},
+    {"priority_id":"priority-coworker-second-brain","label":"Personal AI coworker and Second Brain","description":"A durable personal knowledge system and capable AI coworker.","rank":3,"match_terms":["ai coworker","second brain","knowledge system","knowledge workflow","knowledge gap","llm wiki","newsletter intelligence"]},
+    {"priority_id":"priority-marketing-agent-contextops","label":"Marketing Agent and ContextOps","description":"Context-rich, governed agent workflows for marketing work.","rank":4,"match_terms":["marketing agent","contextops","context ops","marketing workflow","context engineering"]},
+    {"priority_id":"priority-concrete-applications","label":"Concrete companies and business applications","description":"Evidence from real implementations, companies, and business models.","rank":5,"match_terms":["case study","use case","implementation","business model","field analysis","adoption evidence"]},
+    {"priority_id":"priority-positioning-content","label":"Professional repositioning and entrepreneurship","description":"Professional positioning, content quality, consulting, and training.","rank":6,"match_terms":["professional positioning","linkedin","content workflow","content taste","thought leadership","content quality","consulting","training"]}
+  ],
+  "inferred_hypotheses": [],
+  "active_lenses": ["active_priorities","wiki_gap","contradiction","durable_method","strategic_surprise","adjacent_enabler","convergence","emergent_topic","exploratory"],
+  "derived_from": ["ME/ME.md#Current priorities","ME/ME.md#Questions I am actively working through","ME/ME.md#Content positioning","User confirmation 2026-07-15"],
+  "created_at": "2026-07-15T00:00:00Z",
+  "confirmed_at": "2026-07-15T00:00:00Z",
+  "review_due": "2026-08-15"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "record_type": "link_candidate",
+  "candidate_id": "link-example",
+  "origin_issue_ids": ["issue-example"],
+  "origin_newsletter_ids": ["newsletter-example"],
+  "anchor_text": "Read the primary research",
+  "context_excerpt": "The newsletter presents this paper as primary evidence for a durable method.",
+  "related_claim_ids": ["claim-example"],
+  "related_topic_ids": ["topic-example"],
+  "canonical_url": "https://research.example.test/paper.pdf",
+  "source_type": "research_paper",
+  "commercial_markers": [],
+  "safety_status": "safe",
+  "provenance": {
+    "created_at": "2026-07-13T00:00:00Z",
+    "navigation_performed": false
+  }
+}

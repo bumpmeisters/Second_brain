@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0", "record_type": "issue", "issue_id": "issue-example",
+  "message_id": "gmail-message-id", "newsletter_id": "newsletter-example",
+  "received_at": "2026-07-01T08:00:00Z", "sender_name": "Example Publisher",
+  "sender_address": "news@example.test", "subject": "Example issue", "list_id": "example.test",
+  "content_hash": "sha256-placeholder", "topics": ["agent evaluation"],
+  "claims": [{"text": "The source claims an evaluation method is useful.", "attribution": "newsletter", "verification_status": "unverified"}],
+  "links": [{"url": "https://example.test/article", "label": "Source link"}],
+  "evidence_excerpts": [{"text": "A short bounded excerpt.", "purpose": "representative"}],
+  "relevance_hypotheses": ["May connect to [[agent-evaluation]]."], "promotional_markers": [],
+  "duplicate_cluster_id": null,
+  "provenance": {"provider": "gmail", "message_id": "gmail-message-id", "collected_at": "2026-07-03T00:00:00Z"}
+}

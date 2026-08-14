@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "record_type": "source_fetch",
+  "candidate_id": "link-example",
+  "final_url": "https://research.example.test/paper.pdf",
+  "redirect_chain": [],
+  "mime_type": "application/pdf",
+  "wire_size": 1000,
+  "decompressed_size": 1000,
+  "content_hash": "sha256-example",
+  "coverage": "full",
+  "snapshot_path": "device-local-staging/transactions/link-example/snapshot.bin",
+  "completion_path": "device-local-staging/transactions/link-example/complete.json",
+  "retrieved_at": "2026-07-13T00:00:00Z",
+  "expires_at": "2026-07-20T00:00:00Z"
+}
