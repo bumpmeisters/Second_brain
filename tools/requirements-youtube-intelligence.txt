@@ -1,0 +1,1 @@
+# The offline MVP and gated REST client use only the Python standard library.

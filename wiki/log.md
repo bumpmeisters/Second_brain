@@ -696,3 +696,41 @@ updated: 2026-06-14
   - Promoted the agent-session postmortem only as anecdotal practitioner evidence.
   - Primary research supports a complementary external-memory versus parametric-learning architecture; the original essay's broader forecasts remain unverified.
   - Did not promote the reported Kimi K3 sandbox incident because the exact event could not be independently confirmed beyond the reporting organization; the existing default-deny egress guidance already covers the durable control.
+## 2026-08-14 | recovery | restore approved P31 YouTube pilot delta
+
+- Sources:
+  - `raw/Clippings/Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md`
+  - `raw/Clippings/Traditional Agencies Are Becoming AI Operators.md`
+  - `raw/Clippings/I Use ChatGPT Voice to Run Marketing and Recruiting.md`
+- Changed:
+  - [[agent-evaluation]]
+  - [[index]]
+  - [[sources]]
+  - [[log]]
+- Notes:
+  - Restored only P31-C1 and the two `registered-only` dispositions approved by Rolf on 2026-08-08; no transcript was reread and no new semantic decision was made.
+  - Recovered the bounded reliability-adjusted task-horizon rule and retained the exclusions for named-model, productivity, market-demand, permission, safety, quality, and workflow-outcome claims.
+  - Kept the detailed P31 semantic-ingest package local-only and created no reusable artifact, skill, automation, embedding, or publication authority.
+
+## 2026-08-14 | recovery | restore governed YouTube intelligence pipeline
+
+- Sources:
+  - verified historical backup `second-brain-historical-backup-2026-08-11`
+  - approved recovery matrix for `10-channel-automation-archive`
+- Changed:
+  - `docs/decisions/2026-08-08-youtube-transcript-processing-batch-addendum.md`
+  - `docs/decisions/youtube-api-compliance-contract.md`
+  - `docs/plans/2026-08-05-001-feat-youtube-intelligence-pipeline-v2-plan.md`
+  - `docs/plans/2026-08-08-001-feat-goal-aligned-youtube-review-and-ingest-plan.md`
+  - `docs/plans/2026-08-09-001-feat-youtube-channel-calibration-pilot-addendum.md`
+  - `docs/youtube-intelligence.md`
+  - `templates/transcript-brief.md`
+  - `tests/youtube-intelligence/`
+  - `tools/youtube_intelligence.py`
+  - `tools/youtube-intelligence.ps1`
+  - `wiki/_outputs/youtube-calibration/2026-08-09/`
+- Notes:
+  - Restored the 16 approved versionable pipeline files and four durable calibration checkpoints; the superseded V1 plan and all 13 LinkedIn candidates remain backup-only.
+  - Removed the personal account address and channel ID from versioned artifacts. The checked-in policy is offline and resolves the expected account binding only from a named process environment variable.
+  - Kept subscription exports, the 120-row metadata ledger, P31 package files, SQLite state, receipts, and previews local-only.
+  - Historical pipeline and transcript-brief tests pass after migration; this recovery grants no scheduler, external-model, embedding, automatic transcript-processing, or semantic-promotion authority.

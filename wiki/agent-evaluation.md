@@ -4,6 +4,9 @@ status: active
 trust: partially-verified
 sources:
   - research/2026-07-01-agent-evaluation-recent-research.md
+  - raw/Clippings/Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md
+  - https://metr.org/time-horizons/
+  - https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/
   - https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/
   - https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-bedrock-agentcore-new-optimization-capabilities/
   - https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/
@@ -12,7 +15,7 @@ sources:
   - https://arxiv.org/abs/2606.05670
   - https://huggingface.co/blog/ibm-research/itbench-aa
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-08-14
 ---
 
 # Agent Evaluation
@@ -60,6 +63,12 @@ A useful eval set represents the work the agent is actually trusted to do. Inclu
 Control the comparison protocol. Keep tool access, answer contracts, budgets, retries, environment state, and accounting aligned when comparing agents or architectures. Otherwise, a score difference may come from the harness rather than the agent design (source: [Do More Agents Help?, 2026-06-04](https://arxiv.org/abs/2606.05670); preprint, needs verification).
 
 Use repeated runs when behavior is stochastic. Report success together with latency, cost, tool-call count, and failure categories. ITBench-AA illustrates this by fixing a harness, running three repeats per task, and scoring against known root causes; its authors also report that longer trajectories did not reliably improve accuracy (source: [IBM Research and Artificial Analysis, 2026-05-27](https://huggingface.co/blog/ibm-research/itbench-aa); benchmark-author report, partially verified).
+
+## Reliability-adjusted task horizons
+
+Interpret a task-completion horizon at a success probability appropriate to the workflow's failure cost and available review capacity. METR defines its 50%-time horizon as the human task length at which a fitted curve predicts 50% model completion—not the agent's runtime—and exposes higher-reliability views such as 80%. A 50% horizon is therefore useful capability evidence but not, by itself, a safe delegation threshold. There is no universal replacement threshold: consequential or attention-expensive work may need a higher demonstrated success rate, a shorter autonomous slice, or an earlier human checkpoint ([METR methodology](https://metr.org/time-horizons/); [METR measurement report](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)).
+
+Pair the chosen reliability level with an end-state verifier. In a practitioner refactor case, a fast zero-shot run reportedly produced scaffolding while omitting the actual models and deployment/bootstrap work; the example illustrates apparent completion rather than independently reproduced model performance. Named-model rankings, effort ratios, and company outcome claims from the talk remain excluded (source: Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md, 7:29–9:31 and 11:35–12:30; practitioner report, needs independent reproduction; analysis: approved P31-C1).
 
 ## LLM-as-judge
 
