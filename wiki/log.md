@@ -650,3 +650,26 @@ updated: 2026-06-14
   - Restored fail-closed source-selection and semantic-ingest contracts without granting source-reading, claim-promotion, publication, or external-action authority.
   - Kept the experimental Vault Transaction v2 contract inactive and marked the reusable-practice register and router recovery-pending until wave 11 restores their target pages.
   - Added the recovered clipping, semantic-ingest, and wiki-integrity regression suites to pull-request CI.
+
+## 2026-08-14 | recovery | restore and close the curated wiki delta
+
+- Sources:
+  - verified historical backup `second-brain-historical-backup-2026-08-11`
+  - wiki/_outputs/recovery-manifest/private/historical-workspace-recovery-manifest.csv
+  - historical committed support baseline at `64eccfa93a4861d857630f4dbdf0c1bdf2fbbd23`
+- Changed:
+  - `research/imports/`
+  - recovered and curated root pages under `wiki/`
+  - [[reusable-practices-router]]
+  - [[reusable-practices-library]]
+  - [[sources]]
+  - [[index]]
+  - `wiki/_outputs/recovery-manifest/README.md`
+  - `wiki/_outputs/recovery-manifest/recovery-wave-closures.csv`
+  - `wiki/_outputs/recovery-manifest/closures/11-curated-wiki-delta.md`
+  - `wiki/_outputs/recovery-manifest/closures/11-curated-wiki-delta.csv`
+- Notes:
+  - Closed all 110 manifest candidates: 108 recovered or boundedly curated and the historical `wiki/index.md` and `wiki/log.md` candidates superseded by their current `main` versions.
+  - Restored nine committed source and source-summary dependencies required for current provenance without copying protected source binaries or local generated outputs.
+  - Reactivated the 46 registered reusable-practice routes after verifying that every registered practice page exists.
+  - Preserved AI-research trust labels, human semantic-promotion gates, and publication boundaries; recovery does not independently approve claims or authorize external action.

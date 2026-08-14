@@ -28,12 +28,12 @@ The skills section adds an operating implication: skills behave like maintained 
 
 ## Downstream use
 
-Supports qualified additions to [[agentic-systems]] and the pending `wiki/agent-skill-design.md`, which is scheduled for recovery wave 11. Product and adoption claims remain attributed and time-sensitive.
+Supports qualified additions to [[agentic-systems]] and `wiki/agent-skill-design.md`. Product and adoption claims remain attributed and time-sensitive.
 
 ## Related pages
 
 - [[latent-space]]
 - [[agentic-systems]]
-- `wiki/agent-skill-design.md` (scheduled for recovery wave 11)
+- `wiki/agent-skill-design.md`
 - [[loop-engineering]]
 - [[context-engineering]]

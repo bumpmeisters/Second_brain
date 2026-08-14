@@ -37,7 +37,7 @@ updated: 2026-07-16
 - [[agent-security]]
 - [[ai-operating-system]]
 - [[ai-governance]]
-- `wiki/agent-skill-design.md` (scheduled for recovery wave 11)
+- `wiki/agent-skill-design.md`
 
 ## Related pages
 

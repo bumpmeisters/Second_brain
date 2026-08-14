@@ -11,8 +11,11 @@ sources:
   - raw/Clippings/How to Build Claude Subagents Better Than 99% of People.md
   - raw/Clippings/AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md
   - raw/Clippings/Stop Prompting Claude. Start Loop Engineering.md
+  - raw/imports/agentic-repositories/gstack/94993f74012782fd94416dd44b8314f6363a13a4/README.md
+  - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/README.md
+  - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/lfg/SKILL.md
 created: 2026-06-10
-updated: 2026-08-10
+updated: 2026-08-08
 ---
 
 # AI Work Blueprint
@@ -170,7 +173,7 @@ Die Juni-2026-Quellen ergänzen zwei praktische Regeln: Kontext aktiv reduzieren
 
 Die Umgebung verhindert, dass du bei jedem Prompt wieder bei null anfängst. Sie ist der dauerhafte Rahmen um die Arbeit: Regeln, Wissensbasis, Vorlagen, Beispiele, Skills, Logs und Guardrails.
 
-In diesem Vault besteht die Umgebung aus AGENTS.md, `raw/`, `research/`, `wiki/`, `templates/`, `wiki/_outputs/`, Quellenregistern und Logs (source: AGENTS.md). In anderen Kontexten kann die Umgebung ein Projektordner, ein Team-Wiki, ein CRM, ein Code-Repo, ein Notion-Space oder ein Set aus wiederverwendbaren Prompts sein.
+In diesem Vault besteht die Umgebung aus AGENTS.md, `raw/`, `research/`, `wiki/`, `templates/`, `wiki/_outputs/`, Quellenregistern und Logs (vault governance: AGENTS.md). In anderen Kontexten kann die Umgebung ein Projektordner, ein Team-Wiki, ein CRM, ein Code-Repo, ein Notion-Space oder ein Set aus wiederverwendbaren Prompts sein.
 
 ### Die vier Subsysteme der Umgebung
 
@@ -233,6 +236,10 @@ Nenne die 5 wichtigsten Lücken. Für jede Lücke:
 7. Umgebung aktualisieren: Vorlage, Regel, Skill, Wiki-Seite oder Log ergänzen.
 ```
 
+### Readiness-Vertrag an Übergaben
+
+Wenn mehrere Stufen oder Sessions beteiligt sind, braucht jedes Übergabeartefakt zusätzlich einen expliziten Readiness-Status, Quellen und Provenienz, gesetzte Entscheidungen, verworfene Alternativen, offene Blocker und Verifizierungsevidenz. Die nächste Stufe darf `requirements-only`, `blocked`, unbekannte Statuswerte oder fehlende Verifizierung nicht stillschweigend als ausführungsbereit interpretieren. Sie stoppt und fordert Klärung an. Ein Handoff überträgt Kontext, aber keine neue Handlungsbefugnis (source: README.md; source: SKILL.md; analysis based on the GStack staged workflow and Compound Engineering LFG contract).
+
 ## Mini-Version für den Alltag
 
 Wenn du schnell starten willst, nutze diese vier Sätze:
@@ -270,6 +277,10 @@ Prüfung: Achte besonders auf ... und markiere Unsicherheiten.
 - Verifizierung: Tests, Lint, Browser-Check, Logs oder reale API-Antworten nutzen.
 - Umgebung: README, Tests, Agent-Regeln oder Skripte verbessern, wenn derselbe Fehler wieder auftaucht.
 
+## Spec-anchored semantic ingest
+
+The semantic-ingest workflow is a concrete `spec-anchored` implementation of this blueprint. Its schema and package manifest preserve the specification, its evidence matrix makes the knowledge delta reviewable, and its validator turns source identity, citation coverage, register updates, backlog state, and raw immutability into deterministic gates (vault governance: AGENTS.md; analysis: [[semantic-ingest-workflow]]). Fast and Full validation profiles separate iteration cost from closure assurance, while recorded artifact hashes make the final validation state auditable. The workflow also preserves environment learning through a generic skill-validator fallback, a preconditioned transactional edit fallback, and a separate line-ending audit (source: tools/test-semantic-ingest-package.ps1; source: tools/validate-local-skill.ps1; source: tools/set-file-transactional.ps1; analysis: [[semantic-ingest-workflow]]).
+
 ## Goldene Regel
 
 Du kannst Ausführung an KI delegieren, aber nicht dein Verständnis. Die KI kann schreiben, rechnen, vergleichen, umbauen und Varianten erzeugen. Du bleibst verantwortlich für Ziel, Kontext, Urteil, Grenzen und Freigabe.
@@ -293,3 +304,4 @@ Du kannst Ausführung an KI delegieren, aber nicht dein Verständnis. Die KI kan
 - [[llm-wiki]]
 - [[production-agent-engineering-clippings-june-2026]]
 - [[ai-workflow-builder-clippings-june-2026]]
+- [[semantic-ingest-workflow]]

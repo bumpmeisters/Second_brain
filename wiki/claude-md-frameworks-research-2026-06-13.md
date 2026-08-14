@@ -1,6 +1,7 @@
 ---
 type: source-summary
 status: active
+trust: partially-verified
 sources:
   - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260605_CLAUDE.Design.md
   - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260606_CLAUDE_WAT.md
@@ -16,8 +17,9 @@ sources:
   - https://aider.chat/docs/usage/conventions.html
   - https://arxiv.org/abs/2509.14744
   - https://arxiv.org/abs/2602.11988
+  - research/agents-claude-md-research.md
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-02
 ---
 
 # Claude.md Frameworks Research 2026-06-13
@@ -59,9 +61,16 @@ The external sources are primarily official Claude Code docs, with comparison po
 - Product mechanics are time-sensitive. Claude Code memory, skills, subagents, settings, and hooks should be checked against official docs before making tool-specific claims durable (source: Anthropic Claude Code docs, checked 2026-06-13).
 - The local executive-assistant prompt claims Claude Code auto memory "works out of the box." Official docs say auto memory exists and is on by default in current Claude Code versions, but this should still be treated as product-specific and version-sensitive (source: 20260606_Executive Assistant Initialize Prompt.txt; source: Anthropic Claude Code memory docs).
 
+## July 2026 research addendum
+
+Recent community and repository signals reinforce the existing recommendation to keep root instruction files concise, avoid duplicate loading, and move specialist procedures into scoped files or skills. They also add a stronger supply-chain warning: instruction files and initialization scripts from cloned repositories should be reviewed before they are trusted or executed (source: [[agents-and-claude-md-research-2026-07-01]]).
+
+The addendum does not independently validate community claims or the reported empirical percentages. It is useful as a current signal and a map to primary sources, not as a replacement for official documentation or the cited research paper (source: research/agents-claude-md-research.md).
+
 ## Pages created or updated
 
 - [[claude-md-project-instructions]]
+- [[agents-and-claude-md-research-2026-07-01]]
 - [[wat-framework]]
 - [[claude-code-executive-assistant-setup]]
 - `templates/claude-md-project-instructions.md`

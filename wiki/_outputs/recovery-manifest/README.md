@@ -16,13 +16,11 @@ The historical workspace contains 2,210 Git-visible candidates: 113 tracked chan
 | `archive` | 32 | Existing backup is the only retained copy; no recovery PR will be opened. |
 | `discard` | 78 | Already on `main`, temporary, redundant, or third-party material; no recovery action remains. |
 
-This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-core-delta`, `05-ai-project`, `06-content-operating-system`, `07-abm-operating-system`, `08-knowledge-workflow-governance`, and `09-newsletter-intelligence` are closed; one recovery wave remains active. The archived channel-automation group is already decided and creates no recovery PR.
+This reduces 2,210 file-level candidates to seven recovery waves. All seven recovery waves are now closed: `04-ai-core-delta`, `05-ai-project`, `06-content-operating-system`, `07-abm-operating-system`, `08-knowledge-workflow-governance`, `09-newsletter-intelligence`, and `11-curated-wiki-delta`. The archived channel-automation group is already decided and creates no recovery PR.
 
 ## Active recovery waves
 
-| Wave | Candidates | Required outcome |
-|---|---:|---|
-| `11-curated-wiki-delta` | 110 | Curate durable wiki/research candidates with current citations and index fit. |
+None. All 349 rows marked `recover` have a recorded file-level closure. Post-merge baseline verification, final backup-delta verification, and branch-retirement gates remain separate completion steps.
 
 ## Closed recovery waves
 
@@ -34,6 +32,7 @@ This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-c
 | `07-abm-operating-system` | 27 | Recovered the complete ABM project, restored its clean committed baseline, reactivated only verified register rows and fingerprints, and preserved all gate and publication boundaries. See `closures/07-abm-operating-system.md`, `closures/07-abm-operating-system.csv`, and `closures/07-abm-operating-system-baseline-support.csv`. |
 | `08-knowledge-workflow-governance` | 56 | Restored the governed semantic-ingest, clipping-selection, runtime, transactional-editing, and reusable-practice contracts. Fifty candidates were recovered or boundedly curated; six older variants were superseded by later `main` fixes. See `closures/08-knowledge-workflow-governance.md`, `closures/08-knowledge-workflow-governance.csv`, and `closures/08-knowledge-workflow-governance-integration-support.csv`. |
 | `09-newsletter-intelligence` | 46 | Restored the controlled newsletter pipeline, complete fixture suite, source dossiers, linked-source records, and approved research artifacts without versioning private Gmail-derived state. Forty-five candidates were recovered; the older index generator was superseded by current `main`. See `closures/09-newsletter-intelligence.md`, `closures/09-newsletter-intelligence.csv`, and `closures/09-newsletter-intelligence-integration-support.csv`. |
+| `11-curated-wiki-delta` | 110 | Restored and curated the final durable wiki/research delta against current `main`: 108 candidates recovered and two historical navigation/log candidates superseded. Current source, router, index, trust, and local-output boundaries were preserved. See `closures/11-curated-wiki-delta.md`, `closures/11-curated-wiki-delta.csv`, and `closures/11-curated-wiki-delta-integration-support.csv`. |
 
 ## Closed without a recovery PR
 
@@ -68,4 +67,4 @@ This reduces 2,210 file-level candidates to seven recovery waves. Waves `04-ai-c
 
 ## Completion criterion
 
-The recovery is complete when all 349 `recover` rows have a recorded closure through their seven waves, `main` passes the full baseline, the final backup delta is verified, and the branch retirement gates are satisfied. Two hundred thirty-nine rows are now closed and 110 remain. At that point the historical workspace may be removed without further archaeological review.
+All 349 `recover` rows now have a recorded closure through their seven waves. The recovery program is complete only after this final wave is merged, `main` passes the full post-merge baseline, the final backup delta is verified, and the branch-retirement gates are satisfied. Only then may the historical workspace be removed without further archaeological review.

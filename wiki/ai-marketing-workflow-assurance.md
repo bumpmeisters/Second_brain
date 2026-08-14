@@ -11,8 +11,9 @@ sources:
   - https://docs.cloud.google.com/generative-ai-app-builder/docs/check-grounding
   - raw/Clippings/AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md
   - raw/Clippings/Stop outsourcing your marketing intelligence to AI. Do this instead.md
+  - https://safe.ai/blog/significant-increase-in-digital-labor-automation
 created: 2026-06-06
-updated: 2026-06-20
+updated: 2026-07-18
 ---
 
 # AI Marketing Workflow Assurance
@@ -68,6 +69,16 @@ Google Cloud's Check Grounding API is a useful reference pattern for evidence le
 
 The later Gemini variant adds a useful warning for local-first workflows: final-output evaluation can miss failures in trajectory, retrieval, tool use, and memory handling, so important workflows need at least a lightweight trace of intermediate steps and source decisions (source: [[minimal-evaluation-and-observability-framework-gemini-2026-06-05]]).
 
+## Semantic-ingest assurance
+
+The local semantic-ingest workflow operationalizes the assurance stack for durable knowledge. The decision ledger records source-level judgment, the evidence matrix connects patterns to canonical sources and target pages, and the package manifest keeps routing provenance, backlog completion, and validation provenance separate. Fast validation supports iteration; completed packages require a recorded successful Final/Full check whose decision-ledger and evidence-matrix hashes still match (analysis: [[semantic-ingest-workflow]]; source: tools/test-semantic-ingest-package.ps1).
+
+Semantic promotion remains a human review decision. Passing the validator demonstrates internal consistency and protected-source integrity; it does not independently verify vendor, practitioner, or AI-research claims (governed by AGENTS.md).
+
+## Review-surface minimization
+
+In consequential workflows, optimize not only generation time but also the amount a qualified human must re-check. Prefer visible evidence paths, claim-to-source mappings, and targeted diffs or redlines over opaque full-artifact regeneration. Keep professional rules, individual preferences, and organizational precedent as distinguishable context layers so reviewers can see which layer justified a proposed change (source: [[newsletter-intelligence-week4-2026-07-18]]; AI synthesis of a vendor interview, with performance and adoption claims excluded).
+
 ## Reuse classes
 
 - `lead-only`: generated or researched material that may be useful but is not yet reviewed.
@@ -75,6 +86,10 @@ The later Gemini variant adds a useful warning for local-first workflows: final-
 - `approved durable knowledge`: output that can be used as trusted wiki context because its claims, caveats, and reviewer decision are recorded.
 - `approved external work`: output cleared for external use after any needed brand, legal, or compliance review.
 - `rejected`: output preserved only as a failure case or audit artifact.
+
+## Artifact acceptance and grader drift
+
+Where a workflow produces a professional artifact, the strongest acceptance check is whether a qualified human would use or accept the deliverable. Automated graders can support relative monitoring, but their absolute thresholds must be recalibrated when models, harnesses or output styles change (source: [[week3-primary-verification-dossier-2026-07-16]]).
 
 ## Open questions
 
@@ -95,3 +110,4 @@ The later Gemini variant adds a useful warning for local-first workflows: final-
 - [[marketing-operating-system]]
 - [[production-agent-engineering-clippings-june-2026]]
 - [[agentic-marketing-intelligence-clippings-june-2026]]
+- [[semantic-ingest-workflow]]

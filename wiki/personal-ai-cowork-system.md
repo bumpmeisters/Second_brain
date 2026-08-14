@@ -1,12 +1,13 @@
----
+﻿---
 type: concept
 status: active
 sources:
   - raw/assets/10_Agentic_Workflows/tina-claude-cowork-system-2026-06-03.png
   - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
   - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/INitialize Prompt_Folder/20260606_Executive Assistant Initialize Prompt.txt
+  - wiki/newsletters/latent-space/linked-sources/chatgpt-work-interview-2026-08-03.md
 created: 2026-06-03
-updated: 2026-06-11
+updated: 2026-08-03
 ---
 
 # Personal AI Cowork System
@@ -55,6 +56,16 @@ Tina uses a lake analogy: build data pipelines first, then build dashboards, bri
 
 For Rolf, the data layer is likely the second brain itself: raw sources, research summaries, source register, wiki pages, templates, and output folders.
 
+### Shared substrate, distinct interfaces
+
+Reuse a common capability and execution substrate across cowork workflows, but adapt the interface, explanations, and approval flow to the user and task. Persistent files and memory should enter a task only through explicit relevance, permission, provenance, and freshness boundaries. Collaboration must not silently widen access to private context (source: [[newsletters/latent-space/linked-sources/chatgpt-work-interview-2026-08-03|ChatGPT Work interview]]; first-party operating hypothesis, not independently evaluated).
+
+## Confirmed product direction
+
+The 2026-07-02 product interview narrowed the first version to a source-grounded strategic AI coworker for professional work across AI, marketing strategy, ABM, martech, and agentic ways of working. Its first proving ground is a weekly strategic intelligence review, with staged memory, approval before promotion into durable knowledge, and proactive awareness without autonomous commitment of attention, position, or resources (source: user product interview, 2026-07-02).
+
+The complete requirements brief remains a historical local artifact named `strategic-ai-coworker-product-brief-2026-07-02.md`; it is not part of the recovered repository. Personalization begins with `ME/ME.md`, which captures selective current context rather than an exhaustive personal profile (source: user product interview, 2026-07-02).
+
 ## Candidate Rolf cowork modules
 
 - **Second brain steward**: ingest sources, update wiki pages, keep `sources.md` and `log.md` accurate, and flag stale or weak claims.
@@ -75,10 +86,9 @@ Those are useful inspiration, but this vault should first solve the higher-lever
 
 ## Open questions
 
-- Which Rolf workflows deserve a cowork module first: source ingest, morning brief, marketing strategy, research validation, or template generation?
-- What data sources should the future cowork space be allowed to access?
-- Which actions should require explicit approval?
-- What would count as a successful first working version?
+- Which current vault sources and controlled inflows should feed the first weekly review?
+- What review format will make accepting, rejecting, and correcting conclusions effortless?
+- What is the smallest manual version that can test the product before automation is added?
 
 ## Related pages
 
@@ -90,3 +100,4 @@ Those are useful inspiration, but this vault should first solve the higher-lever
 - [[agentic-and-applied-ai-gap-review]]
 - [[llm-wiki]]
 - [[marketing-operating-system]]
+- Historical local requirements brief: `strategic-ai-coworker-product-brief-2026-07-02.md`

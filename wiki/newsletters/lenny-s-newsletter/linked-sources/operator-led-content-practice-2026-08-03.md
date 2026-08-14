@@ -32,6 +32,6 @@ The source distinguishes reach from meaningful contribution and describes owned 
 ## Related pages
 
 - [[lenny-s-newsletter]]
-- `wiki/strategic-thought-leadership-system.md` (scheduled for recovery wave 11)
+- `wiki/strategic-thought-leadership-system.md`
 - [[content-quality]]
-- `wiki/maintained-content-distribution-lifecycle.md` (scheduled for recovery wave 11)
+- `wiki/maintained-content-distribution-lifecycle.md`

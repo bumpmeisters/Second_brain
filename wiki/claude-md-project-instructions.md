@@ -1,6 +1,7 @@
 ---
 type: concept
 status: active
+trust: partially-verified
 sources:
   - wiki/claude-md-frameworks-research-2026-06-13.md
   - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/20260606_CLAUDE_WAT.md
@@ -10,8 +11,9 @@ sources:
   - https://code.claude.com/docs/en/sub-agents
   - https://code.claude.com/docs/en/settings
   - https://code.claude.com/docs/en/hooks
+  - research/agents-claude-md-research.md
 created: 2026-06-13
-updated: 2026-06-13
+updated: 2026-07-02
 ---
 
 # Claude.md Project Instructions
@@ -25,6 +27,8 @@ updated: 2026-06-13
 `CLAUDE.md` is not the whole agentic system. It is the front door: the short, durable orientation file Claude Code should read every session so it understands the project, the work style, the key commands, and the rules that matter everywhere (source: [[claude-md-frameworks-research-2026-06-13]]).
 
 The deeper creation process is context engineering. Decide what belongs in always-loaded instructions, what belongs in supporting context files, what belongs in on-demand skills, and what must be enforced by deterministic guardrails rather than trusted to a prompt (source: Anthropic Claude Code memory docs; source: Anthropic Claude Code skills docs; source: Anthropic Claude Code hooks docs).
+
+Recent repository and practitioner evidence adds two maintenance tests: avoid loading equivalent instruction files twice, and treat unfamiliar instruction files or initialization scripts as untrusted until reviewed. These are current design signals rather than independently verified universal rules (source: [[agents-and-claude-md-research-2026-07-01]]).
 
 ## Creation principle
 
@@ -190,6 +194,7 @@ Claude Code docs say Claude reads `CLAUDE.md`, not `AGENTS.md`, and recommend im
 ## Related pages
 
 - [[claude-md-frameworks-research-2026-06-13]]
+- [[agents-and-claude-md-research-2026-07-01]]
 - [[wat-framework]]
 - [[claude-code-executive-assistant-setup]]
 - [[context-engineering]]

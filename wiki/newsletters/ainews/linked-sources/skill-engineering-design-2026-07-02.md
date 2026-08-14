@@ -35,5 +35,5 @@ Test whether a small, explicit strategic vocabulary improves newsletter judgment
 ## Related pages
 
 - [[ainews]]
-- `wiki/agent-skill-design.md` (scheduled for recovery wave 11)
+- `wiki/agent-skill-design.md`
 - [[newsletter-intelligence-pipeline]]
