@@ -7,7 +7,7 @@ canonical_id: publication-32289c399cc723f3
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-08-14
 ---
 
 # ben's bites
@@ -69,15 +69,16 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-08-14 — Agent-session verification and recovery**: A reviewed practitioner postmortem supports explicit plan review, behavioral acceptance criteria, real-environment end-to-end testing, durable compaction handoffs, and exact-version checks. Evidence remains anecdotal and does not validate product or productivity claims (source: [[agent-session-verification-postmortem-2026-08-14]]; issue-19fdc4e8109fcf6f).
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[agent-session-verification-postmortem-2026-08-14]] - Failure-aware field evidence for plan review, end-to-end verification, compaction handoffs, and exact-version testing.
 
 ## Feedback and corrections
 
 - 2026-07-06: Rolf selected this newsletter for the intelligence pipeline and authorized creation of its dossier.
+- 2026-08-14: Rolf approved promotion of the bounded agent-session verification delta; product and outcome claims remain unverified.
 
 ## Related pages
 

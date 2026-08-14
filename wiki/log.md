@@ -673,3 +673,26 @@ updated: 2026-06-14
   - Restored nine committed source and source-summary dependencies required for current provenance without copying protected source binaries or local generated outputs.
   - Reactivated the 46 registered reusable-practice routes after verifying that every registered practice page exists.
   - Preserved AI-research trust labels, human semantic-promotion gates, and publication boundaries; recovery does not independently approve claims or authorize external action.
+
+## 2026-08-14 | newsletter intelligence | promote verified memory and agent-verification deltas
+
+- Sources:
+  - https://www.bensbites.com/p/bens-session
+  - https://www.dwarkesh.com/p/era-of-continual-learning
+  - https://arxiv.org/abs/2604.27003
+  - https://proceedings.mlr.press/v330/abbes26a.html
+- Changed:
+  - [[agent-session-verification-postmortem-2026-08-14]]
+  - [[continual-learning-memory-boundary-2026-08-14]]
+  - [[loop-engineering]]
+  - [[agentic-systems]]
+  - [[ai-operating-system]]
+  - [[ben-s-bites]]
+  - [[dwarkesh-patel]]
+  - [[sources]]
+  - [[index]]
+- Notes:
+  - Rolf explicitly approved the review recommendation on 2026-08-14.
+  - Promoted the agent-session postmortem only as anecdotal practitioner evidence.
+  - Primary research supports a complementary external-memory versus parametric-learning architecture; the original essay's broader forecasts remain unverified.
+  - Did not promote the reported Kimi K3 sandbox incident because the exact event could not be independently confirmed beyond the reporting organization; the existing default-deny egress guidance already covers the durable control.

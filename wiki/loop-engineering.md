@@ -14,8 +14,9 @@ sources:
   - https://www.nber.org/papers/w35275
   - https://newsletter.pragmaticengineer.com/p/how-kent-beck-shapes-the-software
   - https://lilianweng.github.io/posts/2026-07-04-harness/
+  - https://www.bensbites.com/p/bens-session
 created: 2026-06-11
-updated: 2026-07-16
+updated: 2026-08-14
 ---
 
 # Loop Engineering
@@ -48,6 +49,8 @@ Before automating repetition, require an observable target state; feedback that 
 A practitioner field analysis sharpens the loop into an operational rhythm: complete one bounded item, verify it, and persist only the state needed for the next iteration in a plan, log, test, or commit. This reduces the amount of conversational context that must survive and leaves an inspectable recovery trail (source: [[newsletters/the-pragmatic-engineer/linked-sources/loop-engineering-field-analysis-2026-07-15|loop-engineering-field-analysis-2026-07-15]]).
 
 The same source reports drift, supervision needs, and token cost. These are anecdotal observations, but they reinforce the need for iteration, time, cost, and write-permission ceilings rather than unattended looping by default (source: [[newsletters/the-pragmatic-engineer/linked-sources/loop-engineering-field-analysis-2026-07-15|loop-engineering-field-analysis-2026-07-15]]; practitioner evidence).
+
+A second practitioner postmortem adds a useful pre-loop and recovery check. Before execution, review the plan, clarify the intended behavior, and name end-to-end acceptance cases in the real environment. During long debugging loops, persist the testing approach before context compaction and confirm that the agent is editing and testing the current artifact rather than an older copy. These controls come from one self-reported session, so they are checklist candidates rather than measured performance claims (source: [[newsletters/ben-s-bites/linked-sources/agent-session-verification-postmortem-2026-08-14|agent-session-verification-postmortem-2026-08-14]]).
 
 ## Measure the delivery funnel
 

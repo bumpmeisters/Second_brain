@@ -89,7 +89,9 @@ def extract_html(path: Path, final_url: str) -> tuple[str, list[dict]]:
     lines = []
     content_tags = {"p", "li", "pre", "blockquote", "td", "th"}
     for element in root.iter():
-        tag = element.tag.lower() if isinstance(element.tag, str) else ""
+        if not isinstance(element.tag, str):
+            continue
+        tag = element.tag.lower()
         value = " ".join(element.text_content().split())
         if not value:
             continue

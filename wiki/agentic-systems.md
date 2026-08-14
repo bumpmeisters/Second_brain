@@ -9,8 +9,12 @@ sources:
   - https://www.anthropic.com/engineering/harness-design-long-running-apps
   - https://www.anthropic.com/engineering/multi-agent-research-system
   - https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
+  - https://www.bensbites.com/p/bens-session
+  - https://www.dwarkesh.com/p/era-of-continual-learning
+  - https://arxiv.org/abs/2604.27003
+  - https://proceedings.mlr.press/v330/abbes26a.html
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-08-14
 ---
 
 # Agentic Systems
@@ -74,9 +78,13 @@ Do not equate a large context window with good memory. Decide what must remain a
 
 Memory therefore needs policies for writing, consolidation, contradiction, decay, retrieval, and deletion. A June practitioner discussion reports that larger memory stores became noisy as stale strategies and conflicting reflections accumulated; this is an **unverified community signal**, not a controlled result ([r/LangChain, 2026-06-17](https://www.reddit.com/r/LangChain/comments/1u893dw/we_discovered_something_strange_while_building/)).
 
+External memory and parametric continual learning should not be collapsed into one capability. Files and retrieval systems make state inspectable, portable, versionable, and recoverable, but retrieval quality and memory organization can still cause interference or forgetting. In sequential ALFWorld and BabyAI experiments, abstract procedural memories transferred more reliably than detailed trajectories, while some memory organizations improved forward transfer and worsened forgetting ([Hu et al., 2026](https://arxiv.org/abs/2604.27003); preprint, task-specific). Continual pre-training instead updates model parameters and faces distribution shift, compute cost, and catastrophic forgetting; replay and gradient alignment reduced forgetting in one multilingual Llama-family study ([Abbes et al., 2026](https://proceedings.mlr.press/v330/abbes26a.html)). The supported architecture is complementary: external memory for governed state and retrieval, with learned adaptation treated as a separate, higher-risk layer (analysis: [[newsletters/dwarkesh-patel/linked-sources/continual-learning-memory-boundary-2026-08-14|continual-learning-memory-boundary-2026-08-14]]).
+
 ### Verify the end state, not the agent's confidence
 
 An agent saying “done” is not evidence of completion. Verification should inspect the environment or artifact against explicit acceptance criteria. For long-running work, independent evaluator roles can reduce self-assessment errors, but their judgments also require calibration and regression tests ([Anthropic, 2026-03-24](https://www.anthropic.com/engineering/harness-design-long-running-apps)). See [[loop-engineering]] and [[ai-marketing-workflow-assurance]].
+
+Acceptance criteria should cover the real integration path, not only whether code was generated or a local command passed. A practitioner postmortem reports that an agent initially left a browser extension uninstalled and untested, later lost testing knowledge across compaction, and tested an older artifact copy. The transferable controls are to specify end-to-end cases, persist key test state outside the conversation, and identify the exact active artifact before trusting results (source: [[newsletters/ben-s-bites/linked-sources/agent-session-verification-postmortem-2026-08-14|agent-session-verification-postmortem-2026-08-14]]; anecdotal practitioner evidence).
 
 ### Bound autonomy and blast radius
 
