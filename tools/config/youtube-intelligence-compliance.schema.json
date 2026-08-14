@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "YouTube Intelligence Policy",
+  "type": "object",
+  "required": ["schema_version", "policy_version", "owner", "paths", "clipper", "git_custody", "api", "review", "calibration", "models", "scheduler"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "policy_version": { "type": "string", "minLength": 1 },
+    "owner": { "type": "string", "minLength": 1 },
+    "single_user": { "const": true },
+    "paths": {
+      "type": "object",
+      "required": ["clippings", "subscription_fixture"],
+      "properties": {
+        "clippings": { "const": "raw/Clippings" },
+        "subscription_fixture": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "clipper": {
+      "type": "object",
+      "required": ["enabled", "source_field", "transcript_heading", "minimum_transcript_characters", "risk_acceptance_id", "accepted_by", "accepted_on", "private_noncommercial", "external_model_processing", "pipeline_controls_browser"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "source_field": { "const": "source" },
+        "transcript_heading": { "const": "## Transcript" },
+        "minimum_transcript_characters": { "type": "integer", "minimum": 1 },
+        "risk_acceptance_id": { "type": "string", "minLength": 1 },
+        "accepted_by": { "type": "string", "minLength": 1 },
+        "accepted_on": { "type": "string", "format": "date" },
+        "private_noncommercial": { "type": "boolean" },
+        "external_model_processing": { "const": false },
+        "pipeline_controls_browser": { "const": false },
+        "external_replication_responsibility": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "git_custody": {
+      "type": "object",
+      "required": ["require_transcripts_untracked", "scan_staged_clippings"],
+      "properties": {
+        "require_transcripts_untracked": { "const": true },
+        "scan_staged_clippings": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "api": {
+      "type": "object",
+      "required": ["live_enabled", "expected_authorized_channel_id_environment_variable", "access_token_environment_variable", "cache_days", "allowed_methods", "subscription_scope", "discovery_lookback_days", "discovery_page_size", "discovery_max_pages_per_channel"],
+      "properties": {
+        "live_enabled": { "type": "boolean" },
+        "expected_authorized_channel_id_environment_variable": { "type": "string", "minLength": 1 },
+        "access_token_environment_variable": { "type": "string", "minLength": 1 },
+        "cache_days": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "allowed_methods": {
+          "type": "array",
+          "items": { "enum": ["subscriptions.list", "channels.list", "playlistItems.list", "videos.list"] },
+          "uniqueItems": true
+        },
+        "subscription_scope": { "const": "https://www.googleapis.com/auth/youtube.readonly" },
+        "discovery_lookback_days": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "discovery_page_size": { "type": "integer", "minimum": 1, "maximum": 50 },
+        "discovery_max_pages_per_channel": { "type": "integer", "minimum": 1, "maximum": 10 }
+      },
+      "additionalProperties": false
+    },
+    "review": { "type": "object" },
+    "calibration": {
+      "type": "object",
+      "required": ["metadata_sample_size", "population_sample_size", "channel_supplement_size", "transcript_candidate_limit", "semantic_wave_size"],
+      "properties": {
+        "metadata_sample_size": { "type": "integer", "minimum": 1, "maximum": 500 },
+        "population_sample_size": { "type": "integer", "minimum": 1, "maximum": 500 },
+        "channel_supplement_size": { "type": "integer", "minimum": 0, "maximum": 499 },
+        "transcript_candidate_limit": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "semantic_wave_size": { "type": "integer", "minimum": 1, "maximum": 6 }
+      },
+      "additionalProperties": false
+    },
+    "models": {
+      "type": "object",
+      "required": ["discovery_enabled", "external_source_processing_enabled"],
+      "properties": {
+        "discovery_enabled": { "const": false },
+        "external_source_processing_enabled": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "scheduler": {
+      "type": "object",
+      "required": ["enabled"],
+      "properties": { "enabled": { "const": false } },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

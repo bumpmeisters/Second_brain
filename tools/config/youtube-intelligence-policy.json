@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "policy_version": "2026-08-14.1",
+  "owner": "Rolf",
+  "single_user": true,
+  "paths": {
+    "clippings": "raw/Clippings",
+    "subscription_fixture": "wiki/_outputs/youtube-subscriptions-2026-08-04.json"
+  },
+  "clipper": {
+    "enabled": true,
+    "source_field": "source",
+    "transcript_heading": "## Transcript",
+    "minimum_transcript_characters": 200,
+    "risk_acceptance_id": "yt-clipper-residual-risk-2026-08-05",
+    "accepted_by": "Rolf",
+    "accepted_on": "2026-08-05",
+    "private_noncommercial": true,
+    "external_model_processing": false,
+    "pipeline_controls_browser": false,
+    "external_replication_responsibility": "user"
+  },
+  "git_custody": {
+    "require_transcripts_untracked": true,
+    "scan_staged_clippings": true
+  },
+  "api": {
+    "live_enabled": false,
+    "expected_authorized_channel_id_environment_variable": "YOUTUBE_EXPECTED_CHANNEL_ID",
+    "access_token_environment_variable": "YOUTUBE_ACCESS_TOKEN",
+    "cache_days": 30,
+    "allowed_methods": [
+      "subscriptions.list",
+      "channels.list",
+      "playlistItems.list",
+      "videos.list"
+    ],
+    "subscription_scope": "https://www.googleapis.com/auth/youtube.readonly",
+    "discovery_lookback_days": 7,
+    "discovery_page_size": 50,
+    "discovery_max_pages_per_channel": 2
+  },
+  "review": {
+    "queue_limit": 15,
+    "selection_limit": 5,
+    "handoff_limit": 3
+  },
+  "calibration": {
+    "metadata_sample_size": 120,
+    "population_sample_size": 100,
+    "channel_supplement_size": 20,
+    "transcript_candidate_limit": 30,
+    "semantic_wave_size": 6
+  },
+  "models": {
+    "discovery_enabled": false,
+    "external_source_processing_enabled": false
+  },
+  "scheduler": {
+    "enabled": false
+  }
+}
