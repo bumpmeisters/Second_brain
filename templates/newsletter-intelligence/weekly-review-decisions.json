@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "record_type": "weekly_review_decisions",
+  "review_id": "review-example",
+  "period": {"from": "2026-07-06", "to": "2026-07-12"},
+  "input_hash": "sha256-input",
+  "bundle_hash": "sha256-bundle",
+  "base_registry_revisions": {"source_registry": 0},
+  "reviewer_timestamp": "2026-07-13T10:00:00Z",
+  "actions": [{"action_id": "action-example", "family": "source_selection", "target_id": "newsletter-example", "operation": "selected", "payload": {"note": "Example provisional action."}}],
+  "integrity": {"algorithm": "sha256", "canonicalization": "newsletter-intelligence-canonical-json/v1", "hash": "sha256-5385d5db0a9924d8bcb4c1b94f62b019fc1aa8457fa0c53e1a40f446d67b2708"}
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "record_type": "run_manifest",
+  "run_id": "run-YYYYMMDD-example",
+  "mode": "fixture",
+  "status": "initialized",
+  "mailbox_identity": "",
+  "date_after": "2026-04-01",
+  "date_before": "2026-07-04",
+  "staging_root": "",
+  "staging_location": "device_local",
+  "staging_location_accepted": false,
+  "allowed_gmail_operations": ["profile", "search", "batch_read", "thread_read"],
+  "checkpoints": {},
+  "created_at": "2026-07-03T00:00:00Z",
+  "updated_at": "2026-07-03T00:00:00Z"
+}

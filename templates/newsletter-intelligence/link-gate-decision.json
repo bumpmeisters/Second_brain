@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "record_type": "link_gate_decision",
+  "gate_id": "gate-example",
+  "candidate_id": "link-example",
+  "priority_fit": {"status": "provisional", "context_version": 1, "matching_priority_ids": [], "reason": "No confirmed personal priorities are available; fit remains provisional."},
+  "primary_source_value": "high",
+  "novel_depth": "high",
+  "contradiction_value": "none",
+  "commercial_discount": "none",
+  "expected_source_type": "research_paper",
+  "confidence": "medium",
+  "disposition": "follow",
+  "reason": "Primary or durable source merits bounded retrieval.",
+  "budget_status": "allocated",
+  "provenance": {
+    "candidate_id": "link-example",
+    "context_version": 1,
+    "navigation_performed": false,
+    "created_at": "2026-07-13T00:00:00Z"
+  }
+}

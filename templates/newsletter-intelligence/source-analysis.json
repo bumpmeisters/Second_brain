@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "record_type": "source_analysis",
+  "analysis_id": "analysis-example",
+  "candidate_ids": ["link-example"],
+  "content_hash": "sha256-example",
+  "source_type": "news_article",
+  "coverage": "full",
+  "title": "Example source analysis",
+  "summary": "A bounded synthesis of the accessible source.",
+  "structure_covered": ["Introduction", "Findings"],
+  "section_synthesis": [{"section": "Findings", "synthesis": "The source presents one durable method."}],
+  "paper_details": null,
+  "report_details": null,
+  "claim_ids": ["claim-example"],
+  "caveats": ["No independent replication was reviewed."],
+  "contradictions": [],
+  "downstream_relevance": ["May inform a Second Brain method page."],
+  "missing_sections": [],
+  "bounded_excerpts": [{"text": "A short representative excerpt.", "location": "Findings"}],
+  "status": "staged",
+  "provenance": {"fetch_record_id": "fetch-example", "snapshot_path": "device-local-staging/transactions/link-example/snapshot.bin", "final_url": "https://example.test/article", "analyzed_at": "2026-07-14T00:00:00Z", "reasoning_level": "medium"}
+}

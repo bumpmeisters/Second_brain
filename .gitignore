@@ -47,8 +47,8 @@ node_modules/
 /inbox/_quarantine/*
 !/inbox/_quarantine/.gitkeep
 
-# Private derived newsletter staging (mail bodies remain in Gmail)
-wiki/_outputs/newsletter-intelligence/staging/
+# Private derived newsletter state (mail bodies remain in Gmail)
+wiki/_outputs/newsletter-intelligence/
 .shopify-cli-appdata/
 
 # Local source-derived artifacts and ledgers (publication boundary)

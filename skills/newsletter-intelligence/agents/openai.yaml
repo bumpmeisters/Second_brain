@@ -1,0 +1,4 @@
+interface:
+  display_name: "Newsletter Intelligence"
+  short_description: "Qualify newsletters and extract governed strategic signals."
+  default_prompt: "Use $newsletter-intelligence to turn approved newsletters into evidence-aware knowledge deltas while preserving human selection and promotion authority."

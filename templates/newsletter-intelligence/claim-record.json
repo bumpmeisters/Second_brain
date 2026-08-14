@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "record_type": "source_claim",
+  "claim_id": "claim-example",
+  "analysis_id": "analysis-example",
+  "statement": "The source reports that the method improved the measured outcome.",
+  "claim_kind": "source_claim",
+  "origin_source_ids": ["link-example"],
+  "evidence_locations": ["Findings"],
+  "evidence_status": "unverified",
+  "uncertainty": "medium",
+  "provenance": {"content_hash": "sha256-example", "created_at": "2026-07-14T00:00:00Z"}
+}
