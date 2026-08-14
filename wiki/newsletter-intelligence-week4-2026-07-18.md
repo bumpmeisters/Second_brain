@@ -52,7 +52,7 @@ These are qualified operating patterns drawn from practitioner, conference and v
 - [[context-engineering]]
 - [[agentic-systems]]
 - [[agent-evaluation]]
-- `wiki/ai-native-gtm-operating-model.md` (scheduled for recovery wave 11)
+- `wiki/ai-native-gtm-operating-model.md`
 - [[loop-engineering]]
 - [[ai-marketing-workflow-assurance]]
 - [[deep-research-workflows]]
@@ -67,4 +67,4 @@ These are qualified operating patterns drawn from practitioner, conference and v
 
 - [[newsletter-intelligence-pipeline]]
 - [[newsletter-practitioner-methods-week3-2026-07-16]]
-- `wiki/week3-primary-verification-dossier-2026-07-16.md` (scheduled for recovery wave 11)
+- `wiki/week3-primary-verification-dossier-2026-07-16.md`

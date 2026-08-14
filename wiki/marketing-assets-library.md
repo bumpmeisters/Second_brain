@@ -15,7 +15,7 @@ sources:
   - raw/assets/00_README_START_HERE.md
   - research/assets/11_Markets
 created: 2026-06-03
-updated: 2026-08-10
+updated: 2026-06-20
 ---
 
 # Marketing Assets Library
@@ -26,7 +26,7 @@ updated: 2026-08-10
 
 The original ingested library contains 112 files across seven top-level folders: 38 PowerPoints, 36 Word documents, 23 PDFs, 11 XLSX files, one XLSB file, one legacy DOC file, one PNG, and one MP4 (source: raw/assets).
 
-The expanded raw marketing library now also includes [[frameworks-templates-reference-library]] and [[marketing-working-library]], adding 1,370 cataloged files across a reorganized reference library and a broader active working library (source: raw/assets/A_frameworks_templates; source: raw/assets/B_MKT_working_library; analysis: wiki/_outputs/raw-assets-new-marketing-inventory-2026-06-05.md).
+The expanded raw marketing library also includes [[frameworks-templates-reference-library]] and [[marketing-working-library]]. Together they contain 1,383 files as of 2026-07-01: 371 in the reference bundle and 1,012 in the active working library. The original 2026-06-05 inventory covered 1,370 files (source: raw/assets/A_frameworks_templates; source: raw/assets/B_MKT_working_library; analysis: wiki/_outputs/raw-assets-new-marketing-inventory-2026-06-05.md; analysis: 2026-07-01 filesystem audit).
 
 The library is organized around reusable marketing operating knowledge: [[marketing-strategy-library]], [[briefing-template-library]], [[brand-library]], [[persona-and-audience-library]], [[content-library]], [[reporting-and-ops-library]], and [[hp-examples-library]] (source: raw/assets).
 

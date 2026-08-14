@@ -4,7 +4,7 @@ status: active
 sources:
   - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
 created: 2026-05-30
-updated: 2026-07-12
+updated: 2026-07-30
 ---
 
 # Raw Sources
@@ -13,7 +13,7 @@ updated: 2026-07-12
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
 
-**Last updated**: 2026-07-16
+**Last updated**: 2026-07-30
 
 ---
 
@@ -44,6 +44,16 @@ The Windows task installer defaults to a daily, limited-privilege incremental ru
 Recovery is deterministic: remove no originals, repair the backend or free disk space, then rerun the same mode. Existing sidecars remain untouched; stale sidecars require a separately approved regeneration.
 
 Amber extractions remain quarantined from content ingest and are listed for review, but they do not stop technical backfill continuation. Automatic continuation stops when red or failed conversions exceed the tracked 5% failure threshold. OCR remains a manual-only action.
+
+## Clipping collection inventory
+
+The historical local clipping source inventory at `wiki/_outputs/clipping-source-inventory-2026-07-30.md` describes the services, publisher domains, YouTube channels, source identities, duplicate groups, and metadata gaps represented in `raw/Clippings/` as of 2026-07-30. Its row-level CSV is stored locally at `wiki/_outputs/clipping-source-inventory-2026-07-30.csv`.
+
+The inventory is descriptive rather than semantic: it reads protected sources without changing them, groups YouTube captures by video ID, groups other declared URLs without their query strings, and records first-linked domains in unresolved legacy files only as recovery signals rather than verified provenance.
+
+The historical local clipping automation blueprint at `wiki/_outputs/clipping-automation-blueprint-2026-07-30.md` translates that inventory into a platform-specific collector design. Automated captures would enter through the dedicated `inbox/raw/automated-clippings/` lane and the approved source-inbox admission path rather than writing directly to the protected legacy `raw/Clippings/` collection.
+
+Its approved routing decision separates two intake lanes: only automatically discovered assets receive relevance-light ranking. Files deliberately placed in the source inbox and Obsidian Web Clipper captures retain the established semantic-ingest path after technical admission checks.
 
 ## Storage history and rollback
 

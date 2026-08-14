@@ -28,11 +28,11 @@ This is more useful than treating AI referral traffic as the only measure: an AI
 
 ## Downstream use
 
-Use as the method source for `wiki/ai-search-measurement.md`, which is scheduled for recovery wave 11. Do not treat quoted benchmarks as established facts until independently verified.
+Use as the method source for `wiki/ai-search-measurement.md`. Do not treat quoted benchmarks as established facts until independently verified.
 
 ## Related pages
 
 - [[growth-unhinged]]
-- `wiki/ai-search-measurement.md` (scheduled for recovery wave 11)
+- `wiki/ai-search-measurement.md`
 - [[campaign-reporting-and-operations]]
 - [[account-based-marketing]]

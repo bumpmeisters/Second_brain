@@ -1,6 +1,6 @@
 ---
 type: library
-status: recovery-pending
+status: active
 sources:
   - wiki/_outputs/semantic-ingest/p11/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p12/evidence-matrix.csv
@@ -18,10 +18,8 @@ sources:
   - wiki/_outputs/semantic-ingest/p29/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p30/evidence-matrix.csv
 created: 2026-07-26
-updated: 2026-08-09
+updated: 2026-08-14
 ---
-
-> **Recovery state:** The registered practice pages are assigned to recovery wave 11. Treat this index as provenance only until those pages are restored and this status returns to active.
 
 # Reusable Practices Library
 
@@ -33,66 +31,66 @@ For token-efficient agent selection, read [[reusable-practices-router]] first an
 
 ## AI work and adoption
 
-- `wiki/ai-automation-foundation-and-separation-gate.md` (pending recovery wave 11)
-- `wiki/reliable-ai-capability-rollout.md` (pending recovery wave 11)
-- `wiki/repository-mining.md` (pending recovery wave 11)
-- `wiki/shared-human-agent-delegation-queue.md` (pending recovery wave 11)
-- `wiki/cross-functional-ai-adoption-learning-loop.md` (pending recovery wave 11)
-- `wiki/observable-capability-teach-back-loop.md` (pending recovery wave 11)
+- `wiki/ai-automation-foundation-and-separation-gate.md`
+- `wiki/reliable-ai-capability-rollout.md`
+- `wiki/repository-mining.md`
+- `wiki/shared-human-agent-delegation-queue.md`
+- `wiki/cross-functional-ai-adoption-learning-loop.md`
+- `wiki/observable-capability-teach-back-loop.md`
 
 ## AI-native GTM and orchestration
 
-- `wiki/governed-ai-gtm-handoff-checklist.md` (pending recovery wave 11)
-- `wiki/contextual-next-best-action-loop.md` (pending recovery wave 11)
-- `wiki/composable-gtm-stack-assessment.md` (pending recovery wave 11)
-- `wiki/incentive-aware-ai-sdr-pilot.md` (pending recovery wave 11)
-- `wiki/weekly-funnel-gap-diagnosis-loop.md` (pending recovery wave 11)
-- `wiki/partner-marketing-pilot-and-scale-loop.md` (pending recovery wave 11)
-- `wiki/team-working-agreement-and-feedback-loop.md` (pending recovery wave 11)
-- `wiki/distributed-marketing-center-of-excellence-operating-model.md` (pending recovery wave 11)
-- `wiki/marketing-change-pilot-buy-in-memo.md` (pending recovery wave 11)
-- `wiki/marketing-peer-experiment-exchange.md` (pending recovery wave 11)
-- `wiki/long-horizon-marketing-program-sprint-loop.md` (pending recovery wave 11)
+- `wiki/governed-ai-gtm-handoff-checklist.md`
+- `wiki/contextual-next-best-action-loop.md`
+- `wiki/composable-gtm-stack-assessment.md`
+- `wiki/incentive-aware-ai-sdr-pilot.md`
+- `wiki/weekly-funnel-gap-diagnosis-loop.md`
+- `wiki/partner-marketing-pilot-and-scale-loop.md`
+- `wiki/team-working-agreement-and-feedback-loop.md`
+- `wiki/distributed-marketing-center-of-excellence-operating-model.md`
+- `wiki/marketing-change-pilot-buy-in-memo.md`
+- `wiki/marketing-peer-experiment-exchange.md`
+- `wiki/long-horizon-marketing-program-sprint-loop.md`
 
 ## ABM operating practices
 
-- `wiki/abm-sales-marketing-operating-contract.md` (pending recovery wave 11)
-- `wiki/multi-team-account-contact-coordination-gate.md` (pending recovery wave 11)
-- `wiki/lean-weekly-abm-pilot-loop.md` (pending recovery wave 11)
-- `wiki/account-data-admission-gate.md` (pending recovery wave 11)
-- `wiki/global-core-regional-abm-operating-model.md` (pending recovery wave 11)
-- `wiki/brand-and-abx-one-story-contract.md` (pending recovery wave 11)
-- `wiki/use-case-cluster-prioritization-workflow.md` (pending recovery wave 11)
-- `wiki/account-specific-evidence-brief-workflow.md` (pending recovery wave 11)
-- `wiki/category-brand-awareness-routing-matrix.md` (pending recovery wave 11)
-- `wiki/account-progression-baseline-and-velocity-loop.md` (pending recovery wave 11)
-- `wiki/abm-customer-expansion-playbook.md` (pending recovery wave 11)
+- `wiki/abm-sales-marketing-operating-contract.md`
+- `wiki/multi-team-account-contact-coordination-gate.md`
+- `wiki/lean-weekly-abm-pilot-loop.md`
+- `wiki/account-data-admission-gate.md`
+- `wiki/global-core-regional-abm-operating-model.md`
+- `wiki/brand-and-abx-one-story-contract.md`
+- `wiki/use-case-cluster-prioritization-workflow.md`
+- `wiki/account-specific-evidence-brief-workflow.md`
+- `wiki/category-brand-awareness-routing-matrix.md`
+- `wiki/account-progression-baseline-and-velocity-loop.md`
+- `wiki/abm-customer-expansion-playbook.md`
 
 ## Content, brand, and discovery
 
-- `wiki/content-engineering-pipeline-contract.md` (pending recovery wave 11)
-- `wiki/performance-fed-content-ideation-loop.md` (pending recovery wave 11)
-- `wiki/self-and-social-relevance-sharing-experiment.md` (pending recovery wave 11)
-- `wiki/buyer-question-coverage-checklist.md` (pending recovery wave 11)
-- `wiki/strategic-thought-leadership-system.md` (pending recovery wave 11)
-- `wiki/niche-fame-content-loop.md` (pending recovery wave 11)
-- `wiki/ai-assisted-messaging-calibration-workflow.md` (pending recovery wave 11)
-- `wiki/niche-sponsorship-portfolio-experiment.md` (pending recovery wave 11)
-- `wiki/ai-mediated-discovery-readiness-checklist.md` (pending recovery wave 11)
-- `wiki/maintained-content-distribution-lifecycle.md` (pending recovery wave 11)
-- `wiki/buying-situation-message-calibration.md` (pending recovery wave 11)
-- `wiki/peer-co-creation-access-loop.md` (pending recovery wave 11)
-- `wiki/domain-outsider-audience-learning-loop.md` (pending recovery wave 11)
-- `wiki/video-led-microsite-build-contract.md` (pending recovery wave 11)
+- `wiki/content-engineering-pipeline-contract.md`
+- `wiki/performance-fed-content-ideation-loop.md`
+- `wiki/self-and-social-relevance-sharing-experiment.md`
+- `wiki/buyer-question-coverage-checklist.md`
+- `wiki/strategic-thought-leadership-system.md`
+- `wiki/niche-fame-content-loop.md`
+- `wiki/ai-assisted-messaging-calibration-workflow.md`
+- `wiki/niche-sponsorship-portfolio-experiment.md`
+- `wiki/ai-mediated-discovery-readiness-checklist.md`
+- `wiki/maintained-content-distribution-lifecycle.md`
+- `wiki/buying-situation-message-calibration.md`
+- `wiki/peer-co-creation-access-loop.md`
+- `wiki/domain-outsider-audience-learning-loop.md`
+- `wiki/video-led-microsite-build-contract.md`
 
 ## Buyer and customer enablement
 
-- `wiki/customer-maturity-progression-contract.md` (pending recovery wave 11)
-- `wiki/qualification-rejection-reason-calibration-loop.md` (pending recovery wave 11)
+- `wiki/customer-maturity-progression-contract.md`
+- `wiki/qualification-rejection-reason-calibration-loop.md`
 
 ## Team and career development
 
-- `wiki/career-aspiration-to-opportunity-loop.md` (pending recovery wave 11)
+- `wiki/career-aspiration-to-opportunity-loop.md`
 
 ## Admission rule
 

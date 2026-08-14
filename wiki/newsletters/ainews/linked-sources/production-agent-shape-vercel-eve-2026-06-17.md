@@ -38,5 +38,5 @@ Compare the Second Brain against the production properties—durability, isolati
 
 - [[ainews]]
 - [[agentic-systems]]
-- `wiki/agent-skill-design.md` (scheduled for recovery wave 11)
+- `wiki/agent-skill-design.md`
 - [[mcp-and-tool-access]]

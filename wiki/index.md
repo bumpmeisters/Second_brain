@@ -6,7 +6,7 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-08-13
+updated: 2026-08-14
 ---
 
 # Wiki Index
@@ -15,7 +15,7 @@ updated: 2026-08-13
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-08-13
+**Last updated**: 2026-08-14
 
 ---
 
@@ -26,8 +26,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
 - [[semantic-ingest-workflow]] - Governed package workflow for approved semantic review, evidence decisions, validation, and explicit promotion checkpoints.
-- [[reusable-practices-router]] - Recovery-pending routing index; its registered practice pages remain unavailable until recovery wave 11.
-- [[reusable-practices-library]] - Recovery-pending provenance register for reusable practice pages assigned to recovery wave 11.
+- [[reusable-practices-router]] - Active low-cost routing index for the recovered reusable practice pages.
+- [[reusable-practices-library]] - Active provenance register for reusable workflows, checklists, playbooks, gates, assessments, experiments, and operating contracts.
 
 ## Project workspaces
 
@@ -78,6 +78,13 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[only-the-best-are-using-them]] - YouTube transcript about loop engineering for coding agents.
 - [[agentic-workflows-library]] - Source summary for raw agentic workflow setup assets.
 - [[claude-md-frameworks-research-2026-06-13]] - Research summary connecting local WAT/Claude setup files with current Claude Code docs, AGENTS.md, Aider conventions, and agent-manifest research.
+- [[agents-and-claude-md-research-2026-07-01]] - Partially verified research on compact, layered instruction files and the security boundary around repository-supplied instructions.
+- [[agent-skill-design-blueprint-source-summary]] - Unverified secondary synthesis on skill packaging, progressive disclosure, verification, and supply-chain review.
+- [[build-and-loop-orchestration-source-summary]] - Source-bundle summary for BUILD and bounded file-based learning loops.
+- [[ai-second-brain-and-agentic-coding-clippings-july-2026]] - Practitioner signals on AI second brains, skills, durable context, and agentic work systems.
+- [[abm-and-full-funnel-b2b-marketing-clippings-july-2026]] - Practitioner evidence on ABM account selection, buying groups, progression, alignment, and measurement.
+- [[b2b-state-of-martech-and-revenue-operations-2026]] - Sponsored survey evidence on enterprise revenue-operations maturity and AI readiness.
+- [[public-evidence-cycle-01-source-summary]] - Qualified public evidence bundle for ABM and partner-marketing methods.
 - [[marketing-and-frameworks-library-readme]] - README source summary for the restructured marketing/frameworks raw asset library.
 - [[production-agent-engineering-clippings-june-2026]] - Production lessons on agent harnesses, context reduction/offloading/isolation, verification, memory, observability, and cost controls.
 - [[ai-workflow-builder-clippings-june-2026]] - Seven transcripts on planning, roles, skills, parallel sessions, bounded loops, and file-based AI operating systems.
@@ -104,6 +111,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[ai-marketing-workflow-assurance]] - Run manifests, evidence ledgers, evaluation gates, and human approval records for AI-assisted marketing workflows.
 - [[ai-work-blueprint]] - Reusable mental and practical blueprint for shaping AI work through a spec, verifier, and durable environment.
 - [[ai-operating-system]] - File-based working environment made of context, connections, capabilities, and cadence.
+- [[ai-native-gtm-operating-model]] - Governed AI-enabled GTM design around shared context, explicit handoffs, and accountable decisions.
+- [[ai-vendor-problem-observation-contract]] - Bounded observation contract for tracking AI vendors as hypotheses rather than accepted product truth.
 - [[ai-brand-and-persona-research]] - AI-supported brand consistency and persona/audience research.
 - [[ai-briefing-templates-research]] - AI-adjacent briefing templates and reusable brief structures.
 - [[ai-marketing-prompts]] - Marketing prompt libraries, customer intelligence prompts, and AI marketing toolkits.
@@ -121,6 +130,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[campaign-types-and-funnel-stages]] - Brand, demand generation, lead generation, conversion, and nurture roles.
 - [[content-briefs]] - Structures for content and web copy briefing.
 - [[content-quality]] - Audience relevance, user-centric value, structure, proof, brand voice, and review.
+- [[content-engineering]] - Source-traceable staged production for repeatable content without autonomous publication.
+- [[content-marketing-strategy]] - Audience, editorial, distribution, maintenance, and decision-value strategy for content programs.
 - [[claude-code-executive-assistant-setup]] - Claude Code setup pattern for an executive-assistant style second brain.
 - [[claude-md-project-instructions]] - Framework for creating concise `CLAUDE.md` project instructions and deciding what belongs in rules, skills, workflows, tools, hooks, and context files.
 - [[claude-subagents]] - Specialist delegated sessions for clean-context, parallel, or permission-scoped work.
@@ -156,6 +167,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[personal-ai-cowork-system]] - Adapted concept for a Rolf-specific local AI cowork workspace.
 - [[project-delivery-tracking]] - Trackers, timelines, Gantt views, milestones, tasks, and project teams.
 - [[prompt-engineering-research]] - General prompting patterns, advanced prompting techniques, and reusable prompt playbooks.
+- [[repository-mining]] - Commit-pinned, non-executing repository review for reusable evidence and operational patterns.
+- [[revenue-operations-ai-readiness]] - Governance, process, data, routing, and measurement prerequisites for bounded revenue-operations AI pilots.
 - [[rag]] - Retrieval augmented generation and why the source argues it can fall short.
 - [[raw-sources]] - Immutable source layer for the wiki.
 - [[reasoning-model-prompting]] - Prompting patterns for reasoning models and o-series style workflows.
