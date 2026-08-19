@@ -1,0 +1,22 @@
+{
+  "schema_version": "youtube-control-center/v1",
+  "database_user_version": 2,
+  "run_schema": "youtube-intelligence-run/v1",
+  "run_types": ["coverage-sweep", "delta", "selected-channels"],
+  "run_statuses": ["requested", "running", "stopping", "paused", "awaiting-semantic-worker", "completed", "failed", "cancelled"],
+  "assessment_stages": ["metadata", "capture", "semantic-review", "wiki-promotion"],
+  "assessment_statuses": ["candidate", "metadata-reviewed-no-capture", "deferred-capacity", "deferred", "ineligible", "already-assessed", "captured", "failed", "reviewed", "promoted", "blocked"],
+  "channel_evaluation_states": ["evaluation-pending", "in-progress", "covered", "blocked"],
+  "proposal_types": ["channel-mode", "limit", "autonomy", "alignment-rule"],
+  "proposal_statuses": ["pending", "applied", "rejected", "withdrawn"],
+  "review_event_types": ["comment", "correction", "override", "audit-selection", "autonomy-change", "rollback"],
+  "persistent_entities": ["runs", "run_items", "assessment_events", "channel_coverage", "configuration_proposals", "preference_versions", "review_events", "wiki_changes", "system_state", "command_receipts"],
+  "command_requirements": {
+    "mutations_require_control_center_enabled": true,
+    "mutations_require_unique_command_id": true,
+    "configuration_apply_requires_human_actor": true,
+    "autonomy_upgrade_requires_human_actor": true,
+    "expected_version_or_hash_required": true,
+    "run_request_requires_exact_inspected_manifest": true
+  }
+}
