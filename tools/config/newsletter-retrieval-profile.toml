@@ -12,3 +12,5 @@ enabled = true
 "www.lennysnewsletter.com" = "allow"
 "youtu.be" = "allow"
 "www.youtube.com" = "allow"
+"www.aisi.gov.uk" = "allow"
+"github.com" = "allow"

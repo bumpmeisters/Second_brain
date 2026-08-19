@@ -90,6 +90,8 @@ def main() -> None:
             "www.lennysnewsletter.com",
             "youtu.be",
             "www.youtube.com",
+            "www.aisi.gov.uk",
+            "github.com",
         }
 
         review["recommended_batch"][0]["url"] = "http://127.0.0.1/private"
@@ -115,9 +117,28 @@ def main() -> None:
         assert build_review(proposals_path, scratch / "chat", None) == 1
         rendered = (scratch / "chat" / "chat-review.md").read_text(encoding="utf-8")
         assert "newsletter -> paper" in rendered
-        assert "1–N übernehmen" in rendered
+        assert "übernehmen" not in rendered
+        assert "1 hold akzeptieren" in rendered
+        assert "1 korrektur:" in rendered
+        assert "1 weitere verifikation" in rendered
+        assert "1 promotion vorschlagen" in rendered
+        assert "Current step: review ready" in rendered
+        assert "Still unauthorized: new retrieval and durable wiki promotion" in rendered
         manifest = json.loads((scratch / "chat" / "decision-manifest-template.json").read_text())
         assert manifest["status"] == "provisional" and manifest["no_automatic_promotion"] is True
+        assert manifest["allowed_actions"] == [
+            "accept_hold",
+            "submit_correction",
+            "request_verification",
+            "request_promotion_proposal",
+            "defer",
+        ]
+        assert manifest["gate_status"] == {
+            "review_step": "awaiting_explicit_action",
+            "overall_intent": "open_until_all_items_decided",
+            "retrieval_authorized": False,
+            "wiki_promotion_authorized": False,
+        }
     finally:
         if scratch.exists():
             shutil.rmtree(scratch)
