@@ -6,8 +6,9 @@ sources:
   - raw/Clippings/positioning-strategy-prompt.pdf.md
   - raw/Clippings/In the Age of AI, You Need a Point of View.md
   - raw/Clippings/Zarina Stanford on Mission-Driven Authentic Leadership.md
+  - raw/imports/automated-clippings/youtube/UC8UlBlGqTRNCOiEdWIXNnhg/2026-07-22--jUt6r248w1A.md
 created: 2026-06-03
-updated: 2026-07-27
+updated: 2026-08-16
 ---
 
 # Messaging Frameworks
@@ -31,6 +32,12 @@ The point-of-view source adds a strategic layer above product messaging: articul
 Do not ask one message to perform every job. Before active evaluation, attach the stable promise to a recognizable customer situation using a consistent distinctive cue. During comparison, connect provable differences to consequential decision criteria. Begin with the customer's lived situation, keep the approved core fixed, and test only bounded expressions unless new evidence explicitly reopens positioning (source: Bryan Law on Brains, Data, and Distinction; source file: Zarina Stanford on Mission-Driven Authentic Leadership.md; transcript anchors 9:51-21:05; analysis: [[buying-situation-message-calibration]]).
 
 This is a practitioner decision rule, not validated neuroscience or a claim that a specific narrative will improve performance.
+
+## Positioning maintenance from market signals
+
+A competitor or category signal triggers review; it does not authorize an automatic positioning rewrite. Compare the exact claim language, category scope, buyer relevance, current proof, and source date. An accountable human then chooses to watch the signal, clarify the existing position, update it, or reject the signal, and records the decision with its source in the durable messaging or market context.
+
+The source is a vendor product demonstration, not validation of the monitored market facts or the tool's classifications. Its current Canva and Figma claims, automatic competitor classification, product accuracy, semantic-search, and commercial-effect claims are excluded (source: 2026-07-22--jUt6r248w1A.md; analysis: P34-W3-C06).
 
 ## Related pages
 

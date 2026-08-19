@@ -15,8 +15,15 @@ sources:
   - raw/Clippings/How to build a global, AI-native ABM function 2.md
   - raw/Clippings/AI SDRs explained How AI agents are redefining inbound pipeline  OnBase podcast.md
   - raw/Clippings/From hours to minutes How to accelerate account research with Demandbase's AI Chat.md
+  - raw/imports/automated-clippings/youtube/UCXZCJLdBC09xxGZ6gcdrc6A/2026-07-28--g-g6E-qtCjA.md
+  - raw/imports/automated-clippings/youtube/UC9cn0TuPq4dnbTY-CBsm8XA/2026-08-13--aakZLqxRQfo.md
+  - raw/imports/automated-clippings/youtube/UCm7vY4Rr4uT1nNcZgcQWOfQ/2026-07-28--Y3ri8UdilF8.md
+  - raw/imports/automated-clippings/youtube/UC0C-17n9iuUQPylguM1d-lQ/2026-08-09--JIGaCPv44QI.md
+  - raw/imports/automated-clippings/youtube/UC281-zvPEcDSUJecVImA-KA/2026-07-01--NHM6OgVjEmI.md
+  - raw/imports/automated-clippings/youtube/UC9cn0TuPq4dnbTY-CBsm8XA/2026-07-31--cO1f2wOxSH4.md
+  - raw/imports/automated-clippings/youtube/UCEvsxF4Z12vwpwDUaU02yiA/2026-08-17--0VELkydmwbo.md
 created: 2026-07-15
-updated: 2026-07-29
+updated: 2026-08-19
 ---
 
 # AI-Native GTM Operating Model
@@ -35,9 +42,21 @@ updated: 2026-07-29
 
 This pattern is inferred across the monday.com RevAI case and the 2026 State of AI for B2B GTM report. Both emphasize workflows and context more than model novelty (sources: [monday.com case summary](https://www.linkedin.com/posts/kyle-poyar_the-revai-team-at-mondaycom-is-building-activity-7475533970550480896-KISQ); [Growth Unhinged report](https://www.growthunhinged.com/p/2026-state-of-ai-gtm-report)).
 
+## Initial enterprise sales motion
+
+For a defined enterprise market, choose the initial sales motion as a testable hypothesis rather than a company identity. High buyer exposure plus reference proof that credibly travels between similar buyers favors a small, deeply supported lighthouse motion. Lower exposure plus an existing budget or replacement workflow and demonstrable economics favors a broader but still bounded landgrab motion. Mixed evidence requires a sequenced test or an explicit `insufficient evidence` decision, not forced classification (source: 2026-08-13--aakZLqxRQfo.md; investor-produced practitioner discussion; analysis: [[enterprise-sales-motion-selection]]).
+
+The source does not validate either motion or its portfolio examples. Use [[enterprise-sales-motion-selection]] to record the evidence, buyer test, POC boundaries, decision owner, and reassessment point; consequential selling and deployment retain their separate data, contact, procurement, security, and approval gates.
+
 ## Shared context at the handoffs
 
 Design the context layer around cross-functional handoffs, not only individual productivity. Begin with the client or account story and the business problem, then preserve approved meeting notes, research, briefs, decisions, and findings so strategy, content, media, account teams, and sales can work from the same current context. Each handoff should still expose source provenance, ownership, access limits, and the human decision boundary (source: Stop bolting on AI Rebuild your go-to-market from the foundation up  OnBase podcast.md; practitioner transcript; historical local analysis record: `wiki/_outputs/transcript-briefs/2026-07-23/companions/stop-bolting-on-ai-rebuild-gtm.md`).
+
+### Governed promotion from signals to shared context
+
+Keep authorized raw signals separate from the canonical GTM context that agents and teams are expected to reuse. Give the canonical layer a named owner, preserve source and permission provenance, record material changes, and require accountable human review before promoting a synthesis into that layer. Maintain an agent-readable canonical representation together with a usable human review surface so people can inspect what the system will reuse (source: 2026-08-17--0VELkydmwbo.md; vendor case; analysis: P42-W6R4-C01).
+
+The source illustrates this governance pattern but does not validate Zapier's product, speed, adoption, performance, or automation outcomes. Promotion authority remains separate from raw-signal access.
 
 Use four linked adoption questions:
 
@@ -47,6 +66,20 @@ Use four linked adoption questions:
 4. **Proof**: Which job-appropriate measure will show whether the change helped?
 
 This is retained as an operating checklist, not a validated maturity model. Participation scores, efficiency percentages, and downstream commercial outcomes reported in the interview remain anecdotal.
+
+## People contract before rollout
+
+Before asking a team to adopt an AI workflow, state only the workforce-impact commitments leadership can credibly keep and name the judgment, accountability, and relationship work that remains human-owned. Keep formal employment, performance, and legal decisions in their accountable HR and legal processes; neither optimistic assurances nor coercive threats are an adoption mechanism.
+
+Begin with one bounded use case, a business or customer outcome rather than an activity target, a team-level owner, explicit safeguards, and failure criteria. Scale only after the evidence and the required changes to data, tools, roles, and workflow are understood. A vendor-produced practitioner interview corroborates the need to fit tools to real work, build fluency through practice, and preserve direct human relationship work; it does not validate transformation or outcome claims (sources: 2026-08-09--JIGaCPv44QI.md; 2026-07-01--NHM6OgVjEmI.md; analysis: P34-W3-C04).
+
+The sources' sabotage statistic, punitive employment language, macro labor claims, company anecdotes, productivity claims, job forecasts, and causal adoption claims are excluded.
+
+## Buyer-facing security proof
+
+For an enterprise AI offer, map each material buyer security requirement to a control owner, verifiable assurance evidence, any unresolved gap, an owned remediation action, and a review date. Make appropriate evidence accessible to sales, procurement, and security reviewers while preserving confidentiality and the distinction between a control, an attestation, and evidence that the control operates as intended.
+
+Unresolved risk should inform the product or security roadmap and the accountable deal decision. Security assurance can support deal readiness, but a certification, questionnaire, or trust page does not eliminate risk or justify an unsupported safety claim (source: 2026-07-28--Y3ri8UdilF8.md; vendor-practitioner discussion; analysis: P34-W3-C02). The source's revenue, efficiency, market-access, questionnaire, certification, customer, and universal-framework claims are excluded.
 
 ## Conversational account-research workbench
 
@@ -102,6 +135,18 @@ Start an AI SDR with a bounded inbound bottleneck rather than a broad workforce-
 
 The source's product superiority, customer outcomes, pipeline contribution, and workforce claims are excluded. The durable contribution is the combination of bounded rollout, experience control, outcome review, handoffs, and incentive alignment.
 
+## Weekly revenue learning review
+
+A revenue-intelligence layer should close a learning loop rather than end at a dashboard. A practical weekly review can combine authorized customer conversations, seller activity, and market signals; surface recurring trends, objections, competitor mentions, opportunities, and differences in seller behavior; let the team question the underlying evidence; then record actions, owners, and unresolved questions for the next cycle (source: 2026-07-28--g-g6E-qtCjA.md).
+
+Keep evidence, interpretation, recommendation, and decision separate. The source is a vendor-authored demonstration with fictional examples. It illustrates a review structure but does not establish that answers are accurate, recommendations are substantiated, or the workflow improves revenue.
+
+## Forward-deployed work as product discovery
+
+Treat forward-deployed customer work as product discovery, not automatically as scalable software. Recurring customer-specific pain should become reusable product or process capability; work that remains one-off delivery must be labeled, staffed, and governed as services work. Review the portfolio by recurrence, transferability, delivery load, and productization evidence instead of assuming that every successful engagement compounds into software scale (source: 2026-07-31--cO1f2wOxSH4.md; mixed practitioner interview; analysis: P37-W6R3-C06).
+
+The interview's customer wins, sales-cycle claims, competitive statements, and product or market superiority are excluded.
+
 ## Practical design questions
 
 - Which signal or decision starts the workflow?
@@ -112,6 +157,7 @@ The source's product superiority, customer outcomes, pipeline contribution, and 
 
 ## Reusable practices
 
+- [[enterprise-sales-motion-selection]]
 - [[governed-ai-gtm-handoff-checklist]]
 - [[contextual-next-best-action-loop]]
 - [[composable-gtm-stack-assessment]]

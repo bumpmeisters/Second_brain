@@ -8,8 +8,9 @@ sources:
   - raw/Clippings/EP 50 How to Run a Proper ABM Strategy with Mason Cosby @ Scrappy ABM.md
   - raw/Clippings/Tech, Trends, and The Future of Event Strategy.md
   - raw/Clippings/What’s ahead for virtual events in 2026 — and what marketers should do about it.md
+  - raw/imports/automated-clippings/youtube/UCGtXqPiNV8YC0GMUzY-EUFg/2026-08-04--9zBThLCpPh4.md
 created: 2026-06-03
-updated: 2026-07-22
+updated: 2026-08-16
 ---
 
 # Campaign Types and Funnel Stages
@@ -37,6 +38,13 @@ For ABM, the stage model becomes account-based rather than contact-only: the sou
 The new signal-orchestration sources add a response layer to the stage model. When an account interpretation changes, seller outreach, nurture, paid media, website experience, and suppression should use the same stage and priority logic so the buyer does not receive contradictory channel reactions (source: Your GTM May Not Be Responding to the Right Signals.md; analysis: [[gtm-signals-and-contextual-intelligence]]).
 
 Long-cycle accounts may pause without becoming lost. A useful lifecycle therefore supports lower-intensity nurture and later reactivation while preserving buying-group context, rather than forcing every account through a linear sequence (source: The Long Game How Healthcare Companies Can Run ABM That Actually Holds Up Over a 12-18 Month Sales Cycle.md).
+
+## Stage-role media planning
+
+A campaign role becomes executable only when it is connected to the audience job, the channel levers required for that job, one primary creative task, the closest observable outcome, and the evidence needed for the next decision. Do not ask one ad or one platform metric to represent awareness, consideration, conversion, and retention simultaneously. Treat the stage as a planning hypothesis and preserve a path for non-linear, paused, or lapsed journeys (source: 2026-08-04--9zBThLCpPh4.md; transcript 00:14:48–00:23:00; analysis: [[full-funnel-media-role-and-evidence-map]]).
+
+Use [[full-funnel-media-role-and-evidence-map]] before activation or material reallocation. It separates observations and proxies from comparison-backed claims and records channel control, creative purpose, test boundaries, ownership, and the resulting decision.
+
 ## Event lifecycle contract
 
 Plan an event as a before-during-after lifecycle rather than a live session with follow-up added later.
@@ -57,3 +65,4 @@ Reported pipeline multipliers, attendance and travel trends, anonymous polls, an
 - [[account-based-marketing]]
 - [[gtm-signals-and-contextual-intelligence]]
 - [[buying-groups-and-account-prioritization]]
+- [[full-funnel-media-role-and-evidence-map]]

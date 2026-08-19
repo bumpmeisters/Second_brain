@@ -11,8 +11,9 @@ sources:
   - raw/Clippings/Zarina Stanford on Mission-Driven Authentic Leadership.md
   - raw/Clippings/How to create awareness among strategic accounts 2.md
   - raw/imports/root-clippings-2026-08-01/Untitled 4.md
+  - raw/imports/automated-clippings/youtube/UCGtXqPiNV8YC0GMUzY-EUFg/2026-08-04--9zBThLCpPh4.md
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-08-16
 ---
 
 # Brand System
@@ -82,6 +83,10 @@ Choose the awareness job at solution level before choosing channels. Assess whet
 
 The matrix is a planning rule, not evidence that a channel or awareness activity caused recall, shortlisting, or purchase. Reassess when the solution, category, market, or audience changes.
 
+## Brand expression across media roles
+
+Preserve the approved brand core while giving each media asset one primary stage-specific job. Awareness expression may emphasize memorable brand recognition; later-stage expression may connect that recognized brand to a relevant benefit, availability, objection, or next step. Trying to make one asset perform every role can weaken both memory and decision utility. This is a planning rule, not proof that repetition, comedy, or any named channel causes recall or sales (source: 2026-08-04--9zBThLCpPh4.md; transcript 00:18:45–00:23:00; analysis: [[full-funnel-media-role-and-evidence-map]]).
+
 ## Reusable practices
 
 - [[strategic-thought-leadership-system]]
@@ -90,6 +95,7 @@ The matrix is a planning rule, not evidence that a channel or awareness activity
 - [[ai-assisted-messaging-calibration-workflow]]
 - [[buying-situation-message-calibration]]
 - [[category-brand-awareness-routing-matrix]]
+- [[full-funnel-media-role-and-evidence-map]]
 
 ## Related pages
 

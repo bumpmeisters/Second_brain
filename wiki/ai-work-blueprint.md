@@ -14,8 +14,10 @@ sources:
   - raw/imports/agentic-repositories/gstack/94993f74012782fd94416dd44b8314f6363a13a4/README.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/README.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/lfg/SKILL.md
+  - raw/imports/automated-clippings/youtube/UCswG6FSbgZjbWtdf_hMLaow/2026-08-05--gaDdrDdczO4.md
+  - raw/imports/automated-clippings/youtube/UCCezIgC97PvUuR4_gbFUs5g/2026-07-27--tHh0UaL_V4w.md
 created: 2026-06-10
-updated: 2026-08-08
+updated: 2026-08-18
 ---
 
 # AI Work Blueprint
@@ -133,6 +135,12 @@ Am Ende brauche ich:
 7. ersten Checkpoint
 8. Entscheidungen, die ich bestätigen muss
 ```
+
+### Fragen nach Abhängigkeiten führen
+
+Ein Spezifikationsinterview muss nicht starr eine Frage pro Runde stellen. Behandle offene Fragen als Abhängigkeitsgraph: Stelle einen Blocker allein, wenn seine Antwort weitere Fragen bestimmt; bündele ansonsten nur die Fragen, die auf dem aktuellen Wissensstand unabhängig beantwortbar sind. Nach jeder Runde wird die nächste beantwortbare Fragenfront sichtbar. So reduziert das Interview unnötige Turns, ohne spätere Entscheidungen vorwegzunehmen (source: 2026-08-05--gaDdrDdczO4.md; practitioner method).
+
+Wenn eine Antwort einer anderen beteiligten Person gehört, exportiere die betroffenen offenen Fragen in ein prüfbares Dokument. Übernimm anschließend nur die gemeinsam bestätigten Antworten mit Verantwortlichkeit und Provenienz zurück in die Spezifikation. Formuliere materielle Fragen neutral: vorgeschlagene Antworten können Zustimmung begünstigen und ersetzen weder Entscheidungseigentum noch menschliches Urteil (source: 2026-08-05--gaDdrDdczO4.md; analysis).
 
 ## Layer 2: Verifizierung
 
@@ -280,6 +288,12 @@ Prüfung: Achte besonders auf ... und markiere Unsicherheiten.
 ## Spec-anchored semantic ingest
 
 The semantic-ingest workflow is a concrete `spec-anchored` implementation of this blueprint. Its schema and package manifest preserve the specification, its evidence matrix makes the knowledge delta reviewable, and its validator turns source identity, citation coverage, register updates, backlog state, and raw immutability into deterministic gates (vault governance: AGENTS.md; analysis: [[semantic-ingest-workflow]]). Fast and Full validation profiles separate iteration cost from closure assurance, while recorded artifact hashes make the final validation state auditable. The workflow also preserves environment learning through a generic skill-validator fallback, a preconditioned transactional edit fallback, and a separate line-ending audit (source: tools/test-semantic-ingest-package.ps1; source: tools/validate-local-skill.ps1; source: tools/set-file-transactional.ps1; analysis: [[semantic-ingest-workflow]]).
+
+## AI-Ausgaben als aktive Lernfläche
+
+Bei unbekannten oder fachlich neuen Ergebnissen bleiben Architektur und Abnahme beim Menschen. Lass die KI die Lösung in klarer Sprache erklären, verlange belastbare Dokumentation und sichtbare Trade-offs, vergleiche sie mit der eigenen Alternative und integriere sie erst, wenn der verantwortliche Mensch die Logik selbst zurückerklären kann. So wird die Ausgabe zur Lernfläche statt zu einer Black Box (source: 2026-07-27--tHh0UaL_V4w.md; practitioner discussion; analysis: P38-W6R3-C01).
+
+Das ist eine konkrete Erweiterung des bestehenden „thinking with AI“-Prinzips. Aussagen der Quelle über einzelne Modelle, Benchmarks, Arbeitsmarkt, Finanzen, Energie, Politik oder Prognosen werden nicht übernommen.
 
 ## Goldene Regel
 

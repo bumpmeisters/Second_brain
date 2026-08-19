@@ -4,7 +4,7 @@ status: active
 sources:
   - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
 created: 2026-05-30
-updated: 2026-07-30
+updated: 2026-08-14
 ---
 
 # Raw Sources
@@ -13,7 +13,7 @@ updated: 2026-07-30
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
 
-**Last updated**: 2026-07-30
+**Last updated**: 2026-08-14
 
 ---
 
@@ -51,7 +51,9 @@ The historical local clipping source inventory at `wiki/_outputs/clipping-source
 
 The inventory is descriptive rather than semantic: it reads protected sources without changing them, groups YouTube captures by video ID, groups other declared URLs without their query strings, and records first-linked domains in unresolved legacy files only as recovery signals rather than verified provenance.
 
-The historical local clipping automation blueprint at `wiki/_outputs/clipping-automation-blueprint-2026-07-30.md` translates that inventory into a platform-specific collector design. Automated captures would enter through the dedicated `inbox/raw/automated-clippings/` lane and the approved source-inbox admission path rather than writing directly to the protected legacy `raw/Clippings/` collection.
+The historical local clipping automation blueprint at `wiki/_outputs/clipping-automation-blueprint-2026-07-30.md` translates that inventory into a platform-specific collector design. The current YouTube pilot implements this custody route: automated transcript captures enter through `inbox/raw/automated-clippings/youtube/` and the approved source-inbox admission path rather than writing directly to the protected legacy `raw/Clippings/` collection (source: docs/youtube-intelligence.md; source: tools/config/youtube-intelligence-policy.json).
+
+After admission, automated YouTube transcripts live under `raw/imports/automated-clippings/youtube/`. They enter the external source-selection register as pending and unread, exactly like unreviewed Web Clipper material; automation of custody does not grant semantic-review permission (source: tools/config/source-selection-policy.json; source: tools/manage-clipping-dispositions.ps1).
 
 Its approved routing decision separates two intake lanes: only automatically discovered assets receive relevance-light ranking. Files deliberately placed in the source inbox and Obsidian Web Clipper captures retain the established semantic-ingest path after technical admission checks.
 

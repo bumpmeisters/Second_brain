@@ -1,20 +1,22 @@
 ---
 type: operating-contract
 status: pilot
+pilot_state: adapted-focus-approved-application-gate
 description: "Observe AI application vendors as time-bound evidence about user problems, solution patterns, adoption friction, and market persistence without turning the vault into a tool directory."
 use_when: "The vault is mapping AI applications, vendor claims, customer cases, community reports, or market changes to learn which user problems and solution patterns remain relevant over time."
 avoid_when: "The task is a comprehensive tool catalog, a procurement recommendation, an unbounded market scrape, or an attempt to infer market success from vendor survival, funding, mentions, or promotional outcomes alone."
-output: "A versioned problem-solution landscape, bounded vendor watchlist, source-traceable observation records, monthly delta brief, and explicit continue, change, archive, or escalate decisions."
+output: "A focused C04/C06 problem-discovery brief, bounded solution sample, source-traceable evidence records, and explicit continue, adapt, stop, or later-monitor decision."
 decision_owner: Rolf
 maintenance_role: Codex
-review_trigger: "After the baseline and three monthly observation cycles, or earlier if scope, effort, evidence quality, or legal constraints materially change."
+review_trigger: "After the focused C04/C06 problem-discovery baseline, before any recurring monitoring, or earlier if scope, effort, evidence quality, or legal constraints materially change."
 sources:
   - user scope decision, 2026-08-09
+  - user rebaseline decision, 2026-08-14
   - wiki/_outputs/semantic-ingest/p24/source-bundle.md
   - wiki/domain-outsider-audience-learning-loop.md
   - wiki/use-case-cluster-prioritization-workflow.md
 created: 2026-08-09
-updated: 2026-08-09
+updated: 2026-08-15
 ---
 
 # AI Vendor and User-Problem Observation Contract
@@ -278,13 +280,57 @@ Rolf approved both artifacts, the six revised clusters, and the 23-slot allocati
 
 Rolf bestätigte anschließend die Verifizierungsentscheidung für den Notion-Dry-Run. Die 23 Einträge bilden ausschließlich eine begrenzte Recherchemenge; ihre Aufnahme in das Vendor Register erfordert eine separate inhaltliche Prüfung und Freigabe.
 
+## Rebaseline decision - 2026-08-14
+
+Rolf approved a focused reset after the Second Brain recovery and governance revamp. This decision supersedes the old 23-candidate set as the active research queue without deleting or rewriting its historical discovery provenance.
+
+### Decision to inform
+
+The focused pilot should help answer:
+
+> Which recurring organizational problems prevent AI-supported marketing and knowledge work from becoming reliable, reusable, and cumulative beyond individual tasks, and which solution mechanisms materially address those problems?
+
+The pilot may inform whether this problem area deserves deeper consulting research and a later observation cadence. It may not support vendor recommendations, market rankings, product-success claims, or a generalized AI-tools landscape.
+
+### Active scope
+
+- **C04 - Workflow execution and operational coordination** and **C06 - Organizational knowledge and context continuity** are the only active problem clusters for the focused baseline.
+- **C05 - AI assurance, evaluation, and governance** is a cross-cutting assessment lens, not a separate vendor quota.
+- C01, C02, and C03 remain valid historical cluster hypotheses but are deferred from the active pilot.
+- The 23 Notion-derived candidates remain a lead-only discovery backlog. Their prior 4/4/3/4/4/4 allocation is not an active sampling rule.
+- The focused baseline may include no more than six to eight contrastive implementations. No exact shortlist is approved by this rebaseline decision.
+
+### Evidence branch and next gate
+
+Use the exploratory branch of [[use-case-cluster-prioritization-workflow]]. Before any full vendor or community review:
+
+1. prepare an exact candidate and source manifest with URLs, source classes, intended use, and selection reasons;
+2. explain how each proposed implementation adds a distinct mechanism, counterexample, failure signal, or boundary test;
+3. obtain explicit approval for that bounded manifest;
+4. retain a candidate as lead-only unless current first-party evidence establishes the claimed mechanism and non-vendor evidence supports a relevant user problem, implementation condition, friction, limitation, or abandonment signal;
+5. record at least one material limitation, counter-hypothesis, or evidence gap for every included solution pattern.
+
+The raw archive is not an automatic research corpus. Existing source-selection, protected-source, and evidence-promotion gates remain controlling.
+
+Rolf approved the exact six-candidate, twelve-source core manifest on 2026-08-14. The bounded review recommended **adapt**: prioritize prototype-to-production reliability for AI-supported workflows as the main C04+C05 research theme, retain retrieval versus context continuity as a narrower C06 question, keep every candidate lead-only, and leave monthly monitoring paused. Rolf accepted that recommendation on 2026-08-15. The approved result is recorded in `wiki/_outputs/ai-vendor-observation/focused-problem-discovery-baseline-2026-08-14.md`; its source-level ledger is `wiki/_outputs/ai-vendor-observation/focused-evidence-ledger-2026-08-14.csv`.
+
+The vendor-discovery baseline is now closed. The next permitted gate is selection of one bounded real workflow for application of the existing use-case, assurance, and evaluation practices. Further vendor research requires a specific evidence gap and a new bounded source decision; it is not an automatic continuation of this pilot.
+
+### Cadence decision
+
+- The focused problem-discovery baseline is complete and its `adapt` recommendation was accepted on 2026-08-15.
+- Monthly monitoring is paused and not authorized.
+- No recurring vendor-observation cadence is scheduled.
+- Reconsider research or a small watchlist only after a bounded real-workflow application exposes a specific evidence gap and receives a new source decision.
+- Do not infer future monitoring value from the existence of the old register or the number of saved Notion links.
+
 ## Assumptions to test
 
 - The selected intersection of AI, marketing, and knowledge work is narrow enough to maintain.
 - Problem-centered records will remain useful longer than vendor-centered profiles.
 - Public community evidence can add implementation and failure insight without being treated as representative.
-- Three monthly cycles are sufficient to judge the value and maintenance cost of a continuing program.
-- The proposed caps and 70% triangulation threshold are useful pilot controls and may be revised after the baseline.
+- If recurring observation is later authorized, three monthly cycles may be sufficient to judge the value and maintenance cost of a continuing program.
+- The original caps and 70% triangulation threshold remain historical pilot controls; their usefulness must be reconsidered after the focused baseline.
 
 ## Related pages
 

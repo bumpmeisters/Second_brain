@@ -1,5 +1,5 @@
 ---
-type: workflow
+type: concept
 status: active
 sources:
   - AGENTS.md
@@ -11,8 +11,9 @@ sources:
   - tools/validate-local-skill.ps1
   - tools/set-file-transactional.ps1
   - tools/test-line-ending-policy.ps1
+  - raw/Clippings/Your AI Second Brain Is Slowly Rotting (Here's How to Fix It).md
 created: 2026-07-18
-updated: 2026-07-26
+updated: 2026-08-16
 ---
 
 # Semantic Ingest Workflow
@@ -25,7 +26,7 @@ updated: 2026-07-26
 
 The intake ledger establishes canonical source paths and fingerprints. The decision ledger records source-level judgment and routing. The evidence matrix records the durable knowledge delta. The package manifest connects these artifacts to source summaries, routing provenance, independent completion ledgers, register markers, backlog state, validation provenance, and the protected-source guard (source: tools/config/semantic-ingest-schema.json).
 
-Upstream of the intake ledger, the clipping disposition register separates source custody from permission to read. A file in `raw/Clippings/` is collected material only. New rows default to pending and unread; package assignment requires an exact path/hash row marked `available` and `approved-for-semantic-review`. This approval permits content-level review but does not approve the source's claims or any wiki change (source: tools/config/source-selection-policy.json; source: tools/manage-clipping-dispositions.ps1).
+Upstream of the intake ledger, the clipping disposition register separates source custody from permission to read. A file in `raw/Clippings/` or `raw/imports/automated-clippings/youtube/` is collected material only. New rows default to pending and unread; package assignment requires an exact path/hash row marked `available` and `approved-for-semantic-review`. This approval permits content-level review but does not approve the source's claims or any wiki change (source: tools/config/source-selection-policy.json; source: tools/manage-clipping-dispositions.ps1).
 
 The current register state and operating commands are summarized in `wiki/_outputs/source-intake/README.md`, which remains local-only with the source-selection ledger.
 
@@ -52,11 +53,19 @@ These classes prevent every reviewed source from appearing to contribute an equa
 
 The generator prepares artifacts but does not authorize promotion (source: tools/new-semantic-ingest-package.ps1; source: AGENTS.md).
 
-Candidate ranking and source authorization are separate. Intake and backlog tools may propose pending material for human review, but only approved disposition rows may receive a semantic package. From P32 onward, the generator and validator fail closed when a `raw/Clippings/` source lacks the required disposition, availability, exact hash, or package-consistent approval. Packages P1-P31 are historical and remain governed by their recorded checkpoints (source: tools/new-clipping-intake.ps1; source: tools/reconcile-clipping-backlog.ps1; source: tools/new-semantic-ingest-package.ps1; source: tools/test-semantic-ingest-package.ps1).
+Candidate ranking and source authorization are separate. Intake and backlog tools may propose pending material for human review, but only approved disposition rows may receive a semantic package. From P32 onward, the generator and validator fail closed when a source covered by `tools/config/source-selection-policy.json` lacks the required disposition, availability, exact hash, or package-consistent approval. Packages P1-P31 are historical and remain governed by their recorded checkpoints (source: tools/new-clipping-intake.ps1; source: tools/reconcile-clipping-backlog.ps1; source: tools/new-semantic-ingest-package.ps1; source: tools/test-semantic-ingest-package.ps1).
+
+### Reconcile current state without erasing history
+
+During ingest and consistency review, distinguish a **current-state assertion** from a **historical event**. A new price, owner, plan, policy state, or other mutable fact may supersede an earlier state, but only with dated provenance, contradiction review, and explicit approval. A decision, delivery, incident, or other event remains part of the append-only historical record even when later events change the current state. Preserve the underlying sources and log; do not let an agent silently delete contradictory evidence or infer that the newest-looking statement is authoritative. This sharpens the vault's existing separation between immutable `raw/`, mutable canonical wiki pages, and the append-only `wiki/log.md` rather than introducing another storage layer (source: raw/Clippings/Your AI Second Brain Is Slowly Rotting (Here's How to Fix It).md; practitioner account; analysis: P33-W1-C01).
+
+The source's reported audit compliance and effectiveness are self-reported and are not treated as validation. State/event classification can itself be ambiguous, so consequential replacement remains a human-reviewed semantic decision.
 
 ## Deterministic final gate
 
 The Fast profile checks the package contract, decisions, evidence coverage, routing, registers, and backlog. From Wave mode onward it fails when a reviewed promotional source lacks evidence coverage, or when a registered-only source names target pages, appears in the evidence matrix, or lacks a reviewed disposition. The Full profile additionally checks SHA-256 source identity, Markdown frontmatter, citations, wiki links, and tracked changes under protected source roots. `-RecordResult` writes validator version, timestamp, mode, profile, status, and artifact hashes back to the manifest atomically (source: tools/test-semantic-ingest-package.ps1).
+
+Validator 2.4 aligns those checks with the vault's actual Markdown conventions. Source citations may use an existing repository-relative path or an indexed source filename; Obsidian links may resolve to existing Markdown in `wiki/`, `research/`, or `raw/`; and reusable-practice registration may use either a Wikilink or the canonical ``wiki/...md`` code path. Output sections named `Output Contract` and detailed `Do Not Use When` sections satisfy the same inspectable-output and reuse-boundary requirements as their shorter heading variants. These are representation rules only; they do not weaken source existence, routing metadata, approval, or reusable-artifact checks (source: tools/test-semantic-ingest-package.ps1; source: tests/semantic-ingest/package-validator.tests.ps1).
 
 The standardized wave checkpoint reports source and token volume, new, extended, and corroborating patterns, fully reviewed registered-only sources, exclusions, expected page changes, reusable-artifact decisions, and knowledge yield. A dedicated artifact is warranted only when approved evidence supports a trigger, inputs or prerequisites, an executable method, an inspectable output, and explicit reuse boundaries. Related rows may share one artifact when they form the same method; otherwise the knowledge remains on a concept page. This keeps approval scope separate from source disposition and makes wave economics comparable (source: templates/semantic-ingest-wave-checkpoint.md; source: AGENTS.md).
 

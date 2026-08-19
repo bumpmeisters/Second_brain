@@ -3,7 +3,7 @@ type: project-index
 status: active
 project: ai
 created: 2026-07-29
-updated: 2026-08-09
+updated: 2026-08-15
 sources:
   - user project-structure approval, 2026-07-29
   - wiki/ai-research-library.md
@@ -40,7 +40,21 @@ These tracks are navigation aids, not child projects.
 
 This project was recovered from the verified 2026-08-11 historical backup. Its 56 files are internal project provenance, including superseded directions, drafts, and review records. Recovery preserves their recorded state; it does not approve claims or authorize publication.
 
-Some canonical dependencies are deliberately assigned to later recovery waves. Content Operating System identity and channel profiles belong to wave `06-content-operating-system`; missing AI wiki pages and the vendor-observation contract belong to wave `11-curated-wiki-delta`. Generated vendor-observation outputs remain local-only. Until those waves close, references to those artifacts are dependency records rather than proof that the targets exist on current `main`.
+The assigned recovery waves for the Content Operating System, ABM workspace, knowledge-workflow governance, and curated wiki delta are now closed on current `main`. The canonical [[../../wiki/ai-vendor-problem-observation-contract|AI Vendor and User-Problem Observation Contract]] exists again. Generated vendor-observation registers and dry-run reports remain local-only historical analysis; recovery did not reapprove their claims or authorize research, monitoring, publication, or external action.
+
+## Applied AI vendor-observation pilot
+
+Rolf approved a focused rebaseline on 2026-08-14:
+
+- active problem clusters: C04 workflow execution and operational coordination, and C06 organizational knowledge and context continuity;
+- cross-cutting assessment lens: C05 assurance, evaluation, and governance;
+- the prior 23-candidate Notion set remains a lead-only discovery backlog, not the active research queue;
+- the focused baseline is capped at six to eight contrastive implementations;
+- monthly monitoring remains paused;
+- the exact manifest at `wiki/_outputs/ai-vendor-observation/focused-candidate-source-manifest-2026-08-14.md` was approved and the bounded review is complete;
+- Rolf accepted the baseline's `adapt` recommendation on 2026-08-15: prototype-to-production workflow reliability is now the primary question, with retrieval versus context continuity as a secondary question;
+- the vendor-discovery baseline is closed and the next gate is selection of one bounded real workflow for application of existing use-case, assurance, and evaluation practices;
+- all candidates remain lead-only and monthly monitoring remains paused.
 
 ## Current pilots
 

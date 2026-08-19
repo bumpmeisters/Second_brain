@@ -6,7 +6,7 @@ sources:
   - tools/newsletter-intelligence.ps1
   - templates/newsletter-intelligence/priority-context.json
 created: 2026-07-03
-updated: 2026-08-08
+updated: 2026-08-16
 ---
 
 # Newsletter Intelligence Pipeline
@@ -85,6 +85,26 @@ Candidate extraction and judgment are separate passes. A newsletter claim remain
 Current priorities are a dated navigation layer, not a closed topic allowlist. A candidate with no priority-keyword match remains reviewable when it records a bounded adjacent-enabler, convergence, strategic-surprise, emergent-topic, or exploratory hypothesis. The gate still enforces explicit source approval, retrieval budgets, commercial limits, safety checks, and human promotion authority; an unbounded topic label alone is insufficient (source: tools/newsletter-intelligence.ps1; source: templates/newsletter-intelligence/priority-context.json).
 
 The weekly brief is deliberately bounded. Each included signal must state novelty, relevance, evidence status, uncertainty, wiki connection, provenance, and a possible decision, experiment, or verification step. Overflow stays in staging rather than becoming a reading queue.
+
+## Claim-responsive verification and closure
+
+Authority and claim responsiveness are separate. Before an authoritative-source or independent-verification batch, record a compact evidence target containing:
+
+- the exact claim under review;
+- the alleged boundary or event type, distinguishing tool misuse, permitted network access, host escape, and external-system compromise;
+- the minimum evidence that could materially change the claim status, such as a configuration, trajectory, task identifier, version, or independent reproduction;
+- each candidate's role as incident evidence, authoritative context, independent verification, or duplicate;
+- the stop condition.
+
+Authoritative context may clarify terminology, framework behavior, or benchmark conditions without verifying an incident it does not document. Mirrors and republications are duplicates, not independent corroboration.
+
+When no claim-responsive evidence remains, the general controls already exist in the wiki, and additional candidates add only context or duplication, propose `hold_no_durable_change`. Use **not corroborated** or **still unverified**, never "disproven" merely because evidence is absent. Close the verification branch only after explicit human acceptance.
+
+## Review communication contract
+
+Review actions use explicit intent labels: `hold akzeptieren`, `Korrektur`, `weitere Verifikation`, `Promotion vorschlagen`, or `zurückstellen`. Generic wording such as `übernehmen` is avoided because it can blur acceptance of a hold with authorization to promote.
+
+Every gate-closing response states whether the current step and overall intent are complete, what remains unauthorized, and the exact reply that would open the next gate. A promotion request creates a proposal; it never authorizes a durable wiki write by itself.
 
 ## Feedback and promotion
 

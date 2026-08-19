@@ -14,8 +14,17 @@ sources:
   - https://arxiv.org/abs/2606.22329
   - https://arxiv.org/abs/2606.05670
   - https://huggingface.co/blog/ibm-research/itbench-aa
+  - raw/imports/automated-clippings/youtube/UCm7vY4Rr4uT1nNcZgcQWOfQ/2026-07-31--me78s3FxxSE.md
+  - raw/imports/automated-clippings/youtube/UC2ojq-nuP8ceeHqiroeKhBA/2026-08-14--WCrnS09vpfo.md
+  - raw/Clippings/Earley AI Podcast – Ep 96 AI in Clinical Trials, the Vibe Coding Fallacy, and Bending Eroom's Law.md
+  - raw/imports/automated-clippings/youtube/UC6t1O76G0jYXOAoYCm153dA/2026-07-26--tivaWTTVRhY.md
+  - raw/imports/automated-clippings/youtube/UC9AHywQeW9BOcOl7dg-YMqA/2026-07-29--75XNXOSPaJ8.md
+  - raw/imports/automated-clippings/youtube/UC9cn0TuPq4dnbTY-CBsm8XA/2026-07-31--cO1f2wOxSH4.md
+  - raw/imports/automated-clippings/youtube/UCQID78IY6EOojr5RUdD47MQ/2026-08-06--54pwkcp48Lg.md
+  - raw/imports/automated-clippings/youtube/UCRYY7IEbkHLH_ScJCu9eWDQ/2026-07-24--dfre9hN0HCs.md
+  - raw/imports/automated-clippings/youtube/UCxBcwypKK-W3GHd_RZ9FZrQ/2026-08-03--7PSXtru6mmY.md
 created: 2026-07-01
-updated: 2026-08-14
+updated: 2026-08-19
 ---
 
 # Agent Evaluation
@@ -27,6 +36,8 @@ updated: 2026-08-14
 ## What agent evaluation is
 
 Agent evaluation is system evaluation, not just model evaluation. The unit under test includes the model, instructions, tools, retrieval, memory, orchestration, environment, permissions, budgets, and stopping logic. Scores are therefore meaningful only when those conditions are recorded (source: [Do More Agents Help?, 2026-06-04](https://arxiv.org/abs/2606.05670); preprint, needs verification).
+
+For self-hosted or optimized inference, the recorded evaluation configuration must extend below the model name: weights and version, quantization, runtime, kernels, hardware, and cluster topology. Evaluate semantic fidelity and operational reliability on that deployed stack under representative traffic; identical weights do not justify treating two serving configurations as equivalent without evidence (source: 2026-08-03--7PSXtru6mmY.md; vendor-practitioner interview; analysis: P46-C01).
 
 Observability and evaluation are related but different. Observability records what happened—calls, tool use, latency, errors, state changes, and full traces. Evaluation applies criteria to that evidence and decides whether the behavior was correct, safe, efficient, or improving (source: [AWS debugging guide, 2026-06-29](https://aws.amazon.com/blogs/machine-learning/debugging-production-agents-with-amazon-bedrock-agentcore-observability/)).
 
@@ -70,6 +81,16 @@ Interpret a task-completion horizon at a success probability appropriate to the 
 
 Pair the chosen reliability level with an end-state verifier. In a practitioner refactor case, a fast zero-shot run reportedly produced scaffolding while omitting the actual models and deployment/bootstrap work; the example illustrates apparent completion rather than independently reproduced model performance. Named-model rankings, effort ratios, and company outcome claims from the talk remain excluded (source: Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md, 7:29–9:31 and 11:35–12:30; practitioner report, needs independent reproduction; analysis: approved P31-C1).
 
+### Do not mistake a same-prompt run for a controlled comparison
+
+Using the same prompt once does not control an agent comparison when model mix, harness, orchestration, budgets, environment, or the meaning of “production ready” differ. Define acceptance criteria from the real product and user journey, align the operating conditions that should be held constant, repeat stochastic runs, and report outcome, trajectory, reliability, and efficiency separately. One practitioner comparison illustrates the problem: extensive tests and tool calls still missed usability defects, but its design was confounded and its reported cost figures were internally inconsistent. It therefore supports the evaluation-design warning, not a named-model winner or any numeric performance conclusion (source: 2026-08-14--WCrnS09vpfo.md; practitioner comparison; analysis: P35-W5-C05).
+
+## High-consequence document extraction
+
+For high-consequence document extraction, valid structured output is not enough. Make every material field reviewable against the exact source passage and the applicable document or amendment version. Build the evaluation set from representative ordinary, ambiguous, amended, and outlier cases under an interpretation agreed by the responsible domain team; unresolved interpretation differences are an evaluation defect, not something the model can settle. Route uncertain or novel cases to a qualified human instead of treating a universal confidence threshold as proven. This extends the existing representative-case, trace-review, calibration, and human-approval model; it does not validate the featured vendor's accuracy, automation, compliance, cost, model-choice, or financial-outcome claims (source: 2026-07-31--me78s3FxxSE.md; vendor-practitioner interview, automatic German captions; analysis: P32-W5-C01).
+
+A separate clinical-trial vendor interview corroborates this model without changing it: use versioned structured domain representations as the traceable substrate, reserve LLMs for interpretation or unstructured extraction where they add value, use deterministic or specialized models for repeatable computation when appropriate, and keep ambiguous design judgments with qualified domain experts. This is supporting implementation evidence only; the interview supplies no evaluation dataset, error rates, calibration record, independent replication, or regulatory assessment, so its product, trial-outcome, financial, adoption, and forecast claims remain excluded (source: raw/Clippings/Earley AI Podcast – Ep 96 AI in Clinical Trials, the Vibe Coding Fallacy, and Bending Eroom's Law.md; vendor-practitioner interview; analysis: P33-W1-C03).
+
 ## LLM-as-judge
 
 LLM judges are useful for groundedness, completeness, tone, and other semantic criteria that do not have a simple programmatic oracle. They should be treated as fallible measurement instruments.
@@ -97,6 +118,7 @@ Choose metrics from the decision and risk, not from tool availability.
 - Latency, token use, cost, retries, and tool-call count.
 - Judge-human agreement and judge flip rate.
 - Production incident, correction, override, and abandonment rates.
+- Operator interaction cost, reported separately from output quality: unnecessary clarification burden, avoidable supervision effort, escalation quality, and whether autonomy matches task risk (source: 2026-07-24--dfre9hN0HCs.md; practitioner comparison; analysis: P44-C02).
 
 An aggregate score can support comparison, but it should not hide a severe safety failure or a weak high-risk slice. Keep slice-level and failure-category results visible (analysis based on the June 2026 research report; needs local validation).
 
@@ -105,6 +127,16 @@ An aggregate score can support comparison, but it should not hide a severe safet
 For a vault-maintenance agent, the outcome oracle is usually inspectable: required files exist, `raw/` remains unchanged, citations resolve to the claimed sources, YAML is valid, wiki links are not orphaned, and `index`, `sources`, and `log` were updated when ingestion requires it (source: `AGENTS.md`).
 
 Trajectory evidence adds a second layer: whether the agent read the index first, distinguished primary sources from AI research, used current verification for unstable claims, avoided unrelated edits, and surfaced uncertainty. These checks connect agent evaluation to [[ai-research-validation]], [[wiki-linting]], [[loop-engineering]], and [[ai-work-blueprint]].
+
+## From feedback to comparable operating evidence
+
+Turn vague user feedback into a regression case before treating it as an implementation instruction. Reconstruct the observed trajectory and expected outcome, classify the likely failure mechanism, reproduce it under controlled conditions, and add both representative and counterbalancing cases to the versioned evaluation set. This sharpens actionable feedback but does not resolve ambiguous product strategy by itself (source: 2026-07-26--tivaWTTVRhY.md; practitioner interview; analysis: P37-W6R3-C02).
+
+Compare models or harnesses by total cost per accepted task outcome, not token list price alone. Hold the task, permissions, environment, acceptance criteria, and accounting boundary aligned; then report correctness, reasoning and tool use, latency, retries, serving requirements, failure cost, and operational risk. Current prices, model capabilities, company economics, forecasts, and geopolitical conclusions from the source are excluded (source: 2026-07-29--75XNXOSPaJ8.md; mixed practitioner discussion; analysis: P37-W6R3-C05).
+
+The evaluation unit remains the complete task-specific workflow. General models can support ambiguous exploration; specialized models become a serious option only after the task shape, data, and evaluation contract stabilize. A portfolio-company interview corroborates this system-level rule but does not establish its reported model, cost, latency, accuracy, deployment, or customer-outcome claims (source: 2026-07-31--cO1f2wOxSH4.md; mixed practitioner interview; corroborating analysis: P37-W6R3-C07).
+
+For long-horizon work, keep a small versioned set of high-impact process behaviors separate from output tests and runtime prompts. Domain experts and agent engineers should define each behavior, its trigger, and failure boundary; an independently calibrated trace judge can then test whether the behavior was required and exhibited. Do not inject the entire behavior catalog into every run, and do not treat the vendor's product or judge-reliability claims as validated (source: 2026-08-06--54pwkcp48Lg.md; vendor interview; analysis: P39-W6R3-C04).
 
 ## Current tensions
 

@@ -9,8 +9,16 @@ sources:
   - raw/Clippings/How Anthropic Employees ACTUALLY Use Claude Skills.md
   - https://www.latent.space/p/skill-engineering-design
   - raw/Clippings/Claude Skills for SEO and Marketing What They Are and How to Use Them.md
+  - raw/imports/automated-clippings/youtube/UCwvXnrOCRlhokHlJwohf2OA/2026-08-07--M3gHlwHKsBI.md
+  - https://agent-plugins.org/specification
+  - https://agent-plugins.org/
+  - raw/imports/automated-clippings/youtube/UCEvsxF4Z12vwpwDUaU02yiA/2026-07-27--xTmn8jcnzdM.md
+  - raw/imports/automated-clippings/youtube/UCFeFVytEkT8kaqPCJZGFswg/2026-08-07--FI4NdYXltA4.md
+  - raw/imports/automated-clippings/youtube/UCMwVTLZIRRUyyVrkjDpn4pA/2026-08-06--VnyGs43eiAA.md
+  - raw/imports/automated-clippings/youtube/UCcefcZRL2oaA_uBNeo5UOWg/2026-07-27--qyPCVqFUyDo.md
+  - raw/imports/automated-clippings/youtube/UCnpBg7yqNauHtlNSpOl5-cg/2026-08-09--4mKtJzfGj0U.md
 created: 2026-07-01
-updated: 2026-08-01
+updated: 2026-08-18
 ---
 
 # Agent Skill Design
@@ -59,6 +67,21 @@ The July 2026 Claude Skills clipping reinforces the packaging model: a skill sho
 Skills should be treated as maintained operating procedures rather than timeless prompts. Prefer smaller skills with clear boundaries, and re-test them after meaningful model, tool, permission, or workflow changes. Stale instructions can become an operational failure source even when the model improves (source: [[newsletters/latent-space/linked-sources/ai-engineering-systems-trends-2026-07-14|ai-engineering-systems-trends-2026-07-14]]; practitioner and conference synthesis).
 
 A practical maintenance event should record what changed, which cases were re-run, and whether the skill's routing, outputs, permissions, and verifier still behave as intended. This is a design recommendation consistent with the vault's evidence-driven evolution rule; it is not a claim that every model update requires rewriting every skill (analysis based on [[newsletters/latent-space/linked-sources/ai-engineering-systems-trends-2026-07-14|ai-engineering-systems-trends-2026-07-14]] and this page's existing sources).
+
+## Portable plugin core and client extensions
+
+Portable packaging and portable behavior are different promises. As of 2026-08-15, the Agent Plugins v1.0.0 **Working Draft** defines a small package core around a root `plugin.json`, skills under `skills/`, and optional MCP configuration in `mcp.json`. Client-specific commands, hooks, or other behavior belong in reverse-domain extension namespaces, while installation and distribution remain another layer ([Agent Plugins specification](https://agent-plugins.org/specification); source: 2026-08-07--M3gHlwHKsBI.md).
+
+This separation is useful when designing a skill or plugin: keep the reusable task contract and standard resources in the portable core; isolate client adaptations; and document how the package is discovered and installed. A matching folder structure does not prove equivalent behavior in every client. The specification is a Working Draft, so exact schema, compatibility, governance, and distribution support must be checked against the current primary sources before implementation ([Agent Plugins project](https://agent-plugins.org/)).
+
+## Team lifecycle and evidence-led maintenance
+
+Give shared skills explicit governance states: **proposed and awaiting review**, **approved but optional**, and **required team standard**. Name the approver, maintain the accepted instruction in one permissioned source, and make client-specific wrappers reference that source instead of silently diverging. The source supports this product-agnostic lifecycle, not its connector counts, access behavior, product mechanics, or roadmap claims (source: 2026-07-27--xTmn8jcnzdM.md; vendor tutorial; analysis: P38-W6R3-C02).
+
+A recorded demonstration is only evidence input for a skill. Capture decision intent as well as visible action: narrate why and why-not cases, retain positive and negative examples, split the work at stable input-output boundaries, and compose atomic skills through a separate orchestrator. Review and test the resulting instruction before adoption; recording alone does not specify correctness (source: 2026-08-07--FI4NdYXltA4.md; mixed vendor-practitioner demonstration; analysis: P38-W6R3-C03).
+
+After a material model change, ablate the always-loaded instruction layer against representative tasks. Remove candidate legacy instructions, compare task outcomes and convention adherence, and restore only organization-specific attention, safety, or workflow rules whose absence produces repeated measurable failures. Keep on-demand skills separate from this test. A practitioner analysis and two direct product-team discussions support the bounded maintenance method; they do not establish a universal deletion rule, named-model superiority, prompt-size target, or performance gain (sources: 2026-08-06--VnyGs43eiAA.md; 2026-07-27--qyPCVqFUyDo.md; 2026-08-09--4mKtJzfGj0U.md; analysis: P39-W6R3-C02; corroborating analysis: P40-W6R3-C04).
+
 ## Open questions
 
 - Which recurring vault failures deserve a verifier skill before another generation skill?

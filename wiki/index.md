@@ -6,7 +6,7 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-08-14
+updated: 2026-08-18
 ---
 
 # Wiki Index
@@ -15,7 +15,7 @@ updated: 2026-08-14
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-08-14
+**Last updated**: 2026-08-18
 
 ---
 
@@ -26,6 +26,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
 - [[semantic-ingest-workflow]] - Governed package workflow for approved semantic review, evidence decisions, validation, and explicit promotion checkpoints.
+- [YouTube Intelligence operations](../docs/youtube-intelligence.md) - Local discovery, bounded transcript intake, recurring-run contracts, and the loopback-only control center; W6R4 remains at 119/171-channel metadata coverage, all 96 admitted sources are reviewed, P42-P46 are complete, and the semantic backlog is zero. The weekly collector remains uninstalled and another coverage run requires a fresh exact approval.
 - [[reusable-practices-router]] - Active low-cost routing index for the recovered reusable practice pages.
 - [[reusable-practices-library]] - Active provenance register for reusable workflows, checklists, playbooks, gates, assessments, experiments, and operating contracts.
 
@@ -76,6 +77,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[how-to-build-claude-subagents-better-than-99-percent-of-people]] - YouTube transcript bundle about Claude Code subagents, custom agents, descriptions, permissions, and delegation.
 - [[i-turned-claude-fable-into-the-ultimate-second-brain]] - YouTube transcript about an AI operating system built from context, connections, capabilities, and cadence.
 - [[only-the-best-are-using-them]] - YouTube transcript about loop engineering for coding agents.
+- [[riley-brown-reference-comparison-content-loops-source-summary]] - Critical review of reference-comparison content loops and their bounded adaptation as a `draft` repair pilot for human-owned content refinement.
 - [[agentic-workflows-library]] - Source summary for raw agentic workflow setup assets.
 - [[claude-md-frameworks-research-2026-06-13]] - Research summary connecting local WAT/Claude setup files with current Claude Code docs, AGENTS.md, Aider conventions, and agent-manifest research.
 - [[agents-and-claude-md-research-2026-07-01]] - Partially verified research on compact, layered instruction files and the security boundary around repository-supplied instructions.
@@ -95,6 +97,18 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[from-agi-to-asi-google-deepmind-2026]] - Google DeepMind report on four possible pathways from AGI to ASI and their bottlenecks.
 - [[logistics-market-intelligence-library]] - Inventory-level summary of 597 unverified AI-generated logistics deep-research reports and corresponding prompts.
 - [[merchant-of-record-vs-payment-service-provider]] - Commercial-source comparison of owning a commerce stack versus outsourcing merchant-of-record responsibilities.
+- [[_outputs/semantic-ingest/p32/source-bundle|P32 YouTube pilot source bundle]] - P32 completes the 31-source YouTube semantic pilot: sixteen approved knowledge patterns across ten waves, fourteen `registered-only` sources, one duplicate variant, and no open source decisions.
+- [[_outputs/semantic-ingest/p33/source-bundle|P33 YouTube follow-up source bundle]] - P33 completes the 23-source YouTube follow-up: ten approved knowledge patterns across six waves, thirteen `registered-only` sources, and no open source decisions.
+- [[_outputs/youtube-channel-evaluation/p34/w1-checkpoint|P34-W1 YouTube channel-evaluation checkpoint]] - Provisional, evidence-limited channel modes from all 54 reviewed pilot sources; no mode change or new acquisition is authorized.
+- [[_outputs/youtube-channel-evaluation/p34/w2-checkpoint|P34-W2 all-channel metadata checkpoint]] - Approved complete local coverage of 170 channels and the exact 15-video validation design across 12 channels.
+- [[_outputs/semantic-ingest/p34/source-bundle|P34 channel-validation source bundle]] - P34 completes the 15-source validation batch: six approved extensions, one corroborating evidence role, eight `registered-only` sources, and no open semantic decision.
+- [[_outputs/semantic-ingest/p34/w3-checkpoint|P34-W3 semantic review checkpoint]] - Approved semantic checkpoint and exact promotion boundary for the fifteen-source validation batch.
+- [[_outputs/youtube-channel-evaluation/p34/w4-checkpoint|P34-W4 channel-mode calibration checkpoint]] - Applied calibration of 3 automatic-recent, 17 explicitly selected, and 150 metadata-only channels; its historical no-acquisition boundary was later superseded by the exact P35-W5/P35-W6 approvals.
+- [[_outputs/semantic-ingest/p35/source-bundle|P35 supervised-run source bundle]] - P35 completes the ten-source B57D semantic comparison: one new reusable practice, three extensions, one corroborating evidence role, five `registered-only` sources, and no open semantic decision.
+- [[_outputs/youtube-intelligence/p35/w6-checkpoint|P35-W6 activation and run checkpoint]] - Recurring L1/L2 activation plus completed W6R2 and W6R4 semantic drains; metadata coverage is 119/171, the semantic backlog is zero, and the weekly Windows collector remains uninstalled.
+- [[_outputs/youtube-intelligence/p35/w6r3-semantic-checkpoint|P35-W6R3 consolidated semantic checkpoint]] - Approved 28-row P36–P41 promotion set and completed review of all 96 admitted sources.
+- [[_outputs/semantic-ingest/p42/source-bundle|P42 YouTube W6R4 source bundle]] - P42 completes the first 22-source W6R4 slice: twenty `registered-only`, one duplicate variant, and two approved GTM context-governance extensions from one vendor source.
+- [[_outputs/semantic-ingest/p43-p46-l3-decision-checkpoint-2026-08-19|P43-P46 consolidated L3 checkpoint]] - Approved and applied nine qualified evidence promotions from P43-P46 into seven existing canonical pages.
 
 ## Analysis pages
 
@@ -104,11 +118,13 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 - [[account-based-marketing]] - Named account, pipeline acceleration, and buying committee patterns.
 - [[agentic-prompting]] - Agentic skills, NotebookLM/agent workflows, and task decomposition.
-- [[agentic-systems]] - Controlled agent harnesses connecting loops, tools, context, memory, verification, and recovery.
+- [[agentic-systems]] - Controlled agent harnesses connecting loops, tools, context, memory, verification, recovery, and graduation of stable work into deterministic tooling.
 - [[agent-evaluation]] - Evaluation across outcomes, trajectories, safety, cost, production reliability, and reliability-adjusted task horizons.
+- [[operational-resilience-and-capability-continuity]] - Capability-level resilience across concentration, tacit knowledge, alternatives, and make-or-buy commitments.
 - [[agent-security]] - Threat models and controls for prompt injection, privileged tools, secrets, and incident response.
 - [[mcp-and-tool-access]] - Secure MCP and tool access across authorization, scopes, registries, containment, and observability.
 - [[applied-ai-use-cases]] - Evidence-aware selection of bounded AI workflows with clear verification and escalation.
+- [[ai-assisted-problem-discovery-preflight]] - Permission-bounded comparison of independent automation-problem candidates before human selection and separate implementation approval.
 - [[ai-governance]] - Operational governance connecting accountability, risk tiers, approvals, evidence, and incidents.
 - [[ai-marketing-workflow-assurance]] - Run manifests, evidence ledgers, evaluation gates, and human approval records for AI-assisted marketing workflows.
 - [[ai-work-blueprint]] - Reusable mental and practical blueprint for shaping AI work through a spec, verifier, and durable environment.
@@ -148,6 +164,9 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[deep-research-workflows]] - AI deep-research workflows, research prompt anatomy, model comparison, and validation routines.
 - [[db-schenker-brand-guidelines]] - Design identity, logo, typography, color, imagery, social media, and PowerPoint guidance.
 - [[eloqua-email-operations]] - Email campaign setup, deliverability checks, and performance reporting.
+- [[enterprise-sales-motion-selection]] - Evidence-led choice between reference-led lighthouse, broader replacement-led, mixed, or insufficient-evidence enterprise selling, with a bounded buyer test and reassessment point.
+- [[focused-talent-recruiting]] - Evidence-led relationship workflow for scarce high-impact roles and two-way work-sample decisions.
+- [[full-funnel-media-role-and-evidence-map]] - Stage-level media planning that connects audience job, channel controls, creative task, observable outcome, evidence class, and the next decision.
 - [[hook-frameworks]] - Source image and concept area for content hooks.
 - [[hp-example-patterns]] - Applied HP reference patterns across briefs, ABM, strategy, media, and ops.
 - [[inbox-processing]] - Periodic triage of captured notes.
@@ -174,6 +193,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[rag]] - Retrieval augmented generation and why the source argues it can fall short.
 - [[raw-sources]] - Immutable source layer for the wiki.
 - [[reasoning-model-prompting]] - Prompting patterns for reasoning models and o-series style workflows.
+- [[reverse-benchmarking-differentiation-workflow]] - Find and test an important category dimension competitors routinely neglect while making trade-offs explicit.
 - [[storytelling-frameworks]] - Campaign, B2B, and thought-leadership storytelling structures.
 - [[strategic-briefs]] - Product, portfolio, value proposition, and GTM positioning briefs.
 - [[synthetic-customer-intelligence]] - AI-generated persona research as hypothesis material.
@@ -182,7 +202,8 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[wiki-linting]] - Quality checks for contradictions, orphan pages, and missing concepts.
 - [[wiki-schema]] - Rules document that guides the agent's wiki behavior.
 - [[wat-framework]] - Workflows, Agents, Tools architecture for separating agent reasoning from deterministic execution.
-- [[writing-guidelines]] - Editorial writing and copywriting guidance.
+- [[writing-guidelines]] - Genre-aware writing, purpose-fit rhetorical form, and accountable revision that separates diagnosis from prescription.
+- [[long-form-narrative-development-workflow]] - Bounded long-form narrative development through premise, theme, outline, continuity, research, complete drafting, differentiated review, and accountable editing.
 
 ## Related pages
 

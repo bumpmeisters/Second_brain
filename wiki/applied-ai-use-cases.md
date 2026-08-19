@@ -10,8 +10,11 @@ sources:
   - https://www.salesforce.com/news/stories/agentic-marketing-teams-announcement/
   - https://openai.com/index/lseg/
   - https://www.warp.dev/blog/rectangle-health-self-improving-ai-teammate
+  - raw/imports/automated-clippings/youtube/UC0C-17n9iuUQPylguM1d-lQ/2026-07-17--uCWKXIyvM_8.md
+  - raw/imports/automated-clippings/youtube/UCbmNph6atAoGfqLoCL_duAg/2026-08-03--xc2NnKThTX0.md
+  - raw/imports/automated-clippings/youtube/UCxBcwypKK-W3GHd_RZ9FZrQ/2026-08-11--Qp5xklyJySI.md
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-08-18
 ---
 
 # Applied AI Use Cases
@@ -134,6 +137,18 @@ Before implementation, write down:
 5. Keep external, financial, sensitive, or production actions approval-gated.
 6. Expand scope only when outcome quality, cost, and exception handling remain acceptable.
 
+## Discover the problem before selecting the workflow
+
+When a team sees automation potential but cannot yet name the right problem, use [[ai-assisted-problem-discovery-preflight]]. It bounds the evidence surface and permissions, produces at least two independent problem candidates, compares importance, leverage, feasibility, containment, and verifiability, and leaves selection or rejection with a named human owner (source: 2026-07-17--uCWKXIyvM_8.md; analysis).
+
+Problem discovery, use-case selection, and implementation are three separate decisions. The discovery output is a candidate set and, if a human selects one, a bounded pilot brief. It does not authorize the agent to implement its own proposal, expand access, connect systems, or take external action. The originating practitioner comparison is anecdotal and does not support claims about named-model superiority, privacy, cost, usage, or business results.
+
+## Translation and physical-ground-truth bottlenecks
+
+Lowering the cost of discovery or production does not remove the rest of the value-delivery system. Evaluate evidence, regulation, distribution, incentives, ownership, and real-world adoption separately; any of them may remain the dominant bottleneck after AI makes an upstream step cheaper (source: 2026-08-03--xc2NnKThTX0.md; practitioner talk; analysis: P40-W6R3-C03).
+
+For scientific design, model confidence, output diversity, and independent model cross-checks can prioritize or challenge candidates but cannot replace external physical ground truth. Include the cost, latency, capacity, and ownership of that ground-truth loop in use-case selection and workflow design. The vendor interview supports this conservative boundary, not its partnership, drug-performance, market, product-superiority, or quantitative outcome claims (source: 2026-08-11--Qp5xklyJySI.md; vendor-practitioner interview; analysis: P41-W6R3-C01).
+
 ## Common failure modes
 
 - Fluent output grounded in stale or fragmented data.
@@ -161,6 +176,7 @@ Before implementation, write down:
 - [[ai-governance]]
 - [[ai-marketing-workflow-assurance]]
 - [[ai-work-blueprint]]
+- [[ai-assisted-problem-discovery-preflight]]
 - [[loop-engineering]]
 - [[context-engineering]]
 - [[marketing-operating-system]]

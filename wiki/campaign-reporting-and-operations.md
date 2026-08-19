@@ -10,8 +10,9 @@ sources:
   - raw/Clippings/🕵🏻‍♂️ ABM KPIs and reports.md
   - raw/Clippings/🕵🏻‍♂️ How to measure ABM (w report templates).md
   - raw/Clippings/How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md
+  - raw/imports/automated-clippings/youtube/UCGtXqPiNV8YC0GMUzY-EUFg/2026-08-04--9zBThLCpPh4.md
 created: 2026-06-03
-updated: 2026-07-28
+updated: 2026-08-16
 ---
 
 # Campaign Reporting and Operations
@@ -41,6 +42,8 @@ Reporting should keep observation, inference, and attribution separate. A signal
 Define attribution and campaign reporting by the decisions they must support: what to stop, continue, test, or fund more heavily. For each reporting view, name the decision owner, decision cadence, evidence required, and action threshold. This keeps measurement connected to resource allocation instead of letting it collapse into an internal contest for channel or team credit (source: Navigating the Fog Making Sense of Attribution, Demand, and AI.md; mixed practitioner interview).
 
 This framing does not make an attribution model causally valid. Observed activity, inferred influence, and causal effect remain separate evidence classes; the source contributes a decision-purpose and governance rule, not proof of measurement accuracy.
+
+For media decisions, make that separation operational with [[full-funnel-media-role-and-evidence-map]]. Record the stage job, channel controls, creative task, observable path, and whether the evidence is an observation, proxy, comparison, or supportable causal claim. Platform return and new-to-brand share can help triage, but causal budget claims require a predeclared comparison whose comparability, spillover, timing, and data limits are inspectable (source: 2026-08-04--9zBThLCpPh4.md; transcript 00:01:58–00:08:39).
 
 ## Evidence bundle for niche sponsorships
 
@@ -73,6 +76,7 @@ Historical movement supports bounded planning but does not prove campaign effect
 - [[weekly-funnel-gap-diagnosis-loop]]
 - [[partner-marketing-pilot-and-scale-loop]]
 - [[account-progression-baseline-and-velocity-loop]]
+- [[full-funnel-media-role-and-evidence-map]]
 
 ## Related pages
 

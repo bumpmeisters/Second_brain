@@ -9,8 +9,9 @@ sources:
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/CONCEPTS.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/ce-compound/SKILL.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/ce-compound-refresh/SKILL.md
+  - raw/imports/automated-clippings/youtube/UCWrF0oN6unbXrWsTN7RctTw/2026-08-13--eYrMF9Cht8A.md
 created: 2026-07-15
-updated: 2026-08-08
+updated: 2026-08-18
 ---
 
 # Continual Learning for Agents
@@ -52,6 +53,12 @@ This is durable environment learning, not proof that the underlying model contin
 Use two distinct memory levels. A **learning** records one incident, its context, evidence, provenance, confidence, and resolution. A **pattern** is a more general rule supported by several relevant learnings; it has higher reuse value and higher staleness risk. One successful episode should therefore remain episodic until repeated evidence supports promotion (source: CONCEPTS.md; source: SKILL.md; Compound Engineering learning contracts).
 
 Refresh both levels explicitly with **Keep**, **Update**, **Consolidate**, **Replace**, or **Delete**. Age alone does not establish staleness, and evidence that cannot currently be verified is not automatically false; record the verification gap and contradiction state. For this vault, consolidation, replacement, and deletion remain reviewable proposals rather than silent maintenance actions. GStack's local learning log adds useful practitioner detail through provenance classes, confidence, and contradiction checks, but it does not bypass the vault's human semantic-promotion gate (source: SKILL.md; historical local analysis record: `wiki/_outputs/semantic-ingest/p30/source-bundle.md`).
+
+## Governed deployment-learning signals
+
+Preserve complete traces and treat edits, retries, reversals, ignored recommendations, and explicit corrections as separate candidate signals. Replay representative real tasks through the actual harness before adopting a lesson, then route the proposed change by persistence scope: a repeated tool failure is not a user preference, and one person's preference is not global policy. Preserve the raw trace and decision provenance so a later correction can be reversed (source: 2026-08-13--eYrMF9Cht8A.md; vendor interview; analysis: P40-W6R3-C02).
+
+This is an external governed-learning pattern, not evidence that the vendor's product learns safely, improves automatically, protects privacy, or transfers every correction into durable performance.
 
 ## Verification queue
 

@@ -8,8 +8,10 @@ output: "A visible delegation queue with ownership, state, evidence, review hist
 sources:
   - raw/Clippings/A Practical AI Agent Workflow For Companies In 2027 (Guide).md
   - raw/Clippings/L8 Principal's Agentic Engineering Setup (just copy him).md
+  - raw/imports/automated-clippings/youtube/UC08Fah8EIryeOZRkjBRohcQ/2026-08-12--8WppW2ImqMw.md
+  - raw/imports/automated-clippings/youtube/UCPjNBjflYl0-HQtUvOx0Ibw/2026-08-12--EzQAgnjTq2k.md
 created: 2026-07-26
-updated: 2026-08-01
+updated: 2026-08-18
 ---
 
 # Shared Human-Agent Delegation Queue
@@ -43,6 +45,17 @@ Use when people delegate repeated, bounded work to agents and need to see what i
 When several independent tasks or projects run concurrently, keep one human-facing supervisor responsive. The supervisor captures work, resolves the relevant project and context, delegates a bounded task to one named worker, monitors visible state, and returns to the human only when a decision is genuinely ambiguous or a defined exception occurs. Routing rules and trust should expand gradually from reviewed traces rather than from tool usage alone (source: L8 Principal's Agentic Engineering Setup (just copy him).md; analysis: P29-W3-C15).
 
 Each delegated task still needs a finish line, allowed tools, evidence, and escalation rule. Parallelize only work that is independently executable; tightly sequential work remains in one evolving context. Consequential choices stay with the accountable human, and the queue must preserve enough state to inspect a worker directly when progress or behavior is abnormal.
+
+For concurrent work in one repository, give every worker a separate worktree or equivalent working copy so changes do not collide. Keep worker state and material resource use visible, and define the events that enter the human-facing queue—at minimum blocked, action-needed, and completed. Record those transitions in the audit trail rather than relying on a transient chat notification (source: 2026-08-12--8WppW2ImqMw.md; vendor demonstration; analysis: P35-W5-C01).
+
+This source demonstrates a supervision shape, not the featured product's reliability, privacy, security, scale, or productivity. Isolation and event routing still require scoped permissions, repository safeguards, and accountable review.
+
+## Bounded queue observer
+
+As the queue scales, a bounded observer may inspect traces for repeated corrections, duplicate work, missing context, and permission friction. It should produce evidence-linked proposals—such as a verifier, template, routing rule, or access review—rather than silently changing permissions, autonomy, or task ownership. Consequential decisions stay with the accountable human (source: 2026-08-12--EzQAgnjTq2k.md; mixed practitioner interview; analysis: P39-W6R3-C03).
+
+Agent-count, autonomy, productivity, and business-outcome claims from the source are excluded.
+
 ## Output
 
 A visible work queue with ownership, state, evidence, review history, and reusable learning.
