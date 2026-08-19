@@ -1,3 +1,15 @@
+# Keep repository text canonical and independent of each contributor's Git config.
+* text=auto eol=lf
+
+# Protected source libraries retain their existing byte/check-out behavior.
+# Their mixed historical SHA-256 baselines require a separate reviewed migration.
+raw/** !text !eol
+research/assets/** !text !eol
+
+# Native Windows command launchers use the platform-native convention.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
 *.doc filter=lfs diff=lfs merge=lfs -text
 *.docx filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
