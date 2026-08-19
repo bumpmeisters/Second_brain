@@ -3,7 +3,7 @@ type: log
 status: active
 sources: []
 created: 2026-05-30
-updated: 2026-06-14
+updated: 2026-08-19
 ---
 
 # Wiki Log
@@ -12,7 +12,7 @@ updated: 2026-06-14
 
 **Sources**: None.
 
-**Last updated**: 2026-06-14
+**Last updated**: 2026-08-19
 
 ---
 
@@ -1898,3 +1898,19 @@ updated: 2026-06-14
   - P42 is complete with 22 approved decisions and recorded Final/Full validation. Standing L3 authority remains disabled.
   - Planned, but did not start, the next exact baseline-coverage continuation and the later elevated weekly-collector installation. A fresh immutable coverage candidate still requires exact approval, and the collector remains absent until baseline completion.
   - The unregistered clipping `raw/Clippings/Your AI Visibility Report Is Mostly Made Up.md` remains intentionally deferred to the regular intake sync; it was not read or modified.
+
+## 2026-08-19 | repository recovery | publish reviewed worktree delta as stacked draft PR
+
+- Sources:
+  - local branch `codex/recover-open-worktree-2026-08-19`
+  - GitHub pull request `#21`
+- Changed:
+  - repository commit history
+  - [[log]]
+- Notes:
+  - Split the mixed tracked worktree into six reviewable commits covering line-ending policy, source and semantic governance, newsletter review gates, recurring YouTube intelligence, bounded Content Operating System learning, and the approved coupled wiki/register delta.
+  - Pushed the branch and opened mergeable draft PR `#21` against `codex/recover-newsletter-nuggets`. This stack preserves the six-file dependency on draft PR `#19`; PRs `#19` and `#20` were not changed.
+  - Local validation passed: line-ending policy, newsletter pipeline, 37 YouTube Python tests plus PowerShell contracts, 19 semantic-package generator assertions, 27 semantic-package validator assertions, clipping intake, final whitespace checks, and Fast wiki integrity with zero errors or warnings.
+  - Kept 1,312 untracked local files outside the commits: 814 under `raw/`, 486 under `wiki/_outputs/`, ten under `tmp/`, one under `ME/`, and one under `research/`. No excluded source or output was read, modified, staged, or published during repository recovery.
+  - Historical mixed line endings remain an explicit audit finding and were not normalized. No new semantic claim, source approval, promotion authority, automation, schedule, or external publication authority was introduced.
+  - The remaining repository task is to merge or otherwise resolve PR `#19`, retarget PR `#21` to `main`, and then run the GitHub check and final review against that base.
