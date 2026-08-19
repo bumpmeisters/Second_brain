@@ -1,62 +1,80 @@
 {
-  "schema_version": 1,
-  "policy_version": "2026-08-14.1",
-  "owner": "Rolf",
-  "single_user": true,
-  "paths": {
-    "clippings": "raw/Clippings",
-    "subscription_fixture": "wiki/_outputs/youtube-subscriptions-2026-08-04.json"
-  },
-  "clipper": {
+  "schema_version": "youtube-intelligence/v1",
+  "lookback_days": 60,
+  "default_channel_mode": "metadata-only",
+  "channel_modes": [
+    "metadata-only",
+    "recent-transcripts",
+    "sampled-recent",
+    "selected-videos",
+    "full-history",
+    "paused"
+  ],
+  "caption_languages": ["de", "en"],
+  "max_transcripts_per_run": 100,
+  "min_transcript_words": 30,
+  "min_coverage_ratio": 0.7,
+  "source_inbox_prefix": "inbox/raw/automated-clippings/youtube",
+  "source_import_prefix": "raw/imports/automated-clippings/youtube",
+  "state_directory": "wiki/_outputs/youtube-intelligence",
+  "recurring_execution": {
     "enabled": true,
-    "source_field": "source",
-    "transcript_heading": "## Transcript",
-    "minimum_transcript_characters": 200,
-    "risk_acceptance_id": "yt-clipper-residual-risk-2026-08-05",
-    "accepted_by": "Rolf",
-    "accepted_on": "2026-08-05",
-    "private_noncommercial": true,
-    "external_model_processing": false,
-    "pipeline_controls_browser": false,
-    "external_replication_responsibility": "user"
+    "schedule": "weekly-sunday-0700-europe-berlin",
+    "coverage_window_days": 28,
+    "minimum_duration_seconds": 120,
+    "subbatch_limit": 25,
+    "recent_channel_limit": 20,
+    "sampled_channel_limit": 10,
+    "evaluation_channel_limit": 2,
+    "unresolved_semantic_backlog_limit": 100,
+    "initial_live_limit": 10,
+    "initial_live_channel_limit": 3,
+    "open_discovery_share": 0.2,
+    "rate_limit_circuit_breaker": 2,
+    "runtime_limit_minutes": 60
   },
-  "git_custody": {
-    "require_transcripts_untracked": true,
-    "scan_staged_clippings": true
+  "autonomy": {
+    "active_level": "L2",
+    "allowed_levels": ["L0", "L1", "L2", "L3", "L4"],
+    "automatic_downgrade": true,
+    "automatic_upgrade": false,
+    "l2_standing_authority_enabled": true,
+    "l3_wiki_promotion_enabled": false
   },
-  "api": {
-    "live_enabled": false,
-    "expected_authorized_channel_id_environment_variable": "YOUTUBE_EXPECTED_CHANNEL_ID",
-    "access_token_environment_variable": "YOUTUBE_ACCESS_TOKEN",
-    "cache_days": 30,
-    "allowed_methods": [
-      "subscriptions.list",
-      "channels.list",
-      "playlistItems.list",
-      "videos.list"
-    ],
-    "subscription_scope": "https://www.googleapis.com/auth/youtube.readonly",
-    "discovery_lookback_days": 7,
-    "discovery_page_size": 50,
-    "discovery_max_pages_per_channel": 2
+  "control_center": {
+    "enabled": true,
+    "proposal_queue_enabled": true,
+    "bind_host": "127.0.0.1",
+    "port": 8765,
+    "monthly_review_target_minutes": 5,
+    "monthly_review_max_minutes": 30,
+    "audit_random_floor": 3,
+    "audit_risk_floor": 2
   },
-  "review": {
-    "queue_limit": 15,
-    "selection_limit": 5,
-    "handoff_limit": 3
+  "interest_weights": {
+    "b2b-marketing-sales": 15,
+    "applied-ai-agentic": 15,
+    "second-brain-context": 8,
+    "content-linkedin-positioning": 7,
+    "emerging-intersections": 5
   },
-  "calibration": {
-    "metadata_sample_size": 120,
-    "population_sample_size": 100,
-    "channel_supplement_size": 20,
-    "transcript_candidate_limit": 30,
-    "semantic_wave_size": 6
+  "oauth": {
+    "expected_account": "rolfpullrich@gmail.com",
+    "client_secret_environment_variable": "YOUTUBE_INTELLIGENCE_CLIENT_SECRET",
+    "token_environment_variable": "YOUTUBE_INTELLIGENCE_TOKEN",
+    "default_client_secret_directory": "C:/Users/rolfp/.Youtube/OAuuth Client",
+    "default_token_path": "C:/Users/rolfp/.Youtube/youtube-intelligence-token.json"
   },
-  "models": {
-    "discovery_enabled": false,
-    "external_source_processing_enabled": false
-  },
-  "scheduler": {
-    "enabled": false
+  "transcript_acquisition": {
+    "adapter": "yt-dlp-caption-track",
+    "policy_class": "user-approved-non-official-transcript-acquisition",
+    "download_audio": false,
+    "download_video": false,
+    "use_cookies": false,
+    "use_proxy": false,
+    "request_delay_seconds": 2.0,
+    "rate_limit_retry_seconds": 15.0,
+    "rate_limit_retries": 1,
+    "allow_full_history_only_with_command_flag": true
   }
 }

@@ -49,6 +49,7 @@ node_modules/
 
 # Private derived newsletter state (mail bodies remain in Gmail)
 wiki/_outputs/newsletter-intelligence/
+wiki/_outputs/youtube-intelligence/
 .shopify-cli-appdata/
 
 # Local source-derived artifacts and ledgers (publication boundary)

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTube Intelligence Control Center</title>
+  <link rel="stylesheet" href="styles.css?v=11">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">SECOND BRAIN · LOCAL CONTROL PLANE</p>
+      <h1>YouTube Intelligence</h1>
+      <p class="header-subtitle">Überblick, Entscheidungen und manuelle Läufe an einem Ort.</p>
+    </div>
+    <div class="top-actions">
+      <span id="autonomy" class="pill">L0</span>
+      <button id="refresh" class="quiet">Aktualisieren</button>
+      <button id="pause">Pause</button>
+    </div>
+  </header>
+
+  <div id="policy-banner" class="banner" role="status" aria-live="polite"></div>
+  <nav class="jump-nav" aria-label="Bereiche der Seite">
+    <a href="#attention">Jetzt wichtig</a>
+    <a href="#run-control">Neuen Lauf prüfen</a>
+    <a href="#insights">Quellen bewerten</a>
+    <a href="#channels">Kanäle steuern</a>
+    <a href="#runs">Verlauf</a>
+  </nav>
+  <main>
+    <section id="attention" class="panel attention-panel">
+      <div class="section-head">
+        <div><p class="eyebrow">DEIN ARBEITSBEREICH</p><h2>Was braucht jetzt deine Aufmerksamkeit?</h2></div>
+        <span id="attention-count" class="pill">Wird geladen</span>
+      </div>
+      <p id="attention-summary" class="lead">Die Pipeline prüft gerade ihren aktuellen Zustand.</p>
+      <div id="attention-actions" class="attention-actions"></div>
+    </section>
+
+    <section id="status">
+      <div class="section-head"><div><p class="eyebrow">ÜBERBLICK</p><h2>Pipeline-Status</h2></div><span id="generated-at" class="muted"></span></div>
+      <div id="metrics" class="metrics"></div>
+    </section>
+
+    <section id="run-control" class="panel">
+      <div class="section-head">
+        <div><p class="eyebrow">ON DEMAND</p><h2>Nächsten Lauf prüfen</h2></div>
+        <button id="inspect-run">Vorschau erzeugen</button>
+      </div>
+      <div class="form-grid">
+        <label>Run-Typ<select id="run-type"><option value="coverage-sweep">Coverage Sweep</option><option value="delta">Delta</option><option value="selected-channels">Ausgewählte Kanäle</option></select></label>
+        <label>Capture-Limit<input id="run-limit" type="number" min="1" max="100" value="100"></label>
+        <label class="wide">Kanal-IDs, kommagetrennt<input id="run-channels" placeholder="nur für ausgewählte Kanäle"></label>
+      </div>
+      <div id="run-preview" class="preview empty-state" aria-live="polite">Noch keine Vorschau. Wähle einen Run-Typ und klicke oben auf „Vorschau erzeugen“.</div>
+      <button id="request-run" class="danger mutation" disabled>Diesen exakten Lauf anfordern</button>
+      <p class="field-help">Damit wird ein unveränderlicher Auftrag angelegt. Die eigentliche Aufnahme erfolgt anschließend durch den Pipeline-Worker.</p>
+    </section>
+
+    <section id="coverage">
+      <div class="section-head"><div><p class="eyebrow">28-TAGE-BASELINE</p><h2>Coverage und Lücken</h2></div><span class="muted">Auch Kanäle ohne eligible Videos erhalten einen Abschlusszustand.</span></div>
+      <div id="coverage-cards" class="cards"></div>
+    </section>
+
+    <section id="insights">
+      <div class="section-head"><div><p class="eyebrow">LETZTE QUELLENPRÜFUNG</p><h2>Was hat Codex in den Videos erkannt?</h2></div><span id="insight-count" class="pill">Wird geladen</span></div>
+      <p class="lead">Hier siehst du nur die semantischen Ergebnisse – keine technischen Capture- oder Metadatenereignisse.</p>
+      <div id="insight-cards" class="cards"></div>
+    </section>
+
+    <section id="audit" class="panel">
+      <div class="section-head"><div><p class="eyebrow">ADAPTIVE STICHPROBE</p><h2>Wiki-Änderungen prüfen</h2></div><button id="load-audit">Stichprobe laden</button></div>
+      <p class="muted">Mindestens drei zufällige und zwei risikobasierte Karten; bei Bedarf mehr statt eines festen Fünfer-Limits.</p>
+      <div id="audit-cards" class="cards" aria-live="polite"></div>
+    </section>
+
+    <section id="preferences" class="panel">
+      <div class="section-head"><div><p class="eyebrow">ALIGNMENT</p><h2>Interessen und Discovery</h2></div><button id="save-preferences" class="mutation">Für nächsten Lauf speichern</button></div>
+      <p class="lead">Je höher die Gewichtung, desto stärker berücksichtigt Codex das Thema bei der nächsten Auswahl. Das Speichern startet keinen Lauf.</p>
+      <div id="preference-fields" class="form-grid"></div>
+    </section>
+
+    <section id="channels">
+      <div class="section-head"><div><p class="eyebrow">CHANNEL MODES</p><h2>Kanäle und Änderungswarteschlange</h2></div></div>
+      <div class="mode-legend"><span><strong>Automatisch prüfen</strong> – neue passende Videos berücksichtigen</span><span><strong>Stichprobe</strong> – nur eine begrenzte Auswahl prüfen</span><span><strong>Nur ausgewählte Videos</strong> – keine automatische Aufnahme</span><span><strong>Nur Metadaten</strong> – Kanal sichtbar halten, aber keine Transkripte ziehen</span></div>
+      <div class="form-grid panel compact">
+        <label>Welches Limit?<select id="limit-key"></select><span id="limit-help" class="field-help"></span></label>
+        <label>Neuer Wert<input id="limit-value" type="number" min="0" step="0.05"></label>
+        <label>Warum ändern?<input id="limit-rationale" value="Manuelle Kapazitätskalibrierung"></label>
+        <button id="queue-limit" class="mutation">Limit vormerken</button>
+      </div>
+      <div class="channel-toolbar panel compact">
+        <label>Kanäle suchen<input id="channel-search" type="search" placeholder="z. B. Karpathy oder Anthropic"></label>
+        <label>Aktueller Modus<select id="channel-mode-filter"><option value="">Alle Modi</option><option value="recent-transcripts">Automatisch prüfen</option><option value="sampled-recent">Stichprobe</option><option value="selected-videos">Nur ausgewählte Videos</option><option value="metadata-only">Nur Metadaten</option></select></label>
+        <label>Grundabdeckung<select id="channel-coverage-filter"><option value="">Alle Zustände</option><option value="covered">Abgeschlossen</option><option value="in-progress">Noch offen</option><option value="evaluation-pending">Noch nicht begonnen</option></select></label>
+        <span id="channel-count" class="muted"></span>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Kanal</th><th>Modus</th><th>Abdeckung</th><th>Vorschlag</th></tr></thead><tbody id="channel-rows"></tbody></table></div>
+      <button id="show-more-channels" class="quiet">Weitere Kanäle anzeigen</button>
+      <h3>Offene Änderungen</h3>
+      <div id="proposal-cards" class="cards"></div>
+    </section>
+
+    <section id="runs" class="panel">
+      <div class="section-head"><div><p class="eyebrow">VERLAUF</p><h2>Was ist zuletzt passiert?</h2></div></div>
+      <p class="lead">Ergebnisse zuerst, technische IDs nur auf Wunsch.</p>
+      <div id="run-list" class="timeline"></div>
+      <h3>Deine Entscheidungen und Systemänderungen</h3>
+      <div id="event-list" class="timeline"></div>
+    </section>
+  </main>
+  <dialog id="mode-dialog">
+    <form method="dialog">
+      <p class="eyebrow">KANALMODUS ÄNDERN</p>
+      <h2 id="mode-dialog-title">Kanal konfigurieren</h2>
+      <input id="mode-channel-id" type="hidden">
+      <label>Neuer Modus<select id="mode-value"><option value="recent-transcripts">Automatisch prüfen</option><option value="sampled-recent">Stichprobe</option><option value="selected-videos">Nur ausgewählte Videos</option><option value="metadata-only">Nur Metadaten</option><option value="paused">Pausieren</option></select></label>
+      <label>Begründung<input id="mode-rationale" value="Manuelle Kanalkalibrierung"></label>
+      <p class="field-help">Der Vorschlag wird nur vorgemerkt. Er gilt erst nach „Jetzt anwenden“ in der Änderungswarteschlange.</p>
+      <div class="dialog-actions"><button value="cancel" class="quiet">Abbrechen</button><button id="save-mode-proposal" value="default">Vorschlag speichern</button></div>
+    </form>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js?v=11"></script>
+</body>
+</html>
