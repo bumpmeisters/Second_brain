@@ -8,8 +8,9 @@ sources:
   - raw/assets/02_Briefing_Templates/Creative_Briefs/DBS_Creative Brief_template.docx
   - raw/assets/05_Content/Hooks_und_Social_Media/20250512_Hook Framework.png
   - raw/Clippings/1. All files - Recently Uploaded · Maker Zero Claude Code, AI.md
+  - raw/imports/automated-clippings/youtube/UCBmwzQnSoj9b6HzNmFrg_yw/2026-07-21--VnVpfOTYP0E.md
 created: 2026-06-23
-updated: 2026-07-29
+updated: 2026-08-15
 ---
 
 # Creative Prompting for Marketing
@@ -40,6 +41,12 @@ Using AI before independent human ideation may reduce originality, ownership, an
 Copy-ready prompts are in the [Creative Prompting Template Library](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/wiki/_outputs/creative-prompting-template-library.md).
 
 For a film-led commercial microsite, keep the creative sequence explicit: human-approved commercial seed, divergent video concepts, one selected media direction, film-specific narrative and interface design, then human and technical verification. The production contract must preserve approved claims and media custody rather than letting a model invent proof, brand authority, or conversion effects. Use [[video-led-microsite-build-contract]] for the build boundary and acceptance evidence (source: 1. All files - Recently Uploaded · Maker Zero Claude Code, AI.md; sections Prompt 0, Prompt 1, and Prompt 2).
+
+## Brief-test-iterate loop for campaign audio
+
+Treat AI-generated campaign audio as a creative iteration task. Start with a brief that names the project, audience, intended emotional tone, tempo, instruments, and explicit exclusions. Generate several deliberately different directions, choose one, listen for whether the opening seconds create the intended audience response, then feed broad changes back into the brief and narrow changes into the next generation step (source: 2026-07-21--VnVpfOTYP0E.md).
+
+This is a vendor tutorial and a workflow example, not proof of audio quality, brand distinctiveness, campaign performance, or usage rights. Verify licensing and royalty conditions for the exact tool, account, output, and intended use before publication.
 
 ## Open questions
 

@@ -11,8 +11,9 @@ sources:
   - https://www.growthunhinged.com/p/claude-skills-gtm-and-pricing
   - https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/
   - raw/Clippings/Sales Pipeline Radio - Matt Heinz and Jason Yarborough.md
+  - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-08-17--WP3hjUXd918.md
 created: 2026-06-03
-updated: 2026-08-08
+updated: 2026-08-19
 ---
 
 # Context Engineering
@@ -36,6 +37,10 @@ The production-agent clippings add three operational verbs: **reduce** irrelevan
 Context quality depends not only on what is present, but also on the path by which the working conversation arrived there. Repeated corrections followed by superficial agreement can indicate a contaminated trajectory: earlier assumptions may still shape later reasoning even when the model appears to concede. In that case, stop repairing the same session. Write a short handoff containing the goal, accepted evidence, constraints, rejected assumptions, and next step, then restart from that curated state (source: [[newsletter-intelligence-week4-2026-07-18]]; AI synthesis of a practitioner interview, with model- and task-specific thresholds excluded).
 
 For long work, use staged compaction between research, design, planning, and execution. Preserve decisions and evidence, not the full conversational residue. This extends the existing reduce–offload–isolate pattern without treating a larger context window as automatically better (source: [[newsletter-intelligence-week4-2026-07-18]]).
+
+## Choose the context strategy from measured constraints
+
+Choose among full history, staged compaction, retrieval, and file browsing from the actual constraint set: model context capacity, available hardware, cache economics, task-specific recall needs, and measured latency. Do not compact by default or treat one retrieval method as universally superior; test the smallest strategy that preserves the evidence and decisions the task must recall (source: 2026-08-17--WP3hjUXd918.md; practitioner evidence; analysis: P43-W6R5-C02).
 
 ## Separate durable method from current evidence
 

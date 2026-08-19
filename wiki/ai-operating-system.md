@@ -23,8 +23,10 @@ sources:
   - https://www.dwarkesh.com/p/era-of-continual-learning
   - https://arxiv.org/abs/2604.27003
   - https://proceedings.mlr.press/v330/abbes26a.html
+  - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-08-14--Ot4OPrPH4xY.md
+  - raw/imports/automated-clippings/youtube/UC2UXDak6o7rBm23k3Vv5dww/2026-07-26--sbmP6i-MChk.md
 created: 2026-06-11
-updated: 2026-08-14
+updated: 2026-08-18
 ---
 
 # AI Operating System
@@ -72,6 +74,12 @@ For asynchronous delegated work, use one persistent task surface shared by peopl
 
 The source's revenue, productivity, token-usage, security, and named-product claims are not treated as validated outcomes.
 
+## Rent or own recurring web context
+
+Use external search or context services for variable, ad-hoc questions where broad coverage and low setup cost matter. Reassess an owned collection and retrieval layer when the same entities and questions recur and freshness, coverage, repeated retrieval cost, scope-cutting, permission, or reliability becomes material. A hybrid arrangement can be appropriate: rent broad discovery while owning the narrow context that repeatedly drives decisions.
+
+Make the decision from a local total-cost comparison that includes collection, schema and entity resolution, access rights and platform terms, reliability, maintenance, retention and deletion, and auditability—not only query price. There is no universal crossover point. The source's vendor test is not a benchmark, and its scale, decay, provider-ranking, one-day-build, zero-cost-retrieval, and fixed 15,000-query claims are excluded (source: 2026-08-14--Ot4OPrPH4xY.md; vendor talk; analysis: P34-W3-C03).
+
 ## Permissioned knowledge scopes
 
 A personal, team and company brain need not become three unrelated systems. They can be governed scopes on one knowledge layer, provided private context remains private and movement across scopes requires an explicit promotion decision. This is a design inference from practitioner examples, not proof of a settled architecture (source: The Rise of the AI Brains clipping; analysis: [[newsletter-practitioner-methods-week3-2026-07-16]]).
@@ -96,6 +104,12 @@ The operating system should support effortful thinking rather than only answer p
 - use active-learning plans and dashboards only when they change practice, not merely record activity.
 
 These are practitioner methods without controlled outcome evidence. Their value is that they improve the interaction pattern without adding new system architecture (source: [A Guide to Thinking With AI](https://wondertools.substack.com/p/5-ways-i-use-ai-to-think-better); analysis: [[newsletter-practitioner-methods-week3-2026-07-16]]).
+
+## Project-backed personal learning loop
+
+Build learning from a source-backed initial plan, adapt it to current knowledge and one concrete project, convert it into an executable checklist, and retain practice artifacts plus decision logs for later reflection. The evidence of learning is improved work and explainable decisions, not dashboard activity or completed tutorials alone (source: 2026-07-26--sbmP6i-MChk.md; practitioner tutorial; analysis: P36-W6R3-C04).
+
+This is a learning-loop extension, not evidence for the source's claimed productivity multiplier, named-product rankings, sponsorship claims, or privacy and automation assurances.
 
 ## Open questions
 

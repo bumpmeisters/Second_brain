@@ -13,8 +13,15 @@ sources:
   - https://www.dwarkesh.com/p/era-of-continual-learning
   - https://arxiv.org/abs/2604.27003
   - https://proceedings.mlr.press/v330/abbes26a.html
+  - raw/imports/automated-clippings/youtube/UC0C-17n9iuUQPylguM1d-lQ/2026-07-08--suY66oTDn0s.md
+  - raw/imports/automated-clippings/youtube/UC1LgjdE6zW3HNWg-IGo2d-Q/2026-07-17--jb-ABR52jZ4.md
+  - raw/imports/automated-clippings/youtube/UC1LgjdE6zW3HNWg-IGo2d-Q/2026-07-21--X9ACSXrN_QA.md
+  - raw/imports/automated-clippings/youtube/UCPjNBjflYl0-HQtUvOx0Ibw/2026-08-05--mD7JpNHLT70.md
+  - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-07-30--o6U_2vd967Y.md
+  - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-07-28--CgsWxRUY5Eo.md
+  - raw/imports/automated-clippings/youtube/UCjNRVMBVI30Sak_p6HRWhIA/2026-08-10--4JYoTE_VKaU.md
 created: 2026-07-01
-updated: 2026-08-14
+updated: 2026-08-19
 ---
 
 # Agentic Systems
@@ -37,6 +44,10 @@ An agentic system is more than a language model with tools. It combines:
 A June 2026 preprint calls the runtime combination of loop, tools, context management, and controls an **agent harness** ([Macedo, 2026-06-08/11](https://arxiv.org/abs/2606.10106)). OpenAI similarly defines agents by model-directed workflow execution and dynamic tool use within guardrails ([OpenAI practical guide, accessed 2026-07-01](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/)).
 
 The distinction from ordinary automation is who chooses the next step. A deterministic workflow follows a fixed path; an agentic system selects actions based on observations and can revise its plan. Deterministic code should still handle steps whose rules are stable and testable (analysis based on the cited sources).
+
+### Graduate stable work into deterministic tooling
+
+Treat the boundary between agentic and deterministic execution as lifecycle-dependent. Use agentic or MCP-mediated interaction to explore an unfamiliar domain, inspect state read-only, prototype a tool, and expose failure modes. When a recurring action path becomes stable and testable, move it into reviewed deterministic code or a bounded tool, and invoke the model only where interpretation remains necessary. Production writes still require sandbox or backup, scoped permissions, verification, and accountable approval. A Revit tutorial supplies the transition example; a second pyRevit MCP tutorial independently corroborates the lifecycle and adds a manual-output-verification reminder; a promotional marketing-agent interview corroborates only the narrower runtime rule. None validates the demonstrated systems as universally safe or effective (source: 2026-07-17--jb-ABR52jZ4.md; practitioner tutorial; analysis: P32-W9-C01; source: 2026-07-21--X9ACSXrN_QA.md; practitioner tutorial; corroborating analysis: P35-W5-C03; source: 2026-08-05--mD7JpNHLT70.md; promotional practitioner interview; corroborating analysis: P32-W9-C02).
 
 ## Reference architecture
 
@@ -108,6 +119,8 @@ A lead agent delegates separable work to specialist agents, then synthesizes res
 
 One agent creates or changes an artifact while another judges it against explicit criteria. This is useful when verification benefits from a clean context or specialist rubric, but evaluator reliability must itself be tested ([Anthropic, 2026-03-24](https://www.anthropic.com/engineering/harness-design-long-running-apps)).
 
+Apply verification independently of role or model status: inspect the artifact rather than trusting a worker's completion report, and subject controller-authored changes to the same checks. Because evaluators can also be wrong, preserve the authoritative specification, the disputed evidence, and a challenge-and-adjudication path before accepting or rejecting the work. A practitioner website-build report illustrates worker shortcuts, a controller defect, and an incorrect verifier rejection, but does not independently establish the reported cost, speed, accessibility, or quality outcomes (source: 2026-07-08--suY66oTDn0s.md; anecdotal practitioner evidence; analysis: P32-W4-C03).
+
 ### Recursive delegation
 
 A parent harness can create bounded workers for fine-grained, context-heavy subtasks. A June 2026 preprint reports gains on one long-context benchmark with the model backbone held fixed, but the result remains task-specific and needs replication ([Lumer et al., 2026-06-11](https://arxiv.org/abs/2606.13643)).
@@ -161,7 +174,17 @@ Minimum production controls:
 6. require human approval for high-impact side effects;
 7. turn production failures into regression cases.
 
+For agent-assisted performance changes, bind each runtime observation to the exact deployed code and configuration version, propose one bounded change, and accept it only after canary evidence and accountable human approval. Convert confirmed failure patterns into versioned regression cases; reuse them across services only after checking that the same mechanism and operating conditions apply (source: 2026-07-28--CgsWxRUY5Eo.md; practitioner interview; analysis: P43-W6R5-C01).
+
 ## Current evidence and uncertainty
+
+### Bounded agents inside event-driven systems
+
+In an existing event-driven system, keep clear cases in deterministic rules or models. Project only the minimum cross-domain event data into a read-optimized, time-bounded context layer; route ambiguous cases to bounded agents; and write the reviewed verdict back as an auditable event. This preserves an inspectable deterministic spine around agent judgment. The source is a synthetic architecture demonstration, not evidence for its accuracy, consensus, latency, fraud-detection, or production-readiness claims (source: 2026-07-30--o6U_2vd967Y.md; practitioner demonstration; analysis: P39-W6R3-C01).
+
+### Demand-informed memory maintenance
+
+Treat memory maintenance as a governed service informed by actual retrieval demand. Record questions, returned answers, provenance, misses, and retrieval effort; use repeated demand and friction to propose reorganization or consolidation; retain access to raw ground truth; and enforce private, team, and shared scopes outside the model's discretion. This is an architecture proposal from a vendor interview, not proof of performance, cost reduction, privacy, or automatic self-improvement (source: 2026-08-10--4JYoTE_VKaU.md; vendor interview; analysis: P40-W6R3-C06).
 
 - Recent preprints show that harness changes can materially change benchmark performance without changing the model, but several results await code release or independent replication ([HarnessX, 2026-06-12](https://arxiv.org/abs/2606.14249); [Recursive Agent Harnesses, 2026-06-11](https://arxiv.org/abs/2606.13643)).
 - Vendor architecture reports provide valuable primary evidence about deployed systems, but their effect sizes are product-specific and sometimes based on internal evaluations.

@@ -8,8 +8,9 @@ output: "A documented coverage-gap list that can become a brief, refresh plan, c
 sources:
   - raw/Clippings/Dave Gerhardt on Marketing Leadership and Team Building.md
   - raw/Clippings/How to create awareness among strategic accounts 2.md
+  - raw/imports/automated-clippings/youtube/UCKmFUXhOuINEkFlgnXOOEig/2026-06-16--xGDgK1LpTwU.md
 created: 2026-07-26
-updated: 2026-07-28
+updated: 2026-08-16
 ---
 
 # Buyer Question Coverage Checklist
@@ -37,6 +38,10 @@ Use during content planning, audit, briefing, or pre-publication review for cons
 - **Role-specific validation**: Can finance, procurement, legal, users, and other validators answer their material questions?
 - **Champion evidence**: Is there a concise, credible evidence set that can be reused in the buyer's internal decision?
 - **Next step**: Can the buyer continue evaluation without unnecessary friction?
+
+## Commercial explainer sequence
+
+For a commercial explainer or Video Sales Letter, make the persuasive sequence inspectable. Explicitly connect the intended audience and problem to useful teaching, the offer, verifiable proof, material objections and alternatives, price or other trade-offs, fit and non-fit, and a low-friction next step. Keep education and selling legible, and do not treat testimonials, engagement, or the sequence itself as causal proof (source: 2026-06-16--xGDgK1LpTwU.md; vendor walkthrough; analysis: P32-W8-C01).
 
 ## Output
 

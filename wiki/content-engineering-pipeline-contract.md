@@ -9,8 +9,9 @@ sources:
   - raw/Clippings/How I Do Content Engineering with Claude Code 1.md
   - raw/Clippings/How to automate blog writing with AI from keyword to published  Ryan Law (Ahrefs).md
   - raw/Clippings/AI Writing at Scale Ahrefs’ Step-by-Step Workflow  Ryan Law (Ahrefs).md
+  - raw/imports/automated-clippings/youtube/UCjIMtrzxYc0lblGhmOgC_CA/2026-07-30--jhVKliA9Jpk.md
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-08-16
 ---
 
 # Content Engineering Pipeline Contract
@@ -39,9 +40,10 @@ Use this contract when a team repeatedly produces a content type whose audience,
 4. **Research with provenance.** Produce a source map or research artifact that distinguishes sourced facts, practitioner claims, analysis, and open questions.
 5. **Build and review the outline.** Map every material section to its reader job and supporting evidence. Save the accepted outline before drafting.
 6. **Draft in bounded stages.** Compose from the accepted artifacts, saving each stage output. Resume from the last acceptable artifact after a failure instead of restarting the entire pipeline.
-7. **Verify independently.** Check factual claims, citations, links, internal consistency, genre fit, audience utility, and prohibited content against the original sources and brief. Record unresolved items explicitly.
-8. **Format without changing meaning.** Apply channel and presentation requirements only after the content passes verification; recheck any transformations that could alter claims.
-9. **Require publication approval.** Produce a draft and evidence packet for the accountable human. Publication or external distribution is a separate authorized action.
+7. **Control conversational co-writing state.** When voice or chat is used interactively, restore shared state from the exact current draft rather than a summary when wording matters. Keep uncertain arguments and alternatives in a separate scratchpad; capture the human's rough intent before cleanup; compare the cleaned version with that intent; and move only the accepted text into the draft. Verify quotations and timelines against the original source rather than notes or conversational memory. After every material edit, inspect the live artifact and disclose failed retrieval or unsaved changes instead of implying completion (source: 2026-07-30--jhVKliA9Jpk.md; transcript 00:04:33–00:09:28, 00:13:30–00:20:54, 00:21:28–00:29:50, and 00:35:14–00:44:03).
+8. **Verify independently.** Check factual claims, citations, links, internal consistency, genre fit, audience utility, and prohibited content against the original sources and brief. Record unresolved items explicitly.
+9. **Format without changing meaning.** Apply channel and presentation requirements only after the content passes verification; recheck any transformations that could alter claims.
+10. **Require publication approval.** Produce a draft and evidence packet for the accountable human. Publication or external distribution is a separate authorized action.
 
 The stage sequence synthesizes the sources' research–outline–draft–review–format patterns while preserving their strongest common controls: front-loaded expert direction, saved outputs, source grounding, stage-level restart, and full-text review (sources: How I Do Content Engineering with Claude Code 1.md; How to automate blog writing with AI from keyword to published  Ryan Law (Ahrefs).md; AI Writing at Scale Ahrefs’ Step-by-Step Workflow  Ryan Law (Ahrefs).md).
 
@@ -51,7 +53,7 @@ A versioned packet containing the brief, source map, outline, draft, verificatio
 
 ## Reuse boundaries
 
-The contract does not establish that AI-produced content will rank, be cited, save a fixed amount of labor, or perform commercially. It does not authorize unfamiliar-topic automation, unchecked internal links, unsupported claims, source substitution, or autonomous publication. High-stakes domains require their own specialist, legal, compliance, privacy, and security controls.
+The contract does not establish that AI-produced content will rank, be cited, save a fixed amount of labor, improve through voice interaction, preserve an author's voice automatically, or perform commercially. It does not authorize unfamiliar-topic automation, unchecked internal links, unsupported claims, source substitution, implied completion without artifact verification, or autonomous publication. High-stakes domains require their own specialist, legal, compliance, privacy, and security controls.
 
 ## Related pages
 
