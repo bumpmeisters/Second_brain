@@ -107,3 +107,19 @@
 - Expanded counterfactual reflection training through a concrete failed-test example and preserved the causal finding that suppressing ethics-related workspace patterns removed much of the behavioral gain.
 - Replaced the repeated research-history recap with Rolf's bounded vision for an AI interface that combines source access, partial interpretability signals, intended action, and human approval.
 - Recorded version 0.3.0 at 1,777 words as `in-review`; no publication authority was inferred.
+
+## 2026-08-16 | editorial learning | Adopt bounded episode-to-pattern learning
+
+- Added candidate editorial lessons to the existing Execution Calibration and Content Lifecycle Pilot records instead of creating a global `content-lessons.md` registry.
+- Required exact correction evidence, Rolf's reason, scope, matching prior cases, evidence level, and a re-test condition.
+- Classified one material correction as an `episode`; repeated relevant cases may become a `pattern-candidate`.
+- Required an explicit learning disposition before any voice, audience, channel, framework, workflow, skill, or agent-instruction update.
+- Added later performance re-tests as `supported`, `contradicted`, `inconclusive`, or `not-applicable` without treating performance as proof of voice or causality.
+
+## 2026-08-16 | evolution | Preserve sensing, interviewing, and automation ideas
+
+- Kept the existing `evolution-backlog.md` as the single local Content Operating System backlog.
+- Added `PS-E15` for permitted Audience Signals, selective LinkedIn capture, change detection, and Second Brain matching; rejected the unsupported target that automation should discover `80-90%` of relevant signals.
+- Added `PS-E16` for a triggered Thought Interview and transcript-bounded drafting while avoiding a duplicate mandatory Thought Packet or transcript library.
+- Mapped a central lessons registry and automatic consolidation to `PS-E04` and `PS-E06`, content opportunities to `PS-E01`, pattern learning to `PS-E03` and `PS-E04`, specialist reviewers to `PS-E05`, and a full agent team to `PS-E11`.
+- Activated no queue, monitoring system, scraper, mandatory interview, specialist agent, automated rule promotion, or publication action.

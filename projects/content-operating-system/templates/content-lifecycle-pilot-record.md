@@ -69,6 +69,16 @@ updated: YYYY-MM-DD
 - **Existing patterns, workflows, or Content Cores reused**:
 - **Work that had to be reconstructed**:
 
+## Editorial learning
+
+- **Linked calibration record or exact draft-to-final comparison**:
+
+| Candidate lesson | Correction evidence and Rolf's reason | Maturity | Proposed disposition and target | Re-test condition |
+|---|---|---|---|---|
+| | | episode / pattern-candidate | retain / adopt / defer / reject / replace / merge | |
+
+Do not promote a single edit merely because it is easy to encode. Preserve it as an episode until relevant repetition or an explicit high-confidence decision supports broader reuse.
+
 ## Learning closure
 
 | Finding | Affected object or workflow | Proposed disposition | Owner | Decision or next review |

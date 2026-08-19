@@ -51,6 +51,7 @@ For the first two real end-to-end Content Operating System runs, create a source
 - Assign a `variant_id` to each separately publishable asset or one explicit bundle ID to a fingerprint-governed bundle.
 - **4C - Editorial review:** use `frameworks/execution/editorial-quality-rubric.md` and record separate findings for truth/evidence, direction fidelity, audience/job fit, content distinctiveness, voice recognition, and craft/channel expression.
 - **4D - Human ownership:** Rolf records `recognisably-mine`, `usable-after-revision`, `not-mine`, or `held`. Only `recognisably-mine` can support `approved-not-published`.
+- **4E - Editorial learning:** compare material AI-proposed expression with Rolf's accepted change or rejection. Record each reusable candidate with its source version, reason, scope, matching prior cases, evidence level, and re-test condition. One case remains an `episode`; repeated relevant cases may become a `pattern-candidate`. No candidate changes a stable rule without an explicit learning decision.
 - Apply a Share Test only when sharing is an explicit asset job.
 - Register the actual state.
 
@@ -67,6 +68,7 @@ For the first two real end-to-end Content Operating System runs, create a source
 
 - Create a Performance Record only for a published variant.
 - Separate observed signal, interpretation, alternative explanations, comparability limits, and proposed learning.
+- Re-test any applicable candidate lesson or promoted pattern as `supported`, `contradicted`, `inconclusive`, or `not-applicable`; performance cannot prove voice or causality.
 - Decide `adopt`, `defer`, `reject`, `replace`, or `merge` through the relevant owner.
 
 **Gate 6:** Performance creates a bounded learning disposition; it never automatically changes evidence, context, claims, frameworks, or strategy.

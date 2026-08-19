@@ -2,16 +2,17 @@
 type: system-evolution-backlog
 status: active
 project: content-operating-system
-version: 0.4.0
+version: 0.4.1
 decision_owner: Rolf Posselt
 review_cadence: quarterly-and-triggered
 next_scheduled_review: 2026-10-05
 created: 2026-07-24
-updated: 2026-08-01
+updated: 2026-08-16
 sources:
   - user-approved Publishing System v0.2 implementation plan, 2026-07-24
   - user-approved Personal Take Checkpoint plan, 2026-07-24
   - user-approved Execution Calibration Layer, 2026-08-01
+  - user-approved editorial-learning implementation and backlog preservation, 2026-08-16
 ---
 
 # Content Operating System Evolution Backlog
@@ -99,11 +100,11 @@ Every review records the date, evidence considered, decision, rationale, owner, 
 - **Idea**: Add structured channel signals, qualitative feedback, content characteristics, disposition, and learning fields.
 - **Benefit**: Supports evidence-led portfolio and production decisions across publications.
 - **Current judgment**: `merge`.
-- **Adopted now**: A minimal Performance Record that references a published variant and separates observation, interpretation, alternative explanations, comparability limits, and a governed learning disposition.
-- **Still deferred**: Cross-channel analytics, dashboards, benchmarks, optimization rules, and automated promotion.
+- **Adopted now**: A minimal Performance Record that references a published variant and separates observation, interpretation, alternative explanations, comparability limits, and a governed learning disposition; content-specific candidate editorial lessons recorded as episodes inside existing calibration or pilot records; and explicit later re-tests of applicable lessons or patterns.
+- **Still deferred**: A central lessons registry, cross-channel analytics, dashboards, benchmarks, optimization rules, automated consolidation, and automated promotion.
 - **Risk if implemented early**: Produces empty fields, false comparability, and activity-metric optimization before a usable sample exists.
-- **Activation trigger**: At least ten variants have been published and comparable signals exist for the relevant channels.
-- **Evidence needed**: Publication records, available platform data, qualified feedback, comparability limits, and decisions the data should inform.
+- **Activation trigger**: At least ten variants have been published with comparable channel signals, or at least five candidate editorial lessons recur across three assets and create a documented retrieval, conflict, or consolidation problem.
+- **Evidence needed**: Publication records, candidate lessons and exact correction evidence when applicable, available platform data, qualified feedback, comparability limits, retrieval or conflict failures, and the decisions the expanded schema should inform.
 - **Earliest review**: On trigger or 2026-10-05.
 - **Next review**: 2026-10-05.
 - **Decision history**: Initial deferral approved on 2026-07-24; minimal record merged into the Content Operating System object contract on 2026-07-26 while the analytics layer remains deferred.
@@ -123,6 +124,7 @@ Every review records the date, evidence considered, decision, rationale, owner, 
 ### PS-E06 - Production automation
 
 - **Idea**: Automate bounded transformations, status checks, or review preparation within the existing publication authority.
+- **Candidate automations to preserve**: exact draft-to-final diff preparation, candidate-lesson extraction, permitted audience-source intake, signal deduplication, and review-packet assembly. Each remains proposal-only and must preserve source versions and human decisions.
 - **Benefit**: Reduces repetitive execution after the manual workflow is stable.
 - **Current judgment**: `continue-deferred`.
 - **Risk if implemented early**: Scales unstable fields, bypasses judgment, or creates drafts and state changes that are difficult to audit.
@@ -228,6 +230,32 @@ Every review records the date, evidence considered, decision, rationale, owner, 
 - **Next review**: After two calibrated runs or 2026-10-05, whichever comes first.
 - **Decision history**: Adopted by direct user instruction on 2026-08-01 after the first pilot exposed a severe false-positive review.
 
+### PS-E15 - Audience-signal radar and Second Brain matching
+
+- **Idea**: Collect qualified signals from permitted public sources and selectively captured LinkedIn material, detect changes, repeated objections, disputed assumptions, operative problems, and audience language, then match those signals against existing Second Brain knowledge before proposing a Content Opportunity.
+- **Operating boundary**: LinkedIn starts as `human trigger, machine processing` through a URL, screenshot, or permitted export. Other sources may be discovered automatically only when access, rights, provenance, and retention are explicit. An external signal can propose a candidate; it cannot become audience truth, a Creative Direction, a draft, or a profile update automatically.
+- **Benefit**: Uses the external world as a query against Rolf's existing knowledge instead of turning trending material into derivative content.
+- **Current judgment**: `continue-deferred`.
+- **Risk if implemented early**: Creates a noisy monitoring feed, prohibited collection, duplicate source custody, unsupported representativeness claims, or maintenance work before signal quality is understood.
+- **Activation trigger**: At least five manually or lawfully captured qualified signals across at least two source classes produce a recorded Content Opportunity or audience decision, or two documented discovery failures show that manual capture is the binding constraint.
+- **Evidence needed**: Exact source and capture route, rights or platform boundary, time spent, deduplication need, signal qualification, Second Brain match quality, false positives, resulting human decision, and the smallest retention fields.
+- **Earliest review**: On trigger or 2026-10-05.
+- **Next review**: 2026-10-05.
+- **Decision history**: Preserved from the Kieran workflow and side-chat review on 2026-08-16; the unsupported target that automation should discover `80-90%` of relevant signals was rejected.
+
+### PS-E16 - Thought interview and transcript-bounded drafting
+
+- **Idea**: Add a triggered Thought Interview that records Rolf's thesis, reasoning, evidence, experience, counterargument, implication, and exact language before personal-authority drafting; constrain the writer to this approved material and the existing evidence boundary.
+- **Relationship to current system**: Extend the Personal Take Checkpoint or Execution Calibration only if real cases show that the approved Direction and expression seed do not capture enough author-owned language. Do not create a parallel global Thought Packet or transcript library by default.
+- **Benefit**: Moves originality upstream, makes author contribution inspectable, and prevents a drafting stage from inventing new opinions, experiences, or arguments.
+- **Current judgment**: `continue-deferred`.
+- **Risk if implemented early**: Duplicates Direction, Personal Take, and calibration records; creates unnecessary interview overhead; or stores sensitive personal material without a clear content decision.
+- **Activation trigger**: Two documented personal-authority drafts introduce unsupported net-new thinking or remain generic despite an accepted Direction, or Rolf explicitly requests an interview for a selected content opportunity.
+- **Evidence needed**: Exact failure or request, missing author inputs, whether a lighter expression seed would suffice, interview effort, resulting draft improvement, privacy and disclosure boundary, and reusable versus asset-specific fields.
+- **Earliest review**: On trigger or 2026-10-05.
+- **Next review**: 2026-10-05.
+- **Decision history**: Preserved from the Alex Lieberman workflow review on 2026-08-16 without adding a new canonical object or mandatory interview stage.
+
 ## 2026-08-01 Deep Research intake mapping
 
 The AI-generated report `research/imports/deep-research-report.md` is retained as a lead set, not as a system specification. Its remaining proposals map to existing triggers rather than creating duplicate backlog objects.
@@ -243,7 +271,24 @@ The AI-generated report `research/imports/deep-research-report.md` is retained a
 | Separate COS repository, universal entity model, SQLite, vector store, custom MCP services, daily commits, and fixed eight-week build | outside current Content OS scope | reject for current design | Reconsider at Second Brain level only after a documented retrieval, scale, privacy, or multi-user failure that existing vault controls cannot solve. |
 | Fixed scoring weights, queue percentages, and confidence numbers | none | reject | A future scoring rule must be derived from a real decision set and calibrated evidence, not copied from the report. |
 
-Immediate adaptation is limited to [[personal-content-audience]] and explicit personal-versus-client audience and voice routing. The full assessment is [[deep-research-assessment-2026-08-01]].
+At the 2026-08-01 checkpoint, immediate adaptation was limited to [[personal-content-audience]] and explicit personal-versus-client audience and voice routing. The full assessment is [[deep-research-assessment-2026-08-01]]; the separately approved 2026-08-16 editorial-learning change is recorded below.
+
+## 2026-08-16 Alex, Kieran, and social-sensing mapping
+
+The reviewed practices are retained by extending existing routes wherever possible. Only the governed candidate editorial-lesson loop is adopted now; no queue, global lessons file, audience radar, specialist-agent team, or automation is activated.
+
+| Practice or idea | Existing route | Current disposition | Reconsideration evidence |
+|---|---|---|---|
+| Draft-to-final comparison and candidate editorial lessons | `PS-E04`; Execution Calibration and Pilot Records | adopt a bounded episode-to-pattern mechanism | Exact correction, Rolf's reason, scope, prior matching cases, explicit disposition, and re-test condition. |
+| Central `content-lessons.md` or automatic rule consolidation | `PS-E04` plus `PS-E06` | continue-deferred | Repeated candidate lessons, documented retrieval burden, stable target fields, conflict handling, and rollback behavior. |
+| Content Opportunity queue using `Unmined Brain`, `Proven for You`, and `Timely Upside` | `PS-E01` | continue-deferred | Five active ideas or two documented prioritization failures. |
+| Platform pattern profiles learned from owned performance | `PS-E03` plus `PS-E04` | continue-deferred | Repeated reviewed formats plus ten comparable published variants; include weak results and confounders. |
+| Functional evidence, audience, distinctiveness, voice, craft, and learning reviewers | `PS-E05`; current Editorial Quality Rubric | keep functions in one workflow; separate agents deferred | Repeated defect categories, review time, and evaluable role contracts. |
+| Full Oracle, interviewer, composer, council, and learning agent team | `PS-E11` | continue-deferred | Stable volume, recurring handoff failures, clean-context benefit, and evaluation sets. |
+| Audience radar, selective LinkedIn capture, and signal-to-knowledge matching | `PS-E15` | continue-deferred | Five useful qualified signals across two source classes or two documented discovery failures, plus a lawful capture path. |
+| Thought Interview and transcript-bounded drafting | `PS-E16` | continue-deferred | Two cases of unsupported net-new thinking or generic drafts despite accepted upstream direction, or explicit request. |
+| Global personal evidence or Onlyness ledger | `PS-E12` | continue-deferred | Five approved takes across two projects or observed reuse and contradiction needs. |
+| Automated capture, diffs, lesson proposals, and review preparation | `PS-E06` | continue-deferred | Ten stable manual runs, repeated cost, exception cases, deterministic checks, and rollback behavior. |
 
 ## Review history
 
@@ -256,3 +301,4 @@ Immediate adaptation is limited to [[personal-content-audience]] and explicit pe
 | 2026-07-28 | PS-E13 | Content OS artifact inventory and umbrella review | `continue-deferred`; preserve Content Architecture as the next framework candidate without promoting source variants or adding a portfolio object | Rolf Posselt | On trigger or 2026-10-05 |
 | 2026-08-01 | PS-E14 | Pilot 1 human feedback, failed Gate 4 AI certification, Kieran Content Taste critique, and external research | `adopt` the bounded Execution Calibration Layer; keep PS-E03, PS-E05, PS-E06, and PS-E11 deferred | Rolf Posselt | After two calibrated runs or 2026-10-05 |
 | 2026-08-01 | AI Personal COS Deep Research | Critical comparison with the current Content OS, two local Kieran source families, and one-pilot maturity | Adopt a provisional audience profile and explicit profile routing; map all remaining architecture ideas to existing triggers or reject them for current scope | Rolf Posselt | After five evidence-bearing conversations, five relevant publications, or an earlier documented failure |
+| 2026-08-16 | Editorial learning and sensing review | Alex Lieberman workflow, Kieran content and performance loops, Content Taste, and the LinkedIn-sensing side chat | Adopt candidate editorial lessons inside existing records; preserve centralized lessons, Audience Radar, Thought Interview, pattern learning, specialist agents, and automation under explicit triggers | Rolf Posselt | On trigger or 2026-10-05 |

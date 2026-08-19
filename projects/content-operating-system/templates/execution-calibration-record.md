@@ -3,9 +3,9 @@ name: Execution Calibration Record
 type: template
 status: template
 project: content-operating-system
-version: 0.1.0
+version: 0.2.0
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-08-16
 ---
 
 # Execution Calibration Record
@@ -93,6 +93,16 @@ Apply [[editorial-quality-rubric]].
 - **Exact changes required:**
 - **Elements explicitly approved:**
 
+## Candidate editorial lessons
+
+Record only material differences between AI-proposed expression and Rolf's accepted change or rejection. Link exact versions when available; do not reconstruct the difference from memory.
+
+| Lesson ID | Source and original behavior | Rolf's change or rejection | Reason and evidence | Proposed scope | Matching prior cases | Evidence level | Proposal | Re-test condition |
+|---|---|---|---|---|---|---|---|---|
+| lesson-01 |  |  |  | asset-only / channel / voice / framework / workflow |  | episode / repeated | retain-as-episode / propose-pattern / merge / reject |  |
+
+A single episode does not update a stable profile, framework, skill, agent instruction, or workflow. Repeated relevant evidence may support a `pattern-candidate`; promotion still requires an explicit learning disposition. Rolf may make an earlier high-confidence proposal, but the reason, scope, and known exceptions must be recorded.
+
 ## Release decision
 
 - **Full draft authorized:** `yes | no | held`
@@ -104,6 +114,7 @@ This record cannot set `approved-not-published` or `published`. Those states req
 
 ## Learning disposition
 
+- **Candidate lesson IDs:**
 - **Finding:**
 - **Scope:** `asset-only | channel | voice | framework | workflow`
 - **Evidence strength:** `weak | moderate | strong`
