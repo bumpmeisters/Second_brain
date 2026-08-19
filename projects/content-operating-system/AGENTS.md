@@ -87,6 +87,14 @@ Use the profiles under `publishing/`. Drafting, approval, publication, and perfo
 
 Use `templates/performance-record.md`. Signals test resonance, usefulness, or execution. They do not automatically validate claims, frameworks, or causality. Structural changes require an explicit evolution decision.
 
+When Rolf materially changes or rejects AI-proposed expression, record a candidate editorial lesson in the applicable Execution Calibration Record or Content Lifecycle Pilot Record. Preserve the original behavior, Rolf's change or rejection, his reason, the proposed scope, prior matching cases, and a re-test condition.
+
+- One incident remains an `episode`; it is not a global voice, channel, or workflow rule.
+- Repeated relevant episodes may become a `pattern-candidate`.
+- An explicit high-confidence decision by Rolf may propose earlier promotion, but the reason and scope must be recorded.
+- Promotion, consolidation, replacement, or rejection requires an explicit learning disposition. Never update `voice-and-style`, an audience profile, a channel profile, a framework, or agent instructions automatically.
+- Later execution or performance may support, contradict, or leave a lesson inconclusive. It does not retroactively prove authorship, causality, or universal applicability.
+
 ## Personal Take Checkpoint
 
 The checkpoint belongs to the Creative Direction because an approved take changes the channel-neutral intellectual core.

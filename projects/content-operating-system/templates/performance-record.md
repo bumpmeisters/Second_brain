@@ -21,6 +21,13 @@ updated: YYYY-MM-DD
 - **URL or evidence**:
 - **Observation window**:
 
+## Prior learning under test
+
+- **Candidate lesson or promoted pattern**:
+- **Why it applies to this variant**:
+- **Expected observable signal, if any**:
+- **Known confounders or non-comparable conditions**:
+
 ## Observed signals
 
 Record channel data, direct feedback, qualified replies, relevant conversations, saves, website behavior, or other observable evidence without interpretation.
@@ -34,6 +41,8 @@ Record channel data, direct feedback, qualified replies, relevant conversations,
 
 ## Learning proposal
 
+- **Prior-learning result:** supported / contradicted / inconclusive / not-applicable
+- **Learning maturity:** retain-as-episode / pattern-candidate / promotion-proposal / replacement-proposal / no-change
 - **Affected object or workflow**:
 - **Proposed change**:
 - **Evidence strength**:
@@ -43,4 +52,4 @@ Record channel data, direct feedback, qualified replies, relevant conversations,
 
 ## Promotion boundary
 
-Confirm that the record does not automatically change evidence, company context, claims, positioning, frameworks, or causal conclusions.
+Confirm that the record does not automatically change evidence, company context, claims, positioning, audience or voice profiles, channel rules, frameworks, agent instructions, or causal conclusions. Performance may qualify a lesson; it cannot prove authorship or make an update self-executing.

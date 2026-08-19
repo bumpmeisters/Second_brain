@@ -3,9 +3,9 @@ framework: content-execution
 domain: execution
 type: composite
 status: draft
-version: 0.2.0
+version: 0.3.0
 created: 2026-07-26
-updated: 2026-08-01
+updated: 2026-08-16
 source-confidence: medium
 ---
 
@@ -53,7 +53,8 @@ Project adaptation: Content Taste contributes interactive coaching and upstream 
 7. Release and produce a full draft using the selected constraints.
 8. Apply [[editorial-quality-rubric]] without collapsing its dimensions into one score.
 9. Record Rolf's human-ownership verdict.
-10. Register each publishable variant and its truthful state; stop before publication unless direct authority is provided.
+10. Compare material AI-proposed expression with Rolf's accepted change or rejection and record candidate editorial lessons as episodes with provenance, scope, and re-test conditions.
+11. Register each publishable variant and its truthful state; stop before publication unless direct authority is provided.
 
 ## Question Engine
 
@@ -69,6 +70,7 @@ Project adaptation: Content Taste contributes interactive coaching and upstream 
 - What evidence, rights, or approval check can block the asset?
 - Which calibration trigger applies, if any?
 - What human-ownership verdict is required before approval?
+- Which material correction, if any, should remain as an episodic learning rather than disappear inside the chat or draft history?
 
 ### Deepening Questions
 
@@ -80,6 +82,7 @@ Project adaptation: Content Taste contributes interactive coaching and upstream 
 - Which expression variable is actually uncertain: opening, density, certainty, rhythm, explanation, or ending?
 - Which positive and negative examples are relevant, and what may transfer from them?
 - Is an external editor needed to separate a craft problem from a voice preference?
+- Does a proposed lesson repeat an earlier correction, and under which comparable conditions?
 
 ### Counter-Questions
 
@@ -102,6 +105,7 @@ Project adaptation: Content Taste contributes interactive coaching and upstream 
 - Accessibility and production review.
 - Execution Calibration using [[execution-calibration-record]].
 - Trusted external-editor review limited to craft and reader experience.
+- Candidate editorial-lesson capture and later re-test.
 
 ## Branching And Stop Rules
 
@@ -114,6 +118,8 @@ Project adaptation: Content Taste contributes interactive coaching and upstream 
 - Stop full-draft production when all micro-samples fail for the same reason; collect better examples or an expression seed.
 - `not-mine` blocks further polishing on the selected route. Only `recognisably-mine` can support `approved-not-published`.
 - Use a Share Test only when sharing is an explicit asset job.
+- Treat one material correction as an episode. Do not generalize it into a voice, channel, framework, or workflow rule without repeated relevant evidence or an explicit high-confidence decision by Rolf.
+- Never let lesson extraction silently edit a stable profile, framework, skill, agent instruction, or approved artifact.
 - Stop after drafting and review unless publication authority is explicit.
 
 ## Evidence Standard
@@ -129,7 +135,7 @@ Execution may paraphrase and compress approved material but may not improve a we
 
 ## Output Contract
 
-Produce one versioned Content Brief with `content_id`, `direction_id`, `brief_id`, bundle boundary, channel, format, purpose, audience, tone, structure, opening approach, next action, invariants, allowed changes, asset plan, production constraints, calibration trigger, review gates, status, and approval record. When calibration is triggered, produce one source-owned working record linked to existing IDs; it receives no new canonical ID and cannot change publication state. Produce one registered `variant_id` per separately publishable asset or one explicit bundle ID when governed as a bundle.
+Produce one versioned Content Brief with `content_id`, `direction_id`, `brief_id`, bundle boundary, channel, format, purpose, audience, tone, structure, opening approach, next action, invariants, allowed changes, asset plan, production constraints, calibration trigger, review gates, status, and approval record. When calibration is triggered, produce one source-owned working record linked to existing IDs; it receives no new canonical ID and cannot change publication state. Record material human corrections as candidate editorial lessons inside the existing working or pilot record rather than a new global lessons registry. Produce one registered `variant_id` per separately publishable asset or one explicit bundle ID when governed as a bundle.
 
 ## Failure Modes
 
@@ -137,7 +143,7 @@ Strategy recreated during drafting, one brief spanning conflicting purposes, gen
 
 ## ContextOps Handoff
 
-Consumes one approved Creative Direction. Produces source-owned briefs, optional calibration records, and assets plus register-ready lineage. Calibration may change expression but not upstream meaning. Publishing consumes exact reviewed assets with human ownership; learning consumes published variants and bounded application evidence.
+Consumes one approved Creative Direction. Produces source-owned briefs, optional calibration records, candidate editorial lessons, and assets plus register-ready lineage. Calibration may change expression but not upstream meaning. Publishing consumes exact reviewed assets with human ownership; learning consumes episodic corrections, published variants, and bounded application evidence. No learning proposal mutates its target automatically.
 
 ## Evaluation Notes
 
