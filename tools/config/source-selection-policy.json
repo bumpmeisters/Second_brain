@@ -2,11 +2,23 @@
   "schema_version": "source-selection/v1",
   "register_path": "wiki/_outputs/source-intake/clipping-dispositions.csv",
   "applies_to_prefixes": [
-    "raw/Clippings/"
+    "raw/Clippings/",
+    "raw/imports/automated-clippings/youtube/"
   ],
   "enforced_from_package_number": 32,
   "required_availability": "available",
   "required_selection_status": "approved-for-semantic-review",
+  "standing_authorities": [
+    {
+      "authority_id": "youtube-p35-l2",
+      "enabled": true,
+      "source_prefix": "raw/imports/automated-clippings/youtube/",
+      "required_manifest_schema": "youtube-intelligence-run/v1",
+      "required_autonomy_level": "L2",
+      "requires_exact_path_and_sha256": true,
+      "decision_actor": "codex-semantic-worker"
+    }
+  ],
   "availability_values": [
     "unknown",
     "available",

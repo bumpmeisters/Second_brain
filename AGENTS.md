@@ -106,17 +106,18 @@ Keep reusable practices as wiki artifacts by default. Promote an artifact to a l
 
 ### Source selection gate
 
-Treat `raw/` as a source archive, never as an automatic ingest queue. The machine-enforced gate currently covers `raw/Clippings/` through `tools/config/source-selection-policy.json` and `wiki/_outputs/source-intake/clipping-dispositions.csv`.
+Treat `raw/` as a source archive, never as an automatic ingest queue. The machine-enforced gate currently covers `raw/Clippings/` and admitted automated YouTube transcripts under `raw/imports/automated-clippings/youtube/` through `tools/config/source-selection-policy.json` and `wiki/_outputs/source-intake/clipping-dispositions.csv`.
 
 - Sync new clipping paths and hashes with `tools/manage-clipping-dispositions.ps1 -Command Sync`. New rows default to `availability: unknown`, `selection_status: pending`, `processing_status: unread`, and `semantic_disposition: pending`.
 - A broad request such as “ingest new clippings” authorizes inventory and a review proposal only. It does not authorize full-body reading or package assignment for every unrepresented file.
 - A user request that names exact sources, or an approved checkpoint containing exact paths and SHA-256 values, may be recorded as `available` and `approved-for-semantic-review` with decision provenance. Do not add or edit an ingest flag in raw frontmatter.
+- A reviewed, enabled standing authority may replace per-source selection approval only for its exact source prefix and only when the semantic package proves the configured autonomy level, policy version, decision actor, run id, run-manifest file hash, and one exact source path/SHA-256 match inside that manifest. Disabled, stale, incomplete, duplicated, or unmanifested authority claims fail closed. The YouTube P35 L2 authority is defined but remains disabled until its separate activation checkpoint.
 - Semantic packages subject to the gate must fail closed unless every clipping has one matching disposition row, the current file hash matches, and the row is `available` plus `approved-for-semantic-review` for that package.
 - Keep selection approval separate from processing outcome and claim promotion. `approved-for-semantic-review` permits reading; it does not endorse the source or any claim.
 - Use `declined` or `deferred` for unread selection outcomes. Use `registered-only` only after full content review, as defined below. Keep decisions dated and reversible so changing goals can trigger deliberate re-review.
 - Do not use unfiltered `raw/` as the default corpus for RAG, embeddings, or question answering. Prefer `wiki/` and approved derived briefs; open a raw source deliberately through its cited path when needed.
 
-The same archive-versus-permission principle applies to all raw source classes. Extend machine enforcement beyond `raw/Clippings/` only with a reviewed source-class policy; binary and research sources retain their existing readiness and trust gates.
+The same archive-versus-permission principle applies to all raw source classes. Extend machine enforcement beyond the prefixes named in the reviewed source-selection policy only with another reviewed source-class policy; binary and research sources retain their existing readiness and trust gates.
 
 When the user asks to ingest one or more sources:
 
@@ -139,6 +140,7 @@ Before changing concept pages:
 
 1. Create or update a package decision ledger with one row per canonical source.
 2. Keep semantic decision, routing, trust class, claim risk, and review status as separate fields.
+   When a decision uses standing authority, also keep decision authority, authority id, actor, autonomy level, policy version, run id, and manifest hash separate. L2 may complete source review and stage promotional proposals, but it may not mutate canonical wiki pages; L3 promotion remains a separate, explicitly enabled authority.
 3. Record original filename and canonical content title separately when body content contradicts the filename.
 4. Build an evidence matrix with one row per durable pattern or claim.
 5. Review the evidence matrix at the end of each wave before promoting claims.
@@ -242,6 +244,20 @@ When the user asks a question:
 5. Offer to save valuable new synthesis as a wiki page.
 
 For high-stakes or time-sensitive topics, verify current external facts before treating them as current.
+
+## Optional chat closeout
+
+After substantial vault changes or a recorded decision, when the work is complete and the user may reasonably close the chat, offer this exact optional copy-and-paste reply:
+
+> Abschlusscheck: Prüfe bitte, ob alle dauerhaft relevanten Entscheidungen, Statusänderungen und übernommenen Erkenntnisse dieses Chats konsistent im Second Brain dokumentiert sind. Übernimm keine bloßen Zwischenstände oder verworfenen Ideen. Dupliziere keine bereits kanonisch dokumentierten Inhalte; aktualisiere oder verlinke stattdessen bei Bedarf die bestehende Stelle.
+>
+> Bereinige veraltete Status- oder Zukunftsformulierungen, die dem aktuellen Entscheidungsstand widersprechen, und berichte kurz, was du geändert hast.
+>
+> Nenne danach nur echte offene Tasks und trenne sie klar von optionalen nächsten Schritten.
+>
+> Starte keine neue Recherche, Automatisierung, Struktur oder Scope-Erweiterung ohne meine Freigabe.
+
+Do not offer it after simple question answering, interim updates, or while required work remains.
 
 ## Local file link contract
 

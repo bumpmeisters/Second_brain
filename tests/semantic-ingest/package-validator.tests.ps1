@@ -21,6 +21,11 @@ function New-Fixture {
     ) | ForEach-Object { New-Item -ItemType Directory -Force $_ | Out-Null }
     Copy-Item (Join-Path $repo 'tools\test-semantic-ingest-package.ps1') (Join-Path $fixtureRoot 'tools\test-semantic-ingest-package.ps1')
     Copy-Item (Join-Path $repo 'tools\config\semantic-ingest-schema.json') (Join-Path $fixtureRoot 'tools\config\semantic-ingest-schema.json')
+    Copy-Item (Join-Path $repo 'tools\config\source-selection-policy.json') (Join-Path $fixtureRoot 'tools\config\source-selection-policy.json')
+    $fixtureSelectionPolicyPath = Join-Path $fixtureRoot 'tools\config\source-selection-policy.json'
+    $fixtureSelectionPolicy = Get-Content -LiteralPath $fixtureSelectionPolicyPath -Raw | ConvertFrom-Json
+    $fixtureSelectionPolicy.standing_authorities[0].enabled = $false
+    $fixtureSelectionPolicy | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $fixtureSelectionPolicyPath -Encoding UTF8
 
     Write-Utf8 (Join-Path $fixtureRoot 'raw\Clippings\a.md') '# Source A'
     Write-Utf8 (Join-Path $fixtureRoot 'raw\Clippings\b.md') '# Source B'
@@ -93,7 +98,7 @@ type: router
         Write-Utf8 (Join-Path $fixtureRoot "wiki\$register") "---`ntype: register`n---`n`n# PTEST-MARKER"
     }
     $manifest = [ordered]@{
-        schema_version = 'semantic-ingest/v1'; package_id = 'P9'; status = 'complete'; schema_path = 'tools/config/semantic-ingest-schema.json'; intake_ledger = 'wiki/_outputs/semantic-ingest/ptest/intake.csv'; decision_ledger = 'wiki/_outputs/semantic-ingest/ptest/decisions.csv'; evidence_matrix = 'wiki/_outputs/semantic-ingest/ptest/evidence-matrix.csv'; source_bundle = 'wiki/source-bundle.md'; expected_source_count = 2; register_updates_required = $true; register_markers = [ordered]@{ 'wiki/index.md' = 'PTEST-MARKER'; 'wiki/sources.md' = 'PTEST-MARKER'; 'wiki/log.md' = 'PTEST-MARKER' }; backlog = [ordered]@{ completed_ledgers = @('wiki/_outputs/semantic-ingest/ptest/decisions.csv'); expected_open_count = 0 }; raw_guard_required = $true; validation = [ordered]@{ validator_version = 'semantic-ingest-validator/2.3'; validated_at = '2026-07-18T00:00:00.0000000Z'; validation_mode = 'Final'; validation_profile = 'Full'; validation_status = 'passed'; decision_ledger_sha256 = $decisionHash; evidence_matrix_sha256 = $matrixHash }
+        schema_version = 'semantic-ingest/v1'; package_id = 'P9'; status = 'complete'; schema_path = 'tools/config/semantic-ingest-schema.json'; intake_ledger = 'wiki/_outputs/semantic-ingest/ptest/intake.csv'; decision_ledger = 'wiki/_outputs/semantic-ingest/ptest/decisions.csv'; evidence_matrix = 'wiki/_outputs/semantic-ingest/ptest/evidence-matrix.csv'; source_bundle = 'wiki/source-bundle.md'; expected_source_count = 2; register_updates_required = $true; register_markers = [ordered]@{ 'wiki/index.md' = 'PTEST-MARKER'; 'wiki/sources.md' = 'PTEST-MARKER'; 'wiki/log.md' = 'PTEST-MARKER' }; backlog = [ordered]@{ completed_ledgers = @('wiki/_outputs/semantic-ingest/ptest/decisions.csv'); expected_open_count = 0 }; raw_guard_required = $true; validation = [ordered]@{ validator_version = 'semantic-ingest-validator/2.5'; validated_at = '2026-07-18T00:00:00.0000000Z'; validation_mode = 'Final'; validation_profile = 'Full'; validation_status = 'passed'; decision_ledger_sha256 = $decisionHash; evidence_matrix_sha256 = $matrixHash }
     }
     $manifest | ConvertTo-Json -Depth 8 | Set-Content (Join-Path $fixtureRoot 'wiki\_outputs\semantic-ingest\ptest\package.json') -Encoding UTF8
     & git -C $fixtureRoot init --quiet
@@ -170,6 +175,24 @@ try {
     Assert-Error 'invalid decision' 'DECISION_INVALID'
 
     New-Fixture
+    $path = Join-Path $fixtureRoot 'wiki\_outputs\semantic-ingest\ptest\decisions.csv'; $rows = Import-Csv $path; $rows | ForEach-Object { $_ | Add-Member -NotePropertyName decision_authority -NotePropertyValue 'human-checkpoint' }; $rows | Export-Csv $path -NoTypeInformation -Encoding UTF8
+    Assert-Error 'partial authority columns' 'DECISION_AUTHORITY_FIELDS_INCOMPLETE'
+
+    New-Fixture
+    $path = Join-Path $fixtureRoot 'wiki\_outputs\semantic-ingest\ptest\decisions.csv'; $rows = Import-Csv $path
+    foreach ($row in $rows) {
+        $row | Add-Member -NotePropertyName decision_authority -NotePropertyValue 'standing-policy'
+        $row | Add-Member -NotePropertyName authority_id -NotePropertyValue 'youtube-p35-l2'
+        $row | Add-Member -NotePropertyName decision_actor -NotePropertyValue 'codex-semantic-worker'
+        $row | Add-Member -NotePropertyName autonomy_level -NotePropertyValue 'L2'
+        $row | Add-Member -NotePropertyName authority_policy_version -NotePropertyValue 'source-selection/v1'
+        $row | Add-Member -NotePropertyName authority_run_id -NotePropertyValue 'fixture-run'
+        $row | Add-Member -NotePropertyName authority_manifest_sha256 -NotePropertyValue ('A' * 64)
+    }
+    $rows | Export-Csv $path -NoTypeInformation -Encoding UTF8
+    Assert-Error 'disabled standing authority' 'STANDING_AUTHORITY_DISABLED'
+
+    New-Fixture
     $path = Join-Path $fixtureRoot 'wiki\_outputs\semantic-ingest\ptest\decisions.csv'; $rows = Import-Csv $path; $rows[0].canonical_content_title = 'a'; $rows | Export-Csv $path -NoTypeInformation -Encoding UTF8
     Assert-Error 'missing title alias' 'TITLE_ALIAS_MISSING'
 
@@ -217,6 +240,15 @@ try {
     New-Fixture
     Add-Content (Join-Path $fixtureRoot 'wiki\source-bundle.md') "`nMissing (source: absent.md)."
     Assert-Error 'missing source citation' 'SOURCE_CITATION_MISSING'
+
+    New-Fixture
+    Add-Content (Join-Path $fixtureRoot 'wiki\source-bundle.md') "`nPath citation (source: raw/Clippings/a.md)."
+    Assert-Passes 'repository-path source citation'
+
+    New-Fixture
+    Write-Utf8 (Join-Path $fixtureRoot 'research\research-note.md') "# Research note"
+    Add-Content (Join-Path $fixtureRoot 'wiki\source-bundle.md') "`n- [[research-note]]"
+    Assert-Passes 'research Obsidian link'
 
     New-Fixture
     $tick = [char]96
@@ -296,9 +328,43 @@ Do not generalize.
 - [[source-bundle]]
 "@
     Assert-Error 'unregistered reusable target' 'REUSABLE_TARGET_NOT_REGISTERED'
+
+    New-Fixture
+    Write-Utf8 (Join-Path $fixtureRoot 'wiki\target.md') @"
+---
+type: workflow
+description: "Fixture workflow."
+use_when: "Fixture use."
+avoid_when: "Fixture exclusion."
+output: "Fixture record."
+---
+
+# Target
+
+Claim (source: a.md; source: b.md).
+
+## Trigger
+
+Use for the fixture.
+
+## Output Contract
+
+A fixture record.
+
+## Do Not Use When
+
+Do not generalize.
+
+## Related pages
+
+- [[source-bundle]]
+"@
+    Write-Utf8 (Join-Path $fixtureRoot 'wiki\reusable-practices-library.md') "---`ntype: library`n---`n`n# Library`n`n## AI work and adoption`n`n- ``wiki/target.md`` `n`n## Admission rule"
+    Write-Utf8 (Join-Path $fixtureRoot 'wiki\reusable-practices-router.md') "---`ntype: router`n---`n`n# Router`n`n## Routing table`n`n| ``wiki/target.md`` | fixture |`n`n## Selection protocol"
+    Assert-Passes 'code-path reusable registration'
 }
 finally {
     if (Test-Path -LiteralPath $fixtureRoot) { Remove-Item -LiteralPath $fixtureRoot -Recurse -Force }
 }
 
-Write-Host 'Semantic-ingest package validator tests passed (24 assertions).'
+Write-Host 'Semantic-ingest package validator tests passed (27 assertions).'

@@ -16,12 +16,39 @@ try {
     Write-Utf8 $source "---`ntitle: Example`nsource: https://www.youtube.com/watch?v=abcDEF12345`n---`n`n## Transcript`n`nUnreviewed body."
     $historicalSource = Join-Path $fixture 'raw\Clippings\Historical.md'
     Write-Utf8 $historicalSource "---`ntitle: Historical`nsource: https://example.com/historical`n---`nReviewed body."
+    $automatedSource = Join-Path $fixture 'raw\imports\automated-clippings\youtube\channel-1\2026-08-14--xyz987ABC12.md'
+    Write-Utf8 $automatedSource "---`ntype: source`nsource_type: youtube-transcript`nsource: https://www.youtube.com/watch?v=xyz987ABC12`n---`n`n## Transcript`n`nAutomated source packet."
 
     & $tool -Command Sync -VaultRoot $fixture | Out-Null
     $register = Join-Path $fixture 'wiki\_outputs\source-intake\clipping-dispositions.csv'
     $row = Import-Csv -LiteralPath $register | Where-Object canonical_source -eq 'raw/Clippings/Example.md'
     if ($row.selection_status -ne 'pending' -or $row.processing_status -ne 'unread') { throw 'New clipping did not default to pending and unread.' }
     if ($row.source_identity -ne 'youtube:abcDEF12345') { throw 'YouTube source identity was not normalized.' }
+    $automated = Import-Csv -LiteralPath $register | Where-Object canonical_source -eq 'raw/imports/automated-clippings/youtube/channel-1/2026-08-14--xyz987ABC12.md'
+    if ($automated.selection_status -ne 'pending' -or $automated.processing_status -ne 'unread') { throw 'Automated YouTube source did not fail closed as pending and unread.' }
+    if ($automated.source_type -ne 'youtube-transcript' -or $automated.source_identity -ne 'youtube:xyz987ABC12') { throw 'Automated YouTube source was not classified correctly.' }
+
+    $automatedHash = (Get-FileHash -LiteralPath $automatedSource -Algorithm SHA256).Hash
+    $manifestPath = Join-Path $fixture 'wiki\_outputs\youtube-intelligence\recurring\fixture-run.json'
+    $manifest = [ordered]@{
+        schema_version = 'youtube-intelligence-run/v1'
+        run_id = 'fixture-run'
+        captured_sources = @([ordered]@{ canonical_source = $automated.canonical_source; sha256 = $automatedHash })
+    }
+    New-Item -ItemType Directory -Path (Split-Path -Parent $manifestPath) -Force | Out-Null
+    $manifest | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $manifestPath -Encoding UTF8
+    $manifestHash = (Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash
+    $selectedJson = @([ordered]@{ canonical_source = $automated.canonical_source; sha256 = $automatedHash }) | ConvertTo-Json -Compress
+    & $tool -Command ConfirmAvailability -VaultRoot $fixture -RunManifest 'wiki/_outputs/youtube-intelligence/recurring/fixture-run.json' -ExpectedManifestSha256 $manifestHash -SelectedSourcesJson $selectedJson -AuthorityId youtube-p35-l2 -Confirm | Out-Null
+    $confirmedAutomated = Import-Csv -LiteralPath $register | Where-Object canonical_source -eq $automated.canonical_source
+    if ($confirmedAutomated.availability -ne 'available') { throw 'Manifested availability was not confirmed.' }
+    if ($confirmedAutomated.selection_status -ne 'pending' -or $confirmedAutomated.processing_status -ne 'unread' -or $confirmedAutomated.semantic_disposition -ne 'pending' -or $confirmedAutomated.package) {
+        throw 'Availability confirmation changed protected disposition state.'
+    }
+    $confirmedAt = $confirmedAutomated.decided_at
+    & $tool -Command ConfirmAvailability -VaultRoot $fixture -RunManifest 'wiki/_outputs/youtube-intelligence/recurring/fixture-run.json' -ExpectedManifestSha256 $manifestHash -SelectedSourcesJson $selectedJson -AuthorityId youtube-p35-l2 -Confirm | Out-Null
+    $replayedAutomated = Import-Csv -LiteralPath $register | Where-Object canonical_source -eq $automated.canonical_source
+    if ($replayedAutomated.decided_at -ne $confirmedAt) { throw 'Availability confirmation was not idempotent.' }
 
     $historicalHash = (Get-FileHash -LiteralPath $historicalSource -Algorithm SHA256).Hash
     $decisionPath = Join-Path $fixture 'wiki\_outputs\semantic-ingest\p31\decisions.csv'
@@ -57,4 +84,4 @@ finally {
     }
 }
 
-Write-Host 'Clipping disposition gate tests passed (7 assertions).'
+Write-Host 'Clipping disposition gate tests passed (12 assertions).'

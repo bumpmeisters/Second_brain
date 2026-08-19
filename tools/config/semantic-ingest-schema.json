@@ -1,6 +1,6 @@
 {
   "schema_version": "semantic-ingest/v1",
-  "validator_version": "semantic-ingest-validator/2.3",
+  "validator_version": "semantic-ingest-validator/2.5",
   "validation_profiles": [
     "Fast",
     "Full"
@@ -29,6 +29,19 @@
     "source_summary",
     "rationale",
     "review_status"
+  ],
+  "decision_authority_fields": [
+    "decision_authority",
+    "authority_id",
+    "decision_actor",
+    "autonomy_level",
+    "authority_policy_version",
+    "authority_run_id",
+    "authority_manifest_sha256"
+  ],
+  "decision_authorities": [
+    "human-checkpoint",
+    "standing-policy"
   ],
   "semantic_decisions": [
     "pending",

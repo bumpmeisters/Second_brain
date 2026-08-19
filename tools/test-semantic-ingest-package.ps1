@@ -49,16 +49,26 @@ function Test-MarkdownFile([string]$RelativePath) {
         Add-Issue error 'LITERAL_NEWLINE_ESCAPE' 'Markdown contains literal escaped line-break pairs.' $RelativePath
     }
     foreach ($match in [regex]::Matches($text, '\[\[([^\]|#]+)')) {
-        $target = 'wiki/' + $match.Groups[1].Value + '.md'
-        if (-not (Test-Path -LiteralPath (Join-Path $vaultRoot $target) -PathType Leaf)) {
+        $linkTarget = $match.Groups[1].Value.Trim()
+        $directTarget = if ($linkTarget.EndsWith('.md', [StringComparison]::OrdinalIgnoreCase)) { $linkTarget } else { $linkTarget + '.md' }
+        $directPath = Join-Path $vaultRoot $directTarget
+        $wikiPath = Join-Path $vaultRoot ('wiki/' + $directTarget)
+        $linkName = [IO.Path]::GetFileNameWithoutExtension($directTarget)
+        if (
+            -not (Test-Path -LiteralPath $directPath -PathType Leaf) -and
+            -not (Test-Path -LiteralPath $wikiPath -PathType Leaf) -and
+            -not $markdownNameIndex.Contains($linkName)
+        ) {
             Add-Issue error 'WIKI_LINK_MISSING' "Wiki link target does not exist: $($match.Groups[1].Value)" $RelativePath
         }
     }
 
     foreach ($match in [regex]::Matches($text, 'source:\s*([^;\r\n]+?\.md)')) {
-        $citation = $match.Groups[1].Value.Trim()
+        $citation = $match.Groups[1].Value.Trim().Trim([char]96)
         if ($citation -match '^\[\[' -or $citation -match '^`?wiki/') { continue }
-        if (-not $sourceNameIndex.Contains($citation)) {
+        $citationPath = Join-Path $vaultRoot $citation
+        $citationName = [IO.Path]::GetFileName($citation)
+        if (-not (Test-Path -LiteralPath $citationPath -PathType Leaf) -and -not $sourceNameIndex.Contains($citationName)) {
             Add-Issue error 'SOURCE_CITATION_MISSING' "Cited source filename does not exist: $citation" $RelativePath
         }
     }
@@ -99,10 +109,10 @@ function Test-ReusablePracticePage(
     if ($text -notmatch '(?m)^##\s+(When to use|Trigger|Use when)\s*$') {
         Add-Issue error 'REUSABLE_TRIGGER_SECTION_MISSING' 'Reusable practice requires a detailed trigger or when-to-use section.' $RelativePath
     }
-    if ($text -notmatch '(?m)^##\s+(Output|Inspectable output)\s*$') {
+    if ($text -notmatch '(?mi)^##\s+(Output(?: contract)?|Inspectable output)\s*$') {
         Add-Issue error 'REUSABLE_OUTPUT_SECTION_MISSING' 'Reusable practice requires an inspectable output section.' $RelativePath
     }
-    if ($text -notmatch '(?m)^##\s+(Guardrails|Reuse boundaries)\s*$') {
+    if ($text -notmatch '(?mi)^##\s+(Guardrails|Reuse boundaries|Do not use when)\s*$') {
         Add-Issue error 'REUSABLE_BOUNDARY_SECTION_MISSING' 'Reusable practice requires guardrails or reuse boundaries.' $RelativePath
     }
 }
@@ -121,11 +131,15 @@ $validatorVersion = $schema.validator_version
 if (-not $validatorVersion) { throw 'Semantic-ingest schema does not define validator_version.' }
 if ($Profile -notin @($schema.validation_profiles)) { throw "Validation profile is absent from the schema: $Profile" }
 $sourceNameIndex = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+$markdownNameIndex = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 if ($Profile -eq 'Full') {
     foreach ($root in @($schema.source_roots)) {
         $rootPath = Join-Path $vaultRoot $root
         if (Test-Path -LiteralPath $rootPath) {
-            foreach ($name in @(Get-ChildItem -LiteralPath $rootPath -Recurse -File | Select-Object -ExpandProperty Name)) { [void]$sourceNameIndex.Add($name) }
+            foreach ($file in @(Get-ChildItem -LiteralPath $rootPath -Recurse -File)) {
+                [void]$sourceNameIndex.Add($file.Name)
+                if ($file.Extension -eq '.md') { [void]$markdownNameIndex.Add($file.BaseName) }
+            }
         }
     }
 }
@@ -197,10 +211,72 @@ $headers = if ($decisions.Count) { @($decisions[0].PSObject.Properties.Name) } e
 foreach ($field in @($schema.decision_fields)) {
     if ($headers -notcontains $field) { Add-Issue error 'DECISION_FIELD_MISSING' "Decision ledger is missing field: $field" $package.decision_ledger }
 }
+$authorityFields = @($schema.decision_authority_fields)
+$authorityHeadersPresent = @($authorityFields | Where-Object { $headers -contains $_ })
+$authorityColumnsEnabled = $authorityHeadersPresent.Count -eq $authorityFields.Count
+if ($authorityHeadersPresent.Count -gt 0 -and -not $authorityColumnsEnabled) {
+    Add-Issue error 'DECISION_AUTHORITY_FIELDS_INCOMPLETE' 'Decision-authority columns are optional for legacy ledgers, but must be present as a complete set when used.' $package.decision_ledger
+}
+
+$standingAuthorities = @{}
+if ($selectionPolicy) {
+    foreach ($authority in @($selectionPolicy.standing_authorities)) {
+        if ($authority.authority_id) { $standingAuthorities[$authority.authority_id] = $authority }
+    }
+}
 
 $decisionBySource = @{}
 foreach ($row in $decisions) {
     $source = $row.canonical_source.Replace('\', '/')
+    $standingAuthorized = $false
+    if ($authorityColumnsEnabled -and -not $row.decision_authority -and @($authorityFields | Where-Object { $_ -ne 'decision_authority' -and $row.$_ }).Count -gt 0) {
+        Add-Issue error 'DECISION_AUTHORITY_VALUE_ORPHANED' 'Authority metadata cannot be present without decision_authority.' $source
+    }
+    if ($authorityColumnsEnabled -and $row.decision_authority) {
+        if ($row.decision_authority -notin @($schema.decision_authorities)) {
+            Add-Issue error 'DECISION_AUTHORITY_INVALID' "Invalid decision authority: $($row.decision_authority)" $source
+        }
+        foreach ($field in @('authority_id', 'decision_actor', 'autonomy_level', 'authority_policy_version')) {
+            if (-not $row.$field) { Add-Issue error 'DECISION_AUTHORITY_VALUE_MISSING' "Decision authority requires a value for: $field" $source }
+        }
+        if ($row.decision_authority -eq 'standing-policy') {
+            if (-not $standingAuthorities.ContainsKey($row.authority_id)) {
+                Add-Issue error 'STANDING_AUTHORITY_UNKNOWN' 'Standing authority is not registered in the source-selection policy.' $source
+            } else {
+                $authority = $standingAuthorities[$row.authority_id]
+                if (-not $authority.enabled) {
+                    Add-Issue error 'STANDING_AUTHORITY_DISABLED' 'Standing authority exists but is disabled.' $source
+                } else {
+                    if (-not $source.StartsWith($authority.source_prefix, [StringComparison]::OrdinalIgnoreCase)) { Add-Issue error 'STANDING_AUTHORITY_SOURCE_SCOPE' 'Source is outside the standing authority prefix.' $source }
+                    if ($row.decision_actor -ne $authority.decision_actor) { Add-Issue error 'STANDING_AUTHORITY_ACTOR_MISMATCH' 'Decision actor does not match the standing authority.' $source }
+                    if ($row.autonomy_level -ne $authority.required_autonomy_level) { Add-Issue error 'STANDING_AUTHORITY_LEVEL_MISMATCH' 'Autonomy level does not match the standing authority.' $source }
+                    if ($row.authority_policy_version -ne $selectionPolicy.schema_version) { Add-Issue error 'STANDING_AUTHORITY_POLICY_MISMATCH' 'Authority policy version is stale or incorrect.' $source }
+                    if (-not $row.authority_run_id) { Add-Issue error 'STANDING_AUTHORITY_RUN_MISSING' 'Standing authority requires an exact run id.' $source }
+                    if ($row.authority_manifest_sha256 -notmatch '^[0-9A-Fa-f]{64}$') { Add-Issue error 'STANDING_AUTHORITY_MANIFEST_HASH_INVALID' 'Standing authority requires an exact manifest SHA-256.' $source }
+
+                    $authorityManifestPath = if ($package.standing_authority) { Resolve-VaultPath $package.standing_authority.run_manifest } else { $null }
+                    if (-not $authorityManifestPath -or -not (Test-Path -LiteralPath $authorityManifestPath -PathType Leaf)) {
+                        Add-Issue error 'STANDING_AUTHORITY_MANIFEST_MISSING' 'Standing authority requires an existing run manifest named in the package.' $source
+                    } else {
+                        $authorityManifestHash = (Get-FileHash -LiteralPath $authorityManifestPath -Algorithm SHA256).Hash
+                        if ($authorityManifestHash -ne $row.authority_manifest_sha256) { Add-Issue error 'STANDING_AUTHORITY_MANIFEST_HASH_MISMATCH' 'Run-manifest file hash does not match the decision ledger.' $source }
+                        try {
+                            $authorityManifest = Get-Content -LiteralPath $authorityManifestPath -Raw | ConvertFrom-Json
+                            if ($authorityManifest.schema_version -ne $authority.required_manifest_schema) { Add-Issue error 'STANDING_AUTHORITY_MANIFEST_SCHEMA' 'Run manifest uses an unauthorized schema.' $source }
+                            if ($authorityManifest.run_id -ne $row.authority_run_id) { Add-Issue error 'STANDING_AUTHORITY_RUN_MISMATCH' 'Run manifest id does not match the decision ledger.' $source }
+                            $manifestSource = @($authorityManifest.captured_sources | Where-Object { $_.canonical_source -eq $source -and $_.sha256 -eq $row.sha256 })
+                            if ($manifestSource.Count -ne 1) { Add-Issue error 'STANDING_AUTHORITY_SOURCE_NOT_MANIFESTED' 'Exact source path and hash are not present once in the run manifest.' $source }
+                            if ($authorityManifest.schema_version -eq $authority.required_manifest_schema -and $authorityManifest.run_id -eq $row.authority_run_id -and $manifestSource.Count -eq 1 -and $authorityManifestHash -eq $row.authority_manifest_sha256) {
+                                $standingAuthorized = $true
+                            }
+                        } catch {
+                            Add-Issue error 'STANDING_AUTHORITY_MANIFEST_INVALID' 'Run manifest is not valid JSON.' $source
+                        }
+                    }
+                }
+            }
+        }
+    }
     if ($source) { $decisionBySource[$source] = $row }
     if (-not (@($schema.source_roots | Where-Object { $source.StartsWith($_, [StringComparison]::OrdinalIgnoreCase) }).Count)) {
         Add-Issue error 'SOURCE_ROOT_INVALID' 'Canonical source is outside allowed source roots.' $source
@@ -223,7 +299,7 @@ foreach ($row in $decisions) {
             $disposition = $dispositionBySource[$source]
             if ($disposition.sha256 -ne $row.sha256) { Add-Issue error 'SOURCE_SELECTION_HASH_MISMATCH' 'Source-selection hash does not match the decision ledger.' $source }
             if ($disposition.availability -ne $selectionPolicy.required_availability) { Add-Issue error 'SOURCE_NOT_AVAILABLE' 'Source is not marked available in the selection register.' $source }
-            if ($disposition.selection_status -ne $selectionPolicy.required_selection_status) { Add-Issue error 'SOURCE_NOT_SELECTION_APPROVED' 'Source is not approved for semantic review.' $source }
+            if ($disposition.selection_status -ne $selectionPolicy.required_selection_status -and -not $standingAuthorized) { Add-Issue error 'SOURCE_NOT_SELECTION_APPROVED' 'Source is not approved for semantic review and has no valid standing authority.' $source }
             if ($disposition.package -and $disposition.package -ne $package.package_id) { Add-Issue error 'SOURCE_SELECTION_PACKAGE_MISMATCH' 'Source-selection package does not match the semantic package.' $source }
         }
     }
@@ -245,6 +321,9 @@ foreach ($row in $decisions) {
         if (-not $row.target_pages) { Add-Issue error 'PROMOTION_TARGET_MISSING' 'Promotional decisions require target pages.' $source }
         if (-not $row.source_summary) { Add-Issue error 'SOURCE_SUMMARY_MISSING' 'Promotional decisions require a source summary.' $source }
         if ($Mode -eq 'Final' -and $row.review_status -ne 'approved') { Add-Issue error 'PROMOTION_NOT_APPROVED' 'Final promotional decisions must be approved.' $source }
+        if ($Mode -eq 'Final' -and $authorityColumnsEnabled -and $row.decision_authority -eq 'standing-policy' -and $row.autonomy_level -eq 'L2') {
+            Add-Issue error 'L2_PROMOTION_FINAL_FORBIDDEN' 'L2 standing authority may stage a promotional proposal in Wave mode but cannot finalize wiki promotion.' $source
+        }
     }
     if ($row.semantic_decision -eq 'registered-only') {
         if ($row.target_pages) { Add-Issue error 'REGISTERED_ONLY_TARGET_PRESENT' 'Registered-only decisions must not name target pages.' $source }
@@ -267,7 +346,8 @@ foreach ($row in $decisions) {
 }
 
 $matrixRows = @($matrix | Where-Object { $_.claim_id -or $_.pattern_or_claim -or $_.source_paths })
-if ($Mode -eq 'Final' -and -not $matrixRows.Count) { Add-Issue error 'EVIDENCE_MATRIX_EMPTY' 'Final package requires at least one evidence row.' $package.evidence_matrix }
+$promotionalDecisionCount = @($decisions | Where-Object { $_.semantic_decision -in @($schema.promotional_decisions) }).Count
+if ($Mode -eq 'Final' -and $promotionalDecisionCount -gt 0 -and -not $matrixRows.Count) { Add-Issue error 'EVIDENCE_MATRIX_EMPTY' 'Final packages with promotional decisions require at least one evidence row.' $package.evidence_matrix }
 if (@($matrixRows.claim_id | Sort-Object -Unique).Count -ne $matrixRows.Count) { Add-Issue error 'CLAIM_ID_DUPLICATE' 'Evidence claim IDs must be unique.' $package.evidence_matrix }
 $coveredSources = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 foreach ($claim in $matrixRows) {
@@ -340,6 +420,8 @@ if ($Mode -eq 'Final' -and $Profile -eq 'Full') {
             $routerNames = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
             foreach ($match in [regex]::Matches($libraryZone, '\[\[([^\]|#]+)')) { [void]$libraryNames.Add($match.Groups[1].Value) }
             foreach ($match in [regex]::Matches($routerZone, '\[\[([^\]|#]+)')) { [void]$routerNames.Add($match.Groups[1].Value) }
+            foreach ($match in [regex]::Matches($libraryZone, '`wiki/([^`]+)\.md`')) { [void]$libraryNames.Add($match.Groups[1].Value) }
+            foreach ($match in [regex]::Matches($routerZone, '`wiki/([^`]+)\.md`')) { [void]$routerNames.Add($match.Groups[1].Value) }
 
             $validatedPracticePaths = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
             foreach ($name in $libraryNames) {
