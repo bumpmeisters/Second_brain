@@ -19,7 +19,7 @@ The installer:
 - is idempotent when the exact profile is already present;
 - does not set `default_permissions`.
 
-The profile extends `:workspace`, enables network access, and allowlists only reviewed public hosts. It does not use `danger-full-access` or a wildcard domain. A new candidate host requires a separate targeted update to both the reviewed template and installed profile.
+The profile extends `:workspace`, enables network access, and allowlists only reviewed public hosts. It does not use `danger-full-access` or a wildcard domain. A new candidate host is one coupled policy change: update the reviewed template, the installed profile, and the exact-domain fixture expectation together; then run the fixture suite before activation. Do not treat a passing preflight as proof that those three representations agree.
 
 ## Activate and test
 

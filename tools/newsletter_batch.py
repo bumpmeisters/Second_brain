@@ -195,7 +195,19 @@ def build_review(proposals_path: Path, output_root: Path, verification_path: Pat
         actions.append({"proposal_id": proposal_id, "action": "undecided", "note": ""})
     lines += [
         "",
-        "Reply with: `1–N übernehmen`, individual corrections, or `zurückstellen`.",
+        "Use one explicit action per item:",
+        "",
+        "- `1 hold akzeptieren` — accept a hold recommendation and close only that verification branch.",
+        "- `1 korrektur: …` — submit a correction without rewriting source history.",
+        "- `1 weitere verifikation` — request a separately gated verification proposal.",
+        "- `1 promotion vorschlagen` — request a concrete promotion proposal, not a wiki write.",
+        "- `1 zurückstellen` — defer the decision without implying approval.",
+        "",
+        "## Gate status",
+        "",
+        "- Current step: review ready; awaiting an explicit action.",
+        "- Overall intent: open until every item is decided.",
+        "- Still unauthorized: new retrieval and durable wiki promotion.",
         "",
         "> No decision in this file authorizes wiki promotion.",
     ]
@@ -203,7 +215,27 @@ def build_review(proposals_path: Path, output_root: Path, verification_path: Pat
     atomic_write(output_root / "chat-review.md", "\n".join(lines))
     atomic_write(
         output_root / "decision-manifest-template.json",
-        json.dumps({"status": "provisional", "actions": actions, "no_automatic_promotion": True}, indent=2),
+        json.dumps(
+            {
+                "status": "provisional",
+                "allowed_actions": [
+                    "accept_hold",
+                    "submit_correction",
+                    "request_verification",
+                    "request_promotion_proposal",
+                    "defer",
+                ],
+                "actions": actions,
+                "gate_status": {
+                    "review_step": "awaiting_explicit_action",
+                    "overall_intent": "open_until_all_items_decided",
+                    "retrieval_authorized": False,
+                    "wiki_promotion_authorized": False,
+                },
+                "no_automatic_promotion": True,
+            },
+            indent=2,
+        ),
     )
     return len(proposals)
 

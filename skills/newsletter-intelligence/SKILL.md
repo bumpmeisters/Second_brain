@@ -42,7 +42,7 @@ Allowed Gmail tools: `gmail_get_profile`, `gmail_search_email_ids` or `gmail_sea
 3. Extract attributed claims and possible downstream implications.
 4. Start a fresh judging pass using `references/signal-judging.md`.
 5. Consolidate repeats while retaining every issue/newsletter identifier.
-6. Verify consequential claims; preserve contradictions and uncertainty.
+6. Verify consequential claims; preserve contradictions and uncertainty. Before an authoritative-source batch, name the alleged boundary, the minimum sufficient evidence, and each candidate's claim-response role. Authority alone does not make a source responsive to the exact claim.
 7. Produce a bounded brief with novelty, relevance, evidence, wiki connections, and possible actions.
 8. Record feedback append-only. Corrections guide later framing but never rewrite history or silently become preferences.
 9. Read `references/validation-contract.md`; run the hard pipeline gates and report repository health separately before assigning a completion status.
