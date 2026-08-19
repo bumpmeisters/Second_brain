@@ -2,7 +2,7 @@ $ErrorActionPreference="Stop"
 $repo=Resolve-Path (Join-Path $PSScriptRoot "..\..")
 $vault=Join-Path $repo ".tmp\source-inbox-vault"
 if(Test-Path $vault){Remove-Item -Recurse -Force $vault}
-New-Item -ItemType Directory -Force (Join-Path $vault "tools\config"),(Join-Path $vault "inbox\raw\nested"),(Join-Path $vault "inbox\research"),(Join-Path $vault "raw\assets"),(Join-Path $vault "research\assets")|Out-Null
+New-Item -ItemType Directory -Force (Join-Path $vault "tools\config"),(Join-Path $vault "inbox\raw\nested"),(Join-Path $vault "inbox\raw\automated-clippings\youtube\channel-1"),(Join-Path $vault "inbox\research"),(Join-Path $vault "raw\assets"),(Join-Path $vault "research\assets")|Out-Null
 Copy-Item (Join-Path $repo "tools\import-source-inbox.ps1") (Join-Path $vault "tools\import-source-inbox.ps1")
 Copy-Item (Join-Path $repo "tools\config\source-inbox-policy.json") (Join-Path $vault "tools\config\source-inbox-policy.json")
 $archiveFixture=Join-Path $vault "archive-fixture.txt";Set-Content -Encoding UTF8 $archiveFixture "immutable repository snapshot"
@@ -17,10 +17,11 @@ $testPolicy|ConvertTo-Json -Depth 8|Set-Content -Encoding UTF8 $testPolicyPath
 $runner=Join-Path $vault "tools\import-source-inbox.ps1"
 try{
  Set-Content -Encoding UTF8 (Join-Path $vault "inbox\raw\nested\one.docx") (("one content "*30).Trim())
+ Set-Content -Encoding UTF8 (Join-Path $vault "inbox\raw\automated-clippings\youtube\channel-1\video.md") "---`nsource_type: youtube-transcript`n---`nTranscript"
  Set-Content -Encoding UTF8 (Join-Path $vault "inbox\research\report.md") "# AI research"
  $result=& $runner -VaultRoot $vault -StabilitySeconds 0 -SkipConversion|ConvertFrom-Json
- if($result.admitted -ne 3 -or $result.quarantined -ne 1){throw "Valid inbox files or repository archive integrity checks were not handled correctly."}
- if(-not(Test-Path (Join-Path $vault "raw\assets\nested\one.docx")) -or -not(Test-Path (Join-Path $vault "raw\assets\nested\approved-repository.zip")) -or -not(Test-Path (Join-Path $vault "research\imports\report.md"))){throw "Inbox paths were not preserved."}
+ if($result.admitted -ne 4 -or $result.quarantined -ne 1){throw "Valid inbox files or repository archive integrity checks were not handled correctly."}
+ if(-not(Test-Path (Join-Path $vault "raw\assets\nested\one.docx")) -or -not(Test-Path (Join-Path $vault "raw\assets\nested\approved-repository.zip")) -or -not(Test-Path (Join-Path $vault "raw\imports\automated-clippings\youtube\channel-1\video.md")) -or -not(Test-Path (Join-Path $vault "research\imports\report.md"))){throw "Inbox paths were not preserved."}
  if(-not(Test-Path (Join-Path $vault "inbox\_quarantine\integrity\raw\nested\bad-repository.zip"))){throw "Repository archive with mismatched SHA-256 was not quarantined."}
  $originalHash=(Get-FileHash (Join-Path $vault "raw\assets\nested\one.docx")).Hash
  Copy-Item (Join-Path $vault "raw\assets\nested\one.docx") (Join-Path $vault "inbox\raw\nested\one.docx")

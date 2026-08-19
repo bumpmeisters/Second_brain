@@ -5,6 +5,8 @@ param(
     [string[]]$CompletedLedger = @(),
     [string]$SelectionPolicy = 'tools/config/source-selection-policy.json',
     [string]$DispositionRegister = '',
+    [string]$StandingAuthorityId = '',
+    [string]$StandingAuthorityRunManifest = '',
     [string]$OutputDirectory
 )
 
@@ -32,6 +34,28 @@ function Get-RelativePath([string]$Path) {
 $selectionPolicyPath = Resolve-VaultPath $SelectionPolicy -MustExist
 $selectionPolicyData = Get-Content -LiteralPath $selectionPolicyPath -Raw | ConvertFrom-Json
 if (-not $DispositionRegister) { $DispositionRegister = $selectionPolicyData.register_path }
+
+$standingAuthority = $null
+$standingManifest = $null
+$standingManifestRelative = ''
+$standingManifestHash = ''
+if ($StandingAuthorityId -or $StandingAuthorityRunManifest) {
+    if (-not $StandingAuthorityId -or -not $StandingAuthorityRunManifest) {
+        throw 'Standing authority requires both StandingAuthorityId and StandingAuthorityRunManifest.'
+    }
+    $matches = @($selectionPolicyData.standing_authorities | Where-Object authority_id -eq $StandingAuthorityId)
+    if ($matches.Count -ne 1) { throw "Expected one standing authority named $StandingAuthorityId; found $($matches.Count)." }
+    $standingAuthority = $matches[0]
+    if (-not $standingAuthority.enabled) { throw "Standing authority is disabled: $StandingAuthorityId" }
+    $standingManifestPath = Resolve-VaultPath $StandingAuthorityRunManifest -MustExist
+    $standingManifestRelative = Get-RelativePath $standingManifestPath
+    $standingManifestHash = (Get-FileHash -LiteralPath $standingManifestPath -Algorithm SHA256).Hash
+    $standingManifest = Get-Content -LiteralPath $standingManifestPath -Raw | ConvertFrom-Json
+    if ($standingManifest.schema_version -ne $standingAuthority.required_manifest_schema) {
+        throw 'Standing-authority run manifest uses an unauthorized schema.'
+    }
+    if (-not $standingManifest.run_id) { throw 'Standing-authority run manifest has no run id.' }
+}
 
 $intakePath = Resolve-VaultPath $IntakeLedger -MustExist
 $outputPath = if ($OutputDirectory) {
@@ -74,7 +98,7 @@ $decisionRows = foreach ($item in $selected) {
     $originalTitle = [IO.Path]::GetFileNameWithoutExtension($row.canonical_source)
     $contentTitle = if ($row.canonical_title) { $row.canonical_title } else { $originalTitle }
     $mismatch = ($row.cross_title_duplicate -eq 'true') -or ($originalTitle -ne $contentTitle)
-    [pscustomobject][ordered]@{
+    $decision = [ordered]@{
         canonical_source = $row.canonical_source
         sha256 = $row.sha256
         original_title = $originalTitle
@@ -90,6 +114,16 @@ $decisionRows = foreach ($item in $selected) {
         rationale = if ($item.origin -like 'rerouted-*') { "Rerouted into $PackageId during prior body-level review." } else { '' }
         review_status = 'pending'
     }
+    if ($standingAuthority) {
+        $decision.decision_authority = 'standing-policy'
+        $decision.authority_id = $standingAuthority.authority_id
+        $decision.decision_actor = $standingAuthority.decision_actor
+        $decision.autonomy_level = $standingAuthority.required_autonomy_level
+        $decision.authority_policy_version = $selectionPolicyData.schema_version
+        $decision.authority_run_id = $standingManifest.run_id
+        $decision.authority_manifest_sha256 = $standingManifestHash
+    }
+    [pscustomobject]$decision
 }
 
 $packageNumber = [int]($PackageId.Substring(1))
@@ -109,7 +143,15 @@ if ($selectionGateRequired) {
         $disposition = $matches[0]
         if ($disposition.sha256 -ne $row.sha256) { throw "Selection gate hash mismatch: $($row.canonical_source)" }
         if ($disposition.availability -ne $selectionPolicyData.required_availability) { throw "Selection gate availability is not approved: $($row.canonical_source)" }
-        if ($disposition.selection_status -ne $selectionPolicyData.required_selection_status) { throw "Selection gate status is not approved: $($row.canonical_source)" }
+        $standingAuthorized = $false
+        if ($standingAuthority) {
+            $source = $row.canonical_source.Replace('\', '/')
+            $manifestMatches = @($standingManifest.captured_sources | Where-Object { $_.canonical_source -eq $source -and $_.sha256 -eq $row.sha256 })
+            $standingAuthorized = $source.StartsWith($standingAuthority.source_prefix, [StringComparison]::OrdinalIgnoreCase) -and $manifestMatches.Count -eq 1
+        }
+        if ($disposition.selection_status -ne $selectionPolicyData.required_selection_status -and -not $standingAuthorized) {
+            throw "Selection gate status is not approved and has no exact standing authority: $($row.canonical_source)"
+        }
         if ($disposition.package -and $disposition.package -ne $PackageId) { throw "Selection gate package mismatch: $($row.canonical_source)" }
     }
 }
@@ -206,6 +248,9 @@ $manifest = [ordered]@{
         required_availability = $selectionPolicyData.required_availability
         required_selection_status = $selectionPolicyData.required_selection_status
     }
+    standing_authority = if ($standingAuthority) {
+        [ordered]@{ authority_id = $standingAuthority.authority_id; run_manifest = $standingManifestRelative }
+    } else { $null }
     validation = [ordered]@{
         validator_version = $schema.validator_version
         validated_at = $null

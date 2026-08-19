@@ -1,7 +1,7 @@
 param(
-    [Parameter(Mandatory = $true)][ValidateSet('Sync', 'Backfill', 'Set', 'Check')][string]$Command,
+    [Parameter(Mandatory = $true)][ValidateSet('Sync', 'Backfill', 'Set', 'Check', 'ConfirmAvailability')][string]$Command,
     [string]$VaultRoot = '',
-    [string]$ClippingsRoot = 'raw/Clippings',
+    [string]$ClippingsRoot = '',
     [string]$Policy = 'tools/config/source-selection-policy.json',
     [string]$Register = '',
     [string]$DecisionRoot = 'wiki/_outputs/semantic-ingest',
@@ -16,6 +16,10 @@ param(
     [string]$DecidedBy = '',
     [string]$ReviewAfter = '',
     [string]$Rationale = '',
+    [string]$RunManifest = '',
+    [string]$ExpectedManifestSha256 = '',
+    [string]$SelectedSourcesJson = '',
+    [string]$AuthorityId = '',
     [switch]$Confirm,
     [switch]$Json
 )
@@ -35,6 +39,13 @@ function Resolve-InVault([string]$Path, [switch]$MustExist) {
 
 function Get-RelativePath([string]$Path) {
     return $Path.Substring($root.Length + 1).Replace('\', '/')
+}
+
+function Get-SourceFiles([string[]]$SourceRoots) {
+    $eligibleExtensions = @('.md', '.eml')
+    return @($SourceRoots | ForEach-Object {
+        Get-ChildItem -LiteralPath $_ -Recurse -File | Where-Object Extension -in $eligibleExtensions
+    } | Sort-Object FullName -Unique)
 }
 
 function Get-Frontmatter([string]$Path) {
@@ -85,7 +96,7 @@ function Write-Register([object[]]$Rows, [string]$Path) {
     }
 }
 
-function Test-Rows([object[]]$Rows, [object]$PolicyData, [string]$ClippingsPath) {
+function Test-Rows([object[]]$Rows, [object]$PolicyData, [string[]]$SourceRoots) {
     $issues = [Collections.Generic.List[string]]::new()
     $paths = @($Rows.canonical_source)
     if (@($paths | Sort-Object -Unique).Count -ne $Rows.Count) { $issues.Add('Register contains duplicate canonical_source values.') }
@@ -107,8 +118,7 @@ function Test-Rows([object[]]$Rows, [object]$PolicyData, [string]$ClippingsPath)
             $issues.Add("Registered clipping hash drifted: $($row.canonical_source)")
         }
     }
-    $eligibleExtensions = @('.md', '.eml')
-    $actual = @(Get-ChildItem -LiteralPath $ClippingsPath -File | Where-Object Extension -in $eligibleExtensions | ForEach-Object { Get-RelativePath $_.FullName })
+    $actual = @(Get-SourceFiles $SourceRoots | ForEach-Object { Get-RelativePath $_.FullName })
     foreach ($path in $actual) { if ($paths -notcontains $path) { $issues.Add("Clipping is absent from the register: $path") } }
     return @($issues)
 }
@@ -117,7 +127,13 @@ $policyPath = Resolve-InVault $Policy -MustExist
 $policyData = Get-Content -LiteralPath $policyPath -Raw | ConvertFrom-Json
 if (-not $Register) { $Register = $policyData.register_path }
 $registerPath = Resolve-InVault $Register
-$clippingsPath = Resolve-InVault $ClippingsRoot -MustExist
+$configuredRoots = if ($ClippingsRoot) { @($ClippingsRoot) } else { @($policyData.applies_to_prefixes) }
+$sourceRoots = @($configuredRoots | ForEach-Object {
+    $relative = ([string]$_).TrimEnd('/', '\')
+    $resolved = Resolve-InVault $relative
+    if (Test-Path -LiteralPath $resolved -PathType Container) { $resolved }
+})
+if (-not $sourceRoots.Count) { throw 'No configured source-selection roots exist.' }
 $now = (Get-Date).ToUniversalTime().ToString('o')
 
 if ($Command -eq 'Sync') {
@@ -128,7 +144,7 @@ if ($Command -eq 'Sync') {
         $byPath[$row.canonical_source] = $row
     }
     $rows = [Collections.Generic.List[object]]::new()
-    foreach ($file in @(Get-ChildItem -LiteralPath $clippingsPath -File | Where-Object Extension -in @('.md', '.eml') | Sort-Object Name)) {
+    foreach ($file in @(Get-SourceFiles $sourceRoots)) {
         $relative = Get-RelativePath $file.FullName
         $hash = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash
         if ($byPath.ContainsKey($relative)) {
@@ -144,7 +160,7 @@ if ($Command -eq 'Sync') {
             canonical_source = $relative
             sha256 = $hash
             source_identity = Get-SourceIdentity $source $hash
-            source_type = if ($file.Extension -eq '.md') { 'markdown-clipping' } else { 'email-export' }
+            source_type = if ($relative.StartsWith('raw/imports/automated-clippings/youtube/', [StringComparison]::OrdinalIgnoreCase)) { 'youtube-transcript' } elseif ($file.Extension -eq '.md') { 'markdown-clipping' } else { 'email-export' }
             availability = 'unknown'
             selection_status = 'pending'
             processing_status = 'unread'
@@ -165,7 +181,81 @@ if ($Command -eq 'Sync') {
 } else {
     if (-not (Test-Path -LiteralPath $registerPath -PathType Leaf)) { throw "Disposition register does not exist. Run Sync first: $Register" }
     $rows = @(Import-Csv -LiteralPath $registerPath)
-    if ($Command -eq 'Backfill') {
+    if ($Command -eq 'ConfirmAvailability') {
+        if (-not $Confirm) { throw 'ConfirmAvailability requires -Confirm.' }
+        if (-not $RunManifest -or $ExpectedManifestSha256 -notmatch '^[0-9A-Fa-f]{64}$' -or -not $SelectedSourcesJson -or -not $AuthorityId) {
+            throw 'ConfirmAvailability requires a run manifest, its exact SHA-256, selected sources JSON, and an authority id.'
+        }
+        $authorityMatches = @($policyData.standing_authorities | Where-Object authority_id -eq $AuthorityId)
+        if ($authorityMatches.Count -ne 1 -or -not $authorityMatches[0].enabled) { throw "Standing authority is missing or disabled: $AuthorityId" }
+        $authority = $authorityMatches[0]
+        if (-not $authority.requires_exact_path_and_sha256) { throw "Standing authority does not require exact path and SHA-256: $AuthorityId" }
+        $manifestPath = Resolve-InVault $RunManifest -MustExist
+        $manifestHash = (Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash
+        if ($manifestHash -ne $ExpectedManifestSha256.ToUpperInvariant()) { throw 'Run manifest SHA-256 mismatch.' }
+        $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+        if ($manifest.schema_version -ne $authority.required_manifest_schema -or -not $manifest.run_id) { throw 'Run manifest schema or run id is invalid.' }
+
+        $manifestSources = @{}
+        foreach ($source in @($manifest.captured_sources)) {
+            $canonical = ([string]$source.canonical_source).Replace('\', '/')
+            $sha = ([string]$source.sha256).ToUpperInvariant()
+            if (-not $canonical -or $sha -notmatch '^[0-9A-F]{64}$') { throw 'Run manifest contains an invalid source path or SHA-256.' }
+            if ($manifestSources.ContainsKey($canonical)) { throw "Run manifest contains a duplicate source: $canonical" }
+            $manifestSources[$canonical] = $sha
+        }
+
+        # Windows PowerShell 5.1 emits a top-level JSON array as one Object[]
+        # pipeline object. Parse first, then expand it so each source is
+        # validated independently instead of coercing all paths into one string.
+        $parsedSelectedSources = $SelectedSourcesJson | ConvertFrom-Json
+        $selectedSources = @($parsedSelectedSources)
+        if ($selectedSources.Count -lt 1 -or $selectedSources.Count -gt 25) { throw 'ConfirmAvailability requires between 1 and 25 selected sources.' }
+        $selectedPaths = @{}
+        $updates = [Collections.Generic.List[object]]::new()
+        foreach ($source in $selectedSources) {
+            $canonical = ([string]$source.canonical_source).Replace('\', '/')
+            $sha = ([string]$source.sha256).ToUpperInvariant()
+            if (-not $canonical.StartsWith($authority.source_prefix, [StringComparison]::OrdinalIgnoreCase) -or $sha -notmatch '^[0-9A-F]{64}$') {
+                throw "Selected source is outside the standing authority or has an invalid SHA-256: $canonical"
+            }
+            if ($selectedPaths.ContainsKey($canonical)) { throw "Selected availability batch contains a duplicate source: $canonical" }
+            $selectedPaths[$canonical] = $true
+            if (-not $manifestSources.ContainsKey($canonical) -or $manifestSources[$canonical] -ne $sha) {
+                throw "Selected source does not exactly match the run manifest: $canonical"
+            }
+            $matches = @($rows | Where-Object canonical_source -eq $canonical)
+            if ($matches.Count -ne 1) { throw "Expected one registered source, found $($matches.Count): $canonical" }
+            $row = $matches[0]
+            if ($row.sha256 -ne $sha) { throw "Disposition register hash does not match the run manifest: $canonical" }
+            if ($row.availability -notin @('unknown', 'available')) { throw "Conflicting availability cannot be auto-confirmed: $canonical ($($row.availability))" }
+            $sourcePath = Resolve-InVault $canonical -MustExist
+            if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf) -or (Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash -ne $sha) {
+                throw "Selected source file is missing or changed: $canonical"
+            }
+            if ($row.availability -eq 'unknown') { $updates.Add($row) }
+        }
+
+        foreach ($row in $updates) {
+            $row.availability = 'available'
+            $row.decision_context = "standing-availability:$($manifest.run_id):$(Get-RelativePath $manifestPath):$manifestHash"
+            $row.decided_by = $authority.decision_actor
+            $row.decided_at = $now
+            $row.rationale = 'Availability confirmed from an exact standing-authority run manifest after path and SHA-256 verification.'
+            $row.updated_at = $now
+        }
+        $issues = @(Test-Rows $rows $policyData $sourceRoots)
+        if ($issues.Count) { throw ($issues -join [Environment]::NewLine) }
+        if ($updates.Count) { Write-Register $rows $registerPath }
+        $result = [pscustomobject][ordered]@{
+            status = 'availability-confirmed'
+            run_id = $manifest.run_id
+            manifest = Get-RelativePath $manifestPath
+            manifest_sha256 = $manifestHash
+            selected_count = $selectedSources.Count
+            changed_count = $updates.Count
+        }
+    } elseif ($Command -eq 'Backfill') {
         $decisionRootPath = Resolve-InVault $DecisionRoot -MustExist
         $byPath = @{}
         foreach ($row in $rows) { $byPath[$row.canonical_source] = $row }
@@ -198,12 +288,12 @@ if ($Command -eq 'Sync') {
                 $updated++
             }
         }
-        $issues = @(Test-Rows $rows $policyData $clippingsPath)
+        $issues = @(Test-Rows $rows $policyData $sourceRoots)
         if ($issues.Count) { throw ($issues -join [Environment]::NewLine) }
         Write-Register $rows $registerPath
         $result = [pscustomobject][ordered]@{ status = 'backfilled'; register = Get-RelativePath $registerPath; row_count = $rows.Count; updated_rows = $updated }
     } elseif ($Command -eq 'Check') {
-        $issues = @(Test-Rows $rows $policyData $clippingsPath)
+        $issues = @(Test-Rows $rows $policyData $sourceRoots)
         $result = [pscustomobject][ordered]@{ status = if ($issues.Count) { 'failed' } else { 'ok' }; register = Get-RelativePath $registerPath; row_count = $rows.Count; issue_count = $issues.Count; issues = $issues }
         if ($issues.Count) {
             if ($Json) { $result | ConvertTo-Json -Depth 5 } else { $result | Format-List }
@@ -231,7 +321,7 @@ if ($Command -eq 'Sync') {
         if ($row.semantic_disposition -ne 'pending' -and $row.processing_status -ne 'reviewed') { throw 'Semantic disposition requires processing_status reviewed.' }
         $row.decided_at = $now
         $row.updated_at = $now
-        $issues = @(Test-Rows $rows $policyData $clippingsPath)
+        $issues = @(Test-Rows $rows $policyData $sourceRoots)
         if ($issues.Count) { throw ($issues -join [Environment]::NewLine) }
         Write-Register $rows $registerPath
         $result = [pscustomobject][ordered]@{ status = 'updated'; canonical_source = $row.canonical_source; sha256 = $row.sha256; availability = $row.availability; selection_status = $row.selection_status; package = $row.package }

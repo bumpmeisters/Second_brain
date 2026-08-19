@@ -11,7 +11,7 @@ function Write-Utf8([string]$Path, [string]$Content) {
 
 try {
     if (Test-Path $fixture) { Remove-Item -LiteralPath $fixture -Recurse -Force }
-    @('tools\config', 'wiki\_outputs', 'raw\Clippings') | ForEach-Object { New-Item -ItemType Directory -Force (Join-Path $fixture $_) | Out-Null }
+    @('tools\config', 'wiki\_outputs', 'raw\Clippings', 'raw\imports\automated-clippings\youtube\channel-1') | ForEach-Object { New-Item -ItemType Directory -Force (Join-Path $fixture $_) | Out-Null }
     Copy-Item (Join-Path $repo 'tools\new-semantic-ingest-package.ps1') (Join-Path $fixture 'tools\new-semantic-ingest-package.ps1')
     Copy-Item (Join-Path $repo 'tools\test-semantic-ingest-package.ps1') (Join-Path $fixture 'tools\test-semantic-ingest-package.ps1')
     Copy-Item (Join-Path $repo 'tools\config\semantic-ingest-schema.json') (Join-Path $fixture 'tools\config\semantic-ingest-schema.json')
@@ -90,6 +90,34 @@ try {
     $p32Validation = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $validator -Manifest (Join-Path $fixture 'wiki\_outputs\semantic-ingest\p32\package.json') -Mode Draft -Profile Fast -Json | Out-String | ConvertFrom-Json
     if ($LASTEXITCODE -ne 0 -or -not $p32Validation.passed) { throw ('Approved P32 package failed selection-gate validation: ' + ($p32Validation | ConvertTo-Json -Depth 8 -Compress)) }
 
+    $standingSource = 'raw/imports/automated-clippings/youtube/channel-1/2026-08-17--standing.md'
+    $standingPath = Join-Path $fixture $standingSource
+    Write-Utf8 $standingPath '# Standing source'
+    $standingHash = (Get-FileHash $standingPath -Algorithm SHA256).Hash
+    $standingIntake = [pscustomobject][ordered]@{ canonical_source = $standingSource; canonical_title = 'Standing source'; package = 'P33'; subtopic = 'fixture'; source_type = 'youtube-transcript'; status = 'assigned-ready-for-package-review'; sha256 = $standingHash; cross_title_duplicate = 'false' }
+    @($standingIntake) | Export-Csv (Join-Path $fixture 'wiki\_outputs\standing-intake.csv') -NoTypeInformation -Encoding UTF8
+    @([pscustomobject][ordered]@{ canonical_source = $standingSource; sha256 = $standingHash; source_identity = 'youtube:standing'; source_type = 'youtube-transcript'; availability = 'unknown'; selection_status = 'pending'; processing_status = 'unread'; semantic_disposition = 'pending'; package = ''; decision_context = ''; decided_by = ''; decided_at = ''; review_after = ''; rationale = ''; discovered_at = (Get-Date).ToUniversalTime().ToString('o'); updated_at = (Get-Date).ToUniversalTime().ToString('o') }) | Export-Csv (Join-Path $fixture 'wiki\_outputs\standing-dispositions.csv') -NoTypeInformation -Encoding UTF8
+    $runManifest = [ordered]@{ schema_version = 'youtube-intelligence-run/v1'; run_id = 'fixture-run'; captured_sources = @([ordered]@{ canonical_source = $standingSource; sha256 = $standingHash }) }
+    $runManifest | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $fixture 'wiki\_outputs\standing-run.json') -Encoding UTF8
+    $selectionPolicyPath = Join-Path $fixture 'tools\config\source-selection-policy.json'
+    $standingPolicy = Get-Content $selectionPolicyPath -Raw | ConvertFrom-Json
+    $standingPolicy.standing_authorities[0].enabled = $true
+    $standingPolicy | ConvertTo-Json -Depth 8 | Set-Content $selectionPolicyPath -Encoding UTF8
+    $manifestHash = (Get-FileHash (Join-Path $fixture 'wiki\_outputs\standing-run.json') -Algorithm SHA256).Hash
+    $selectedSourcesJson = @([ordered]@{ canonical_source = $standingSource; sha256 = $standingHash }) | ConvertTo-Json -Compress
+    & (Join-Path $repo 'tools\manage-clipping-dispositions.ps1') -Command ConfirmAvailability -VaultRoot $fixture -ClippingsRoot 'raw/imports/automated-clippings/youtube' -Register 'wiki/_outputs/standing-dispositions.csv' -RunManifest 'wiki/_outputs/standing-run.json' -ExpectedManifestSha256 $manifestHash -SelectedSourcesJson $selectedSourcesJson -AuthorityId youtube-p35-l2 -Confirm | Out-Null
+    $standingDisposition = Import-Csv (Join-Path $fixture 'wiki\_outputs\standing-dispositions.csv') | Select-Object -First 1
+    if ($standingDisposition.availability -ne 'available' -or $standingDisposition.selection_status -ne 'pending') { throw 'Availability confirmation did not preserve the standing-authority selection boundary.' }
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $generator -PackageId P33 -IntakeLedger 'wiki/_outputs/standing-intake.csv' -DispositionRegister 'wiki/_outputs/standing-dispositions.csv' -StandingAuthorityId 'youtube-p35-l2' -StandingAuthorityRunManifest 'wiki/_outputs/standing-run.json' | Out-Null
+    if ($LASTEXITCODE -ne 0) { throw 'Exact standing-authority source did not pass the generator gate.' }
+    $standingPackage = Get-Content (Join-Path $fixture 'wiki\_outputs\semantic-ingest\p33\package.json') -Raw | ConvertFrom-Json
+    $standingDecision = Import-Csv (Join-Path $fixture 'wiki\_outputs\semantic-ingest\p33\decisions.csv') | Select-Object -First 1
+    if ($standingPackage.standing_authority.authority_id -ne 'youtube-p35-l2' -or $standingDecision.decision_authority -ne 'standing-policy' -or $standingDecision.authority_run_id -ne 'fixture-run') {
+        throw 'Standing-authority provenance was not written to the package and decision ledger.'
+    }
+    $standingValidation = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $validator -Manifest (Join-Path $fixture 'wiki\_outputs\semantic-ingest\p33\package.json') -Mode Draft -Profile Full -Json | Out-String | ConvertFrom-Json
+    if ($LASTEXITCODE -ne 0 -or -not $standingValidation.passed) { throw ('Standing-authority package failed validation: ' + ($standingValidation | ConvertTo-Json -Depth 8 -Compress)) }
+
     $ErrorActionPreference = 'Continue'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $generator -PackageId P2 -IntakeLedger 'wiki/_outputs/intake.csv' -RerouteLedger 'wiki/_outputs/p1-routes.csv' -CompletedLedger 'wiki/_outputs/p1-complete.csv' 2>$null | Out-Null
     $overwriteCode = $LASTEXITCODE
@@ -100,4 +128,4 @@ finally {
     if (Test-Path $fixture) { Remove-Item -LiteralPath $fixture -Recurse -Force }
 }
 
-Write-Host 'Semantic-ingest package generator tests passed (14 assertions).'
+Write-Host 'Semantic-ingest package generator tests passed (19 assertions).'

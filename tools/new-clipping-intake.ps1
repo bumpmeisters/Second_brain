@@ -238,7 +238,7 @@ foreach ($ledger in $PriorLedger) {
 $sourceHashesBefore = @{}
 $records = [Collections.Generic.List[object]]::new()
 $snapshotEnd = $SnapshotDate.Date.AddDays(1)
-foreach ($file in @(Get-ChildItem -LiteralPath $clippingsPath -File -Filter '*.md' | Where-Object {
+foreach ($file in @(Get-ChildItem -LiteralPath $clippingsPath -Recurse -File -Filter '*.md' | Where-Object {
     $_.LastWriteTime -ge $SnapshotDate.Date -and $_.LastWriteTime -lt $snapshotEnd
 })) {
     $hash = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash
@@ -246,7 +246,7 @@ foreach ($file in @(Get-ChildItem -LiteralPath $clippingsPath -File -Filter '*.m
     if ($knownHashes.Contains($hash)) { continue }
 
     $text = [IO.File]::ReadAllText($file.FullName)
-    $timestampCount = [regex]::Matches($text, '(?m)^\*\*\d{1,2}:\d{2}(?::\d{2})?\*\*').Count
+    $timestampCount = [regex]::Matches($text, '(?m)^(?:\*\*\d{1,2}:\d{2}(?::\d{2})?\*\*|\[\d{1,2}:\d{2}(?::\d{2})?\]\([^\r\n]+\))').Count
     $hasTranscript = ($text -match '(?im)^##\s+Transcript\s*$') -or $timestampCount -ge 10
     $source = Get-SourceUrl $text
     $filenameTitle = [IO.Path]::GetFileNameWithoutExtension($file.Name)

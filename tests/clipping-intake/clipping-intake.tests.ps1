@@ -64,26 +64,26 @@ A new work surface may blend building, browsing, and coordination.
 
 ## Transcript
 
-**0:01** Â· Intro
-**0:10** Â· Step one
-**0:20** Â· Step two
-**0:30** Â· Step three
-**0:40** Â· Step four
-**0:50** Â· Step five
-**1:00** Â· Step six
-**1:10** Â· Step seven
-**1:20** Â· Step eight
-**1:30** Â· Step nine
-**1:40** Â· Step ten
+[00:00:01](https://example.com/watch?t=1) Intro
+[00:00:10](https://example.com/watch?t=10) Step one
+[00:00:20](https://example.com/watch?t=20) Step two
+[00:00:30](https://example.com/watch?t=30) Step three
+[00:00:40](https://example.com/watch?t=40) Step four
+[00:00:50](https://example.com/watch?t=50) Step five
+[00:01:00](https://example.com/watch?t=60) Step six
+[00:01:10](https://example.com/watch?t=70) Step seven
+[00:01:20](https://example.com/watch?t=80) Step eight
+[00:01:30](https://example.com/watch?t=90) Step nine
+[00:01:40](https://example.com/watch?t=100) Step ten
 '@
-    Write-Utf8NoBom (Join-Path $clippings 'Emerging Work Surface.md') $emergingTranscript
+    Write-Utf8NoBom (Join-Path $clippings 'nested\Emerging Work Surface.md') $emergingTranscript
     Write-Utf8NoBom (Join-Path $clippings 'Empty.md') "---`ntitle:`nsource:`n---`n"
     Write-Utf8NoBom (Join-Path $clippings 'Known.md') "---`ntitle: Known`nsource: https://example.com/known`n---`n# Known`n"
     Write-Utf8NoBom (Join-Path $fixtureRoot 'wiki\agentic-systems.md') "# Agentic Systems`n`nCanonical workflow for AI agents."
     New-Item -ItemType Directory -Path (Join-Path $fixtureRoot 'tools\config') -Force | Out-Null
     Copy-Item (Join-Path $vault 'tools\config\source-selection-policy.json') (Join-Path $fixtureRoot 'tools\config\source-selection-policy.json')
 
-    Get-ChildItem -LiteralPath $clippings -File | ForEach-Object {
+    Get-ChildItem -LiteralPath $clippings -Recurse -File | ForEach-Object {
         $_.LastWriteTime = [datetime]'2026-07-23T12:00:00'
     }
 
@@ -94,9 +94,9 @@ A new work surface may blend building, browsing, and coordination.
         sha256 = $knownHash
         variant_hashes = $knownHash
     }) | Export-Csv -LiteralPath $prior -NoTypeInformation -Encoding UTF8
-    @(Get-ChildItem -LiteralPath $clippings -File | ForEach-Object {
+    @(Get-ChildItem -LiteralPath $clippings -Recurse -File | ForEach-Object {
         [pscustomobject][ordered]@{
-            canonical_source = 'raw/Clippings/' + $_.Name
+            canonical_source = $_.FullName.Substring($fixtureRoot.Length + 1).Replace('\', '/')
             sha256 = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash
             availability = 'unknown'
             selection_status = 'pending'
@@ -107,8 +107,8 @@ A new work surface may blend building, browsing, and coordination.
     }) | Export-Csv -LiteralPath (Join-Path $outputs 'dispositions.csv') -NoTypeInformation -Encoding UTF8
 
     $before = @{}
-    Get-ChildItem -LiteralPath $clippings -File | ForEach-Object {
-        $before[$_.Name] = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash
+    Get-ChildItem -LiteralPath $clippings -Recurse -File | ForEach-Object {
+        $before[$_.FullName] = (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash
     }
 
     & $tool `
@@ -149,6 +149,9 @@ A new work surface may blend building, browsing, and coordination.
     if ($emerging.shortlisted -ne 'true' -or $emerging.triage_status -ne 'shortlisted-review-candidate') {
         throw 'Unclassified emerging content was blocked from the bounded review candidate set.'
     }
+    if ($emerging.has_transcript -ne 'true' -or $emerging.transcript_completeness -ne 'full') {
+        throw 'Linked HH:MM:SS timestamps were not recognized as a complete transcript.'
+    }
 
     $empty = $rows | Where-Object source_type -eq 'empty-clip'
     if (-not $empty -or $empty.triage_status -ne 'excluded-empty') {
@@ -159,9 +162,9 @@ A new work surface may blend building, browsing, and coordination.
         throw 'A hash represented in a prior ledger was not excluded.'
     }
 
-    foreach ($file in Get-ChildItem -LiteralPath $clippings -File) {
+    foreach ($file in Get-ChildItem -LiteralPath $clippings -Recurse -File) {
         $after = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash
-        if ($before[$file.Name] -ne $after) { throw "Source changed during intake: $($file.Name)" }
+        if ($before[$file.FullName] -ne $after) { throw "Source changed during intake: $($file.Name)" }
     }
 
     $summaryText = Get-Content -LiteralPath $summary -Raw
