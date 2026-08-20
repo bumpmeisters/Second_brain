@@ -4,6 +4,9 @@ status: active
 trust: unverified
 sources:
   - https://www.dwarkesh.com/p/the-next-paradigm
+  - https://www.dwarkesh.com/p/era-of-continual-learning
+  - https://arxiv.org/abs/2604.27003
+  - https://proceedings.mlr.press/v330/abbes26a.html
   - https://edge-bench.org/paper.pdf
   - raw/imports/agentic-repositories/gstack/94993f74012782fd94416dd44b8314f6363a13a4/learn/SKILL.md
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/CONCEPTS.md
@@ -11,12 +14,12 @@ sources:
   - raw/imports/agentic-repositories/compound-engineering-plugin/0a2957852e2034d04eb01120fd7da6ed5307dc56/skills/ce-compound-refresh/SKILL.md
   - raw/imports/automated-clippings/youtube/UCWrF0oN6unbXrWsTN7RctTw/2026-08-13--eYrMF9Cht8A.md
 created: 2026-07-15
-updated: 2026-08-18
+updated: 2026-08-20
 ---
 
 # Continual Learning for Agents
 
-**Summary**: Continual learning asks how agents can retain useful lessons from real deployment rather than relearning them within every session. The problem is strategically important; proposed mechanisms such as on-policy self-distillation and agent-generated simulations remain research hypotheses.
+**Summary**: Continual learning asks how agents can retain useful lessons from real deployment rather than relearning them within every session. This vault now treats governed environment learning as an active architectural layer, while weight-level learning remains a higher-risk research option.
 
 ---
 
@@ -47,6 +50,18 @@ The Second Brain should not wait for weight-level continual learning. It can imp
 - allow rollback when a lesson stops generalizing.
 
 This is durable environment learning, not proof that the underlying model continually learns (analysis based on [[ai-operating-system]] and [[loop-engineering]]).
+
+## Current architecture decision — 2026-08-20
+
+The Second Brain uses three distinct persistence layers:
+
+- **Context** supplies the information needed for the current task.
+- **Memory** keeps source-traceable knowledge in inspectable, portable, versioned files.
+- **Learning** changes future system behavior only after reviewed evidence supports a durable rule, instruction, skill, test, or tool change.
+
+The Learning layer is active now only as the governed external lifecycle described below. Corrections, evaluations, failures, and successful recoveries may become learning candidates, but one episode remains episodic until relevant repetition supports promotion. Every promoted behavior change needs provenance, a bounded target, a relevant regression check, human approval, and a rollback path.
+
+Parametric continual learning is not active. The vault has no approved weight-update, fine-tuning, self-distillation, or deployment-training pipeline. Reconsideration requires a stable repeatable task, an owned and lawful training set, a task-level evaluation baseline, privacy and poisoning controls, isolated rollout, and reliable rollback. This preserves the complementary architecture supported by the qualified PR `#19` analysis without treating external memory as inferior or weight updates as automatically beneficial ([Hu et al., 2026](https://arxiv.org/abs/2604.27003); [Abbes et al., 2026](https://proceedings.mlr.press/v330/abbes26a.html); analysis: [[newsletters/dwarkesh-patel/linked-sources/continual-learning-memory-boundary-2026-08-14]]; user architecture decision, 2026-08-20).
 
 ## External learning lifecycle
 

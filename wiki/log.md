@@ -3,7 +3,7 @@ type: log
 status: active
 sources: []
 created: 2026-05-30
-updated: 2026-08-19
+updated: 2026-08-20
 ---
 
 # Wiki Log
@@ -12,7 +12,7 @@ updated: 2026-08-19
 
 **Sources**: None.
 
-**Last updated**: 2026-08-19
+**Last updated**: 2026-08-20
 
 ---
 
@@ -1914,3 +1914,20 @@ updated: 2026-08-19
   - Kept 1,312 untracked local files outside the commits: 814 under `raw/`, 486 under `wiki/_outputs/`, ten under `tmp/`, one under `ME/`, and one under `research/`. No excluded source or output was read, modified, staged, or published during repository recovery.
   - Historical mixed line endings remain an explicit audit finding and were not normalized. No new semantic claim, source approval, promotion authority, automation, schedule, or external publication authority was introduced.
   - The remaining repository task is to merge or otherwise resolve PR `#19`, retarget PR `#21` to `main`, and then run the GitHub check and final review against that base.
+
+## 2026-08-20 | architecture decision | activate governed external learning layer
+
+- Sources:
+  - GitHub pull request `#19`
+  - [[newsletters/dwarkesh-patel/linked-sources/continual-learning-memory-boundary-2026-08-14]]
+  - [[continual-learning-for-agents]]
+- Changed:
+  - [[continual-learning-for-agents]]
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Rolf approved the bounded PR `#19` knowledge delta: anecdotal checklist evidence may inform agent verification, and external memory and parametric continual learning are complementary architectures with different risks.
+  - Rebase-merged PR `#19` after the repository's linear-history rule rejected a merge commit. Rebased PR `#21` onto the resulting `main` and retargeted it from the former stack base to `main`.
+  - Adopted Context, Memory, and Learning as distinct Second Brain layers. Activated only governed external learning: verified repeated experience may propose a bounded change to an existing page, instruction, skill, test, or tool, subject to provenance, regression checking, human approval, and rollback.
+  - Kept parametric continual learning inactive. No model weights, training data, fine-tuning pipeline, self-distillation process, source permission, automation, or schedule was created or changed.
+  - Reconsider weight-level learning only when a stable repeatable task, lawful owned data, task-level evaluation, privacy and poisoning controls, isolated rollout, and reliable rollback all exist.
