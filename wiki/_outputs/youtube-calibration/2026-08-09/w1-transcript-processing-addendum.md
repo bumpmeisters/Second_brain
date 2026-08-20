@@ -1,16 +1,19 @@
 ---
 type: youtube-transcript-processing-addendum
-status: awaiting-approval
-package: P32
+status: superseded-unexecuted
+package: none
+proposed_package: P32
+superseded_by: wiki/_outputs/semantic-ingest/p32/package.json
 calibration_id: cal_20260809T134951_d8a97d68
 wave: W1
 source_count: 4
 created: 2026-08-09
+updated: 2026-08-16
 ---
 
 # YouTube Calibration W1 — Transcript-Processing Addendum
 
-**Decision requested**: Approve content-level reading and semantic review of exactly the four associated transcript files below as package P32. Approval stops at the P32 evidence-matrix checkpoint; it does not approve any wiki claim promotion.
+**Final status**: This proposal never received or exercised transcript-body review authority. The later automated 31-source pilot used and completed package P32 under a different exact manifest. This older four-source proposal is therefore superseded, not approved. Its four associated clippings remain unread and are deferred until a new exact approval deliberately reopens them.
 
 ## Exact source boundary
 
@@ -23,7 +26,7 @@ created: 2026-08-09
 
 C029 and C075 are not in P32. They are not-yet-live announcements and have no current transcript-processing authority. The incorrectly named first C010 attempt is also excluded because its content duplicates C015.
 
-## Authorized work after approval
+## Proposed work at the time — not executed
 
 1. Recheck all four source hashes and Git custody before reading.
 2. Record the four exact sources as `available` and `approved-for-semantic-review` for P32 in the external clipping disposition register, citing this approved batch decision.
@@ -50,7 +53,7 @@ C029 and C075 are not in P32. They are not-yet-live announcements and have no cu
 - **C101:** Which cowork workflow patterns are transferable beyond Microsoft product steps, and which details are merely current vendor UI behavior?
 - **C114:** Which claims concern reusable coding or validation practice, which are healthcare-specific, and which require independent medical or scientific verification?
 
-## Explicitly not authorized
+## Historical approval boundary
 
 - Editing, renaming, deleting, or tracking any file in `raw/Clippings/`.
 - Reading any other YouTube clipping, including the duplicate first C010 attempt.
@@ -58,6 +61,6 @@ C029 and C075 are not in P32. They are not-yet-live announcements and have no cu
 - Creating or registering a reusable practice without evidence-matrix approval and the required reuse contract.
 - Activating W2, scheduling collection, generating embeddings, external model processing, or changing channel priorities.
 
-## Approval phrase
+## Historical approval phrase — no longer actionable
 
-Approve this exact scope with: **“W1-Batch genehmigt.”**
+The proposed phrase was **“W1-Batch genehmigt.”** It must not now be used to append these files to completed P32; any reconsideration requires a new package or exact reviewed manifest.

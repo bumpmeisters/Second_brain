@@ -17,7 +17,7 @@ approved_on: 2026-08-09
 
 **Approval record**: Rolf confirmed the four exact associations on 2026-08-09 with the response “W1-Zuordnungen bestätigt”. All four associations were then created without modifying their source files.
 
-## Exact associations proposed
+## Exact approved associations
 
 | Code | Video ID | Exact clipping | SHA-256 | Transcript characters | Custody |
 |---|---|---|---|---:|---|

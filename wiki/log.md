@@ -1931,3 +1931,18 @@ updated: 2026-08-20
   - Adopted Context, Memory, and Learning as distinct Second Brain layers. Activated only governed external learning: verified repeated experience may propose a bounded change to an existing page, instruction, skill, test, or tool, subject to provenance, regression checking, human approval, and rollback.
   - Kept parametric continual learning inactive. No model weights, training data, fine-tuning pipeline, self-distillation process, source permission, automation, or schedule was created or changed.
   - Reconsider weight-level learning only when a stable repeatable task, lawful owned data, task-level evaluation, privacy and poisoning controls, isolated rollout, and reliable rollback all exist.
+
+## 2026-08-20 | consistency audit | reconcile recovered YouTube calibration status
+
+- Sources:
+  - GitHub pull request `#20`
+  - `wiki/_outputs/semantic-ingest/p32/package.json`
+- Changed:
+  - `wiki/_outputs/youtube-calibration/2026-08-09/w1-association-checkpoint.md`
+  - `wiki/_outputs/youtube-calibration/2026-08-09/w1-transcript-processing-addendum.md`
+  - `wiki/_outputs/youtube-calibration/2026-08-09/wave-plan.md`
+  - [[log]]
+- Notes:
+  - Rebase-merged the recovered YouTube baseline in PR `#20` after resolving its additive log conflict and passing the GitHub contracts check.
+  - Preserved the confirmed exact-file associations, but replaced obsolete pending-approval wording with the later canonical state: the manual W1 proposal was never executed, was superseded by the separate completed P32 pilot, and grants no current transcript-review authority.
+  - No source was read or modified, no deferred semantic review was reopened, and no automation, schedule, policy, or promotion authority was activated.

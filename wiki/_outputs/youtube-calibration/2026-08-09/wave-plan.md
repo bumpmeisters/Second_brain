@@ -1,29 +1,31 @@
 ---
 type: youtube-calibration-wave-plan
-status: active
+status: superseded
 calibration_id: cal_20260809T134951_d8a97d68
 selection_hash: d8a97d685615b0d7a5f53ea4084a100ddc9edb697d2ffb0c8bad3163044b5030
 candidate_count: 30
 wave_count: 5
 wave_size: 6
-active_wave: W1-processing-approval
+active_wave: none
+superseded_by: docs/plans/2026-08-14-001-feat-hybrid-youtube-intelligence-pilot-plan.md
 created: 2026-08-09
+updated: 2026-08-16
 ---
 
 # YouTube Calibration Wave Plan
 
-**Summary**: The 30 confirmed metadata candidates are frozen into five waves of six. Only W1 is active. W2–W5 remain dormant until the prior wave reaches a final semantic-ingest disposition and its learning is reviewed.
+**Final status**: This five-wave manual-clipping plan was superseded before transcript-body review began. The later rolling-60-day automated pilot became the active route and completed its separate 31-source P32 package. W1's four associated clippings remain unread and deferred; W2–W5 were never activated. The historical metadata labels and exact-file associations remain valid records, but this document grants no current processing authority.
 
 ## W1 — Cross-domain calibration
 
 | Code | Channel | Video | Handoff | Status |
 |---|---|---|---|---|
-| C010 | AI Engineer | [Gadgets: Personal app vibe coding that is actually safe](https://www.youtube.com/watch?v=RmS5s6Wbin4) | `hf_20260809T142243_0c1db19d` | associated; processing approval pending |
-| C015 | Cole Medin | [Your AI Second Brain Is Slowly Rotting](https://www.youtube.com/watch?v=xOFkpf9KgKg) | `hf_20260809T142255_2f0e9ba7` | associated; processing approval pending |
+| C010 | AI Engineer | [Gadgets: Personal app vibe coding that is actually safe](https://www.youtube.com/watch?v=RmS5s6Wbin4) | `hf_20260809T142243_0c1db19d` | associated; semantic review deferred when plan was superseded |
+| C015 | Cole Medin | [Your AI Second Brain Is Slowly Rotting](https://www.youtube.com/watch?v=xOFkpf9KgKg) | `hf_20260809T142255_2f0e9ba7` | associated; semantic review deferred when plan was superseded |
 | C029 | Christopher Penn | [How to Justify AI Costs to the CFO?](https://www.youtube.com/watch?v=62i_Woyqe9E) | `hf_20260809T142306_15f49f64` | not yet live — announcement, excluded from transcript wave |
 | C075 | Christopher Penn | [How to Shift Creative Teams to AI Curation?](https://www.youtube.com/watch?v=RLnqVlDgk-4) | `hf_20260809T142316_8099fbad` | not yet live — announcement, excluded from transcript wave |
-| C101 | Prof. Ryan Ahmed | [Copilot Cowork: OneDrive Files and Excel Reports](https://www.youtube.com/watch?v=IGkDOvcoa-8) | `hf_20260809T142328_08ea78c5` | associated; processing approval pending |
-| C114 | Earley Information Science | [AI in Clinical Trials and the Vibe Coding Fallacy](https://www.youtube.com/watch?v=PPMr7ORpg-k) | `hf_20260809T142339_a80bafe3` | associated; processing approval pending |
+| C101 | Prof. Ryan Ahmed | [Copilot Cowork: OneDrive Files and Excel Reports](https://www.youtube.com/watch?v=IGkDOvcoa-8) | `hf_20260809T142328_08ea78c5` | associated; semantic review deferred when plan was superseded |
+| C114 | Earley Information Science | [AI in Clinical Trials and the Vibe Coding Fallacy](https://www.youtube.com/watch?v=PPMr7ORpg-k) | `hf_20260809T142339_a80bafe3` | associated; semantic review deferred when plan was superseded |
 
 W1 intentionally tests six different knowledge relationships: safe vibe coding, Second-Brain maintenance, enterprise AI economics, creative-team operating change, enterprise cowork workflows, and regulated-domain coding skepticism.
 
