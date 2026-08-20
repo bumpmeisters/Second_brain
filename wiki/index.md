@@ -6,7 +6,7 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-08-18
+updated: 2026-08-20
 ---
 
 # Wiki Index
@@ -15,7 +15,7 @@ updated: 2026-08-18
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-08-18
+**Last updated**: 2026-08-20
 
 ---
 
@@ -26,6 +26,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
 - [[semantic-ingest-workflow]] - Governed package workflow for approved semantic review, evidence decisions, validation, and explicit promotion checkpoints.
+- [[continual-learning-for-agents]] - Active three-layer architecture for context, inspectable memory, and governed external learning; weight-level learning remains inactive behind explicit evidence and safety gates.
 - [YouTube Intelligence operations](../docs/youtube-intelligence.md) - Local discovery, bounded transcript intake, recurring-run contracts, and the loopback-only control center; W6R4 remains at 119/171-channel metadata coverage, all 96 admitted sources are reviewed, P42-P46 are complete, and the semantic backlog is zero. The weekly collector remains uninstalled and another coverage run requires a fresh exact approval.
 - [[reusable-practices-router]] - Active low-cost routing index for the recovered reusable practice pages.
 - [[reusable-practices-library]] - Active provenance register for reusable workflows, checklists, playbooks, gates, assessments, experiments, and operating contracts.
