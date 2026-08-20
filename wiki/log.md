@@ -1913,7 +1913,7 @@ updated: 2026-08-20
   - Local validation passed: line-ending policy, newsletter pipeline, 37 YouTube Python tests plus PowerShell contracts, 19 semantic-package generator assertions, 27 semantic-package validator assertions, clipping intake, final whitespace checks, and Fast wiki integrity with zero errors or warnings.
   - Kept 1,312 untracked local files outside the commits: 814 under `raw/`, 486 under `wiki/_outputs/`, ten under `tmp/`, one under `ME/`, and one under `research/`. No excluded source or output was read, modified, staged, or published during repository recovery.
   - Historical mixed line endings remain an explicit audit finding and were not normalized. No new semantic claim, source approval, promotion authority, automation, schedule, or external publication authority was introduced.
-  - The remaining repository task is to merge or otherwise resolve PR `#19`, retarget PR `#21` to `main`, and then run the GitHub check and final review against that base.
+  - At this checkpoint, merging or otherwise resolving PR `#19`, retargeting PR `#21` to `main`, and running the GitHub check against that base remained open. All three were completed on 2026-08-20; see the architecture-decision entry below.
 
 ## 2026-08-20 | architecture decision | activate governed external learning layer
 
