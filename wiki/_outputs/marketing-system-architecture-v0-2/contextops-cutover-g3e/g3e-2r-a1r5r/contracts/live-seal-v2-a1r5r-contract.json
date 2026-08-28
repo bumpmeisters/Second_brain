@@ -1,0 +1,81 @@
+{
+  "contract_id": "g3e2r-live-seal-contract/v2-a1r5r",
+  "seal_contract": "g3e2r-live-seal/v2",
+  "seal_inputs_contract": "g3e2r-seal-inputs/v2-a1r5r",
+  "fingerprint_contract_id": "g3e2r-ordinal-fingerprint/v3",
+  "json_time_contract_id": "g3e2r-json-time/v1",
+  "temporal_boundary_contract_id": "g3e2r-temporal-boundary/v1",
+  "ttl_seconds": 900,
+  "maximum_future_clock_skew_seconds": 60,
+  "required_seal_input_top_level": [
+    "seal_inputs_contract", "state", "transaction_id", "vault_root",
+    "routing_state", "legacy_token", "approval", "prepared_at_utc", "baseline"
+  ],
+  "forbidden_seal_input_fields": [
+    "seal_contract", "bundle_bindings", "execution_bindings", "artifact_bindings",
+    "runtime_bindings", "expected_b_hash", "expected_seal_inputs_hash", "sha256"
+  ],
+  "required_top_level": [
+    "seal_contract", "state", "transaction_id", "vault_root", "routing_state",
+    "legacy_token", "approval", "time", "bundle_bindings", "execution_bindings",
+    "artifact_bindings", "runtime_bindings", "baseline"
+  ],
+  "required_approval_fields": [
+    "approval_id", "approved_by", "approved_at_utc", "live_capability_probe_approved",
+    "live_mutation_approved", "automatic_reverse_approved", "independent_reverse_approved"
+  ],
+  "required_time_fields": ["prepared_at_utc", "sealed_at_utc", "not_after_utc", "ttl_seconds"],
+  "required_bundle_binding_ids": [
+    "G3E1-BUNDLE", "G3E2R-A-BUNDLE", "G3E2R-A-DEPENDENCY-LOCK",
+    "G3E2R-A1-BUNDLE", "G3E2R-A1R-BUNDLE", "G3E2R-A1R2-BUNDLE",
+    "G3E2R-A1R3-BUNDLE", "G3E2R-A1R4-BUNDLE", "G3E2R-A1R5R-BUNDLE", "G3E2R-B-BUNDLE"
+  ],
+  "required_execution_binding_ids": [
+    "A1-SEAL-CONTRACT", "A1-INVARIANT-CONTRACT", "A1-RUNTIME-ROLES", "A1-GATE-MAP",
+    "A1-GUARD-LIB", "A1-FINALIZER", "A1-FORWARD-V2", "A1-REVERSE-V2",
+    "A-COMPONENT-MANIFEST", "A-FORWARD-MANIFEST", "A-REVERSE-MANIFEST", "A-SNAPSHOT-TOOL",
+    "A-WRAPPER-TOOL", "G3E1-COMPONENT-TOOL", "G3E1-POSTSTATE-TOOL", "ROOT-FAST-TOOL",
+    "COMPONENT-REGISTER", "REFERENCE-TRANSITION", "MOS-PRE-TOOL", "MOS-POST-TOOL",
+    "A1R-SEAL-CONTRACT", "A1R-B-CONTRACT", "A1R-HARD-REFERENCE-CONTRACT", "A1R-GATE-MAP",
+    "A1R-GUARD-LIB", "A1R-FINALIZER", "A1R-FORWARD-V2R", "A1R-REVERSE-V2R",
+    "A1R2-SEAL-CONTRACT", "A1R2-INVARIANT-CONTRACT", "A1R2-WRAPPER-FULL-TREE-CONTRACT",
+    "A1R2-GATE-MAP", "A1R2-GUARD-LIB", "A1R2-FINALIZER", "A1R2-FORWARD", "A1R2-REVERSE",
+    "A1R3-SEAL-CONTRACT", "A1R3-INVARIANT-CONTRACT", "A1R3-ORDINAL-FINGERPRINT-CONTRACT",
+    "A1R3-GATE-MAP", "A1R3-GUARD-LIB", "A1R3-FINALIZER", "A1R3-FORWARD", "A1R3-REVERSE",
+    "A1R4-JSON-TIME-CONTRACT", "A1R4-TEMPORAL-BOUNDARY-CONTRACT", "A1R4-SEAL-CONTRACT",
+    "A1R4-GATE-MAP", "A1R4-GUARD-LIB", "A1R4-FINALIZER", "A1R4-FORWARD", "A1R4-REVERSE",
+    "A1R5R-RUNTIME-CLOSURE-CONTRACT", "A1R5R-SEAL-CONTRACT", "A1R5R-GATE-MAP",
+    "A1R5R-GUARD-LIB", "A1R5R-FINALIZER", "A1R5R-FORWARD", "A1R5R-REVERSE",
+    "A1R5R-O10-TRANSACTION-LIB", "A1R5R-O20-A1R4-GUARD-LIB"
+  ],
+  "required_entrypoint_ids": ["A1R5R-GUARD-LIB", "A1R5R-FINALIZER", "A1R5R-FORWARD", "A1R5R-REVERSE", "A1R5R-TEST"],
+  "required_artifact_binding_ids": [
+    "B-SNAPSHOT-SELECTION", "B-SNAPSHOT-MANIFEST", "B-SNAPSHOT-ARCHIVE", "B-SNAPSHOT-ENVELOPE",
+    "B-EXACT-POSTSTATE-MANIFEST", "G3E1-EXACT-POSTSTATE-ARCHIVE", "B-HARD-REFERENCE-MANIFEST",
+    "B-ADVISORY-REFERENCE-REPORT", "B-LIVE-INVARIANT-MANIFEST", "B-RESTORE-CURRENT-MANIFEST",
+    "B-ROLLBACK-WITNESS-MANIFEST", "B-WITNESS-LEGACY", "B-WITNESS-TARGET", "B-WITNESS-MOS",
+    "B-SEAL-INPUTS"
+  ],
+  "required_runtime_ids": ["POWERSHELL_HOST", "PYTHON_AGENT", "RIPGREP", "GIT"],
+  "required_baseline_fields": [
+    "git_staged_count", "root_fast_errors", "root_fast_warnings", "mos_passed", "mos_total",
+    "mos_cleanup", "mos_vault_mutation", "hard_reference_pre_paths", "hard_reference_pre_positive",
+    "live_invariant_rows", "wrapper_tree_files", "wrapper_manifest_paths", "wrapper_transition_actions",
+    "wrapper_verify_only_actions", "wrapper_external_paths", "wrapper_pre_fingerprint_v3",
+    "residue_count", "authority_pre"
+  ],
+  "bundle_binding_count": 10,
+  "execution_binding_count": 61,
+  "artifact_binding_count": 15,
+  "runtime_binding_count": 4,
+  "expected_hash_boundary_count": 9,
+  "b_candidate_file_count": 19,
+  "b_sealed_file_count": 20,
+  "b_bundle_bound_file_count": 18,
+  "live_seal_filename": "live-seal-v2.json",
+  "routing_state": "frozen",
+  "legacy_token": "projects/No and low code_1st Marketing Agent",
+  "forward_requires_unexpired_seal": true,
+  "reverse_ignores_expiry": true,
+  "unknown_properties": "reject"
+}

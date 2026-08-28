@@ -1,0 +1,19 @@
+{
+  "contract_id": "g3e2r-json-time/v1",
+  "storage_type": "json-string",
+  "canonical_format": "yyyy-MM-dd'T'HH:mm:ss.fffffffzzz",
+  "required_offset": "+00:00",
+  "fractional_second_digits": 7,
+  "parse_method": "System.DateTimeOffset.ParseExact",
+  "parse_culture": "System.Globalization.CultureInfo.InvariantCulture",
+  "parse_styles": "System.Globalization.DateTimeStyles.None",
+  "read_source": "unique-raw-json-lexeme",
+  "structural_deserializer_role": "non-temporal-structure-only",
+  "duplicate_property_policy": "reject",
+  "escaped_timestamp_lexeme_policy": "reject",
+  "non_string_timestamp_policy": "reject",
+  "canonical_serialization": "utc-invariant-exact-format",
+  "seal_input_fields": ["prepared_at_utc", "approved_at_utc"],
+  "live_seal_fields": ["prepared_at_utc", "approved_at_utc", "sealed_at_utc", "not_after_utc"]
+}
+
