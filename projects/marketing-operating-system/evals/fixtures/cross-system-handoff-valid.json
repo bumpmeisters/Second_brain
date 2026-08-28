@@ -1,0 +1,129 @@
+{
+  "handoff_id": "fixture-contextops-to-content-example-company-v1",
+  "envelope_version": "mos-cross-system-handoff/v1-draft",
+  "producer_system": "marketing-contextops",
+  "consumer_system": "content-operating-system",
+  "source_project": "projects/example-company",
+  "authority_ref": {
+    "decision_id": "fixture-example-company-contextops-to-content-v1",
+    "canonical_path": "projects/example-company/authority/approvals/example-handoff-approval.json",
+    "sha256": "85DCA02FBAF77F17A72F611B5F33C4187905A7EF010FE44BA8C0E23B0A5DC0FC",
+    "decision_actor": "fixture-human-reviewer",
+    "decision_date": "2026-08-21",
+    "authorized_scope": [
+      "create-strategic-creative-direction"
+    ],
+    "approval_state": "approved"
+  },
+  "decision_job": {
+    "id": "prepare-governed-content-direction",
+    "description": "Prepare one Strategic Creative Direction from approved, referenced upstream context."
+  },
+  "allowed_decision": {
+    "id": "create-strategic-creative-direction",
+    "description": "Create the bounded Content OS Strategic Creative Direction without reopening upstream decisions."
+  },
+  "prohibited_decisions": [
+    {
+      "id": "change-source-evidence",
+      "description": "Do not change source evidence or source custody."
+    },
+    {
+      "id": "change-claim-status",
+      "description": "Do not change claim status."
+    },
+    {
+      "id": "change-market-definition",
+      "description": "Do not redefine the market."
+    },
+    {
+      "id": "change-audience-definition",
+      "description": "Do not redefine the audience."
+    },
+    {
+      "id": "change-segmentation",
+      "description": "Do not change segmentation."
+    },
+    {
+      "id": "change-positioning",
+      "description": "Do not change positioning."
+    },
+    {
+      "id": "change-brand-core",
+      "description": "Do not change the approved Brand Core."
+    },
+    {
+      "id": "change-gtm-strategy",
+      "description": "Do not change GTM strategy."
+    },
+    {
+      "id": "change-campaign-strategy",
+      "description": "Do not change campaign strategy."
+    },
+    {
+      "id": "approve-publication",
+      "description": "Do not approve publication."
+    },
+    {
+      "id": "interpret-performance",
+      "description": "Do not interpret performance evidence."
+    },
+    {
+      "id": "promote-method",
+      "description": "Do not promote an episodic learning into a reusable method."
+    }
+  ],
+  "input_contract_ref": {
+    "contract_id": "contextops-stage-contract",
+    "canonical_path": "projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md",
+    "version": "1.0.0",
+    "sha256": "8B748B721116BCD7E075F91D9BDD5AD5DCEED75E6DC5C981F00E5258F3DA0FD6",
+    "contract_owner": "marketing-contextops"
+  },
+  "output_contract_ref": {
+    "contract_id": "legacy:projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
+    "canonical_path": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
+    "version": "legacy-unversioned",
+    "sha256": "93CB2BC2F53E9862371027FC12FCBAF55C0084C542CE5608E91E1D2E89ECC560",
+    "contract_owner": "marketing-contextops"
+  },
+  "specialized_contract_ref": {
+    "contract_id": "legacy:projects/content-operating-system/workflows/contextops-intake-contract.md",
+    "canonical_path": "projects/content-operating-system/workflows/contextops-intake-contract.md",
+    "version": "legacy-unversioned",
+    "sha256": "2B5390C0D2B2AFA17AEED461010F96BA6ABAE5C70E5F9E061A96392180E41BE9",
+    "contract_owner": "content-operating-system"
+  },
+  "specialized_packet_ref": {
+    "packet_id": "example-company-contextops-packet-v1",
+    "canonical_path": "projects/example-company/authority/packets/example-contextops-packet.json",
+    "version": "1.0.0",
+    "sha256": "B27CE404D15A8741B1814984195D3D685BC1EE44DE5D66C04E5C0FA9BCDF68B1",
+    "packet_owner": "projects/example-company"
+  },
+  "canonical_artifact_refs": [
+    {
+      "artifact_id": "example-company-approved-context-v1",
+      "canonical_path": "projects/example-company/authority/artifacts/example-approved-context.md",
+      "version": "1.0.0",
+      "sha256": "4832B1D464E68DEDA11C59A8C4922CB764C8268C383EF31B03B501B46CB66243",
+      "artifact_owner": "projects/example-company",
+      "approval_state": "approved",
+      "evidence_state": "sourced",
+      "freshness_state": "current"
+    }
+  ],
+  "evidence_state": "sourced",
+  "freshness_state": "current",
+  "refresh_trigger": "Re-evaluate when any referenced fingerprint, evidence state, approval state, or freshness state changes.",
+  "approval_state": "approved",
+  "readiness_state": "ready",
+  "open_questions": [],
+  "escalation_owner": "projects/example-company",
+  "validator_ref": {
+    "validator_id": "mos-federation-validator/v1-draft",
+    "result_state": "pending"
+  },
+  "effect_mode": "non-mutating",
+  "rollback_ref": "not-applicable"
+}

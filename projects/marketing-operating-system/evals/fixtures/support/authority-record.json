@@ -1,0 +1,12 @@
+{
+  "record_type": "fixture-authority-record",
+  "status": "approved",
+  "decision_id": "fixture-example-company-contextops-to-content-v1",
+  "decision_actor": "fixture-human-reviewer",
+  "decision_date": "2026-08-21",
+  "authorized_scope": [
+    "create-strategic-creative-direction"
+  ],
+  "source_project": "projects/example-company",
+  "fixture_only": true
+}
