@@ -1,0 +1,1024 @@
+diff --git a/projects/No and low code_1st Marketing Agent/AGENTS.md b/projects/No and low code_1st Marketing Agent/AGENTS.md
+index c8bfccc..306b39f 100644
+--- a/projects/No and low code_1st Marketing Agent/AGENTS.md	
++++ b/projects/No and low code_1st Marketing Agent/AGENTS.md	
+@@ -1,194 +1,44 @@
+-# Second Brain Agent
+-
+-A local-first, Obsidian-friendly knowledge base maintained by Codex.
+-
+-## Purpose
+-
+-This vault is Rolf's project second brain for a no-code/low-code-first marketing agent.
+-The agent helps build company context from a company name, URL, uploaded company documents, and documents about the company.
+-
+-The agent's north star is credible, trustworthy marketing strategy synthesis: understand what a company offers, how it positions itself, its market and competitors, its customers and segments, and how this can become a practical sales and marketing strategy.
+-
+-Codex maintains the structured wiki. The human curates sources, adds documents, asks questions, reviews conclusions, and decides what is worth keeping.
+-
+-The goal is compounding synthesis and recursive learning: every project run should make the wiki easier to query, browse, audit, reuse, and improve for later company analyses.
+-
+-## Project Map
+-
+-Treat the vault as three layers:
+-
+-```text
+-raw/          immutable source material
+-research/     AI-generated research reports and other uncertain secondary syntheses
+-wiki/         Codex-maintained knowledge pages
+-AGENTS.md     operating rules for Codex and other agents
+-```
+-
+-Support folders:
+-
+-```text
+-templates/       reusable Markdown templates
+-skills/          local Codex skills, one lowercase-hyphenated folder per skill
+-frameworks/      local canonical framework library used directly by skills
+-raw/assets/      locally downloaded source attachments from clips
+-research/assets/ attachments that belong to AI-generated research reports
+-wiki/_assets/    generated or locally saved images and attachments used by wiki pages
+-wiki/_outputs/   generated exports such as charts, tables, reports, slide outlines, or analysis files
+-workflows/       repeatable analysis procedures and acceptance criteria
+-projects/        dedicated company/product workspaces, such as projects/Nadeln
+-context/         stable and changing project context that should not bloat AGENTS.md
+-decisions/       append-only architecture and guardrail decision log
+-tools/           deterministic checks, scripts, and repeatable transforms when needed
+-```
+-
+-## Source Boundaries
+-
+-- Never modify files in `raw/`.
+-- If a raw source needs cleaning, create a derived note or output in `wiki/` or `wiki/_outputs/`.
+-- Keep Obsidian Web Clipper attachments in `raw/assets/`.
+-- Treat `research/` differently from `raw/`: AI-generated research can be useful, but it is not primary evidence.
+-- Preserve AI-generated research as received, track uncertainty, and verify important claims against primary sources before promoting them into durable wiki claims.
+-- Treat the local `frameworks/` folder as the primary execution library for curated frameworks.
+-- Use Rolf's existing Second Brain to discover, compare, and improve frameworks that are not yet local. Do not edit parent-vault files unless explicitly asked.
+-- Treat user-provided company documents and official company URLs as high-priority evidence, while still checking for date, scope, and bias.
+-
+-## Source Types
+-
+-Handle Markdown, text, HTML exports, web clippings, PDFs, reports, spreadsheets, slide decks, meeting notes, transcripts, emails, project docs, screenshots, diagrams, charts, images, and AI-generated research.
+-
+-Preserve the important context for each source type: table columns and units, slide narrative and audience, visible image evidence versus inference, and AI-research provenance and uncertainty.
+-
+-## Ingest Workflow
+-
+-When the user asks to ingest one or more sources:
+-
+-1. Read the full source when feasible. For large or mixed batches, inventory first and process in sensible batches.
+-2. Briefly report key takeaways and proposed wiki pages before major writes when the scope is large or ambiguous.
+-3. Create one source summary page in `wiki/` for each meaningful source or source bundle.
+-4. Create or update concept, entity, project, comparison, timeline, and decision pages as needed.
+-5. Add `[[wiki-links]]` to connect related pages.
+-6. Update `wiki/index.md`.
+-7. Update `wiki/sources.md` with source status, type, date, and summary page.
+-8. Append a dated entry to `wiki/log.md`.
+-
+-## AI-Generated Research Workflow
+-
+-Put AI-generated deep-research reports in `research/`, not `raw/`, unless the user explicitly wants to treat a specific report as a raw source.
+-
+-When ingesting from `research/`:
+-
+-1. Create a source summary page with `type: ai-research-summary`.
+-2. Record provenance when available: tool/model, prompt/topic, generation date, exported date, and cited sources.
+-3. Assign a trust level: `unverified`, `partially-verified`, or `verified`.
+-4. Extract useful leads, claims, entities, and cited sources.
+-5. Do not treat uncited AI-generated claims as facts. Mark them `needs verification`.
+-6. Prefer following citations back to primary sources before updating core concept pages.
+-7. Record whether citations were checked, unavailable, or contradicted.
+-8. Update `wiki/sources.md` under an AI research section.
+-
+-Use AI research as a map, not as the territory.
+-
+-## Company Context Workflow
+-
+-For company-analysis tasks, use `workflows/company-context-development.md`.
+-
+-Typical stages are: intake, source inventory, company offer, risk and claim classification, market-context packet, buying-context packet, segmentation strategy, audience understanding, local framework matching, positioning, marketing strategy, sales and marketing translation, verification, and recursive learning updates.
+-
+-Use `workflows/marketing-agent-runbook.md` as the operational runbook when taking a company or product from initial input through evidence intake, risk classification, market context, framework fit, positioning, GTM mapping, verification, and recursive learning.
+-
+-## ContextOps Discipline
+-
+-This project builds context for later marketing and sales process steps. Do not collapse upstream analysis into downstream strategy unless the user explicitly asks to move into that later stage.
+-
+-For every substantial analysis artifact, state:
+-
+-- In scope
+-- Out of scope
+-- Consumes
+-- Produces context for
+-- Handoff questions
+-
+-Use `workflows/contextops-handoff-contract.md` for the required handoff fields, stage contracts, and leakage checks between market context, buying contexts, segmentation strategy, audience understanding, framework fit, and positioning.
+-
+-Use the narrowest useful artifact for the current stage. A market analysis should define market boundaries, category context, competitor and substitute clusters, evidence status, and handoff questions. It should not include segmentation priority, positioning, content pillars, SEO/GEO strategy, campaign strategy, sales enablement, PDP recommendations, lifecycle strategy, or growth loops unless the user explicitly asks for those downstream outputs.
+-
+-For customer context, prefer buying contexts over persona theater. A buying context should preserve roles, triggers, jobs, barriers, proof needs, observable signals, and evidence status. Do not turn it into fictional persona biographies or segment priority unless the user explicitly asks for that later step.
+-
+-For segmentation strategy, do not answer with a single default segmentation too quickly. Compare multiple segmentation frameworks or strategies for the specific business model and evidence state, then choose the strategy with the strongest downstream potential for positioning, marketing strategy, campaign strategy, SEO/GEO, landing pages, lifecycle, sales enablement, or GTM. Preserve B2B, B2C, D2C, B2B2C, marketplace, partner, retail, and regulated differences.
+-
+-For audience understanding, treat persona as an optional representation, not the method. Deepen selected segments through questions, language, objections, motivations, proof needs, trusted sources, decision criteria, content/channel behavior, and validation gaps. Do not write fictional persona biographies or move into positioning, campaign strategy, SEO/GEO, landing pages, lifecycle, sales enablement, or GTM unless the user explicitly asks for that downstream step.
+-
+-For framework use, prefer canonical documents in `frameworks/`. Load the relevant domain index, compare candidate frameworks, and read the selected framework documents before applying them. A framework document should preserve its diagnostic questions, evidence standard, business-model adaptations, failure modes, and ContextOps handoff. Search the parent Second Brain only when the local library has a genuine gap.
+-
+-Use the global `framework-builder` skill when creating, migrating, evaluating, or materially revising canonical frameworks. Framework evolution must be versioned and evidence-led. Capture learning after use, but do not silently change global skill behavior from one project-specific observation.
+-
+-Use `contextops-validator` as an independent quality gate for substantial artifacts that feed another stage. The producing skill creates or revises the artifact; the validator returns `PASS`, `REVISE`, or `BLOCK`; the orchestrator controls retries and progression. Do not let the validator silently rewrite the artifact it is judging. Allow at most two automatic revisions before surfacing the unresolved cause. Route repeated findings into recursive learning rather than weakening the gate.
+-
+-Before finalizing a context-building artifact, check:
+-
+-- Is this statement context for the next step, or a decision that belongs to the next step?
+-- Did any downstream recommendation leak into the current artifact?
+-- Are unsupported assumptions labeled as hypotheses?
+-- Is the next ContextOps iteration clear enough for another agent to continue?
+-
+-## Page Naming And Format
+-
+-Use lowercase, hyphenated Markdown filenames such as `machine-learning.md` or `pricing-model-comparison.md`.
+-
+-Prefer the templates in `templates/` for wiki pages, source summaries, AI research summaries, and log entries. Existing pages without YAML frontmatter are valid. When editing them meaningfully, migrate them toward the templates when it is low-risk.
+-
+-## Citation Rules
+-
+-- Every factual claim should reference a source.
+-- Use `(source: filename.ext)` for concise citations in prose.
+-- For claims drawn from generated analysis, cite the underlying raw file and mention that the conclusion is analysis.
+-- For claims drawn from AI-generated research, cite the research file and mark the claim as unverified unless independently checked.
+-- If sources disagree, state the contradiction explicitly.
+-- If a claim has no source, mark it as `needs verification`.
+-- Do not hide uncertainty. Use "the source claims", "the data suggests", or "this is inferred" when appropriate.
+-
+-## Question Answering
+-
+-When the user asks a question:
+-
+-1. Read `wiki/index.md` first.
+-2. Read relevant pages and, if needed, their cited source summaries.
+-3. Synthesize the answer with links to wiki pages.
+-4. State when the answer is not present in the wiki.
+-5. Offer to save valuable new synthesis as a wiki page.
+-
+-For high-stakes or time-sensitive topics, verify current external facts before treating them as current.
+-
+-## Tables, Charts, And Outputs
+-
+-For spreadsheet or chart-heavy work:
+-
+-- Keep raw files unchanged in `raw/`.
+-- Put generated tables, chart images, cleaned extracts, or analysis notes in `wiki/_outputs/`.
+-- Link outputs from the relevant wiki page.
+-- Record methodology, assumptions, filters, and limitations.
+-- Prefer reproducible calculations over hand-copied numbers.
+-
+-## Lint And Audit
+-
+-When asked to lint or audit the wiki, check for contradictions, orphan pages, missing inbound links, important concepts without pages, stale or time-sensitive claims, missing citations, AI-generated research promoted without verification, pages that do not follow the page format, and source files not listed in `wiki/sources.md`.
+-
+-Report findings as a numbered list with suggested fixes.
+-
+-## Log Format
+-
+-Append dated entries to `wiki/log.md` using `templates/log-entry.md`.
+-
+-## Rules
+-
+-- Always update `wiki/index.md`, `wiki/sources.md`, and `wiki/log.md` after ingesting sources.
+-- Record meaningful architecture, workflow, guardrail, and agent-design decisions in `decisions/log.md`.
+-- Keep downloaded source attachments in `raw/assets/`.
+-- Keep AI-generated deep-research reports in `research/` and their attachments in `research/assets/`.
+-- Keep generated outputs in `wiki/_outputs/` and curated wiki media in `wiki/_assets/`.
+-- Keep local reusable skills in `skills/`, using one lowercase-hyphenated folder per skill and a required `SKILL.md`.
+-- Keep canonical reusable frameworks in `frameworks/`, organized by primary ContextOps stage and written to `frameworks/framework-document-standard.md`.
+-- Keep deterministic scripts and checks in `tools/` only after a concrete repeated need appears.
+-- Write in clear, plain language.
+-- Prefer durable structure over over-organization.
+-- When categorization is genuinely ambiguous, ask the user.
++---
++type: agent-instructions
++lifecycle_status: residual
++system: legacy-marketing-agent-custody
++operational_authority: source-projects-only
++shared_contextops_authority: none
++canonical_contextops_authority: none
++created: 2026-06-14
++updated: 2026-08-22
++sources:
++  - decisions/legacy-control/AGENTS.pre-marketing-contextops-cutover.md
++  - projects/marketing-contextops/AGENTS.md
++  - wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-1/blocker-resolution-proposal.md
++---
++
++# Legacy Marketing Agent Residual Custody
++
++This directory no longer controls shared Marketing ContextOps methods. The canonical and operational shared capability is `projects/marketing-contextops/` after the separately approved atomic cutover. Root `AGENTS.md` remains controlling for the whole vault.
++
++## Remaining responsibilities
++
++- Preserve the historical project record, decisions, context, wiki, generated outputs, protected source holdings, and other residual files in place.
++- Permit concrete source-project work in the existing embedded workspaces `projects/Das-Familienbuch/`, `projects/Nadeln/`, and `projects/Zelostat/` until a separate reviewed workspace-admission or move checkpoint changes their custody.
++- Apply Root source, evidence, citation, approval, and protected-folder rules to all residual and source-project work.
++- Keep `CLAUDE.md` as the unchanged thin adapter that imports this file.
++
++## Routing boundary
++
++- Route reusable company-evidence, claim, market, buying-context, segmentation, audience, positioning, GTM-context, stage-contract, and ContextOps-validation methods to `projects/marketing-contextops/`.
++- Do not add, copy, revise, or reactivate shared ContextOps frameworks, skills, workflows, templates, tools, or contracts under this Legacy root.
++- Concrete market, Brand, positioning, GTM, campaign, content, run, approval, and learning artifacts remain owned by their initiating source project.
++- Do not infer or pre-create a replacement path under `projects/company-workspaces/`; each admission requires its own gate.
++
++## Held exceptions
++
++- `skills/framework-builder/` remains a held Root-shared transitional dependency at this Legacy path. Its current discovery wrapper must remain byte-identical. Any move, edit, deployment-mirror change, or wrapper cutover needs separate approval.
++- `skills/recursive-learning-update/` is frozen historical material and is not a discoverable or callable capability. Do not revive or repoint it through this residual instruction.
++
++## Protection and audit
++
++- Never modify protected source material merely because it remains under this directory.
++- Archive and history files are provenance, not active method authority.
++- Append architecture and custody decisions to `decisions/log.md`; never rewrite earlier entries.
++- A rollback restores the pre-cutover control files from `decisions/legacy-control/` while preserving append-only audit entries.
+diff --git a/projects/No and low code_1st Marketing Agent/README.md b/projects/No and low code_1st Marketing Agent/README.md
+index 5047697..4631107 100644
+--- a/projects/No and low code_1st Marketing Agent/README.md	
++++ b/projects/No and low code_1st Marketing Agent/README.md	
+@@ -1,22 +1,33 @@
+-# No And Low Code 1st Marketing Agent
++---
++type: project-index
++lifecycle_status: residual
++system: legacy-marketing-agent-custody
++shared_contextops_authority: none
++updated: 2026-08-22
++---
+ 
+-This project is initialized as a local-first second brain for a no-code/low-code-first marketing agent. Its current architectural role is the Marketing ContextOps system: it builds governed company, market, audience, claim, positioning, journey, and campaign-role context for downstream consumers.
++# No And Low Code 1st Marketing Agent — Residual Custody
+ 
+-The agent builds company context from company names, URLs, and uploaded documents, then turns that context into credible marketing and sales strategy using the project-local `frameworks/` library. The Content Operating System consumes its referenced content handoff; it owns Strategic Creative Direction, Content Execution, publishing, and content learning. Rolf's existing Second Brain remains a discovery and improvement source.
++**Summary**: Historical origin and residual custody area after the controlled Marketing ContextOps cutover. Shared ContextOps methods now live in `projects/marketing-contextops/`; this directory remains active only for the concrete embedded source projects and retained provenance.
+ 
+-Start here:
++## Current routes
+ 
+-- `AGENTS.md` for agent operating rules.
+-- `wiki/index.md` for the knowledge base entry point.
+-- `wiki/project-brief.md` for the current draft purpose and open collaboration questions.
+-- `wiki/marketing-agent-operating-model.md` for the agent's core operating model.
+-- `context/project-brief.md` and `context/current-priorities.md` for compact agent orientation.
+-- `workflows/marketing-agent-runbook.md` for the staged company-analysis runbook.
+-- `workflows/company-context-development.md` for the company-context workflow.
+-- `decisions/log.md` for architecture and guardrail decisions.
+-- `wiki/sources.md` for source tracking.
+-- `wiki/log.md` for decisions, ingests, and structural changes.
++- Shared Marketing ContextOps methods and contracts: `projects/marketing-contextops/README.md`.
++- Root knowledge, source custody, reusable practices, and vault governance: Root `AGENTS.md` and `wiki/index.md`.
++- Existing embedded source projects: `projects/Das-Familienbuch/`, `projects/Nadeln/`, and `projects/Zelostat/` under this directory until a separate admission or move.
++- Historical architecture and decisions: `decisions/` and the retained Legacy wiki/context files.
+ 
+-Put immutable source material in `raw/`, AI-generated research in `research/`, agent-maintained synthesis in `wiki/`, generated outputs in `wiki/_outputs/`, company workspaces in `projects/`, stage-procedure skills in `skills/` (one folder per skill with `SKILL.md` + `agents/openai.yaml`; Codex is the primary harness), and deterministic checks in `tools/`.
++## Residual rules
+ 
+-Recovery note: historical evaluation, linter, and run-dashboard components named in older logs were not part of the approved recovery manifest. They are provenance, not executable dependencies. Re-establish them only through a separate reviewed change if a current use case still needs them.
++- Do not create new shared ContextOps components here.
++- Do not relocate or reclassify the embedded source projects implicitly.
++- Preserve protected sources and historical artifacts under their existing custody rules.
++- `skills/framework-builder/` remains a held Root-shared transition exception.
++- `skills/recursive-learning-update/` remains frozen historical material and is not discoverable.
++
++## Control archive and rollback
++
++- Pre-cutover instruction: `decisions/legacy-control/AGENTS.pre-marketing-contextops-cutover.md`.
++- Pre-cutover navigation: `decisions/legacy-control/README.pre-marketing-contextops-cutover.md`.
++- The active residual boundary is defined by `AGENTS.md`; unchanged `CLAUDE.md` continues to import it.
++- Rollback restores archived control bytes while retaining append-only decision history.
+diff --git a/after/projects/No and low code_1st Marketing Agent/decisions/legacy-control/AGENTS.pre-marketing-contextops-cutover.md b/projects/No and low code_1st Marketing Agent/decisions/legacy-control/AGENTS.pre-marketing-contextops-cutover.md
+new file mode 100644
+index 0000000..c8bfccc
+--- /dev/null
++++ b/projects/No and low code_1st Marketing Agent/decisions/legacy-control/AGENTS.pre-marketing-contextops-cutover.md	
+@@ -0,0 +1,194 @@
++# Second Brain Agent
++
++A local-first, Obsidian-friendly knowledge base maintained by Codex.
++
++## Purpose
++
++This vault is Rolf's project second brain for a no-code/low-code-first marketing agent.
++The agent helps build company context from a company name, URL, uploaded company documents, and documents about the company.
++
++The agent's north star is credible, trustworthy marketing strategy synthesis: understand what a company offers, how it positions itself, its market and competitors, its customers and segments, and how this can become a practical sales and marketing strategy.
++
++Codex maintains the structured wiki. The human curates sources, adds documents, asks questions, reviews conclusions, and decides what is worth keeping.
++
++The goal is compounding synthesis and recursive learning: every project run should make the wiki easier to query, browse, audit, reuse, and improve for later company analyses.
++
++## Project Map
++
++Treat the vault as three layers:
++
++```text
++raw/          immutable source material
++research/     AI-generated research reports and other uncertain secondary syntheses
++wiki/         Codex-maintained knowledge pages
++AGENTS.md     operating rules for Codex and other agents
++```
++
++Support folders:
++
++```text
++templates/       reusable Markdown templates
++skills/          local Codex skills, one lowercase-hyphenated folder per skill
++frameworks/      local canonical framework library used directly by skills
++raw/assets/      locally downloaded source attachments from clips
++research/assets/ attachments that belong to AI-generated research reports
++wiki/_assets/    generated or locally saved images and attachments used by wiki pages
++wiki/_outputs/   generated exports such as charts, tables, reports, slide outlines, or analysis files
++workflows/       repeatable analysis procedures and acceptance criteria
++projects/        dedicated company/product workspaces, such as projects/Nadeln
++context/         stable and changing project context that should not bloat AGENTS.md
++decisions/       append-only architecture and guardrail decision log
++tools/           deterministic checks, scripts, and repeatable transforms when needed
++```
++
++## Source Boundaries
++
++- Never modify files in `raw/`.
++- If a raw source needs cleaning, create a derived note or output in `wiki/` or `wiki/_outputs/`.
++- Keep Obsidian Web Clipper attachments in `raw/assets/`.
++- Treat `research/` differently from `raw/`: AI-generated research can be useful, but it is not primary evidence.
++- Preserve AI-generated research as received, track uncertainty, and verify important claims against primary sources before promoting them into durable wiki claims.
++- Treat the local `frameworks/` folder as the primary execution library for curated frameworks.
++- Use Rolf's existing Second Brain to discover, compare, and improve frameworks that are not yet local. Do not edit parent-vault files unless explicitly asked.
++- Treat user-provided company documents and official company URLs as high-priority evidence, while still checking for date, scope, and bias.
++
++## Source Types
++
++Handle Markdown, text, HTML exports, web clippings, PDFs, reports, spreadsheets, slide decks, meeting notes, transcripts, emails, project docs, screenshots, diagrams, charts, images, and AI-generated research.
++
++Preserve the important context for each source type: table columns and units, slide narrative and audience, visible image evidence versus inference, and AI-research provenance and uncertainty.
++
++## Ingest Workflow
++
++When the user asks to ingest one or more sources:
++
++1. Read the full source when feasible. For large or mixed batches, inventory first and process in sensible batches.
++2. Briefly report key takeaways and proposed wiki pages before major writes when the scope is large or ambiguous.
++3. Create one source summary page in `wiki/` for each meaningful source or source bundle.
++4. Create or update concept, entity, project, comparison, timeline, and decision pages as needed.
++5. Add `[[wiki-links]]` to connect related pages.
++6. Update `wiki/index.md`.
++7. Update `wiki/sources.md` with source status, type, date, and summary page.
++8. Append a dated entry to `wiki/log.md`.
++
++## AI-Generated Research Workflow
++
++Put AI-generated deep-research reports in `research/`, not `raw/`, unless the user explicitly wants to treat a specific report as a raw source.
++
++When ingesting from `research/`:
++
++1. Create a source summary page with `type: ai-research-summary`.
++2. Record provenance when available: tool/model, prompt/topic, generation date, exported date, and cited sources.
++3. Assign a trust level: `unverified`, `partially-verified`, or `verified`.
++4. Extract useful leads, claims, entities, and cited sources.
++5. Do not treat uncited AI-generated claims as facts. Mark them `needs verification`.
++6. Prefer following citations back to primary sources before updating core concept pages.
++7. Record whether citations were checked, unavailable, or contradicted.
++8. Update `wiki/sources.md` under an AI research section.
++
++Use AI research as a map, not as the territory.
++
++## Company Context Workflow
++
++For company-analysis tasks, use `workflows/company-context-development.md`.
++
++Typical stages are: intake, source inventory, company offer, risk and claim classification, market-context packet, buying-context packet, segmentation strategy, audience understanding, local framework matching, positioning, marketing strategy, sales and marketing translation, verification, and recursive learning updates.
++
++Use `workflows/marketing-agent-runbook.md` as the operational runbook when taking a company or product from initial input through evidence intake, risk classification, market context, framework fit, positioning, GTM mapping, verification, and recursive learning.
++
++## ContextOps Discipline
++
++This project builds context for later marketing and sales process steps. Do not collapse upstream analysis into downstream strategy unless the user explicitly asks to move into that later stage.
++
++For every substantial analysis artifact, state:
++
++- In scope
++- Out of scope
++- Consumes
++- Produces context for
++- Handoff questions
++
++Use `workflows/contextops-handoff-contract.md` for the required handoff fields, stage contracts, and leakage checks between market context, buying contexts, segmentation strategy, audience understanding, framework fit, and positioning.
++
++Use the narrowest useful artifact for the current stage. A market analysis should define market boundaries, category context, competitor and substitute clusters, evidence status, and handoff questions. It should not include segmentation priority, positioning, content pillars, SEO/GEO strategy, campaign strategy, sales enablement, PDP recommendations, lifecycle strategy, or growth loops unless the user explicitly asks for those downstream outputs.
++
++For customer context, prefer buying contexts over persona theater. A buying context should preserve roles, triggers, jobs, barriers, proof needs, observable signals, and evidence status. Do not turn it into fictional persona biographies or segment priority unless the user explicitly asks for that later step.
++
++For segmentation strategy, do not answer with a single default segmentation too quickly. Compare multiple segmentation frameworks or strategies for the specific business model and evidence state, then choose the strategy with the strongest downstream potential for positioning, marketing strategy, campaign strategy, SEO/GEO, landing pages, lifecycle, sales enablement, or GTM. Preserve B2B, B2C, D2C, B2B2C, marketplace, partner, retail, and regulated differences.
++
++For audience understanding, treat persona as an optional representation, not the method. Deepen selected segments through questions, language, objections, motivations, proof needs, trusted sources, decision criteria, content/channel behavior, and validation gaps. Do not write fictional persona biographies or move into positioning, campaign strategy, SEO/GEO, landing pages, lifecycle, sales enablement, or GTM unless the user explicitly asks for that downstream step.
++
++For framework use, prefer canonical documents in `frameworks/`. Load the relevant domain index, compare candidate frameworks, and read the selected framework documents before applying them. A framework document should preserve its diagnostic questions, evidence standard, business-model adaptations, failure modes, and ContextOps handoff. Search the parent Second Brain only when the local library has a genuine gap.
++
++Use the global `framework-builder` skill when creating, migrating, evaluating, or materially revising canonical frameworks. Framework evolution must be versioned and evidence-led. Capture learning after use, but do not silently change global skill behavior from one project-specific observation.
++
++Use `contextops-validator` as an independent quality gate for substantial artifacts that feed another stage. The producing skill creates or revises the artifact; the validator returns `PASS`, `REVISE`, or `BLOCK`; the orchestrator controls retries and progression. Do not let the validator silently rewrite the artifact it is judging. Allow at most two automatic revisions before surfacing the unresolved cause. Route repeated findings into recursive learning rather than weakening the gate.
++
++Before finalizing a context-building artifact, check:
++
++- Is this statement context for the next step, or a decision that belongs to the next step?
++- Did any downstream recommendation leak into the current artifact?
++- Are unsupported assumptions labeled as hypotheses?
++- Is the next ContextOps iteration clear enough for another agent to continue?
++
++## Page Naming And Format
++
++Use lowercase, hyphenated Markdown filenames such as `machine-learning.md` or `pricing-model-comparison.md`.
++
++Prefer the templates in `templates/` for wiki pages, source summaries, AI research summaries, and log entries. Existing pages without YAML frontmatter are valid. When editing them meaningfully, migrate them toward the templates when it is low-risk.
++
++## Citation Rules
++
++- Every factual claim should reference a source.
++- Use `(source: filename.ext)` for concise citations in prose.
++- For claims drawn from generated analysis, cite the underlying raw file and mention that the conclusion is analysis.
++- For claims drawn from AI-generated research, cite the research file and mark the claim as unverified unless independently checked.
++- If sources disagree, state the contradiction explicitly.
++- If a claim has no source, mark it as `needs verification`.
++- Do not hide uncertainty. Use "the source claims", "the data suggests", or "this is inferred" when appropriate.
++
++## Question Answering
++
++When the user asks a question:
++
++1. Read `wiki/index.md` first.
++2. Read relevant pages and, if needed, their cited source summaries.
++3. Synthesize the answer with links to wiki pages.
++4. State when the answer is not present in the wiki.
++5. Offer to save valuable new synthesis as a wiki page.
++
++For high-stakes or time-sensitive topics, verify current external facts before treating them as current.
++
++## Tables, Charts, And Outputs
++
++For spreadsheet or chart-heavy work:
++
++- Keep raw files unchanged in `raw/`.
++- Put generated tables, chart images, cleaned extracts, or analysis notes in `wiki/_outputs/`.
++- Link outputs from the relevant wiki page.
++- Record methodology, assumptions, filters, and limitations.
++- Prefer reproducible calculations over hand-copied numbers.
++
++## Lint And Audit
++
++When asked to lint or audit the wiki, check for contradictions, orphan pages, missing inbound links, important concepts without pages, stale or time-sensitive claims, missing citations, AI-generated research promoted without verification, pages that do not follow the page format, and source files not listed in `wiki/sources.md`.
++
++Report findings as a numbered list with suggested fixes.
++
++## Log Format
++
++Append dated entries to `wiki/log.md` using `templates/log-entry.md`.
++
++## Rules
++
++- Always update `wiki/index.md`, `wiki/sources.md`, and `wiki/log.md` after ingesting sources.
++- Record meaningful architecture, workflow, guardrail, and agent-design decisions in `decisions/log.md`.
++- Keep downloaded source attachments in `raw/assets/`.
++- Keep AI-generated deep-research reports in `research/` and their attachments in `research/assets/`.
++- Keep generated outputs in `wiki/_outputs/` and curated wiki media in `wiki/_assets/`.
++- Keep local reusable skills in `skills/`, using one lowercase-hyphenated folder per skill and a required `SKILL.md`.
++- Keep canonical reusable frameworks in `frameworks/`, organized by primary ContextOps stage and written to `frameworks/framework-document-standard.md`.
++- Keep deterministic scripts and checks in `tools/` only after a concrete repeated need appears.
++- Write in clear, plain language.
++- Prefer durable structure over over-organization.
++- When categorization is genuinely ambiguous, ask the user.
+diff --git a/after/projects/No and low code_1st Marketing Agent/decisions/legacy-control/README.pre-marketing-contextops-cutover.md b/projects/No and low code_1st Marketing Agent/decisions/legacy-control/README.pre-marketing-contextops-cutover.md
+new file mode 100644
+index 0000000..5047697
+--- /dev/null
++++ b/projects/No and low code_1st Marketing Agent/decisions/legacy-control/README.pre-marketing-contextops-cutover.md	
+@@ -0,0 +1,22 @@
++# No And Low Code 1st Marketing Agent
++
++This project is initialized as a local-first second brain for a no-code/low-code-first marketing agent. Its current architectural role is the Marketing ContextOps system: it builds governed company, market, audience, claim, positioning, journey, and campaign-role context for downstream consumers.
++
++The agent builds company context from company names, URLs, and uploaded documents, then turns that context into credible marketing and sales strategy using the project-local `frameworks/` library. The Content Operating System consumes its referenced content handoff; it owns Strategic Creative Direction, Content Execution, publishing, and content learning. Rolf's existing Second Brain remains a discovery and improvement source.
++
++Start here:
++
++- `AGENTS.md` for agent operating rules.
++- `wiki/index.md` for the knowledge base entry point.
++- `wiki/project-brief.md` for the current draft purpose and open collaboration questions.
++- `wiki/marketing-agent-operating-model.md` for the agent's core operating model.
++- `context/project-brief.md` and `context/current-priorities.md` for compact agent orientation.
++- `workflows/marketing-agent-runbook.md` for the staged company-analysis runbook.
++- `workflows/company-context-development.md` for the company-context workflow.
++- `decisions/log.md` for architecture and guardrail decisions.
++- `wiki/sources.md` for source tracking.
++- `wiki/log.md` for decisions, ingests, and structural changes.
++
++Put immutable source material in `raw/`, AI-generated research in `research/`, agent-maintained synthesis in `wiki/`, generated outputs in `wiki/_outputs/`, company workspaces in `projects/`, stage-procedure skills in `skills/` (one folder per skill with `SKILL.md` + `agents/openai.yaml`; Codex is the primary harness), and deterministic checks in `tools/`.
++
++Recovery note: historical evaluation, linter, and run-dashboard components named in older logs were not part of the approved recovery manifest. They are provenance, not executable dependencies. Re-establish them only through a separate reviewed change if a current use case still needs them.
+diff --git a/projects/No and low code_1st Marketing Agent/decisions/log.md b/projects/No and low code_1st Marketing Agent/decisions/log.md
+index c498b65..9614e2e 100644
+--- a/projects/No and low code_1st Marketing Agent/decisions/log.md	
++++ b/projects/No and low code_1st Marketing Agent/decisions/log.md	
+@@ -153,3 +153,11 @@ updated: 2026-07-14
+ - Follow-up: Return incomplete positioning, evidence, audience, claim, proof, or Campaign Role fields to their existing owner instead of filling them during content production.
+ - Applied: Added the terminal Content OS handoff to the output menu, runbook, and ContextOps handoff contract; transferred the Human-Led Creative Marketing Loop to the two Content OS frameworks and retained only a deprecated routing page.
+ - Boundary: Campaign Role Architecture remains canonical here and stops before Creative Direction or production.
++
++## 2026-08-22 | G3E-2 | Transfer shared ContextOps authority and retain residual custody
++
++- Decision: After exact G3E-2 approval, transfer shared Marketing ContextOps methods and current routing to `projects/marketing-contextops/` while retaining this directory for history, protected residual material, and the three embedded source projects.
++- Authority: Explicit G3E-2 approval matching the reviewed transaction manifest is a required precondition; this record cannot grant authority by itself.
++- Preserved: Source-project paths, historical evidence, protected source custody, unchanged `CLAUDE.md`, and the held `framework-builder` dependency.
++- Frozen: `recursive-learning-update` remains historical and non-discoverable.
++- Rollback: Restore archived control bytes and component paths while preserving this append-only record.
+warning: in the working copy of 'before/projects/marketing-contextops/AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-contextops/AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+diff --git a/projects/marketing-contextops/AGENTS.md b/projects/marketing-contextops/AGENTS.md
+index e75fcf0..f6bba0e 100644
+--- a/projects/marketing-contextops/AGENTS.md
++++ b/projects/marketing-contextops/AGENTS.md
+@@ -1,58 +1,71 @@
+ ---
+ type: agent-instructions
+-lifecycle_status: planned
++lifecycle_status: active
+ system: marketing-contextops
+-operational_authority: none
+-canonical_authority: none
+-activation_gate: pending
++operational_authority: active
++canonical_authority: active
++activation_gate: explicit-g3e-2-cutover-approval
+ created: 2026-08-21
+-updated: 2026-08-21
++updated: 2026-08-22
+ sources:
+   - wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md
+-  - wiki/_outputs/marketing-system-architecture-v0-2/review-decision.md
++  - wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-1/blocker-resolution-proposal.md
++  - projects/marketing-operating-system/registry/systems.csv
++  - decisions/log.md
+ ---
+ 
+ # Marketing ContextOps Agent
+ 
+-This directory is an inactive control shell for the future Marketing ContextOps sibling system. The root `AGENTS.md` remains fully controlling. The active ContextOps capability remains in `projects/No and low code_1st Marketing Agent/` until a separately approved cutover.
++Marketing ContextOps is the active shared Context Intelligence capability of the federated Agentic Marketing System. Root `AGENTS.md` remains controlling for vault-wide source custody, durable knowledge, reusable-practice routing, permissions, and protected folders.
+ 
+-## Current authority
++## Mission
+ 
+-- This shell has no operational or canonical authority.
+-- Do not route ContextOps work or resolve root skill wrappers to this directory.
+-- Do not create or copy frameworks, skills, workflows, templates, tools, wiki pages, project assets, sources, evaluations, integrations, agents, or runtime records here.
+-- Do not move, rename, edit, retire, or repoint any legacy component or external reference under this checkpoint.
+-- Decisions still held at later gates, including shared-capability ownership, must not be inferred from this shell.
++Provide reusable, evidence-aware methods and contracts for company evidence intake, claim governance, market context, buying contexts, segmentation, audience understanding, framework fit, proof-led positioning, GTM context mapping, bounded handoffs, and independent ContextOps validation.
+ 
+-## Target responsibility after activation
++## Ownership boundary
+ 
+-If later activated, Marketing ContextOps may own reusable, evidence-aware methods and contracts for:
++- Marketing ContextOps owns reusable methods, stage contracts, framework-library conventions, and capability-specific validation.
++- Root Second Brain owns default source custody, durable vault knowledge, and reusable-practice governance.
++- The initiating source project owns every concrete market, Brand, positioning, GTM, campaign, content, run, approval, and episodic-learning artifact.
++- ABM Operating System owns specialized account-based GTM execution methods.
++- Content Operating System owns expression, channel, content-object, publication-state, and bounded editorial-learning contracts.
++- Marketing Operating System remains a draft interoperability umbrella and gains no operating authority from this cutover.
+ 
+-- company evidence intake and claim governance;
+-- market context and buying contexts;
+-- segmentation and audience understanding;
+-- framework fit and proof-led positioning;
+-- GTM context mapping and downstream handoffs;
+-- producer-validator orchestration and ContextOps evaluation.
++## Required source-project routing
+ 
+-This target role is descriptive, not executable authority.
++Before reading or writing concrete company artifacts:
+ 
+-## Output and custody boundary
++1. Require one exact, existing repository-relative `source_project`.
++2. Refuse a missing, ambiguous, nonexistent, or shared-system path.
++3. Keep immutable sources in Root custody or an explicitly approved source-project custody path.
++4. Write concrete derivatives only under the `source_project` according to its instructions.
++5. Never create `raw/`, `research/`, `wiki/`, company assets, Brand Core, campaign assets, content stores, or run state under this shared system root.
+ 
+-- Root Second Brain owns source custody and durable vault knowledge.
+-- Marketing ContextOps may own reusable methods and contracts only after activation.
+-- The initiating company or thematic source project owns every concrete analysis, decision, Brand Core, positioning, GTM, campaign, approval, run, and episodic-learning artifact.
+-- ABM Operating System owns specialized account-based GTM execution methods.
+-- Content Operating System owns expression, channel, content-object, publication-state, and bounded editorial-learning contracts.
+-- Never create a second raw library, company-asset repository, Brand Core, or downstream content store here.
++The currently embedded Legacy company projects remain valid source projects until a separate reviewed admission or move changes their path.
++
++## Stage discipline
++
++- Consume an explicit upstream packet and perform one bounded decision job per stage.
++- State scope, inputs, outputs, evidence status, downstream owner, and handoff questions.
++- Label unsupported assumptions and stop before downstream decisions not explicitly requested.
++- Use the smallest sufficient local framework set; route Root reusable-practice discovery through `wiki/reusable-practices-router.md`.
++- Validate substantial cross-stage artifacts independently before downstream use.
++
++## Learning governance
+ 
+-## Stage discipline after activation
++- Store successes, failures, corrections, and overrides as episodes in the initiating source project.
++- Do not invoke or recreate the frozen standalone `recursive-learning-update` capability.
++- Promote a pattern only after repeated evidence or a justified high-confidence exception, explicit human review, regression cases, and a rollback path.
++- Method changes belong to the owning system and require their own reviewed change.
+ 
+-Each stage must consume an explicit upstream packet, perform one bounded decision job, label unsupported assumptions, and hand off without silently making downstream decisions. This principle does not activate any current workflow.
++## Held dependency
+ 
+-## Review and maintenance
++`framework-builder` remains a Root-shared transitional dependency at the Legacy path. It may be read and used through its unchanged wrapper, but it may not be moved, edited, mirrored, or repointed without separate approval.
+ 
+-- Keep this file concise; procedures belong in reviewed skills or workflows after cutover.
+-- Record architecture or authority decisions in `decisions/log.md`; the log cannot grant its own authority.
+-- Activation requires exact component ownership, wrapper and reference transition manifests, regression checks, and a tested rollback path.
++## Verification and maintenance
+ 
++- Procedures belong in reviewed skills or workflows, not this always-loaded file.
++- Keep framework and skill references repository-relative and resolvable.
++- Run Root Wiki Integrity Fast and the reviewed Marketing ContextOps regression checks after structural changes.
++- Append architecture or authority decisions to `decisions/log.md`; the log cannot grant its own authority.
++- Any authority, routing, wrapper, contract, or component change requires exact preconditions, regression evidence, and a rollback path.
+warning: in the working copy of 'before/projects/marketing-contextops/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-contextops/README.md', LF will be replaced by CRLF the next time Git touches it
+diff --git a/projects/marketing-contextops/README.md b/projects/marketing-contextops/README.md
+index cc07c56..01d81c5 100644
+--- a/projects/marketing-contextops/README.md
++++ b/projects/marketing-contextops/README.md
+@@ -1,35 +1,36 @@
+ ---
+ type: project-index
+-lifecycle_status: planned
++lifecycle_status: active
+ system: marketing-contextops
+-operational_authority: none
+-canonical_authority: none
+-activation_gate: pending
++operational_authority: active
++canonical_authority: active
++activation_gate: explicit-g3e-2-cutover-approval
+ created: 2026-08-21
+-updated: 2026-08-21
++updated: 2026-08-22
+ sources:
+   - wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md
+-  - wiki/_outputs/marketing-system-architecture-v0-2/review-decision.md
++  - wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-1/blocker-resolution-proposal.md
++  - projects/marketing-operating-system/registry/systems.csv
++  - decisions/log.md
+ ---
+ 
+ # Marketing ContextOps
+ 
+-**Summary**: An inactive control shell for the future shared Context Intelligence capability of the federated Agentic Marketing System.
++**Summary**: Active shared Context Intelligence capability for the federated Agentic Marketing System. It owns reusable methods and contracts; initiating source projects own all concrete business artifacts.
+ 
+ ## Current maturity
+ 
+-This directory was created in approved checkpoint P2A to make its future boundary reviewable before migration. It contains no active methods, skills, workflows, tools, sources, company assets, or routing authority.
++The controlled G3E cutover moves the reviewed ContextOps framework, skill, and workflow set from the historical project root to this system. Root discovery wrappers and current operational references switch atomically only after exact approval, green regression evidence, and a verified rollback snapshot.
+ 
+-Current files:
++Current system surface:
+ 
+-- `AGENTS.md` — inactive capability boundary and agent constraints.
+-- `decisions/log.md` — forward record of shell and later authority decisions.
++- `AGENTS.md` — active capability boundary and source-project routing rules.
++- `frameworks/` — canonical Marketing ContextOps framework library.
++- `skills/` — canonical bounded ContextOps skills.
++- `workflows/` — stage, handoff, runbook, and development workflows.
++- `decisions/log.md` — append-only authority and architecture record.
+ 
+-The active capability remains in `projects/No and low code_1st Marketing Agent/`. Its files and the root `.agents/skills` discovery wrappers remain unchanged.
+-
+-## Target role after activation
+-
+-Marketing ContextOps is intended to produce governed context for later Brand, GTM, Campaign, and Content decisions:
++## Operating role
+ 
+ ```text
+ approved knowledge delta
+@@ -40,16 +41,23 @@ approved knowledge delta
+   -> GTM context handoff
+ ```
+ 
+-It will own reusable methods, stage contracts, and validation logic. The initiating source project will own the concrete outputs. It will not own protected sources, concrete Brand Core assets, ABM account plans, campaign assets, content assets, approvals, or performance evidence.
++Marketing ContextOps supplies the methods for these stages. It does not own the resulting company packet, Brand Core, positioning decision, GTM plan, campaign, content object, approval, performance record, or learning episode.
++
++## Source-project contract
++
++- Every concrete run names one exact existing repository-relative `source_project`.
++- Root Second Brain owns default source custody and durable Root knowledge.
++- Concrete outputs are written only to the initiating source project.
++- Existing Legacy-embedded company projects remain at their current paths until a separate admission checkpoint.
++- No local source library, company workspace, or generic `memory/` store is authorized here.
+ 
+-## Later activation requirements
++## Sibling boundaries
+ 
+-- one approved owner and disposition for every migrated component;
+-- explicit decisions for shared-capability hotspots;
+-- atomic root-wrapper and operational-reference transition;
+-- positive and negative regression fixtures;
+-- proof that historical references and protected sources remain intact;
+-- a tested rollback path.
++- `projects/ABM-operating-system/` remains the specialized account-based GTM capability.
++- `projects/content-operating-system/` remains the shared content and expression capability.
++- `projects/marketing-operating-system/` remains a draft interoperability umbrella with no operational authority.
++- The residual historical root `projects/No and low code_1st Marketing Agent/` retains provenance and its embedded source projects but no shared ContextOps authority.
+ 
+-No additional folder or artifact is authorized merely because it appears in the target model.
++## Verification
+ 
++Structural changes require exact component and wrapper manifests, source-project ownership tests, single-controller checks, Root Wiki Integrity Fast, MOS federation regressions, and a tested rollback path. Passing tests do not grant authority without explicit approval.
+warning: in the working copy of 'before/projects/marketing-contextops/decisions/log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-contextops/decisions/log.md', LF will be replaced by CRLF the next time Git touches it
+diff --git a/projects/marketing-contextops/decisions/log.md b/projects/marketing-contextops/decisions/log.md
+index c353b59..8bc3975 100644
+--- a/projects/marketing-contextops/decisions/log.md
++++ b/projects/marketing-contextops/decisions/log.md
+@@ -28,3 +28,12 @@ This forward log records reviewed decisions about the planned shell. It cannot g
+ - Rollback boundary: only the exact eight files created by P2A; rollback requires its own explicit instruction.
+ - Evidence: `wiki/_outputs/marketing-system-architecture-v0-2/review-decision.md`.
+ 
++
++## 2026-08-22 | G3E-2 | Activate controlled Marketing ContextOps target
++
++- Decision: After exact G3E-2 approval and green preflight, activate this directory as the sole shared Marketing ContextOps controller and accept the fingerprint-bound component, wrapper, reference, MOS, and rollback bundle.
++- Authority: Explicit G3E-2 approval matching the reviewed transaction manifest is a required precondition; this record cannot grant authority by itself.
++- Ownership: Marketing ContextOps owns reusable methods and contracts; initiating source projects own concrete artifacts and episodes; Root owns default source custody and durable Root knowledge.
++- Preserved siblings: ABM and Content OS authority remain unchanged; MOS remains draft with no operational authority.
++- Held: `framework-builder` move or wrapper transition, company-workspace admission, source relocation, runtime, integrations, publication, and any Git commit.
++- Rollback: Restore the functional pre-cutover state from the scoped snapshot while retaining append-only Cutover and rollback audit entries.
+diff --git a/tools/new-historical-recovery-manifest.ps1 b/tools/new-historical-recovery-manifest.ps1
+index b4069d6..62bf9bd 100644
+--- a/tools/new-historical-recovery-manifest.ps1
++++ b/tools/new-historical-recovery-manifest.ps1
+@@ -62,6 +62,9 @@ function Get-Disposition([string]$Path, [string]$Relation, [bool]$Exists) {
+     if ($p -match '^projects/ai/') {
+         return @('recover', '05-ai-project', 'Recover as the bounded AI project wave.')
+     }
++    if ($p -match '^projects/marketing-contextops/') {
++        return @('recover', '06-content-operating-system', 'Recover the active Marketing ContextOps capability with its related content operating-system wave.')
++    }
+     if ($p -match '^projects/content-operating-system/' -or $p -match '^projects/No and low code_1st Marketing Agent/') {
+         return @('recover', '06-content-operating-system', 'Recover with the related content operating-system project.')
+     }
+warning: in the working copy of 'before/wiki/index.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/wiki/index.md', LF will be replaced by CRLF the next time Git touches it
+diff --git a/wiki/index.md b/wiki/index.md
+index 0d3a1e4..9883bca 100644
+--- a/wiki/index.md
++++ b/wiki/index.md
+@@ -35,7 +35,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]],
+ 
+ - `projects/ai/README.md` - Recovered internal AI project for governed context, Creative Directions, briefs, draft assets, approval records, reviews, and pilot learning. Recovery does not authorize publication.
+ - `projects/content-operating-system/README.md` - Shared internal contracts for creative direction, content execution, controlled publication states, and bounded learning. Recovery does not authorize publication.
+-- `projects/No and low code_1st Marketing Agent/README.md` - Marketing ContextOps workspace and legacy provenance that hands approved upstream context to the Content Operating System.
++- `projects/marketing-contextops/README.md` - Active shared Marketing ContextOps methods and contracts; concrete outputs remain source-project owned. The Legacy predecessor retains provenance and embedded source projects.
+ - `projects/abm-operating-system/README.md` - Recovered private ABM research, practice, authority, and canonical Enterprise Growth System workspace. Historical approval states are preserved; recovery does not authorize publication or real-client use.
+ 
+ ## Input zones
+warning: in the working copy of 'after/tools/sync_agents_skills.py', LF will be replaced by CRLF the next time Git touches it
+diff --git a/after/tools/sync_agents_skills.py b/tools/sync_agents_skills.py
+new file mode 100644
+index 0000000..c2ad7eb
+--- /dev/null
++++ b/tools/sync_agents_skills.py
+@@ -0,0 +1,223 @@
++#!/usr/bin/env python3
++"""Manifest-scoped discovery-wrapper synchronizer for the G3E cutover candidate.
++
++This candidate is inert while it remains in the G3E control pack. A later live
++cutover would have to copy the exact reviewed bytes to tools/sync_agents_skills.py.
++"""
++
++from __future__ import annotations
++
++import argparse
++import csv
++import hashlib
++import os
++import re
++import sys
++import tempfile
++from pathlib import Path, PurePosixPath
++
++
++REQUIRED_COLUMNS = {
++    "skill_id",
++    "action",
++    "wrapper_path",
++    "canonical_pre_path",
++    "canonical_post_path",
++    "wrapper_pre_sha256",
++    "canonical_pre_sha256",
++    "canonical_post_sha256",
++    "wrapper_post_sha256",
++}
++ALLOWED_ACTIONS = {"transition", "verify-only"}
++
++
++def sha256_bytes(data: bytes) -> str:
++    return hashlib.sha256(data).hexdigest().upper()
++
++
++def read_bytes(path: Path) -> bytes:
++    if not path.is_file():
++        raise ValueError(f"Required file is missing: {path}")
++    return path.read_bytes()
++
++
++def resolve_in_root(root: Path, repository_path: str) -> Path:
++    posix = PurePosixPath(repository_path)
++    if posix.is_absolute() or ".." in posix.parts or not posix.parts:
++        raise ValueError(f"Expected safe repository-relative path: {repository_path}")
++    candidate = (root / Path(*posix.parts)).resolve(strict=False)
++    if not candidate.is_relative_to(root):
++        raise ValueError(f"Path escapes vault root: {repository_path}")
++    return candidate
++
++
++def parse_frontmatter(canonical_bytes: bytes, canonical_path: str) -> tuple[str, str]:
++    text = canonical_bytes.decode("utf-8-sig")
++    match = re.match(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|\Z)", text, re.DOTALL)
++    if match is None:
++        raise ValueError(f"Canonical skill has no YAML frontmatter: {canonical_path}")
++
++    values: dict[str, str] = {}
++    for line in match.group(1).splitlines():
++        if ":" not in line:
++            continue
++        key, value = line.split(":", 1)
++        key = key.strip()
++        if key in {"name", "description"}:
++            value = value.strip()
++            if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
++                value = value[1:-1]
++            values[key] = value
++
++    if not values.get("name") or not values.get("description"):
++        raise ValueError(f"Canonical skill lacks name or description: {canonical_path}")
++    return values["name"], values["description"]
++
++
++def render_wrapper(name: str, description: str, canonical_path: str) -> bytes:
++    text = (
++        "---\n"
++        f"name: {name}\n"
++        f"description: {description}\n"
++        "---\n\n"
++        "<!-- AUTO-GENERATED discovery wrapper - do not edit; run tools/sync_agents_skills.py -->\n\n"
++        f"# {name} (discovery wrapper)\n\n"
++        f"The canonical skill lives at `{canonical_path}` (path relative to the repository root, "
++        "the `second brain` folder).\n\n"
++        "Read that file completely and follow it, including its `references/` files and quality gate. "
++        "Do not act from this wrapper alone.\n"
++    )
++    return text.encode("utf-8")
++
++
++def load_manifest(path: Path) -> list[dict[str, str]]:
++    if not path.is_file():
++        raise ValueError(f"Manifest is missing: {path}")
++    with path.open("r", encoding="utf-8-sig", newline="") as handle:
++        reader = csv.DictReader(handle)
++        columns = set(reader.fieldnames or [])
++        if columns != REQUIRED_COLUMNS:
++            raise ValueError(
++                "Manifest columns differ from the exact contract. "
++                f"Missing={sorted(REQUIRED_COLUMNS - columns)}; extra={sorted(columns - REQUIRED_COLUMNS)}"
++            )
++        rows = list(reader)
++
++    if len(rows) != 11:
++        raise ValueError(f"Expected exactly 11 wrapper rows; found {len(rows)}")
++    if len({row["skill_id"] for row in rows}) != len(rows):
++        raise ValueError("skill_id values must be unique")
++    if len({row["wrapper_path"].casefold() for row in rows}) != len(rows):
++        raise ValueError("wrapper_path values must be unique")
++    if sum(row["action"] == "transition" for row in rows) != 10:
++        raise ValueError("Expected exactly 10 transition rows")
++    if sum(row["action"] == "verify-only" for row in rows) != 1:
++        raise ValueError("Expected exactly one verify-only row")
++    for row in rows:
++        if row["action"] not in ALLOWED_ACTIONS:
++            raise ValueError(f"Unsupported action: {row['action']}")
++        for field in (
++            "wrapper_pre_sha256",
++            "canonical_pre_sha256",
++            "canonical_post_sha256",
++            "wrapper_post_sha256",
++        ):
++            if re.fullmatch(r"[A-F0-9]{64}", row[field]) is None:
++                raise ValueError(f"Invalid SHA-256 in {field}: {row['skill_id']}")
++    return rows
++
++
++def atomic_write(path: Path, data: bytes) -> None:
++    path.parent.mkdir(parents=True, exist_ok=True)
++    descriptor, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
++    temporary_path = Path(temporary_name)
++    try:
++        with os.fdopen(descriptor, "wb") as handle:
++            handle.write(data)
++            handle.flush()
++            os.fsync(handle.fileno())
++        os.replace(temporary_path, path)
++    finally:
++        if temporary_path.exists():
++            temporary_path.unlink()
++
++
++def verify_hash(path: Path, expected: str, label: str) -> bytes:
++    data = read_bytes(path)
++    actual = sha256_bytes(data)
++    if actual != expected:
++        raise ValueError(f"{label} hash mismatch: {path}; expected {expected}; actual {actual}")
++    return data
++
++
++def run(args: argparse.Namespace) -> int:
++    root = Path(args.vault_root).resolve(strict=True)
++    manifest_path = Path(args.manifest).resolve(strict=True)
++    rows = load_manifest(manifest_path)
++    results: list[str] = []
++
++    for row in rows:
++        wrapper = resolve_in_root(root, row["wrapper_path"])
++        canonical_pre = resolve_in_root(root, row["canonical_pre_path"])
++        canonical_post = resolve_in_root(root, row["canonical_post_path"])
++
++        if args.mode == "check" and args.state == "pre":
++            verify_hash(wrapper, row["wrapper_pre_sha256"], "Wrapper pre-state")
++            verify_hash(canonical_pre, row["canonical_pre_sha256"], "Canonical pre-state")
++            if row["action"] == "transition" and canonical_post.exists():
++                raise ValueError(f"Transition target already exists during pre-check: {row['canonical_post_path']}")
++            results.append(f"PASS pre {row['skill_id']}")
++            continue
++
++        canonical_bytes = verify_hash(
++            canonical_post, row["canonical_post_sha256"], "Canonical post-state"
++        )
++        name, description = parse_frontmatter(canonical_bytes, row["canonical_post_path"])
++        generated = render_wrapper(name, description, row["canonical_post_path"])
++
++        if row["action"] == "verify-only":
++            if row["canonical_pre_path"] != row["canonical_post_path"]:
++                raise ValueError("verify-only canonical paths must be identical")
++            if row["canonical_pre_sha256"] != row["canonical_post_sha256"]:
++                raise ValueError("verify-only canonical hashes must be identical")
++            verify_hash(wrapper, row["wrapper_pre_sha256"], "Verify-only wrapper")
++            if row["wrapper_pre_sha256"] != row["wrapper_post_sha256"]:
++                raise ValueError("verify-only wrapper hashes must be identical")
++            results.append(f"PASS unchanged {row['skill_id']}")
++            continue
++
++        if sha256_bytes(generated) != row["wrapper_post_sha256"]:
++            raise ValueError(
++                f"Generated wrapper identity mismatch: {row['skill_id']}; "
++                f"expected {row['wrapper_post_sha256']}; actual {sha256_bytes(generated)}"
++            )
++
++        if args.mode == "apply":
++            verify_hash(wrapper, row["wrapper_pre_sha256"], "Wrapper apply pre-state")
++            atomic_write(wrapper, generated)
++
++        verify_hash(wrapper, row["wrapper_post_sha256"], "Wrapper post-state")
++        results.append(f"PASS post {row['skill_id']}")
++
++    print(f"PASS | {len(results)}/11 wrapper rows | mode={args.mode} | state={args.state}")
++    return 0
++
++
++def main() -> int:
++    parser = argparse.ArgumentParser(description="Fail-closed, manifest-scoped skill-wrapper synchronizer")
++    parser.add_argument("--vault-root", required=True)
++    parser.add_argument("--manifest", required=True)
++    parser.add_argument("--mode", choices=("check", "apply"), default="check")
++    parser.add_argument("--state", choices=("pre", "post"), required=True)
++    args = parser.parse_args()
++    if args.mode == "apply" and args.state != "post":
++        parser.error("--mode apply requires --state post")
++    try:
++        return run(args)
++    except Exception as exc:  # fail closed with one bounded diagnostic
++        print(f"BLOCK | {exc}", file=sys.stderr)
++        return 1
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
