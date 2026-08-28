@@ -1,0 +1,310 @@
+{
+  "fixture_contract": "mos-p2b2-fixtures/v1",
+  "status": "draft-test-evidence",
+  "purpose": "Declarative inventory of the isolated positive and negative federation-contract cases. Fixtures grant no operating authority.",
+  "accepted_inputs": [
+    {
+      "canonical_path": "projects/marketing-operating-system/registry/systems.csv",
+      "sha256": "A9642C4809DBA7D6A090CB9AA2A514B0BBA119C4EF8009E495906A1B57BE76A0"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md",
+      "sha256": "14BFD407FB7555871BB3FC73D968086339FA717B96D68C20EBA8D9E0C8D6D63D"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md",
+      "sha256": "EB0041B5338B76A7A698A3C5A1F3942EC88B3FC506CC7E4736D8343B99C79ED4"
+    },
+    {
+      "canonical_path": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
+      "sha256": "03CC49A3B9A15289D14E05AF0A6007F35B3EC0DCB9C4A06D4B7968798F1E2398"
+    },
+    {
+      "canonical_path": "projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md",
+      "sha256": "8B748B721116BCD7E075F91D9BDD5AD5DCEED75E6DC5C981F00E5258F3DA0FD6"
+    },
+    {
+      "canonical_path": "projects/content-operating-system/workflows/contextops-intake-contract.md",
+      "sha256": "1A2CD0002297D34FD8596163233DAC37CF4B2268F9E9F272B9554CC843E55E77"
+    },
+    {
+      "canonical_path": "projects/content-operating-system/templates/content-context-packet.md",
+      "sha256": "7B2122C70E229441B1DF7522FAA02ED55317C4AE5AC8B42A42B7624D53AF9A84"
+    },
+    {
+      "canonical_path": "projects/content-operating-system/tools/config/content-object-contract.json",
+      "sha256": "07290BF52C4217E649B90E02067DFF550AC9F35C7D93AA5F13A7996A7A625802"
+    }
+  ],
+  "fixture_inputs": [
+    {
+      "canonical_path": "projects/marketing-operating-system/tools/config/system-registry-schema.json",
+      "sha256": "CA7FEAAF8C53BD6B9D352665E95CEDF3A4F084361D2EFB34FFEFC287FAFED56D"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json",
+      "sha256": "64E27E604A917AD8EAE37606B70F51483313484464B3944EFFBDC25261667E13"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+      "sha256": "A9642C4809DBA7D6A090CB9AA2A514B0BBA119C4EF8009E495906A1B57BE76A0"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "sha256": "3159A0FC29A9DCC36A30D1537F1E52BEF48F6A50ED1963D5F9875226DA28001C"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/evals/fixtures/support/authority-record.json",
+      "sha256": "85DCA02FBAF77F17A72F611B5F33C4187905A7EF010FE44BA8C0E23B0A5DC0FC"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/evals/fixtures/support/canonical-artifact.md",
+      "sha256": "4832B1D464E68DEDA11C59A8C4922CB764C8268C383EF31B03B501B46CB66243"
+    },
+    {
+      "canonical_path": "projects/marketing-operating-system/evals/fixtures/support/specialized-packet.json",
+      "sha256": "B27CE404D15A8741B1814984195D3D685BC1EE44DE5D66C04E5C0FA9BCDF68B1"
+    }
+  ],
+  "support_copy_map": [
+    {
+      "source": "projects/marketing-operating-system/evals/fixtures/support/authority-record.json",
+      "target": "projects/example-company/authority/approvals/example-handoff-approval.json"
+    },
+    {
+      "source": "projects/marketing-operating-system/evals/fixtures/support/canonical-artifact.md",
+      "target": "projects/example-company/authority/artifacts/example-approved-context.md"
+    },
+    {
+      "source": "projects/marketing-operating-system/evals/fixtures/support/specialized-packet.json",
+      "target": "projects/example-company/authority/packets/example-contextops-packet.json"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "registry-valid-six-system-baseline",
+      "mode": "Registry",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+      "mutation": {
+        "operation": "none"
+      },
+      "expected_exit_code": 0,
+      "expected_codes": []
+    },
+    {
+      "case_id": "handoff-valid-contextops-to-content",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "none"
+      },
+      "expected_exit_code": 0,
+      "expected_codes": []
+    },
+    {
+      "case_id": "registry-rejects-duplicate-system-id",
+      "mode": "Registry",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+      "mutation": {
+        "operation": "duplicate-row",
+        "system_id": "marketing-contextops"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-REG-002"
+      ]
+    },
+    {
+      "case_id": "registry-rejects-unresolved-controller",
+      "mode": "Registry",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+      "mutation": {
+        "operation": "set-cell",
+        "system_id": "marketing-contextops",
+        "field": "controlling_authority_ref",
+        "value": "projects/missing-controller/AGENTS.md"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-REG-004"
+      ]
+    },
+    {
+      "case_id": "registry-rejects-planned-current-operation",
+      "mode": "Registry",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+      "mutation": {
+        "operation": "set-cells",
+        "system_id": "marketing-operating-system",
+        "changes": {
+          "current_operational_authority": "active",
+          "current_routing_status": "active"
+        }
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-REG-005"
+      ]
+    },
+    {
+      "case_id": "registry-rejects-boundary-controller-conflation",
+      "mode": "Registry",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+      "mutation": {
+        "operation": "copy-cell",
+        "system_id": "content-operating-system",
+        "source_field": "federation_boundary_contract_ref",
+        "target_field": "controlling_authority_ref"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-REG-007"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-missing-authority",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "remove-field",
+        "field": "authority_ref"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-002"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-missing-artifact-owner",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "remove-artifact-field",
+        "index": 0,
+        "field": "artifact_owner"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-004"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-decision-overlap",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "append-prohibited-decision",
+        "id": "create-strategic-creative-direction",
+        "description": "Synthetic collision with the otherwise authorized decision."
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-005"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-stale-ready-rollup",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "set-artifact-field",
+        "index": 0,
+        "field": "freshness_state",
+        "value": "stale"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-006"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-unresolved-artifact",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "set-artifact-field",
+        "index": 0,
+        "field": "canonical_path",
+        "value": "projects/example-company/authority/artifacts/missing.md"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-007"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-fingerprint-mismatch",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "set-artifact-field",
+        "index": 0,
+        "field": "sha256",
+        "value": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-003"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-copied-payload",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "add-field",
+        "field": "payload",
+        "value": "copied fixture payload"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-008"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-state-change-without-rollback",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "set-field",
+        "field": "effect_mode",
+        "value": "state-changing"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-010"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-draft-mos-specialized-contract",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "replace-specialized-contract-with-mos-draft",
+        "contract_id": "mos-cross-system-handoff-envelope",
+        "canonical_path": "projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md",
+        "version": "0.2.0-draft",
+        "sha256": "EB0041B5338B76A7A698A3C5A1F3942EC88B3FC506CC7E4736D8343B99C79ED4",
+        "contract_owner": "marketing-operating-system"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-009"
+      ]
+    },
+    {
+      "case_id": "handoff-rejects-target-only-mos-as-current-producer",
+      "mode": "Handoff",
+      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+      "mutation": {
+        "operation": "set-field",
+        "field": "producer_system",
+        "value": "marketing-operating-system"
+      },
+      "expected_exit_code": 1,
+      "expected_codes": [
+        "MOS-HO-011"
+      ]
+    }
+  ]
+}
