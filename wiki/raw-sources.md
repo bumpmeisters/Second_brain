@@ -4,7 +4,7 @@ status: active
 sources:
   - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
 created: 2026-05-30
-updated: 2026-08-14
+updated: 2026-08-31
 ---
 
 # Raw Sources
@@ -13,7 +13,7 @@ updated: 2026-08-14
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md.
 
-**Last updated**: 2026-08-14
+**Last updated**: 2026-08-31
 
 ---
 
@@ -26,7 +26,7 @@ The active binary source libraries use repository-relative paths inside the loca
 
 Their contents are intentionally ignored by Git, while each folder keeps a tracked README explaining the local setup. This gives local agents and downstream projects stable access without publishing approximately 10 GiB of binaries to GitHub.
 
-Wiki pages cite originals directly as `raw/assets/...` and `research/assets/...`. Markdown sidecars remain in `wiki/_extractions/` and are versioned normally.
+Wiki pages cite originals through stable repository-relative paths. Binary originals, Markdown sidecars under `wiki/_extractions/`, and the detailed conversion registry remain local and Git-ignored. Clean checkouts validate their expected identities through the path-opaque public contract in `tools/config/local-source-integrity-contract.json`; a hydrated vault additionally verifies the local files and registry joins.
 
 ## Automatic sidecar conversion
 

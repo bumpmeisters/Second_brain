@@ -1,6 +1,7 @@
 param(
     [string]$VaultRoot = "",
     [string]$RegistryPath = "",
+    [string]$PublicContractPath = "",
     [string]$OutputPath = "",
     [switch]$Check
 )
@@ -8,12 +9,35 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
+function Get-TextSha256([string]$Text) {
+    $sha = [Security.Cryptography.SHA256]::Create()
+    try { return ([BitConverter]::ToString($sha.ComputeHash([Text.Encoding]::UTF8.GetBytes($Text)))).Replace('-', '') }
+    finally { $sha.Dispose() }
+}
+
+function Assert-PublicProjection([string]$Content, [object]$Contract) {
+    if ($Contract.contract -cne 'newsletter-index-public-projection/v1') { throw 'Unexpected newsletter public-projection contract type.' }
+    $match = [regex]::Match($Content, '(?s)<!-- BEGIN GENERATED SELECTED DOSSIERS -->.*?<!-- END GENERATED SELECTED DOSSIERS -->')
+    if (-not $match.Success) { throw 'Newsletter index has no generated selected-dossiers block.' }
+    $block = $match.Value
+    $blockBytes = [Text.Encoding]::UTF8.GetByteCount($block)
+    if ($blockBytes -ne [int64]$Contract.generated_block_bytes -or (Get-TextSha256 $block) -cne [string]$Contract.generated_block_sha256) {
+        throw 'Newsletter index does not match the public projection contract.'
+    }
+    if ($Content -notmatch ('(?m)^- \*\*Selected canonical newsletters\*\*: ' + [regex]::Escape([string]$Contract.selected_canonical_newsletters) + '$') -or
+        $Content -notmatch ('(?m)^- \*\*Qualified streams represented\*\*: ' + [regex]::Escape([string]$Contract.selected_streams) + '$')) {
+        throw 'Newsletter index counts do not match the public projection contract.'
+    }
+}
+
 try {
     if (-not $VaultRoot) { $VaultRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path }
     $VaultRoot = [IO.Path]::GetFullPath($VaultRoot)
     if (-not $RegistryPath) { $RegistryPath = Join-Path $VaultRoot 'wiki\_outputs\newsletter-intelligence\identity-registry.json' }
+    if (-not $PublicContractPath) { $PublicContractPath = Join-Path $VaultRoot 'tools\config\newsletter-index-contract.json' }
     if (-not $OutputPath) { $OutputPath = Join-Path $VaultRoot 'wiki\newsletters\index.md' }
     $RegistryPath = [IO.Path]::GetFullPath($RegistryPath)
+    $PublicContractPath = [IO.Path]::GetFullPath($PublicContractPath)
     $OutputPath = [IO.Path]::GetFullPath($OutputPath)
 
     $registryExists = Test-Path -LiteralPath $RegistryPath -PathType Leaf
@@ -22,8 +46,18 @@ try {
         Write-Output 'Newsletter index is not configured locally; no registry or index is present.'
         exit 0
     }
-    if ($registryExists -ne $outputExists) {
-        throw 'Newsletter index is only partially configured. The identity registry and newsletter index must either both exist or both be absent.'
+    if (-not $outputExists) { throw 'Newsletter index is missing.' }
+    $publicContract = $null
+    if (Test-Path -LiteralPath $PublicContractPath -PathType Leaf) {
+        $publicContract = [IO.File]::ReadAllText($PublicContractPath, [Text.Encoding]::UTF8) | ConvertFrom-Json
+    }
+    elseif (-not $registryExists) { throw 'Newsletter public-projection contract is missing.' }
+    if (-not $registryExists) {
+        $publicContent = [IO.File]::ReadAllText($OutputPath, [Text.Encoding]::UTF8).Replace("`r`n", "`n")
+        Assert-PublicProjection $publicContent $publicContract
+        if (-not $Check) { throw 'The private identity registry is required to regenerate the newsletter index.' }
+        Write-Output "Newsletter index matches the public projection ($($publicContract.selected_canonical_newsletters) dossiers, $($publicContract.selected_streams) selected streams)."
+        exit 0
     }
 
     $registry = [IO.File]::ReadAllText($RegistryPath, [Text.Encoding]::UTF8) | ConvertFrom-Json
@@ -93,6 +127,12 @@ try {
     }
     $expected = [regex]::Replace($expected, $canonicalCountPattern, "- **Selected canonical newsletters**: $($selectedCanonicals.Count)", 1)
     $expected = [regex]::Replace($expected, $streamCountPattern, "- **Qualified streams represented**: $($selectedStreams.Count)", 1)
+    if ($null -ne $publicContract) {
+        if ($selectedCanonicals.Count -ne [int]$publicContract.selected_canonical_newsletters -or $selectedStreams.Count -ne [int]$publicContract.selected_streams) {
+            throw 'Private newsletter registry does not match the public projection counts.'
+        }
+        Assert-PublicProjection $expected $publicContract
+    }
 
     if ($Check) {
         if ($content -ne $expected) {
