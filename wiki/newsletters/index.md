@@ -2,7 +2,7 @@
 type: index
 status: active
 sources:
-  - wiki/_outputs/newsletter-intelligence/identity-registry.json
+  - tools/config/newsletter-index-contract.json
 created: 2026-07-06
 updated: 2026-08-08
 ---

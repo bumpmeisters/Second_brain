@@ -1,0 +1,8 @@
+{
+  "contract": "newsletter-index-public-projection/v1",
+  "projection": "generated selected-dossiers block only",
+  "selected_canonical_newsletters": 42,
+  "selected_streams": 60,
+  "generated_block_sha256": "601A95BE1EDB67B81125018169A3625AB7A352A51847C8CD74AA56695F09C7F6",
+  "generated_block_bytes": 5652
+}

@@ -9,6 +9,12 @@ function Assert-True([bool]$Condition, [string]$Message) {
     if (-not $Condition) { throw "Assertion failed: $Message" }
 }
 
+function Get-TextSha256([string]$Text) {
+    $sha = [Security.Cryptography.SHA256]::Create()
+    try { return ([BitConverter]::ToString($sha.ComputeHash([Text.Encoding]::UTF8.GetBytes($Text)))).Replace('-', '') }
+    finally { $sha.Dispose() }
+}
+
 function Invoke-IndexTool([string]$VaultRoot, [switch]$Check) {
     $arguments = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', $indexTool, '-VaultRoot', $VaultRoot)
     if ($Check) { $arguments += '-Check' }
@@ -26,7 +32,7 @@ try {
     Assert-True (-not (Test-Path -LiteralPath (Join-Path $tempRoot 'empty\wiki'))) 'unconfigured check creates no newsletter files'
 
     $fixture = Join-Path $tempRoot 'configured'
-    New-Item -ItemType Directory -Force (Join-Path $fixture 'wiki\_outputs\newsletter-intelligence'), (Join-Path $fixture 'wiki\newsletters\alpha') | Out-Null
+    New-Item -ItemType Directory -Force (Join-Path $fixture 'wiki\_outputs\newsletter-intelligence'), (Join-Path $fixture 'wiki\newsletters\alpha'), (Join-Path $fixture 'tools\config') | Out-Null
     @'
 {
   "record_type": "newsletter_identity_registry",
@@ -71,6 +77,22 @@ updated: 2026-01-01
 | old | 0 | 0 | old | old |
 '@ | Set-Content -LiteralPath (Join-Path $fixture 'wiki\newsletters\index.md') -Encoding UTF8
 
+    $publicBlock = @(
+        '<!-- BEGIN GENERATED SELECTED DOSSIERS -->',
+        '| Newsletter | Streams | Issues analyzed | Coverage | Identity |',
+        '|---|---:|---:|---|---|',
+        '| [[newsletters/alpha/alpha|Alpha]] | 2 | 5 | 2026-04-01 to 2026-06-01 | confirmed merge |',
+        '<!-- END GENERATED SELECTED DOSSIERS -->'
+    ) -join "`n"
+    [ordered]@{
+        contract = 'newsletter-index-public-projection/v1'
+        projection = 'generated selected-dossiers block only'
+        selected_canonical_newsletters = 1
+        selected_streams = 2
+        generated_block_sha256 = Get-TextSha256 $publicBlock
+        generated_block_bytes = [Text.Encoding]::UTF8.GetByteCount($publicBlock)
+    } | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $fixture 'tools\config\newsletter-index-contract.json') -Encoding UTF8
+
     Assert-True ((Invoke-IndexTool -VaultRoot $fixture) -eq 0) 'generator succeeds for a complete local configuration'
     $indexPath = Join-Path $fixture 'wiki\newsletters\index.md'
     $index = Get-Content -LiteralPath $indexPath -Encoding UTF8 -Raw
@@ -84,8 +106,17 @@ updated: 2026-01-01
     [IO.File]::WriteAllText($indexPath, $stale, [Text.UTF8Encoding]::new($false))
     Assert-True ((Invoke-IndexTool -VaultRoot $fixture -Check) -eq 2) 'check mode fails closed on a stale generated table'
 
+    [IO.File]::WriteAllText($indexPath, $index, [Text.UTF8Encoding]::new($false))
+    Assert-True ((Invoke-IndexTool -VaultRoot $fixture -Check) -eq 0) 'restored generated table is current before clean-checkout validation'
+
     Remove-Item -LiteralPath (Join-Path $fixture 'wiki\_outputs\newsletter-intelligence\identity-registry.json') -Force
-    Assert-True ((Invoke-IndexTool -VaultRoot $fixture -Check) -eq 2) 'partial local configuration fails closed'
+    Assert-True ((Invoke-IndexTool -VaultRoot $fixture -Check) -eq 0) 'clean checkout validates against the public projection without the private registry'
+
+    $contractPath = Join-Path $fixture 'tools\config\newsletter-index-contract.json'
+    $contract = Get-Content -LiteralPath $contractPath -Raw | ConvertFrom-Json
+    $contract.generated_block_sha256 = ('0' * 64)
+    $contract | ConvertTo-Json | Set-Content -LiteralPath $contractPath -Encoding UTF8
+    Assert-True ((Invoke-IndexTool -VaultRoot $fixture -Check) -eq 2) 'clean checkout fails closed on a stale public projection'
 
     Write-Host 'Newsletter index generator contract: PASS'
 }

@@ -37,6 +37,10 @@ jobs:
         shell: powershell
         run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/publication/publication-boundary.tests.ps1
 
+      - name: Verify local-source integrity contract
+        shell: powershell
+        run: powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/local-source-integrity/local-source-integrity.tests.ps1
+
       - name: Verify source-conversion contracts
         shell: powershell
         run: |
