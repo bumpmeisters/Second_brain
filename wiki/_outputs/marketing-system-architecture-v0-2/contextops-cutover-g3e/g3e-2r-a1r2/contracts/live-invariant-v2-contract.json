@@ -1,0 +1,31 @@
+{
+  "contract_id": "g3e2r-live-invariant-manifest/v2",
+  "columns": [
+    "invariant_id", "state_scope", "subject_type", "repository_path",
+    "expected_fingerprint_v2", "expected_file_count", "expected_sha256",
+    "expected_bytes", "mutation_policy", "basis"
+  ],
+  "allowed_state_scopes": ["all", "pre", "post", "reverse", "pre-reverse"],
+  "allowed_subject_types": ["file-exact", "tree-fingerprint"],
+  "allowed_mutation_policies": ["must-not-change", "transaction-scoped", "restore-functional-prestate"],
+  "fixed_invariant_row_count": 26,
+  "protected_file_count": 14,
+  "sibling_controller_count": 3,
+  "tree_state_count": 9,
+  "protected_basis": "protected-file",
+  "sibling_basis": "sibling-controller",
+  "wrapper_basis": "wrapper-full-tree",
+  "required_tree_ids": [
+    "TREE-LEGACY-PRE", "TREE-LEGACY-POST", "TREE-LEGACY-REVERSE",
+    "TREE-TARGET-PRE", "TREE-TARGET-POST", "TREE-TARGET-REVERSE",
+    "TREE-MOS-PRE", "TREE-MOS-POST", "TREE-MOS-REVERSE"
+  ],
+  "wrapper_inventory_root": ".agents/skills",
+  "transition_manifest_repository_path": "wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-1/candidate/manifests/wrapper-transition-manifest.csv",
+  "wrapper_row_formula": "live-wrapper-file-count + transition-action-count",
+  "total_row_formula": "fixed-invariant-row-count + live-wrapper-file-count + transition-action-count",
+  "state_projection_formula": "fixed-all-state-and-selected-state + one-selected-wrapper-row-per-live-wrapper",
+  "pre_reverse_policy": "transition-members-must-match-known-pre-or-post;all-state-nonparticipants-are-advisory",
+  "virtual_post_diff_policy": "exactly-the-transition-action-wrapper-paths",
+  "unknown_columns": "reject"
+}
