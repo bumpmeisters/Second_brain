@@ -1,0 +1,2 @@
+"dependency_id","role","repository_path","sha256","bytes","reuse_mode","required_by"
+"G3E2R-A1-BUNDLE","immutable-a1-overlay-root","wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1/a1-bundle-manifest.csv","8878AA92D1F82DB4F9B3D8E4C1F5E707F36E77E3013195ABF7AD7784AE185AC7","1647","verify-transitively-never-modify","bootstrap;forward;reverse;finalizer;tests"
