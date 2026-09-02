@@ -84,14 +84,14 @@
     "contract_id": "legacy:projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
     "canonical_path": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
     "version": "legacy-unversioned",
-    "sha256": "93CB2BC2F53E9862371027FC12FCBAF55C0084C542CE5608E91E1D2E89ECC560",
+    "sha256": "03CC49A3B9A15289D14E05AF0A6007F35B3EC0DCB9C4A06D4B7968798F1E2398",
     "contract_owner": "marketing-contextops"
   },
   "specialized_contract_ref": {
     "contract_id": "legacy:projects/content-operating-system/workflows/contextops-intake-contract.md",
     "canonical_path": "projects/content-operating-system/workflows/contextops-intake-contract.md",
     "version": "legacy-unversioned",
-    "sha256": "2B5390C0D2B2AFA17AEED461010F96BA6ABAE5C70E5F9E061A96392180E41BE9",
+    "sha256": "1A2CD0002297D34FD8596163233DAC37CF4B2268F9E9F272B9554CC843E55E77",
     "contract_owner": "content-operating-system"
   },
   "specialized_packet_ref": {
