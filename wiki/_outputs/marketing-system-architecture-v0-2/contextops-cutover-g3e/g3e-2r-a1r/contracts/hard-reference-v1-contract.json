@@ -1,0 +1,35 @@
+{
+  "contract_id": "g3e2r-hard-reference-manifest/v1-a1r",
+  "columns": [
+    "repository_path",
+    "state",
+    "policy",
+    "expected_sha256",
+    "expected_bytes",
+    "expected_legacy_tokens"
+  ],
+  "row_count": 130,
+  "allowed_states": ["pre", "post", "reverse"],
+  "allowed_policies": ["exact"],
+  "state_projections": {
+    "pre": {"paths": 41, "positive": 41},
+    "post": {"paths": 48, "positive": 31},
+    "reverse": {"paths": 41, "positive": 41}
+  },
+  "unique_key": ["repository_path", "state"],
+  "workspace_path": ".obsidian/workspace.json",
+  "workspace_policy": "advisory",
+  "workspace_in_hard_manifest": false,
+  "advisory_columns": [
+    "repository_path",
+    "policy",
+    "observed_sha256",
+    "observed_bytes",
+    "observed_legacy_tokens",
+    "observed_at_utc"
+  ],
+  "advisory_row_count": 1,
+  "global_positive_set_must_equal_manifest": true,
+  "zero_token_rows_required": true,
+  "unknown_columns": "reject"
+}
