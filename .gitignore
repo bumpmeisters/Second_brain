@@ -57,6 +57,9 @@ wiki/_extractions/
 wiki/_outputs/source-conversions/
 wiki/_outputs/source-curation/
 
+# Local G3E2R-B runtime evidence (publication boundary)
+/wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-b/
+
 # Local semantic-ingest decisions and source-selection ledgers
 wiki/_outputs/semantic-ingest/
 wiki/_outputs/semantic-ingest-*-intake-ledger.csv
