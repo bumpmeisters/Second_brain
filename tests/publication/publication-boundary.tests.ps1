@@ -27,6 +27,25 @@ try {
         throw 'Source-derived extractions or generated source ledgers crossed the publication boundary.'
     }
 
+    $bRoot = 'wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-b'
+    $trackedBArtifacts = @($tracked | Where-Object {
+        $_ -like "$bRoot/*"
+    })
+    if ($trackedBArtifacts.Count -gt 0) {
+        throw 'Local G3E2R-B runtime evidence crossed the publication boundary.'
+    }
+
+    $expectedIgnoredBArtifacts = @(
+        "$bRoot/bundle-manifest.csv",
+        "$bRoot/snapshot/prestate-snapshot.zip"
+    )
+    foreach ($path in $expectedIgnoredBArtifacts) {
+        $ignoredPath = @(& git check-ignore --no-index -- $path)
+        if ($LASTEXITCODE -ne 0 -or $ignoredPath.Count -ne 1 -or $ignoredPath[0] -cne $path) {
+            throw "Local G3E2R-B runtime evidence is not ignored: $path"
+        }
+    }
+
     $indexTree = (& git write-tree).Trim()
     if ($LASTEXITCODE -ne 0 -or -not $indexTree) {
         throw 'Could not snapshot the tracked index for blob-size inspection.'
