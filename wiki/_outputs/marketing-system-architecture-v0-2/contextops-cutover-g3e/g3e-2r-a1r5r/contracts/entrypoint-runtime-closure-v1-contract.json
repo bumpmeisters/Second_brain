@@ -1,0 +1,26 @@
+{
+  "contract_id": "g3e2r-entrypoint-runtime-closure/v1",
+  "receipt_contract_id": "g3e2r-entrypoint-import-receipt/v2-a1r5r",
+  "receipt_preflight_contract_id": "g3e2r-a1r5r-r1-receipt-preflight/v1",
+  "receipt_preflight_result": "10/10",
+  "receipt_preflight_evidence_sha256": "94E76E9A72B8EB9DD35B421A5D75B830E5E18A9674CDCEC9AEE58E9294624952",
+  "platform_closure": "P2/C5",
+  "platform_modules": [
+    {"binding_id":"P10","module_name":"Microsoft.PowerShell.Management","required_version":"3.1.0.0"},
+    {"binding_id":"P20","module_name":"Microsoft.PowerShell.Utility","required_version":"3.1.0.0"}
+  ],
+  "operative_bindings": [
+    {"binding_id":"O10","role":"transaction-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r/tools/g3e2r-transaction-lib.psm1","sha256":"09E578801F5579C871ED2F58CF1D4551404A80CA12FC0A6534A2758D37BB87A9","bytes":12144},
+    {"binding_id":"O20","role":"a1r4-guard-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1","sha256":"29E3B7B4FA5AD2AFF7FAEA16B6DF061A194C7E39103003DCAFA83A5AE8913AF0","bytes":51816}
+  ],
+  "import_order": ["P10","P20","O10","O20"],
+  "components": [
+    {"component_id":"C10-GUARD","repository_path":"tools/g3e2r-a1r5r-guard-lib.psm1"},
+    {"component_id":"C20-FINALIZER","repository_path":"tools/finalize-g3e2r-live-seal-a1r5r.ps1"},
+    {"component_id":"C30-FORWARD","repository_path":"tools/invoke-g3e2-transaction-a1r5r.ps1"},
+    {"component_id":"C40-REVERSE","repository_path":"tools/invoke-g3e2-reverse-a1r5r.ps1"},
+    {"component_id":"C50-TEST","repository_path":"tools/test-g3e2r-a1r5r-bundle.ps1"}
+  ],
+  "caller_forbidden_imports": ["g3e2r-a1r3-guard-lib.psm1"],
+  "unknown_properties": "reject"
+}
