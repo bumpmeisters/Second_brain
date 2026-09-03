@@ -533,7 +533,7 @@ function Exit-G3E2RA1R5RClosureLock {
 
 function Get-G3E2RA1R5RRuntimeBindings {
     param([object]$Context,[string]$PythonExecutable)
-    return @(Get-G3E2RA1R3RuntimeBindings -Context $Context.A1R3Context -PythonExecutable $PythonExecutable)
+    return @(Get-G3E2RA1R4RuntimeBindings -Context $Context.A1R4Context -PythonExecutable $PythonExecutable)
 }
 
 function Test-G3E2RA1R5RBManifest {
@@ -543,16 +543,16 @@ function Test-G3E2RA1R5RBManifest {
     return Test-G3E2RA1R4BManifest -Context $Context.A1R4Context -ExpectedBHash $ExpectedBHash -AllowSealed:$AllowSealed
 }
 
-function Get-G3E2RA1R5RArtifact { param([object]$Seal,[string]$Id);return Get-G3E2RA1R3Artifact $Seal $Id }
-function Test-G3E2RA1R5RBoundArtifact { param([object]$Context,[object]$Artifact);return Test-G3E2RA1R3BoundArtifact $Context.A1R3Context $Artifact }
-function Test-G3E2RA1R5RHardReferences { param([object]$Context,[object]$Seal,[string]$State,[string]$RipgrepExecutable);Test-G3E2RA1R3HardReferences $Context.A1R3Context $Seal $State $RipgrepExecutable }
-function Test-G3E2RA1R5RWorkspaceAdvisory { param([object]$Context,[object]$Seal);Test-G3E2RA1R3WorkspaceAdvisory $Context.A1R3Context $Seal }
-function Assert-G3E2RA1R5RGitStagingEmpty { param([string]$VaultRoot,[string]$GitExecutable);Assert-G3E2RA1R3GitStagingEmpty $VaultRoot $GitExecutable }
-function Assert-G3E2RA1R5RNoResidue { param([string]$VaultRoot);Assert-G3E2RA1R3NoResidue $VaultRoot }
-function Enter-G3E2RA1R5RMutex { param([string]$VaultRoot);return Enter-G3E2RA1R3Mutex $VaultRoot }
-function Exit-G3E2RA1R5RMutex { param([object]$Mutex);Exit-G3E2RA1R3Mutex $Mutex }
-function Test-G3E2RA1R5RAdministrator { return Test-G3E2RA1R3Administrator }
-function Add-G3E2RA1R5RCompatibilityProperties { param([object]$Seal);return Add-G3E2RA1R3CompatibilityProperties $Seal }
+function Get-G3E2RA1R5RArtifact { param([object]$Seal,[string]$Id);return Get-G3E2RA1R4Artifact $Seal $Id }
+function Test-G3E2RA1R5RBoundArtifact { param([object]$Context,[object]$Artifact);return Test-G3E2RA1R4BoundArtifact $Context.A1R4Context $Artifact }
+function Test-G3E2RA1R5RHardReferences { param([object]$Context,[object]$Seal,[string]$State,[string]$RipgrepExecutable);Test-G3E2RA1R4HardReferences $Context.A1R4Context $Seal $State $RipgrepExecutable }
+function Test-G3E2RA1R5RWorkspaceAdvisory { param([object]$Context,[object]$Seal);Test-G3E2RA1R4WorkspaceAdvisory $Context.A1R4Context $Seal }
+function Assert-G3E2RA1R5RGitStagingEmpty { param([string]$VaultRoot,[string]$GitExecutable);Assert-G3E2RA1R4GitStagingEmpty $VaultRoot $GitExecutable }
+function Assert-G3E2RA1R5RNoResidue { param([string]$VaultRoot);Assert-G3E2RA1R4NoResidue $VaultRoot }
+function Enter-G3E2RA1R5RMutex { param([string]$VaultRoot);return Enter-G3E2RA1R4Mutex $VaultRoot }
+function Exit-G3E2RA1R5RMutex { param([object]$Mutex);Exit-G3E2RA1R4Mutex $Mutex }
+function Test-G3E2RA1R5RAdministrator { return Test-G3E2RA1R4Administrator }
+function Add-G3E2RA1R5RCompatibilityProperties { param([object]$Seal);return Add-G3E2RA1R4CompatibilityProperties $Seal }
 
 Export-ModuleMember -Function @(
     'Get-G3E2RA1R5RSha256','Get-G3E2RA1R5RBytes','Get-G3E2RA1R5RBytesSha256',

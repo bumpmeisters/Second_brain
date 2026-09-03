@@ -61,7 +61,7 @@ function Invoke-CapturedProcess{
 function Get-Text{param([string]$Relative);return [IO.File]::ReadAllText((Join-Path $overlay $Relative.Replace('/','\')))}
 
 $ps5='C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
-$hostOk=$PSVersionTable.PSEdition-ceq'Desktop'-and[Environment]::Is64BitProcess-and[IO.Path]::GetFullPath((Get-Process -Id $PID).Path)-ceq[IO.Path]::GetFullPath($ps5)
+$hostOk=$PSVersionTable.PSEdition-ceq'Desktop'-and[Environment]::Is64BitProcess-and[IO.Path]::GetFullPath((Get-Process -Id $PID).Path)-ieq[IO.Path]::GetFullPath($ps5)
 Add-Check T01-CANONICAL-PS51-HOST $hostOk 'Desktop 64-bit canonical System32 host'
 $rows=@(Import-Csv -LiteralPath $manifest)
 $actual=@(Get-ChildItem -LiteralPath $overlay -Recurse -File|ForEach-Object{$_.FullName.Substring($overlay.Length+1).Replace('\','/')})
