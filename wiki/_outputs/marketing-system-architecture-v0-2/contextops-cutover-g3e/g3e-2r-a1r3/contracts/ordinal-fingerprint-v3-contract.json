@@ -1,0 +1,39 @@
+{
+  "contract_id": "g3e2r-ordinal-fingerprint/v3",
+  "applies_to": ["tree-fingerprint", "wrapper-prestate-fingerprint", "path-set-identity", "closure-lock-order"],
+  "record_fields": ["relative_path", "bytes", "uppercase_sha256"],
+  "record_separator": "TAB",
+  "line_separator": "LF",
+  "trailing_line_separator": false,
+  "encoding": "UTF-8-no-BOM",
+  "comparer": "System.StringComparer.Ordinal",
+  "path_separator": "/",
+  "path_case_folding": "none",
+  "unicode_normalization": "none",
+  "root_path_included": false,
+  "absent_tree_sentinel": "ABSENT",
+  "empty_tree_fingerprint": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "reject_duplicate_ordinal_paths": true,
+  "reject_reparse_points": true,
+  "sort_object_allowed_in_identity_path": false,
+  "known_answer_vector": {
+    "records": [
+      "ä.txt\t6\tFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+      "z.txt\t4\tDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+      "A.txt\t1\tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "Ä.txt\t5\tEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+      "a.txt\t3\tCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "_.txt\t2\tBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+    ],
+    "ordinal_order": [
+      "A.txt\t1\tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "_.txt\t2\tBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+      "a.txt\t3\tCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "z.txt\t4\tDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+      "Ä.txt\t5\tEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
+      "ä.txt\t6\tFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+    ],
+    "sha256": "814F92A73AD6CB43D70D87856634A45E76BD80AB6DEF6F94C02B738CEC324AAF"
+  },
+  "unknown_properties": "reject"
+}
