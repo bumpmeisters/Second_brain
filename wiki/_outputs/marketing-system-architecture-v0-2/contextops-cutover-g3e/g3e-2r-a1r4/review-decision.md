@@ -2,23 +2,25 @@
 
 ## Decision
 
-PASS_A1R4_ONLY
+CONDITIONAL_PASS_A1R4_ONLY
 
 ## Allowed scope
 
-- One create-only fifteen-file A1R4 overlay.
-- A1R3 is reused through the exact dependency lock and is never changed.
-- New behavior is limited to canonical JSON timestamp reading, writing, and temporal validation.
-- Static and isolated system-temporary tests only.
+- Finalize the A1R4 README, QA report, and review decision for the artifact-path boundary correction.
+- Re-close only their rows in `a1r4-bundle-manifest.csv`.
+- Run one final 64/64 A1R4 verifier against the exact resulting manifest.
+
+## Verified pre-evidence boundary
+
+The candidate at manifest `3137DB95BE6957F527A69396A1F155C26EA187E108CD29B3818D74BC7E4A84F9` and snapshot `8BE597865F26273A5DBB2C3D3218E82A0E189A9E8E2FEF889AD98CD4C2300C97` passed one direct A1R4 64/64 run and two nested A1R4 64/64 regressions. T56 proved the exact fifteen-path set, and all three observations ended with no state effect.
+
+## Effective acceptance boundary
+
+This decision becomes effective only when the evidence-closed manifest is exact and one matching external A1R4 verifier reports PASS 64/64 with no effect. That command output completes acceptance; no post-verification evidence edit is required or permitted.
 
 ## Prohibited scope
 
-- No G3E2R-B candidate, snapshot, or live-seal-v2.json.
-- No live capability probe or component mutation.
-- No authority or routing change.
-- No Git staging or commit.
-- No changes to A1R3, A1R2, A1R, A1, A, G3E-1, source registers, sources, sibling controllers, or live wrappers.
-
-## Acceptance boundary
-
-The implementation candidate met 64/64 A1R4 tests, unchanged A1R3 48/48, Root Fast 0/0, MOS 16/16, exact upstream and policy-safe S5 contract hashes, removed temporary fixtures, B/snapshot/seal absence, staging and residue zero, and routing frozen. This decision becomes effective only after the final manifest regeneration and matching final 64/64 verifier run. The A1R4 bundle hash remains an external verifier parameter and is not stored in a manifest-bound member.
+- No implementation change during evidence re-closure.
+- No B candidate, snapshot, live seal, capability probe, live mutation, authority or routing change.
+- No Git staging, commit, push, or pull request at this checkpoint.
+- No change to A1R3, A1R2, A1R, A1, A, G3E-1, source registers, sources, sibling controllers, or live wrappers.
