@@ -283,6 +283,16 @@ function Get-G3E2RA1R4ExecutionPaths {
     return $paths
 }
 
+function Get-G3E2RA1R4ArtifactPaths {
+    param([object]$Context)
+    $paths=[ordered]@{}
+    foreach($member in @($Context.BContract.members|Where-Object{-not[string]::IsNullOrWhiteSpace([string]$_.artifact_id)})){$paths[[string]$member.artifact_id]=([string]$Context.BContract.canonical_root).TrimEnd('/')+'/'+[string]$member.bundle_path}
+    $dependency=$Context.A1R2Context.A1RContext.ADependencies['G3E1-POSTSTATE-ARCHIVE']
+    if($null-eq$dependency){throw 'A1R4 poststate archive dependency is missing.'}
+    $paths['G3E1-EXACT-POSTSTATE-ARCHIVE']=Get-G3E2RA1R4RepositoryPath $Context.Root $dependency.Path
+    return $paths
+}
+
 function New-G3E2RA1R4FileBinding {
     param([string]$IdName,[string]$Id,[object]$Context,[string]$RepositoryPath)
     $full=Resolve-G3E2RA1R4InRoot $Context.Root $RepositoryPath;$value=[ordered]@{};$value[$IdName]=$Id
@@ -373,7 +383,7 @@ function New-G3E2RA1R4Seal {
     $bundlePaths=Get-G3E2RA1R4BundlePaths $Context $BState
     $bundles=foreach($id in @($Context.SealContract.required_bundle_binding_ids)){New-G3E2RA1R4FileBinding bundle_id $id $Context $bundlePaths[$id]}
     $executionPaths=Get-G3E2RA1R4ExecutionPaths;$executions=foreach($id in @($Context.SealContract.required_execution_binding_ids)){New-G3E2RA1R4FileBinding execution_id $id $Context $executionPaths[$id]}
-    $artifactPaths=Get-G3E2RA1RArtifactPaths $Context.A1R2Context.A1RContext;$artifacts=foreach($id in @($Context.SealContract.required_artifact_binding_ids)){New-G3E2RA1R4FileBinding artifact_id $id $Context $artifactPaths[$id]}
+    $artifactPaths=Get-G3E2RA1R4ArtifactPaths $Context;$artifacts=foreach($id in @($Context.SealContract.required_artifact_binding_ids)){New-G3E2RA1R4FileBinding artifact_id $id $Context $artifactPaths[$id]}
     $approval=[pscustomobject][ordered]@{approval_id=[string]$sealInput.approval.approval_id;approved_by=[string]$sealInput.approval.approved_by;approved_at_utc=$SealInputDocument.Approved.Lexeme;live_capability_probe_approved=[bool]$sealInput.approval.live_capability_probe_approved;live_mutation_approved=[bool]$sealInput.approval.live_mutation_approved;automatic_reverse_approved=[bool]$sealInput.approval.automatic_reverse_approved;independent_reverse_approved=[bool]$sealInput.approval.independent_reverse_approved}
     return [pscustomobject][ordered]@{seal_contract='g3e2r-live-seal/v2';state='sealed';transaction_id=[string]$sealInput.transaction_id;vault_root=$Context.Root;routing_state='frozen';legacy_token=[string]$sealInput.legacy_token;approval=$approval;time=[pscustomobject][ordered]@{prepared_at_utc=$SealInputDocument.Prepared.Lexeme;sealed_at_utc='';not_after_utc='';ttl_seconds=900};bundle_bindings=@($bundles);execution_bindings=@($executions);artifact_bindings=@($artifacts);runtime_bindings=@($RuntimeBindings);baseline=$sealInput.baseline}
 }
@@ -436,7 +446,7 @@ function Assert-G3E2RA1R4SealClosure {
     $bundlePaths=Get-G3E2RA1R4BundlePaths $Context ([pscustomobject]@{Manifest=$bManifest})
     foreach($id in $bundlePaths.Keys){$row=@($Seal.bundle_bindings|Where-Object bundle_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$bundlePaths[$id]){throw "Seal bundle canonical path mismatch: $id"}}
     $executionPaths=Get-G3E2RA1R4ExecutionPaths;foreach($id in $executionPaths.Keys){$row=@($Seal.execution_bindings|Where-Object execution_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$executionPaths[$id]){throw "Seal execution canonical path mismatch: $id"}}
-    $artifactPaths=Get-G3E2RA1RArtifactPaths $Context.A1R2Context.A1RContext;foreach($id in $artifactPaths.Keys){$row=@($Seal.artifact_bindings|Where-Object artifact_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$artifactPaths[$id]){throw "Seal artifact canonical path mismatch: $id"}}
+    $artifactPaths=Get-G3E2RA1R4ArtifactPaths $Context;foreach($id in $artifactPaths.Keys){$row=@($Seal.artifact_bindings|Where-Object artifact_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$artifactPaths[$id]){throw "Seal artifact canonical path mismatch: $id"}}
     $b=@($Seal.bundle_bindings|Where-Object bundle_id -CEQ 'G3E2R-B-BUNDLE');$null=Test-G3E2RA1R4BManifest $Context ([string]$b[0].sha256) -AllowSealed:(-not$AllowPreparedB)
 }
 
@@ -546,7 +556,7 @@ Export-ModuleMember -Function @(
     'Import-G3E2RA1R4ExactCsv','Test-G3E2RA1R4BoundManifest','Get-G3E2RA1R4Context',
     'Get-G3E2RA1R4TreeStateV3','Get-G3E2RA1R4TreeFingerprintV3','Get-G3E2RA1R4WrapperInventory',
     'Get-G3E2RA1R4TransitionRows','Get-G3E2RA1R4WrapperFingerprintV3','Test-G3E2RA1R4InvariantSchema',
-    'Test-G3E2RA1R4LiveInvariants','Get-G3E2RA1R4ExecutionPaths','Assert-G3E2RA1R4Baseline',
+    'Test-G3E2RA1R4LiveInvariants','Get-G3E2RA1R4ExecutionPaths','Get-G3E2RA1R4ArtifactPaths','Assert-G3E2RA1R4Baseline',
     'ConvertTo-G3E2RA1R4CanonicalTimestamp','Read-G3E2RA1R4JsonDocument','Get-G3E2RA1R4TimestampLexeme',
     'Assert-G3E2RA1R4SealInput','Read-G3E2RA1R4SealInputDocument','New-G3E2RA1R4Seal','Complete-G3E2RA1R4SealTimes','Test-G3E2RA1R4LiveSealTemporalDocument','Assert-G3E2RA1R4RuntimeBindings',
     'Assert-G3E2RA1R4SealClosure','Read-G3E2RA1R4Seal','Enter-G3E2RA1R4ClosureLock',

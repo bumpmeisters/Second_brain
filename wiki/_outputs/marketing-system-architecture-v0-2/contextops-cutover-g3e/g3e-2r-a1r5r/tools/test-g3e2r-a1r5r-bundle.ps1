@@ -20,11 +20,10 @@ $expectedA1='8878AA92D1F82DB4F9B3D8E4C1F5E707F36E77E3013195ABF7AD7784AE185AC7'
 $expectedA1R='57DBC2BC3F91D6C201E9F7506576A9F2F07E55D17808B058E9F1933380249B2D'
 $expectedA1R2='C907A384EC11C7265C05454ACD6984A1A7A61D3451A1EB60640CCAAF331A035C'
 $expectedA1R3='7623ABE786EF793C9A2FEF8386C514C81A33F9ED437DC8D3133D6B0E738146EF'
-$expectedA1R4='F5CD110288580759453D7002EC6A2C4B8B322E7F8A0BF1B22B7EDCCB3CE4A675'
+$expectedA1R4='99A9C68F0F8206D2D500D7983284FCED6C0CBB6D26DEAF1FC6F419786F352849'
 $expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
 $expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
-$expectedA1R4Test='0F1FFB9ECED53FE4336014CE297177A49DBC1BD5F958CF0AEB082140DA1EFC0F'
-$canonicalPs7='C:\Users\rolfp\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe'
+$expectedA1R4Test='D3746E4D6FE97BB1A6CB60D5E98E61E51EDEE0AFCD34F63BAE1FAF1AC9A587A3'
 $canonicalPs7Hash='DB6DD81183FE57D22E03B911EC9A30A2FD7C40542E97743615355A6FB44F458F'
 $canonicalPs7Version='7.6.4'
 $manifest=Join-Path $overlay 'a1r5r-bundle-manifest.csv'
@@ -82,10 +81,11 @@ Add-Check T10-C5-COMPONENTS (@($runtime.components).Count-eq 5-and(Test-G3E2RA1R
 $o10=@($runtime.operative_bindings|Where-Object binding_id -CEQ O10)[0]
 $o20=@($runtime.operative_bindings|Where-Object binding_id -CEQ O20)[0]
 Add-Check T11-O10-BINDING ($o10.sha256-ceq'09E578801F5579C871ED2F58CF1D4551404A80CA12FC0A6534A2758D37BB87A9'-and[int64]$o10.bytes-eq 12144) 'transaction library exact'
-Add-Check T12-O20-BINDING ($o20.sha256-ceq'29E3B7B4FA5AD2AFF7FAEA16B6DF061A194C7E39103003DCAFA83A5AE8913AF0'-and[int64]$o20.bytes-eq 51816) 'A1R4 guard exact'
+Add-Check T12-O20-BINDING ($o20.sha256-ceq'6C3EC725E1B85721381E1E604D86290EFDA745F5B05F43ED64A8BA14F61650B8'-and[int64]$o20.bytes-eq 52436) 'A1R4 guard exact'
 Add-Check T13-IMPORT-ORDER ((@($runtime.import_order)-join',')-ceq'P10,P20,O10,O20') 'exact initialization order'
 Add-Check T14-CANONICAL-CONTEXT ($context.Overlay-ceq$overlay-and$context.A1R4Context.Overlay-ceq$context.A1R4Root) 'canonical A1R5R over A1R4'
-Add-Check T15-SEAL-CLOSURE ($context.SealContract.bundle_binding_count-eq 10-and$context.SealContract.execution_binding_count-eq 61-and$context.SealContract.artifact_binding_count-eq 15-and$context.SealContract.runtime_binding_count-eq 4) '10/61/15/4'
+$artifactPaths=Get-G3E2RA1R5RArtifactPaths $context
+Add-Check T15-SEAL-CLOSURE ($context.SealContract.bundle_binding_count-eq 10-and$context.SealContract.execution_binding_count-eq 61-and$context.SealContract.artifact_binding_count-eq 15-and$context.SealContract.runtime_binding_count-eq 4-and$artifactPaths.Count-eq 15-and(Test-G3E2RA1R5ROrdinalSetEqual @($context.SealContract.required_artifact_binding_ids) @($artifactPaths.Keys))) '10/61/15/4 plus 15 exact artifact paths'
 Add-Check T16-NINE-HASH-BOUNDARIES ($context.SealContract.expected_hash_boundary_count-eq 9) 'nine expected hash boundaries'
 Add-Check T17-GATE-MAP-ROWS (@($context.Gates).Count-eq 40) 'forty gate rows'
 Add-Check T18-GATE-MAP-SHAPE (@($context.Gates|Where-Object direction -CEQ SEAL).Count-eq 9-and@($context.Gates|Where-Object direction -CEQ FWD).Count-eq 19-and@($context.Gates|Where-Object direction -CEQ REV).Count-eq 12) '9/19/12'
@@ -96,7 +96,7 @@ Add-Check T21-RECEIPT-ID ($runtime.receipt_contract_id-ceq'g3e2r-entrypoint-impo
 $componentFiles=@('tools/g3e2r-a1r5r-guard-lib.psm1','tools/finalize-g3e2r-live-seal-a1r5r.ps1','tools/invoke-g3e2-transaction-a1r5r.ps1','tools/invoke-g3e2-reverse-a1r5r.ps1','tools/test-g3e2r-a1r5r-bundle.ps1')
 $componentText=@($componentFiles|ForEach-Object{Get-Text $_})
 Add-Check T22-NO-CALLER-A1R3 (@($componentText|Where-Object{$_-match'(?im)^\s*Import-Module.*a1r3'}).Count-eq 0) 'no direct A1R3 import'
-Add-Check T23-PLATFORM-IMPORTS (@($componentText|Where-Object{$_-match'Microsoft\.PowerShell\.Management'-and$_-match'Microsoft\.PowerShell\.Utility'}).Count-eq 5) 'P10/P20 in all five components'
+Add-Check T23-PLATFORM-IMPORTS (@($componentText|Where-Object{$_-match'Microsoft\.PowerShell\.Management'-and$_-match'Microsoft\.PowerShell\.Utility'}).Count-eq 5-and-not((Get-Text 'tools/g3e2r-a1r5r-guard-lib.psm1').Contains('Get-G3E2RA1RArtifactPaths'))) 'P10/P20 in all five components; no transitive A1R artifact-path call'
 Add-Check T24-NO-DIRECT-O10-CALLERS (@($componentText|Where-Object{$_-match'(?im)^\s*Import-Module.*g3e2r-transaction-lib'}).Count-eq 0) 'O10 imported only by initializer'
 $receiptCallerOk=(Get-Text 'tools/finalize-g3e2r-live-seal-a1r5r.ps1')-match'Initialize-G3E2RA1R5REntrypoint'-and(Get-Text 'tools/invoke-g3e2-transaction-a1r5r.ps1')-match'Initialize-G3E2RA1R5REntrypoint'-and(Get-Text 'tools/invoke-g3e2-reverse-a1r5r.ps1')-match'Initialize-G3E2RA1R5REntrypoint'-and(Get-Text 'tools/test-g3e2r-a1r5r-bundle.ps1')-match'Initialize-G3E2RA1R5REntrypoint'
 Add-Check T25-RECEIPT-CALLERS $receiptCallerOk 'initializer present in four callers; guard provides it'
@@ -151,12 +151,12 @@ $ps7=[IO.Path]::GetFullPath($PowerShell7Executable)
 if(-not(Test-Path -LiteralPath $ps7 -PathType Leaf)){throw 'T46 PowerShell 7 executable is missing.'}
 $ps7Item=Get-Item -LiteralPath $ps7 -Force
 $ps7Hash=(Get-FileHash -LiteralPath $ps7 -Algorithm SHA256).Hash.ToUpperInvariant()
-$ps7PathOk=$ps7-ceq[IO.Path]::GetFullPath($canonicalPs7)-or$ps7.Equals([IO.Path]::GetFullPath($canonicalPs7),[StringComparison]::OrdinalIgnoreCase)
-if(-not$ps7PathOk-or$ps7Item.Attributes-band[IO.FileAttributes]::ReparsePoint-or$ps7Hash-cne$ExpectedPowerShell7Sha256.ToUpperInvariant()-or$ps7Hash-cne$canonicalPs7Hash-or$ExpectedPowerShell7Version-cne$canonicalPs7Version){throw 'T46 PowerShell 7 path/hash/version binding failed.'}
+if($ps7Item.Attributes-band[IO.FileAttributes]::ReparsePoint-or$ps7Hash-cne$ExpectedPowerShell7Sha256.ToUpperInvariant()-or$ps7Hash-cne$canonicalPs7Hash-or$ExpectedPowerShell7Version-cne$canonicalPs7Version){throw 'T46 PowerShell 7 content binding failed.'}
 $probeLines=@(& $ps7 -NoProfile -NonInteractive -Command '$o=[ordered]@{version=$PSVersionTable.PSVersion.ToString();edition=$PSVersionTable.PSEdition;is64=[Environment]::Is64BitProcess;process=(Get-Process -Id $PID).Path};$o|ConvertTo-Json -Compress' 2>&1)
 if($LASTEXITCODE-ne 0-or$probeLines.Count-ne 1){throw 'T46 PowerShell 7 clean JSON probe failed.'}
 $ps7Probe=([string]$probeLines[0])|ConvertFrom-Json
-if($ps7Probe.version-cne$ExpectedPowerShell7Version-or$ps7Probe.edition-cne'Core'-or-not[bool]$ps7Probe.is64-or-not([IO.Path]::GetFullPath([string]$ps7Probe.process).Equals($ps7,[StringComparison]::OrdinalIgnoreCase))){throw 'T46 PowerShell 7 runtime identity failed.'}
+$ps7ProcessPathOk=[IO.Path]::GetFullPath([string]$ps7Probe.process).Equals($ps7,[StringComparison]::OrdinalIgnoreCase)
+if($ps7Probe.version-cne$ExpectedPowerShell7Version-or$ps7Probe.edition-cne'Core'-or-not[bool]$ps7Probe.is64-or-not$ps7ProcessPathOk){throw 'T46 PowerShell 7 runtime identity failed.'}
 $a1r4Test=Join-Path $context.A1R4Root 'tools/test-g3e2r-a1r4-bundle.ps1'
 $a1r4HashBefore=Get-G3E2RA1R5RSha256 $a1r4Test
 Import-Module (Join-Path $context.A1R4Root 'tools/g3e2r-a1r4-guard-lib.psm1') -Force
@@ -164,7 +164,7 @@ $a1r4Context=Get-G3E2RA1R4Context -VaultRoot $root -OverlayRoot $context.A1R4Roo
 Assert-G3E2RA1R4NoResidue $root
 $a1r4=Invoke-JsonProcess $ps7 @('-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',$a1r4Test,'-VaultRoot',$root,'-OverlayRoot',$context.A1R4Root,'-PythonExecutable',$PythonExecutable,'-Json')
 $t46Internal=@(
-    $ps7PathOk,
+    $ps7ProcessPathOk,
     $ps7Hash-ceq$canonicalPs7Hash,
     $ps7Probe.version-ceq$canonicalPs7Version,
     $ps7Probe.edition-ceq'Core',

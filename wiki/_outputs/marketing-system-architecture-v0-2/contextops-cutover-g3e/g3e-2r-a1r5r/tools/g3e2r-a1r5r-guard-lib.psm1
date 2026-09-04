@@ -295,6 +295,11 @@ function Get-G3E2RA1R5RExecutionPaths {
     return $paths
 }
 
+function Get-G3E2RA1R5RArtifactPaths {
+    param([object]$Context)
+    return Get-G3E2RA1R4ArtifactPaths $Context.A1R4Context
+}
+
 function New-G3E2RA1R5RFileBinding {
     param([string]$IdName,[string]$Id,[object]$Context,[string]$RepositoryPath)
     $full=Resolve-G3E2RA1R5RInRoot $Context.Root $RepositoryPath;$value=[ordered]@{};$value[$IdName]=$Id
@@ -386,7 +391,7 @@ function New-G3E2RA1R5RSeal {
     $bundlePaths=Get-G3E2RA1R5RBundlePaths $Context $BState
     $bundles=foreach($id in @($Context.SealContract.required_bundle_binding_ids)){New-G3E2RA1R5RFileBinding bundle_id $id $Context $bundlePaths[$id]}
     $executionPaths=Get-G3E2RA1R5RExecutionPaths;$executions=foreach($id in @($Context.SealContract.required_execution_binding_ids)){New-G3E2RA1R5RFileBinding execution_id $id $Context $executionPaths[$id]}
-    $artifactPaths=Get-G3E2RA1RArtifactPaths $Context.A1R2Context.A1RContext;$artifacts=foreach($id in @($Context.SealContract.required_artifact_binding_ids)){New-G3E2RA1R5RFileBinding artifact_id $id $Context $artifactPaths[$id]}
+    $artifactPaths=Get-G3E2RA1R5RArtifactPaths $Context;$artifacts=foreach($id in @($Context.SealContract.required_artifact_binding_ids)){New-G3E2RA1R5RFileBinding artifact_id $id $Context $artifactPaths[$id]}
     $approval=[pscustomobject][ordered]@{approval_id=[string]$sealInput.approval.approval_id;approved_by=[string]$sealInput.approval.approved_by;approved_at_utc=$SealInputDocument.Approved.Lexeme;live_capability_probe_approved=[bool]$sealInput.approval.live_capability_probe_approved;live_mutation_approved=[bool]$sealInput.approval.live_mutation_approved;automatic_reverse_approved=[bool]$sealInput.approval.automatic_reverse_approved;independent_reverse_approved=[bool]$sealInput.approval.independent_reverse_approved}
     return [pscustomobject][ordered]@{seal_contract='g3e2r-live-seal/v2';state='sealed';transaction_id=[string]$sealInput.transaction_id;vault_root=$Context.Root;routing_state='frozen';legacy_token=[string]$sealInput.legacy_token;approval=$approval;time=[pscustomobject][ordered]@{prepared_at_utc=$SealInputDocument.Prepared.Lexeme;sealed_at_utc='';not_after_utc='';ttl_seconds=900};bundle_bindings=@($bundles);execution_bindings=@($executions);artifact_bindings=@($artifacts);runtime_bindings=@($RuntimeBindings);baseline=$sealInput.baseline}
 }
@@ -449,7 +454,7 @@ function Assert-G3E2RA1R5RSealClosure {
     $bundlePaths=Get-G3E2RA1R5RBundlePaths $Context ([pscustomobject]@{Manifest=$bManifest})
     foreach($id in $bundlePaths.Keys){$row=@($Seal.bundle_bindings|Where-Object bundle_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$bundlePaths[$id]){throw "Seal bundle canonical path mismatch: $id"}}
     $executionPaths=Get-G3E2RA1R5RExecutionPaths;foreach($id in $executionPaths.Keys){$row=@($Seal.execution_bindings|Where-Object execution_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$executionPaths[$id]){throw "Seal execution canonical path mismatch: $id"}}
-    $artifactPaths=Get-G3E2RA1RArtifactPaths $Context.A1R2Context.A1RContext;foreach($id in $artifactPaths.Keys){$row=@($Seal.artifact_bindings|Where-Object artifact_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$artifactPaths[$id]){throw "Seal artifact canonical path mismatch: $id"}}
+    $artifactPaths=Get-G3E2RA1R5RArtifactPaths $Context;foreach($id in $artifactPaths.Keys){$row=@($Seal.artifact_bindings|Where-Object artifact_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$artifactPaths[$id]){throw "Seal artifact canonical path mismatch: $id"}}
     $b=@($Seal.bundle_bindings|Where-Object bundle_id -CEQ 'G3E2R-B-BUNDLE');$null=Test-G3E2RA1R5RBManifest $Context ([string]$b[0].sha256) -AllowSealed:(-not$AllowPreparedB)
 }
 
@@ -561,7 +566,7 @@ Export-ModuleMember -Function @(
     'Import-G3E2RA1R5RExactCsv','Test-G3E2RA1R5RBoundManifest','Get-G3E2RA1R5RContext','Initialize-G3E2RA1R5REntrypoint',
     'Get-G3E2RA1R5RTreeStateV3','Get-G3E2RA1R5RTreeFingerprintV3','Get-G3E2RA1R5RWrapperInventory',
     'Get-G3E2RA1R5RTransitionRows','Get-G3E2RA1R5RWrapperFingerprintV3','Test-G3E2RA1R5RInvariantSchema',
-    'Test-G3E2RA1R5RLiveInvariants','Get-G3E2RA1R5RExecutionPaths','Assert-G3E2RA1R5RBaseline',
+    'Test-G3E2RA1R5RLiveInvariants','Get-G3E2RA1R5RExecutionPaths','Get-G3E2RA1R5RArtifactPaths','Assert-G3E2RA1R5RBaseline',
     'ConvertTo-G3E2RA1R5RCanonicalTimestamp','Read-G3E2RA1R5RJsonDocument','Get-G3E2RA1R5RTimestampLexeme',
     'Assert-G3E2RA1R5RSealInput','Read-G3E2RA1R5RSealInputDocument','New-G3E2RA1R5RSeal','Complete-G3E2RA1R5RSealTimes','Test-G3E2RA1R5RLiveSealTemporalDocument','Assert-G3E2RA1R5RRuntimeBindings',
     'Assert-G3E2RA1R5RSealClosure','Read-G3E2RA1R5RSeal','Enter-G3E2RA1R5RClosureLock',
