@@ -108,21 +108,23 @@ function Get-G3E2RA1R5RContext {
     $manifest=Join-Path $overlay 'a1r5r-bundle-manifest.csv'
     if(Test-Path -LiteralPath $manifest -PathType Leaf){
         if(-not[string]::IsNullOrWhiteSpace($ExpectedA1R5RHash)-and(Get-G3E2RA1R5RSha256 $manifest)-cne$ExpectedA1R5RHash.ToUpperInvariant()){throw 'Expected-A1R5R-Hash mismatch.'}
-        $rows=Test-G3E2RA1R5RBoundManifest $manifest $overlay 'overlay_path' @('role','overlay_path','sha256','bytes') 15 'A1R5R bundle'
+        $rows=Test-G3E2RA1R5RBoundManifest $manifest $overlay 'overlay_path' @('role','overlay_path','sha256','bytes') 17 'A1R5R bundle'
         $actual=@(Get-ChildItem -LiteralPath $overlay -Recurse -File|ForEach-Object{$_.FullName.Substring($overlay.Length+1).Replace('\','/')})
         $expected=@($rows.overlay_path)+'a1r5r-bundle-manifest.csv'
-        if($actual.Count-ne 16-or-not(Test-G3E2RA1R5ROrdinalSetEqual $expected $actual)){throw 'A1R5R overlay differs from its exact sixteen-file inventory.'}
+        if($actual.Count-ne 18-or-not(Test-G3E2RA1R5ROrdinalSetEqual $expected $actual)){throw 'A1R5R overlay differs from its exact eighteen-file inventory.'}
     }
     $runtime=Get-Content -LiteralPath (Join-Path $overlay 'contracts/entrypoint-runtime-closure-v1-contract.json') -Raw -Encoding UTF8|ConvertFrom-Json
+    $probeAuthority=Get-Content -LiteralPath (Join-Path $overlay 'contracts/capability-probe-authority-v1-contract.json') -Raw -Encoding UTF8|ConvertFrom-Json
     $seal=Get-Content -LiteralPath (Join-Path $overlay 'contracts/live-seal-v2-a1r5r-contract.json') -Raw -Encoding UTF8|ConvertFrom-Json
     $jsonTime=Get-Content -LiteralPath (Join-Path $overlay 'contracts/json-time-v1-contract.json') -Raw -Encoding UTF8|ConvertFrom-Json
     $temporal=Get-Content -LiteralPath (Join-Path $overlay 'contracts/temporal-boundary-v1-contract.json') -Raw -Encoding UTF8|ConvertFrom-Json
     $gates=Import-G3E2RA1R5RExactCsv (Join-Path $overlay 'manifests/gate-map-v6.csv') @('direction','sequence','step_id','mutation_state','gate_function','success_contract','failure_action') 40 'A1R5R gate map'
     if(@($gates|Where-Object direction -CEQ 'SEAL').Count-ne 9-or@($gates|Where-Object direction -CEQ 'FWD').Count-ne 19-or@($gates|Where-Object direction -CEQ 'REV').Count-ne 12-or-not(Test-G3E2RA1R5ROrdinalUnique @($gates.step_id))){throw 'A1R5R gate map does not have the exact 9/19/12 shape.'}
-    if($seal.bundle_binding_count-ne 10-or$seal.execution_binding_count-ne 61-or$seal.artifact_binding_count-ne 15-or$seal.runtime_binding_count-ne 4-or$seal.expected_hash_boundary_count-ne 9){throw 'A1R5R seal contract cardinality differs from approval.'}
-    if($runtime.contract_id-cne'g3e2r-entrypoint-runtime-closure/v1'-or$runtime.receipt_contract_id-cne'g3e2r-entrypoint-import-receipt/v2-a1r5r'-or@($runtime.components).Count-ne 5){throw 'A1R5R entrypoint runtime closure differs from approval.'}
+    if($seal.bundle_binding_count-ne 10-or$seal.execution_binding_count-ne 63-or$seal.artifact_binding_count-ne 15-or$seal.runtime_binding_count-ne 4-or$seal.expected_hash_boundary_count-ne 9){throw 'A1R5R seal contract cardinality differs from approval.'}
+    if($runtime.contract_id-cne'g3e2r-entrypoint-runtime-closure/v1'-or$runtime.receipt_contract_id-cne'g3e2r-entrypoint-import-receipt/v3-a1r5r'-or$runtime.platform_closure-cne'P2/C6'-or@($runtime.components).Count-ne 6){throw 'A1R5R entrypoint runtime closure differs from approval.'}
+    if($probeAuthority.contract_id-cne'g3e2r-capability-probe-authority-contract/v1-a1r5r'-or$probeAuthority.receipt_contract_id-cne'g3e2r-capability-probe-receipt/v1-a1r5r'-or[int]$probeAuthority.watchdog_seconds-ne 45-or[int]$probeAuthority.wrapper_participant_count-ne 11){throw 'A1R5R capability-probe authority contract differs from approval.'}
     $invariant=$a1r4Context.InvariantContract;$fingerprint=$a1r4Context.FingerprintContract
-    return [pscustomobject]@{Root=$root;Overlay=$overlay;Manifest=$manifest;A1R4Manifest=$a1r4Manifest;A1R4Root=$a1r4Root;A1R4Context=$a1r4Context;A1R3Manifest=$a1r4Context.A1R3Manifest;A1R3Root=$a1r4Context.A1R3Root;A1R3Context=$a1r4Context.A1R3Context;A1R2Manifest=$a1r4Context.A1R2Manifest;A1R2Root=$a1r4Context.A1R2Root;A1R2Context=$a1r4Context.A1R2Context;SealContract=$seal;RuntimeClosureContract=$runtime;JsonTimeContract=$jsonTime;TemporalContract=$temporal;InvariantContract=$invariant;FingerprintContract=$fingerprint;Gates=$gates;TransitionManifest=$a1r4Context.TransitionManifest;BContract=$a1r4Context.BContract;HardReferenceContract=$a1r4Context.HardReferenceContract}
+    return [pscustomobject]@{Root=$root;Overlay=$overlay;Manifest=$manifest;A1R4Manifest=$a1r4Manifest;A1R4Root=$a1r4Root;A1R4Context=$a1r4Context;A1R3Manifest=$a1r4Context.A1R3Manifest;A1R3Root=$a1r4Context.A1R3Root;A1R3Context=$a1r4Context.A1R3Context;A1R2Manifest=$a1r4Context.A1R2Manifest;A1R2Root=$a1r4Context.A1R2Root;A1R2Context=$a1r4Context.A1R2Context;SealContract=$seal;RuntimeClosureContract=$runtime;ProbeAuthorityContract=$probeAuthority;JsonTimeContract=$jsonTime;TemporalContract=$temporal;InvariantContract=$invariant;FingerprintContract=$fingerprint;Gates=$gates;TransitionManifest=$a1r4Context.TransitionManifest;BContract=$a1r4Context.BContract;HardReferenceContract=$a1r4Context.HardReferenceContract}
 }
 
 function Initialize-G3E2RA1R5REntrypoint {
@@ -136,7 +138,7 @@ function Initialize-G3E2RA1R5REntrypoint {
         if($binding.binding_id-ceq'O20'){Import-Module $path}else{Import-Module $path -Force -Global}
         $loaded.Add([pscustomobject][ordered]@{binding_id=[string]$binding.binding_id;repository_path=[string]$binding.repository_path;sha256=[string]$binding.sha256;bytes=[int64]$binding.bytes})
     }
-    return [pscustomobject][ordered]@{receipt_id=[string]$contract.receipt_contract_id;component_id=$ComponentId;platform_closure='P2/C5';import_order=@($contract.import_order);operative_bindings=@($loaded);verdict='PASS'}
+    return [pscustomobject][ordered]@{receipt_id=[string]$contract.receipt_contract_id;component_id=$ComponentId;platform_closure='P2/C6';import_order=@($contract.import_order);operative_bindings=@($loaded);verdict='PASS'}
 }
 
 function Get-G3E2RA1R5RTreeStateV3 {
@@ -284,12 +286,14 @@ function Get-G3E2RA1R5RExecutionPaths {
     $paths=[ordered]@{};foreach($item in (Get-G3E2RA1R4ExecutionPaths).GetEnumerator()){$paths[$item.Key]=$item.Value}
     $base='wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r5r/'
     $paths['A1R5R-RUNTIME-CLOSURE-CONTRACT']=$base+'contracts/entrypoint-runtime-closure-v1-contract.json'
+    $paths['A1R5R-PROBE-AUTHORITY-CONTRACT']=$base+'contracts/capability-probe-authority-v1-contract.json'
     $paths['A1R5R-SEAL-CONTRACT']=$base+'contracts/live-seal-v2-a1r5r-contract.json'
     $paths['A1R5R-GATE-MAP']=$base+'manifests/gate-map-v6.csv'
     $paths['A1R5R-GUARD-LIB']=$base+'tools/g3e2r-a1r5r-guard-lib.psm1'
     $paths['A1R5R-FINALIZER']=$base+'tools/finalize-g3e2r-live-seal-a1r5r.ps1'
     $paths['A1R5R-FORWARD']=$base+'tools/invoke-g3e2-transaction-a1r5r.ps1'
     $paths['A1R5R-REVERSE']=$base+'tools/invoke-g3e2-reverse-a1r5r.ps1'
+    $paths['A1R5R-CAPABILITY-PROBE']=$base+'tools/invoke-g3e2r-capability-probe-a1r5r.ps1'
     $paths['A1R5R-O10-TRANSACTION-LIB']='wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r/tools/g3e2r-transaction-lib.psm1'
     $paths['A1R5R-O20-A1R4-GUARD-LIB']='wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1'
     return $paths
@@ -437,7 +441,7 @@ function Assert-G3E2RA1R5RSealClosure {
     param([object]$Context,[object]$Seal,[switch]$AllowPreparedB)
     $sets=@(
         @(@($Context.SealContract.required_bundle_binding_ids),@($Seal.bundle_bindings.bundle_id),10,'bundle'),
-        @(@($Context.SealContract.required_execution_binding_ids),@($Seal.execution_bindings.execution_id),61,'execution'),
+        @(@($Context.SealContract.required_execution_binding_ids),@($Seal.execution_bindings.execution_id),63,'execution'),
         @(@($Context.SealContract.required_artifact_binding_ids),@($Seal.artifact_bindings.artifact_id),15,'artifact'),
         @(@($Context.SealContract.required_runtime_ids),@($Seal.runtime_bindings.runtime_id),4,'runtime')
     )
@@ -536,6 +540,60 @@ function Exit-G3E2RA1R5RClosureLock {
     if($null-ne$Lock){$paths=@(Get-G3E2RA1R5ROrdinalStrings @($Lock.Handles.Path) -Descending);foreach($path in $paths){@($Lock.Handles|Where-Object Path -CEQ $path)[0].Stream.Dispose()}}
 }
 
+function Resolve-G3E2RA1R5RProbeRoots {
+    param([string]$ControlRoot,[string]$TargetVaultRoot,[string]$AuthorityPath)
+    $control=(Resolve-Path -LiteralPath $ControlRoot).Path.TrimEnd('\');$target=(Resolve-Path -LiteralPath $TargetVaultRoot).Path.TrimEnd('\')
+    foreach($root in @($control,$target)){if(-not(Test-Path -LiteralPath $root -PathType Container)-or((Get-Item -LiteralPath $root -Force).Attributes-band[IO.FileAttributes]::ReparsePoint)){throw "Probe root is missing or reparse-backed: $root"}}
+    if($control.Equals($target,[StringComparison]::OrdinalIgnoreCase)-or$control.StartsWith($target+'\',[StringComparison]::OrdinalIgnoreCase)-or$target.StartsWith($control+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'ControlRoot and TargetVaultRoot must be disjoint and non-nested.'}
+    $authority=[IO.Path]::GetFullPath($AuthorityPath)
+    if(-not(Test-Path -LiteralPath $authority -PathType Leaf)-or((Get-Item -LiteralPath $authority -Force).Attributes-band[IO.FileAttributes]::ReparsePoint)){throw 'Probe authority must be one existing non-reparse file.'}
+    foreach($root in @($control,$target)){if($authority.Equals($root,[StringComparison]::OrdinalIgnoreCase)-or$authority.StartsWith($root+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Probe authority must be external to both roots.'}}
+    return [pscustomobject]@{ControlRoot=$control;TargetVaultRoot=$target;AuthorityPath=$authority}
+}
+
+function Read-G3E2RA1R5RProbeAuthority {
+    param([object]$Context,[string]$TargetVaultRoot,[string]$LiteralPath,[string]$ExpectedAuthorityHash,[object]$ExpectedHashes,[object[]]$ActualRuntimeBindings,[DateTimeOffset]$VerificationNowUtc=[DateTimeOffset]::UtcNow)
+    if($ExpectedAuthorityHash-notmatch'^[A-Fa-f0-9]{64}$'-or(Get-G3E2RA1R5RSha256 $LiteralPath)-cne$ExpectedAuthorityHash.ToUpperInvariant()){throw 'Capability-probe authority hash mismatch.'}
+    $document=Read-G3E2RA1R5RJsonDocument $LiteralPath;$authority=$document.Value;$contract=$Context.ProbeAuthorityContract
+    Assert-G3E2RA1R5RExactProperties $authority @($contract.required_top_level) 'Capability-probe authority'
+    Assert-G3E2RA1R5RExactProperties $authority.time @($contract.required_time_fields) 'Capability-probe authority time'
+    Assert-G3E2RA1R5RExactProperties $authority.approval @($contract.required_approval_fields) 'Capability-probe approval'
+    Assert-G3E2RA1R5RExactProperties $authority.expected_hashes @($contract.required_expected_hash_fields) 'Capability-probe expected hashes'
+    Assert-G3E2RA1R5RExactProperties $authority.target_prestate @($contract.required_target_prestate_fields) 'Capability-probe target prestate'
+    if($authority.authority_contract-cne$contract.authority_contract_id-or$authority.routing_state-cne'frozen'-or[string]::IsNullOrWhiteSpace([string]$authority.authority_id)-or[string]::IsNullOrWhiteSpace([string]$authority.approved_by)){throw 'Capability-probe authority identity is invalid.'}
+    if([IO.Path]::GetFullPath([string]$authority.control_root).TrimEnd('\')-cne$Context.Root-or[IO.Path]::GetFullPath([string]$authority.target_vault_root).TrimEnd('\')-cne[IO.Path]::GetFullPath($TargetVaultRoot).TrimEnd('\')){throw 'Capability-probe authority root binding mismatch.'}
+    foreach($field in @($contract.required_approval_fields)){if($authority.approval.$field-isnot[bool]){throw "Capability-probe approval Boolean is invalid: $field"}}
+    if(-not[bool]$authority.approval.live_capability_probe_approved-or[bool]$authority.approval.live_mutation_approved-or[bool]$authority.approval.automatic_reverse_approved-or[bool]$authority.approval.independent_reverse_approved){throw 'Capability-probe authority must approve only the live capability probe.'}
+    foreach($field in @($contract.required_expected_hash_fields)){if([string]$authority.expected_hashes.$field-notmatch'^[A-F0-9]{64}$'-or[string]$authority.expected_hashes.$field-cne[string]$ExpectedHashes.$field){throw "Capability-probe expected hash mismatch: $field"}}
+    if(@($authority.runtime_bindings).Count-ne 4-or-not(Test-G3E2RA1R5ROrdinalSetEqual @($contract.required_runtime_ids) @($authority.runtime_bindings.runtime_id))){throw 'Capability-probe authority runtime ids differ.'}
+    Assert-G3E2RA1R5RRuntimeBindings @($authority.runtime_bindings) $ActualRuntimeBindings
+    $approved=Get-G3E2RA1R5RTimestampLexeme $document.RawJson 'approved_at_utc';$notAfter=Get-G3E2RA1R5RTimestampLexeme $document.RawJson 'not_after_utc';$now=$VerificationNowUtc.ToUniversalTime();$future=$now.AddSeconds([int]$contract.maximum_future_clock_skew_seconds)
+    if($approved.Value-gt$future-or$notAfter.Value-lt$now-or$notAfter.Value-lt$approved.Value-or$notAfter.Value-gt$approved.Value.AddSeconds([int]$contract.maximum_authority_lifetime_seconds)){throw 'Capability-probe authority time boundary is invalid.'}
+    return [pscustomobject]@{Value=$authority;Document=$document;Approved=$approved;NotAfter=$notAfter}
+}
+
+function Get-G3E2RA1R5RProbeWrapperState {
+    param([object]$Context,[string]$TargetVaultRoot)
+    $rows=@(Get-G3E2RA1R5RTransitionRows $Context);$lines=[Collections.Generic.List[string]]::new();$matched=0
+    foreach($row in $rows){$path=Resolve-G3E2RA1R5RInRoot $TargetVaultRoot ([string]$row.wrapper_path);if(-not(Test-Path -LiteralPath $path -PathType Leaf)){throw "Probe wrapper is missing: $($row.wrapper_path)"};$hash=Get-G3E2RA1R5RSha256 $path;if($hash-cne[string]$row.wrapper_pre_sha256){throw "Probe wrapper prestate mismatch: $($row.wrapper_path)"};$matched++;$lines.Add(([string]$row.wrapper_path)+[char]9+(Get-G3E2RA1R5RBytes $path)+[char]9+$hash)}
+    $ordered=@(Get-G3E2RA1R5ROrdinalStrings @($lines));$fingerprint=Get-G3E2RA1R5RBytesSha256 $script:G3E2RA1R5RUtf8NoBom.GetBytes(($ordered-join[char]10))
+    return [pscustomobject][ordered]@{matched=$matched;total=$rows.Count;fingerprint_v3=$fingerprint}
+}
+
+function Get-G3E2RA1R5RProbeResiduePaths {
+    param([string]$TargetVaultRoot)
+    $set=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+    foreach($pattern in @('*.g3e2r.tmp','*.g3e2r.partial','*.g3e2r.lock','*.g3e2r.compat.json','.g3e2r-probe-*.tmp')){foreach($item in @(Get-ChildItem -LiteralPath $TargetVaultRoot -Recurse -Force -File -Filter $pattern)){if($item.Attributes-band[IO.FileAttributes]::ReparsePoint){throw "Probe residue is reparse-backed: $($item.FullName)"};$null=$set.Add($item.FullName)}}
+    return @(Get-G3E2RA1R5ROrdinalStrings @($set))
+}
+
+function Remove-G3E2RA1R5RProbeResidue {
+    param([object]$Context,[string]$TargetVaultRoot)
+    $parents=[Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+    foreach($row in @(Get-G3E2RA1R5RTransitionRows $Context)){$wrapper=Resolve-G3E2RA1R5RInRoot $TargetVaultRoot ([string]$row.wrapper_path);$null=$parents.Add((Split-Path -Parent $wrapper))}
+    foreach($parent in $parents){foreach($item in @(Get-ChildItem -LiteralPath $parent -Force -File -Filter '.g3e2r-probe-*.tmp')){if($item.Attributes-band[IO.FileAttributes]::ReparsePoint){throw "Probe residue is reparse-backed: $($item.FullName)"};Remove-Item -LiteralPath $item.FullName -Force}}
+}
+
 function Get-G3E2RA1R5RRuntimeBindings {
     param([object]$Context,[string]$PythonExecutable)
     return @(Get-G3E2RA1R4RuntimeBindings -Context $Context.A1R4Context -PythonExecutable $PythonExecutable)
@@ -571,6 +629,8 @@ Export-ModuleMember -Function @(
     'Assert-G3E2RA1R5RSealInput','Read-G3E2RA1R5RSealInputDocument','New-G3E2RA1R5RSeal','Complete-G3E2RA1R5RSealTimes','Test-G3E2RA1R5RLiveSealTemporalDocument','Assert-G3E2RA1R5RRuntimeBindings',
     'Assert-G3E2RA1R5RSealClosure','Read-G3E2RA1R5RSeal','Enter-G3E2RA1R5RClosureLock',
     'Test-G3E2RA1R5RClosureLock','Exit-G3E2RA1R5RClosureLock','Get-G3E2RA1R5RRuntimeBindings',
+    'Resolve-G3E2RA1R5RProbeRoots','Read-G3E2RA1R5RProbeAuthority','Get-G3E2RA1R5RProbeWrapperState',
+    'Get-G3E2RA1R5RProbeResiduePaths','Remove-G3E2RA1R5RProbeResidue',
     'Test-G3E2RA1R5RBManifest','Get-G3E2RA1R5RArtifact','Test-G3E2RA1R5RBoundArtifact',
     'Test-G3E2RA1R5RHardReferences','Test-G3E2RA1R5RWorkspaceAdvisory','Assert-G3E2RA1R5RGitStagingEmpty',
     'Assert-G3E2RA1R5RNoResidue','Enter-G3E2RA1R5RMutex','Exit-G3E2RA1R5RMutex',

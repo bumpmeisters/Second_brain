@@ -11,7 +11,7 @@
 "FWD","1","FWD-001","none","Read-SealV2A1R5R","expected A1 A1R A1R2 A1R3 A1R4 A1R5R and Seal hashes canonical time TTL approvals mutex routing","HOLD_NO_MUTATION"
 "FWD","2","FWD-002","none","Test-ImmutableClosure","all ten bundle sixty-one execution fifteen artifact and four runtime bindings exact","HOLD_NO_MUTATION"
 "FWD","3","FWD-003","none","Test-ScopePreflight","95 sources targets ordinal-v3 full wrapper tree invariants staging authority inventory and residue pass","HOLD_NO_MUTATION"
-"FWD","4","FWD-004","probe-only","Invoke-TransitionWrapperCapabilityProbe","only eleven manifest participants probed then complete wrapper prestate rechecked","HOLD_NO_COMPONENT_MUTATION"
+"FWD","4","FWD-004","probe-only","Invoke-TransitionWrapperCapabilityProbe","standalone 45-second probe terminates after eleven wrapper pre/post identities and zero residue","HOLD_PROBE_FAILED_OR_TIMEOUT"
 "FWD","5","FWD-005","none","Test-RollbackReadiness","VerifyBundle CheckLivePreState CheckFunctionalPrestate and RestorePlan pass","HOLD_NO_MUTATION"
 "FWD","6","FWD-006","none","Invoke-RootFast","0 errors and 0 warnings","HOLD_NO_MUTATION"
 "FWD","7","FWD-007","none","Invoke-MosRegressionPre","16/16 cleanup true mutation none","HOLD_NO_MUTATION"

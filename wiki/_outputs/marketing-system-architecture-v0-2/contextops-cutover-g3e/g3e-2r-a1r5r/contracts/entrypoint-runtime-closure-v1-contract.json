@@ -1,10 +1,10 @@
 {
   "contract_id": "g3e2r-entrypoint-runtime-closure/v1",
-  "receipt_contract_id": "g3e2r-entrypoint-import-receipt/v2-a1r5r",
+  "receipt_contract_id": "g3e2r-entrypoint-import-receipt/v3-a1r5r",
   "receipt_preflight_contract_id": "g3e2r-a1r5r-r1-receipt-preflight/v1",
   "receipt_preflight_result": "10/10",
   "receipt_preflight_evidence_sha256": "94E76E9A72B8EB9DD35B421A5D75B830E5E18A9674CDCEC9AEE58E9294624952",
-  "platform_closure": "P2/C5",
+  "platform_closure": "P2/C6",
   "platform_modules": [
     {"binding_id":"P10","module_name":"Microsoft.PowerShell.Management","required_version":"3.1.0.0"},
     {"binding_id":"P20","module_name":"Microsoft.PowerShell.Utility","required_version":"3.1.0.0"}
@@ -19,7 +19,8 @@
     {"component_id":"C20-FINALIZER","repository_path":"tools/finalize-g3e2r-live-seal-a1r5r.ps1"},
     {"component_id":"C30-FORWARD","repository_path":"tools/invoke-g3e2-transaction-a1r5r.ps1"},
     {"component_id":"C40-REVERSE","repository_path":"tools/invoke-g3e2-reverse-a1r5r.ps1"},
-    {"component_id":"C50-TEST","repository_path":"tools/test-g3e2r-a1r5r-bundle.ps1"}
+    {"component_id":"C50-TEST","repository_path":"tools/test-g3e2r-a1r5r-bundle.ps1"},
+    {"component_id":"C60-CAPABILITY-PROBE","repository_path":"tools/invoke-g3e2r-capability-probe-a1r5r.ps1"}
   ],
   "caller_forbidden_imports": ["g3e2r-a1r3-guard-lib.psm1"],
   "unknown_properties": "reject"
