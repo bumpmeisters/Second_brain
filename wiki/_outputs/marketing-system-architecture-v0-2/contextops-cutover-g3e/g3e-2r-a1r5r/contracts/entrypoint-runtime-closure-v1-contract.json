@@ -11,7 +11,7 @@
   ],
   "operative_bindings": [
     {"binding_id":"O10","role":"transaction-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r/tools/g3e2r-transaction-lib.psm1","sha256":"09E578801F5579C871ED2F58CF1D4551404A80CA12FC0A6534A2758D37BB87A9","bytes":12144},
-    {"binding_id":"O20","role":"a1r4-guard-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1","sha256":"6C3EC725E1B85721381E1E604D86290EFDA745F5B05F43ED64A8BA14F61650B8","bytes":52436}
+    {"binding_id":"O20","role":"a1r4-guard-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1","sha256":"487515069EA3B0ACD51089B73BFD68F429F3831DF9BE9A4509ABE8C93AA5BE93","bytes":54726}
   ],
   "import_order": ["P10","P20","O10","O20"],
   "components": [

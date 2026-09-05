@@ -9,3 +9,11 @@ This decision becomes effective only after the evidence-closed A1R5R manifest ha
 The validation proves the static and synthetic capability-probe boundary only. It does not claim that a capability probe ran against the actual Vault and does not authorize such a probe.
 
 This decision does not authorize a B candidate, snapshot, live-seal creation, capability probe, live mutation, authority or routing change, source-register change, Git staging, commit, push, or pull request. Any discrepancy is HOLD without mutation.
+
+## 2026-09-05 | Hash-scope-closure review addendum
+
+**Decision**: `CONDITIONAL_GO_FOR_EVIDENCE_CLOSED_A1R5R_HASH_SCOPE_ONLY`
+
+The two pre-evidence full-chain runs support evidence re-closure for A1R5R only within the A1-through-A1R5R hash-scope correction. Final acceptance remains conditional on two new top-level A1R5R runs against the exact re-closed evidence, dependency, test-binding, and manifest bytes. After those runs, no evidence file may be changed.
+
+This decision preserves all earlier historical evidence as provenance. It does not claim or authorize a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.

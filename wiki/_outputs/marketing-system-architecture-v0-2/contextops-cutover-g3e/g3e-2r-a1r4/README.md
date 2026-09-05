@@ -11,3 +11,11 @@ All persisted timestamps use `yyyy-MM-dd'T'HH:mm:ss.fffffffzzz`, `InvariantCultu
 The eventual seal closure is 9 bundles, 52 execution files, 15 artifacts, and 4 runtimes. Eight explicit hash boundaries bind A1, A1R, A1R2, A1R3, A1R4, B, detached seal inputs, and the final seal.
 
 The correction passed pre-evidence validation. Conditional final acceptance becomes effective only through one external A1R4 64/64 run against the exact evidence-closed manifest; no later evidence-file mutation is required or permitted. This checkpoint creates no B candidate, snapshot, seal, capability probe, live mutation, authority change, staging, or commit; routing remains frozen and FWD-020 remains excluded.
+
+## 2026-09-05 hash-scope-closure evidence boundary
+
+For the current A1-through-A1R5R hash-scope-closure candidate, two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0` and exactly one valid JSON document. The A1R4 stage passed `64/64` inside each run; T57 also passed and reported `nested_hash_scope: 6/6`. Both runs reported `live_capability_probe: not-run` and a complete null delta.
+
+These observations are `PASS_PRE_EVIDENCE`. Final acceptance is `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`: after README, QA, review, dependency, test-binding, and manifest re-closure, two new top-level A1R5R runs must pass against the exact evidence-closed bytes. After those runs, no evidence file may be changed.
+
+No capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or actual wrapper/residue poststate is claimed.

@@ -25,3 +25,11 @@ The implementation matches the approved A1 plan and passed all twenty-seven regr
 ## Non-authority
 
 Acceptance of A1 will authorize neither G3E2R-B construction nor live execution. Each requires a separate explicit checkpoint.
+
+## 2026-09-05 | Hash-scope-closure review addendum
+
+**Decision**: `CONDITIONAL_GO_FOR_EVIDENCE_CLOSED_A1_HASH_SCOPE_ONLY`
+
+The two pre-evidence full-chain runs support evidence re-closure for A1 only within the A1-through-A1R5R hash-scope correction. Final acceptance remains conditional on two new top-level A1R5R runs against the exact re-closed evidence, dependency, test-binding, and manifest bytes. After those runs, no evidence file may be changed.
+
+This decision preserves all earlier historical evidence as provenance. It does not claim or authorize a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.
