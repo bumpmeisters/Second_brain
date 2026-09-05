@@ -1,6 +1,10 @@
 # G3E2R A1R5R R2 regression contract
 
-Acceptance requires exactly 48/48 groups in one canonical 64-bit Windows PowerShell 5.1 process, repeated twice against identical candidate bytes.
+Acceptance requires exactly 56/56 groups in one canonical 64-bit Windows PowerShell 5.1 process, repeated twice against identical candidate bytes. Entrypoint receipt coverage is 12/12 across the six P2/C6 components.
+
+The standalone capability-probe entrypoint must remain structurally separate from the forward runner. Static validation must prove a disjoint `ControlRoot` and `TargetVaultRoot`, an external hash-bound authority with only `live_capability_probe_approved` true, four exact runtime bindings, FWD-001 through FWD-004 as the complete step set, a 45-second watchdog, 11/11 wrapper pre/post proof, zero residue, and one JSON receipt. Tests must use `Validate` and synthetic contract fixtures only; they must never run a probe against the actual Vault.
+
+Success is `PASS_CAPABILITY_PROBE` with `authority_effect: capability_probe_only` and `state_effect: transient_probe_final_delta_none`. Pre-probe error, probe error, timeout, caught abort, wrapper divergence, and residue are fail-closed with the contract-defined verdict and a nonzero exit code. No probe code path may consume live-mutation, automatic-reverse, independent-reverse, seal-creation, or FWD-005 through FWD-019 authority.
 
 T46 must:
 
