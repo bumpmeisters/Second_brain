@@ -9,10 +9,10 @@ if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptR
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
 $manifest=Join-Path $overlay 'a1r4-bundle-manifest.csv'
 $expectedA1R4=(Get-FileHash -LiteralPath $manifest -Algorithm SHA256).Hash.ToUpperInvariant()
-$expectedA1R3='7623ABE786EF793C9A2FEF8386C514C81A33F9ED437DC8D3133D6B0E738146EF'
-$expectedA1R2='C907A384EC11C7265C05454ACD6984A1A7A61D3451A1EB60640CCAAF331A035C'
-$expectedA1R='57DBC2BC3F91D6C201E9F7506576A9F2F07E55D17808B058E9F1933380249B2D'
-$expectedA1='8878AA92D1F82DB4F9B3D8E4C1F5E707F36E77E3013195ABF7AD7784AE185AC7'
+$expectedA1R3='A8602DA647F3D50563D303BCD26FEA6F8969BA90E997A57BE2A4684203D23452'
+$expectedA1R2='660E41AB0F25CA5D3A8FD26EB6AB72F8BBEC0EA70F657B2F4822DA2C6107F9B6'
+$expectedA1R='4F58A78105C3D4CB16AFE30D708B3001E1C72FDA7A7307C4D2B4C836B96C5D38'
+$expectedA1='B1D22A6616CF91D78F1C484ED0E8CAECDC1D607D5195834F8255E9BF0558EE06'
 $expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
 $expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
 $ps7=(Get-Process -Id $PID).Path
@@ -81,7 +81,7 @@ try{
     $rows=@(Import-Csv -LiteralPath $manifest);$actual=@(Get-ChildItem -LiteralPath $overlay -Recurse -File|ForEach-Object{$_.FullName.Substring($overlay.Length+1).Replace('\','/')})
     Add-Check T01-EXACT-A1R4-INVENTORY ($rows.Count-eq 14-and$actual.Count-eq 15-and(Test-G3E2RA1R4OrdinalSetEqual (@($rows.overlay_path)+'a1r4-bundle-manifest.csv') $actual)) '14 bound members plus manifest'
     $lock=@(Import-Csv -LiteralPath (Join-Path $overlay 'dependency-lock.csv'))
-    Add-Check T02-ONE-LINE-A1R3-LOCK ($lock.Count-eq 1-and$lock[0].dependency_id-ceq'G3E2R-A1R3-BUNDLE'-and$lock[0].sha256-ceq$expectedA1R3-and[int64]$lock[0].bytes-eq 1738) 'one immutable A1R3 dependency'
+    Add-Check T02-ONE-LINE-A1R3-LOCK ($lock.Count-eq 1-and$lock[0].dependency_id-ceq'G3E2R-A1R3-BUNDLE'-and$lock[0].sha256-ceq$expectedA1R3-and[int64]$lock[0].bytes-eq 1739) 'one immutable A1R3 dependency'
     $a1r3Rows=Test-G3E2RA1R4BoundManifest $context.A1R3Manifest $context.A1R3Root 'overlay_path' @('role','overlay_path','sha256','bytes') 14 'A1R3 bundle'
     Add-Check T03-A1R3-EXACT-CLOSURE ($a1r3Rows.Count-eq 14) 'accepted A1R3 manifest and members'
     $upstreamOk=(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1-and(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R4Sha256 $context.A1R2Manifest)-ceq$expectedA1R2

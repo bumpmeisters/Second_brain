@@ -11,3 +11,11 @@ T46 binds the caller-supplied PowerShell 7 executable by immutable hash, version
 The capability-probe boundary pre-evidence candidate passed two identical A1R5R runs at 56/56, Receipt 12/12, T46 10/10, nested A1R4 64/64, T49 through T56, and seal closure 10/63/15/4. Both runs reported `live_capability_probe: not-run` and no state effect. Conditional final acceptance is activated only by two new external full runs against the exact evidence-closed manifest; no later evidence-file mutation is required or permitted.
 
 Building or validating this candidate creates no B bundle, snapshot, live seal, capability probe, live mutation, routing change, Git staging, or commit.
+
+## 2026-09-05 hash-scope-closure evidence boundary
+
+For the current A1-through-A1R5R hash-scope-closure candidate, two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0` and exactly one valid JSON document. The A1R5R stage passed `57/57` inside each run; T57 also passed and reported `nested_hash_scope: 6/6`. Both runs reported `live_capability_probe: not-run` and a complete null delta.
+
+These observations are `PASS_PRE_EVIDENCE`. Final acceptance is `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`: after README, QA, review, dependency, test-binding, and manifest re-closure, two new top-level A1R5R runs must pass against the exact evidence-closed bytes. After those runs, no evidence file may be changed.
+
+No capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or actual wrapper/residue poststate is claimed.

@@ -29,3 +29,14 @@ CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_RECLOSURE_RUNS
 After README, QA report, review decision, and their manifest rows are reclosed, require two new A1R5R 56/56 runs against identical evidence-closed bytes. Each must retain Receipt 12/12, T46 10/10, nested A1R4 64/64, T49 through T56, seal closure 10/63/15/4, `live_capability_probe: not-run`, and no effect. Their hash-bound command output activates the conditional final PASS without rewriting any evidence member.
 
 Any post-verification evidence edit requires another re-closure and invalidates both final runs. The command output remains the run evidence; verification writes no mutable run artifact into the candidate.
+
+## 2026-09-05 | Hash-scope-closure pre-evidence
+
+**Verdict**: `PASS_PRE_EVIDENCE`
+**Conditional verdict**: `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`
+
+Two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0`, exactly one valid JSON document, PASS `57/57`, Receipt `12/12`, T46 `10/10`, nested A1R4 `64/64`, A1R3 `48/48`, A1R2 `40/40`, A1R `34/34`, A1 `27/27`, passing T57, `nested_hash_scope: 6/6`, Seal-Closure `10/63/15/4`, `live_capability_probe: not-run`, and a complete null delta. The observed A1R5R check count was `57/57` in each run.
+
+The runs prove the synthetic full-chain hash-scope contract, including module-local Utility manifest identity and uppercase SHA-256 behavior. They do not prove a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.
+
+Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.

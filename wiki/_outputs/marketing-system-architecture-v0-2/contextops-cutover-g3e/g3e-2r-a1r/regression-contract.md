@@ -2,6 +2,8 @@
 
 A1R passes only when all thirty-four groups pass in one run, all temporary fixtures are removed, A1 and its transitive A/G3E-1 roots remain exact, Git staging stays empty, transaction residue stays zero, no G3E2R-B candidate exists, Root Fast is 0/0, and MOS remains 16/16.
 
+The A1R guard must close its own host-local Management/Utility dependency at Desktop 3.1.0.0 or Core 7.0.0.0 and use the module-qualified Utility SHA-256 command; the same boundary remains mandatory for the nested A1 guard.
+
 ## Test groups
 
 1. T01-EXACT-A1R-INVENTORY — fourteen bound members plus one manifest.

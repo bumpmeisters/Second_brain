@@ -9,3 +9,11 @@ The validator must reject any v2 fingerprint field in A1R3 artifacts, any cultur
 The manifest-bound producer run and separate ContextOps validation both passed. Final acceptance additionally requires an external 48-group PASS that names the exact current manifest hash.
 
 This decision does not authorize B creation or live execution. Human acceptance remains required after the final revalidation.
+
+## 2026-09-05 | Hash-scope-closure review addendum
+
+**Decision**: `CONDITIONAL_GO_FOR_EVIDENCE_CLOSED_A1R3_HASH_SCOPE_ONLY`
+
+The two pre-evidence full-chain runs support evidence re-closure for A1R3 only within the A1-through-A1R5R hash-scope correction. Final acceptance remains conditional on two new top-level A1R5R runs against the exact re-closed evidence, dependency, test-binding, and manifest bytes. After those runs, no evidence file may be changed.
+
+This decision preserves all earlier historical evidence as provenance. It does not claim or authorize a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.

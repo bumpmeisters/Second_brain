@@ -2,6 +2,8 @@
 
 The A1 checkpoint passes only when all twenty-seven groups pass in one run, the isolated upstream fixture is removed, the two immutable upstream trees retain their fingerprints, Git staging stays empty, Root Fast is 0 errors / 0 warnings, and MOS remains 16/16.
 
+The A1 guard must import the Management and Utility modules from the active host's own PSHOME into its module-local scope, require Desktop 3.1.0.0 or Core 7.0.0.0 as appropriate, and resolve SHA-256 only through the module-qualified Utility command with 64-character uppercase hexadecimal output.
+
 ## Test groups
 
 1. T01-EXACT-A1-INVENTORY — fourteen bound members plus one manifest.

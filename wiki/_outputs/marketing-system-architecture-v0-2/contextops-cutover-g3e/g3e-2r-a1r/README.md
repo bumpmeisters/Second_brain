@@ -46,3 +46,11 @@ Immediately before a seal is written, the finalizer opens every unique file in t
 ## Non-authority
 
 This checkpoint creates no B candidate, snapshot, live seal, capability-probe result, component mutation, routing change, Git staging, or Git commit.
+
+## 2026-09-05 hash-scope-closure evidence boundary
+
+For the current A1-through-A1R5R hash-scope-closure candidate, two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0` and exactly one valid JSON document. The A1R stage passed `34/34` inside each run; T57 also passed and reported `nested_hash_scope: 6/6`. Both runs reported `live_capability_probe: not-run` and a complete null delta.
+
+These observations are `PASS_PRE_EVIDENCE`. Final acceptance is `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`: after README, QA, review, dependency, test-binding, and manifest re-closure, two new top-level A1R5R runs must pass against the exact evidence-closed bytes. After those runs, no evidence file may be changed.
+
+No capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or actual wrapper/residue poststate is claimed.
