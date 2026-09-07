@@ -595,8 +595,17 @@ function Remove-G3E2RA1R5RProbeResidue {
 }
 
 function Get-G3E2RA1R5RRuntimeBindings {
-    param([object]$Context,[string]$PythonExecutable)
-    return @(Get-G3E2RA1R4RuntimeBindings -Context $Context.A1R4Context -PythonExecutable $PythonExecutable)
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1R4RuntimeBindings -Context $Context.A1R4Context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
 }
 
 function Test-G3E2RA1R5RBManifest {

@@ -1,7 +1,13 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory=$true)][string]$VaultRoot,[string]$OverlayRoot,
-    [Parameter(Mandatory=$true)][string]$PythonExecutable,[switch]$Json
+    [Parameter(Mandatory=$true)][string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,[switch]$Json
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
@@ -9,10 +15,10 @@ if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptR
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
 $manifest=Join-Path $overlay 'a1r4-bundle-manifest.csv'
 $expectedA1R4=(Get-FileHash -LiteralPath $manifest -Algorithm SHA256).Hash.ToUpperInvariant()
-$expectedA1R3='A8602DA647F3D50563D303BCD26FEA6F8969BA90E997A57BE2A4684203D23452'
-$expectedA1R2='660E41AB0F25CA5D3A8FD26EB6AB72F8BBEC0EA70F657B2F4822DA2C6107F9B6'
-$expectedA1R='4F58A78105C3D4CB16AFE30D708B3001E1C72FDA7A7307C4D2B4C836B96C5D38'
-$expectedA1='B1D22A6616CF91D78F1C484ED0E8CAECDC1D607D5195834F8255E9BF0558EE06'
+$expectedA1R3='562FDE33973C0AEA7A447D6C04F97940F693BDBE7AD16A23221B31EA8DAEAB65'
+$expectedA1R2='D7C7C07717ECC297A2CBF00DCC8D418FC7323587967EFE16D7E8C8BAE670CD1D'
+$expectedA1R='B16723418BD1235B3A1458070B3CAADC5C0BCDFAC0368AD520ADE2E5028805C6'
+$expectedA1='DC3C75F23A565E8FEDEB65E861FD54BF89B7968F4F3E8D047CCD89490DF92260'
 $expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
 $expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
 $ps7=(Get-Process -Id $PID).Path
@@ -215,7 +221,7 @@ $result|ConvertTo-Json -Depth 8 -Compress
     Add-Check T59-B-COMPATIBILITY ($context.SealContract.b_candidate_file_count-eq 19-and$context.SealContract.b_bundle_bound_file_count-eq 18-and$context.SealContract.b_sealed_file_count-eq 20-and$context.SealContract.seal_inputs_contract-ceq'g3e2r-seal-inputs/v2-a1r4') 'B 19/18/20 with regenerated input profile'
     Add-Check T60-ORDINAL-V3-UNCHANGED ($context.FingerprintContract.contract_id-ceq'g3e2r-ordinal-fingerprint/v3'-and$context.InvariantContract.contract_id-ceq$context.A1R3Context.InvariantContract.contract_id) 'A1R3 ordinal and invariant contracts reused'
     $a1r3Test=Join-Path $context.A1R3Root 'tools/test-g3e2r-a1r3-bundle.ps1'
-    $a1r3=Invoke-DirectJsonFile $ps5 $a1r3Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1R3Root,'-PythonExecutable',$PythonExecutable,'-Json')
+    $a1r3=Invoke-DirectJsonFile $ps5 $a1r3Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1R3Root,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check T61-UNCHANGED-A1R3-REGRESSION ($a1r3.verdict-ceq'PASS'-and[int]$a1r3.groups-eq 48-and$a1r3.expected_a1r3_hash-ceq$expectedA1R3) 'A1R3 48/48 in accepted historical runner'
     Invoke-RootFast;Invoke-Mos
     Add-Check T62-ROOT-AND-MOS $true 'Root Fast 0/0 and MOS 16/16'

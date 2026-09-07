@@ -3,6 +3,12 @@ param(
     [Parameter(Mandatory=$true)][ValidateSet('Validate','Prepare','Seal')][string]$Mode,
     [Parameter(Mandatory=$true)][string]$VaultRoot,
     [string]$OverlayRoot,[string]$InputPath,[string]$OutputPath,[string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,[string]$ExpectedA1RHash,[string]$ExpectedA1R2Hash,[string]$ExpectedA1R3Hash,[string]$ExpectedA1R4Hash,
     [string]$ExpectedBHash,[string]$ExpectedSealInputsHash,
     [switch]$AllowSealCreation,[switch]$Json
@@ -29,7 +35,7 @@ else{
     foreach($value in @($InputPath,$PythonExecutable,$ExpectedA1Hash,$ExpectedA1RHash,$ExpectedA1R2Hash,$ExpectedA1R3Hash,$ExpectedA1R4Hash,$ExpectedBHash,$ExpectedSealInputsHash)){if([string]::IsNullOrWhiteSpace([string]$value)){throw "$Mode requires all seven pre-seal expected hashes and the runtime path."}}
     $bState=Test-G3E2RA1R4BManifest $context $ExpectedBHash;$resolvedInput=[IO.Path]::GetFullPath($InputPath);$requiredInput=Join-Path $bState.Root 'seal/seal-inputs.json'
     if($resolvedInput-cne$requiredInput-or(Get-G3E2RA1R4Sha256 $resolvedInput)-cne$ExpectedSealInputsHash.ToUpperInvariant()){throw 'Expected-Seal-Inputs-Hash or canonical input path mismatch.'}
-    $input=Read-G3E2RA1R4SealInputDocument $context $resolvedInput;$runtimes=Get-G3E2RA1R4RuntimeBindings $context $PythonExecutable;$seal=New-G3E2RA1R4Seal $context $input $runtimes $bState;Assert-G3E2RA1R4SealClosure $context $seal -AllowPreparedB
+    $input=Read-G3E2RA1R4SealInputDocument $context $resolvedInput;$runtimes=Get-G3E2RA1R4RuntimeBindings $context $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion;$seal=New-G3E2RA1R4Seal $context $input $runtimes $bState;Assert-G3E2RA1R4SealClosure $context $seal -AllowPreparedB
     if($Mode-ceq'Prepare'){Invoke-SealPreflight $seal $runtimes;$result=[ordered]@{contract='g3e2r-live-seal-finalizer/a1r4';verdict='PREPARED_READ_ONLY';mode='Prepare';state_effect='none';expected_a1_hash=$ExpectedA1Hash.ToUpperInvariant();expected_a1r_hash=$ExpectedA1RHash.ToUpperInvariant();expected_a1r2_hash=$ExpectedA1R2Hash.ToUpperInvariant();expected_a1r3_hash=$ExpectedA1R3Hash.ToUpperInvariant();expected_a1r4_hash=$ExpectedA1R4Hash.ToUpperInvariant();expected_b_hash=$ExpectedBHash.ToUpperInvariant();expected_seal_inputs_hash=$ExpectedSealInputsHash.ToUpperInvariant()}}
     else{
         if(-not$AllowSealCreation-or-not(Test-G3E2RA1R4Administrator)){throw 'Seal mode requires explicit creation authority and one elevated runner.'};foreach($field in @('live_capability_probe_approved','live_mutation_approved','automatic_reverse_approved','independent_reverse_approved')){if(-not[bool]$input.Value.approval.$field){throw "Seal approval is missing: $field"}}

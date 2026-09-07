@@ -4,6 +4,12 @@ param(
     [Parameter(Mandatory=$true)][string]$ControlRoot,
     [string]$OverlayRoot,[string]$TargetVaultRoot,[string]$ProbeAuthorityPath,
     [string]$ExpectedProbeAuthorityHash,[string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,[string]$ExpectedA1RHash,[string]$ExpectedA1R2Hash,[string]$ExpectedA1R3Hash,
     [string]$ExpectedA1R4Hash,[string]$ExpectedA1R5RHash,[string]$ExpectedBHash,[string]$ExpectedSealInputsHash,
     [switch]$AllowCapabilityProbe,[switch]$Json
@@ -72,7 +78,7 @@ try{
     foreach($value in @($TargetVaultRoot,$ProbeAuthorityPath,$ExpectedProbeAuthorityHash,$PythonExecutable,$ExpectedA1Hash,$ExpectedA1RHash,$ExpectedA1R2Hash,$ExpectedA1R3Hash,$ExpectedA1R4Hash,$ExpectedA1R5RHash,$ExpectedBHash,$ExpectedSealInputsHash)){if([string]::IsNullOrWhiteSpace([string]$value)){throw 'CapabilityProbe requires target, authority, runtime, and all expected hash boundaries.'}}
     Assert-CanonicalProbeHost
     $roots=Resolve-G3E2RA1R5RProbeRoots $context.Root $TargetVaultRoot $ProbeAuthorityPath;$target=$roots.TargetVaultRoot
-    $runtimes=@(Get-G3E2RA1R5RRuntimeBindings $context $PythonExecutable)
+    $runtimes=@(Get-G3E2RA1R5RRuntimeBindings $context $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
     $expected=[pscustomobject][ordered]@{a1=$ExpectedA1Hash.ToUpperInvariant();a1r=$ExpectedA1RHash.ToUpperInvariant();a1r2=$ExpectedA1R2Hash.ToUpperInvariant();a1r3=$ExpectedA1R3Hash.ToUpperInvariant();a1r4=$ExpectedA1R4Hash.ToUpperInvariant();a1r5r=$ExpectedA1R5RHash.ToUpperInvariant();b=$ExpectedBHash.ToUpperInvariant();seal_inputs=$ExpectedSealInputsHash.ToUpperInvariant()}
     $authority=(Read-G3E2RA1R5RProbeAuthority $context $target $roots.AuthorityPath $ExpectedProbeAuthorityHash $expected $runtimes).Value;$completed.Add('FWD-001')
     $bState=Test-G3E2RA1R5RBManifest $context $ExpectedBHash;$sealInputs=Join-Path $bState.Root 'seal/seal-inputs.json'

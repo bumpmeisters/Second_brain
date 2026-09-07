@@ -3,6 +3,12 @@ param(
     [Parameter(Mandatory = $true)][string]$VaultRoot,
     [string]$OverlayRoot,
     [Parameter(Mandatory = $true)][string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [switch]$Json
 )
 
@@ -11,7 +17,7 @@ $ErrorActionPreference = 'Stop'
 if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptRoot '..'}
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
 Import-Module (Join-Path $overlay 'tools/g3e2r-a1r-guard-lib.psm1') -Force
-$manifest=Join-Path $overlay 'a1r-bundle-manifest.csv';$expectedA1R=Get-G3E2RA1RSha256 $manifest;$expectedA1='B1D22A6616CF91D78F1C484ED0E8CAECDC1D607D5195834F8255E9BF0558EE06'
+$manifest=Join-Path $overlay 'a1r-bundle-manifest.csv';$expectedA1R=Get-G3E2RA1RSha256 $manifest;$expectedA1='DC3C75F23A565E8FEDEB65E861FD54BF89B7968F4F3E8D047CCD89490DF92260'
 $context=Get-G3E2RA1RContext -VaultRoot $root -OverlayRoot $overlay -ExpectedA1Hash $expectedA1 -ExpectedA1RHash $expectedA1R
 $checks=[Collections.Generic.List[string]]::new();$powerShell=(Get-Process -Id $PID).Path
 
@@ -21,14 +27,14 @@ function Parse-Tool{param([string]$LiteralPath)$tokens=$null;$errors=$null;[void
 function Invoke-JsonScript{param([string]$Script,[string[]]$Arguments)$saved=$ErrorActionPreference;$ErrorActionPreference='Continue';try{$output=&$powerShell -NoProfile -ExecutionPolicy Bypass -File $Script @Arguments 2>&1;$code=$LASTEXITCODE}finally{$ErrorActionPreference=$saved};if($code-ne 0){throw "Child script failed: $Script`n$($output-join[Environment]::NewLine)"};$jsonLine=@($output|ForEach-Object{[string]$_}|Where-Object{$_.TrimStart().StartsWith('{')}|Select-Object -Last 1);if($jsonLine.Count-ne 1){throw "Child script returned no JSON object: $Script`n$($output-join[Environment]::NewLine)"};return ($jsonLine[0]|ConvertFrom-Json)}
 
 $a1FingerprintBefore=Get-G3E2RA1RFingerprintV2 $context.A1Root;$aFingerprintBefore=Get-G3E2RA1RFingerprintV2 $context.A1Context.ARoot;$g3e1FingerprintBefore=Get-G3E2RA1RFingerprintV2 $context.A1Context.G3E1Root
-$git=[string]((Get-Command git -CommandType Application -ErrorAction Stop|Select-Object -First 1).Source);Assert-G3E2RA1RGitStagingEmpty $root $git
+$git=$GitExecutable;Assert-G3E2RA1RGitStagingEmpty $root $git
 
 $rows=@(Import-Csv -LiteralPath $manifest)
 Add-Check 'T01-EXACT-A1R-INVENTORY' ($rows.Count-eq 14-and@(Get-ChildItem -LiteralPath $overlay -Recurse -File).Count-eq 15) '14 bound members plus manifest'
 $lock=@(Import-Csv -LiteralPath (Join-Path $overlay 'dependency-lock.csv'))
 Add-Check 'T02-ONE-ROOT-LOCK' ($lock.Count-eq 1-and$lock[0].dependency_id-ceq'G3E2R-A1-BUNDLE') 'one immutable A1 dependency'
 Add-Check 'T03-A1-EXACT-CLOSURE' ((Get-G3E2RA1RSha256 $context.A1Manifest)-ceq$expectedA1-and@(Import-Csv -LiteralPath $context.A1Manifest).Count-eq 14) 'accepted A1 manifest and fourteen members'
-Add-Check 'T04-UPSTREAM-TRANSITIVE-CLOSURE' ((Get-G3E2RA1RSha256 $context.A1Context.Dependencies['G3E2R-A-BUNDLE'])-ceq'5114660FB6968CF5979F17AC7ECC95833A69C26E5C94C633B1E955C48393C055'-and(Get-G3E2RA1RSha256 $context.A1Context.Dependencies['G3E2R-A-DEPENDENCY-LOCK'])-ceq'2F1744BAA5E2A787DFC573530F9DC43DDB9F78C3A83C46D883326CB6512A78BB'-and(Get-G3E2RA1RSha256 $context.A1Context.Dependencies['G3E1-BUNDLE'])-ceq'D581C9535B6359F7058DA33C3CB9E229EC8EF1C8C2C6C4D49311C75189D20E50') 'A, dependency lock and G3E-1 exact'
+Add-Check 'T04-UPSTREAM-TRANSITIVE-CLOSURE' ((Get-G3E2RA1RSha256 $context.A1Context.Dependencies['G3E2R-A-BUNDLE'])-ceq'20344C94B7C216C8FE46E55F32453972079165CF3DD9DD38014FB2EB7357D867'-and(Get-G3E2RA1RSha256 $context.A1Context.Dependencies['G3E2R-A-DEPENDENCY-LOCK'])-ceq'2F1744BAA5E2A787DFC573530F9DC43DDB9F78C3A83C46D883326CB6512A78BB'-and(Get-G3E2RA1RSha256 $context.A1Context.Dependencies['G3E1-BUNDLE'])-ceq'D581C9535B6359F7058DA33C3CB9E229EC8EF1C8C2C6C4D49311C75189D20E50') 'A, dependency lock and G3E-1 exact'
 
 $sealContract=$context.SealContract
 $temp=Join-Path ([IO.Path]::GetTempPath()) ('g3e2r-a1r-'+[guid]::NewGuid().ToString('N'))
@@ -47,7 +53,7 @@ try{
     Add-Check 'T08-SIX-BUNDLE-BINDINGS' (@($sealContract.required_bundle_binding_ids).Count-eq 6-and@($sealContract.required_bundle_binding_ids|Sort-Object -Unique).Count-eq 6-and$toolText.Contains('Seal bundle path mismatch')) 'six exact bundle ids and canonical paths'
     Add-Check 'T09-TWENTY-EIGHT-EXECUTION-BINDINGS' (@($sealContract.required_execution_binding_ids).Count-eq 28-and$sealContract.compatibility_execution_binding_count-eq 20-and(Get-G3E2RA1RExecutionPaths).Count-eq 28) 'twenty compatibility plus eight A1R bindings'
     Add-Check 'T10-FIFTEEN-ARTIFACT-BINDINGS' (@($sealContract.required_artifact_binding_ids).Count-eq 15-and(Get-G3E2RA1RArtifactPaths -Context $context).Count-eq 15-and$toolText.Contains('Seal artifact path mismatch')) 'fifteen exact artifacts at canonical paths'
-    $runtime=Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+    $runtime=Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
     Add-Check 'T11-FOUR-RUNTIME-BINDINGS' (@($runtime).Count-eq 4-and@($runtime|Where-Object{$_.executable_sha256-match'^[A-F0-9]{64}$'-and-not[string]::IsNullOrWhiteSpace($_.version)}).Count-eq 4) 'four absolute runtime identities'
     Add-Check 'T12-TTL-AND-REVERSE' ($sealContract.ttl_seconds-eq 900-and$sealContract.forward_requires_unexpired_seal-and$sealContract.reverse_ignores_expiry) '900 seconds and reverse expiry-independent'
 
@@ -80,7 +86,7 @@ try{
     Add-Check 'T20-HARD-REFERENCE-POST' (@($schema|Where-Object state -CEQ 'post').Count-eq 48-and@($schema|Where-Object{$_.state-ceq'post'-and[int]$_.expected_legacy_tokens-gt 0}).Count-eq 31-and@($schema|Where-Object{$_.state-ceq'post'-and[int]$_.expected_legacy_tokens-eq 0}).Count-eq 17) 'post 48/31 with seventeen zero rows'
     Add-Check 'T21-HARD-REFERENCE-REVERSE' (@($schema|Where-Object state -CEQ 'reverse').Count-eq 41-and@($schema|Where-Object{$_.state-ceq'reverse'-and[int]$_.expected_legacy_tokens-gt 0}).Count-eq 41) 'reverse 41/41'
     $hardSeal=[pscustomobject]@{legacy_token=$legacy;artifact_bindings=@([pscustomobject]@{artifact_id='B-HARD-REFERENCE-MANIFEST';repository_path='hard-reference.csv';sha256=Get-G3E2RA1RSha256 $hardPath;bytes=Get-G3E2RA1RBytes $hardPath})}
-    $rg=[string]((Get-Command rg -CommandType Application -ErrorAction Stop|Select-Object -First 1).Source);Test-G3E2RA1RHardReferences -Context $fake -Seal $hardSeal -State pre -RipgrepExecutable $rg
+    $rg=$RipgrepExecutable;Test-G3E2RA1RHardReferences -Context $fake -Seal $hardSeal -State pre -RipgrepExecutable $rg
     $unexpected=Join-Path $refs 'unexpected.md';[IO.File]::WriteAllText($unexpected,"$legacy`n");$exactReject=Expect-Failure{Test-G3E2RA1RHardReferences -Context $fake -Seal $hardSeal -State pre -RipgrepExecutable $rg};[IO.File]::Delete($unexpected)
     Add-Check 'T22-GLOBAL-LITERAL-SET' $exactReject 'unmanifested positive literal is rejected'
     $advisoryPath=Join-Path $temp 'workspace-advisory.csv';[pscustomobject][ordered]@{repository_path='.obsidian/workspace.json';policy='advisory';observed_sha256=('A'*64);observed_bytes=1;observed_legacy_tokens=0;observed_at_utc=[DateTimeOffset]::UtcNow.ToString('o')}|Export-Csv $advisoryPath -NoTypeInformation -Encoding UTF8
@@ -99,17 +105,17 @@ try{
     Add-Check 'T28-FWD009-COMPLETE-ORDER' ($iLock-ge 0-and$iRepeat-gt$iLock-and$iRehash-gt$iRepeat-and$iMutation-gt$iRehash-and$iMove-gt$iMutation-and$forwardText.Contains("'CheckFunctionalPrestate'")) 'full repeated boundary ends directly before FWD-010'
 
     $forward=Join-Path $overlay 'tools/invoke-g3e2-transaction-v2r.ps1';$reverse=Join-Path $overlay 'tools/invoke-g3e2-reverse-v2r.ps1';$finalizer=Join-Path $overlay 'tools/finalize-g3e2r-live-seal-v2r.ps1';$guard=Join-Path $overlay 'tools/g3e2r-a1r-guard-lib.psm1'
-    $pre=Invoke-JsonScript $forward @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-FailAtStep','FWD-009','-Json')
+    $pre=Invoke-JsonScript $forward @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-FailAtStep','FWD-009','-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check 'T29-PREMUTATION-HOLD' ($pre.verdict-ceq'HOLD_NO_MUTATION'-and-not$pre.reverse_invoked) 'FWD-009 failure does not invoke reverse'
-    $post=Invoke-JsonScript $forward @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-FailAtStep','FWD-010','-Json')
+    $post=Invoke-JsonScript $forward @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-FailAtStep','FWD-010','-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check 'T30-POSTMUTATION-AUTO-REVERSE' ($post.verdict-ceq'REVERSED_ROUTING_FROZEN'-and$post.reverse_invoked-and@($post.reverse_steps).Count-eq 12) 'FWD-010 failure invokes twelve reverse steps'
-    $reverseText=Get-Content -LiteralPath $reverse -Raw;$reverseSim=Invoke-JsonScript $reverse @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-Json')
+    $reverseText=Get-Content -LiteralPath $reverse -Raw;$reverseSim=Invoke-JsonScript $reverse @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check 'T31-REVERSE-RECOVERY' ($reverseSim.verdict-ceq'REVERSED_ROUTING_FROZEN'-and$reverseText.Contains('-Use Reverse')-and$reverseText.Contains('alreadyWritten')-and$reverseText.Contains('unknown target bytes')) 'expiry-independent idempotent restart and unknown-byte stop'
     $parseOk=@(Parse-Tool $guard).Count-eq 0-and@(Parse-Tool $finalizer).Count-eq 0-and@(Parse-Tool $forward).Count-eq 0-and@(Parse-Tool $reverse).Count-eq 0-and@(Parse-Tool $PSCommandPath).Count-eq 0
-    $fv=Invoke-JsonScript $forward @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-Json');$rv=Invoke-JsonScript $reverse @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-Json');$sv=Invoke-JsonScript $finalizer @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-Json')
+    $fv=Invoke-JsonScript $forward @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json');$rv=Invoke-JsonScript $reverse @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json');$sv=Invoke-JsonScript $finalizer @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check 'T32-TOOL-PARSE-AND-STATIC' ($parseOk-and$fv.verdict-ceq'PASS'-and$rv.verdict-ceq'PASS'-and$sv.verdict-ceq'PASS') 'five tools parse and Validate remains non-mutating'
 
-    $a1Test=Join-Path $context.A1Root 'tools/test-g3e2r-a1-bundle.ps1';$a1=Invoke-JsonScript $a1Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1Root,'-PythonExecutable',$PythonExecutable,'-Json')
+    $a1Test=Join-Path $context.A1Root 'tools/test-g3e2r-a1-bundle.ps1';$a1=Invoke-JsonScript $a1Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1Root,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check 'T33-UPSTREAM-A1-REGRESSION' ($a1.verdict-ceq'PASS'-and$a1.groups-eq 27-and$a1.temporary_only) 'unchanged A1 27/27 passed and cleaned fixture'
 }
 finally{if(Test-Path -LiteralPath $temp){Remove-Item -LiteralPath $temp -Recurse -Force}}

@@ -42,3 +42,7 @@ The A1 guard must import the Management and Utility modules from the active host
 - Seal expiration blocks forward through the final pre-mutation check, but never blocks reverse.
 - External volatile workspace drift is Advisory. Protected or sibling drift discovered after mutation is reported and cannot block restoration; unknown transaction-scoped bytes remain a hard stop.
 - The test harness itself is not authority for a live seal, capability probe, snapshot, mutation, routing change, staging, or commit.
+
+## Explicit external runtime closure
+
+A1 accepts `RipgrepExecutable`, `ExpectedRipgrepSha256`, `ExpectedRipgrepVersion`, `GitExecutable`, `ExpectedGitSha256`, and `ExpectedGitVersion` as mandatory inputs on every published entrypoint. The values are forwarded through every runtime-binding boundary to A1. A1 requires canonical absolute literal regular-file paths without reparse traversal, exact static SHA-256 and version matches, x64 PE architecture, and launches each version probe only through the verified absolute path. Ambient `Get-Command rg` and `Get-Command git` resolution is forbidden. All four runtime bindings remain compared byte-for-byte with the seal or capability-probe authority before stateful execution.

@@ -6,6 +6,12 @@ param(
     [string]$InputPath,
     [string]$OutputPath,
     [string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,
     [switch]$Json
 )
@@ -38,7 +44,7 @@ else {
     Assert-G3E2RA1ExactProperties -Value $seal -Expected @($context.SealContract.required_top_level) -Label 'Seal input'
     if ($seal.seal_contract -cne 'g3e2r-live-seal/v2' -or $seal.routing_state -cne 'frozen' -or [int]$seal.time.ttl_seconds -ne 900) { throw 'Seal input identity, routing state, or TTL is invalid.' }
     if (@($seal.bundle_bindings).Count -ne 5 -or @($seal.execution_bindings).Count -ne 20 -or @($seal.artifact_bindings).Count -ne 15) { throw 'Seal input binding cardinality is invalid.' }
-    $runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+    $runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
     Assert-G3E2RA1SealClosure -Context $context -Seal $seal
     $sealInputArtifact = Get-G3E2RA1Artifact -Seal $seal -Id 'B-SEAL-INPUTS'
     $boundInput = Test-G3E2RA1BoundArtifact -Context $context -Artifact $sealInputArtifact

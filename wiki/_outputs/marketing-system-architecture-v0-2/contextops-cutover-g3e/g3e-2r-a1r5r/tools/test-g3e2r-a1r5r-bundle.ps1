@@ -3,6 +3,12 @@ param(
     [Parameter(Mandatory=$true)][string]$VaultRoot,
     [string]$OverlayRoot,
     [Parameter(Mandatory=$true)][string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [Parameter(Mandatory=$true)][string]$PowerShell7Executable,
     [Parameter(Mandatory=$true)][string]$ExpectedPowerShell7Sha256,
     [Parameter(Mandatory=$true)][string]$ExpectedPowerShell7Version,
@@ -16,14 +22,14 @@ Import-Module Microsoft.PowerShell.Utility -RequiredVersion 3.1.0.0 -Force
 if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptRoot '..'}
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\')
 $overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
-$expectedA1='B1D22A6616CF91D78F1C484ED0E8CAECDC1D607D5195834F8255E9BF0558EE06'
-$expectedA1R='4F58A78105C3D4CB16AFE30D708B3001E1C72FDA7A7307C4D2B4C836B96C5D38'
-$expectedA1R2='660E41AB0F25CA5D3A8FD26EB6AB72F8BBEC0EA70F657B2F4822DA2C6107F9B6'
-$expectedA1R3='A8602DA647F3D50563D303BCD26FEA6F8969BA90E997A57BE2A4684203D23452'
-$expectedA1R4='1E51361038B7A7EC841622B730F8BB432D7E8D87B95BFFFD3D898110AB45E1FC'
+$expectedA1='DC3C75F23A565E8FEDEB65E861FD54BF89B7968F4F3E8D047CCD89490DF92260'
+$expectedA1R='B16723418BD1235B3A1458070B3CAADC5C0BCDFAC0368AD520ADE2E5028805C6'
+$expectedA1R2='D7C7C07717ECC297A2CBF00DCC8D418FC7323587967EFE16D7E8C8BAE670CD1D'
+$expectedA1R3='562FDE33973C0AEA7A447D6C04F97940F693BDBE7AD16A23221B31EA8DAEAB65'
+$expectedA1R4='1EE62A200A5F0BDC059F74055CCC26524D87FA7B1692C4215FFB4ECBFC1A5536'
 $expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
 $expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
-$expectedA1R4Test='08F2EEB6FBE87018AF6F4080210C7BE547F9DC6FA544A7A4B87154E3925558A1'
+$expectedA1R4Test='8AFEF55AF77FE09CD5EF18B795A53D49CAFE27337D4CF7379A60A3BF7A090854'
 $canonicalPs7Hash='DB6DD81183FE57D22E03B911EC9A30A2FD7C40542E97743615355A6FB44F458F'
 $canonicalPs7Version='7.6.4'
 $manifest=Join-Path $overlay 'a1r5r-bundle-manifest.csv'
@@ -80,8 +86,8 @@ Add-Check T09-P2-PLATFORM (@($runtime.platform_modules).Count-eq 2-and((@($runti
 Add-Check T10-C6-COMPONENTS (@($runtime.components).Count-eq 6-and$runtime.platform_closure-ceq'P2/C6'-and(Test-G3E2RA1R5ROrdinalUnique @($runtime.components.component_id))) 'six entrypoint components'
 $o10=@($runtime.operative_bindings|Where-Object binding_id -CEQ O10)[0]
 $o20=@($runtime.operative_bindings|Where-Object binding_id -CEQ O20)[0]
-Add-Check T11-O10-BINDING ($o10.sha256-ceq'09E578801F5579C871ED2F58CF1D4551404A80CA12FC0A6534A2758D37BB87A9'-and[int64]$o10.bytes-eq 12144) 'transaction library exact'
-Add-Check T12-O20-BINDING ($o20.sha256-ceq'487515069EA3B0ACD51089B73BFD68F429F3831DF9BE9A4509ABE8C93AA5BE93'-and[int64]$o20.bytes-eq 54726) 'A1R4 guard exact'
+Add-Check T11-O10-BINDING ($o10.sha256-ceq'DC5F59958CCADF861F34138EE5DE31F44AE753525ABFBF759CC0BE864F4B4820'-and[int64]$o10.bytes-eq 12131) 'transaction library exact'
+Add-Check T12-O20-BINDING ($o20.sha256-ceq'42928549F43A58704A236259283B5F7F655347BB4DE31B4220418CC08981072E'-and[int64]$o20.bytes-eq 55453) 'A1R4 guard exact'
 Add-Check T13-IMPORT-ORDER ((@($runtime.import_order)-join',')-ceq'P10,P20,O10,O20') 'exact initialization order'
 Add-Check T14-CANONICAL-CONTEXT ($context.Overlay-ceq$overlay-and$context.A1R4Context.Overlay-ceq$context.A1R4Root) 'canonical A1R5R over A1R4'
 $artifactPaths=Get-G3E2RA1R5RArtifactPaths $context
@@ -103,13 +109,13 @@ Add-Check T25-RECEIPT-CALLERS $receiptCallerOk 'initializer present in five call
 
 $common=@('-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass')
 $hashArgs=@('-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-ExpectedA1R2Hash',$expectedA1R2,'-ExpectedA1R3Hash',$expectedA1R3,'-ExpectedA1R4Hash',$expectedA1R4,'-ExpectedA1R5RHash',$expectedA1R5R)
-$finalizer=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/finalize-g3e2r-live-seal-a1r5r.ps1'),'-Mode','Validate','-VaultRoot',$root,'-OverlayRoot',$overlay)+$hashArgs+@('-Json'))
+$finalizer=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/finalize-g3e2r-live-seal-a1r5r.ps1'),'-Mode','Validate','-VaultRoot',$root,'-OverlayRoot',$overlay,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion)+$hashArgs+@('-Json'))
 Add-Check T26-FINALIZER-VALIDATE ($finalizer.verdict-ceq'PASS'-and$finalizer.import_receipt-ceq$runtime.receipt_contract_id) 'read-only Validate'
-$forward=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/invoke-g3e2-transaction-a1r5r.ps1'),'-Mode','Validate','-VaultRoot',$root,'-OverlayRoot',$overlay)+$hashArgs+@('-Json'))
+$forward=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/invoke-g3e2-transaction-a1r5r.ps1'),'-Mode','Validate','-VaultRoot',$root,'-OverlayRoot',$overlay,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion)+$hashArgs+@('-Json'))
 Add-Check T27-FORWARD-VALIDATE ($forward.verdict-ceq'PASS'-and$forward.import_receipt-ceq$runtime.receipt_contract_id) 'read-only Validate'
-$reverse=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/invoke-g3e2-reverse-a1r5r.ps1'),'-Mode','Validate','-VaultRoot',$root,'-OverlayRoot',$overlay)+$hashArgs+@('-Json'))
+$reverse=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/invoke-g3e2-reverse-a1r5r.ps1'),'-Mode','Validate','-VaultRoot',$root,'-OverlayRoot',$overlay,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion)+$hashArgs+@('-Json'))
 Add-Check T28-REVERSE-VALIDATE ($reverse.verdict-ceq'PASS'-and$reverse.import_receipt-ceq$runtime.receipt_contract_id) 'read-only Validate'
-$capability=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/invoke-g3e2r-capability-probe-a1r5r.ps1'),'-Mode','Validate','-ControlRoot',$root,'-OverlayRoot',$overlay)+$hashArgs+@('-Json'))
+$capability=Invoke-JsonProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/invoke-g3e2r-capability-probe-a1r5r.ps1'),'-Mode','Validate','-ControlRoot',$root,'-OverlayRoot',$overlay,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion)+$hashArgs+@('-Json'))
 foreach($file in $componentFiles){$tokens=$null;$errors=$null;$null=[Management.Automation.Language.Parser]::ParseFile((Join-Path $overlay $file.Replace('/','\')),[ref]$tokens,[ref]$errors);if(@($errors).Count-ne 0){throw "Parse failure: $file"}}
 Add-Check T29-SIX-COMPONENT-PARSE $true 'PowerShell parser accepted all components'
 Add-Check T30-JSON-TIME-UNCHANGED ((Get-G3E2RA1R5RSha256 (Join-Path $overlay 'contracts/json-time-v1-contract.json'))-ceq'D090E133CFE0D8883A0CA3CD08552FDB07BDE3A8132FF4F423911FF5E154BF07') 'A1R4 JSON-time bytes reused'
@@ -126,7 +132,7 @@ try{
     [IO.File]::WriteAllText($probePath,$probe,[Text.UTF8Encoding]::new($false))
     $guardReceipt=Invoke-JsonProcess $ps5 ($common+@('-File',$probePath,'-Module',(Join-Path $overlay 'tools/g3e2r-a1r5r-guard-lib.psm1'),'-VaultRoot',$root,'-OverlayRoot',$overlay,'-A1',$expectedA1,'-A1R',$expectedA1R,'-A1R2',$expectedA1R2,'-A1R3',$expectedA1R3,'-A1R4',$expectedA1R4,'-A1R5R',$expectedA1R5R))
 }finally{if(Test-Path -LiteralPath $probePath){Remove-Item -LiteralPath $probePath -Force}}
-$testReceipt=Invoke-JsonProcess $ps5 ($common+@('-File',$PSCommandPath,'-VaultRoot',$root,'-OverlayRoot',$overlay,'-PythonExecutable',$PythonExecutable,'-PowerShell7Executable',$PowerShell7Executable,'-ExpectedPowerShell7Sha256',$ExpectedPowerShell7Sha256,'-ExpectedPowerShell7Version',$ExpectedPowerShell7Version,'-ReceiptOnly','-Json'))
+$testReceipt=Invoke-JsonProcess $ps5 ($common+@('-File',$PSCommandPath,'-VaultRoot',$root,'-OverlayRoot',$overlay,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-PowerShell7Executable',$PowerShell7Executable,'-ExpectedPowerShell7Sha256',$ExpectedPowerShell7Sha256,'-ExpectedPowerShell7Version',$ExpectedPowerShell7Version,'-ReceiptOnly','-Json'))
 Add-Check T32-RECEIPT-01 ($guardReceipt.receipt_id-ceq$runtime.receipt_contract_id) 'guard receipt id'
 Add-Check T33-RECEIPT-02 ($guardReceipt.component_id-ceq'C10-GUARD') 'guard component'
 Add-Check T34-RECEIPT-03 ($finalizer.import_receipt-ceq$runtime.receipt_contract_id) 'finalizer receipt id'
@@ -140,10 +146,10 @@ Add-Check T41-RECEIPT-10 ($testReceipt.component_id-ceq'C50-TEST') 'test compone
 
 $bRoot=Resolve-G3E2RA1R5RInRoot $root ([string]$context.BContract.canonical_root)
 $beforeCandidate=@(Test-Path -LiteralPath $bRoot),@(Test-Path -LiteralPath (Join-Path $bRoot 'live-seal-v2.json'))
-$prepare=Invoke-CapturedProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/finalize-g3e2r-live-seal-a1r5r.ps1'),'-Mode','Prepare','-VaultRoot',$root,'-OverlayRoot',$overlay,'-InputPath',(Join-Path $bRoot 'seal/seal-inputs.json'),'-PythonExecutable',$PythonExecutable)+$hashArgs+@('-ExpectedBHash',('0'*64),'-ExpectedSealInputsHash',('0'*64),'-Json'))
+$prepare=Invoke-CapturedProcess $ps5 ($common+@('-File',(Join-Path $overlay 'tools/finalize-g3e2r-live-seal-a1r5r.ps1'),'-Mode','Prepare','-VaultRoot',$root,'-OverlayRoot',$overlay,'-InputPath',(Join-Path $bRoot 'seal/seal-inputs.json'),'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion)+$hashArgs+@('-ExpectedBHash',('0'*64),'-ExpectedSealInputsHash',('0'*64),'-Json'))
 Add-Check T42-FINALIZER-STOPS-AT-B-ABSENCE ($prepare.ExitCode-ne 0-and$prepare.Text-match'(?im)(?:(?:B candidate|bundle).*?(?:absent|missing|not)|^Canonical G3E2R-B root is missing\.\r?$)') 'Prepare reached only the expected B-absence gate'
 Add-Check T43-NO-B-SNAPSHOT-SEAL (-not(Test-Path -LiteralPath $bRoot)-and-not(Test-Path -LiteralPath (Join-Path $bRoot 'live-seal-v2.json'))) 'B snapshot and live seal absent'
-$staged=@(& git -C $root diff --cached --name-only)
+$staged=@(& $GitExecutable -C $root diff --cached --name-only)
 Add-Check T44-GIT-STAGING-EMPTY (@($staged).Count-eq 0) 'no staged paths'
 $s5ok=(Get-G3E2RA1R5RSha256 (Join-Path $root 'tools/config/local-source-integrity-contract.json'))-ceq$expectedS5LocalSourceContract-and(Get-G3E2RA1R5RSha256 (Join-Path $root 'tools/config/newsletter-index-contract.json'))-ceq$expectedS5NewsletterContract
 Add-Check T45-POLICY-SAFE-S5-CONTRACTS $s5ok 'policy-safe S5 contracts exact'
@@ -163,23 +169,23 @@ $a1r4HashBefore=Get-G3E2RA1R5RSha256 $a1r4Test
 Import-Module (Join-Path $context.A1R4Root 'tools/g3e2r-a1r4-guard-lib.psm1') -Force
 $a1r4Context=Get-G3E2RA1R4Context -VaultRoot $root -OverlayRoot $context.A1R4Root -ExpectedA1Hash $expectedA1 -ExpectedA1RHash $expectedA1R -ExpectedA1R2Hash $expectedA1R2 -ExpectedA1R3Hash $expectedA1R3 -ExpectedA1R4Hash $expectedA1R4
 Assert-G3E2RA1R4NoResidue $root
-$a1r4=Invoke-JsonProcess $ps7 @('-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',$a1r4Test,'-VaultRoot',$root,'-OverlayRoot',$context.A1R4Root,'-PythonExecutable',$PythonExecutable,'-Json')
+$a1r4=Invoke-JsonProcess $ps7 @('-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',$a1r4Test,'-VaultRoot',$root,'-OverlayRoot',$context.A1R4Root,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
 $t46Internal=@(
-    $ps7ProcessPathOk,
-    $ps7Hash-ceq$canonicalPs7Hash,
-    $ps7Probe.version-ceq$canonicalPs7Version,
-    $ps7Probe.edition-ceq'Core',
-    [bool]$ps7Probe.is64,
-    $probeLines.Count-eq 1,
-    $a1r4.verdict-ceq'PASS',
-    [int]$a1r4.groups-eq 64,
-    $a1r4.expected_a1r4_hash-ceq$expectedA1R4,
-    (Get-G3E2RA1R5RSha256 $a1r4Test)-ceq$expectedA1R4Test
+    [bool]$ps7ProcessPathOk
+    [bool]($ps7Hash-ceq$canonicalPs7Hash)
+    [bool]($ps7Probe.version-ceq$canonicalPs7Version)
+    [bool]($ps7Probe.edition-ceq'Core')
+    [bool]$ps7Probe.is64
+    [bool]($probeLines.Count-eq 1)
+    [bool]($a1r4.verdict-ceq'PASS')
+    [bool]([int]$a1r4.groups-eq 64)
+    [bool]($a1r4.expected_a1r4_hash-ceq$expectedA1R4)
+    [bool]((Get-G3E2RA1R5RSha256 $a1r4Test)-ceq$expectedA1R4Test)
 )
-Add-Check T46-PS7-A1R4-REGRESSION (@($t46Internal|Where-Object{-not$_}).Count-eq 0) '10/10; A1R4 64/64 under bound Core 64-bit PS7'
+Add-Check T46-PS7-A1R4-REGRESSION ($t46Internal.Count-eq 10-and@($t46Internal|Where-Object{-not$_}).Count-eq 0) '10/10; A1R4 64/64 under bound Core 64-bit PS7'
 Add-Check T47-A1R4-TEST-UNCHANGED ($a1r4HashBefore-ceq$expectedA1R4Test-and(Get-G3E2RA1R5RSha256 $a1r4Test)-ceq$a1r4HashBefore) 'A1R4 test hash stable before/after'
 Assert-G3E2RA1R4NoResidue $root
-Add-Check T48-NO-EFFECT (@(Test-Path -LiteralPath $bRoot).Count-eq 1-and-not(Test-Path -LiteralPath $bRoot)-and@(& git -C $root diff --cached --name-only).Count-eq 0) 'no B, snapshot, seal, residue, staging, mutation, or routing change'
+Add-Check T48-NO-EFFECT (@(Test-Path -LiteralPath $bRoot).Count-eq 1-and-not(Test-Path -LiteralPath $bRoot)-and@(& $GitExecutable -C $root diff --cached --name-only).Count-eq 0) 'no B, snapshot, seal, residue, staging, mutation, or routing change'
 $probeContract=$context.ProbeAuthorityContract;$probeText=Get-Text 'tools/invoke-g3e2r-capability-probe-a1r5r.ps1';$guardText=Get-Text 'tools/g3e2r-a1r5r-guard-lib.psm1'
 Add-Check T49-RECEIPT-11 ($capability.import_receipt-ceq$runtime.receipt_contract_id) 'capability-probe receipt id'
 Add-Check T50-RECEIPT-12 ($runtime.components[5].component_id-ceq'C60-CAPABILITY-PROBE'-and$capability.verdict-ceq'PASS') 'capability-probe component'
@@ -191,7 +197,7 @@ Add-Check T54-FOUR-STEP-TERMINATION ((@($probeSteps)-join',')-ceq'FWD-001,FWD-00
 $fwd004=@($context.Gates|Where-Object step_id -CEQ 'FWD-004')[0]
 Add-Check T55-FORTY-FIVE-SECOND-WATCHDOG ([int]$probeContract.watchdog_seconds-eq 45-and$probeText-match'-TimeoutSeconds 45'-and$fwd004.success_contract-match'45-second') 'one 45-second capability-probe boundary'
 $failureSet=@($probeContract.pre_probe_failure_verdict,$probeContract.probe_failure_verdict,$probeContract.timeout_verdict,$probeContract.abort_verdict,$probeContract.poststate_failure_verdict)
-Add-Check T56-RECEIPT-AND-NO-PROBE ((@($failureSet)-join',')-ceq'HOLD_NO_PROBE,HOLD_PROBE_FAILED,HOLD_PROBE_TIMEOUT,HOLD_PROBE_ABORTED,BLOCK_PROBE_POSTSTATE'-and-not(Test-Path -LiteralPath $bRoot)-and@(& git -C $root diff --cached --name-only).Count-eq 0) 'fail-closed receipt model; actual capability probe not run'
+Add-Check T56-RECEIPT-AND-NO-PROBE ((@($failureSet)-join',')-ceq'HOLD_NO_PROBE,HOLD_PROBE_FAILED,HOLD_PROBE_TIMEOUT,HOLD_PROBE_ABORTED,BLOCK_PROBE_POSTSTATE'-and-not(Test-Path -LiteralPath $bRoot)-and@(& $GitExecutable -C $root diff --cached --name-only).Count-eq 0) 'fail-closed receipt model; actual capability probe not run'
 $hashScopeRoot=Join-Path ([IO.Path]::GetTempPath()) ('g3e2r-a1r5r-hash-scope-'+[guid]::NewGuid().ToString('N'))
 $hashScopeBRoot=Join-Path $hashScopeRoot 'g3e-2r-b'
 $hashScopeFile=Join-Path $hashScopeBRoot 'bundle-manifest.csv'
@@ -242,6 +248,51 @@ try{
     $hashScopeOk=$hashScope.verdict-ceq'PASS'-and$hashScope.edition-ceq'Desktop'-and[bool]$hashScope.is64-and@($hashScope.proofs).Count-eq 6-and@($hashScope.proofs|Where-Object{(-not[bool]$_.module_scope)-or$_.sha256-cne$hashScope.expected_sha256-or$_.sha256-cnotmatch'^[A-F0-9]{64}$'}).Count-eq 0
 }finally{if(Test-Path -LiteralPath $hashScopeRoot){Remove-Item -LiteralPath $hashScopeRoot -Recurse -Force}}
 Add-Check T57-NESTED-HASH-SCOPE-CLOSURE ($hashScopeOk-and-not(Test-Path -LiteralPath $hashScopeRoot)) 'fresh PS5 A1R5R-to-A1 module chain; synthetic B-present hash path; six exact uppercase SHA-256 results; fixture removed'
-if($checks.Count-ne 57){throw "A1R5R hash-scope candidate expected exactly 57 groups; found $($checks.Count)."}
-$result=[ordered]@{contract='g3e2r-a1r5r-r4-test/v1';verdict='PASS';groups=57;receipt_preflight='12/12';t46='10/10';a1r4_regression='64/64';nested_hash_scope='6/6';expected_a1_hash=$expectedA1;expected_a1r_hash=$expectedA1R;expected_a1r2_hash=$expectedA1R2;expected_a1r3_hash=$expectedA1R3;expected_a1r4_hash=$expectedA1R4;expected_a1r5r_hash=$expectedA1R5R;s5r_local_source_contract_hash=$expectedS5LocalSourceContract;s5r_newsletter_contract_hash=$expectedS5NewsletterContract;seal_closure='10/63/15/4';expected_hash_boundaries=9;gate_map='9/19/12';powershell7_path=$ps7;powershell7_sha256=$ps7Hash;powershell7_version=$ps7Probe.version;checks=@($checks);live_mutation='none';live_capability_probe='not-run';b_candidate='absent';snapshot='absent';live_seal='absent';routing_state='frozen';git_staging='empty'}
-if($Json){$result|ConvertTo-Json -Depth 8 -Compress}else{Write-Output 'PASS | A1R5R-R4 57/57 | receipt 12/12 | T46 10/10 | A1R4 64/64 | hash scope 6/6 | no effect'}
+$externalRoot=Join-Path ([IO.Path]::GetTempPath()) ('g3e2r-a1r5r-external-runtime-'+[guid]::NewGuid().ToString('N'))
+$externalRunner=Join-Path $externalRoot 'external-runtime-closure.ps1'
+$externalScript=@'
+param([string]$Module,[string]$VaultRoot,[string]$OverlayRoot,[string]$Python,[string]$Ripgrep,[string]$RipgrepSha,[string]$RipgrepVersion,[string]$Git,[string]$GitSha,[string]$GitVersion,[string]$JunctionRoot)
+Set-StrictMode -Version Latest
+$ErrorActionPreference='Stop'
+$env:PATH=Join-Path $env:SystemRoot 'System32'
+Import-Module $Module -Force
+$context=Get-G3E2RA1R5RContext -VaultRoot $VaultRoot -OverlayRoot $OverlayRoot -ExpectedA1Hash $args[0] -ExpectedA1RHash $args[1] -ExpectedA1R2Hash $args[2] -ExpectedA1R3Hash $args[3] -ExpectedA1R4Hash $args[4] -ExpectedA1R5RHash $args[5]
+function Test-Fails([scriptblock]$Action){try{& $Action;$false}catch{$true}}
+$bindings=@(Get-G3E2RA1R5RRuntimeBindings -Context $context -PythonExecutable $Python -RipgrepExecutable $Ripgrep -ExpectedRipgrepSha256 $RipgrepSha -ExpectedRipgrepVersion $RipgrepVersion -GitExecutable $Git -ExpectedGitSha256 $GitSha -ExpectedGitVersion $GitVersion)
+$rgBinding=@($bindings|Where-Object runtime_id -CEQ 'RIPGREP')[0]
+$gitBinding=@($bindings|Where-Object runtime_id -CEQ 'GIT')[0]
+$wrongPath=Test-Fails {Get-G3E2RA1R5RRuntimeBindings -Context $context -PythonExecutable $Python -RipgrepExecutable '.\rg.exe' -ExpectedRipgrepSha256 $RipgrepSha -ExpectedRipgrepVersion $RipgrepVersion -GitExecutable $Git -ExpectedGitSha256 $GitSha -ExpectedGitVersion $GitVersion}
+$wrongHash=Test-Fails {Get-G3E2RA1R5RRuntimeBindings -Context $context -PythonExecutable $Python -RipgrepExecutable $Ripgrep -ExpectedRipgrepSha256 ('0'*64) -ExpectedRipgrepVersion $RipgrepVersion -GitExecutable $Git -ExpectedGitSha256 $GitSha -ExpectedGitVersion $GitVersion}
+$wrongVersion=Test-Fails {Get-G3E2RA1R5RRuntimeBindings -Context $context -PythonExecutable $Python -RipgrepExecutable $Ripgrep -ExpectedRipgrepSha256 $RipgrepSha -ExpectedRipgrepVersion 'ripgrep 0.0.0' -GitExecutable $Git -ExpectedGitSha256 $GitSha -ExpectedGitVersion $GitVersion}
+$x86=Join-Path $env:WINDIR 'SysWOW64\WindowsPowerShell\v1.0\powershell.exe'
+$x86Sha=Get-G3E2RA1R5RSha256 -LiteralPath $x86
+$wrongArchitecture=Test-Fails {Get-G3E2RA1R5RRuntimeBindings -Context $context -PythonExecutable $Python -RipgrepExecutable $Ripgrep -ExpectedRipgrepSha256 $RipgrepSha -ExpectedRipgrepVersion $RipgrepVersion -GitExecutable $x86 -ExpectedGitSha256 $x86Sha -ExpectedGitVersion 'unused' }
+$junction=Join-Path $JunctionRoot 'runtime-link'
+$cmd=Join-Path $env:SystemRoot 'System32\cmd.exe'
+$null=& $cmd /d /c "mklink /J `"$junction`" `"$([IO.Path]::GetDirectoryName($Ripgrep))`""
+if($LASTEXITCODE-ne 0){throw 'Junction fixture creation failed.'}
+$reparsePath=Join-Path $junction ([IO.Path]::GetFileName($Ripgrep))
+$reparse=Test-Fails {Get-G3E2RA1R5RRuntimeBindings -Context $context -PythonExecutable $Python -RipgrepExecutable $reparsePath -ExpectedRipgrepSha256 $RipgrepSha -ExpectedRipgrepVersion $RipgrepVersion -GitExecutable $Git -ExpectedGitSha256 $GitSha -ExpectedGitVersion $GitVersion}
+[pscustomobject]@{verdict='PASS';edition=[string]$PSVersionTable.PSEdition;is64=[Environment]::Is64BitProcess;path_clean=(-not(Get-Command rg -ErrorAction SilentlyContinue)-and-not(Get-Command git -ErrorAction SilentlyContinue));binding_count=$bindings.Count;rg_path=[string]$rgBinding.executable_path;git_path=[string]$gitBinding.executable_path;wrong_path=$wrongPath;wrong_hash=$wrongHash;wrong_version=$wrongVersion;wrong_architecture=$wrongArchitecture;reparse=$reparse}|ConvertTo-Json -Compress
+'@
+try{
+    $null=New-Item -ItemType Directory -Path $externalRoot
+    [IO.File]::WriteAllText($externalRunner,$externalScript,[Text.UTF8Encoding]::new($false))
+    $external=Invoke-JsonProcess $ps5 ($common+@('-File',$externalRunner,'-Module',(Join-Path $overlay 'tools/g3e2r-a1r5r-guard-lib.psm1'),'-VaultRoot',$root,'-OverlayRoot',$overlay,'-Python',$PythonExecutable,'-Ripgrep',$RipgrepExecutable,'-RipgrepSha',$ExpectedRipgrepSha256,'-RipgrepVersion',$ExpectedRipgrepVersion,'-Git',$GitExecutable,'-GitSha',$ExpectedGitSha256,'-GitVersion',$ExpectedGitVersion,'-JunctionRoot',$externalRoot,$expectedA1,$expectedA1R,$expectedA1R2,$expectedA1R3,$expectedA1R4,$expectedA1R5R))
+    $externalInternal=@(
+        [bool]($external.verdict-ceq'PASS')
+        [bool]($external.edition-ceq'Desktop')
+        [bool]$external.is64
+        [bool]$external.path_clean
+        [bool]([int]$external.binding_count-eq 4)
+        [bool]([string]::Equals([string]$external.rg_path,[IO.Path]::GetFullPath($RipgrepExecutable),[StringComparison]::OrdinalIgnoreCase))
+        [bool]([string]::Equals([string]$external.git_path,[IO.Path]::GetFullPath($GitExecutable),[StringComparison]::OrdinalIgnoreCase))
+        [bool]($external.wrong_path-and$external.wrong_hash-and$external.wrong_version)
+        [bool]$external.wrong_architecture
+        [bool]$external.reparse
+    )
+}finally{if(Test-Path -LiteralPath $externalRoot){Remove-Item -LiteralPath $externalRoot -Recurse -Force}}
+Add-Check T58-EXPLICIT-EXTERNAL-RUNTIME-CLOSURE ($externalInternal.Count-eq 10-and@($externalInternal|Where-Object{-not$_}).Count-eq 0-and-not(Test-Path -LiteralPath $externalRoot)-and-not(Test-Path -LiteralPath $bRoot)) '10/10; clean PATH; explicit rg/git only; path, hash, version, x64, reparse negatives; fresh PS5 child; no live probe'
+if($checks.Count-ne 58){throw "A1R5R external-runtime candidate expected exactly 58 groups; found $($checks.Count)."}
+$result=[ordered]@{contract='g3e2r-a1r5r-r4-test/v1';verdict='PASS';groups=58;receipt_preflight='12/12';t46='10/10';a1r4_regression='64/64';nested_hash_scope='6/6';external_runtime_closure='10/10';expected_a1_hash=$expectedA1;expected_a1r_hash=$expectedA1R;expected_a1r2_hash=$expectedA1R2;expected_a1r3_hash=$expectedA1R3;expected_a1r4_hash=$expectedA1R4;expected_a1r5r_hash=$expectedA1R5R;s5r_local_source_contract_hash=$expectedS5LocalSourceContract;s5r_newsletter_contract_hash=$expectedS5NewsletterContract;seal_closure='10/63/15/4';expected_hash_boundaries=9;gate_map='9/19/12';powershell7_path=$ps7;powershell7_sha256=$ps7Hash;powershell7_version=$ps7Probe.version;checks=@($checks);live_mutation='none';live_capability_probe='not-run';b_candidate='absent';snapshot='absent';live_seal='absent';routing_state='frozen';git_staging='empty'}
+if($Json){$result|ConvertTo-Json -Depth 8 -Compress}else{Write-Output 'PASS | A1R5R-R4 58/58 | receipt 12/12 | T46 10/10 | A1R4 64/64 | hash scope 6/6 | external runtimes 10/10 | no effect'}

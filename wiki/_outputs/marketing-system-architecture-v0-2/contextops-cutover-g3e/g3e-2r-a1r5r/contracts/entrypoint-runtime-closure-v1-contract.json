@@ -10,8 +10,8 @@
     {"binding_id":"P20","module_name":"Microsoft.PowerShell.Utility","required_version":"3.1.0.0"}
   ],
   "operative_bindings": [
-    {"binding_id":"O10","role":"transaction-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r/tools/g3e2r-transaction-lib.psm1","sha256":"09E578801F5579C871ED2F58CF1D4551404A80CA12FC0A6534A2758D37BB87A9","bytes":12144},
-    {"binding_id":"O20","role":"a1r4-guard-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1","sha256":"487515069EA3B0ACD51089B73BFD68F429F3831DF9BE9A4509ABE8C93AA5BE93","bytes":54726}
+    {"binding_id":"O10","role":"transaction-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r/tools/g3e2r-transaction-lib.psm1","sha256":"DC5F59958CCADF861F34138EE5DE31F44AE753525ABFBF759CC0BE864F4B4820","bytes":12131},
+    {"binding_id":"O20","role":"a1r4-guard-library","repository_path":"wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1","sha256":"42928549F43A58704A236259283B5F7F655347BB4DE31B4220418CC08981072E","bytes":55453}
   ],
   "import_order": ["P10","P20","O10","O20"],
   "components": [
@@ -23,5 +23,15 @@
     {"component_id":"C60-CAPABILITY-PROBE","repository_path":"tools/invoke-g3e2r-capability-probe-a1r5r.ps1"}
   ],
   "caller_forbidden_imports": ["g3e2r-a1r3-guard-lib.psm1"],
+  "external_runtime_closure": {
+    "resolution": "caller-supplied-only",
+    "ambient_get_command": "forbidden",
+    "path_contract": "canonical-absolute-literal-regular-file-no-reparse",
+    "architecture": "x64",
+    "identity_contract": "static-sha256-and-exact-version",
+    "invocation_contract": "verified-absolute-path-only",
+    "parameters": ["RipgrepExecutable","ExpectedRipgrepSha256","ExpectedRipgrepVersion","GitExecutable","ExpectedGitSha256","ExpectedGitVersion"],
+    "comparison_targets": ["seal","capability-probe-authority"]
+  },
   "unknown_properties": "reject"
 }

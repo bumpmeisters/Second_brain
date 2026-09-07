@@ -16,6 +16,10 @@ T46 must:
 4. emit and parse one clean JSON runtime probe;
 5. import the unchanged A1R4 guard, construct the canonical A1R4 context with exact A1-A1R4 hashes, and only then call `Assert-G3E2RA1R4NoResidue`;
 6. run the unchanged A1R4 test under that exact PowerShell 7 host and require 64/64;
-7. prove the A1R4 test hash remains `08F2EEB6FBE87018AF6F4080210C7BE547F9DC6FA544A7A4B87154E3925558A1` before and after.
+7. prove the A1R4 test hash remains `8AFEF55AF77FE09CD5EF18B795A53D49CAFE27337D4CF7379A60A3BF7A090854` before and after.
 
 The process helper must retain the approved `$ArgumentList` parameter and `@ArgumentList` splat. The five fresh-process receipt proofs must be 10/10. Any discrepancy is HOLD with no mutation.
+
+## Explicit external runtime closure
+
+A1R5R accepts `RipgrepExecutable`, `ExpectedRipgrepSha256`, `ExpectedRipgrepVersion`, `GitExecutable`, `ExpectedGitSha256`, and `ExpectedGitVersion` as mandatory inputs on every published entrypoint. The values are forwarded through every runtime-binding boundary to A1. A1 requires canonical absolute literal regular-file paths without reparse traversal, exact static SHA-256 and version matches, x64 PE architecture, and launches each version probe only through the verified absolute path. Ambient `Get-Command rg` and `Get-Command git` resolution is forbidden. All four runtime bindings remain compared byte-for-byte with the seal or capability-probe authority before stateful execution.
