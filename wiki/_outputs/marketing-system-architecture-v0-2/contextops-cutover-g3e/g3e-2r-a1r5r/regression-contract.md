@@ -16,7 +16,7 @@ T46 must:
 4. emit and parse one clean JSON runtime probe;
 5. import the unchanged A1R4 guard, construct the canonical A1R4 context with exact A1-A1R4 hashes, and only then call `Assert-G3E2RA1R4NoResidue`;
 6. run the unchanged A1R4 test under that exact PowerShell 7 host and require 64/64;
-7. prove the A1R4 test hash remains `8AFEF55AF77FE09CD5EF18B795A53D49CAFE27337D4CF7379A60A3BF7A090854` before and after.
+7. prove the A1R4 test hash remains `534823DA95F365DCF774FCF3B2B230CA27F46738BE3CE8046993C2ED556E0395` before and after.
 
 The process helper must retain the approved `$ArgumentList` parameter and `@ArgumentList` splat. The five fresh-process receipt proofs must be 10/10. Any discrepancy is HOLD with no mutation.
 

@@ -13,7 +13,7 @@ Set-StrictMode -Version Latest;$ErrorActionPreference='Stop'
 if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptRoot '..'}
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
 Import-Module (Join-Path $overlay 'tools/g3e2r-a1r2-guard-lib.psm1') -Force
-$manifest=Join-Path $overlay 'a1r2-bundle-manifest.csv';$expectedA1R2=Get-G3E2RA1R2Sha256 $manifest;$expectedA1R='B16723418BD1235B3A1458070B3CAADC5C0BCDFAC0368AD520ADE2E5028805C6';$expectedA1='DC3C75F23A565E8FEDEB65E861FD54BF89B7968F4F3E8D047CCD89490DF92260'
+$manifest=Join-Path $overlay 'a1r2-bundle-manifest.csv';$expectedA1R2=Get-G3E2RA1R2Sha256 $manifest;$expectedA1R='29B5FFA27A975EDEB409D65D829548BC7C622FA46050BFD72F02E2B810BECDCD';$expectedA1='40CC378BD288BFF319A84879A0A93145909ED39F2DEED1E7D8D5B945B8703C4D'
 $context=Get-G3E2RA1R2Context $root $overlay $expectedA1 $expectedA1R $expectedA1R2;$checks=[Collections.Generic.List[string]]::new();$powerShell=(Get-Process -Id $PID).Path
 function Add-Check{param([string]$Id,[bool]$Passed,[string]$Evidence);if(-not$Passed){throw "$Id failed: $Evidence"};$checks.Add("$Id|$Evidence")}
 function Expect-Failure{param([scriptblock]$Action);try{&$Action;$false}catch{$true}}

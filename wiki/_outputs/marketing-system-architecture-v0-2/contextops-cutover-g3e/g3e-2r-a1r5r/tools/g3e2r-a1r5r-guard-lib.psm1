@@ -7,7 +7,7 @@ $script:G3E2RA1R5RUtf8NoBom = [Text.UTF8Encoding]::new($false)
 function Get-G3E2RA1R5RSha256 {
     param([Parameter(Mandatory=$true)][string]$LiteralPath)
     if(-not(Test-Path -LiteralPath $LiteralPath -PathType Leaf)){throw "File is missing: $LiteralPath"}
-    return (Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RA1R5RBytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RA1R5RBytes {
