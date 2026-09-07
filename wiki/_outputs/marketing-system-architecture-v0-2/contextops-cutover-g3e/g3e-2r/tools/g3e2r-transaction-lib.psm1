@@ -8,7 +8,7 @@ function Get-G3E2RSha256 {
     if (-not (Test-Path -LiteralPath $LiteralPath -PathType Leaf)) {
         throw "Required file is missing: $LiteralPath"
     }
-    return (Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RBytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RBytesSha256 {

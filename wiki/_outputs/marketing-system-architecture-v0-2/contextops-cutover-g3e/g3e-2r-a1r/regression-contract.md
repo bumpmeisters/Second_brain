@@ -51,3 +51,7 @@ The A1R guard must close its own host-local Management/Utility dependency at Des
 - Unknown bytes in transaction-owned paths stop reverse; already restored or exactly witnessed bytes are accepted.
 - Workspace drift is Advisory only. Protected and sibling drift after mutation is reported while restoration proceeds.
 - The harness creates no B candidate, snapshot, live seal, capability-probe result, component mutation, routing change, staging, or commit.
+
+## Explicit external runtime closure
+
+A1R accepts `RipgrepExecutable`, `ExpectedRipgrepSha256`, `ExpectedRipgrepVersion`, `GitExecutable`, `ExpectedGitSha256`, and `ExpectedGitVersion` as mandatory inputs on every published entrypoint. The values are forwarded through every runtime-binding boundary to A1. A1 requires canonical absolute literal regular-file paths without reparse traversal, exact static SHA-256 and version matches, x64 PE architecture, and launches each version probe only through the verified absolute path. Ambient `Get-Command rg` and `Get-Command git` resolution is forbidden. All four runtime bindings remain compared byte-for-byte with the seal or capability-probe authority before stateful execution.

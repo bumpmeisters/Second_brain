@@ -33,3 +33,13 @@ Acceptance of A1 will authorize neither G3E2R-B construction nor live execution.
 The two pre-evidence full-chain runs support evidence re-closure for A1 only within the A1-through-A1R5R hash-scope correction. Final acceptance remains conditional on two new top-level A1R5R runs against the exact re-closed evidence, dependency, test-binding, and manifest bytes. After those runs, no evidence file may be changed.
 
 This decision preserves all earlier historical evidence as provenance. It does not claim or authorize a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.
+
+## 2026-09-06 | External-runtime-closure review addendum
+
+**Decision**: `CONDITIONAL_GO_FOR_EVIDENCE_CLOSED_A1_EXTERNAL_RUNTIME_ONLY`
+
+The two pre-evidence full-chain runs each returned exit code `0`, exactly one valid JSON document, PASS `58/58`, Receipt `12/12`, T46 `10/10`, T57 `6/6`, T58 `10/10`, Seal-Closure `10/63/15/4`, `live_capability_probe: not-run`, and a complete null delta. They support evidence re-closure for A1 only within the A1-through-A1R5R external-runtime correction.
+
+Final acceptance remains conditional on two new top-level A1R5R runs against the exact re-closed evidence, dependency, test-binding, regression-binding where applicable, and manifest bytes. After those runs, no evidence file may be changed.
+
+This decision preserves all earlier historical evidence as provenance. It does not claim or authorize a capability probe, successful Prepare against a B candidate, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.

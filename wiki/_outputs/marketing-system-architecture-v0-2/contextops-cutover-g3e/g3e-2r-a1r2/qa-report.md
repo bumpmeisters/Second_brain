@@ -33,3 +33,16 @@ Two identical pre-evidence top-level A1R5R full-chain runs completed with exit c
 The runs prove the synthetic full-chain hash-scope contract, including module-local Utility manifest identity and uppercase SHA-256 behavior. They do not prove a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.
 
 Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.
+
+## 2026-09-06 | External-runtime-closure pre-evidence
+
+**Verdict**: `PASS_PRE_EVIDENCE`
+**Conditional verdict**: `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`
+
+Two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0` and exactly one valid JSON document. Each run passed `58/58`, T27, T42, Receipt `12/12`, T46 `10/10`, nested A1R4 `64/64`, A1R3 `48/48`, A1R2 `40/40`, A1R `34/34`, A1 `27/27`, T57 with `nested_hash_scope: 6/6`, T58 with `external_runtime_closure: 10/10`, and Seal-Closure `10/63/15/4`. Both runs reported `live_capability_probe: not-run` and a complete null delta. The observed A1R2 check count was `40/40` in each run.
+
+The runs prove the local synthetic full-chain external-runtime contract: Ripgrep and Git were resolved only through explicit canonical paths; path, SHA-256, version, x64, and non-reparse boundaries were checked; negative path, hash, version, architecture, and reparse cases passed; and the fresh Windows PowerShell 5.1 child ran with a PATH cleaned of ambient Ripgrep and Git. T27 and T42 also passed.
+
+They do not prove a capability probe against the actual Vault, successful Prepare against a B candidate, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate. Historical evidence remains unchanged as provenance.
+
+Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.

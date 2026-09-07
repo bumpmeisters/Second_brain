@@ -21,7 +21,7 @@ function Import-G3E2RA1RPlatformModules {
     $hashCommands = @(Get-Command 'Microsoft.PowerShell.Utility\Get-FileHash' -All -ErrorAction Stop)
     if ($hashCommands.Count -ne 1 -or [string]$hashCommands[0].CommandType -cne $expectedHashCommandType -or $hashCommands[0].ModuleName -cne 'Microsoft.PowerShell.Utility' -or $hashCommands[0].Source -cne 'Microsoft.PowerShell.Utility') { throw 'Module-qualified SHA-256 command identity mismatch.' }
 }
-Import-G3E2RA1RPlatformModules
+. Import-G3E2RA1RPlatformModules
 
 function Get-G3E2RA1RSha256 {
     param([Parameter(Mandatory = $true)][string]$LiteralPath)
@@ -220,8 +220,17 @@ function Assert-G3E2RA1RSealInput {
 }
 
 function Get-G3E2RA1RRuntimeBindings {
-    param([object]$Context,[string]$PythonExecutable)
-    return @(Get-G3E2RA1RuntimeBindings -Context $Context.A1Context -PythonExecutable $PythonExecutable)
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1RuntimeBindings -Context $Context.A1Context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
 }
 
 function Assert-G3E2RA1RRuntimeBindings {

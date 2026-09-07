@@ -21,7 +21,7 @@ function Import-G3E2RA1PlatformModules {
     $hashCommands = @(Get-Command 'Microsoft.PowerShell.Utility\Get-FileHash' -All -ErrorAction Stop)
     if ($hashCommands.Count -ne 1 -or [string]$hashCommands[0].CommandType -cne $expectedHashCommandType -or $hashCommands[0].ModuleName -cne 'Microsoft.PowerShell.Utility' -or $hashCommands[0].Source -cne 'Microsoft.PowerShell.Utility') { throw 'Module-qualified SHA-256 command identity mismatch.' }
 }
-Import-G3E2RA1PlatformModules
+. Import-G3E2RA1PlatformModules
 
 function Get-G3E2RA1Sha256 {
     param([Parameter(Mandatory = $true)][string]$LiteralPath)
@@ -112,17 +112,73 @@ function Get-G3E2RA1Context {
     return [pscustomobject]@{ Root=$root; Overlay=$overlay; ARoot=$aRoot; G3E1Root=$g3e1Root; Dependencies=$dependencies; Gates=$gates; RuntimeRoles=$runtimes; InvariantContract=$invariantContract; SealContract=$sealContract; A1Manifest=$a1Manifest }
 }
 
+function Resolve-G3E2RA1ExplicitExternalRuntime {
+    param(
+        [Parameter(Mandatory = $true)][string]$RuntimeId,
+        [Parameter(Mandatory = $true)][string]$Executable,
+        [Parameter(Mandatory = $true)][string]$ExpectedSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedVersion,
+        [Parameter(Mandatory = $true)][string]$VersionProbeId
+    )
+    if (-not [IO.Path]::IsPathRooted($Executable)) { throw "$RuntimeId executable path must be absolute." }
+    $requestedPath = [IO.Path]::GetFullPath($Executable)
+    $resolvedItems = @(Resolve-Path -LiteralPath $Executable -ErrorAction Stop)
+    if ($resolvedItems.Count -ne 1) { throw "$RuntimeId executable path must resolve exactly once." }
+    $resolvedPath = [IO.Path]::GetFullPath([string]$resolvedItems[0].Path)
+    if (-not [string]::Equals($requestedPath,$resolvedPath,[StringComparison]::OrdinalIgnoreCase)) { throw "$RuntimeId executable path is not canonical." }
+    $item = Get-Item -LiteralPath $resolvedPath -Force -ErrorAction Stop
+    if ($item.PSIsContainer -or -not ($item -is [IO.FileInfo])) { throw "$RuntimeId executable must be a regular file." }
+    if (($item.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) { throw "$RuntimeId executable must not be a reparse point." }
+    $cursor = $item.Directory
+    while ($null -ne $cursor) {
+        if (($cursor.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0) { throw "$RuntimeId executable path must not traverse a reparse point." }
+        $cursor = $cursor.Parent
+    }
+    if ($ExpectedSha256 -cnotmatch '^[0-9A-F]{64}$') { throw "$RuntimeId expected SHA-256 is invalid." }
+    $actualSha256 = Get-G3E2RA1Sha256 -LiteralPath $resolvedPath
+    if ($actualSha256 -cne $ExpectedSha256) { throw "$RuntimeId executable SHA-256 mismatch." }
+    $stream = [IO.File]::Open($resolvedPath,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::Read)
+    try {
+        $reader = [IO.BinaryReader]::new($stream)
+        if ($reader.ReadUInt16() -ne 0x5A4D) { throw "$RuntimeId executable is not a PE image." }
+        $stream.Position = 0x3C
+        $peOffset = $reader.ReadInt32()
+        if ($peOffset -lt 0 -or $peOffset -gt ($stream.Length - 6)) { throw "$RuntimeId PE header offset is invalid." }
+        $stream.Position = $peOffset
+        if ($reader.ReadUInt32() -ne 0x00004550) { throw "$RuntimeId PE signature mismatch." }
+        if ($reader.ReadUInt16() -ne 0x8664) { throw "$RuntimeId executable architecture must be x64." }
+    }
+    finally { if ($null -ne $reader) { $reader.Dispose() }; $stream.Dispose() }
+    $versionOutput = @(& $resolvedPath --version 2>&1)
+    $processExitCode = $LASTEXITCODE
+    $version = [string](@($versionOutput) | Select-Object -First 1)
+    if ($processExitCode -ne 0 -or -not [string]::Equals($version.Trim(),$ExpectedVersion,[StringComparison]::Ordinal)) { throw "$RuntimeId executable version mismatch." }
+    return [pscustomobject]@{ runtime_id=$RuntimeId; executable_path=$resolvedPath; executable_sha256=$actualSha256; version=$version.Trim(); version_probe_id=$VersionProbeId }
+}
+
 function Get-G3E2RA1RuntimeBindings {
-    param([Parameter(Mandatory = $true)][object]$Context,[Parameter(Mandatory = $true)][string]$PythonExecutable)
-    $candidates = @{ POWERSHELL_HOST=(Get-Process -Id $PID).Path; PYTHON_AGENT=(Resolve-Path -LiteralPath $PythonExecutable).Path; RIPGREP=[string]((Get-Command rg -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source); GIT=[string]((Get-Command git -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source) }
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    $external = @{
+        RIPGREP = Resolve-G3E2RA1ExplicitExternalRuntime -RuntimeId RIPGREP -Executable $RipgrepExecutable -ExpectedSha256 $ExpectedRipgrepSha256 -ExpectedVersion $ExpectedRipgrepVersion -VersionProbeId ripgrep-version
+        GIT = Resolve-G3E2RA1ExplicitExternalRuntime -RuntimeId GIT -Executable $GitExecutable -ExpectedSha256 $ExpectedGitSha256 -ExpectedVersion $ExpectedGitVersion -VersionProbeId git-version
+    }
+    $candidates = @{ POWERSHELL_HOST=(Get-Process -Id $PID).Path; PYTHON_AGENT=((Resolve-Path -LiteralPath $PythonExecutable).Path) }
     $bindings = [Collections.Generic.List[object]]::new()
     foreach ($role in $Context.RuntimeRoles) {
+        if ($external.ContainsKey([string]$role.runtime_id)) { $bindings.Add($external[[string]$role.runtime_id]); continue }
         $path = [IO.Path]::GetFullPath($candidates[[string]$role.runtime_id])
         switch ([string]$role.runtime_id) {
             'POWERSHELL_HOST' { $versionOutput = & $path -NoProfile -Command '$PSVersionTable.PSVersion.ToString()' 2>&1; $versionPattern = '^\d+\.' }
             'PYTHON_AGENT' { $versionOutput = & $path --version 2>&1; $versionPattern = '^Python \d+\.' }
-            'RIPGREP' { $versionOutput = & $path --version 2>&1; $versionPattern = '^ripgrep \d+\.' }
-            'GIT' { $versionOutput = & $path --version 2>&1; $versionPattern = '^git version \d+\.' }
             default { throw "Unknown runtime role: $($role.runtime_id)" }
         }
         $version = @($versionOutput) | Select-Object -First 1

@@ -3,6 +3,12 @@ param(
     [Parameter(Mandatory = $true)][string]$VaultRoot,
     [string]$OverlayRoot,
     [Parameter(Mandatory = $true)][string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [switch]$Json
 )
 
@@ -41,13 +47,13 @@ function Parse-Tool {
 
 $aFingerprintBefore = Get-G3E2RA1FingerprintV2 -LiteralPath $context.ARoot
 $g3e1FingerprintBefore = Get-G3E2RA1FingerprintV2 -LiteralPath $context.G3E1Root
-$git = [string]((Get-Command git -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source)
+$git = $GitExecutable
 Assert-G3E2RA1GitStagingEmpty -VaultRoot $root -GitExecutable $git
 
 $manifestRows = @(Import-Csv -LiteralPath $a1Manifest)
 Add-Check 'T01-EXACT-A1-INVENTORY' ($manifestRows.Count -eq 14 -and @(Get-ChildItem -LiteralPath $overlay -Recurse -File).Count -eq 15) '14 bound plus manifest'
 Add-Check 'T02-THREE-ROOT-LOCK' ((Import-Csv -LiteralPath (Join-Path $overlay 'dependency-lock.csv')).Count -eq 3) 'three dependency rows'
-Add-Check 'T03-A-TRANSITIVE-CLOSURE' ((Get-G3E2RA1Sha256 -LiteralPath $context.Dependencies['G3E2R-A-BUNDLE']) -ceq '5114660FB6968CF5979F17AC7ECC95833A69C26E5C94C633B1E955C48393C055') 'A root exact'
+Add-Check 'T03-A-TRANSITIVE-CLOSURE' ((Get-G3E2RA1Sha256 -LiteralPath $context.Dependencies['G3E2R-A-BUNDLE']) -ceq '20344C94B7C216C8FE46E55F32453972079165CF3DD9DD38014FB2EB7357D867') 'A root exact'
 Add-Check 'T04-G3E1-TRANSITIVE-CLOSURE' ((Get-G3E2RA1Sha256 -LiteralPath $context.Dependencies['G3E1-BUNDLE']) -ceq 'D581C9535B6359F7058DA33C3CB9E229EC8EF1C8C2C6C4D49311C75189D20E50') 'G3E-1 root exact'
 
 $sealContract = $context.SealContract
@@ -57,7 +63,7 @@ Add-Check 'T07-BUNDLE-BINDINGS' (@($sealContract.required_bundle_binding_ids).Co
 Add-Check 'T08-EXECUTION-BINDINGS' (@($sealContract.required_execution_binding_ids).Count -eq 20) '20 executable inputs'
 Add-Check 'T09-ARTIFACT-BINDINGS' (@($sealContract.required_artifact_binding_ids).Count -eq 15) '15 B artifacts'
 Add-Check 'T10-FOUR-RUNTIME-ROLES' (@($sealContract.required_runtime_ids).Count -eq 4 -and @($context.RuntimeRoles).Count -eq 4) 'four runtime roles'
-$runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+$runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
 Add-Check 'T11-RUNTIME-IDENTITIES' (@($runtimeBindings | Where-Object { $_.executable_sha256 -match '^[A-F0-9]{64}$' -and -not [string]::IsNullOrWhiteSpace($_.version) }).Count -eq 4) 'path, hash, version and probe bound'
 
 $invariant = $context.InvariantContract
@@ -81,13 +87,13 @@ $forward = Join-Path $overlay 'tools/invoke-g3e2-transaction-v2.ps1'
 $reverse = Join-Path $overlay 'tools/invoke-g3e2-reverse-v2.ps1'
 $finalizer = Join-Path $overlay 'tools/finalize-g3e2r-live-seal-v2.ps1'
 Add-Check 'T21-TOOL-PARSE' (@(Parse-Tool $forward).Count -eq 0 -and @(Parse-Tool $reverse).Count -eq 0 -and @(Parse-Tool $finalizer).Count -eq 0 -and @(Parse-Tool (Join-Path $overlay 'tools/g3e2r-a1-guard-lib.psm1')).Count -eq 0) 'four PowerShell tools parse'
-$forwardValidate = Invoke-JsonScript -Script $forward -Arguments @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-Json')
+$forwardValidate = Invoke-JsonScript -Script $forward -Arguments @('-Mode','Validate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
 Add-Check 'T22-FORWARD-VALIDATE' ($forwardValidate.verdict -ceq 'PASS' -and $forwardValidate.forward -eq 19) 'v2 forward validates'
-$preHold = Invoke-JsonScript -Script $forward -Arguments @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-FailAtStep','FWD-009','-Json')
+$preHold = Invoke-JsonScript -Script $forward -Arguments @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-FailAtStep','FWD-009','-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
 Add-Check 'T23-PREMUTATION-HOLD' ($preHold.verdict -ceq 'HOLD_NO_MUTATION' -and -not $preHold.reverse_invoked) 'FWD-009 failure remains no-mutation'
-$postReverse = Invoke-JsonScript -Script $forward -Arguments @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-FailAtStep','FWD-010','-Json')
+$postReverse = Invoke-JsonScript -Script $forward -Arguments @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-FailAtStep','FWD-010','-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
 Add-Check 'T24-POSTMUTATION-AUTO-REVERSE' ($postReverse.verdict -ceq 'REVERSED_ROUTING_FROZEN' -and $postReverse.reverse_invoked -and @($postReverse.reverse_steps).Count -eq 12) 'FWD-010 failure authorizes full reverse'
-$reverseSimulation = Invoke-JsonScript -Script $reverse -Arguments @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-Json')
+$reverseSimulation = Invoke-JsonScript -Script $reverse -Arguments @('-Mode','Simulate','-VaultRoot',$root,'-ExpectedA1Hash',$expectedA1,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
 Add-Check 'T25-REVERSE-IDEMPOTENT-CONTRACT' ($reverseSimulation.verdict -ceq 'REVERSED_ROUTING_FROZEN' -and $reverseText.Contains('$alreadyWritten') -and $reverseText.Contains('-Use Reverse') -and $reverseText.Contains('-AdvisoryExternalDrift')) 'restartable witness, expiry-independent reverse and non-blocking external drift'
 
 $aTest = Join-Path $context.ARoot 'tools/test-g3e2r-bundle.ps1'

@@ -9,3 +9,7 @@ The suite covers the exact fifteen-file overlay and one-row A1R3 dependency lock
 All mutation-like tests run only in a verified system-temporary root. The tested production helpers are the same helpers called by Finalizer Prepare/Seal and Forward/Reverse. The suite adds no fixture switch or alternate live path. It never invokes Finalizer Seal, Forward Apply, Reverse Apply, a capability probe, a component mutation, an authority change, staging, or a commit.
 
 The final machine verdict must be PASS, contain exactly 64 check records, report temporary_fixture_removed true, and retain live_mutation none, live_capability_probe not-run, b_candidate absent, snapshot absent, live_seal absent, and routing_state frozen.
+
+## Explicit external runtime closure
+
+A1R4 accepts `RipgrepExecutable`, `ExpectedRipgrepSha256`, `ExpectedRipgrepVersion`, `GitExecutable`, `ExpectedGitSha256`, and `ExpectedGitVersion` as mandatory inputs on every published entrypoint. The values are forwarded through every runtime-binding boundary to A1. A1 requires canonical absolute literal regular-file paths without reparse traversal, exact static SHA-256 and version matches, x64 PE architecture, and launches each version probe only through the verified absolute path. Ambient `Get-Command rg` and `Get-Command git` resolution is forbidden. All four runtime bindings remain compared byte-for-byte with the seal or capability-probe authority before stateful execution.

@@ -21,7 +21,7 @@ function Import-G3E2RA1R2PlatformModules {
     $hashCommands = @(Get-Command 'Microsoft.PowerShell.Utility\Get-FileHash' -All -ErrorAction Stop)
     if ($hashCommands.Count -ne 1 -or [string]$hashCommands[0].CommandType -cne $expectedHashCommandType -or $hashCommands[0].ModuleName -cne 'Microsoft.PowerShell.Utility' -or $hashCommands[0].Source -cne 'Microsoft.PowerShell.Utility') { throw 'Module-qualified SHA-256 command identity mismatch.' }
 }
-Import-G3E2RA1R2PlatformModules
+. Import-G3E2RA1R2PlatformModules
 
 function Get-G3E2RA1R2Sha256 {
     param([Parameter(Mandatory=$true)][string]$LiteralPath)
@@ -228,11 +228,21 @@ function Enter-G3E2RA1R2ClosureLock {
 function Test-G3E2RA1R2ClosureLock { param([object]$Lock);foreach($item in @($Lock.Handles)){$item.Stream.Position=0;$sha=[Security.Cryptography.SHA256]::Create();try{$hash=([BitConverter]::ToString($sha.ComputeHash($item.Stream))).Replace('-','')}finally{$sha.Dispose()};if($hash-cne$item.Sha256-or($null-ne$item.Bytes-and$item.Stream.Length-ne[int64]$item.Bytes)){throw "Held closure changed: $($item.Path)"}} }
 function Exit-G3E2RA1R2ClosureLock { param([object]$Lock);if($null-ne$Lock){foreach($item in @($Lock.Handles|Sort-Object Path -Descending)){$item.Stream.Dispose()}} }
 
-function Get-G3E2RA1R2RuntimeBindings { param([object]$Context,[string]$PythonExecutable);return @(Get-G3E2RA1RRuntimeBindings -Context $Context.A1RContext -PythonExecutable $PythonExecutable) }
+function Get-G3E2RA1R2RuntimeBindings {
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1RRuntimeBindings -Context $Context.A1RContext -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
+}
 function Test-G3E2RA1R2BManifest {
     param([object]$Context,[string]$ExpectedBHash,[switch]$AllowSealed)
-    $bRoot=Resolve-G3E2RA1R2InRoot $Context.Root ([string]$Context.BContract.canonical_root);$bManifest=Join-Path $bRoot ([string]$Context.BContract.bundle_manifest_filename)
-    if(-not[string]::IsNullOrWhiteSpace($ExpectedBHash)-and(Test-Path -LiteralPath $bManifest -PathType Leaf)-and(Get-G3E2RA1R2Sha256 $bManifest)-cne$ExpectedBHash.ToUpperInvariant()){throw 'Expected-B-Hash mismatch.'}
     return Test-G3E2RA1RBManifest -Context $Context.A1RContext -ExpectedBHash $ExpectedBHash -AllowSealed:$AllowSealed
 }
 function Get-G3E2RA1R2Artifact { param([object]$Seal,[string]$Id);return Get-G3E2RA1RArtifact $Seal $Id }
