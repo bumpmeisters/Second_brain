@@ -22,18 +22,24 @@ Import-Module Microsoft.PowerShell.Utility -RequiredVersion 3.1.0.0 -Force
 if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptRoot '..'}
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\')
 $overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
-$expectedA1='DC3C75F23A565E8FEDEB65E861FD54BF89B7968F4F3E8D047CCD89490DF92260'
-$expectedA1R='B16723418BD1235B3A1458070B3CAADC5C0BCDFAC0368AD520ADE2E5028805C6'
-$expectedA1R2='D7C7C07717ECC297A2CBF00DCC8D418FC7323587967EFE16D7E8C8BAE670CD1D'
-$expectedA1R3='562FDE33973C0AEA7A447D6C04F97940F693BDBE7AD16A23221B31EA8DAEAB65'
-$expectedA1R4='1EE62A200A5F0BDC059F74055CCC26524D87FA7B1692C4215FFB4ECBFC1A5536'
+$expectedA1='40CC378BD288BFF319A84879A0A93145909ED39F2DEED1E7D8D5B945B8703C4D'
+$expectedA1R='29B5FFA27A975EDEB409D65D829548BC7C622FA46050BFD72F02E2B810BECDCD'
+$expectedA1R2='0CDC7DD779C6B22949C893B07355BC7906C44F45DC8E12D7DF73BC6366654AD0'
+$expectedA1R3='8C0F280FAA7203E8CC895D0593827B4E67246A55D5E6607DE175DF4BA689A8F4'
+$expectedA1R4='187C798C29212C9009DAA1F4B001DD4228AF35EDDF97FC7FFA7195ACD9D96D68'
 $expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
 $expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
-$expectedA1R4Test='8AFEF55AF77FE09CD5EF18B795A53D49CAFE27337D4CF7379A60A3BF7A090854'
+$expectedA1R4Test='534823DA95F365DCF774FCF3B2B230CA27F46738BE3CE8046993C2ED556E0395'
 $canonicalPs7Hash='DB6DD81183FE57D22E03B911EC9A30A2FD7C40542E97743615355A6FB44F458F'
 $canonicalPs7Version='7.6.4'
+function Get-A1R5RTestFileSha256 {
+    param([Parameter(Mandatory=$true)][string]$LiteralPath)
+    $sha=[Security.Cryptography.SHA256]::Create()
+    try{return ([BitConverter]::ToString($sha.ComputeHash([IO.File]::ReadAllBytes($LiteralPath)))).Replace('-','')}
+    finally{$sha.Dispose()}
+}
 $manifest=Join-Path $overlay 'a1r5r-bundle-manifest.csv'
-$expectedA1R5R=(Get-FileHash -LiteralPath $manifest -Algorithm SHA256).Hash.ToUpperInvariant()
+$expectedA1R5R=(Get-A1R5RTestFileSha256 -LiteralPath $manifest)
 Import-Module (Join-Path $overlay 'tools/g3e2r-a1r5r-guard-lib.psm1') -Force
 $context=Get-G3E2RA1R5RContext -VaultRoot $root -OverlayRoot $overlay -ExpectedA1Hash $expectedA1 -ExpectedA1RHash $expectedA1R -ExpectedA1R2Hash $expectedA1R2 -ExpectedA1R3Hash $expectedA1R3 -ExpectedA1R4Hash $expectedA1R4 -ExpectedA1R5RHash $expectedA1R5R
 $selfReceipt=Initialize-G3E2RA1R5REntrypoint -Context $context -ComponentId 'C50-TEST'
@@ -87,7 +93,7 @@ Add-Check T10-C6-COMPONENTS (@($runtime.components).Count-eq 6-and$runtime.platf
 $o10=@($runtime.operative_bindings|Where-Object binding_id -CEQ O10)[0]
 $o20=@($runtime.operative_bindings|Where-Object binding_id -CEQ O20)[0]
 Add-Check T11-O10-BINDING ($o10.sha256-ceq'DC5F59958CCADF861F34138EE5DE31F44AE753525ABFBF759CC0BE864F4B4820'-and[int64]$o10.bytes-eq 12131) 'transaction library exact'
-Add-Check T12-O20-BINDING ($o20.sha256-ceq'42928549F43A58704A236259283B5F7F655347BB4DE31B4220418CC08981072E'-and[int64]$o20.bytes-eq 55453) 'A1R4 guard exact'
+Add-Check T12-O20-BINDING ($o20.sha256-ceq'5D60B841E619CA9A0A3BE7A5D829B8EC69CB9C391A77A2A5A478C13720060478'-and[int64]$o20.bytes-eq 54935) 'A1R4 guard exact'
 Add-Check T13-IMPORT-ORDER ((@($runtime.import_order)-join',')-ceq'P10,P20,O10,O20') 'exact initialization order'
 Add-Check T14-CANONICAL-CONTEXT ($context.Overlay-ceq$overlay-and$context.A1R4Context.Overlay-ceq$context.A1R4Root) 'canonical A1R5R over A1R4'
 $artifactPaths=Get-G3E2RA1R5RArtifactPaths $context
@@ -157,7 +163,7 @@ Add-Check T45-POLICY-SAFE-S5-CONTRACTS $s5ok 'policy-safe S5 contracts exact'
 $ps7=[IO.Path]::GetFullPath($PowerShell7Executable)
 if(-not(Test-Path -LiteralPath $ps7 -PathType Leaf)){throw 'T46 PowerShell 7 executable is missing.'}
 $ps7Item=Get-Item -LiteralPath $ps7 -Force
-$ps7Hash=(Get-FileHash -LiteralPath $ps7 -Algorithm SHA256).Hash.ToUpperInvariant()
+$ps7Hash=(Get-A1R5RTestFileSha256 -LiteralPath $ps7)
 if($ps7Item.Attributes-band[IO.FileAttributes]::ReparsePoint-or$ps7Hash-cne$ExpectedPowerShell7Sha256.ToUpperInvariant()-or$ps7Hash-cne$canonicalPs7Hash-or$ExpectedPowerShell7Version-cne$canonicalPs7Version){throw 'T46 PowerShell 7 content binding failed.'}
 $probeLines=@(& $ps7 -NoProfile -NonInteractive -Command '$o=[ordered]@{version=$PSVersionTable.PSVersion.ToString();edition=$PSVersionTable.PSEdition;is64=[Environment]::Is64BitProcess;process=(Get-Process -Id $PID).Path};$o|ConvertTo-Json -Compress' 2>&1)
 if($LASTEXITCODE-ne 0-or$probeLines.Count-ne 1){throw 'T46 PowerShell 7 clean JSON probe failed.'}
@@ -210,12 +216,12 @@ Import-Module $Module -Force
 $null=Get-G3E2RA1R5RContext -VaultRoot $VaultRoot -OverlayRoot $OverlayRoot -ExpectedA1Hash $A1 -ExpectedA1RHash $A1R -ExpectedA1R2Hash $A1R2 -ExpectedA1R3Hash $A1R3 -ExpectedA1R4Hash $A1R4 -ExpectedA1R5RHash $A1R5R
 $prefix='wiki/_outputs/marketing-system-architecture-v0-2/contextops-cutover-g3e'
 $specs=@(
-    [pscustomobject]@{stage='A1R5R';module=Join-Path $OverlayRoot 'tools/g3e2r-a1r5r-guard-lib.psm1';command='Get-G3E2RA1R5RSha256';local_contract=$false},
-    [pscustomobject]@{stage='A1R4';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1');command='Get-G3E2RA1R4Sha256';local_contract=$true},
-    [pscustomobject]@{stage='A1R3';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r3/tools/g3e2r-a1r3-guard-lib.psm1');command='Get-G3E2RA1R3Sha256';local_contract=$true},
-    [pscustomobject]@{stage='A1R2';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r2/tools/g3e2r-a1r2-guard-lib.psm1');command='Get-G3E2RA1R2Sha256';local_contract=$true},
-    [pscustomobject]@{stage='A1R';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r/tools/g3e2r-a1r-guard-lib.psm1');command='Get-G3E2RA1RSha256';local_contract=$true},
-    [pscustomobject]@{stage='A1';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1/tools/g3e2r-a1-guard-lib.psm1');command='Get-G3E2RA1Sha256';local_contract=$true}
+    [pscustomobject]@{stage='A1R5R';module=Join-Path $OverlayRoot 'tools/g3e2r-a1r5r-guard-lib.psm1';command='Get-G3E2RA1R5RSha256';byte_command='Get-G3E2RA1R5RBytesSha256';local_contract=$false},
+    [pscustomobject]@{stage='A1R4';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r4/tools/g3e2r-a1r4-guard-lib.psm1');command='Get-G3E2RA1R4Sha256';byte_command='Get-G3E2RA1R4BytesSha256';local_contract=$true},
+    [pscustomobject]@{stage='A1R3';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r3/tools/g3e2r-a1r3-guard-lib.psm1');command='Get-G3E2RA1R3Sha256';byte_command='Get-G3E2RA1R3BytesSha256';local_contract=$true},
+    [pscustomobject]@{stage='A1R2';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r2/tools/g3e2r-a1r2-guard-lib.psm1');command='Get-G3E2RA1R2Sha256';byte_command='Get-G3E2RA1R2BytesSha256';local_contract=$true},
+    [pscustomobject]@{stage='A1R';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1r/tools/g3e2r-a1r-guard-lib.psm1');command='Get-G3E2RA1RSha256';byte_command='Get-G3E2RA1RBytesSha256';local_contract=$true},
+    [pscustomobject]@{stage='A1';module=Join-Path $VaultRoot ($prefix+'/g3e-2r-a1/tools/g3e2r-a1-guard-lib.psm1');command='Get-G3E2RA1Sha256';byte_command='Get-G3E2RA1BytesSha256';local_contract=$true}
 )
 $sha=[Security.Cryptography.SHA256]::Create()
 try{$expected=([BitConverter]::ToString($sha.ComputeHash([IO.File]::ReadAllBytes($SyntheticBFile)))).Replace('-','')}
@@ -230,13 +236,13 @@ foreach($spec in $specs){
         $utilityManifest=[IO.Path]::GetFullPath((Join-Path $PSHOME 'Modules/Microsoft.PowerShell.Utility/Microsoft.PowerShell.Utility.psd1'))
         $management=@(Get-Module Microsoft.PowerShell.Management|Where-Object{$_.Version-eq[version]'3.1.0.0'-and$_.Path-and[IO.Path]::GetFullPath($_.Path).Equals($managementManifest,[StringComparison]::OrdinalIgnoreCase)})
         $utility=@(Get-Module Microsoft.PowerShell.Utility|Where-Object{$_.Version-eq[version]'3.1.0.0'-and$_.Path-and[IO.Path]::GetFullPath($_.Path).Equals($utilityManifest,[StringComparison]::OrdinalIgnoreCase)})
-        $commands=@(Get-Command 'Microsoft.PowerShell.Utility\Get-FileHash' -All -ErrorAction Stop)
-        [pscustomobject]@{management=($management.Count-ge 1);utility=($utility.Count-ge 1);command=($commands.Count-eq 1-and[string]$commands[0].CommandType-ceq'Function'-and$commands[0].ModuleName-ceq'Microsoft.PowerShell.Utility'-and$commands[0].Source-ceq'Microsoft.PowerShell.Utility')}
+        [pscustomobject]@{management=($management.Count-ge 1);utility=($utility.Count-ge 1)}
     }
     $text=[IO.File]::ReadAllText($resolved)
-    $staticOk=(-not[bool]$spec.local_contract)-or($text.Contains('-Scope Local')-and$text.Contains('$PSHOME')-and$text.Contains('Microsoft.PowerShell.Utility\Get-FileHash'))
+    $staticOk=(-not[bool]$spec.local_contract)-or($text.Contains('-Scope Local')-and$text.Contains('$PSHOME')-and$text.Contains('[IO.File]::ReadAllBytes($LiteralPath)')-and$text.Contains([string]$spec.byte_command)-and(-not$text.Contains('Get-FileHash')))
+    $staticOk=$staticOk-and(-not$text.Contains('Get-FileHash'))
     $value=& $loaded[0] {param([string]$Command,[string]$LiteralPath);& $Command -LiteralPath $LiteralPath} ([string]$spec.command) $SyntheticBFile
-    $proofs.Add([pscustomobject]@{stage=[string]$spec.stage;sha256=[string]$value;module_scope=([bool]$scope.management-and[bool]$scope.utility-and[bool]$scope.command-and$staticOk)})
+    $proofs.Add([pscustomobject]@{stage=[string]$spec.stage;sha256=[string]$value;module_scope=([bool]$scope.management-and[bool]$scope.utility-and$staticOk)})
 }
 [pscustomobject]@{verdict='PASS';edition=[string]$PSVersionTable.PSEdition;is64=[Environment]::Is64BitProcess;expected_sha256=$expected;proofs=@($proofs)}|ConvertTo-Json -Depth 6 -Compress
 '@

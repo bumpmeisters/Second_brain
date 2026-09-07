@@ -4,8 +4,8 @@ $ErrorActionPreference = 'Stop'
 function Import-G3E2RA1R2PlatformModules {
     $edition = [string]$PSVersionTable.PSEdition
     switch -CaseSensitive ($edition) {
-        'Desktop' { $requiredVersion = [version]'3.1.0.0'; $expectedHashCommandType = 'Function' }
-        'Core' { $requiredVersion = [version]'7.0.0.0'; $expectedHashCommandType = 'Cmdlet' }
+        'Desktop' { $requiredVersion = [version]'3.1.0.0' }
+        'Core' { $requiredVersion = [version]'7.0.0.0' }
         default { throw "Unsupported PowerShell edition: $edition" }
     }
     foreach ($moduleName in @('Microsoft.PowerShell.Management','Microsoft.PowerShell.Utility')) {
@@ -18,18 +18,23 @@ function Import-G3E2RA1R2PlatformModules {
         $matchingImported = @($imported | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
         if ($imported.Count -ne 1 -or $matchingImported.Count -ne 1) { throw "Imported platform module identity mismatch: $moduleName $requiredVersion $edition" }
     }
-    $hashCommands = @(Get-Command 'Microsoft.PowerShell.Utility\Get-FileHash' -All -ErrorAction Stop)
-    if ($hashCommands.Count -ne 1 -or [string]$hashCommands[0].CommandType -cne $expectedHashCommandType -or $hashCommands[0].ModuleName -cne 'Microsoft.PowerShell.Utility' -or $hashCommands[0].Source -cne 'Microsoft.PowerShell.Utility') { throw 'Module-qualified SHA-256 command identity mismatch.' }
 }
 . Import-G3E2RA1R2PlatformModules
 
 function Get-G3E2RA1R2Sha256 {
     param([Parameter(Mandatory=$true)][string]$LiteralPath)
     if(-not(Test-Path -LiteralPath $LiteralPath -PathType Leaf)){throw "File is missing: $LiteralPath"}
-    return (Microsoft.PowerShell.Utility\Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RA1R2BytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RA1R2Bytes { param([string]$LiteralPath) return (Get-Item -LiteralPath $LiteralPath -Force).Length }
+
+function Get-G3E2RA1R2BytesSha256 {
+    param([Parameter(Mandatory=$true)][AllowEmptyCollection()][byte[]]$Bytes)
+    $sha=[Security.Cryptography.SHA256]::Create()
+    try{return ([BitConverter]::ToString($sha.ComputeHash($Bytes))).Replace('-','')}
+    finally{$sha.Dispose()}
+}
 
 function Resolve-G3E2RA1R2InRoot {
     param([string]$Root,[string]$RepositoryPath,[switch]$ForMutation)

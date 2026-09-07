@@ -17,7 +17,7 @@ $ErrorActionPreference = 'Stop'
 if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptRoot '..'}
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
 Import-Module (Join-Path $overlay 'tools/g3e2r-a1r-guard-lib.psm1') -Force
-$manifest=Join-Path $overlay 'a1r-bundle-manifest.csv';$expectedA1R=Get-G3E2RA1RSha256 $manifest;$expectedA1='DC3C75F23A565E8FEDEB65E861FD54BF89B7968F4F3E8D047CCD89490DF92260'
+$manifest=Join-Path $overlay 'a1r-bundle-manifest.csv';$expectedA1R=Get-G3E2RA1RSha256 $manifest;$expectedA1='40CC378BD288BFF319A84879A0A93145909ED39F2DEED1E7D8D5B945B8703C4D'
 $context=Get-G3E2RA1RContext -VaultRoot $root -OverlayRoot $overlay -ExpectedA1Hash $expectedA1 -ExpectedA1RHash $expectedA1R
 $checks=[Collections.Generic.List[string]]::new();$powerShell=(Get-Process -Id $PID).Path
 
