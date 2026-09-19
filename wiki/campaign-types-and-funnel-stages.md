@@ -2,6 +2,7 @@
 type: concept
 status: active
 sources:
+  - "raw/Clippings/Your Lead Scoring is Completely Broken!  Episode 3 - B2B Effectiveness.md"
   - raw/assets/01_Marketing_Strategie/Campaign_Types_und_Flows/2025_campaign types_brnd_DemandDen_LeadGen_Conversion.pptx
   - raw/assets/01_Marketing_Strategie/Campaign_Types_und_Flows/2025_campaign types_brand_DemandGen_LeadGEN_Conversion.docx
   - raw/Clippings/EP 48 The 955 Rule In-Market vs. Out-of-Market Buyers with John Dawes @ Ehrenberg-Bass Institute.md
@@ -10,7 +11,7 @@ sources:
   - raw/Clippings/What’s ahead for virtual events in 2026 — and what marketers should do about it.md
   - raw/imports/automated-clippings/youtube/UCGtXqPiNV8YC0GMUzY-EUFg/2026-08-04--9zBThLCpPh4.md
 created: 2026-06-03
-updated: 2026-08-16
+updated: 2026-09-09
 ---
 
 # Campaign Types and Funnel Stages
@@ -56,6 +57,16 @@ During the event, capture attendance mode, sessions, questions, polls, resource 
 After the event, distinguish live attendees, on-demand participants, registrants who were absent, highly engaged participants, and explicit hand raisers. Give each meaningful segment an owned next step, preserve the context behind the response, and set a service-level expectation for time-sensitive requests. Repurpose useful material into chapters, clips, summaries, guides, or later sessions only when it preserves the source meaning and serves a defined audience need. Review outcomes at time horizons appropriate to the original objective, then feed the learning into the next event brief (source: What’s ahead for virtual events in 2026 — and what marketers should do about it.md; vendor-hosted mixed practitioner webinar).
 
 Reported pipeline multipliers, attendance and travel trends, anonymous polls, and vendor outcomes are excluded. Event influence remains distinct from causal attribution.
+## 95:5 und Budgetanteile als kontextabhängige Annahmen behandeln
+
+Bei der Planung Zeitraum, Zielpopulation und Kategoriegrenze explizit machen. Erstkäufer, Wiederkäufer, Wechsel zu anderen Lösungen und Marktaustritte unterscheiden. Einen pauschalen In-Market-Anteil weder als universelle Gegenwartszahl noch als direkte Budgetformel verwenden. Kategorieentwicklung, eigener Umsatz und Marktanteil getrennt beobachten.
+
+Das Interview belegt keine allgemeine Ableitung von 5% oder 25% aus einer Umsatzwachstumsrate. Marktumsatz kann auch durch Preise, Mix und Nutzung wachsen; Suchvolumen allein beweist keine Schrumpfung. Die behauptete NBD-Herleitung, Brand-Anteile, Gedächtnisfristen und 70%-These bleiben needs verification.
+
+Methodische Ableitung P47-C13 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/Your Lead Scoring is Completely Broken!  Episode 3 - B2B Effectiveness.md` — 5:06–17:12; 20:55–26:24; 43:15–45:18; 51:26–54:37; practitioner.
+
 ## Related pages
 
 - [[marketing-strategy-library]]

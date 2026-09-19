@@ -1,0 +1,17 @@
+{
+  "id": "W065",
+  "url": "https://support.google.com/analytics/answer/15258820?hl=en",
+  "research_briefs": [
+    "f05-dark-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:53.157958+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w065.json",
+  "title": "[GA4] Understand (direct) / (none) traffic - Analytics Help",
+  "final_url": "https://support.google.com/analytics/answer/15258820?hl=en",
+  "characters": 8846,
+  "sha256": "0d2e23d03b9173712af9723a027d9aba6d9f62d392fb26537f80ef28ad495898",
+  "http_status": 200
+}

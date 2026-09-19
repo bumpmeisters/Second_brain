@@ -1,0 +1,17 @@
+{
+  "id": "W097",
+  "url": "https://www.gartner.com/en/documents/6909166",
+  "research_briefs": [
+    "t04-sales-to-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:03:05.612238+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w097.json",
+  "title": "Confront Conflict Within Buying Teams to Reduce Decision Delays",
+  "final_url": "https://www.gartner.com/en/documents/6909166",
+  "characters": 7256,
+  "sha256": "ee6d5a35d37fc2d5e39127f91616865016521c51b370665b1766368ac3b11f7e",
+  "http_status": 200
+}

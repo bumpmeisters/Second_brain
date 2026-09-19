@@ -95,7 +95,8 @@
   "routing_pattern": "^(stay-P[0-9]+|rerouted-P[0-9]+|out-of-scope)$",
   "source_roots": [
     "raw/",
-    "research/"
+    "research/",
+    "repositories/"
   ],
   "protected_roots": [
     "raw/",

@@ -1,0 +1,753 @@
+warning: in the working copy of 'before/projects/marketing-operating-system/AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/AGENTS.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/decisions/log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/decisions/log.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/evals/fixtures/fixture-cases.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/evals/fixtures/fixture-cases.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/evals/fixtures/support/authority-record.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/evals/fixtures/support/authority-record.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/evals/fixtures/support/canonical-artifact.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/evals/fixtures/support/canonical-artifact.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/evals/fixtures/support/specialized-packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/evals/fixtures/support/specialized-packet.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/registry/systems.csv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/registry/systems.csv', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/tools/config/system-registry-schema.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/tools/config/system-registry-schema.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/tools/test-federation-contracts.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/tools/test-federation-contracts.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'before/projects/marketing-operating-system/tools/validate-federation-contracts.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'after/projects/marketing-operating-system/tools/validate-federation-contracts.ps1', LF will be replaced by CRLF the next time Git touches it
+diff --git a/projects/marketing-operating-system/README.md b/projects/marketing-operating-system/README.md
+index 75cfe81..fc86646 100644
+--- a/projects/marketing-operating-system/README.md
++++ b/projects/marketing-operating-system/README.md
+@@ -4,9 +4,9 @@ lifecycle_status: planned
+ system: marketing-operating-system
+ operational_authority: none
+ canonical_authority: none
+-activation_gate: pending
++activation_gate: contextops-cutover-g3e2-recorded
+ created: 2026-08-21
+-updated: 2026-08-21
++updated: 2026-08-22
+ sources:
+   - wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md
+   - wiki/_outputs/marketing-system-architecture-v0-2/review-decision.md
+@@ -15,15 +15,16 @@ sources:
+   - user approval P2B1R, 2026-08-21
+   - user approval P2B2, 2026-08-21
+   - user acceptance P2B2 checkpoint, 2026-08-21
++  - explicit future G3E2 cutover approval and successful transaction evidence required
+ ---
+ 
+ # Marketing Operating System
+ 
+-**Summary**: An inactive control shell for the future thin umbrella that will govern interoperability across the federated Agentic Marketing System.
++**Summary**: An inactive interoperability umbrella for the federated Agentic Marketing System. It records the active Marketing ContextOps root without acquiring operational, canonical, or routing authority itself.
+ 
+ ## Current maturity
+ 
+-This directory was created in approved checkpoint P2A so its mission and authority boundaries can be reviewed before any component moves or routing changes. P2B1 added a draft system registry and two semantic contract drafts. P2B1R corrected their current-versus-target semantics, separated federation boundaries from current controlling authority, narrowed the common handoff scope, and recorded the user-approved G2A ownership directions. P2B2 translated those accepted semantics into two draft declarative schemas, synthetic fixtures, a read-only validator, and an isolated deterministic regression suite; that bounded checkpoint is now accepted. The directory is still not an active operating system, routing entry point, or source of canonical marketing assets.
++This directory was created in approved checkpoint P2A so its mission and authority boundaries could be reviewed before component moves or routing changes. P2B1 added a draft system registry and two semantic contract drafts. P2B1R corrected their current-versus-target semantics, separated federation boundaries from current controlling authority, narrowed the common handoff scope, and recorded the user-approved G2A ownership directions. P2B2 translated those accepted semantics into two draft declarative schemas, synthetic fixtures, a read-only validator, and an isolated deterministic regression suite. The G3E cutover projection updates only the Marketing ContextOps location and its exact references after a successful, separately approved G3E2 transaction. This umbrella remains neither an operating system nor a routing entry point or source of canonical marketing assets.
+ 
+ Current files:
+ 
+@@ -34,18 +35,18 @@ Current files:
+ - `tools/config/` — draft machine-checkable projections of the two semantic contracts; these custom declarative schemas do not claim JSON Schema conformance and grant no authority.
+ - `tools/validate-federation-contracts.ps1` — dependency-free read-only validator for registry and handoff structure, exact references, current authority, ownership, decision boundaries, readiness, and rollback metadata.
+ - `tools/test-federation-contracts.ps1` — isolated regression runner that mutates only temporary copies, checks exact expected failure codes, verifies protected-input hashes, and removes its verified temp root.
+-- `evals/fixtures/` — one accepted registry snapshot, one synthetic positive ContextOps-to-Content handoff, 14 negative cases, and synthetic support artifacts.
++- `evals/fixtures/` — one cutover-aligned registry snapshot, one synthetic positive ContextOps-to-Content handoff, 18 negative cases, and synthetic support artifacts.
+ - `decisions/log.md` — forward record of shell and later authority decisions.
+ 
+-Every P2B1R contract and P2B2 schema remains `draft`; the registry retains draft registration state, and the fixtures are test evidence only. Operational, canonical, and routing authority remain `none` for this umbrella. Target-state registry values, passing validation, and fixture results are evidence for review only and cannot grant current authority.
++Every P2B1R contract and P2B2 schema remains `draft`; the registry retains draft registration state, and the fixtures are test evidence only. Operational, canonical, and routing authority remain `none` for this umbrella. The Marketing ContextOps row records its post-cutover current root and controller; passing validation and fixture results remain review evidence and cannot grant this umbrella authority.
+ 
+ ## Status provenance
+ 
+ Use this README for current maturity and `decisions/log.md` for forward checkpoint decisions. The files under `wiki/_outputs/marketing-system-architecture-v0-2/` remain fingerprint-bound G1 checkpoint evidence; their future-tense Phase 2 statements describe the state at G1 review and are not current navigation. Do not rewrite those historical inputs merely to reflect P2A, P2B1, or P2B1R.
+ 
+-G2A fixes the target ownership direction for Brand, Campaign, `framework-builder`, and governed recursive learning. P2B1R records those decisions without implementing component moves, wrapper cutovers, reference repair, routing, or activation. P2B2 adds only the common registry and source-project handoff validation layer. It does not implement the held Brand, Campaign, runtime, learning, or component-cutover work.
++G2A fixes the target ownership direction for Brand, Campaign, `framework-builder`, and governed recursive learning. P2B1R records those decisions without implementing component moves, wrapper cutovers, routing, or umbrella activation. P2B2 adds only the common registry and source-project handoff validation layer. G3E repairs the ContextOps location and affected references; it does not implement the held Brand, Campaign, runtime, memory, or learning work and does not activate MOS.
+ 
+-The P2B2 isolated suite passes all 16 declared cases: two positive baselines and 14 negative cases covering duplicate or unsafe registry state, unresolved authority and artifacts, ownership gaps, decision leakage, stale readiness, fingerprint mismatch, copied payload, missing rollback, draft-contract misuse, and target-only authority misuse. The runner reports verified temp cleanup and no Vault mutation. This establishes deterministic draft evidence, not operational activation.
++The G3E-aligned isolated suite declares 20 cases: two positive baselines and 18 negative cases. In addition to the P2B2 failure modes, it proves that a legacy ContextOps controller, a controller shared by two systems, a legacy handoff path, and a stale target-contract fingerprint fail closed. The runner reports verified temp cleanup and no Vault mutation. This establishes deterministic draft evidence, not operational activation.
+ 
+ S1 reconciled the separate clipping-disposition and source-coverage inventories before P2B1. That hygiene checkpoint restored global validation but granted no source-reading, semantic-review, architecture, routing, or promotion authority.
+ 
+@@ -69,13 +70,13 @@ It will not own concrete company evidence, market analyses, Brand Core assets, p
+ 
+ ## Current canonical operations
+ 
+-- Marketing ContextOps remains in `projects/No and low code_1st Marketing Agent/`.
++- Marketing ContextOps is controlled from `projects/marketing-contextops/`; the former root is a residual legacy and source-project container only.
+ - Specialized account-based GTM remains in `projects/ABM-operating-system/`.
+ - Shared content operations remain in `projects/content-operating-system/`.
+ - Root knowledge and source custody remain governed by the vault root.
+ 
+-No task should be routed to this shell. The P2B1R registry records current, target, and transition state but cannot activate, deactivate, or reroute any system.
++No task should be routed to this shell. The registry records current, target, and transition state but cannot activate, deactivate, or reroute any system.
+ 
+ ## Next admissible change
+ 
+-P2B2 is accepted as a fingerprint-bound validation checkpoint. Its acceptance does not activate MOS, routing, current authority, ownership transfer, component moves, or reference cutover. The next admissible implementation must be separately planned and approved around one exact transition with its controlling references, dependency inventory, rollback boundary, and regression evidence. The G2A ownership directions are decided, but their held implementations — Brand and Campaign specializations, `framework-builder` move and wrapper cutover, recursive-learning reference repair, ContextOps cutover, runtime, source relocation, integrations, and agents — require their own later gates. Empty future-facing folders remain unauthorized.
++After a successful, explicitly approved G3E2 transaction, the ContextOps root cutover is complete but MOS remains inactive. Any further change must be separately planned and approved. The held implementations — Brand and Campaign specializations, `framework-builder` relocation, runtime or memory, source relocation, integrations, agents, and any recursive-learning automation — require their own later gates. Empty future-facing folders remain unauthorized.
+diff --git a/projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md b/projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md
+index 17e0d7c..a499eac 100644
+--- a/projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md
++++ b/projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md
+@@ -2,21 +2,21 @@
+ type: system-contract
+ status: draft
+ contract_id: mos-cross-system-handoff-envelope
+-version: 0.2.0-draft
++version: 0.3.0-draft
+ system: marketing-operating-system
+ operational_authority: none
+ canonical_authority: none
+ routing_authority: none
+ supersedes: []
+-activation_gate: pending-p2b2
++activation_gate: contextops-cutover-g3e2
+ created: 2026-08-21
+-updated: 2026-08-21
++updated: 2026-08-22
+ sources:
+   - wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md
+   - projects/marketing-operating-system/decisions/log.md
+-  - projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md
+-  - projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md
+-  - projects/No and low code_1st Marketing Agent/frameworks/journey-and-gtm/campaign-role-architecture.md
++  - projects/marketing-contextops/workflows/contextops-handoff-contract.md
++  - projects/marketing-contextops/frameworks/orchestration-and-learning/contextops-stage-contract.md
++  - projects/marketing-contextops/frameworks/journey-and-gtm/campaign-role-architecture.md
+   - projects/content-operating-system/workflows/contextops-intake-contract.md
+ ---
+ 
+@@ -26,7 +26,7 @@ sources:
+ 
+ ## Current effect
+ 
+-This is a semantic P2B1R draft only. It does not route work, create a runtime object, authorize consumption, replace an existing intake contract, or transfer custody of a concrete artifact.
++This 0.3 draft updates the exact active Marketing ContextOps references after the separately approved cutover. It does not grant MOS routing, create a runtime object, authorize consumption, replace a specialized intake contract, or transfer custody of a concrete artifact.
+ 
+ The envelope is a reference manifest, not a payload container. Canonical artifacts remain at their current owner and are linked by exact repository-relative identity. The common envelope wraps or references the active specialized packet; it never mutates, replaces, weakens, or copies that packet.
+ 
+@@ -93,7 +93,7 @@ The later machine-readable schema may normalize representation, but it may not w
+ 
+ Contract and packet references must identify the repository-relative path, contract or packet identifier, version, and SHA-256 fingerprint used for the readiness decision. A reference to a mutable path without its consumed version and fingerprint is not exact enough for a ready handoff.
+ 
+-P2B1R does not retrofit metadata into active legacy contracts. When an active legacy contract has no intrinsic identifier or version, a compatibility reference must use its canonical repository-relative path as the stable legacy identifier, the explicit version state `legacy-unversioned`, and the consumed SHA-256 fingerprint. Any byte change invalidates that reference. This compatibility form does not upgrade, supersede, or transfer ownership of the legacy contract and must be covered by P2B2 fixtures before use.
++G3E does not retrofit metadata into active unversioned specialized contracts. When an active legacy contract has no intrinsic identifier or version, a compatibility reference must use its canonical repository-relative path as the stable legacy identifier, the explicit version state `legacy-unversioned`, and the consumed SHA-256 fingerprint. Any byte change invalidates that reference. This compatibility form does not upgrade, supersede, or transfer ownership of the legacy contract and must be covered by P2B2 fixtures before use.
+ 
+ Each entry in `canonical_artifact_refs` must contain:
+ 
+@@ -139,14 +139,14 @@ Handoffs are consumed through governed pull:
+ - an approved knowledge or context delta is referenced, not broadcast as an automatic instruction;
+ - the consumer acts only through an explicit task or refresh trigger permitted by its active authority;
+ - changed references, hashes, evidence state, or approval state require renewed readiness evaluation;
+-- P2B1R creates no router, watcher, cadence, queue, or autonomous refresh behavior.
++- This revision creates no router, watcher, cadence, queue, or autonomous refresh behavior.
+ 
+ ## Compatibility with current contracts
+ 
+-| Existing artifact | Current role | P2B1R treatment |
++| Existing artifact | Current role | 0.3 treatment |
+ |---|---|---|
+-| `projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md` | ContextOps artifact and stage handoff rules | remains current; not superseded |
+-| `projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md` | one-stage/one-decision boundary | remains current; not superseded |
++| `projects/marketing-contextops/workflows/contextops-handoff-contract.md` | ContextOps artifact and stage handoff rules | remains current; not superseded |
++| `projects/marketing-contextops/frameworks/orchestration-and-learning/contextops-stage-contract.md` | one-stage/one-decision boundary | remains current; not superseded |
+ | `projects/content-operating-system/workflows/contextops-intake-contract.md` | specialized ContextOps-to-Content intake contract | remains current and Content OS-owned |
+ | `projects/content-operating-system/templates/content-context-packet.md` | source-owned reference manifest template | remains current; no duplicate template created |
+ | `projects/content-operating-system/tools/config/content-object-contract.json` | Content OS object-validation contract | remains current and outside this envelope |
+@@ -171,16 +171,10 @@ Blocked handoffs do not authorize downstream completion by assumption.
+ 
+ ## Held specializations
+ 
+-G2A fixes the target ownership direction for Brand and Campaign, but P2B1R creates neither specialization. The future Marketing Operating System may own only shared Brand Core interface and cross-system Campaign Handoff contracts after later explicit gates. Source projects retain concrete Brand Core and Campaign Role Map ownership; Marketing ContextOps retains the campaign-role method; Content OS consumes approved campaign roles rather than invent them; ABM may specialize without copying the canonical method.
++G2A fixes the ownership direction for Brand and Campaign, but this 0.3 ContextOps path revision creates neither specialization. The future Marketing Operating System may own only shared Brand Core interface and cross-system Campaign Handoff contracts after later explicit gates. Source projects retain concrete Brand Core and Campaign Role Map ownership; Marketing ContextOps retains the campaign-role method; Content OS consumes approved campaign roles rather than invent them; ABM may specialize without copying the canonical method.
+ 
+-P2B1R does not create a Brand, Campaign, GTM, runtime, learning, or publication-specific handoff contract. These specializations require their own evidence, schema, fixtures, compatibility review, and explicit gate.
++This revision does not create a Brand, Campaign, GTM, runtime, learning, or publication-specific handoff contract. These specializations require their own evidence, schema, fixtures, compatibility review, and explicit gate.
+ 
+ ## Activation conditions
+ 
+-Before this envelope can become operational, P2B2 or a later reviewed checkpoint must provide:
+-
+-1. a machine-readable schema;
+-2. at least one positive fixture and negative fixtures for missing ownership, decision leakage, stale evidence, and unresolved artifact references;
+-3. a deterministic validator independent from the producer;
+-4. compatibility tests against the active ContextOps and Content OS contracts;
+-5. a rollback test and an explicit activation decision.
++This 0.3 draft remains non-operational for the Marketing Operating System. Any future MOS envelope activation requires a separate reviewed checkpoint with current schemas, fixtures, deterministic validation, compatibility evidence, rollback proof, and explicit human approval. The ContextOps path cutover alone cannot activate this envelope as routing authority.
+diff --git a/projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md b/projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md
+index 0c44492..c3b9c9e 100644
+--- a/projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md
++++ b/projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md
+@@ -2,23 +2,23 @@
+ type: system-contract
+ status: draft
+ contract_id: mos-system-registry-and-ownership
+-version: 0.2.0-draft
++version: 0.3.0-draft
+ system: marketing-operating-system
+ operational_authority: none
+ canonical_authority: none
+ routing_authority: none
+ supersedes: []
+-activation_gate: pending-p2b2
++activation_gate: contextops-cutover-g3e2
+ created: 2026-08-21
+-updated: 2026-08-21
++updated: 2026-08-22
+ sources:
+   - wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md
+   - wiki/_outputs/marketing-system-architecture-v0-2/custody-matrix.csv
+   - wiki/_outputs/marketing-system-architecture-v0-2/review-decision.md
+   - projects/marketing-operating-system/decisions/log.md
+   - wiki/continual-learning-for-agents.md
+-  - projects/No and low code_1st Marketing Agent/frameworks/journey-and-gtm/campaign-role-architecture.md
+-  - projects/No and low code_1st Marketing Agent/frameworks/framework-document-standard.md
++  - projects/marketing-contextops/frameworks/journey-and-gtm/campaign-role-architecture.md
++  - projects/marketing-contextops/frameworks/framework-document-standard.md
+ ---
+ 
+ # System Registry and Ownership Contract
+@@ -27,12 +27,12 @@ sources:
+ 
+ ## Current effect
+ 
+-This contract is a non-operational P2B1R review artifact. It does not activate the Marketing Operating System, change routing, transfer ownership, authorize a move, or supersede an active system contract.
++This 0.3 draft records the reviewed post-cutover ContextOps path and ownership projection. It does not activate the Marketing Operating System, grant MOS routing, transfer concrete-artifact ownership, or supersede an active specialized contract.
+ 
+ Current owners and operating paths remain controlling. In particular:
+ 
+-- Marketing ContextOps continues to operate from `projects/No and low code_1st Marketing Agent/`.
+-- `projects/marketing-contextops/` remains an inactive target shell.
++- Marketing ContextOps operates from `projects/marketing-contextops/` after the separately approved atomic cutover.
++- `projects/No and low code_1st Marketing Agent/` remains residual custody for history, protected residual material, and its embedded source projects; it has no shared ContextOps authority.
+ - ABM and Content OS remain active independent sibling systems.
+ - `projects/company-workspaces/` remains an inactive container shell.
+ - root Second Brain governance and source-custody rules remain controlling.
+@@ -41,7 +41,7 @@ Current owners and operating paths remain controlling. In particular:
+ 
+ `../registry/systems.csv` is a draft projection for discovering system boundaries and transition state. It references controlling instructions and contracts; it does not copy their full rules and cannot activate, deactivate, or reroute a system. Current-state fields are evidence-backed descriptions of the present. Target-state fields record an approved architectural direction only and never grant present authority.
+ 
+-The registry contains one row per federated system or governed workspace class. Individual company or thematic projects are not registered in P2B1R.
++The registry contains one row per federated system or governed workspace class. Individual company or thematic projects are not registered by this revision.
+ 
+ ## Registry schema
+ 
+@@ -50,7 +50,7 @@ The registry contains one row per federated system or governed workspace class.
+ | `system_id` | Stable machine-readable identifier | unique, lowercase, hyphenated |
+ | `display_name` | Human-readable name | non-empty |
+ | `system_class` | Architectural role | `vault-control-plane`, `interoperability-umbrella`, `shared-context-capability`, `specialist-gtm-capability`, `shared-content-capability`, or `source-workspace-container` |
+-| `registration_status` | Authority of the registry record | P2B1R requires `draft` |
++| `registration_status` | Authority of the registry record | version 0.3 remains `draft` |
+ | `current_root` | Current operational or governed location | must distinguish current state from target state |
+ | `target_root` | Reviewed target location | does not imply activation or cutover |
+ | `current_lifecycle_status` | Evidence-backed current lifecycle | `active` or `planned` |
+@@ -79,7 +79,7 @@ Allowed values may be extended only through a reviewed schema change. Empty futu
+ 8. `controlling_authority_ref` points to the current system-specific controller. A draft MOS contract cannot replace that controller.
+ 9. Detailed source, asset, run, approval, and performance state stays with its current canonical owner.
+ 10. The registry must reference rather than duplicate source inventories, publication registers, runtime state, or component-level migration manifests.
+-11. Registry activation requires a later reviewed schema, positive and negative fixtures, deterministic validation, compatibility evidence, and explicit approval.
++11. Schemas, fixtures, and passing validation are evidence only. Any registry or MOS activation still requires a separate explicit approval.
+ 
+ ## Ownership roles
+ 
+@@ -101,7 +101,7 @@ A system may hold several typed roles, but each concrete object and decision mus
+ | Scope | Current or intended primary owner | Boundary |
+ |---|---|---|
+ | Source custody and durable wiki knowledge | root Second Brain | presence is not semantic approval; no shared system creates a second raw or wiki library |
+-| Context Intelligence methods and stage contracts | current legacy Marketing ContextOps; target Marketing ContextOps only after cutover | concrete outputs remain source-project owned |
++| Context Intelligence methods and stage contracts | Marketing ContextOps at `projects/marketing-contextops/` | concrete outputs remain source-project owned |
+ | Specialized account-based GTM methods | ABM Operating System | company evidence and concrete account assets remain source-project owned |
+ | Content transformation and publication contracts | Content Operating System | concrete directions, briefs, assets, approvals, and performance records remain source-project owned |
+ | System registry and common interoperability contracts | future Marketing Operating System after activation | P2B1R grants no current authority and permits projections only |
+@@ -111,14 +111,14 @@ A system may hold several typed roles, but each concrete object and decision mus
+ 
+ ## G2A directional ownership decisions
+ 
+-The user-approved G2A direction fixes the following target ownership model. These decisions are architectural direction, not present operational authority. P2B1R records them without moving components, repointing references, activating a system, or changing a current controller.
++The user-approved G2A direction fixes the following ownership model. G3E applies only the separately approved Marketing ContextOps path and controller transition; it does not activate MOS or implement other held specializations.
+ 
+ ### Brand
+ 
+ - No standalone Brand Operating System is created.
+ - The source project owns its concrete Brand Core, positioning decisions, Brand assets, and approvals. Its human Brand owner retains the approval right.
+ - The future Marketing Operating System may own only a shared Brand Core interface contract module after a later explicit gate.
+-- Current legacy Marketing ContextOps, and target Marketing ContextOps only after cutover, owns positioning and messaging methods.
++- Marketing ContextOps owns positioning and messaging methods at its active target path.
+ - Content OS owns expression, voice, style, channel-profile, and content-execution contracts. It may not reopen the approved Brand Core silently.
+ - Root Second Brain owns durable Brand knowledge and reusable practices.
+ 
+@@ -126,7 +126,7 @@ The concrete Brand Core interface schema, fixtures, compatibility rules, and act
+ 
+ ### Campaign
+ 
+-- `projects/No and low code_1st Marketing Agent/frameworks/journey-and-gtm/campaign-role-architecture.md` remains the current canonical Marketing ContextOps method.
++- `projects/marketing-contextops/frameworks/journey-and-gtm/campaign-role-architecture.md` remains the current canonical Marketing ContextOps method.
+ - The initiating source project owns each concrete Campaign Role Map and campaign decision.
+ - The future Marketing Operating System may own only a common cross-system Campaign Handoff contract after a later explicit gate.
+ - Content OS consumes an approved campaign role and must not invent or reopen it during content transformation.
+@@ -137,10 +137,10 @@ The exact Campaign Handoff schema, fixtures, and integration remain held for a l
+ ### Framework builder
+ 
+ - `framework-builder` is a universal Root Second Brain shared capability, not a Marketing Operating System or Marketing ContextOps-owned capability.
+-- Its intended repository-canonical source is `skills/framework-builder/`. That target path does not currently exist and P2B1R does not create it.
++- Its intended repository-canonical source remains `skills/framework-builder/`. That target path does not exist and G3E does not create it.
+ - The global installation under `C:/Users/rolfp/.codex/skills/framework-builder/` is intended to become a deployment mirror rather than the repository source of truth.
+ - The current legacy package and root discovery wrapper remain unchanged until an exact atomic move and wrapper cutover is separately approved.
+-- `projects/No and low code_1st Marketing Agent/frameworks/framework-document-standard.md` remains Marketing ContextOps-owned because it defines the local framework-library conventions rather than the universal engineering method.
++- `projects/marketing-contextops/frameworks/framework-document-standard.md` remains Marketing ContextOps-owned because it defines the local framework-library conventions rather than the universal engineering method.
+ 
+ ### Recursive learning
+ 
+@@ -151,7 +151,7 @@ The exact Campaign Handoff schema, fixtures, and integration remain held for a l
+ - A future Marketing Operating System may own only a marketing cross-system learning contract or projection after a later explicit gate.
+ - The intended bounded role of `evidence-led-recursive-learning.md` is a Marketing ContextOps retrospective method that produces episodes and pattern candidates; it must not promote them by itself.
+ 
+-The existing standalone legacy skill, its inconsistent merged-status record, and references from current validator and orchestrator skills remain untouched until an exact ContextOps cutover and reference-repair checkpoint is approved.
++The standalone Legacy skill remains frozen historical material and non-discoverable. The active validator and orchestrator references are repaired by the exact ContextOps cutover; deletion or relocation of the frozen package remains held.
+ 
+ ## Interface ownership rule
+ 
+@@ -170,20 +170,13 @@ If this draft conflicts with a current specialized contract, the current special
+ G2A decides the target ownership directions above. P2B1R does not implement them. The following remain held:
+ 
+ - creation of `skills/framework-builder/`, component moves, wrapper repointing, deployment mirroring, or retirement of the legacy package;
+-- modification or retirement of `recursive-learning-update`, narrowing of `evidence-led-recursive-learning.md`, or repair of validator and orchestrator references;
+-- movement or rewriting of campaign-role architecture and creation of a campaign-specific handoff contract;
++- deletion or relocation of the frozen `recursive-learning-update` package, or any automatic learning/promotion mechanism;
++- creation or activation of a campaign-specific handoff contract;
+ - the concrete shared Brand Core interface schema, fixtures, compatibility rules, or activation;
+-- schemas, fixtures, validators, tools, routing, system activation, and component-level migration manifests;
++- MOS routing or system activation beyond this descriptive ContextOps registry revision;
+ - protected legacy Raw objects;
+ - connectors, credentials, integrations, agents, runtime, learning automation, or publication authority.
+ 
+ ## Activation conditions
+ 
+-This draft may become operational only after a separately approved checkpoint provides:
+-
+-1. a machine-readable schema for the registry and handoff envelope;
+-2. positive and negative fixtures;
+-3. deterministic uniqueness, path, state, ownership, and compatibility tests;
+-4. proof that current active contracts and root skill wrappers are unchanged or atomically transitioned;
+-5. a practical rollback test;
+-6. explicit human approval of the resulting fingerprints.
++This 0.3 draft remains non-operational for the Marketing Operating System. MOS activation requires a separate reviewed checkpoint with an exact authority scope, current fingerprints, compatibility and negative tests, practical rollback evidence, and explicit human approval. The Marketing ContextOps cutover cannot grant that umbrella authority.
+diff --git a/projects/marketing-operating-system/decisions/log.md b/projects/marketing-operating-system/decisions/log.md
+index 79e6b2e..17c4b74 100644
+--- a/projects/marketing-operating-system/decisions/log.md
++++ b/projects/marketing-operating-system/decisions/log.md
+@@ -106,3 +106,14 @@ This forward log records reviewed decisions about the planned shell. It cannot g
+ - Preserved holds: MOS activation, ContextOps cutover, component moves, ownership transfer, Brand or Campaign specialization, runtime or memory, agents, integrations, source relocation, staging, commit, and publication remain unauthorized without their own explicit checkpoint.
+ - Next gate: separately plan one exact controlled transition. P2B2 acceptance itself grants no implementation authority for that transition.
+ - Witness boundary: this acceptance entry and the corresponding status updates change only the four existing documentation targets; all ten accepted P2B2 implementation files remain byte-identical to the fingerprints above.
++
++## 2026-08-22 | G3E2 candidate | Record the controlled Marketing ContextOps root cutover
++
++- Preconditions: this entry may be appended only inside a separately approved G3E2 transaction after its preflight, snapshot verification, exact component move, reference repair, wrapper synchronization, and regression gates pass.
++- Decision: record `projects/marketing-contextops/` as the current and target Marketing ContextOps root and `projects/marketing-contextops/AGENTS.md` as its sole controller; retain `projects/No and low code_1st Marketing Agent/` only as a residual legacy and source-project container.
++- Authority: requires the user's future explicit G3E2 cutover approval; the G3E-1 candidate approval alone does not authorize this append or any live change.
++- Contract projection: advance the two draft MOS semantic contracts to `0.3.0-draft`, repair exact ContextOps references, and retain draft registration state.
++- Validation projection: extend registry validation so each controller must be the `AGENTS.md` at its `current_root` and may control only one registered system; extend the isolated suite from 16 to 20 cases.
++- Preserved authority: MOS operational, canonical, and routing authority remain `none`; source projects retain concrete marketing assets and episodes; ABM and Content OS remain sibling capabilities; root retains source custody and reusable-practice governance.
++- Preserved holds: no Brand or Campaign specialization, `framework-builder` relocation, runtime, memory, source relocation, integration, agent, learning automation, staging, commit, or publication authority is created.
++- Rollback: exact pre-state files are restored from the verified G3E snapshot; this append-only audit entry is retained and a rollback witness is appended rather than rewriting history.
+diff --git a/projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json b/projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json
+index 021bdef..9644c9d 100644
+--- a/projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json
++++ b/projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json
+@@ -75,14 +75,14 @@
+   ],
+   "input_contract_ref": {
+     "contract_id": "contextops-stage-contract",
+-    "canonical_path": "projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md",
++    "canonical_path": "projects/marketing-contextops/frameworks/orchestration-and-learning/contextops-stage-contract.md",
+     "version": "1.0.0",
+     "sha256": "8B748B721116BCD7E075F91D9BDD5AD5DCEED75E6DC5C981F00E5258F3DA0FD6",
+     "contract_owner": "marketing-contextops"
+   },
+   "output_contract_ref": {
+-    "contract_id": "legacy:projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
+-    "canonical_path": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
++    "contract_id": "legacy:projects/marketing-contextops/workflows/contextops-handoff-contract.md",
++    "canonical_path": "projects/marketing-contextops/workflows/contextops-handoff-contract.md",
+     "version": "legacy-unversioned",
+     "sha256": "93CB2BC2F53E9862371027FC12FCBAF55C0084C542CE5608E91E1D2E89ECC560",
+     "contract_owner": "marketing-contextops"
+diff --git a/projects/marketing-operating-system/evals/fixtures/fixture-cases.json b/projects/marketing-operating-system/evals/fixtures/fixture-cases.json
+index dc40d02..b57b1ad 100644
+--- a/projects/marketing-operating-system/evals/fixtures/fixture-cases.json
++++ b/projects/marketing-operating-system/evals/fixtures/fixture-cases.json
+@@ -1,26 +1,26 @@
+ {
+-  "fixture_contract": "mos-p2b2-fixtures/v1",
++  "fixture_contract": "mos-g3e-cutover-fixtures/v1",
+   "status": "draft-test-evidence",
+   "purpose": "Declarative inventory of the isolated positive and negative federation-contract cases. Fixtures grant no operating authority.",
+   "accepted_inputs": [
+     {
+       "canonical_path": "projects/marketing-operating-system/registry/systems.csv",
+-      "sha256": "A9642C4809DBA7D6A090CB9AA2A514B0BBA119C4EF8009E495906A1B57BE76A0"
++      "sha256": "0A36D6B255439BA9F4985453956F10782FC98B402DE1A1B21227F3B28740A0B1"
+     },
+     {
+       "canonical_path": "projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md",
+-      "sha256": "14BFD407FB7555871BB3FC73D968086339FA717B96D68C20EBA8D9E0C8D6D63D"
++      "sha256": "EB7C37C1AA4308538AAEBC8395722D1884335043EEC99C4D3F9083F8CC10F5C5"
+     },
+     {
+       "canonical_path": "projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md",
+-      "sha256": "EB0041B5338B76A7A698A3C5A1F3942EC88B3FC506CC7E4736D8343B99C79ED4"
++      "sha256": "86E3E1A3CE3E504FFA5EC9F800F384275EC28ACF0600B2DA065F4F40D5842680"
+     },
+     {
+-      "canonical_path": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
++      "canonical_path": "projects/marketing-contextops/workflows/contextops-handoff-contract.md",
+       "sha256": "93CB2BC2F53E9862371027FC12FCBAF55C0084C542CE5608E91E1D2E89ECC560"
+     },
+     {
+-      "canonical_path": "projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md",
++      "canonical_path": "projects/marketing-contextops/frameworks/orchestration-and-learning/contextops-stage-contract.md",
+       "sha256": "8B748B721116BCD7E075F91D9BDD5AD5DCEED75E6DC5C981F00E5258F3DA0FD6"
+     },
+     {
+@@ -39,19 +39,19 @@
+   "fixture_inputs": [
+     {
+       "canonical_path": "projects/marketing-operating-system/tools/config/system-registry-schema.json",
+-      "sha256": "CA7FEAAF8C53BD6B9D352665E95CEDF3A4F084361D2EFB34FFEFC287FAFED56D"
++      "sha256": "37419FB59F0721DBBA02A1EAEC634FFFEF90660C1BCD43D3DE22D3D7529F6683"
+     },
+     {
+       "canonical_path": "projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json",
+-      "sha256": "64E27E604A917AD8EAE37606B70F51483313484464B3944EFFBDC25261667E13"
++      "sha256": "5F6F25DFAC58AE7A6DE4ACE9F659930E2DF9E10AF0E41A1BE87A991E05CCC068"
+     },
+     {
+       "canonical_path": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
+-      "sha256": "A9642C4809DBA7D6A090CB9AA2A514B0BBA119C4EF8009E495906A1B57BE76A0"
++      "sha256": "0A36D6B255439BA9F4985453956F10782FC98B402DE1A1B21227F3B28740A0B1"
+     },
+     {
+       "canonical_path": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
+-      "sha256": "3159A0FC29A9DCC36A30D1537F1E52BEF48F6A50ED1963D5F9875226DA28001C"
++      "sha256": "2C70AE8C3FBD18A52AEC2B318F6190DE00B91EA7F5AF78F8FB6F24DAE27FA344"
+     },
+     {
+       "canonical_path": "projects/marketing-operating-system/evals/fixtures/support/authority-record.json",
+@@ -111,7 +111,8 @@
+       },
+       "expected_exit_code": 1,
+       "expected_codes": [
+-        "MOS-REG-002"
++        "MOS-REG-002",
++        "MOS-REG-009"
+       ]
+     },
+     {
+@@ -126,7 +127,8 @@
+       },
+       "expected_exit_code": 1,
+       "expected_codes": [
+-        "MOS-REG-004"
++        "MOS-REG-004",
++        "MOS-REG-008"
+       ]
+     },
+     {
+@@ -158,7 +160,8 @@
+       },
+       "expected_exit_code": 1,
+       "expected_codes": [
+-        "MOS-REG-007"
++        "MOS-REG-007",
++        "MOS-REG-008"
+       ]
+     },
+     {
+@@ -283,8 +286,8 @@
+         "operation": "replace-specialized-contract-with-mos-draft",
+         "contract_id": "mos-cross-system-handoff-envelope",
+         "canonical_path": "projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md",
+-        "version": "0.2.0-draft",
+-        "sha256": "EB0041B5338B76A7A698A3C5A1F3942EC88B3FC506CC7E4736D8343B99C79ED4",
++        "version": "0.3.0-draft",
++        "sha256": "86E3E1A3CE3E504FFA5EC9F800F384275EC28ACF0600B2DA065F4F40D5842680",
+         "contract_owner": "marketing-operating-system"
+       },
+       "expected_exit_code": 1,
+@@ -305,6 +308,68 @@
+       "expected_codes": [
+         "MOS-HO-011"
+       ]
++    },
++    {
++      "case_id": "registry-rejects-legacy-contextops-controller",
++      "mode": "Registry",
++      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
++      "mutation": {
++        "operation": "set-cell",
++        "system_id": "marketing-contextops",
++        "field": "controlling_authority_ref",
++        "value": "projects/No and low code_1st Marketing Agent/AGENTS.md"
++      },
++      "expected_exit_code": 1,
++      "expected_codes": [
++        "MOS-REG-008"
++      ]
++    },
++    {
++      "case_id": "registry-rejects-dual-current-controller",
++      "mode": "Registry",
++      "fixture": "projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv",
++      "mutation": {
++        "operation": "set-cells",
++        "system_id": "root-second-brain",
++        "changes": {
++          "current_root": "projects/marketing-contextops",
++          "controlling_authority_ref": "projects/marketing-contextops/AGENTS.md"
++        }
++      },
++      "expected_exit_code": 1,
++      "expected_codes": [
++        "MOS-REG-009"
++      ]
++    },
++    {
++      "case_id": "handoff-rejects-legacy-contextops-contract-path",
++      "mode": "Handoff",
++      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
++      "mutation": {
++        "operation": "set-contract-field",
++        "reference_field": "output_contract_ref",
++        "field": "canonical_path",
++        "value": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md"
++      },
++      "expected_exit_code": 1,
++      "expected_codes": [
++        "MOS-HO-007"
++      ]
++    },
++    {
++      "case_id": "handoff-rejects-stale-target-contextops-contract-hash",
++      "mode": "Handoff",
++      "fixture": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
++      "mutation": {
++        "operation": "set-contract-field",
++        "reference_field": "output_contract_ref",
++        "field": "sha256",
++        "value": "0000000000000000000000000000000000000000000000000000000000000000"
++      },
++      "expected_exit_code": 1,
++      "expected_codes": [
++        "MOS-HO-003"
++      ]
+     }
+   ]
+ }
+diff --git a/projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv b/projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv
+index 4730f39..36e0c84 100644
+--- a/projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv
++++ b/projects/marketing-operating-system/evals/fixtures/system-registry-valid.csv
+@@ -1,7 +1,7 @@
+ "system_id","display_name","system_class","registration_status","current_root","target_root","current_lifecycle_status","target_lifecycle_status","transition_status","current_operational_authority","target_operational_authority","current_routing_status","target_routing_status","federation_boundary_contract_ref","controlling_authority_ref","next_transition_gate","evidence_ref"
+ "root-second-brain","Root Second Brain","vault-control-plane","draft",".",".","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","AGENTS.md","root-policy","AGENTS.md"
+ "marketing-operating-system","Marketing Operating System","interoperability-umbrella","draft","projects/marketing-operating-system","projects/marketing-operating-system","planned","active","planned","none","active","inactive","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/marketing-operating-system/AGENTS.md","validated-p2b2-plus-explicit-mos-activation","projects/marketing-operating-system/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
+-"marketing-contextops","Marketing ContextOps","shared-context-capability","draft","projects/No and low code_1st Marketing Agent","projects/marketing-contextops","active","active","cutover-pending","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/No and low code_1st Marketing Agent/AGENTS.md","exact-contextops-cutover-plus-explicit-approval","projects/No and low code_1st Marketing Agent/README.md; projects/marketing-contextops/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
++"marketing-contextops","Marketing ContextOps","shared-context-capability","draft","projects/marketing-contextops","projects/marketing-contextops","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/marketing-contextops/AGENTS.md","contextops-operational-maintenance","projects/marketing-contextops/README.md; projects/marketing-contextops/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
+ "abm-operating-system","ABM Operating System","specialist-gtm-capability","draft","projects/ABM-operating-system","projects/ABM-operating-system","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/ABM-operating-system/AGENTS.md","existing-abm-gates","projects/ABM-operating-system/AGENTS.md"
+ "content-operating-system","Content Operating System","shared-content-capability","draft","projects/content-operating-system","projects/content-operating-system","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/content-operating-system/AGENTS.md","existing-content-gates","projects/content-operating-system/AGENTS.md"
+ "company-workspaces","Company Workspaces","source-workspace-container","draft","projects/company-workspaces","projects/company-workspaces","planned","active","planned","none","active","inactive","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/company-workspaces/AGENTS.md","exact-first-workspace-admission-plus-explicit-approval","projects/company-workspaces/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
+diff --git a/projects/marketing-operating-system/registry/systems.csv b/projects/marketing-operating-system/registry/systems.csv
+index 4730f39..36e0c84 100644
+--- a/projects/marketing-operating-system/registry/systems.csv
++++ b/projects/marketing-operating-system/registry/systems.csv
+@@ -1,7 +1,7 @@
+ "system_id","display_name","system_class","registration_status","current_root","target_root","current_lifecycle_status","target_lifecycle_status","transition_status","current_operational_authority","target_operational_authority","current_routing_status","target_routing_status","federation_boundary_contract_ref","controlling_authority_ref","next_transition_gate","evidence_ref"
+ "root-second-brain","Root Second Brain","vault-control-plane","draft",".",".","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","AGENTS.md","root-policy","AGENTS.md"
+ "marketing-operating-system","Marketing Operating System","interoperability-umbrella","draft","projects/marketing-operating-system","projects/marketing-operating-system","planned","active","planned","none","active","inactive","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/marketing-operating-system/AGENTS.md","validated-p2b2-plus-explicit-mos-activation","projects/marketing-operating-system/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
+-"marketing-contextops","Marketing ContextOps","shared-context-capability","draft","projects/No and low code_1st Marketing Agent","projects/marketing-contextops","active","active","cutover-pending","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/No and low code_1st Marketing Agent/AGENTS.md","exact-contextops-cutover-plus-explicit-approval","projects/No and low code_1st Marketing Agent/README.md; projects/marketing-contextops/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
++"marketing-contextops","Marketing ContextOps","shared-context-capability","draft","projects/marketing-contextops","projects/marketing-contextops","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/marketing-contextops/AGENTS.md","contextops-operational-maintenance","projects/marketing-contextops/README.md; projects/marketing-contextops/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
+ "abm-operating-system","ABM Operating System","specialist-gtm-capability","draft","projects/ABM-operating-system","projects/ABM-operating-system","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/ABM-operating-system/AGENTS.md","existing-abm-gates","projects/ABM-operating-system/AGENTS.md"
+ "content-operating-system","Content Operating System","shared-content-capability","draft","projects/content-operating-system","projects/content-operating-system","active","active","stable","active","active","active","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/content-operating-system/AGENTS.md","existing-content-gates","projects/content-operating-system/AGENTS.md"
+ "company-workspaces","Company Workspaces","source-workspace-container","draft","projects/company-workspaces","projects/company-workspaces","planned","active","planned","none","active","inactive","active","projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md","projects/company-workspaces/AGENTS.md","exact-first-workspace-admission-plus-explicit-approval","projects/company-workspaces/AGENTS.md; projects/marketing-operating-system/decisions/log.md"
+diff --git a/projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json b/projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json
+index 9c12b8c..07739e0 100644
+--- a/projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json
++++ b/projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json
+@@ -6,8 +6,8 @@
+   "purpose": "Machine-checkable structural and reference rules for a cross-system handoff. A valid envelope records authority; it does not create authority.",
+   "semantic_contract": {
+     "canonical_path": "projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md",
+-    "version": "0.2.0-draft",
+-    "sha256": "EB0041B5338B76A7A698A3C5A1F3942EC88B3FC506CC7E4736D8343B99C79ED4"
++    "version": "0.3.0-draft",
++    "sha256": "86E3E1A3CE3E504FFA5EC9F800F384275EC28ACF0600B2DA065F4F40D5842680"
+   },
+   "required_fields": [
+     "handoff_id",
+diff --git a/projects/marketing-operating-system/tools/config/system-registry-schema.json b/projects/marketing-operating-system/tools/config/system-registry-schema.json
+index f30bac6..581313a 100644
+--- a/projects/marketing-operating-system/tools/config/system-registry-schema.json
++++ b/projects/marketing-operating-system/tools/config/system-registry-schema.json
+@@ -6,8 +6,8 @@
+   "purpose": "Machine-checkable structural rules for the federation registry. This schema grants no operating authority.",
+   "semantic_contract": {
+     "canonical_path": "projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md",
+-    "version": "0.2.0-draft",
+-    "sha256": "14BFD407FB7555871BB3FC73D968086339FA717B96D68C20EBA8D9E0C8D6D63D"
++    "version": "0.3.0-draft",
++    "sha256": "EB7C37C1AA4308538AAEBC8395722D1884335043EEC99C4D3F9083F8CC10F5C5"
+   },
+   "required_columns": [
+     "system_id",
+@@ -133,6 +133,19 @@
+         "controlling_authority_ref"
+       ]
+     },
++    {
++      "rule_id": "registry.controller-matches-current-root",
++      "kind": "derived-path-equals",
++      "source_field": "current_root",
++      "target_field": "controlling_authority_ref",
++      "root_literal": "AGENTS.md",
++      "relative_suffix": "/AGENTS.md"
++    },
++    {
++      "rule_id": "registry.unique-controlling-authority",
++      "kind": "unique",
++      "field": "controlling_authority_ref"
++    },
+     {
+       "rule_id": "registry.transition-requires-next-gate",
+       "kind": "nonempty-when-different",
+diff --git a/projects/marketing-operating-system/tools/test-federation-contracts.ps1 b/projects/marketing-operating-system/tools/test-federation-contracts.ps1
+index 32b27ae..f8ceff6 100644
+--- a/projects/marketing-operating-system/tools/test-federation-contracts.ps1
++++ b/projects/marketing-operating-system/tools/test-federation-contracts.ps1
+@@ -131,6 +131,10 @@ function Set-HandoffMutation {
+             $artifact = @($handoff.canonical_artifact_refs)[[int]$Mutation.index]
+             $artifact.PSObject.Properties[[string]$Mutation.field].Value = [string]$Mutation.value
+         }
++        'set-contract-field' {
++            $contract = $handoff.PSObject.Properties[[string]$Mutation.reference_field].Value
++            $contract.PSObject.Properties[[string]$Mutation.field].Value = [string]$Mutation.value
++        }
+         'add-field' {
+             $handoff | Add-Member -NotePropertyName ([string]$Mutation.field) -NotePropertyValue ([string]$Mutation.value)
+         }
+@@ -164,11 +168,11 @@ function Remove-VerifiedTempRoot {
+     $fullPath = [System.IO.Path]::GetFullPath($LiteralPath).TrimEnd('\')
+     $tempParent = [System.IO.Path]::GetFullPath([System.IO.Path]::GetTempPath()).TrimEnd('\')
+     $leaf = Split-Path -Leaf $fullPath
+-    $marker = Join-Path $fullPath '.mos-p2b2-test-root'
++    $marker = Join-Path $fullPath '.mos-g3e-test-root'
+     if ((Split-Path -Parent $fullPath) -ne $tempParent) {
+         throw "Refusing cleanup outside the exact temp parent: $fullPath"
+     }
+-    if ($leaf -notlike 'mos-p2b2-tests-*') {
++    if ($leaf -notlike 'mos-g3e-tests-*') {
+         throw "Refusing cleanup for unexpected temp name: $leaf"
+     }
+     if (-not (Test-Path -LiteralPath $marker -PathType Leaf)) {
+@@ -188,11 +192,11 @@ try {
+     $manifestPath = Join-Path $PSScriptRoot '..\evals\fixtures\fixture-cases.json'
+     $manifestPath = (Resolve-Path -LiteralPath $manifestPath).Path
+     $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json
+-    if ($manifest.fixture_contract -ne 'mos-p2b2-fixtures/v1') {
++    if ($manifest.fixture_contract -ne 'mos-g3e-cutover-fixtures/v1') {
+         throw 'Unsupported fixture contract.'
+     }
+-    if (@($manifest.cases).Count -ne 16) {
+-        throw "Expected exactly 16 fixture cases; found $(@($manifest.cases).Count)."
++    if (@($manifest.cases).Count -ne 20) {
++        throw "Expected exactly 20 fixture cases; found $(@($manifest.cases).Count)."
+     }
+ 
+     $allFingerprintInputs = @($manifest.accepted_inputs) + @($manifest.fixture_inputs)
+@@ -206,9 +210,9 @@ try {
+         }
+     }
+ 
+-    $tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("mos-p2b2-tests-" + [guid]::NewGuid().ToString('N'))
++    $tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("mos-g3e-tests-" + [guid]::NewGuid().ToString('N'))
+     $null = New-Item -ItemType Directory -Path $tempRoot
+-    Set-Content -LiteralPath (Join-Path $tempRoot '.mos-p2b2-test-root') -Value 'fixture-only' -Encoding ASCII
++    Set-Content -LiteralPath (Join-Path $tempRoot '.mos-g3e-test-root') -Value 'fixture-only' -Encoding ASCII
+ 
+     $copyPaths = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+     foreach ($input in $allFingerprintInputs) {
+@@ -223,6 +227,7 @@ try {
+         'projects/No and low code_1st Marketing Agent/AGENTS.md',
+         'projects/No and low code_1st Marketing Agent/README.md',
+         'projects/marketing-contextops/AGENTS.md',
++        'projects/marketing-contextops/README.md',
+         'projects/ABM-operating-system/AGENTS.md',
+         'projects/content-operating-system/AGENTS.md',
+         'projects/company-workspaces/AGENTS.md'
+@@ -334,9 +339,9 @@ finally {
+ }
+ 
+ $failedCases = @($results | Where-Object { -not $_.passed })
+-$suitePassed = ($null -eq $suiteError) -and $cleanupVerified -and ($results.Count -eq 16) -and ($failedCases.Count -eq 0)
++$suitePassed = ($null -eq $suiteError) -and $cleanupVerified -and ($results.Count -eq 20) -and ($failedCases.Count -eq 0)
+ $report = [ordered]@{
+-    test_contract = 'mos-p2b2-fixtures/v1'
++    test_contract = 'mos-g3e-cutover-fixtures/v1'
+     verdict = if ($suitePassed) { 'PASS' } else { 'FAIL' }
+     case_count = $results.Count
+     passed_count = @($results | Where-Object { $_.passed }).Count
+diff --git a/projects/marketing-operating-system/tools/validate-federation-contracts.ps1 b/projects/marketing-operating-system/tools/validate-federation-contracts.ps1
+index 4d3d54f..f0af526 100644
+--- a/projects/marketing-operating-system/tools/validate-federation-contracts.ps1
++++ b/projects/marketing-operating-system/tools/validate-federation-contracts.ps1
+@@ -266,6 +266,21 @@ function Test-Registry {
+         if ($row.federation_boundary_contract_ref -eq $row.controlling_authority_ref) {
+             Add-Finding -Code 'MOS-REG-007' -Area 'registry' -Message 'The federation boundary contract cannot also be the current system controller.' -Target ([string]$row.system_id)
+         }
++
++        $expectedController = if ($row.current_root -eq '.') {
++            'AGENTS.md'
++        }
++        else {
++            ([string]$row.current_root).TrimEnd('/') + '/AGENTS.md'
++        }
++        if ($row.controlling_authority_ref -ne $expectedController) {
++            Add-Finding -Code 'MOS-REG-008' -Area 'registry' -Message "The controlling authority must be the AGENTS.md at current_root: $expectedController." -Target ([string]$row.system_id)
++        }
++    }
++
++    $duplicateControllers = @($rows | Group-Object -Property controlling_authority_ref | Where-Object { $_.Count -gt 1 })
++    foreach ($duplicateController in $duplicateControllers) {
++        Add-Finding -Code 'MOS-REG-009' -Area 'registry' -Message 'A controlling authority may govern exactly one registered system.' -Target ([string]$duplicateController.Name)
+     }
+ 
+     return $rows
+@@ -319,7 +334,7 @@ function Test-ContractVersion {
+         [string]$Label
+     )
+ 
+-    if ($null -eq $ResolvedPath) {
++    if ([string]::IsNullOrWhiteSpace($ResolvedPath)) {
+         return
+     }
+ 

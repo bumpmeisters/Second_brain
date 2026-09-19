@@ -1,0 +1,25 @@
+{
+  "task_id": "P02",
+  "attempt_id": "9a3d424d040d42f8a9bef1eac87242ee",
+  "input_revision": 5,
+  "sources": [],
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Violet Fictional Instruments is an invented test company.",
+      "field": "identity",
+      "entity_id": "violet-fictional-group",
+      "region": "global",
+      "period": "2025",
+      "classification": "fact",
+      "source_id": "S1",
+      "locator": "Section identity"
+    }
+  ],
+  "gaps": [],
+  "used_budget": {
+    "searches": 0
+  },
+  "problems": [],
+  "next_question": null
+}

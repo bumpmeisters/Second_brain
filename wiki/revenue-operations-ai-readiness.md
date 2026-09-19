@@ -5,8 +5,9 @@ sources:
   - raw/assets/B_MKT_working_library/06_Sales_and_Buyer_Enablement/Lead routing/20260605_B2B-State-of-Martech-and-Revenue-Operations-2026.pdf
   - raw/Clippings/How to scale high-quality B2B campaigns with AI  OnBase podcast.md
   - raw/Clippings/How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md
+  - wiki/newsletters/lenny-s-newsletter/linked-sources/plg-to-enterprise-transition-source-review-2026-09-14.md
 created: 2026-07-01
-updated: 2026-07-28
+updated: 2026-09-14
 ---
 
 # Revenue Operations AI Readiness
@@ -38,6 +39,10 @@ Before adding an AI agent to a revenue workflow, ask:
 - Can an AI decision be traced to the data and rule that shaped it?
 - Is there a safe fallback when confidence is low or the workflow encounters an unknown case?
 - Does the organization know which function approves policy changes and which function operates the workflow?
+
+## PLG-to-enterprise signal and credit boundary
+
+Do not treat every product signup as a sales lead. Admit an account to sales assistance only when account-level product evidence—such as multi-user adoption, departmental spread, expansion behavior, governance requirements, or plan constraints—matches a defined transition rule. Keep product-generated enterprise demand separate from demand created by sales, and report incremental enterprise value separately from self-service revenue migration and added support cost (source: [[plg-to-enterprise-transition-source-review-2026-09-14]]; sponsored practitioner evidence).
 
 ## Data-admission gate
 

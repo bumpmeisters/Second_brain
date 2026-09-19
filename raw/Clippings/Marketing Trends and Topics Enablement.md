@@ -1,0 +1,23 @@
+Over the last few years, sales enablement has moved out of buzzword territory and is now largely considered a requirement. Even with its new-found importance, there’s still not enough discussion around how marketing can enable and be enabled by the other departments within an organization. In addition to use cases like [ABM](https://www.pathfactory.com/blog/hello-b2b-content-intelligence/) and [content strategy](https://www.pathfactory.com/blog/national-instruments-content-strategy-results/), [content intelligence](https://www.pathfactory.com/blog/how-content-intelligence-works/) also helps ramp up enablement initiatives that help your marketers and sellers succeed. Here’s how:
+
+**[Customer Experience](https://www.pathfactory.com/blog/hello-b2b-content-intelligence/)**  
+At any company, the customer success team is perfectly placed to enable and be enabled by the marketing team. Whether it’s relaying common customer problems for marketing to spin up some [relevant content](https://www.pathfactory.com/blog/b2b-guide-sharable-relevant-content/) or marketing providing a platform for customer advocates to share their experiences and love for your brand, this relationship is not to be taken for granted. When marketing and customer success work together, a ‘personal touch’ to the client experience that can have direct effects on some of the biggest issues facing B2B companies, like retention.
+
+**Data**  
+Marketers love data. Marketing and data teams can work hand in hand to create the best campaigns for their target audiences. For starters, the marketing team can enable the data team by providing them with the questions we’re trying to answer and the problems we’re trying to solve. The data team can then empower the marketing team to make informed decisions using that data. The more information that’s readily accessible to marketers, the more they’re empowered to make informed decisions about campaigns; that’s why an open line of communication with the data team is so important.
+
+[**Forrester: Why Marketing Operations Must Double Down On Data in 2023**](https://www.forrester.com/blogs/planning-guides-marketing-operations/)  
+Marketing Ops is the heart of every marketing org. However, with the current economic climate, businesses are being tasked with cutting budgets, and are being asked to ‘do more with less’. Forrester argues that with uncertainty comes more reliance on the marketing operations team; that’s why it’s crucial that a company’s martech stack is delivering actionable insights and has the capacity to generate positive ROI.
+
+\*\*  
+HR\*\*  
+Marketing owns the master brand but your employer brand complements your master brand. With marketing and HR working together, your brand can reflect the reality of what’s taking place daily within your organization. Here are some ways marketing and HR can support and enable each other.
+
+[**HR and Marketing: Building Your Employer Brand Together**](https://www.emotivebrand.com/hr-and-marketing/)  
+The role of HR has evolved significantly in recent years. Attracting, engaging and retaining top talent is a high priority for executives, and most companies place this responsibility on HR. And without top talent, maintaining a competitive advantage, adapting to industry change and growing your business is nearly impossible. Successfully building an employer brand is a strategic imperative and it can’t be done in isolation (no HR team is an island), so engaging and partnering with marketing from the very beginning is essential.
+
+[**How to Use Employee Advocacy for Employee Engagement, Employer Branding and Social Recruitment**](https://blog.hootsuite.com/a-6-step-guide-for-creating-an-employee-advocacy-program-for-your-business/)  
+It may be less apparent, but HR professionals are marketers at heart. They market a company and its culture, and “sell” career opportunities to prospective applicants. A HR professional is also the traditional “employee advocate” – he/she speaks for the workforce and is responsible for the quality of work life at a company. Along with your customers, happy employees are the best advocates you can get.
+
+**Better Together**  
+Marketing touches virtually every area of your business. Whether it’s [customer experience](https://www.pathfactory.com/blog/three-b2b-revenue-intelligence-concepts/), data or HR, looping marketing into key departmental goals can be mutually beneficial for everyone involved. You might say, it’s a match made in heaven!

@@ -1,0 +1,17 @@
+{
+  "id": "W078",
+  "url": "https://www.forrester.com/b2b-marketing/six-steps-to-buying-group-success",
+  "research_briefs": [
+    "f04-mql-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:02.700557+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w078.json",
+  "title": "Six Steps To Buying Group Success - Forrester",
+  "final_url": "https://www.forrester.com/b2b-marketing/six-steps-to-buying-group-success/",
+  "characters": 5545,
+  "sha256": "752991c93dba925afd0bc4af1261d8a7a2a2f87bf83d11f6daa035de256d5866",
+  "http_status": 200
+}

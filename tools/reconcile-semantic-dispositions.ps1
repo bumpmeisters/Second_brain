@@ -140,6 +140,12 @@ $report = [ordered]@{
     register = $Register.Replace('\', '/')
     register_sha256_before = $registerHashBefore
     approved_decision_count = $eligible.Count
+    approved_decision_count_semantics = 'deprecated-alias-of-accepted_decision_count; not approval or canonical promotion'
+    accepted_decision_count = $eligible.Count
+    reviewed_decision_count = @($eligible | Where-Object review_status -eq 'reviewed').Count
+    explicitly_approved_decision_count = @($eligible | Where-Object review_status -eq 'approved').Count
+    reviewed_promotional_proposal_count = @($eligible | Where-Object { $_.review_status -eq 'reviewed' -and $_.semantic_decision -in @('new-claim', 'extended-claim', 'corroborating') }).Count
+    canonical_promotion_effect = 'none; reconciliation records source review only'
     standing_policy_decision_count = $standingRows.Count
     changed_count = $changes.Count
     dry_run = -not $Apply
@@ -149,7 +155,7 @@ $report = [ordered]@{
 
 if ($Apply -and $changes.Count -gt 0) {
     if ((Get-FileHash -LiteralPath $registerPath -Algorithm SHA256).Hash -ne $registerHashBefore) { throw 'Register changed during reconciliation; refusing to overwrite.' }
-    if ($PSCmdlet.ShouldProcess($Register, "Reconcile $($changes.Count) approved $Package decisions")) {
+    if ($PSCmdlet.ShouldProcess($Register, "Reconcile $($changes.Count) accepted $Package source-review decisions")) {
         $tempPath = Join-Path (Split-Path -Parent $registerPath) ('.reconcile-' + [guid]::NewGuid().ToString('N') + '.csv')
         try {
             $registerRows | Export-Csv -LiteralPath $tempPath -NoTypeInformation -Encoding utf8

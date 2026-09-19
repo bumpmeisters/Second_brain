@@ -1,0 +1,17 @@
+{
+  "id": "W006",
+  "url": "https://about.fb.com/br/news/2025/02/impulsione-o-desempenho-da-sua-campanha-com-os-novos-recursos-de-ia-do-advantage-e-recomendacoes-testadas-e-comprovadas",
+  "research_briefs": [
+    "f01-targeting.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:46.120024+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w006.json",
+  "title": "Impulsione o desempenho da sua campanha com os novos recursos de IA do Advantage+ e recomendações testadas e comprovadas | Sobre a Meta",
+  "final_url": "https://about.fb.com/br/news/2025/02/impulsione-o-desempenho-da-sua-campanha-com-os-novos-recursos-de-ia-do-advantage-e-recomendacoes-testadas-e-comprovadas/",
+  "characters": 9071,
+  "sha256": "7cd640b5cd69dea42a754cb1394f90869fe6dd4963de5c0f54e771675bdafeea",
+  "http_status": 200
+}

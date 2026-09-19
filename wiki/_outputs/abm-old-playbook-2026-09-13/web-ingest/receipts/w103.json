@@ -1,0 +1,17 @@
+{
+  "id": "W103",
+  "url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-25-gartner-says-by-2030-that-75-percent-of-b2b-buyers-will-prefer-sales-experiences-that-prioritize-human-interaction-over-ai",
+  "research_briefs": [
+    "f08-rep-free.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:03:43.963136+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w103.json",
+  "title": "Press Release: Gartner Says By 2030 that 75% of B2B Buyers Will Prefer Sales Experiences that Prioritize Human Interaction Over AI",
+  "final_url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-25-gartner-says-by-2030-that-75-percent-of-b2b-buyers-will-prefer-sales-experiences-that-prioritize-human-interaction-over-ai",
+  "characters": 13253,
+  "sha256": "b8abc735e0d733580557cd3d0d1ae31322edf5a02eeb5290df8b1562b893631b",
+  "http_status": 200
+}

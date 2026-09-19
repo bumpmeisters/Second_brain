@@ -1,0 +1,17 @@
+{
+  "id": "W094",
+  "url": "https://www.gartner.com/en/documents/5990571",
+  "research_briefs": [
+    "t04-sales-to-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:45.973672+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w094.json",
+  "title": "What Types of Buyer Enablement Do Buyers Value?",
+  "final_url": "https://www.gartner.com/en/documents/5990571",
+  "characters": 7415,
+  "sha256": "fd8f157da7130d2239948de9bb61f6b40afa28d435162b6b844f805dc3267e53",
+  "http_status": 200
+}

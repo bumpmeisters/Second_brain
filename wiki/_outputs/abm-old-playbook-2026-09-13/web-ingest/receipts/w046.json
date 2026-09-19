@@ -1,0 +1,17 @@
+{
+  "id": "W046",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10575496",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:06.069659+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w046.json",
+  "title": "\n            Decision avoidance and post-decision regret: A systematic review and meta-analysis - PMC\n        ",
+  "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10575496/",
+  "characters": 126410,
+  "sha256": "7fef47e24789a41f6670ceb129af1d1241fa7d6f82afb52361b3bd07b7fe50e2",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W035",
+  "url": "https://journals.sagepub.com/doi/10.1177/00222437241256900",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:54:53.004681+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w035.json",
+  "title": "Attention Spillovers from News to Ads: Evidence from an Eye-Tracking Experiment - Andrey Simonov, Tommaso Valletti, Andre Veiga, 2025 ",
+  "final_url": "https://journals.sagepub.com/doi/10.1177/00222437241256900",
+  "characters": 96589,
+  "sha256": "bb05e7cc775b1d315655e5a8b9aa5e79cf398a9660a00ee9dc180e01c470a8d2",
+  "http_status": 200
+}

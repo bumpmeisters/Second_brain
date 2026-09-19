@@ -1,0 +1,17 @@
+{
+  "id": "W144",
+  "url": "https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2624918",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:59.991744+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w144.json",
+  "title": "Full article: The carousel effect: leveraging sideways swiping for enhanced ad effectiveness in social media",
+  "final_url": "https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2624918",
+  "characters": 435,
+  "sha256": "56718b959067bd85adeb477ae4f0a5a77a25ee00e733b49149cad3045499e3b6",
+  "http_status": 200
+}

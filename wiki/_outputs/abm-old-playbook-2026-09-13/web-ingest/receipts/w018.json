@@ -1,0 +1,29 @@
+{
+  "id": "W018",
+  "url": "https://customers.bombora.com/crc-brand/signals-beta",
+  "research_briefs": [
+    "f05-dark-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:56:41.066842+00:00",
+  "previous_attempt": {
+    "id": "W018",
+    "url": "https://customers.bombora.com/crc-brand/signals-beta",
+    "research_briefs": [
+      "f05-dark-funnel.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T17:54:17.243794+00:00",
+    "status": "capture-failed",
+    "error": "Error: Rate limit exceeded. Consumed (req/min): 15, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 21s, resets at Sun Sep 13 2026 17:54:39 GMT+0000 (Coordinated Universal Time)\n"
+  },
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w018.json",
+  "title": "Company Surge Signals BETA | Bombora Customer Resource Center",
+  "final_url": "https://customers.bombora.com/crc-brand/signals-beta",
+  "characters": 15708,
+  "sha256": "7789abcb83f2aec6dfeb00b3a95453c496fd62311a895b558985440ecc5cff92",
+  "http_status": 200
+}

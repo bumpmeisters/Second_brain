@@ -1,0 +1,15 @@
+{
+  "id": "W052",
+  "url": "https://smart-freight-centre-media.s3.amazonaws.com/documents/GLEC_FRAMEWORK_v3_23_10_24_B.pdf",
+  "research_briefs": [
+    "s02-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:32.135096+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w052.pdf",
+  "final_url": "https://smart-freight-centre-media.s3.amazonaws.com/documents/GLEC_FRAMEWORK_v3_23_10_24_B.pdf",
+  "bytes": 2472534,
+  "sha256": "949621632866447dd74b328e5091dac85e877f83b28992f86db230f12b7bfe4f"
+}

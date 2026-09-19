@@ -1,0 +1,19 @@
+{
+  "id": "W005",
+  "url": "https://6sense.com/science-of-b2b/buyer-experience-report-2025",
+  "research_briefs": [
+    "f04-mql-funnel.md",
+    "f05-dark-funnel.md",
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:45.849025+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w005.json",
+  "title": "The B2B Buyer Experience Report for 2025 | 6sense",
+  "final_url": "https://6sense.com/science-of-b2b/buyer-experience-report-2025/",
+  "characters": 64758,
+  "sha256": "28fb92970a3aa6a18824e0fe52e29410a234bd6ecf42180302c2cc59d3df2cf3",
+  "http_status": 200
+}

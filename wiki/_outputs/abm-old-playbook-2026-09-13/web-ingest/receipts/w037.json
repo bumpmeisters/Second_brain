@@ -1,0 +1,17 @@
+{
+  "id": "W037",
+  "url": "https://journals.sagepub.com/doi/10.1509/jm.10.0047",
+  "research_briefs": [
+    "f04-mql-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:11.103998+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w037.json",
+  "title": "The Sales Lead Black Hole: On Sales Reps' Follow-Up of Marketing Leads - Gaurav Sabnis, Sharmila C. Chatterjee, Rajdeep Grewal, Gary L. Lilien, 2013 ",
+  "final_url": "https://journals.sagepub.com/doi/10.1509/jm.10.0047",
+  "characters": 55360,
+  "sha256": "35ca2c78f4aa818357fa47b40c1971008e7019950f0b40d994023462d766b456",
+  "http_status": 200
+}

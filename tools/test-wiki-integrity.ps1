@@ -169,7 +169,7 @@ foreach ($page in $activePages) {
     }
 }
 
-$allMarkdown = @(Get-ChildItem -LiteralPath $VaultRoot -Recurse -File -Filter '*.md' | Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' })
+$allMarkdown = @(Get-ChildItem -LiteralPath $VaultRoot -Recurse -File -Filter '*.md' | Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]|[\\/]repositories[\\/][^\\/]+[\\/]snapshots[\\/]' })
 $targets = @{}
 foreach ($file in $allMarkdown) {
     $relativeWithoutExtension = (Get-RelativePath $file.FullName) -replace '\.md$', ''

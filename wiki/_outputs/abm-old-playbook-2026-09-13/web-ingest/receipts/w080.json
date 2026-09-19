@@ -1,0 +1,17 @@
+{
+  "id": "W080",
+  "url": "https://www.forrester.com/blogs/revenue-operations-nine-myths-and-two-realities",
+  "research_briefs": [
+    "s04-revops-governance.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:16.083333+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w080.json",
+  "title": "Revenue Operations: Nine Myths And Two Realities",
+  "final_url": "https://www.forrester.com/blogs/revenue-operations-nine-myths-and-two-realities/",
+  "characters": 16736,
+  "sha256": "2535c128e4690e5838a42c07a09254ee26f46730cb63f16a3dc2ba0280b06425",
+  "http_status": 200
+}

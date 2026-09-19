@@ -11,10 +11,12 @@ sources:
   - raw/imports/gbrain/repositories/gbrain-repository-archives-2026-08-07-v2.md
   - research/assets/gbrain/gbrain-repo-inhalt-chatgpt-conversation-2026-08-07.pdf
 created: 2026-08-07
-updated: 2026-08-07
+updated: 2026-09-11
 ---
 
 # GBrain Source Summary
+
+**Repository navigation, 2026-09-11:** The [current GBrain dossier](../repositories/garrytan--gbrain/garrytan--gbrain-analysis.md) and [GBrain Evals dossier](../repositories/garrytan--gbrain-evals/garrytan--gbrain-evals-analysis.md) provide technical review and exact local snapshot links. This source summary retains the original mixed-source provenance; its historical archive citations remain stable.
 
 **Summary**: This bundle preserves Garry Tan's GBrain idea, an official commit-pinned product snapshot, the companion evaluation claims, and the earlier ChatGPT interpretation. It is retained as a reference for personal AI memory, company-brain, ContextOps, and customer architecture questions, not as an approved implementation plan.
 

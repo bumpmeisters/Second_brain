@@ -1,0 +1,896 @@
+PZVVO_AB2C2 (https://www.tuvsud.com/de-de/-/media/de/pzo/2024/pzvvo-konzern_ab2c2.pdf)
+citeturn33view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 29; Source: open({"ref_id":"turn29view1","lineno":null}); Total lines: 709
+L0@P0: PZVVO TÜV SÜD AB2C2 Seite 1 von 29
+L1@P0: Stand: 01/2024 TÜV SÜD Gruppe
+L2@P0: Prüf-, Zertifizierungs-,
+L3@P0: Validierungs- und Verifizierungsordnung
+L4@P0: TÜV SÜD Gruppe
+L5@P0: Geltungsbereich:
+L6@P0: Die vorliegende Prüf-, Zertifizierungs-, Validierungs- und Verifizierungsordnung (nachfolgend „PZVVO“ genannt) gilt für alle Unternehmen der TÜV SÜD Gruppe (nachfolgend einzeln oder gemeinschaftlich auch „TSG“ bzw. „TÜV SÜD Gesellschaft“ genannt).
+L7@P0: Hierzu gehören insbesondere die folgenden TSG:
+L8@P0: TÜV SÜD America Inc.
+L9@P0: TÜV SÜD A-Reliance Pte Ltd.
+L10@P0: TUV SUD Asia Ltd.
+L11@P0: TÜV SÜD Auto Service GmbH
+L12@P0: TUV SUD BABT Unltd.
+L13@P0: TUV SUD Certification and Testing (China) Co., Ltd.
+L14@P0: TÜV SÜD Czech s.r.o.
+L15@P0: TÜV SÜD Danmark ApS
+L16@P0: TÜV SÜD Energietechnik GmbH Baden-Württemberg
+L17@P0: TUV SUD Hong Kong Ltd.
+L18@P0: TÜV SÜD Industrie Service GmbH
+L19@P0: TUV SUD Korea Ltd.
+L20@P0: TÜV SÜD Landesgesellschaft Österreich GmbH
+L21@P0: TUV SUD (Malaysia) Sdn. Bhd
+L22@P0: TÜV SÜD Management Service GmbH
+L23@P0: TÜV SÜD Nederland B.V.
+L24@P0: TÜV SÜD Product Service GmbH
+L25@P0: TÜV SÜD PSB Philippines Inc.
+L26@P0: TUV SUD PSB Pte Ltd.
+L27@P0: TÜV SÜD Rail GmbH
+L28@P0: TÜV SÜD SFDK Laboratório de Análise de Produtos LTDA
+L29@P0: TUV SUD South Asia Pvt. Ltd.
+L30@P0-1: TÜV Technische Überwachung Hessen GmbH PZVVO TÜV SÜD AB2C2 Seite 2 von 29
+L31@P1: Stand: 01/2024 TÜV SÜD Gruppe
+L32@P1: Diese PZVVO (siehe www.tuvsud.com/PZO) in der vorliegenden Version vom
+L33@P1: 01.01.2024 ersetzt die Vorgängerversion vom 01.05.2021. In der Vorgängerversion
+L34@P1: wurde die PZVVO noch als „PZO“ oder „Prüf- und Zertifizierordnung“ bezeichnet. Die
+L35@P1: neue Version wird gegenüber dem Kunden* gemäß A-1.4 Vertragsbestandteil entweder nach entsprechender Einbeziehung (für neue Verträge) oder Änderungsinformation durch die jeweilige TSG (für bestehende Verträge). In der Übergangsphase bleiben beide Versionen verfügbar und entsprechend gültig.
+L36@P1: Für die Anwendung dieser PZVVO gelten die Begriffe nach dem Glossar.
+L37@P1: Dort enthaltene Begriffe sind an der Stelle ihrer ersten Verwendung in der PZVVO mit
+L38@P1: einem Sternchen (*) als Verweis auf das Glossar gekennzeichnet.
+L39@P1: Die PZVVO gilt in sachlicher Hinsicht für die:
+L40@P1:  Prüfung* und Zertifizierung* von Produkten, Prozessen, Systemen, Dienstleistungen und Personen (nachfolgend auch „Bewertungsgegenstände“* bzw. „Zertifizierungsgegenstände“* genannt);
+L41@P1:  Auditierung* und Zertifizierung* von Managementsystemen;
+L42@P1:  Validierung* und Verifizierung* von Informationen (nachfolgend „Behauptungen“
+L43@P1: genannt).
+L44@P1: Konformitätsbewertungsstellen*, wie Zertifizierungsstellen*, Prüflabore*, Inspektionsstellen oder Validierungs-/Verifizierungsstellen*, werden nachfolgend auch allgemein
+L45@P1: „KBS“ genannt.
+L46@P1: Inspektionen* als Konformitätsbewertung* jenseits von Evaluierungstätigkeiten im
+L47@P1: Rahmen einer Zertifizierung sind vom Geltungsbereich ausgeschlossen.
+L48@P1: Sofern ein Kunde für die Erlangung eines Zertifikats* oder einer Konformitätsbescheinigung* mehrere Verträge abgeschlossen hat, gehen im Falle von Widersprüchen die
+L49@P1: spezielleren Regelungen zwischen der KBS und dem Kunden für den konkreten Auftrag vor. Dies trifft beispielsweise zu, wenn Dienstvertrags- und Zertifizierungsvertragspartner, welche die vertragsgegenständlichen Zertifizierungsstellen beheimateten,
+L50@P1: auseinanderfallen.
+L51@P1: Diese PZVVO unterliegt dem Recht, das am Sitz der für die jeweilige Leistung relevanten KBS in der jeweiligen TSG gilt.
+L52@P1: Insofern diese PZVVO in mehreren Sprachfassungen vorliegt, geht im Falle von Zweifeln oder Widersprüchen zwischen den Sprachfassungen die deutsche Fassung vor.
+L53@P1-2: Sollte diese nicht vorliegen, geht die englische Fassung vor. PZVVO TÜV SÜD AB2C2 Seite 3 von 29
+L54@P2: Stand: 01/2024 TÜV SÜD Gruppe
+L55@P2: Diese PZVVO besteht aus mehreren Modulen, wobei Modul A grundsätzlich für alle
+L56@P2: TSG gilt. Die übrigen Module werden, falls zutreffend, angewandt und können Regelungen in anderen Modulen ergänzen, ersetzen oder deren Nichtanwendbarkeit festlegen. Modul A wird durch die Module B1/B2/B3/B4 ergänzt. Modul A und Modul B
+L57@P2: werden durch das jeweils zutreffende Modul C ergänzt/geändert/ersetzt.
+L58@P2: Die komplette PZVVO besteht aus den Modulen A, B1 bis B4 und C1 bis C7.
+L59@P2: Im Kontext der C-Module sind alle Verweise auf die Zertifizierungsstelle oder TSG als
+L60@P2: Verweise auf die betreffende Zertifizierungsstelle zu verstehen. Im Falle von Widersprüchen zwischen dem jeweiligen C-Modul und anderen Abschnitten dieser PZVVO
+L61@P2-3: gilt vorrangig das entsprechende C-Modul. PZVVO TÜV SÜD AB2C2 Seite 4 von 29
+L62@P3: Stand: 01/2024 TÜV SÜD Gruppe
+L63@P3: Inhaltsverzeichnis Seite
+L64@P3: Modul A Allgemeine Bedingungen 5
+L65@P3: Modul B2 Besondere Bedingungen für die Auditierung und Zertifizierung von Managementsystemen 19
+L66@P3: Modul C2 Besondere Bedingungen für Leistungen der TÜV SÜD
+L67@P3: Management Service GmbH (TÜV SÜD MS)
+L68@P3-4: 26 PZVVO TÜV SÜD AB2C2 Seite 5 von 29
+L69@P4: Stand: 01/2024 TÜV SÜD Gruppe
+L70@P4: Modul A Allgemeine Bedingungen
+L71@P4: A-1. Allgemeines
+L72@P4: A-1.1 Diese PZVVO gilt für Prüfungen, Zertifizierungen, Validierungen und Verifizierungen sowie für EU-Konformitätsbewertungsverfahren durch die TSG.
+L73@P4: Dem Kunden ist bekannt, dass die TSG zur Sicherstellung der Unparteilichkeit und Unabhängigkeit die vertragsgegenständlichen Konformitätsbewertungen nicht gemeinsam mit Beratungsleistungen zum Bewertungsgegenstand* erbringen kann.
+L74@P4: Der Kunde ist verpflichtet, die KBS unverzüglich zu informieren, sofern er
+L75@P4: Beratungsleistungen durch die TSG oder durch mit der TSG verbundene
+L76@P4: Unternehmen/Stellen erhalten hat.
+L77@P4: Eine Gefährdung ihrer Unparteilichkeit und Unabhängigkeit aufgrund von
+L78@P4: Beratungsleistungen berechtigt die TSG zur außerordentlichen Kündigung
+L79@P4: gem. Abschnitt A-1.5 II.
+L80@P4: A-1.2 Entsprechend dem TSG Code of Conduct behält sich die TSG das Recht
+L81@P4: vor, Anträge auf Konformitätsbewertungen im Einzelfall abzulehnen, insbesondere wenn ein Konflikt mit gesetzlichen Anforderungen, mit der TÜV
+L82@P4: SÜD Brand, den TSG-Qualitätsstandards oder Unternehmensimage vorliegt.
+L83@P4: A-1.3 Vor Auftragserteilung informiert der Kunde die TSG darüber, ob und welche
+L84@P4: anderen Organisationen mit welchem Ergebnis den gleichen Bewertungsgegenstand auf Basis eines Auftrags vergleichbaren oder identischen Inhalts in der Vergangenheit schon geprüft, auditiert, validiert, verifiziert oder
+L85@P4: zertifiziert haben oder aber ob ein vergleichbarer oder identischer Auftrag
+L86@P4: zeitgleich mit dem TSG-Auftrag erteilt wurde oder wird.
+L87@P4: A-1.4 Mit jeder Auftragserteilung akzeptiert der Kunde die jeweils aktuelle Fassung dieser PZVVO als Vertragsinhalt. Bestehende Vertragsverhältnisse
+L88@P4: unterliegen der jeweils gültigen Fassung der PZVVO.
+L89@P4: Die TSG behält sich das Recht vor, jederzeit Änderungen an der PZVVO
+L90@P4: mit Wirkung für die Zukunft vorzunehmen. In einem solchen Fall unterrichtet
+L91@P4: die TSG den Kunden über diese Änderungen. Der Kunde hat in diesem Fall
+L92@P4: ein Sonderkündigungsrecht, welches in Textform* innerhalb von sechs (6)
+L93@P4: Wochen nach Erhalt der Information über die Änderung auszuüben ist. Bei
+L94@P4: Ausübung des Sonderkündigungsrechts wird das Vertragsverhältnis mit der
+L95@P4: jeweiligen TSG mit Wirkung zum Monatsende des Folgemonates beendet.
+L96@P4: Andernfalls wird das Vertragsverhältnis zu den geänderten Bedingungen
+L97@P4: fortgesetzt. Die TSG wird den Kunden in der Unterrichtung über die geänderte PZVVO auf die Folgen seines Schweigens hinweisen.
+L98@P4: Die jeweils aktuell gültigen Fassungen dieser PZVVO können bei der betreffenden KBS-TSG eingesehen oder auf Wunsch kostenlos bereitgestellt
+L99@P4-5: werden. PZVVO TÜV SÜD AB2C2 Seite 6 von 29
+L100@P5: Stand: 01/2024 TÜV SÜD Gruppe
+L101@P5: A-1.5 Jedes Zertifikat und jede Konformitätsbescheinigung setzen die Existenz
+L102@P5: eines wirksamen Vertrages bzw. Auftrages über die Leistung der jeweiligen
+L103@P5: Konformitätsbewertung voraus.
+L104@P5: Der Vertrag bzw. Auftrag kann wie folgt ganz oder teilweise vom Kunden
+L105@P5: oder durch die TSG gekündigt werden, sofern die dem Vertrag bzw. Auftrag
+L106@P5: zugrunde liegenden besonderen Bestimmungen keine anderen Kündigungsfristen vorsehen:
+L107@P5: I. durch ordentliche Kündigung
+L108@P5: a) bei Managementsystemzertifizierungen:
+L109@P5: mit einer Frist von drei (3) Monaten zum nächsten geplanten Termin
+L110@P5: für das Zertifizierungsaudit*;
+L111@P5: b) bei Systemzertifizierungen:
+L112@P5: nach EU-Richtlinien und EU-Verordnungen gilt für die TSG analog
+L113@P5: A-1.5 I. a);
+L114@P5: c) bei Produktzertifizierungen, einschließlich Prozesszertifizierungen
+L115@P5: und Dienstleistungszertifizierungen:
+L116@P5: mit einer Frist von zwei (2) Monaten zum Ablauf des Kalenderjahres;
+L117@P5: d) bei Personenzertifizierungen:
+L118@P5: mit einer Frist von zwei (2) Monaten zum Ablauf des Kalenderjahres;
+L119@P5: e) bei Validierungen und Verifizierungen:
+L120@P5: mit einer Frist von zwei (2) Monaten zum Abschluss der Validierungs-/Verifizierungstätigkeiten.
+L121@P5: II. durch außerordentliche Kündigung aus wichtigem Grund.
+L122@P5: A-1.6 Der Kunde ist verpflichtet, die Anforderungen des einschlägigen Programms* zu erfüllen und alle erforderlichen Vorkehrungen für die Ausführung der Konformitätsbewertung zu treffen, insbesondere für die Prüfung
+L123@P5: von Dokumenten, für den Zugang zu allen relevanten Prozessen, Bereichen, Aufzeichnungen und Personal sowie für die Einbindung von Beobachtern. Sofern unangekündigte Konformitätsbewertungstätigkeiten* im Programm festgelegt sind, ist der Kunde verpflichtet, die Vorkehrungen dafür
+L124@P5: zu treffen.
+L125@P5: A-1.7 Der Kunde verpflichtet sich gegenüber der TSG erforderliche Mitwirkungshandlungen (z. B. Maßnahmen betreffend Nichtkonformitäten, Zurverfügungstellung von Dokumenten, Informationen und Prüfmustern, Ermöglichung von Audits) rechtzeitig im erforderlichen Umfang zu erbringen.
+L126@P5: Der Kunde stellt sicher, dass die TSG und soweit erforderlich auch Personen der autorisierten Stellen (z. B. Behörden, Akkreditierungsstellen* oder
+L127@P5-6: Programmeigner im Rahmen von Witness-Audits oder Integrity Audits) jederzeit auf Kosten des Kunden auditieren oder inspizieren können. PZVVO TÜV SÜD AB2C2 Seite 7 von 29
+L128@P6: Stand: 01/2024 TÜV SÜD Gruppe
+L129@P6: Dies gilt während den betriebsüblichen Zeiten, auch ohne vorherige Ankündigung, für die vom Kunden benannten Fertigungs- und Betriebsstätten sowie die von kritischen Unterauftragnehmern (z. B. kritische Lieferanten*, Lager der Bevollmächtigten, Importeure). Die TSG hat ferner das Recht, im für
+L130@P6: die Auditierung bzw. Inspektion notwendigen Umfang Stichproben auf Kosten des Kunden zu ziehen bzw. zu entnehmen.
+L131@P6: A-1.8 Wo Vor-Ort-Tätigkeiten (z. B. Audits oder Inspektionen) des TSG-Personals
+L132@P6: persönliche Schutzausrüstung erfordern, müssen die TSG und der Kunde
+L133@P6: sich vor jedem Besuch abstimmen, wer diese zur Verfügung stellt.
+L134@P6: Im Übrigen hat der Kunde sicherzustellen, dass Vor-Ort die erforderlichen
+L135@P6: Sicherheitsvorkehrungen (insbesondere der Arbeits- und Betriebssicherheit) eingehalten werden, um eine gefahrlose Arbeit des TSG-Personals sicherzustellen. Andernfalls kann die TSG die Vor-Ort-Tätigkeit auf Kosten
+L136@P6: des Kunden abbrechen und ist bis zur Herstellung ordnungsgemäßer Zustände von ihrer Leistungspflicht befreit.
+L137@P6: A-1.9 Soweit es das jeweilige Programm zulässt, ist die TSG berechtigt, Konformitätsbewertungstätigkeiten (z. B. Audits) teilweise oder vollständig aus der
+L138@P6: Ferne (remote) mittels geeigneter Informations- und Kommunikationstechnologien durchzuführen.
+L139@P6: A-1.10 Die KBS der betreffenden TSG bewertet die Ergebnisse des Personals, das
+L140@P6: an den Konformitätsbewertungstätigkeiten beteiligt war.
+L141@P6: Die KBS entscheidet über die Zertifikatserteilung bzw. die Ausstellung einer
+L142@P6: Konformitätsbescheinigung und ist Ansprechpartner bei Unstimmigkeiten,
+L143@P6: Beschwerden* oder Einsprüchen* hinsichtlich der Konformitätsbewertung.
+L144@P6: Beschwerden und Einsprüche werden direkt an die jeweilige KBS der TSG
+L145@P6: gerichtet. Die KBS verfügen über dokumentierte Verfahren zum Umgang
+L146@P6: mit Beschwerden und Einsprüchen.
+L147@P6: Eine Beschreibung der entsprechenden Verfahren ist öffentlich zugänglich.
+L148@P6: Kosten, die durch ein solches Verfahren zum Umgang mit einer Beschwerde oder eines Einspruchs entstehen, können an den Kunden verrechnet werden, insoweit sie über das übliche Maß hinausgehen.
+L149@P6: A-1.11 Konformitätsaussagen* (insbesondere Zertifikate, Validierungs- oder Verifizierungsaussagen) werden erst dann ausgestellt, wenn die fachlichen und
+L150@P6-7: finanziellen Anforderungen in Zusammenhang mit der Konformitätsbewertung erfüllt sind. PZVVO TÜV SÜD AB2C2 Seite 8 von 29
+L151@P7: Stand: 01/2024 TÜV SÜD Gruppe
+L152@P7: A-1.12 Zertifikate und Konformitätsbescheinigungen beziehen sich immer auf den
+L153@P7: zum Zeitpunkt ihrer Ausstellung aktuellen Stand der in Bezug genommenen
+L154@P7: normativen Dokumente*, sofern nicht anders angegeben.
+L155@P7: Konformitätsaussagen, die mit Zertifikaten oder Konformitätsbescheinigungen ausgestellt werden, müssen immer vollumfänglich (d. h. einschließlich
+L156@P7: zugehöriger Anhänge, angegebener Geltungsbereiche oder sonstiger Verweise) vom Kunden in Bezug genommen werden.
+L157@P7: Wenn der Kunde Zertifikate bzw. Konformitätsbescheinigungen oder deren
+L158@P7: Kopien zur Verfügung stellt, so müssen die Dokumente in ihrer Gesamtheit
+L159@P7: bzw. so, wie im Programm festgelegt, wiedergegeben werden.
+L160@P7: Eine Konformitätsaussage kann sowohl in Papierform als auch in digitaler
+L161@P7: Form erteilt werden.
+L162@P7: Der Kunde muss immer auf die zum Zertifikat bzw. zur Konformitätsbescheinigung zugehörigen Anhänge Bezug nehmen.
+L163@P7: Ein Zertifikat, inklusive aller Zertifikatsduplikate, ist nicht übertragbar und
+L164@P7: bleibt Eigentum der TSG.
+L165@P7: Der Inhaber einer Validierungs-/Verifizierungsaussage muss immer auf die
+L166@P7: mit der Aussage ausgestellten Angaben (z. B. Geltungsbereich und zugrunde gelegte Programme, Systemgrenzen, vorgesehene Nutzer, Grad an
+L167@P7: Gewissheit, Schlussfolgerungen und Kommentare) Bezug nehmen. Die Validierungs-/Verifizierungsaussage, inklusive aller Duplikate, gibt nur die Situation zum Zeitpunkt ihrer Ausstellung wieder und ist nicht übertragbar.
+L168@P7: Zertifikate und Konformitätsbescheinigungen berechtigen nicht zur Verwendung eines TÜV SÜD-Konformitätszeichens*, sofern nicht anders auf dem
+L169@P7: Zertifikat bzw. der Konformitätsbescheinigung angegeben oder durch das
+L170@P7: Programm festgelegt.
+L171@P7: Jegliche Verwendung eines Konformitätszeichens bzw. einer CE-Kennzeichnung* mit der Nummer der Benannten (Notifizierten) Stelle* ist ausschließlich gestattet, solange die Verwendung durch ein gültiges Zertifikat
+L172@P7: bzw. Konformitätsbescheinigung erlaubt wird.
+L173@P7: A-1.13 Bei Ablauf*, Zurückziehung* oder Widerruf* eines Zertifikats, gleich aus welchem Grund, endet zugleich auch der zugrunde liegende Zertifizierungsvertrag bzw. -auftrag im Hinblick auf dieses automatisch, ohne dass es einer
+L174@P7-8: gesonderten Kündigung bedarf. Dies gilt nicht, sofern sich die Vertragsparteien vor automatischer Beendigung* auf die Fortführung des Vertragsverhältnisses geeinigt haben. Dies hat jedoch keine Auswirkung auf das beendete Zertifikat. PZVVO TÜV SÜD AB2C2 Seite 9 von 29
+L175@P8: Stand: 01/2024 TÜV SÜD Gruppe
+L176@P8: A-1.14 Bereits entstandene Ansprüche gegen den Kunden, wie etwa noch offene
+L177@P8: Zahlungsforderungen, bleiben von dieser Beendigung unberührt. Kosten
+L178@P8: und Aufwendungen, die im Hinblick auf eine bevorstehende Überwachung
+L179@P8: des Zertifizierungsgegenstandes bereits entstanden sind, können geltend
+L180@P8: gemacht werden.
+L181@P8: A-1.15 Die Vorgaben dieser PZVVO finden Anwendung während der Laufzeit sowie für einen Zeitraum von drei (3) Jahren nach Beendigung des Vertrags
+L182@P8: bzw. Auftrags über die Leistung der jeweiligen Zertifizierungs-, Validierungs- oder Verifizierungstätigkeiten (Nachlauffrist). Im Fall der nur teilweisen Beendigung eines Vertrags bzw. Auftrags, gilt die Nachlauffrist auch für
+L183@P8: den beendeten Teil.
+L184@P8: A-1.16 Sollte eine Festlegung dieser PZVVO oder ein Teil einer solchen Festlegung ungültig oder nicht durchsetzbar sein oder werden, soll die Gültigkeit
+L185@P8: der verbliebenen PZVVO in keiner Weise berührt werden. In einem solchen
+L186@P8: Fall soll die ungültige und/oder nicht durchsetzbare Festlegung durch eine
+L187@P8: entsprechende Festlegung ersetzt werden, die so nah wie möglich an den
+L188@P8: Sinn und Zweck der ungültigen und/oder nicht durchsetzbaren Festlegung
+L189@P8: herankommt.
+L190@P8: A-2. Beendigung, Einschränkung und Aussetzung von Zertifikaten und
+L191@P8: Konformitätsbescheinigungen
+L192@P8: A-2.1 Allgemeine auf Zertifikate und Konformitätsbescheinigungen anwendbare Regelungen
+L193@P8: A-2.1.1 Zurückziehung
+L194@P8: Die TSG kann ein Zertifikat oder eine Konformitätsbescheinigung auch auf
+L195@P8: Wunsch des Kunden zurückziehen.
+L196@P8: A-2.1.2 Widerruf
+L197@P8: Die TSG ist berechtigt ein Zertifikat oder eine Konformitätsbescheinigung
+L198@P8: zu widerrufen, wenn seitens des Kunden eine nicht unerhebliche Verletzung
+L199@P8: einer wesentlichen Pflicht vorliegt und einschlägige normative Dokumente
+L200@P8: einen Widerruf vorschreiben oder eine entsprechende Anordnung der zuständigen Behörde, Akkreditierungsstelle oder des Programmeigners vorliegt.
+L201@P8: A-2.1.3 Einschränkung und Aussetzung
+L202@P8: Zertifikate oder Konformitätsbescheinigungen können darüber hinaus von
+L203@P8: der TSG aus den unter A-2.2.2 und A-2.3 genannten Gründen zeitlich (d. h.
+L204@P8: von ihrer Gültigkeit verkürzt) oder inhaltlich eingeschränkt oder vorübergehend ausgesetzt werden. Als vorläufige Sicherungsmaßnahme kann die
+L205@P8: Aussetzung* auch bereits mit der Aufforderung nach A-2.2.2.1 oder A-2.3.1
+L206@P8-9: verbunden werden, sofern dies verhältnismäßig ist. PZVVO TÜV SÜD AB2C2 Seite 10 von 29
+L207@P9: Stand: 01/2024 TÜV SÜD Gruppe
+L208@P9: A-2.1.4 Kosten und Aufwendungen
+L209@P9: Die TSG ist ferner berechtigt, jegliche Kosten und Aufwendungen, die in
+L210@P9: Zusammenhang mit der Beendigung, Einschränkung* oder Aussetzung entstanden sind und vom Kunden verursacht wurden, in Rechnung zu stellen.
+L211@P9: Dies schließt Kosten und Aufwendungen ein, die der TSG von autorisierten
+L212@P9: Stellen (z. B. Behörden, Akkreditierungsstellen oder Programmeignern) in
+L213@P9: Rechnung gestellt werden.
+L214@P9: A-2.1.5 Sonstige Folgen
+L215@P9: Die Beendigung, Einschränkung oder Aussetzung eines Zertifikates oder
+L216@P9: einer Konformitätsbescheinigung kann von der KBS der jeweiligen TSG veröffentlicht werden.
+L217@P9: Ein beendetes Zertifikat oder eine beendete Konformitätsbescheinigung ist
+L218@P9: nach Wahl der KBS unverzüglich zu löschen, zu vernichten oder zurückzugeben.
+L219@P9: Eine weitere Werbung oder anderweitige Verwendung des Zertifikats oder
+L220@P9: der Konformitätsbescheinigung sowie der Konformitätszeichen ist unzulässig.
+L221@P9: Die TSG haftet nicht für Nachteile, die dem Kunden oder Dritten aus der
+L222@P9: rechtmäßigen Beendigung, Einschränkung oder Aussetzung entstehen.
+L223@P9: A-2.2 Besondere Regelungen für Zertifikate
+L224@P9: A-2.2.1 Ablauf
+L225@P9: Die Gültigkeit eines Zertifikats ist beendet, wenn
+L226@P9:  eine ausgewiesene Gültigkeit abgelaufen ist;
+L227@P9:  ein zugrunde liegendes Hauptzertifikat beendet ist.
+L228@P9: A-2.2.2 Zurückziehung
+L229@P9: Die TSG ist berechtigt, ein Zertifikat mit Wirkung für die Zukunft zurückzuziehen, wenn ein wichtiger Grund vorliegt, der der TSG die Fortsetzung,
+L230@P9: auch unter Berücksichtigung der berechtigten Belange des Kunden, unzumutbar werden lässt.
+L231@P9: A-2.2.2.1 Ein wichtiger Grund liegt insbesondere vor, wenn der Kunde den Vertrag,
+L232@P9: diese PZVVO und im Zusammenhang anwendbare normative Dokumente
+L233@P9: nicht unerheblich verletzt und die Verletzung – trotz Zugang einer entsprechenden Aufforderung mit angemessener Abhilfefrist unter gleichzeitiger
+L234@P9-10: Androhung der Zurückziehung – nicht abstellt. PZVVO TÜV SÜD AB2C2 Seite 11 von 29
+L235@P10: Stand: 01/2024 TÜV SÜD Gruppe
+L236@P10: Eine solche Verletzung liegt insbesondere vor, wenn
+L237@P10: a) die Zertifizierungsvoraussetzungen nicht oder nicht mehr erfüllt sind,
+L238@P10: insbesondere, aber nicht ausschließlich, wenn
+L239@P10:  der Kunde gegenüber der TSG unrichtige Angaben macht oder wichtige Tatsachen, die für die Zertifizierung relevant sind, verschweigt;
+L240@P10:  zertifizierungsrelevante Eigenschaften nicht oder nicht mehr mit dem
+L241@P10: zertifizierten Muster übereinstimmen;
+L242@P10:  Anwender, Bediener oder Dritte beträchtlichen Risiken ausgesetzt
+L243@P10: werden oder der Zertifizierungsgegenstand aufgrund behördlicher
+L244@P10: Anordnung vom Markt genommen werden muss;
+L245@P10:  sich dem Zertifikat zugrunde liegende Anforderungen (z. B. aus anwendbaren normativen Dokumenten, Regeln der Technik oder von
+L246@P10: einer Behörde, Akkreditierungsstelle, des Programmeigners) ändern
+L247@P10: und der Kunde nicht innerhalb einer gesetzten Frist durch eine Nachprüfung oder einem Nachaudit belegt, dass der Zertifizierungsgegenstand den neuen Anforderungen entspricht;
+L248@P10: b) die vertragliche Grundlage für die Nutzung des Zertifikats wegfällt (z. B.,
+L249@P10: weil der Kunde seinen Geschäftsbetrieb, ohne einen Rechtsnachfolger
+L250@P10: zu haben, endgültig einstellt);
+L251@P10: c) Auflagen oder Bedingungen verletzt werden, sofern das Zertifikat unter
+L252@P10: solchen erteilt wurde;
+L253@P10: d) der Kunde erforderliche Mitwirkungshandlungen (z. B. Korrekturmaßnahmen betreffend Nichtkonformitäten, Zurverfügungstellung von Dokumenten und Informationen, Ermöglichung von Audits) überhaupt nicht
+L254@P10: oder nicht rechtzeitig oder nicht ausreichend erbringt; wenn z. B.
+L255@P10:  das Prüfen oder Auditieren von Einrichtungen oder die Produktprüfung nicht ermöglicht werden;
+L256@P10:  die Produkte oder Dokumente im vorgegebenen Zeitraum nicht zur
+L257@P10: Verfügung gestellt werden;
+L258@P10: e) vom Kunden veranlasst oder geduldet wird, dass Zertifikate, Zertifizierungszeichen, Konformitätsbescheinigungen oder Ergebnisberichte der
+L259@P10: TSG missbräuchlich, irreführend oder anderweitig unzulässig genutzt
+L260@P10: werden;
+L261@P10: f) schwerwiegende und für die Zertifizierung relevante Vorwürfe gegen
+L262@P10: den Kunden bekanntwerden und der Kunde die Vorwürfe nicht binnen
+L263@P10: angemessener Frist gegenüber der TSG ausräumen kann;
+L264@P10: g) der Kunde fällige Zahlungsansprüche trotz Zugang einer Mahnung nicht
+L265@P10-11: innerhalb der gesetzten Frist erfüllt. PZVVO TÜV SÜD AB2C2 Seite 12 von 29
+L266@P11: Stand: 01/2024 TÜV SÜD Gruppe
+L267@P11: A-2.2.2.2 Ein wichtiger Grund liegt ferner vor, wenn die weitere Verwendung eines
+L268@P11: Zertifikats oder eines damit in Zusammenhang stehenden Zertifizierungszeichens rechtlich nicht mehr zulässig oder nach billigem Ermessen der
+L269@P11: TSG im Hinblick auf seine Aussagekraft am Markt nicht mehr vertretbar ist.
+L270@P11: In diesem Fall hat die TSG entweder eine adäquate Alternative zur Verfügung zu stellen oder dem Kunden für nachweislich von der TSG kausal verschuldete Schäden Ersatz zu leisten. Die Regelungen des A-2.2.2.1 gelten
+L271@P11: hierzu alternativ und bleiben von diesem Abschnitt unberührt.
+L272@P11: A-2.3 Besondere Regelungen für Konformitätsbescheinigungen, einschließlich Validierungs-/Verifizierungsaussagen
+L273@P11: Werden nach dem Ausstellungsdatum neue Fakten oder Informationen entdeckt, die eine Revision, Zurückziehung oder Widerruf der Konformitätsbescheinigung (z. B. Verifizierungsaussage) erfordern, ist die ausgestellte
+L274@P11: Konformitätsbescheinigung ungültig.
+L275@P11: Die TSG ist berechtigt eine Konformitätsbescheinigung zurückzuziehen,
+L276@P11: wenn ein wichtiger Grund vorliegt, der der TSG die Fortsetzung auch unter
+L277@P11: Berücksichtigung der berechtigten Belange des Kunden unzumutbar werden lässt.
+L278@P11: A-2.3.1 Ein wichtiger Grund liegt insbesondere vor, wenn der Kunde den Vertrag,
+L279@P11: diese PZVVO und im Zusammenhang anwendbare normative Dokumente
+L280@P11: nicht unerheblich verletzt und die Verletzung – trotz Zugang einer entsprechenden Aufforderung mit angemessener Abhilfefrist unter gleichzeitiger
+L281@P11: Androhung der Zurückziehung – nicht abstellt.
+L282@P11: Eine solche Verletzung liegt insbesondere vor, wenn
+L283@P11: a) die Voraussetzungen für die Konformitätsbewertung (z. B. die Inspektion oder die Verifizierung) nicht erfüllt sind, insbesondere, aber nicht
+L284@P11: ausschließlich, wenn
+L285@P11:  der Kunde gegenüber der TSG unrichtige Angaben gemacht hat oder
+L286@P11: wichtige Tatsachen, die für die Konformitätsbewertung relevant sind,
+L287@P11: verschwiegen hat;
+L288@P11:  Anwender, betroffene Personen oder Dritte beträchtlichen Risiken
+L289@P11: ausgesetzt werden;
+L290@P11: b) die Verletzung von Auflagen oder Bedingungen, sofern die Konformitätsbescheinigung unter solchen erteilt wurde;
+L291@P11-12: c) vom Kunden veranlasst oder geduldet wird, dass Konformitätsbescheinigungen, Konformitätszeichen oder Ergebnisberichte der TSG missbräuchlich, irreführend oder anderweitig unzulässig genutzt werden; PZVVO TÜV SÜD AB2C2 Seite 13 von 29
+L292@P12: Stand: 01/2024 TÜV SÜD Gruppe
+L293@P12: d) schwerwiegende und für die Konformitätsbewertung relevante Vorwürfe
+L294@P12: gegen den Kunden bekanntwerden und der Kunde die Vorwürfe nicht
+L295@P12: binnen angemessener Frist gegenüber der TSG ausräumen kann;
+L296@P12: e) der Kunde fällige Zahlungsansprüche trotz Zugang einer Mahnung nicht
+L297@P12: innerhalb der gesetzten Frist erfüllt.
+L298@P12: A-2.3.2 Ein wichtiger Grund liegt ferner vor, wenn die weitere Verwendung einer
+L299@P12: Konformitätsbescheinigung oder eines damit in Zusammenhang stehenden
+
+
+--- Fortsetzung (Werkzeugausgabe, Überschneidungen möglich) ---
+PZVVO_AB2C2 (https://www.tuvsud.com/de-de/-/media/de/pzo/2024/pzvvo-konzern_ab2c2.pdf)
+citeturn37view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 29; Source: open({"ref_id":"turn33view0","lineno":300}); Total lines: 709
+L194@P8: Die TSG kann ein Zertifikat oder eine Konformitätsbescheinigung auch auf
+L195@P8: Wunsch des Kunden zurückziehen.
+L196@P8: A-2.1.2 Widerruf
+L197@P8: Die TSG ist berechtigt ein Zertifikat oder eine Konformitätsbescheinigung
+L198@P8: zu widerrufen, wenn seitens des Kunden eine nicht unerhebliche Verletzung
+L199@P8: einer wesentlichen Pflicht vorliegt und einschlägige normative Dokumente
+L200@P8: einen Widerruf vorschreiben oder eine entsprechende Anordnung der zuständigen Behörde, Akkreditierungsstelle oder des Programmeigners vorliegt.
+L201@P8: A-2.1.3 Einschränkung und Aussetzung
+L202@P8: Zertifikate oder Konformitätsbescheinigungen können darüber hinaus von
+L203@P8: der TSG aus den unter A-2.2.2 und A-2.3 genannten Gründen zeitlich (d. h.
+L204@P8: von ihrer Gültigkeit verkürzt) oder inhaltlich eingeschränkt oder vorübergehend ausgesetzt werden. Als vorläufige Sicherungsmaßnahme kann die
+L205@P8: Aussetzung* auch bereits mit der Aufforderung nach A-2.2.2.1 oder A-2.3.1
+L206@P8-9: verbunden werden, sofern dies verhältnismäßig ist. PZVVO TÜV SÜD AB2C2 Seite 10 von 29
+L207@P9: Stand: 01/2024 TÜV SÜD Gruppe
+L208@P9: A-2.1.4 Kosten und Aufwendungen
+L209@P9: Die TSG ist ferner berechtigt, jegliche Kosten und Aufwendungen, die in
+L210@P9: Zusammenhang mit der Beendigung, Einschränkung* oder Aussetzung entstanden sind und vom Kunden verursacht wurden, in Rechnung zu stellen.
+L211@P9: Dies schließt Kosten und Aufwendungen ein, die der TSG von autorisierten
+L212@P9: Stellen (z. B. Behörden, Akkreditierungsstellen oder Programmeignern) in
+L213@P9: Rechnung gestellt werden.
+L214@P9: A-2.1.5 Sonstige Folgen
+L215@P9: Die Beendigung, Einschränkung oder Aussetzung eines Zertifikates oder
+L216@P9: einer Konformitätsbescheinigung kann von der KBS der jeweiligen TSG veröffentlicht werden.
+L217@P9: Ein beendetes Zertifikat oder eine beendete Konformitätsbescheinigung ist
+L218@P9: nach Wahl der KBS unverzüglich zu löschen, zu vernichten oder zurückzugeben.
+L219@P9: Eine weitere Werbung oder anderweitige Verwendung des Zertifikats oder
+L220@P9: der Konformitätsbescheinigung sowie der Konformitätszeichen ist unzulässig.
+L221@P9: Die TSG haftet nicht für Nachteile, die dem Kunden oder Dritten aus der
+L222@P9: rechtmäßigen Beendigung, Einschränkung oder Aussetzung entstehen.
+L223@P9: A-2.2 Besondere Regelungen für Zertifikate
+L224@P9: A-2.2.1 Ablauf
+L225@P9: Die Gültigkeit eines Zertifikats ist beendet, wenn
+L226@P9:  eine ausgewiesene Gültigkeit abgelaufen ist;
+L227@P9:  ein zugrunde liegendes Hauptzertifikat beendet ist.
+L228@P9: A-2.2.2 Zurückziehung
+L229@P9: Die TSG ist berechtigt, ein Zertifikat mit Wirkung für die Zukunft zurückzuziehen, wenn ein wichtiger Grund vorliegt, der der TSG die Fortsetzung,
+L230@P9: auch unter Berücksichtigung der berechtigten Belange des Kunden, unzumutbar werden lässt.
+L231@P9: A-2.2.2.1 Ein wichtiger Grund liegt insbesondere vor, wenn der Kunde den Vertrag,
+L232@P9: diese PZVVO und im Zusammenhang anwendbare normative Dokumente
+L233@P9: nicht unerheblich verletzt und die Verletzung – trotz Zugang einer entsprechenden Aufforderung mit angemessener Abhilfefrist unter gleichzeitiger
+L234@P9-10: Androhung der Zurückziehung – nicht abstellt. PZVVO TÜV SÜD AB2C2 Seite 11 von 29
+L235@P10: Stand: 01/2024 TÜV SÜD Gruppe
+L236@P10: Eine solche Verletzung liegt insbesondere vor, wenn
+L237@P10: a) die Zertifizierungsvoraussetzungen nicht oder nicht mehr erfüllt sind,
+L238@P10: insbesondere, aber nicht ausschließlich, wenn
+L239@P10:  der Kunde gegenüber der TSG unrichtige Angaben macht oder wichtige Tatsachen, die für die Zertifizierung relevant sind, verschweigt;
+L240@P10:  zertifizierungsrelevante Eigenschaften nicht oder nicht mehr mit dem
+L241@P10: zertifizierten Muster übereinstimmen;
+L242@P10:  Anwender, Bediener oder Dritte beträchtlichen Risiken ausgesetzt
+L243@P10: werden oder der Zertifizierungsgegenstand aufgrund behördlicher
+L244@P10: Anordnung vom Markt genommen werden muss;
+L245@P10:  sich dem Zertifikat zugrunde liegende Anforderungen (z. B. aus anwendbaren normativen Dokumenten, Regeln der Technik oder von
+L246@P10: einer Behörde, Akkreditierungsstelle, des Programmeigners) ändern
+L247@P10: und der Kunde nicht innerhalb einer gesetzten Frist durch eine Nachprüfung oder einem Nachaudit belegt, dass der Zertifizierungsgegenstand den neuen Anforderungen entspricht;
+L248@P10: b) die vertragliche Grundlage für die Nutzung des Zertifikats wegfällt (z. B.,
+L249@P10: weil der Kunde seinen Geschäftsbetrieb, ohne einen Rechtsnachfolger
+L250@P10: zu haben, endgültig einstellt);
+L251@P10: c) Auflagen oder Bedingungen verletzt werden, sofern das Zertifikat unter
+L252@P10: solchen erteilt wurde;
+L253@P10: d) der Kunde erforderliche Mitwirkungshandlungen (z. B. Korrekturmaßnahmen betreffend Nichtkonformitäten, Zurverfügungstellung von Dokumenten und Informationen, Ermöglichung von Audits) überhaupt nicht
+L254@P10: oder nicht rechtzeitig oder nicht ausreichend erbringt; wenn z. B.
+L255@P10:  das Prüfen oder Auditieren von Einrichtungen oder die Produktprüfung nicht ermöglicht werden;
+L256@P10:  die Produkte oder Dokumente im vorgegebenen Zeitraum nicht zur
+L257@P10: Verfügung gestellt werden;
+L258@P10: e) vom Kunden veranlasst oder geduldet wird, dass Zertifikate, Zertifizierungszeichen, Konformitätsbescheinigungen oder Ergebnisberichte der
+L259@P10: TSG missbräuchlich, irreführend oder anderweitig unzulässig genutzt
+L260@P10: werden;
+L261@P10: f) schwerwiegende und für die Zertifizierung relevante Vorwürfe gegen
+L262@P10: den Kunden bekanntwerden und der Kunde die Vorwürfe nicht binnen
+L263@P10: angemessener Frist gegenüber der TSG ausräumen kann;
+L264@P10: g) der Kunde fällige Zahlungsansprüche trotz Zugang einer Mahnung nicht
+L265@P10-11: innerhalb der gesetzten Frist erfüllt. PZVVO TÜV SÜD AB2C2 Seite 12 von 29
+L266@P11: Stand: 01/2024 TÜV SÜD Gruppe
+L267@P11: A-2.2.2.2 Ein wichtiger Grund liegt ferner vor, wenn die weitere Verwendung eines
+L268@P11: Zertifikats oder eines damit in Zusammenhang stehenden Zertifizierungszeichens rechtlich nicht mehr zulässig oder nach billigem Ermessen der
+L269@P11: TSG im Hinblick auf seine Aussagekraft am Markt nicht mehr vertretbar ist.
+L270@P11: In diesem Fall hat die TSG entweder eine adäquate Alternative zur Verfügung zu stellen oder dem Kunden für nachweislich von der TSG kausal verschuldete Schäden Ersatz zu leisten. Die Regelungen des A-2.2.2.1 gelten
+L271@P11: hierzu alternativ und bleiben von diesem Abschnitt unberührt.
+L272@P11: A-2.3 Besondere Regelungen für Konformitätsbescheinigungen, einschließlich Validierungs-/Verifizierungsaussagen
+L273@P11: Werden nach dem Ausstellungsdatum neue Fakten oder Informationen entdeckt, die eine Revision, Zurückziehung oder Widerruf der Konformitätsbescheinigung (z. B. Verifizierungsaussage) erfordern, ist die ausgestellte
+L274@P11: Konformitätsbescheinigung ungültig.
+L275@P11: Die TSG ist berechtigt eine Konformitätsbescheinigung zurückzuziehen,
+L276@P11: wenn ein wichtiger Grund vorliegt, der der TSG die Fortsetzung auch unter
+L277@P11: Berücksichtigung der berechtigten Belange des Kunden unzumutbar werden lässt.
+L278@P11: A-2.3.1 Ein wichtiger Grund liegt insbesondere vor, wenn der Kunde den Vertrag,
+L279@P11: diese PZVVO und im Zusammenhang anwendbare normative Dokumente
+L280@P11: nicht unerheblich verletzt und die Verletzung – trotz Zugang einer entsprechenden Aufforderung mit angemessener Abhilfefrist unter gleichzeitiger
+L281@P11: Androhung der Zurückziehung – nicht abstellt.
+L282@P11: Eine solche Verletzung liegt insbesondere vor, wenn
+L283@P11: a) die Voraussetzungen für die Konformitätsbewertung (z. B. die Inspektion oder die Verifizierung) nicht erfüllt sind, insbesondere, aber nicht
+L284@P11: ausschließlich, wenn
+L285@P11:  der Kunde gegenüber der TSG unrichtige Angaben gemacht hat oder
+L286@P11: wichtige Tatsachen, die für die Konformitätsbewertung relevant sind,
+L287@P11: verschwiegen hat;
+L288@P11:  Anwender, betroffene Personen oder Dritte beträchtlichen Risiken
+L289@P11: ausgesetzt werden;
+L290@P11: b) die Verletzung von Auflagen oder Bedingungen, sofern die Konformitätsbescheinigung unter solchen erteilt wurde;
+L291@P11-12: c) vom Kunden veranlasst oder geduldet wird, dass Konformitätsbescheinigungen, Konformitätszeichen oder Ergebnisberichte der TSG missbräuchlich, irreführend oder anderweitig unzulässig genutzt werden; PZVVO TÜV SÜD AB2C2 Seite 13 von 29
+L292@P12: Stand: 01/2024 TÜV SÜD Gruppe
+L293@P12: d) schwerwiegende und für die Konformitätsbewertung relevante Vorwürfe
+L294@P12: gegen den Kunden bekanntwerden und der Kunde die Vorwürfe nicht
+L295@P12: binnen angemessener Frist gegenüber der TSG ausräumen kann;
+L296@P12: e) der Kunde fällige Zahlungsansprüche trotz Zugang einer Mahnung nicht
+L297@P12: innerhalb der gesetzten Frist erfüllt.
+L298@P12: A-2.3.2 Ein wichtiger Grund liegt ferner vor, wenn die weitere Verwendung einer
+L299@P12: Konformitätsbescheinigung oder eines damit in Zusammenhang stehenden
+L300@P12: Konformitätszeichens rechtlich nicht mehr zulässig oder nach billigem Ermessen der TSG im Hinblick auf seine Aussagekraft am Markt nicht mehr
+L301@P12: vertretbar ist. In diesem Fall hat die TSG entweder eine adäquate Alternative zur Verfügung zu stellen oder dem Kunden für nachweislich von der
+L302@P12: TSG kausal verschuldete Schäden Ersatz zu leisten. Die Regelungen des
+L303@P12: A-2.3.1 gelten hierzu alternativ und bleiben von diesem Abschnitt unberührt.
+L304@P12: A-3. Nutzung von Zertifikaten und Zertifizierungszeichen sowie Konformitätsbescheinigungen und Konformitätszeichen außer Zertifizierungszeichen
+L305@P12: A-3.1 Nutzung von Zertifikaten und Zertifizierungszeichen
+L306@P12: A-3.1.1 Einräumung von Nutzungsrechten
+L307@P12: Während der Gültigkeit eines Zertifikats ist der Kunde berechtigt, dieses
+L308@P12: nach Maßgabe dieser PZVVO im geschäftlichen Verkehr zu verwenden.
+L309@P12: Sofern das jeweilige Programm die Erteilung eines Zertifizierungszeichens
+L310@P12: vorsieht, erhält der Kunde zudem das zeitlich auf die Gültigkeit des zugrunde liegenden Zertifikats begrenzte und nicht ausschließliche Recht, das
+L311@P12: Zeichen im geschäftlichen Verkehr und insbesondere zu werblichen Zwecken zu nutzen. Dabei darf nur das der jeweiligen Zertifizierung zugeordnete Zeichen genutzt werden. Das Recht zur Nutzung erlischt bei Beendigung des zugrunde liegenden Zertifikats.
+L312@P12: A-3.1.2 Vorgaben zur Nutzung
+L313@P12: A-3.1.2.1 Bei Zertifizierungen, die keine gesetzliche Pflicht darstellen, muss in der
+L314@P12: Werbung auf die Freiwilligkeit der Zertifizierung, die Anforderungen des Zertifizierungsprogramms, sowie deren normative Grundlagen bzw. den Programmeigner hingewiesen werden.
+L315@P12: A-3.1.2.2 Zertifikate und Zertifizierungszeichen dürfen nicht missbräuchlich, irreführend oder in einer Weise verwendet werden, die das öffentliche Vertrauen
+L316@P12: in Zertifikate und Zertifizierungszeichen der TSG gefährden könnten. Die
+L317@P12-13: Rolle der TSG als unabhängiger Dritter darf durch die Darstellung von Zertifizierungszeichen nicht in Frage gestellt werden. PZVVO TÜV SÜD AB2C2 Seite 14 von 29
+L318@P13: Stand: 01/2024 TÜV SÜD Gruppe
+L319@P13: A-3.1.2.3 Mit einem Zertifikat bzw. einem Zertifizierungszeichen darf nur für den jeweiligen Zertifizierungsgegenstand geworben werden.
+L320@P13: Es darf nicht der Eindruck erweckt werden, dass die Zertifizierung für Gegenstände gilt, die außerhalb des Geltungsbereichs des Zertifikats liegen.
+L321@P13: A-3.1.2.4 Eine produktbezogene Werbung mit einem Zertifizierungszeichen ist unzulässig, sofern lediglich ein Managementsystemzertifikat oder eine Konformitätsbescheinigung erteilt wurde.
+L322@P13: A-3.1.2.5 Wenn sich Zertifikate oder Zertifizierungszeichen nur auf bestimmte Teilaspekte eines Zertifizierungsgegenstandes beziehen, darf in der Werbung
+L323@P13: nicht der Eindruck erweckt werden, dass eine Zertifizierung der Gesamtheit
+L324@P13: des Zertifizierungsgegenstandes erfolgt ist.
+L325@P13: A-3.1.2.6 Der Kunde ist für die zulässige Nutzung sowie für die Zulässigkeit sämtlicher Aussagen bezüglich des erteilten Zertifikats bzw. des erteilten Zeichens für einen Zertifizierungsgegenstand in vollem Umfang selbst verantwortlich. Dies gilt auch, insbesondere im Bereich von Produktzertifizierungen, für die korrekte Nutzung durch seine Kunden, sofern diese Nutzung
+L326@P13: zulässig ist.
+L327@P13: A-3.1.2.7 Bei der Werbung mit Zertifikaten und Zertifizierungszeichen wird dem Kunden empfohlen, auf transparente Form zu achten, so dass sich die angesprochene Öffentlichkeit leicht und ausreichend über den Inhalt der TSGDienstleistungen, die den Zertifikaten und Zertifizierungszeichen zugrunde
+L328@P13: liegen, informieren können.
+L329@P13: A-3.2 Nutzung von Konformitätsbescheinigungen und Konformitätszeichen
+L330@P13: außer Zertifizierungszeichen
+L331@P13: A-3.2.1 Einräumung von Nutzungsrechten
+L332@P13: Nach Ausstellung einer Konformitätsbescheinigung ist der Kunde berechtigt, diese nach Maßgabe dieser PZVVO im geschäftlichen Verkehr zu verwenden. Sofern das jeweilige Programm die Erteilung eines Konformitätszeichens vorsieht, erhält der Kunde zudem nach Maßgabe dieser PZVVO
+L333@P13: für die Dauer von maximal einem (1) Jahr nach Ausstellung der zugehörigen Konformitätsbescheinigung das nicht ausschließliche Recht, das Zeichen im geschäftlichen Verkehr und insbesondere zu werblichen Zwecken
+L334@P13: zu nutzen. Dabei darf nur das der jeweiligen Konformitätsbescheinigung
+L335@P13: zugeordnete Konformitätszeichen genutzt werden.
+L336@P13: A-3.2.2 Vorgaben zur Nutzung
+L337@P13: A-3.2.2.1 Bei Konformitätsbewertungen, die keine gesetzliche Pflicht darstellen, muss
+L338@P13: in der Werbung auf die Freiwilligkeit der Konformitätsbewertung, die Anforderungen des Konformitätsbewertungsprogramms, sowie deren normative
+L339@P13-14: Grundlagen bzw. den Programmeigner hingewiesen werden. PZVVO TÜV SÜD AB2C2 Seite 15 von 29
+L340@P14: Stand: 01/2024 TÜV SÜD Gruppe
+L341@P14: A-3.2.2.2 Konformitätsbescheinigungen und Konformitätszeichen dürfen nicht missbräuchlich, irreführend oder in einer Weise verwendet werden, die das öffentliche Vertrauen in Konformitätsbescheinigungen und Konformitätszeichen der TSG gefährden könnten. Die Rolle der TSG als unabhängiger Dritter darf durch die Darstellung von Konformitätszeichen nicht in Frage gestellt werden.
+L342@P14: A-3.2.2.3 Mit einer Konformitätsbescheinigung bzw. einem Konformitätszeichen darf
+L343@P14: nur für den jeweiligen Gegenstand der Konformitätsbewertung geworben
+L344@P14: werden.
+L345@P14: Es darf nicht der Eindruck erweckt werden, dass die Konformitätsaussage
+L346@P14: für Gegenstände gilt, die außerhalb des Geltungsbereichs des Konformitätsbescheinigung liegen.
+L347@P14: A-3.2.2.4 Wenn sich Konformitätsbescheinigungen oder Konformitätszeichen nur auf
+L348@P14: bestimmte Teilaspekte eines Bewertungsgegenstandes beziehen, darf in
+L349@P14: der Werbung nicht der Eindruck erweckt werden, dass eine Konformitätsbewertung der Gesamtheit des Bewertungsgegenstandes erfolgt sei.
+L350@P14: A-3.2.2.5 Der Kunde von Konformitätsbewertungen ist für die zulässige Nutzung sowie für die Zulässigkeit sämtlicher Aussagen bezüglich der erteilten Konformitätsbescheinigung bzw. des erteilten Zeichens für einen Gegenstand der
+L351@P14: Konformitätsbewertung in vollem Umfang selbst verantwortlich. Dies gilt
+L352@P14: auch für die korrekte Nutzung durch seine Kunden, sofern diese Nutzung
+L353@P14: zulässig ist.
+L354@P14: A-3.2.2.6 Bei der Werbung mit Konformitätsbescheinigungen und Konformitätszeichen wird dem Kunden empfohlen, auf transparente Form zu achten, so
+L355@P14: dass sich die angesprochene Öffentlichkeit leicht und ausreichend über den
+L356@P14: Inhalt der TSG-Dienstleistungen, die den Konformitätsbescheinigungen und
+L357@P14: Konformitätszeichen zugrunde liegen, informieren können.
+L358@P14: A-3.3 Nutzung von Ergebnisberichten einschließlich Prüfberichten
+L359@P14: Ergebnisse von Konformitätsbewertungstätigkeiten (z. B. Prüfberichte* oder
+L360@P14: Auditberichte), die nicht in Form eines Zertifikats oder einer Konformitätsbescheinigung ausgestellt wurden, dürfen vom Kunden nicht werblich verwendet und weder teilweise noch vollständig wiedergegeben werden. Verweise auf Ergebnisberichte oder Namen von TSG für Werbezwecke sind
+L361@P14: nicht zulässig.
+L362@P14: Ausgenommen sind Fälle, in denen vorab in Textform von der zuständigen
+L363@P14: KBS der TSG ausdrücklich zugestimmt wurde oder die dem Ergebnisbericht
+L364@P14: zugrunde liegende Konformitätsbewertung die Verwendung vorsieht oder
+L365@P14: eine Offenlegung aufgrund von gesetzlichen oder behördlichen Vorgaben
+L366@P14-15: bzw. Akkreditierungsanforderungen erforderlich ist. PZVVO TÜV SÜD AB2C2 Seite 16 von 29
+L367@P15: Stand: 01/2024 TÜV SÜD Gruppe
+L368@P15: Wenn Ergebnisberichte von Konformitätsbewertungstätigkeiten mit Zustimmung der TSG werblich genutzt werden, dürfen den Berichten vom Kunden
+L369@P15: keine über ihren tatsächlichen Inhalt hinaus gehende, insbesondere keine
+L370@P15: verfälschenden oder irreführenden Aussagen oder Interpretationen, die an
+L371@P15: der Neutralität des TÜV SÜD Zweifel aufkommen lassen könnten, beigelegt
+L372@P15: werden. Der Kunde hat jederzeit darauf zu achten, dass die Ergebnisse der
+L373@P15: TSG korrekt und unverfälscht wiedergegeben werden.
+L374@P15: Dies gilt insbesondere für alle durch den Kunden veranlassten Kommunikationsmaßnahmen, Werbeanzeigen, Mitteilungen, Verkaufsunterlagen etc. in
+L375@P15: digitalen Medien, Audiobeiträgen oder Printmedien.
+L376@P15: Wenn Ergebnisberichte der TSG gemäß o. g. Bedingungen verwendet werden dürfen, dann nur mit unverändertem und vollständigem Wortlaut unter
+L377@P15: Angabe des Erstellungsdatums.
+L378@P15: TSG-Ergebnisberichte dürfen jedoch in keinem Fall dazu benutzt werden,
+L379@P15: zu behaupten oder zu implizieren, dass TSG den Kunden, dessen Produkt
+L380@P15: oder System besonders empfiehlt.
+L381@P15: A-3.4 Folgen unzulässiger Nutzung
+L382@P15: Sollte die TSG oder die jeweilige KBS aufgrund vertragswidriger Nutzung
+L383@P15: des Zertifikats, der Konformitätsbescheinigung oder des Konformitätszeichens durch den Kunden von Dritten in Anspruch genommen werden, so ist
+L384@P15: der Kunde verpflichtet die TSG bzw. die KBS von allen Ansprüchen Dritter
+L385@P15: auf erstes Anfordern freizustellen. Das Gleiche gilt für Fälle, in denen die
+L386@P15: TSG bzw. die KBS aufgrund von Werbeaussagen des Kunden von Dritten
+L387@P15: in Anspruch genommen wird.
+L388@P15: A-3.5 Vorgaben für die Darstellung von Zertifizierungszeichen und anderen
+L389@P15: Konformitätszeichen
+L390@P15: A-3.5.1 Der Kunde darf ausschließlich das Zeichen, keinesfalls das TÜV SÜD-Logo
+L391@P15: („TÜV SÜD-Oktagon“, siehe Kopfzeile) oder den Claim der TÜV SÜDGruppe (aktuell „Mehr Wert. Mehr Vertrauen.“) verwenden.
+L392@P15: A-3.5.2 Das Konformitätszeichen darf weder inhaltlich noch in der Gestaltung gegenüber der bereitgestellten Version verändert werden. Es muss als solches erkennbar und deutlich kleiner als das Firmenlogo des Kunden abgebildet sein. Die im Zeichen enthaltenen Angaben müssen auch bei verkleinerter Abbildung noch deutlich lesbar sein.
+L393@P15: A-3.5.3 Das Konformitätszeichen muss für sich allein stehen und darf nicht mit anderen Merkmalen (z. B. Firmenlogo des Kunden, Aussage, Grafik) verbunden werden. Insbesondere darf nicht der Eindruck erweckt werden, der
+L394@P15: Kunde oder dessen Personal gehörten der TÜV SÜD-Gruppe an oder es
+L395@P15-16: handle sich um die Marke bzw. das Firmenlogo des Kunden. PZVVO TÜV SÜD AB2C2 Seite 17 von 29
+L396@P16: Stand: 01/2024 TÜV SÜD Gruppe
+L397@P16: A-3.5.4 Ändert die TSG das Design eines Konformitätszeichens, so ist der Kunde
+L398@P16: verpflichtet ausschließlich die neue Version des Konformitätszeichens zu
+L399@P16: verwenden. Sofern von der TSG keine andere Frist zur Umstellung festgelegt und dem Kunden in Textform kommuniziert wurde, muss die Umstellung auf die neue Version eines Konformitätszeichens spätestens innerhalb
+L400@P16: von sechs (6) Monaten abgeschlossen sein.
+L401@P16: A-3.6 Informationspflicht vor Presseveröffentlichungen
+L402@P16: Plant der Kunde die Nennung einer TSG oder einer TSG-Leistung in einer
+L403@P16: Pressemitteilung, in Fachartikeln oder Social Media Posts, so ist die Pressestelle der TÜV SÜD AG (presse@tuvsud.com) davon möglichst frühzeitig in Kenntnis zu setzen.
+L404@P16: Vor Veröffentlichung ist ferner die Zustimmung in Textform der TSG einzuholen.
+L405@P16: A-4. Veröffentlichung von Zertifikaten, Konformitätsbescheinigungen und
+L406@P16: Konformitätszeichen
+L407@P16: Zur Verbraucherinformation bzw. wenn das Programm oder die einschlägige Gesetze, Verordnungen oder normative Dokumente dies fordern, kann
+L408@P16: die TSG die vorgeschriebenen Informationen veröffentlichen, wie z. B. die
+L409@P16: Namen der Zertifikatshalter oder Kunden von Validierungen/Verifizierungen
+L410@P16: sowie der zertifizierten Gegenstände, bzw. der validierten/verifizierten Behauptungen. Die TSG hat das Recht, den autorisierten Stellen (z. B. Behörden, Akkreditierungsstellen oder Programmeignern) jederzeit direkt den Zugang zu relevanten Unterlagen zu gewähren.
+L411@P16: Alle weiteren Informationen über Kunden und Gegenstände von Zertifizierungen, Validierungen oder Verifizierungen unterliegen der Geheimhaltungspflicht. Es sei denn, die Bekanntgabe dieser Informationen erfolgt auf
+L412@P16: Anordnung eines Gerichts, einer autorisierten Stelle oder ist sonst rechtlich
+L413@P16: bzw. für das Verfahren zwingend. Diese Geheimhaltungsverpflichtung gilt
+L414@P16: gleichermaßen für alle Mitarbeiter und Erfüllungsgehilfen der TSG.
+L415@P16: A-5. Aufbewahrung von Prüfmustern und Dokumenten
+L416@P16: Prüfmuster und zugehörige Dokumente sind, soweit sie sich im Besitz des
+L417@P16: Kunden befinden, zehn (10) Jahre nach Ablauf des Zertifikates oder nach
+L418@P16: dem letzten Inverkehrbringen des Produkts, das vom Zertifikat abgedeckt
+L419@P16: ist, aufzubewahren. Es gilt die jeweils längste Laufzeit.
+L420@P16: Die Dokumente von Managementsystemzertifizierungen müssen für die
+L421@P16: Laufzeit der Zertifikate plus mindestens drei (3) weitere Jahre aufbewahrt
+L422@P16: werden.
+L423@P16: Die Dokumente von Personenzertifizierungen müssen für die Laufzeit der
+L424@P16-17: Zertifikate plus zehn (10) weitere Jahre aufbewahrt werden. PZVVO TÜV SÜD AB2C2 Seite 18 von 29
+L425@P17: Stand: 01/2024 TÜV SÜD Gruppe
+L426@P17: Die Dokumente von Validierungen und Verifizierungen müssen nach Ausstellung der Validierungs-/Verifizierungsaussage für mindestens drei (3)
+L427@P17: weitere Jahre aufbewahrt werden.
+L428@P17: Darüber hinausgehende Bestimmungen der normativen Dokumente bleiben unberührt.
+L429@P17: Gegen die TSG können insbesondere keine Schadenersatzansprüche geltend gemacht werden, wenn der Kunde ein an ihn zurückgegebenes oder
+L430@P17: bei ihm verbliebenes Prüfmuster bzw. Dokument nicht oder nicht mehr in
+L431@P17: unverändertem Zustand zur Verfügung stellt oder stellen kann.
+L432@P17: A-6. Vertragsstrafe
+L433@P17: Die TSG ist berechtigt, für jeden Fall eines schuldhaften Verstoßes des
+L434@P17: Kunden gegen den Vertrag, diese PZVVO, oder im Zusammenhang anwendbare normative Dokumente nach billigem Ermessen eine angemessene Vertragsstrafe zu fordern, die im Streitfall der Überprüfung durch das
+L435@P17: zuständige Gericht unterliegt. Die TSG wird bei der Festsetzung der Vertragsstrafe im Rahmen des billigen Ermessens u. a. die Art und Schwere
+L436@P17: des Verstoßes berücksichtigen sowie, dass dem Kunden aus der Verletzung kein finanzieller Vorteil verbleiben soll oder ob er bereits anderweitig
+L437@P17: bestraft wurde.
+L438@P17: Anhand der bisherigen Fälle kann in der Regel davon ausgegangen werden, dass die TSG die Vertragsstrafe bei erheblichen Verletzungen zwischen EUR 5.000 und EUR 10.000 und in schwerwiegenden Fällen zwischen EUR 10.000 und EUR 50.000 ansetzten wird.
+L439@P17: Ein schwerwiegender Fall kann insbesondere vorliegen bei vorsätzlichen
+L440@P17: oder wiederholten Verstößen, wenn ein mit einem Konformitätszeichen versehenes Produkt vor Ausstellung des Zertifikates oder der Konformitätsbescheinigung in Verkehr gebracht wird, wenn ein Zertifikat oder eine Konformitätsbescheinigung gefälscht wird oder wenn ein Gegenstand der Konformitätsbewertung mit einem angeblich vorliegenden Zertifikat oder einer
+L441@P17: Konformitätsbescheinigung angepriesen wird, obwohl es damit nicht übereinstimmt.
+L442@P17: Ausgenommen von der Vertragsstrafe sind Fälle der Nichtabnahme, verspäteten Abnahme der Leistung, des Zahlungsverzugs sowie die Lösung
+L443@P17: des Kunden vom Vertrag.
+L444@P17-18: Die Möglichkeit neben der Vertragsstrafe weitergehende Schadensersatzansprüche geltend zu machen, bleibt unberührt, ebenso wie die Durchsetzung etwaig daneben bestehender Unterlassungsansprüche. PZVVO TÜV SÜD AB2C2 Seite 19 von 29
+L445@P18: Stand: 01/2024 TÜV SÜD Gruppe
+L446@P18: Modul B2 Besondere Bedingungen für die Auditierung und Zertifizierung von
+L447@P18: Managementsystemen
+L448@P18: B2-1. Allgemeines
+L449@P18: Die TSG auditiert und zertifiziert Managementsysteme oder auditiert und
+L450@P18: zertifiziert Systeme nach EU-Richtlinien und EU-Verordnungen, beides im
+L451@P18: Folgenden „Managementsysteme“ genannt.
+L452@P18: Eine Beratung zu Managementsystemen, einschließlich der Durchführung
+L453@P18: von kundenspezifischen Schulungen, findet nicht statt.
+L454@P18: B2-2. Solltermin für Audits
+L455@P18: Der Solltermin für das nächste Audit ist abhängig von den zugrunde liegenden normativen Dokumenten. In der Regel finden Audits in jährlich wiederkehrend Abständen von jeweils zwölf (12) Monaten nach dem letzten Tag
+L456@P18: des vorausgegangenen regulären Audits statt.
+L457@P18: B2-3. Audit vor Ort
+L458@P18: Der Kunde muss in geeigneter Weise (ggf. auch vertraglich) sicherstellen,
+L459@P18: dass TSG das Audit vor Ort in den zertifizierungsrelevanten Betriebsstätten
+L460@P18: durchführen kann und jederzeit Zugang zu diesen Betriebsstätten erhält.
+L461@P18: B2-4. Vorbeurteilung des Managementsystems, Vor-Audit
+L462@P18: Die TSG bietet auf Wunsch, auch unabhängig vom Zertifizierungsverfahren,
+L463@P18: folgende Dienstleistungen an.
+L464@P18: B2-4.1 In einer Vorbeurteilung werden anhand der Prüfung von ausgewählten Dokumenten Schwachstellen des Managementsystems aufgezeigt. Über das
+L465@P18: Ergebnis erhält der Kunde einen Bericht.
+L466@P18: B2-4.2 Mit dem Vor-Audit, dessen Umfang insgesamt und vor Ort in Absprache mit
+L467@P18: dem Kunden festgelegt wird, sollen Schwachstellen des Managementsystems aufgezeigt werden. Über das Ergebnis informiert der Auditor den Kunden in einem Abschlussgespräch; auf Wunsch erstellt die TSG einen VorAuditbericht. Es darf nur ein (1) -Vor-Audit durchgeführt werden.
+L468@P18: B2-5. Zertifizierungsverfahren
+L469@P18: B2-5.1 Vorbereitung auf das Zertifizierungsaudit
+L470@P18: Nach Beauftragung benennt der Kunde der TSG einen für das Zertifizierungsverfahren verantwortlichen Auditbeauftragten. Die TSG teilt dem Kunden die vorgesehenen Auditoren mit. Regelungen in Normen und Vorschriften über unzulässige Beratungstätigkeit von Auditoren werden eingehalten.
+L471@P18: Um ein unabhängiges Audit sicherstellen zu können, liegt die Entscheidung
+L472@P18: über das Auditorenteam ausschließlich bei der TSG. Die Entscheidung im
+L473@P18-19: Einzelfall basiert auf verschiedenen Faktoren, wie Kompetenz, Verfügbarkeit, Unparteilichkeit, etc. PZVVO TÜV SÜD AB2C2 Seite 20 von 29
+L474@P19: Stand: 01/2024 TÜV SÜD Gruppe
+L475@P19: Zusätzlich und so lange rechtliche Regelungen wie beispielsweise datenschutzrechtliche Regelungen dem nicht im Wege stehen, können Kunden
+
+
+--- Fortsetzung ---
+PZVVO_AB2C2 (https://www.tuvsud.com/de-de/-/media/de/pzo/2024/pzvvo-konzern_ab2c2.pdf)
+citeturn38view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 29; Source: open({"ref_id":"turn33view0","lineno":600}); Total lines: 709
+L408@P16: die TSG die vorgeschriebenen Informationen veröffentlichen, wie z. B. die
+L409@P16: Namen der Zertifikatshalter oder Kunden von Validierungen/Verifizierungen
+L410@P16: sowie der zertifizierten Gegenstände, bzw. der validierten/verifizierten Behauptungen. Die TSG hat das Recht, den autorisierten Stellen (z. B. Behörden, Akkreditierungsstellen oder Programmeignern) jederzeit direkt den Zugang zu relevanten Unterlagen zu gewähren.
+L411@P16: Alle weiteren Informationen über Kunden und Gegenstände von Zertifizierungen, Validierungen oder Verifizierungen unterliegen der Geheimhaltungspflicht. Es sei denn, die Bekanntgabe dieser Informationen erfolgt auf
+L412@P16: Anordnung eines Gerichts, einer autorisierten Stelle oder ist sonst rechtlich
+L413@P16: bzw. für das Verfahren zwingend. Diese Geheimhaltungsverpflichtung gilt
+L414@P16: gleichermaßen für alle Mitarbeiter und Erfüllungsgehilfen der TSG.
+L415@P16: A-5. Aufbewahrung von Prüfmustern und Dokumenten
+L416@P16: Prüfmuster und zugehörige Dokumente sind, soweit sie sich im Besitz des
+L417@P16: Kunden befinden, zehn (10) Jahre nach Ablauf des Zertifikates oder nach
+L418@P16: dem letzten Inverkehrbringen des Produkts, das vom Zertifikat abgedeckt
+L419@P16: ist, aufzubewahren. Es gilt die jeweils längste Laufzeit.
+L420@P16: Die Dokumente von Managementsystemzertifizierungen müssen für die
+L421@P16: Laufzeit der Zertifikate plus mindestens drei (3) weitere Jahre aufbewahrt
+L422@P16: werden.
+L423@P16: Die Dokumente von Personenzertifizierungen müssen für die Laufzeit der
+L424@P16-17: Zertifikate plus zehn (10) weitere Jahre aufbewahrt werden. PZVVO TÜV SÜD AB2C2 Seite 18 von 29
+L425@P17: Stand: 01/2024 TÜV SÜD Gruppe
+L426@P17: Die Dokumente von Validierungen und Verifizierungen müssen nach Ausstellung der Validierungs-/Verifizierungsaussage für mindestens drei (3)
+L427@P17: weitere Jahre aufbewahrt werden.
+L428@P17: Darüber hinausgehende Bestimmungen der normativen Dokumente bleiben unberührt.
+L429@P17: Gegen die TSG können insbesondere keine Schadenersatzansprüche geltend gemacht werden, wenn der Kunde ein an ihn zurückgegebenes oder
+L430@P17: bei ihm verbliebenes Prüfmuster bzw. Dokument nicht oder nicht mehr in
+L431@P17: unverändertem Zustand zur Verfügung stellt oder stellen kann.
+L432@P17: A-6. Vertragsstrafe
+L433@P17: Die TSG ist berechtigt, für jeden Fall eines schuldhaften Verstoßes des
+L434@P17: Kunden gegen den Vertrag, diese PZVVO, oder im Zusammenhang anwendbare normative Dokumente nach billigem Ermessen eine angemessene Vertragsstrafe zu fordern, die im Streitfall der Überprüfung durch das
+L435@P17: zuständige Gericht unterliegt. Die TSG wird bei der Festsetzung der Vertragsstrafe im Rahmen des billigen Ermessens u. a. die Art und Schwere
+L436@P17: des Verstoßes berücksichtigen sowie, dass dem Kunden aus der Verletzung kein finanzieller Vorteil verbleiben soll oder ob er bereits anderweitig
+L437@P17: bestraft wurde.
+L438@P17: Anhand der bisherigen Fälle kann in der Regel davon ausgegangen werden, dass die TSG die Vertragsstrafe bei erheblichen Verletzungen zwischen EUR 5.000 und EUR 10.000 und in schwerwiegenden Fällen zwischen EUR 10.000 und EUR 50.000 ansetzten wird.
+L439@P17: Ein schwerwiegender Fall kann insbesondere vorliegen bei vorsätzlichen
+L440@P17: oder wiederholten Verstößen, wenn ein mit einem Konformitätszeichen versehenes Produkt vor Ausstellung des Zertifikates oder der Konformitätsbescheinigung in Verkehr gebracht wird, wenn ein Zertifikat oder eine Konformitätsbescheinigung gefälscht wird oder wenn ein Gegenstand der Konformitätsbewertung mit einem angeblich vorliegenden Zertifikat oder einer
+L441@P17: Konformitätsbescheinigung angepriesen wird, obwohl es damit nicht übereinstimmt.
+L442@P17: Ausgenommen von der Vertragsstrafe sind Fälle der Nichtabnahme, verspäteten Abnahme der Leistung, des Zahlungsverzugs sowie die Lösung
+L443@P17: des Kunden vom Vertrag.
+L444@P17-18: Die Möglichkeit neben der Vertragsstrafe weitergehende Schadensersatzansprüche geltend zu machen, bleibt unberührt, ebenso wie die Durchsetzung etwaig daneben bestehender Unterlassungsansprüche. PZVVO TÜV SÜD AB2C2 Seite 19 von 29
+L445@P18: Stand: 01/2024 TÜV SÜD Gruppe
+L446@P18: Modul B2 Besondere Bedingungen für die Auditierung und Zertifizierung von
+L447@P18: Managementsystemen
+L448@P18: B2-1. Allgemeines
+L449@P18: Die TSG auditiert und zertifiziert Managementsysteme oder auditiert und
+L450@P18: zertifiziert Systeme nach EU-Richtlinien und EU-Verordnungen, beides im
+L451@P18: Folgenden „Managementsysteme“ genannt.
+L452@P18: Eine Beratung zu Managementsystemen, einschließlich der Durchführung
+L453@P18: von kundenspezifischen Schulungen, findet nicht statt.
+L454@P18: B2-2. Solltermin für Audits
+L455@P18: Der Solltermin für das nächste Audit ist abhängig von den zugrunde liegenden normativen Dokumenten. In der Regel finden Audits in jährlich wiederkehrend Abständen von jeweils zwölf (12) Monaten nach dem letzten Tag
+L456@P18: des vorausgegangenen regulären Audits statt.
+L457@P18: B2-3. Audit vor Ort
+L458@P18: Der Kunde muss in geeigneter Weise (ggf. auch vertraglich) sicherstellen,
+L459@P18: dass TSG das Audit vor Ort in den zertifizierungsrelevanten Betriebsstätten
+L460@P18: durchführen kann und jederzeit Zugang zu diesen Betriebsstätten erhält.
+L461@P18: B2-4. Vorbeurteilung des Managementsystems, Vor-Audit
+L462@P18: Die TSG bietet auf Wunsch, auch unabhängig vom Zertifizierungsverfahren,
+L463@P18: folgende Dienstleistungen an.
+L464@P18: B2-4.1 In einer Vorbeurteilung werden anhand der Prüfung von ausgewählten Dokumenten Schwachstellen des Managementsystems aufgezeigt. Über das
+L465@P18: Ergebnis erhält der Kunde einen Bericht.
+L466@P18: B2-4.2 Mit dem Vor-Audit, dessen Umfang insgesamt und vor Ort in Absprache mit
+L467@P18: dem Kunden festgelegt wird, sollen Schwachstellen des Managementsystems aufgezeigt werden. Über das Ergebnis informiert der Auditor den Kunden in einem Abschlussgespräch; auf Wunsch erstellt die TSG einen VorAuditbericht. Es darf nur ein (1) -Vor-Audit durchgeführt werden.
+L468@P18: B2-5. Zertifizierungsverfahren
+L469@P18: B2-5.1 Vorbereitung auf das Zertifizierungsaudit
+L470@P18: Nach Beauftragung benennt der Kunde der TSG einen für das Zertifizierungsverfahren verantwortlichen Auditbeauftragten. Die TSG teilt dem Kunden die vorgesehenen Auditoren mit. Regelungen in Normen und Vorschriften über unzulässige Beratungstätigkeit von Auditoren werden eingehalten.
+L471@P18: Um ein unabhängiges Audit sicherstellen zu können, liegt die Entscheidung
+L472@P18: über das Auditorenteam ausschließlich bei der TSG. Die Entscheidung im
+L473@P18-19: Einzelfall basiert auf verschiedenen Faktoren, wie Kompetenz, Verfügbarkeit, Unparteilichkeit, etc. PZVVO TÜV SÜD AB2C2 Seite 20 von 29
+L474@P19: Stand: 01/2024 TÜV SÜD Gruppe
+L475@P19: Zusätzlich und so lange rechtliche Regelungen wie beispielsweise datenschutzrechtliche Regelungen dem nicht im Wege stehen, können Kunden
+L476@P19: angemessene Hintergrundinformationen über jedes Mitglied des Auditteams anfordern.
+L477@P19: B2-5.2 Zertifizierungsaudit
+L478@P19: Der Kunde hat sicherzustellen, dass zuständiges Personal zur Beantwortung der Fragen verfügbar ist. Der Kunde gewährt den Auditoren Zugang
+L479@P19: zu den entsprechenden Stellen in der zu auditierenden Organisation und
+L480@P19: Einsicht in alle systemrelevanten Aufzeichnungen.
+L481@P19: B2-5.2.1 Erst-Zertifizierungsaudit
+L482@P19: Das Erstzertifizierungs-Audit eines Managementsystems muss in zwei Stufen durchgeführt werden: Stufe 1 und Stufe 2.
+L483@P19: Stufe 1 / Prüfung und Bewertung der Bereitschaft des Kunden
+L484@P19: Der Kunde stellt der TSG alle verlangten Dokumente zum Managementsystem (z. B. Handbuch, Verfahrens-, Arbeits- und Prüfanweisungen, Aufzeichnungen) zur Überprüfung und Bewertung zur Verfügung.
+L485@P19: Wenn das Managementsystem schon von einer anderen Zertifizierungsstelle im gleichen oder ähnlichen Umfang zertifiziert wurde, muss der Kunde
+L486@P19: der TSG zusätzlich die folgenden Unterlagen zur Verfügung stellen:
+L487@P19:  Kopie des bisherigen Zertifikats;
+L488@P19:  alle Auditberichte des aktuellen Zertifizierungszyklus;
+L489@P19:  Information über noch offene Nichtkonformitäten;
+L490@P19:  Information über zertifizierungsrelevante Beschwerden und getroffene
+L491@P19: Maßnahmen;
+L492@P19:  Information über etwaige Probleme mit Rechtskonformität.
+L493@P19: Die TSG muss
+L494@P19:  die Dokumentation des Managementsystems bewerten;
+L495@P19:  die Bereitschaft für Stufe 2 bestimmen;
+L496@P19:  den Vorbereitungsstand sowie das Verständnis des Kunden bzgl. der
+L497@P19: Anforderungen der normativen Dokumente bewerten;
+L498@P19-20:  die notwendigen Informationen bzgl. des Geltungsbereichs des Managementsystems erlangen, einschließlich der Standorte, Prozesse, Arbeitsmittel, Lenkungsebenen und anzuwendenden gesetzlichen und regulatorischen Anforderungen; PZVVO TÜV SÜD AB2C2 Seite 21 von 29
+L499@P20: Stand: 01/2024 TÜV SÜD Gruppe
+L500@P20:  Stufe 2 planen einschließlich der Bestätigung der Anforderungen an
+L501@P20: das Auditteam;
+L502@P20:  beurteilen, ob interne Audits und Managementbewertungen durchgeführt werden und der Grad der Umsetzung des Managementsystems
+L503@P20: belegt, dass der Kunde für Stufe 2 bereit ist.
+L504@P20: Um die vorstehend genannten Ziele zu erreichen, können Teile der Stufe 1
+L505@P20: auch vor Ort durchgeführt werden.
+L506@P20: Die TSG dokumentiert die Auditschlussfolgerungen im Hinblick auf das Erreichen der Ziele der Stufe 1 und die Bereitschaft für die Stufe 2. Sie teilt
+L507@P20: diese dem Kunden mit, einschließlich der Hinweise zu identifizierten
+L508@P20: Schwachstellen, die während der Stufe 2 als Nichtkonformität eingestuft
+L509@P20: werden könnten.
+L510@P20: Basierend auf den Ergebnissen der Stufe 1 plant die TSG Durchführung
+L511@P20: und Schwerpunkte der Stufe 2. Einzelheiten dieser Stufe 2 werden mit dem
+L512@P20: Kunden abgestimmt.
+L513@P20: Der zeitliche Abstand zwischen Stufe 1 und Stufe 2 wird so festgelegt, dass
+L514@P20: der Kunde Zeit hat, die identifizierten Schwachstellen zu beseitigen.
+L515@P20: B2-5.2.2 Stufe 2 / Audit am Standort des Kunden
+L516@P20: Vor Stufe 2 stellt die TSG dem Kunden den mit ihm abgestimmten Auditplan* zur Verfügung.
+L517@P20: Die Auditoren bewerten die Umsetzung einschließlich der Wirksamkeit des
+L518@P20: Managementsystems. Mindestens Folgendes muss dabei auditiert werden:
+L519@P20:  Informationen und Nachweise über die Konformität mit allen Anforderungen der anwendbaren Managementsystemnorm oder anderen normativen Dokumenten;
+L520@P20:  Überwachung der Leistung, Messung, Berichterstattung und Überprüfung in Bezug auf Ziele und Vorgaben für Schlüsselleistungen;
+L521@P20:  die Fähigkeit und die Leistungsfähigkeit des Managementsystems des
+L522@P20: Kunden im Hinblick auf die Erfüllung geltender gesetzlicher, behördlicher und vertraglicher Anforderungen;
+L523@P20:  operative Lenkung der Prozesse des Kunden;
+L524@P20:  interne Audits und Managementbewertung;
+L525@P20:  Verantwortlichkeit der Leitung für die Politiken des Kunden.
+L526@P20-21: Die TSG stellt dem Kunden einen Auditbericht zu Stufe 2 zur Verfügung. PZVVO TÜV SÜD AB2C2 Seite 22 von 29
+L527@P21: Stand: 01/2024 TÜV SÜD Gruppe
+L528@P21: B2-5.3 Zertifizierung
+L529@P21: Die TSG erteilt ein Zertifikat, in der Regel mit einer Laufzeit von drei (3)
+L530@P21: Jahren ab Zertifizierungsentscheidung, wenn alle Anforderungen der entsprechenden zugrunde liegenden normativen Dokumenten erfüllt und rechtliche und behördliche Vorschriften eingehalten sind, es sei denn, bestimmte
+L531@P21: normative Dokumente oder Einzelregelungen im Zertifizierungsvertrag fordern eine abweichende Gültigkeitsdauer.
+L532@P21: B2-5.4 Überwachungsaudit
+L533@P21: Überwachungsaudits werden während der Laufzeit eines Zertifikats regelmäßig (in der Regel jährlich) durchgeführt und dienen der Überprüfung, ob
+L534@P21: das zertifizierte Managementsystem weiterhin die Anforderungen erfüllt.
+L535@P21: Zur Vorbereitung des Überwachungsaudits sind der TSG auf Anforderung
+L536@P21: die erforderlichen Dokumente (z. B. das gültige Managementhandbuch mit
+L537@P21: einer Auflistung aller vorgenommenen Änderungen) vorzulegen.
+L538@P21: Jedes reguläre Überwachungsaudit muss umfassen:
+L539@P21:  interne Audits und Managementbewertung;
+L540@P21:  eine Bewertung der ergriffenen Maßnahmen zu Nichtkonformitäten, die
+L541@P21: während des vorhergehenden Audits festgestellt wurden;
+L542@P21:  Umgang mit Beschwerden;
+L543@P21:  Wirksamkeit des Managementsystems im Hinblick auf das Erreichen
+L544@P21: der Ziele des zertifizierten Kunden und der beabsichtigten Ergebnisse
+L545@P21: des entsprechenden Managementsystems;
+L546@P21:  Fortschritt bei geplanten Tätigkeiten, die auf eine ständige Verbesserung zielen;
+L547@P21:  anhaltende operative Lenkung;
+L548@P21:  Bewertung von Änderungen;
+L549@P21:  Nutzung von Zertifizierungszeichen und/oder anderen Verweisen auf
+L550@P21: die Zertifizierung.
+L551@P21: Die TSG stellt dem Kunden einen Auditbericht zum Überwachungsaudit zur
+L552@P21: Verfügung
+L553@P21: B2-5.5 Besondere Überwachungsaudits und Audits aus besonderem Anlass
+L554@P21: Sofern es das jeweilige Zertifizierungsprogramm erfordert oder in begründeten Einzelfällen, ist die TSG berechtigt, kurzfristige oder unangekündigte
+L555@P21: Audits* auf Kosten des Kunden durchzuführen. Diese Audits ersetzen kein
+L556@P21-22: reguläres Überwachungsaudit gemäß B2-5.4. PZVVO TÜV SÜD AB2C2 Seite 23 von 29
+L557@P22: Stand: 01/2024 TÜV SÜD Gruppe
+L558@P22: B2-5.6 Weitere Überwachungstätigkeiten
+L559@P22: Weitere Überwachungstätigkeiten können beinhalten:
+L560@P22:  Anfragen der Zertifizierungsstelle an den Kunden zu Aspekten der Zertifizierung;
+L561@P22:  Bewertung der Angaben des Kunden im Hinblick auf seine Tätigkeiten
+L562@P22: (z. B. Werbematerial, Webseiten);
+L563@P22:  Aufforderungen an den Kunden zur Bereitstellung von Dokumenten und
+L564@P22: Aufzeichnungen (auf Papier oder elektronischen Medien);
+L565@P22:  andere Mittel zur Überwachung der Leistungsfähigkeit des Kunden.
+L566@P22: B2-5.7 Re-Zertifizierungsaudit
+L567@P22: Ein Re-Zertifizierungsaudit wird rechtzeitig vor Ablauf des Zertifikates
+L568@P22: durchgeführt, um eine Aufrechterhaltung der Zertifizierung zu ermöglichen.
+L569@P22: Wenn ein solches Re-Zertifizierungsaudit erfolgreich durchgeführt wurde,
+L570@P22: kann erneut ein Zertifikat ausgestellt werden.
+L571@P22: Zweck des Re-Zertifizierungsaudit ist die Überprüfung der kontinuierlichen
+L572@P22: Konformität und Wirksamkeit des gesamten Managementsystems.
+L573@P22: Im Rahmen des Re-Zertifizierungsaudits erfolgt eine Überprüfung der Leistungsfähigkeit des Managementsystems über den gesamten jüngsten Zertifizierungszyklus. Stufe 1 kann erforderlich sein, wenn es signifikante Änderungen im Managementsystem des Kunden gibt.
+L574@P22: Zur Vorbereitung des Audits stellt der Kunde der TSG alle verlangten Dokumente zum Managementsystem zur Verfügung.
+L575@P22: B2-5.8 Auditbericht und Nichtkonformitäten
+L576@P22: Die TSG informiert den Kunde nach dem Audit in einem Abschlussgespräch
+L577@P22: und einem Auditbericht über das Auditergebnis. Nichtkonformitätsberichte
+L578@P22: werden vom Kunden gegengezeichnet, sofern dies im jeweiligen Programm
+L579@P22: oder von der TSG gefordert wird. Der Kunde dokumentiert die erforderlichen
+L580@P22: Korrekturen und Korrekturmaßnahmen. Bei Nichtkonformitäten ist ein
+L581@P22: Nach-Audit möglich. Die Kosten werden gemäß Aufwand verrechnet. Gleiches gilt für im Nichtkonformitätsbericht dokumentierte erforderliche zusätzliche Überprüfungen von Korrekturmaßnahmen.
+L582@P22: Werden während eines Audits so schwerwiegende Nichtkonformitäten
+L583@P22: sichtbar, dass eine Zertifikatserteilung bzw. -fortführung auch nach erforderlichen Korrekturmaßnahmen nicht realistisch erscheint, informiert die
+L584@P22: TSG den Kunde über den Abbruch des Audits und empfiehlt ggf. dessen
+L585@P22-23: Fortführung als Vor-Audit. Die TSG stellt die entstandenen Kosten (einschließlich Bericht) in Rechnung. PZVVO TÜV SÜD AB2C2 Seite 24 von 29
+L586@P23: Stand: 01/2024 TÜV SÜD Gruppe
+L587@P23: B2-6. Ergänzende Vertragsbedingungen
+L588@P23: B2-6.1 Der Kunde ist verpflichtet sicherzustellen, dass die Verwendung des Zertifikats oder Zertifizierungszeichens den Bestimmungen der PZVVO entspricht. Die TSG ist berechtigt, die Verwendung zu kontrollieren.
+L589@P23: Die TSG untersucht und bewertet sowohl Beschwerden Dritter als auch ihr
+L590@P23: anderweitig bekanntwerdende Hinweise auf mögliche Unkorrektheiten.
+L591@P23: Gleiches gilt für Änderungen in der Organisation des Kunden.
+L592@P23: Sofern vom jeweiligen Zertifizierungsprogramm gefordert, informiert die
+L593@P23: TSG den Kunden über wesentliche Änderungen des Zertifizierungsprogrammes.
+L594@P23: B2-6.2 Der Kunde muss alle Anforderungen der PZVVO erfüllen und jegliche zur
+L595@P23: Auditierung erforderlichen Informationen zur Verfügung stellen.
+L596@P23: Der Kunde muss die TSG unverzüglich, aber nicht später als einen (1) Monat bzw. einer vom jeweiligen Zertifizierungsprogramm ausdrücklich vorgegebenen kürzeren Frist, in Textform über alle relevanten Änderungen seines Managementsystems und über Modifikationen in der Organisation sowie auch über andere signifikante Vorkommnisse informieren, die die Übereinstimmung mit dem Managementsystem beeinflussen oder die Übereinstimmung des Managementsystems mit den Anforderungen für eine der
+L597@P23: Zertifizierungen beeinflussen können.
+L598@P23: Diese Änderungen können z. B. betreffen (folgende Aufstellung ist nicht abschließend):
+L599@P23:  Rechts- oder Organisationsform;
+L600@P23:  wirtschaftliche Verhältnisse oder Eigentums- oder Besitzverhältnisse;
+L601@P23:  Organisation und/oder Management (inkl. individueller Veränderungen
+L602@P23: im Schlüsselpersonal);
+L603@P23:  Kontaktadresse und Adresse der Standorte;
+L604@P23:  das vom zertifizierten Managementsystem erfasste Tätigkeitsfeld (Geltungsbereich);
+L605@P23:  wesentliche Veränderungen des Managementsystems und der Prozesse inkl. geplanter Änderungen.
+L606@P23-24: Darüber hinaus dokumentiert der Kunde interne und externe Beanstandungen in Bezug auf sein Managementsystem sowie die durchgeführten Korrekturmaßnahmen und stellt diese Information im Audit zur Verfügung. PZVVO TÜV SÜD AB2C2 Seite 25 von 29
+L607@P24: Stand: 01/2024 TÜV SÜD Gruppe
+L608@P24: Ungeachtet der Tatsache, dass die TSG den Kunden im Regelfall auf fällige
+L609@P24: Überwachungs-/Re-Zertifizierungsaudits hinweisen wird, liegt es auch in
+L610@P24: der Verantwortung des Kunden, die zur Aufrechterhaltung des Zertifikats im
+L611@P24: Turnus von zwölf (12) Monaten erforderlichen Audits mindestens drei (3)
+L612@P24: Monate vor Fälligkeit bei der TSG abzurufen.
+L613@P24: B2-6.3 Bei Änderungen in zugrunde liegenden normativen Dokumenten gelten
+L614@P24: diese neuen Fassungen der normativen Dokumente als verbindlich, unter
+L615@P24: Berücksichtigung etwaiger Übergangsfristen.
+L616@P24: B2-6.4 Bei integrierten Managementsystemen müssen die spezifischen Aspekte
+L617@P24-25: der Einzelsysteme identifiziert werden können. PZVVO TÜV SÜD AB2C2 Seite 26 von 29
+L618@P25: Stand: 01/2024 TÜV SÜD Gruppe
+L619@P25: Modul C2 Besondere Bedingungen für Leistungen der TÜV SÜD Management Service GmbH (TÜV SÜD MS)
+L620@P25: Diese besonderen Bedingungen (Modul C2) ergänzen bzw. ändern
+L621@P25: die Module A und B wie nachstehend aufgeführt.
+L622@P25: Auf die Leistungen der TÜV SÜD MS finden die nachgenannten Module der PZVVO Anwendung. Im Fall von Widersprüchen haben die
+L623@P25: Module in folgender Reihenfolge Vorrang:
+L624@P25:  Modul C2 – Besondere Bedingungen für die Leistungen der TÜV
+L625@P25: SÜD MS
+L626@P25:  Modul B2 – Besondere Bedingungen für die Auditierung und Zertifizierung von Managementsystemen
+L627@P25:  bzw. im Fall von Produktzertifizierungen zusätzlich Modul B1 –
+L628@P25: Besondere Bedingungen für die Prüfung und Zertifizierung von
+L629@P25: Produkten
+L630@P25:  bzw. im Fall von Validierung und Verifizierung zusätzlich Modul
+L631@P25: B4 – Besondere Bedingungen für die Validierung und Verifizierung von Informationen (Behauptungen)
+L632@P25:  Modul A – Allgemeine Bedingungen
+L633@P25: Die Anforderungen der zugrunde liegenden Regelwerke, der Akkreditierungsstellen und/oder Programmeigner/Standardgeber sind für
+L634@P25: den Kunden bindend. Es obliegt dem Kunden, sich über diese Anforderungen und etwaige Änderungen durch die Programmeigner/Standardgeber zu informieren.
+L635@P25: Wesentliche Anforderungen, allerdings ohne Anspruch auf Vollständigkeit, werden dem Kunden über die Website www.tuvsud.com/msagb-pzvvo zugänglich gemacht.
+L636@P25: C2-1. -> A-3. Nutzung von Konformitätszeichen, Logos oder anderen geschützten Zeichen der Programmeigner/Standardgeber
+L637@P25: Sofern der jeweilige Programmeigner/Standardgeber eine Nutzung
+L638@P25: seiner Konformitätszeichen, Logos oder anderen geschützten Zeichen ausdrücklich zulässt, hat sich der Kunde über dessen Vorgaben
+L639@P25: zur Nutzung zu informieren und diese strikt zu beachten. Für die korrekte Nutzung ist ausschließlich der Kunde verantwortlich. TÜV SÜD
+L640@P25: MS räumt ausdrücklich keine Rechte an Konformitätszeichen, Logos
+L641@P25-26: oder anderen geschützten Zeichen der Programmeigner/Standardgeber ein. PZVVO TÜV SÜD AB2C2 Seite 27 von 29
+L642@P26: Stand: 01/2024 TÜV SÜD Gruppe
+L643@P26: C2-2. -> A-4. Informationsweitergabe an/durch Akkreditierungsstellen, Behörden oder Programmeigner
+L644@P26: Akkreditierungsstellen, Behörden oder Programmeigner sind berechtigt, ausgewählte Zertifizierungsinformationen auf ihrer Internetseite,
+L645@P26: in ihrer Datenbank oder in einem Portal zu veröffentlichen, beispielsweise die Bezeichnung des Kunden, den Geltungsbereich und den
+L646@P26: Zertifizierungsstatus.
+L647@P26: Akkreditierungsstellen, Behörden oder Programmeigner sind auch
+L648@P26: berechtigt, ausgewählte Zertifizierungsinformationen weiterzugeben,
+L649@P26: wenn dies zur Anerkennung des Standards durch einen Dritten zwingend erforderlich ist, zum Beispiel durch die Deutsche Akkreditierungsstelle (DAkkS) oder die Global Food Safety Initiative (GFSI).
+L650@P26: Gleiches gilt, sofern eine entsprechende Weitergabe im jeweiligen
+L651@P26: Standard vorgesehen oder beispielsweise von behördlicher Seite gefordert ist.
+L652@P26: C2-3. -> A-1.10, B2-6.1
+L653@P26: Beschwerden/Einsprüche
+L654@P26: Ergänzend zu A-1.10 und B2-6.1 gilt für Leistungen der TÜV SÜD
+L655@P26: MS:
+L656@P26: Beschwerden und Einsprüche zu Prüfungen, Zertifizierungen oder
+L657@P26: Validierungen/Verifizierungen der TÜV SÜD MS können über das folgende Online-Formular übermittelt werden: www.tuvsud.com/de-msfeedback.
+L658@P26: C2-4. Zusätzliche besondere Bedingungen gelten für die jeweils benannten Leistungen:
+L659@P26: C2-4.1 -> B2-6.2 Informationspflicht der Kunden mit Zertifizierungen im Bereich
+L660@P26: Sicherheit und Gesundheit bei der Arbeit
+L661@P26: Im Rahmen der Zertifizierung von Managementsystemen für Sicherheit und Gesundheit bei der Arbeit (insbesondere ISO 45001) ist der
+L662@P26: Kunde zusätzlich zu den Informationspflichten gem. B2-6.2 PZVVO
+L663@P26: verpflichtet, die Zertifizierungsstelle der TÜV SÜD MS unverzüglich,
+L664@P26: spätestens aber innerhalb von drei (3) Werktagen (sofern nicht in
+L665@P26: einzelnen Standards eine kürzere Frist vorgeschrieben ist), in Textform (Meldung per E-Mail an MS-PCM-SMS@tuvsud.com) über
+L666@P26-27: schwerwiegende Vorfälle oder Verstöße gegen Verordnungen zu Sicherheit und Gesundheit bei der Arbeit zu informieren, die eine Einbeziehung der zuständigen Behörden erfordern. PZVVO TÜV SÜD AB2C2 Seite 28 von 29
+L667@P27: Stand: 01/2024 TÜV SÜD Gruppe
+L668@P27: C2-4.2 -> B2-6.2 Informationspflicht der Kunden mit Zertifizierungen im Bereich
+L669@P27: Lebens-/Futtermittel
+L670@P27: Zusätzlich zu den Informationspflichten gemäß B2-6.2 PZVVO ist der
+L671@P27: Kunde verpflichtet, die Zertifizierungsstelle der TÜV SÜD MS unverzüglich, spätestens aber innerhalb von drei (3) Kalendertagen (sofern nicht in einzelnen Standards eine kürzere Frist vorgeschrieben
+L672@P27: ist), via E-Mail an FoodAlarm@tuvsud.com über Umstände zu informieren, die geeignet sind, die Gültigkeit einer Zertifizierung zu beeinträchtigen. Solche Umstände können insbesondere Produktrückrufe
+L673@P27: und/oder behördliche bzw. gerichtliche Verfahren sein, die die Produktsicherheit oder andere rechtliche Fragen zum Gegenstand haben.
+L674@P27: C2-4.3 -> B2-6.2, C2-4.2
+L675@P27: Informationspflicht der Kunden mit Zertifizierungen im Bereich
+L676@P27: GMP+
+L677@P27: Für den Standard GMP+ ist darüber hinaus verpflichtend Folgendes
+L678@P27: zu beachten:
+L679@P27: Im Falle von Sachverhalten oder wahrgenommenen Umständen in
+L680@P27: Bezug auf Futtermittel, die die Futter- und/oder Lebensmittelsicherheit beeinträchtigen, beispielsweise der Überschreitung der höchstzulässigen Grenzwerte von unerwünschten Substanzen oder sonstiger Abweichungen oder Unregelmäßigkeiten in Bezug auf Aspekte
+L681@P27: der Futtermittelsicherheit, die sich der Kontrolle des Teilnehmers entziehen und die Konsequenzen für andere Unternehmen haben könnten, ist der Kunde verpflichtet, innerhalb von zwölf (12) Stunden nach
+L682@P27: Bestätigung der Kontamination eine EWS (Early Warning System)
+L683@P27: Meldung an die TÜV SÜD MS (per E-Mail an FoodAlarm@tuvsud.com) und an GMP+ International (über das EWS-Meldeformular auf der Website www.gmpplus.org oder per E-Mail an
+L684@P27: ews@gmpplus.org) zu senden.
+L685@P27: C2-4.4 -> B2-6.2, C2-4.2
+L686@P27: Informationspflicht der Kunden mit Zertifizierungen im Bereich
+L687@P27: FAMI-QS
+L688@P27: Für den Standard FAMI-QS ist darüber hinaus verpflichtend Folgendes zu beachten:
+L689@P27: Im Falle eines Vorfalles im Bereich der Futtermittelsicherheit oder
+L690@P27: des Verdachtes eines solchen ist der Kunde verpflichtet, zusätzlich
+L691@P27: zur TÜV SÜD MS (per E-Mail an FoodAlarm@tuvsud.com) auch das
+L692@P27: FAMI-QS-Sekretariat per E-Mail an notification@fami-qs.org mittels
+L693@P27-28: des hierfür vorgesehenen Meldeformulars zu informieren. PZVVO TÜV SÜD AB2C2 Seite 29 von 29
+L694@P28: Stand: 01/2024 TÜV SÜD Gruppe
+L695@P28: C2-4.5 Bewertung der Erfüllung genehmigungsrelevanter Anforderungen im Sinne der Verordnung (EU) Nr. 2018/858, Verordnung
+L696@P28: (EU) Nr. 167/2013 und Verordnung (EU) Nr. 168/2013 sowie des
+L697@P28: UNECE-Übereinkommens von 1958 und der StraßenverkehrsZulassungs-Ordnung (StVZO) im Rahmen des Typgenehmigungsverfahrens beim Kraftfahrtbundesamt (KBA)
+L698@P28: Für den Standard KBA ist darüber hinaus verpflichtend Folgendes zu
+L699@P28: beachten:
+L700@P28: TÜV SÜD MS ist berechtigt das KBA über relevante Inhalte/Ergebnisse des jeweiligen Verfahrens zu informieren. Hierzu zählen insbesondere, aber nicht ausschließlich Informationen zu:
+L701@P28:  Ausstellung, Einschränkungen (zeitlich oder inhaltlich), Änderungen, Aussetzung, Ablauf, Widerruf oder Zurückziehung von KBAZertifikatsergänzungen und/oder KBA-Verifizierungsbestätigungen;
+L702@P28:  wesentliche Nichtkonformitäten bezüglich genehmigungsrelevanter Anforderungen beim auditierten Kunden, wenn der Kunde
+L703@P28: nicht unverzüglich adäquate Korrekturen und Korrekturmaßnahmen wirksam umsetzt;
+L704@P28:  endgültige Verweigerung einer KBA- Zertifikatsergänzung
+L705@P28: und/oder KBA-Verifizierungsbestätigung.
+L706@P28: C2-4.6 Zertifizierung nach Akkreditierungs- und Zulassungsverordnung Arbeitsförderung (AZAV)
+L707@P28: Zur Genehmigung einzelner Lehrgänge sind ergänzend die Vorgaben zur Produktzertifizierung gemäß B1 PZVVO sowie gemäß
+L708@P28: ISO/IEC 17065 bindend.
+

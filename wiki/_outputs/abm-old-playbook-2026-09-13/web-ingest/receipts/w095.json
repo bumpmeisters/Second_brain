@@ -1,0 +1,17 @@
+{
+  "id": "W095",
+  "url": "https://www.gartner.com/en/documents/6385743",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:52.132202+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w095.json",
+  "title": "Drive B2B Buyer Decision Making Through Messaging and Content",
+  "final_url": "https://www.gartner.com/en/documents/6385743",
+  "characters": 7441,
+  "sha256": "b9e18b8cd33de3b464c65da4423207d318dee8f8f95a7d9cc74ff8d89c16fb6d",
+  "http_status": 200
+}

@@ -1,0 +1,385 @@
+{
+  "contract": "g3e-component-refactor-operations/v1",
+  "authority_effect": "none",
+  "required_file_count": 21,
+  "files": [
+    {
+      "refactor_id": "RFX-001",
+      "target_path": "projects/marketing-contextops/frameworks/claim-governance/claim-evidence-risk-use-matrix.md",
+      "operations": [
+        {
+          "old": "- `projects/Nadeln/wiki/_outputs/mirrorsoft-claim-matrix-v0-1.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/projects/Nadeln/wiki/_outputs/mirrorsoft-claim-matrix-v0-1.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-002",
+      "target_path": "projects/marketing-contextops/frameworks/growth-and-planning/d2c-funnel-diagnosis.md",
+      "operations": [
+        {
+          "old": "- `projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-funnel-diagnosis-scorecard-v0-1.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-funnel-diagnosis-scorecard-v0-1.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-003",
+      "target_path": "projects/marketing-contextops/frameworks/growth-and-planning/ecommerce-lifecycle-marketing.md",
+      "operations": [
+        {
+          "old": "- `wiki/_outputs/shopify-reporting-strategy-implementation-spec-v0-1.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/wiki/_outputs/shopify-reporting-strategy-implementation-spec-v0-1.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-004",
+      "target_path": "projects/marketing-contextops/frameworks/market-analysis/market-boundary-alternative-set-analysis.md",
+      "operations": [
+        {
+          "old": "- `projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-marktanalyse-context-packet-v0-2.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-marktanalyse-context-packet-v0-2.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-005",
+      "target_path": "projects/marketing-contextops/frameworks/orchestration-and-learning/evidence-led-recursive-learning.md",
+      "operations": [
+        {
+          "old": "Convert completed work and user feedback into reusable patterns and controlled improvements.",
+          "new": "Convert completed work and user feedback into source-owned episodes and reviewable pattern candidates without changing reusable behavior automatically."
+        },
+        {
+          "old": "Review evidence, separate case facts from reusable patterns, score quality/framework usefulness, propose minimal changes, and register learning.",
+          "new": "Review evidence, separate case facts from reusable patterns, record one bounded source-owned episode, and propose rather than promote minimal pattern candidates."
+        },
+        {
+          "old": "Apply clear factual fixes immediately. Queue structural changes until repeated evidence or severe failure supports them.",
+          "new": "Record factual corrections in the source-owned run or incident record. Keep patterns episodic until repeated evidence or a justified high-confidence exception, human review, regression cases, and a rollback path support promotion by the method owner."
+        },
+        {
+          "old": "What worked, failures, causes, reusable patterns, quality scores, updates, evidence, and next evaluation.",
+          "new": "Source-owned episode, what worked, failures, causes, evidence, quality observations, review-only pattern candidates, and next evaluation."
+        },
+        {
+          "old": "Feeds framework backlogs, skills, workflows, tools, decisions, and next tests.",
+          "new": "Feeds source-owned run or incident records and review-only proposals. It does not modify frameworks, skills, workflows, tools, contracts, or instructions by itself."
+        },
+        {
+          "old": "Revise when learning logs become unused, repetitive, or fail to improve later runs.",
+          "new": "Revise only through explicit method-owner and human promotion review when repeated episodes show that the current retrospective method fails."
+        },
+        {
+          "old": "- `skills/recursive-learning-update/SKILL.md`\n- `skills/recursive-learning-update/references/*`\n- `frameworks/_meta/*`",
+          "new": "- `wiki/_outputs/marketing-system-architecture-v0-2/memory-runtime-learning-contract.md`\n- `wiki/continual-learning-for-agents.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-006",
+      "target_path": "projects/marketing-contextops/frameworks/positioning/competitive-alternative-positioning.md",
+      "operations": [
+        {
+          "old": "- `projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-marktanalyse-framework-plan-v0-1.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-marktanalyse-framework-plan-v0-1.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-007",
+      "target_path": "projects/marketing-contextops/frameworks/segmentation/category-entry-point-demand-situations.md",
+      "operations": [
+        {
+          "old": "- `wiki/_outputs/project-framework-inventory-2026-06-19.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/wiki/_outputs/project-framework-inventory-2026-06-19.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-008",
+      "target_path": "projects/marketing-contextops/frameworks/segmentation/segmentation-basis-selection-stp.md",
+      "operations": [
+        {
+          "old": "- `wiki/_outputs/project-framework-inventory-2026-06-19.md`",
+          "new": "- `projects/No and low code_1st Marketing Agent/wiki/_outputs/project-framework-inventory-2026-06-19.md`"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-009",
+      "target_path": "projects/marketing-contextops/skills/audience-understanding/SKILL.md",
+      "operations": [
+        {
+          "old": "- Stop before positioning, campaign strategy, SEO/GEO strategy, landing page copy, sales sequences, or lifecycle flows unless explicitly requested.",
+          "new": "- Stop before positioning, campaign strategy, SEO/GEO strategy, landing page copy, sales sequences, or lifecycle flows unless explicitly requested.\n- Require one exact, existing repository-relative `source_project`; never use `projects/marketing-contextops/` or another shared system root for concrete company artifacts."
+        },
+        {
+          "old": "1. Read upstream context.\n   - Read the company workspace index, sources, log, company context, market-analysis packet, buying-context packet, segmentation-strategy packet, claim matrix, and relevant customer/persona documents.",
+          "new": "1. Read upstream context.\n   - Resolve the exact existing `source_project` before reading or writing concrete artifacts.\n   - Read that source project's index, sources, log, company context, market-analysis packet, buying-context packet, segmentation-strategy packet, claim matrix, and relevant customer/persona documents."
+        },
+        {
+          "old": "   - Save durable outputs in `wiki/_outputs/` when working inside a company workspace.",
+          "new": "   - Save durable outputs in `<source_project>/wiki/_outputs/`."
+        },
+        {
+          "old": "- The artifact deepens selected segments instead of choosing segmentation.",
+          "new": "- The artifact deepens selected segments instead of choosing segmentation.\n- `source_project` resolves to one existing source-owned workspace and no concrete output is written under Marketing ContextOps."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-010",
+      "target_path": "projects/marketing-contextops/skills/b2b-gtm-mapping/SKILL.md",
+      "operations": [
+        {
+          "old": "- Translate marketing into sales enablement instead of stopping at messaging.",
+          "new": "- Translate marketing into sales enablement instead of stopping at messaging.\n- Require one exact, existing repository-relative `source_project`; shared system roots never own concrete GTM maps."
+        },
+        {
+          "old": "1. Read the inputs.\n   - Read company context, source summaries, claim matrix, framework-fit note, and proof-led positioning if available.",
+          "new": "1. Read the inputs.\n   - Resolve the exact existing `source_project` before reading or writing concrete artifacts.\n   - Read company context, source summaries, claim matrix, framework-fit note, and proof-led positioning from that source project if available."
+        },
+        {
+          "old": "   - Put generated GTM maps in `wiki/_outputs/`.",
+          "new": "   - Put generated GTM maps in `<source_project>/wiki/_outputs/`."
+        },
+        {
+          "old": "- Roles are grounded in available evidence or clearly labeled as hypotheses.",
+          "new": "- Roles are grounded in available evidence or clearly labeled as hypotheses.\n- `source_project` resolves and owns every concrete GTM output."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-011",
+      "target_path": "projects/marketing-contextops/skills/buying-contexts/SKILL.md",
+      "operations": [
+        {
+          "old": "- Stop before prioritizing segments, writing positioning, content pillars, campaigns, SEO/GEO strategy, sales enablement, or growth loops.",
+          "new": "- Stop before prioritizing segments, writing positioning, content pillars, campaigns, SEO/GEO strategy, sales enablement, or growth loops.\n- Require one exact, existing repository-relative `source_project`; never store concrete buying-context packets in the shared system."
+        },
+        {
+          "old": "1. Read upstream context.\n   - Read the company workspace index, sources, log, company context, claim matrix, market-analysis context packet, and any customer/persona documents.",
+          "new": "1. Read upstream context.\n   - Resolve the exact existing `source_project` before reading or writing concrete artifacts.\n   - Read that source project's index, sources, log, company context, claim matrix, market-analysis context packet, and any customer/persona documents."
+        },
+        {
+          "old": "   - Save durable outputs in `wiki/_outputs/` when working inside a company workspace.",
+          "new": "   - Save durable outputs in `<source_project>/wiki/_outputs/`."
+        },
+        {
+          "old": "- The output is a buying-context packet, not final personas or strategy.",
+          "new": "- The output is a buying-context packet, not final personas or strategy.\n- `source_project` resolves and owns the packet; Marketing ContextOps owns only the method."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-012",
+      "target_path": "projects/marketing-contextops/skills/company-evidence-intake/references/source-summary-template.md",
+      "operations": [
+        {
+          "old": "  - raw/path-or-url",
+          "new": "  - repository-relative-root-source-path-or-approved-source-project-path"
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-013",
+      "target_path": "projects/marketing-contextops/skills/company-evidence-intake/SKILL.md",
+      "operations": [
+        {
+          "old": "- Do not modify files in `raw/`.",
+          "new": "- Root Second Brain owns default source custody; an existing source project may own custody only when its instructions explicitly approve it.\n- Do not modify files in Root `raw/`, Root `research/`, or an approved source-project source area.\n- Require one exact, existing repository-relative `source_project` for concrete derivatives; never create source or wiki trees under `projects/marketing-contextops/`."
+        },
+        {
+          "old": "1. Inventory sources.\n   - List URLs, files, folders, images, spreadsheets, decks, PDFs, transcripts, and user notes.",
+          "new": "1. Inventory sources.\n   - Resolve the exact existing `source_project` and the controlling Root or explicitly approved source-project custody rules.\n   - List URLs, files, folders, images, spreadsheets, decks, PDFs, transcripts, and user notes."
+        },
+        {
+          "old": "   - Save immutable source copies in `raw/` when source capture is part of the task.\n   - Save AI-generated research in `research/`.\n   - Put generated extracts, tables, or analysis files in `wiki/_outputs/`.",
+          "new": "   - Admit immutable source copies only through Root `raw/` or an explicitly approved source-project custody path.\n   - Admit AI-generated research only through Root `research/` or an explicitly approved source-project research path.\n   - Put generated extracts, tables, or analysis files in `<source_project>/wiki/_outputs/`."
+        },
+        {
+          "old": "   - Create one source summary page for each meaningful source or source bundle.",
+          "new": "   - Create one source summary page in `<source_project>/wiki/` for each meaningful source or source bundle."
+        },
+        {
+          "old": "   - Summarize what the company offers, how it positions itself, who it appears to serve, and what remains unknown.",
+          "new": "   - In `<source_project>/wiki/`, summarize what the company offers, how it positions itself, who it appears to serve, and what remains unknown."
+        },
+        {
+          "old": "   - Update index, sources, and log after durable writes.\n   - Keep raw paths, research paths, and generated outputs clearly separated.",
+          "new": "   - Update `<source_project>/wiki/index.md`, `<source_project>/wiki/sources.md`, and `<source_project>/wiki/log.md` after durable writes.\n   - Keep Root or approved source-project custody paths separate from source-owned derivatives."
+        },
+        {
+          "old": "- Raw sources were preserved and not edited.",
+          "new": "- Root or explicitly approved source-project sources were preserved and not edited.\n- `source_project` resolves and no source, research, wiki, or output tree was created under Marketing ContextOps."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-014",
+      "target_path": "projects/marketing-contextops/skills/company-strategy-orchestrator/SKILL.md",
+      "operations": [
+        {
+          "old": "- Advance substantial artifacts only after the applicable validator gate passes.",
+          "new": "- Advance substantial artifacts only after the applicable validator gate passes.\n- Require one exact, existing repository-relative `source_project`; shared systems own methods and contracts, while the source project owns concrete artifacts and episodes."
+        },
+        {
+          "old": "1. Clarify the current state.\n   - Identify company/product, URL/documents, geography, industry, user goal, and existing workspace.",
+          "new": "1. Clarify the current state.\n   - Identify company/product, URL/documents, geography, industry, user goal, and exact existing `source_project`.\n   - Refuse a missing, ambiguous, nonexistent, or shared-system `source_project`."
+        },
+        {
+          "old": "   - Use `recursive-learning-update` after a meaningful run or user feedback.",
+          "new": "   - Record meaningful run outcomes or user corrections as source-owned episodes; do not invoke the frozen standalone `recursive-learning-update` skill."
+        },
+        {
+          "old": "   - Route persistent or repeated failures to `recursive-learning-update`.",
+          "new": "   - Record persistent or repeated failures as source-owned episodes. A pattern proposal requires repeated evidence or a justified exception, human review, regression cases, and a rollback path."
+        },
+        {
+          "old": "6. Create or update durable artifacts.\n   - Store raw source material in `raw/`.\n   - Store AI-generated research in `research/`.\n   - Store durable wiki pages in `wiki/`.\n   - Store generated outputs in `wiki/_outputs/`.\n   - Update `wiki/index.md`, `wiki/sources.md`, and `wiki/log.md` when creating durable project artifacts.",
+          "new": "6. Create or update durable artifacts.\n   - Keep immutable sources in Root custody or an explicitly approved source-project source path.\n   - Keep AI-generated research in Root custody or an explicitly approved source-project research path.\n   - Store durable project wiki pages in `<source_project>/wiki/`.\n   - Store generated outputs in `<source_project>/wiki/_outputs/`.\n   - Update `<source_project>/wiki/index.md`, `<source_project>/wiki/sources.md`, and `<source_project>/wiki/log.md` when creating durable project artifacts."
+        },
+        {
+          "old": "- The recommended next step follows the evidence state.",
+          "new": "- The recommended next step follows the evidence state.\n- `source_project` resolves and owns every concrete artifact and learning episode."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-015",
+      "target_path": "projects/marketing-contextops/skills/contextops-validator/SKILL.md",
+      "operations": [
+        {
+          "old": "   - Send repeated validator failures to `recursive-learning-update`.\n   - Update skills or profiles only when observed evidence supports the change.",
+          "new": "   - Record repeated validator failures as episodes in the initiating `source_project`.\n   - Propose a reusable pattern only after repeated evidence or a justified exception, human review, regression cases, and a rollback path.\n   - Update skills or profiles only through the owning system's explicit promotion review."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-016",
+      "target_path": "projects/marketing-contextops/skills/marktanalyse/SKILL.md",
+      "operations": [
+        {
+          "old": "- Make the handoff explicit so the next chat can reuse the context.",
+          "new": "- Make the handoff explicit so the next chat can reuse the context.\n- Require one exact, existing repository-relative `source_project`; Marketing ContextOps owns the method, not the concrete market packet."
+        },
+        {
+          "old": "1. Read the current project state.\n   - Start with the company workspace index, sources, log, company context, claim matrix, and existing market/source summaries.",
+          "new": "1. Read the current project state.\n   - Resolve the exact existing `source_project` before reading or writing concrete artifacts.\n   - Start with that source project's index, sources, log, company context, claim matrix, and existing market/source summaries."
+        },
+        {
+          "old": "   - Save durable outputs in `wiki/_outputs/` when working inside a company workspace.",
+          "new": "   - Save durable outputs in `<source_project>/wiki/_outputs/`."
+        },
+        {
+          "old": "- The output is context, not strategy.",
+          "new": "- The output is context, not strategy.\n- `source_project` resolves and owns the packet; no concrete output is written under Marketing ContextOps."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-017",
+      "target_path": "projects/marketing-contextops/skills/proof-led-positioning/SKILL.md",
+      "operations": [
+        {
+          "old": "- Keep the output useful for later persona, journey, campaign, and sales enablement work.",
+          "new": "- Keep the output useful for later persona, journey, campaign, and sales enablement work.\n- Require one exact, existing repository-relative `source_project`; positioning outputs and approvals remain source-project owned."
+        },
+        {
+          "old": "1. Read the current evidence base.\n   - Read the company/project index, source register, log, company context, source summaries, and generated outputs.",
+          "new": "1. Read the current evidence base.\n   - Resolve the exact existing `source_project` before reading or writing concrete artifacts.\n   - Read that source project's index, source register, log, company context, source summaries, and generated outputs."
+        },
+        {
+          "old": "   - Put generated message houses, proof pillars, and positioning notes in `wiki/_outputs/` unless they become durable wiki pages.",
+          "new": "   - Put generated message houses, proof pillars, and positioning notes in `<source_project>/wiki/_outputs/` unless they become durable source-project wiki pages."
+        },
+        {
+          "old": "- Every factual claim has a source or uncertainty label.",
+          "new": "- Every factual claim has a source or uncertainty label.\n- `source_project` resolves and owns the positioning output and approval state."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-018",
+      "target_path": "projects/marketing-contextops/skills/second-brain-framework-fit/SKILL.md",
+      "operations": [
+        {
+          "old": "   - If the local library has a genuine gap, read `wiki/second-brain-source-map.md` and search the parent wiki as a discovery source.\n   - Do not apply a newly discovered framework repeatedly until it has been curated into `frameworks/`.",
+          "new": "   - If the local library has a genuine gap, read Root `wiki/reusable-practices-router.md`, reject candidates whose `avoid_when` applies, and use Root `wiki/reusable-practices-library.md` only to resolve the smallest sufficient artifact set.\n   - Treat Root wiki artifacts as governed discovery sources. Do not copy or repeatedly apply a newly discovered method until its owning system explicitly reviews the change."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-019",
+      "target_path": "projects/marketing-contextops/skills/segmentation-strategy/SKILL.md",
+      "operations": [
+        {
+          "old": "- Mark unsupported segment definitions as hypotheses.",
+          "new": "- Mark unsupported segment definitions as hypotheses.\n- Require one exact, existing repository-relative `source_project`; segmentation decisions and packets remain source-project owned."
+        },
+        {
+          "old": "1. Read upstream context.\n   - Read the company workspace index, sources, log, company context, market-analysis packet, buying-context packet, claim matrix, and relevant user docs.",
+          "new": "1. Read upstream context.\n   - Resolve the exact existing `source_project` before reading or writing concrete artifacts.\n   - Read that source project's index, sources, log, company context, market-analysis packet, buying-context packet, claim matrix, and relevant user docs."
+        },
+        {
+          "old": "   - Save durable outputs in `wiki/_outputs/` when working inside a company workspace.",
+          "new": "   - Save durable outputs in `<source_project>/wiki/_outputs/`."
+        },
+        {
+          "old": "- At least three segmentation frameworks or strategies were considered.",
+          "new": "- At least three segmentation frameworks or strategies were considered.\n- `source_project` resolves and owns the packet and target decision."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-020",
+      "target_path": "projects/marketing-contextops/workflows/company-context-development.md",
+      "operations": [
+        {
+          "old": "Use `workflows/contextops-handoff-contract.md` to keep each stage's required inputs, outputs, evidence status, and downstream leakage checks explicit.",
+          "new": "Use `workflows/contextops-handoff-contract.md` to keep each stage's required inputs, outputs, evidence status, and downstream leakage checks explicit. Require one exact, existing repository-relative `source_project`; this workflow owns the method while the source project owns every concrete artifact and episode."
+        },
+        {
+          "old": "- Use the project-local `frameworks/` folder as the execution library.",
+          "new": "- Use `projects/marketing-contextops/frameworks/` as the shared execution library."
+        },
+        {
+          "old": "13. Recursive learning update\n   Save durable learning back into the project wiki: source summaries, company page, framework notes, reusable patterns, unanswered questions, and log entry.",
+          "new": "13. Governed learning record\n   Save one bounded episode, unanswered questions, and run evidence in the `source_project`. Reusable-pattern changes remain review-only proposals until repeated evidence or a justified exception, human review, regression cases, and a rollback path support promotion."
+        },
+        {
+          "old": "- Company context dossier in `wiki/`.\n- Source summary pages in `wiki/`.\n- Strategy memo or table in `wiki/_outputs/`.\n- Framework selection note in `wiki/`.\n- Open questions and evidence gaps.\n- Reusable workflow improvement notes.",
+          "new": "- Company context dossier in `<source_project>/wiki/`.\n- Source summary pages in `<source_project>/wiki/`.\n- Strategy memo or table in `<source_project>/wiki/_outputs/`.\n- Framework selection note in `<source_project>/wiki/`.\n- Open questions and evidence gaps.\n- Source-owned episode plus any review-only reusable-pattern proposal."
+        },
+        {
+          "old": "- The company context can be audited back to sources.",
+          "new": "- The exact `source_project` exists, owns the concrete artifacts, and can be audited back to sources."
+        }
+      ]
+    },
+    {
+      "refactor_id": "RFX-021",
+      "target_path": "projects/marketing-contextops/workflows/marketing-agent-runbook.md",
+      "operations": [
+        {
+          "old": "1. **Orient**\n   - Read `AGENTS.md`, `context/project-brief.md`, `context/current-priorities.md`, `wiki/index.md`, `workflows/contextops-handoff-contract.md`, and relevant company workspace files.",
+          "new": "1. **Orient**\n   - Read Root `AGENTS.md`, `projects/marketing-contextops/AGENTS.md`, this system's context and handoff contract, and the exact existing `source_project` instructions and index.\n   - Refuse a missing, ambiguous, nonexistent, or shared-system `source_project`."
+        },
+        {
+          "old": "2. **Create or locate workspace**\n   - Use `projects/<Company>/`.\n   - Include local `raw/`, `research/`, `wiki/`, `wiki/_outputs/`, and `wiki/_assets/` as needed.\n   - Maintain one company context core (`wiki/<company>-company-context.md`). Later packets reference it instead of repeating it; the run manifest declares the stage-role → actual-filename mapping once.",
+          "new": "2. **Resolve the source project**\n   - Use the explicitly supplied, already existing repository-relative `source_project`; current Legacy-embedded company projects remain valid until a separate workspace-admission checkpoint.\n   - Never use `projects/marketing-contextops/`, another shared system root, or an inferred future `projects/company-workspaces/` path as the concrete project.\n   - Keep immutable sources in Root custody or an explicitly approved source-project custody path; keep derivatives in `<source_project>/wiki/`, `<source_project>/wiki/_outputs/`, and `<source_project>/wiki/_assets/`.\n   - Maintain one company context core at `<source_project>/wiki/<company>-company-context.md`. Later packets reference it instead of repeating it; the run manifest declares the stage-role → actual-filename mapping once."
+        },
+        {
+          "old": "- The company workspace can be audited back to sources.",
+          "new": "- The exact `source_project` exists, owns the concrete run artifacts, and can be audited back to sources."
+        },
+        {
+          "old": "- Generated outputs are saved in the correct output folder.",
+          "new": "- Generated outputs are saved under `<source_project>/wiki/_outputs/`, never under Marketing ContextOps."
+        }
+      ]
+    }
+  ]
+}

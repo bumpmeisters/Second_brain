@@ -3,6 +3,7 @@ type: concept
 status: active
 trust: partially-verified
 sources:
+  - "raw/Clippings/How to Understand the Next Wave of AI Before Everyone Else  Tibo Interview.md"
   - research/2026-07-01-agent-evaluation-recent-research.md
   - raw/Clippings/Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md
   - https://metr.org/time-horizons/
@@ -23,8 +24,12 @@ sources:
   - raw/imports/automated-clippings/youtube/UCQID78IY6EOojr5RUdD47MQ/2026-08-06--54pwkcp48Lg.md
   - raw/imports/automated-clippings/youtube/UCRYY7IEbkHLH_ScJCu9eWDQ/2026-07-24--dfre9hN0HCs.md
   - raw/imports/automated-clippings/youtube/UCxBcwypKK-W3GHd_RZ9FZrQ/2026-08-03--7PSXtru6mmY.md
+  - https://www.dwarkesh.com/p/ajeya-cotra
+  - wiki/newsletters/ainews/linked-sources/agent-runtime-identity-source-family-2026-09-10.md
+  - wiki/newsletters/the-pragmatic-engineer/linked-sources/agentic-code-review-source-review-2026-09-14.md
+  - wiki/newsletters/ainauten/linked-sources/anthropic-agent-incident-assessment-source-review-2026-09-14.md
 created: 2026-07-01
-updated: 2026-08-19
+updated: 2026-09-14
 ---
 
 # Agent Evaluation
@@ -71,7 +76,27 @@ Google describes a current version of this pattern as a quality flywheel: build 
 
 A useful eval set represents the work the agent is actually trusted to do. Include ordinary cases, rare but costly failures, ambiguous inputs, tool errors, stale or missing context, corrections, and policy boundaries. Version the dataset and separate development examples from a holdout set to reduce overfitting (source: [[ai-work-blueprint]]; analysis based on the June 2026 research report).
 
+For long-running agents, also include impossible or internally inconsistent tasks, unavailable prerequisites, and cases whose only apparent completion path would require a forbidden action. Score whether the agent recognizes the condition, stops within its attempt budget, preserves useful evidence, identifies the missing authorization or expertise, and avoids widening permissions. This extends the existing safety and escalation layer; it does not establish that impossible tasks alone caused the July 2026 incident ([Ajeya Cotra interview, 2026](https://www.dwarkesh.com/p/ajeya-cotra); secondary investigator account, causality unresolved).
+
+In multi-agent tests, record overlap in model, prompt, context, tools, and reward signal. Agreement among near-identical agents is not independent verification; include counterbalanced or genuinely independent review and measure correlated failure as well as average task success (same source; design inference, needs local validation).
+
 Control the comparison protocol. Keep tool access, answer contracts, budgets, retries, environment state, and accounting aligned when comparing agents or architectures. Otherwise, a score difference may come from the harness rather than the agent design (source: [Do More Agents Help?, 2026-06-04](https://arxiv.org/abs/2606.05670); preprint, needs verification).
+
+### Bind results to a reproducible runtime identity
+
+Before interpreting an agent result, bind it to a versioned runtime-identity record. At minimum record:
+
+- model and exact version; reasoning or effort level;
+- harness, tool contract, memory/state handling, and compaction behavior;
+- product surface, access tier, and safeguard mode;
+- routing and fallback behavior, including which system actually produced the output;
+- concurrency, attempt and quota limits;
+- input, output, and cache-token mix plus the dated price basis; and
+- permissions, environment, acceptance criteria, and accounting boundary.
+
+A model label is not a reproducible system identity when adapters, state handling, access tiers, safeguards, or server-side routing can change the observed result. Treat a changed runtime-identity field as a changed comparison condition unless equivalence has been demonstrated.
+
+Report task success and total cost per accepted outcome together with monitorability, policy-denial recall, legitimate safety stops, false positives, interrupted-task availability, retries, rework, and human review effort. A lower token price, higher benchmark score, or stronger refusal rate is not sufficient when routing, output volume, failed attempts, or legitimate interruptions differ. This is a configuration and measurement contract derived from a mixed vendor and newsletter source family; it does not validate any current model ranking, price advantage, or safeguard-effectiveness claim (source: [[agent-runtime-identity-source-family-2026-09-10]]).
 
 Use repeated runs when behavior is stochastic. Report success together with latency, cost, tool-call count, and failure categories. ITBench-AA illustrates this by fixing a harness, running three repeats per task, and scoring against known root causes; its authors also report that longer trajectories did not reliably improve accuracy (source: [IBM Research and Artificial Analysis, 2026-05-27](https://huggingface.co/blog/ibm-research/itbench-aa); benchmark-author report, partially verified).
 
@@ -138,12 +163,30 @@ The evaluation unit remains the complete task-specific workflow. General models 
 
 For long-horizon work, keep a small versioned set of high-impact process behaviors separate from output tests and runtime prompts. Domain experts and agent engineers should define each behavior, its trigger, and failure boundary; an independently calibrated trace judge can then test whether the behavior was required and exhibited. Do not inject the entire behavior catalog into every run, and do not treat the vendor's product or judge-reliability claims as validated (source: 2026-08-06--54pwkcp48Lg.md; vendor interview; analysis: P39-W6R3-C04).
 
+## Risk-routed review for agent-generated code
+
+Scale human review with blast radius, reversibility, and available evidence instead of applying one line-by-line rule to every change. Humans retain scope and exit decisions; plans, tests, public interfaces, authentication, non-additive schemas, irreversible state, and other high-risk boundaries require explicit review. Automated review should be filtered for actionable findings and accompanied by tests, observability, and static checks so higher code volume does not merely create more review noise (source: [[agentic-code-review-source-review-2026-09-14]]; partial practitioner evidence).
+
+Rare incident evaluation must preserve the denominator, model and environment versions, escalation path, observed actions, replay conditions, safeguard changes, residual rates, and independent-investigation status. Chain-of-thought monitoring is one fallible signal, not an oracle; calibrate it against action evidence and independent controls (source: [[anthropic-agent-incident-assessment-source-review-2026-09-14]]; first-party corroboration).
+
 ## Current tensions
 
 - **Static cases versus live traffic**: static cases are reproducible; production sampling detects new language, tool, model, and data drift. Maintain both.
 - **Outcome versus trajectory**: outcomes establish utility; trajectories establish safety, diagnosis, and efficiency. Score both.
 - **Automation versus human review**: automation provides scale; humans remain necessary for calibration, novel failure interpretation, and consequential approvals.
 - **Thoroughness versus speed**: evaluation depth should be proportional to action risk. Use a small blocking smoke suite and broader pre-release or sampled checks when full evaluation is too slow (source: [[2026-07-01-agent-evaluation-recent-research]]; Reddit-derived practice, needs local validation).
+
+## End-to-End-Latenz statt alleiniger Modellgeschwindigkeit
+
+Bei langsamen AI-Workflows die Zeit nach Modellinferenz, Tool- und Netzwerkwartezeit, lokaler Ausführung und menschlicher Warte-/Prüfzeit aufschlüsseln. Zuerst den tatsächlich dominierenden Abschnitt verbessern. Interaktive Unterstützung und zeitversetzte Stapelverarbeitung haben unterschiedliche Latenzanforderungen; der Vergleich bleibt an akzeptierte Aufgabenqualität und Gesamtkosten gebunden.
+
+Vendor-Interview als Architekturhinweis; keine aktuellen Preise, Nutzerzahlen, Geschwindigkeitsversprechen oder Hardwareempfehlungen. Cloud versus lokal wird erst anhand gemessener Engpässe und zulässiger Datenwege entschieden.
+
+Methodische Ableitung P47-C04 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/How to Understand the Next Wave of AI Before Everyone Else  Tibo Interview.md` — 7:47–14:23; 30:51–31:46; 34:29–36:56; vendor.
+
+Fachliche Fehlerklassen und passende Kriterien lassen sich mit [[domain-expert-error-analysis-loop]] entwickeln.
 
 ## Open questions
 

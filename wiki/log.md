@@ -3,7 +3,7 @@ type: log
 status: active
 sources: []
 created: 2026-05-30
-updated: 2026-08-20
+updated: 2026-09-14
 ---
 
 # Wiki Log
@@ -12,7 +12,57 @@ updated: 2026-08-20
 
 **Sources**: None.
 
-**Last updated**: 2026-08-20
+**Last updated**: 2026-09-14
+
+## 2026-09-14 | newsletter closeout | Close Batch 1 holds and weekly run
+
+- Sources:
+  - [[2026-09-13-weekly-preparation]]
+- Changed:
+  - [[log]]
+- Notes:
+  - Closed review point 3 as no durable change because the useful trace-review and builder-responsibility controls are already covered by stronger canonical pages.
+  - Closed review point 7 as a source-map hold because the DeepSeek roundup lacks separately reviewed primary artifacts and contains conflicting technical and benchmark accounts.
+  - Closed positions 7 and 8 as terminal paywall holds without bypass. Batch 2 positions 11 and 12 remain deliberately deferred and are not open work for this run.
+  - The weekly run for idempotency key `2026-09-13` is complete. No new retrieval, external verification, experiment, additional promotion, commit, or push was performed during closeout.
+
+---
+
+## 2026-09-14 | newsletter promotion | Promote five bounded Batch 1 knowledge deltas
+
+- Sources:
+  - [[aeo-measurement-method-source-review-2026-09-14]]
+  - [[agentic-code-review-source-review-2026-09-14]]
+  - [[forward-deployed-engineering-product-learning-source-review-2026-09-14]]
+  - [[anthropic-agent-incident-assessment-source-review-2026-09-14]]
+  - [[plg-to-enterprise-transition-source-review-2026-09-14]]
+- Changed:
+  - [[ai-search-measurement]]
+  - [[ai-mediated-discovery-readiness-checklist]]
+  - [[agent-evaluation]]
+  - [[ai-native-gtm-operating-model]]
+  - [[agent-security]]
+  - [[ai-governance]]
+  - [[enterprise-sales-motion-selection]]
+  - [[revenue-operations-ai-readiness]]
+  - [[latent-space]]
+  - [[the-pragmatic-engineer]]
+  - [[ainauten]]
+  - [[lenny-s-newsletter]]
+  - [[index]]
+  - [[sources]]
+- Notes:
+  - Promoted only the approved deltas for Batch 1 review points 1, 2, 4, 5, and 6 under proposal packet `98d63d4abe9c3803cfeffa4fabfc17fd139a741d621d124a49231df916821dfa`.
+  - Preserved the partial-access boundary for code review, first-party limits for the Anthropic report, commercial incentives, and all excluded ranking, productivity, prevalence, outcome, numeric-threshold, and causal claims.
+  - Created no new framework, reusable practice, template, skill, retrieval, experiment, external action, commit, or push. Review points 3 and 7 remain unchanged.
+
+---
+
+## 2026-09-11 | source custody and project link | TÜV Audience method landscape D29
+
+- Sources: nine exact paths recorded under “TÜV Audience-Methoden · D29 · 2026-09-11” in [[sources]]; [source manifest](../../Project%20Hub/TÜV%20Rheinland/arbeit/audience-frameworks/quellenmanifest.json).
+- Changed: [[sources]], [[index]] and this log; existing importer/converter bookkeeping created under its standing authority. [Project landscape](../../Project%20Hub/TÜV%20Rheinland/kontext/frameworklandschaft-audience-analyse.md), workflow transfer, stocktake, research/closeout, README, D29 and L34 remain in the project.
+- Notes: ten searches, thirteen web opens, nine selected originals, ten archive attempts. Eight HTML files plus one author-hosted PDF; the latter stays technically blocked and was read at seven identified original-image pages. One HBR catalog page is explicitly not the full paper. No shared semantic promotion, framework/router/skill/technology change, formal company-core run, personas, audience analysis or strategic focus decision. D16 remains deferred.
 
 ---
 
@@ -1946,3 +1996,1113 @@ updated: 2026-08-20
   - Rebase-merged the recovered YouTube baseline in PR `#20` after resolving its additive log conflict and passing the GitHub contracts check.
   - Preserved the confirmed exact-file associations, but replaced obsolete pending-approval wording with the later canonical state: the manual W1 proposal was never executed, was superseded by the separate completed P32 pilot, and grants no current transcript-review authority.
   - No source was read or modified, no deferred semantic review was reopened, and no automation, schedule, policy, or promotion authority was activated.
+
+## 2026-08-21 | capability implementation | add read-only YouTube discovery vertical slice
+
+- Sources:
+  - Rolf's approved YouTube Discovery Radar technical design from 2026-08-21
+  - `docs/youtube-intelligence.md`
+- Changed:
+  - `docs/plans/2026-08-21-001-feat-youtube-discovery-radar-pilot-plan.md`
+  - `docs/youtube-intelligence.md`
+  - `tools/config/youtube-discovery-policy.json`
+  - `tools/youtube_discovery.py`
+  - `tools/youtube-discovery.ps1`
+  - `tests/youtube-discovery/`
+  - [[log]]
+- Notes:
+  - Added a separate metadata-only YouTube API discovery path with five versioned search lanes, a 24-hour primary window inside a 72-hour fallback, exact local deduplication, create-only manifests, separate state, and fail-closed pending-run resumption.
+  - The implementation does not capture transcripts, admit sources, modify channel modes, write under protected source roots, change the existing intake policy, or enable scheduled execution.
+  - Seven deterministic tests, including three isolated fixture inspections, the non-blocking empty-run contract, the bounded model-review selector, and the provenance-bound recommendation validator, passed. The existing 37-test YouTube suite and its PowerShell contracts also passed without regression.
+  - The first of three manual live read-only inspections passed with five search calls, 92 unique raw results, 68 filtered metadata candidates, 22 primary-window candidates, and no recorded manifest or state mutation. Its manifest hash was `AE0E0465C6BC5A177A6CFC932302ECE181C4EDFA9BC74688422E42C5FA6855B1`.
+  - Rolf approved and the read-only slice now enforces a deterministic daily model-review budget of at most 30 candidates: primary 24-hour candidates first, then fallback candidates, no more than two videos per channel, and round-robin selection across all five themes.
+  - Recorded and fully reviewed same-day calibration run `D20260821T120453Z-c18bdd65`: 69 filtered candidates, 30 exact reviews, 23 primary, seven fallback, twelve threshold-qualified, five derived video proposals, and two evidenced channel proposals. Exact manifest and receipt validation passed, and the run is `completed-reviewed`.
+  - The calibration rubric weights relevance 30, knowledge delta 25, evidence quality 20, reuse potential 15, and freshness 10 while preserving eligibility, trust, claim risk, rationale, and uncertainty separately.
+  - Because the scored run was same-day calibration, two later-day stability inspections, Rolf's review of rubric and proposals, and explicit automation activation remain separate checkpoints.
+
+## 2026-08-21 | consistency audit | reconcile federated marketing architecture status
+
+- Sources:
+  - `wiki/_outputs/marketing-system-architecture-v0-2/review-decision.md`
+  - `projects/marketing-operating-system/decisions/log.md`
+  - `wiki/_outputs/source-intake/clipping-dispositions.csv`
+  - `wiki/_outputs/source-coverage/source-inventory.csv`
+- Changed:
+  - [[marketing-operating-system]]
+  - `projects/marketing-operating-system/README.md`
+  - [[log]]
+- Notes:
+  - Linked the existing Marketing Operating System knowledge concept to the forward operational README and decision log; the concept page is not a routing or authority surface.
+  - Preserved the fingerprint-bound G1 Architecture Control Pack unchanged as historical checkpoint evidence. Its future-tense Phase 2 wording records the G1 review state rather than the current implementation status.
+  - Confirmed the forward sequence: G1 approved the target architecture; P2A created eight inactive shell files; S1 reconciled the separate source-hygiene inventories; and P2B1 added one six-row draft registry plus two non-operational semantic contract drafts.
+  - At the S1 checkpoint, the clipping-disposition register contains 835 rows with SHA-256 `1C31181919147855B0B1BB07026D1B9B6EDC681754A19B93A516CF6677D9998B`, and the source-coverage inventory contains 4,033 rows with SHA-256 `CDA9EA2D2C743525A7592510522846DE7AFC3E1D3E358CE3CE53C398502DCFB8`.
+  - Marketing Operating System, target Marketing ContextOps, and Company Workspaces remain inactive; legacy Marketing ContextOps remains current; ABM and Content OS remain active siblings. P2B2 is not approved.
+  - No G1 input, protected source, system instruction, registry row, contract, routing rule, schema, fixture, validator, tool, agent, integration, runtime, learning automation, staging state, commit, or publication authority changed in this audit.
+
+## 2026-08-21 | architecture implementation | add P2B2 federation-contract validation
+
+- Sources:
+  - `projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md`
+  - `projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md`
+  - user approval `P2B2 freigegeben`, 2026-08-21
+- Changed:
+  - `projects/marketing-operating-system/tools/config/system-registry-schema.json`
+  - `projects/marketing-operating-system/tools/config/cross-system-handoff-schema.json`
+  - `projects/marketing-operating-system/tools/validate-federation-contracts.ps1`
+  - `projects/marketing-operating-system/tools/test-federation-contracts.ps1`
+  - `projects/marketing-operating-system/evals/fixtures/`
+  - `projects/marketing-operating-system/README.md`
+  - `projects/marketing-operating-system/decisions/log.md`
+  - [[marketing-operating-system]]
+  - [[log]]
+- Notes:
+  - Implemented the bounded P2B2 draft validation layer without changing the accepted registry, either P2B1R semantic contract, any `AGENTS.md`, or any active ContextOps or Content OS contract.
+  - Added two custom declarative draft schemas, one synthetic positive registry fixture, one synthetic positive ContextOps-to-Content handoff, 14 isolated negative cases, and three synthetic support artifacts. No live company evidence or copied canonical payload is present.
+  - The dependency-free read-only validator checks exact paths and fingerprints, current authority and routing, source-project ownership, authority scope, decision leakage, readiness roll-up, draft-contract misuse, and rollback metadata. It cannot prove free-language semantics and creates no router, runtime, status store, or authority.
+  - The isolated regression runner passed all 16 cases with exact expected exit codes and finding-code sets, verified compatibility hashes, verified protected-input preservation, verified temp cleanup, and `vault mutation: none`.
+  - P2B2 implementation awaits explicit acceptance. Marketing Operating System operational, canonical, and routing authority remain `none`; activation, component moves, reference cutover, Brand or Campaign specialization, runtime, agents, integrations, staging, commit, and publication remain held.
+
+## 2026-08-21 | checkpoint acceptance | accept P2B2 validation checkpoint
+
+- Sources:
+  - `projects/marketing-operating-system/decisions/log.md`
+  - user decision `checkpoint ist freigegeben`, 2026-08-21
+- Changed:
+  - `projects/marketing-operating-system/README.md`
+  - `projects/marketing-operating-system/decisions/log.md`
+  - [[marketing-operating-system]]
+  - [[log]]
+- Notes:
+  - Accepted the exact ten-file P2B2 validation implementation and its fingerprint-bound hard-gate evidence.
+  - The accepted evidence comprises two custom draft schemas, a read-only validator, an isolated test runner, two positive fixtures, 14 negative cases, and synthetic support artifacts. All 16 cases passed with verified temp cleanup and no Vault mutation.
+  - Acceptance does not activate Marketing Operating System, routing, current authority, ownership transfer, component moves, ContextOps cutover, Brand or Campaign specialization, runtime, agents, integrations, staging, commit, or publication.
+  - The schemas and semantic contracts remain draft; the registry remains a non-routing projection. Legacy Marketing ContextOps remains current, ABM and Content OS remain active siblings, and Company Workspaces remains inactive.
+  - Any next implementation requires a separately planned and explicitly approved transition with exact dependencies, rollback, and regression evidence.
+
+## 2026-09-08 | decision and planning | connect the existing Marketing Revamp operationally
+
+- Sources:
+  - Rolf's decision in the current Codex task: retain the original Revamp as the domain basis and plan its operational connection before building.
+  - `wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md`
+  - `projects/marketing-operating-system/decisions/log.md`
+  - Existing ContextOps, Content OS, AI and Zelostat project artifacts, referenced in the implementation plan.
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[marketing-operating-system]]
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Recorded the accepted strategic direction separately from the proposed build scope. The implementation plan remains an internal review draft.
+  - Proposed an entry in `New projects/` over current owners and paths, with concrete AI content continuation and Zelostat Buying Context pilot workflows, persistent run state, bounded method adapters, failure handling and acceptance criteria.
+  - The physical migration and prior cutover path are not prerequisites for this proposal. Historical fingerprint-bound architecture and checkpoint evidence remains unchanged.
+  - This planning update activates no system or runtime, creates no pilot output, changes no project instructions, and imports or promotes no new source material.
+
+## 2026-09-08 | scope revision | replace the proposed pilots and reassess workspace boundaries
+
+- Sources:
+  - Rolf's current Codex message: build a productive agentic system for future client projects; pause the AI/Zelostat pilots; use TÜV Rheinland as the new end-to-end pilot; critically reassess placement under the Second Brain.
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[marketing-operating-system]]
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Marked the previous build scope and pilot-specific acceptance criteria as superseded. The plan now requires revision; the two former pilot assignments are paused, with their files retained.
+  - Recorded separate knowledge, reusable capability and client workspaces as a proposed architecture, not a decided relocation or change to current source custody.
+  - Rolf clarified that TÜV Rheinland is the target account for acquisition/ABM. His offer, first business scope, access routes and initial acquisition outcome remain to be specified. A client mandate, publication, outreach or live deployment is not authorized by this role clarification.
+  - Retained knowledge-intake workflows as Second Brain responsibilities. A shared research capability is a proposal requiring evidence of usefulness, not an activated research system.
+  - No workspace was created or moved, no paused project was continued, and no implementation or source ingest was performed.
+
+## 2026-09-08 | planning clarification | start with integrated ABM strategy
+
+- Sources:
+  - Rolf's current Codex message: begin with ABM strategy and connect the required Brand, Content, Campaign and asset work; evaluate the distinction between Second Brain and Knowledge Base.
+  - `projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md`
+  - `projects/abm-operating-system/frameworks/enterprise-growth-system.md`
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[log]]
+- Notes:
+  - Recorded ABM strategy as the first intended business output, including a provisional provider Brand/offer core and evidence-bound Account Intelligence. TÜV remains the target account, not a confirmed client mandate.
+  - Proposed a connected strategy draft with Content/Campaign decisions and an initial asset requirement, without making complete platform or asset construction a prerequisite.
+  - Knowledge terminology and layout remain recommendations: distinguish evidence, curated account/strategy knowledge, and interaction/decision history; do not divide authority or truth solely by email, meeting or external-source channels.
+  - No ABM strategy, source ingest, new knowledge platform, runtime, outreach or workspace relocation was executed.
+
+## 2026-09-08 | decision | accept the functional knowledge architecture
+
+- Sources:
+  - Rolf's explicit approval in the current Codex task: "Ich bin mit deiner Wissensaufteilung einverstanden und Folge deiner Empfehlung".
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Accepted the functional distinction between Rolf's personal Second Brain, a project-specific evidence-linked knowledge base, and connected interaction/decision/work memory. Research and ingest supply and maintain these stores.
+  - The TÜV acquisition project will reference general knowledge and preserve its own account context and interaction history; source channels alone do not determine evidence status or authority.
+  - Corrected the current plan's provisional knowledge wording. Physical roots, access implementation and any relocation remain to be specified; the broader technical plan remains revision-required.
+  - The first intended business output remains ABM strategy v0.1 with Brand/offer context and Content/Campaign implications. This decision record creates no runtime or new project data store.
+
+## 2026-09-08 | intent correction | use TÜV as an exploratory system-development case
+
+- Sources:
+  - Rolf's latest clarification in the current Codex task: no direct TÜV contact or client mandate; an agency friend reportedly has access; the primary purpose is developing the harness and methods through real work, beginning with Account Intelligence.
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[marketing-operating-system]]
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Corrected the premature immediate-acquisition framing. A finished commercial offer, personal Brand core and completed ABM strategy are not prerequisites for the first learning wave.
+  - The next intended output is evidence-linked Account Intelligence and a reasoned focus recommendation, followed by content/ABM experiments according to findings.
+  - Distinguished ABM education addressed to TÜV leadership/marketing/sales from future campaign content addressed to a TÜV business area's customers. Observed public Brand/voice characteristics and proposed creative guidelines retain separate status.
+  - Recorded the reported lack of an ABM strategy as user-provided context with organizational scope and independent confirmation still open; public silence is not evidence of internal absence.
+  - Consolidated the working plan and removed superseded execution proposals. The accepted functional knowledge architecture and original Revamp evidence remain intact; prior dated log entries retain their historical context.
+  - No Account Intelligence deliverable, source ingest, new workspace, runtime, outreach or content production was completed in this planning update.
+
+## 2026-09-08 | planning extension | connect ABM capabilities to technology and operating resources
+
+- Sources:
+  - Rolf's current Codex message: ABM consulting should include technology, ongoing costs, management commitment and a resource-dependent derivation from the ABM Blueprint.
+  - `projects/abm-operating-system/frameworks/enterprise-growth-system.md`
+  - `projects/abm-operating-system/project-charter.md`
+  - [[composable-gtm-stack-assessment]]
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[log]]
+- Notes:
+  - Added a proposed translation from business goal and workflow to required capability, implementation alternatives, operator capacity and whole-life cost.
+  - Kept necessary functions separate from products. Existing-stack, configured/integrated, purchased and custom-built options need evidence of fit; budget alone cannot determine a viable architecture.
+  - Distinguished our own learning harness from any later TÜV deployment. TÜV's actual systems, internal capacity, access and procurement constraints remain unknown.
+  - Management commitment covers priorities, budget, people and ongoing ownership. Financial treatment is not reduced to the blanket statement that every technology cost is OPEX.
+  - The Account-Intelligence-first learning scope remains current. No canonical framework, technical system, vendor selection, cost estimate or procurement was implemented.
+
+## 2026-09-08 | implementation planning | connect the Revamp build and TÜV learning pilot
+
+- Sources:
+  - Rolf's acceptance of two connected projects and explicit request to design the implementation plan in the current Codex task.
+  - `wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md`
+  - `wiki/_outputs/marketing-system-architecture-v0-2/memory-runtime-learning-contract.md`
+  - Existing ContextOps, Content OS and ABM OS instructions, methods and handoff contracts.
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`
+  - [[index]]
+  - [[marketing-operating-system]]
+  - [[log]]
+- Notes:
+  - Replaced the evolving working draft in place with review-ready implementation plan v1.0. Project A builds the operational work environment; project B develops Account Intelligence, a focus decision and an initial educational-content example using the TÜV learning case.
+  - Specified phased work packages, owners, dependencies, selective reuse, context/evidence references, persisted run state, failure recovery, content handoff and eight behavioral acceptance cases.
+  - Proposed a common work container beside the Second Brain. This physical location, project-specific custody for newly admitted sources and the technical implementation remain proposals; existing protected sources and current system owners retain their boundaries.
+  - Set the first executable delivery scope to A1-A3 plus B1, ending at the focus decision. Full migration, expanded research infrastructure, customer deployment and further ABM/content experiments are separately bounded.
+  - The plan includes actual operating effort for our harness and a separate hypothetical capability/cost view for later client consulting. No vendor selection, price estimate or procurement was made.
+  - The document was checked by the producing agent against existing contracts; no independent reviewer or implemented runtime is claimed.
+  - No workspace, runtime, pilot output, source ingest, source promotion, automation, external contact or publication was performed.
+
+## 2026-09-08 | implementation | approved Marketing Harness A1–A3 and TÜV B1 delivered
+
+- Sources:
+  - Rolf's explicit approval of `C:/Users/rolfp/Vaults/New projects/` beside the Second Brain and implementation scope A1–A3/B1 in the current Codex task.
+  - New container: `docs/verification-results.json`, `docs/project-dispositions.csv`, `config/method-bindings.json` and TÜV run `tuv-b1-2026-09-08`.
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md` to v1.1 execution status.
+  - [[index]]
+  - [[marketing-operating-system]]
+  - [[log]]
+- Notes:
+  - Created the sibling work container with two functional areas, a separate local repository, bounded instructions, source custody/extraction, explicit method bindings and an operator-assisted file harness.
+  - Classified 10 old project/component areas and verified 370 inventoried legacy files unchanged. Canonical methods, protected sources, inactive old shells and paused AI/Zelostat pilots retain their ownership and state.
+  - Thirteen behavior tests passed. A real B1 run verifies source/claim provenance, persisted checkpoints, resume and internal handoff; local backup/restore was tested. A transient Windows manifest replacement failure was handled by exact derivative verification and bounded identical-write retry, without changing security software. The old McAfee cause was not diagnosed or bypassed.
+  - TÜV B1 includes 14 usable source briefs, 30 labelled claims, company/market context, three candidates and a CRA/product-security focus recommendation. It is internal learning work; Rolf's focus decision and human acceptance remain pending. A sequential self-review is labelled honestly.
+  - Source ingest occurred only in the new project knowledge base; no new source claims were promoted into this personal wiki. No external messages, publication, purchases, autonomous scheduling or B2/B3 work occurred.
+  - Added task-specific effort and current model recommendations in the new container. Recommendations do not switch models or prove measured savings.
+
+## 2026-09-08 | functional planning | clarify the Marketing OS working model from the original Revamp
+
+- Sources:
+  - Rolf's intent clarification, accepted delegation of context-document status decisions, standalone-document requirement and explicit request for a compact functional working model in the current Codex task.
+  - `wiki/_outputs/marketing-system-architecture-v0-2/architecture-review.md`
+  - Existing ContextOps operating model, framework catalog, runbook and handoff contract; Content OS strategy and ABM OS README.
+- Changed:
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md`
+  - `wiki/_outputs/marketing-harness-implementation-plan.md` to v1.2, preserving delivered scope and identifying paused continuation.
+  - [[index]]
+  - [[marketing-operating-system]]
+  - [[log]]
+- Notes:
+  - Created one compact functional planning document covering responsibilities, task-dependent method selection and sequence, clear analysis/strategy boundaries, standalone current context documents, purpose-specific quality checks and learning from actual reuse.
+  - Recorded real-source synthesis, delegated Codex document-status review and the distinction between a final document, a customer decision, external publication and canonical knowledge promotion.
+  - Marked the earlier technical delivery as retained work with further implementation paused. The original Revamp remains a domain reference; existing skill and framework contracts have not been changed or activated by this model.
+  - The artifact is self-reviewed for its stated planning purpose. Practical downstream-use validation remains pending; no independent reviewer or proven method superiority is claimed.
+  - No pilot run, source ingest, semantic promotion, folder migration, skill creation, automation, external contact or publication was performed.
+
+## 2026-09-08 | closeout | reconcile Marketing OS decisions and paused project status
+
+- Sources:
+  - Rolf's explicit closeout request in the current Codex task and the accepted intent clarification already recorded in the functional working model.
+- Changed:
+  - `wiki/_outputs/marketing-harness-implementation-plan.md` to v1.3.
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md`, task-status clarification within v1.0.
+  - [[marketing-operating-system]]
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Confirmed that source-grounded synthesis, adaptive method choice, clear analysis/strategy boundaries, shared methods in the Second Brain, sibling project workspaces, standalone current context documents and delegated document-status review are already covered by the existing working model. No duplicate decision page or framework was created.
+  - Corrected stale wording that presented A1 as the next executable step, the earlier technical delivery as still forthcoming, or TÜV focus selection as an immediate task. Historical delivery evidence and append-only decisions remain intact.
+  - Distinguished completed work-model creation/documentation from still-unimplemented and untested practical use in the paused overall project. The suggested TÜV file review remains optional and uncommissioned; earlier focus recommendations remain unaccepted.
+  - Corrected the old plan's historical review section so its pre-implementation findings no longer contradict the subsequent delivered A1-A3/B1 record.
+  - Checked current navigation, local references and deterministic Fast wiki integrity. No new external research, source ingest, semantic promotion, structure, automation, migration, pilot execution or external action was started.
+
+## 2026-09-09 | decision | accept the Marketing OS functional working model
+
+- Sources:
+  - Rolf's explicit acceptance of the working model and question about concrete next steps in the current Codex task.
+- Changed:
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md`, acceptance metadata and status of version 1.0.
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Recorded Rolf's acceptance of the functional model separately from its prior self-review and from any future implementation approval.
+  - Retained the earlier technical prototype as existing work; the accepted model has not yet been fully implemented or practically validated.
+  - The next-step discussion concerns a bounded implementation design grounded in the current prototype and a complete project workflow. No implementation, pilot research, framework change or new canonical structure was started by this acceptance record.
+
+## 2026-09-09 | decision and setup | create Project Hub and the TÜV Rheinland workspace
+
+- Sources:
+  - Rolf's explicit request to create `Project Hub` beside the Second Brain and `TÜV Rheinland` inside it, then discuss the base files before starting manual collaboration in a new chat.
+- Changed:
+  - Created directories `../Project Hub/` and `../Project Hub/TÜV Rheinland/`.
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md` to v1.1, recording the location and manual-collaboration decision.
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Project Hub is the chosen umbrella for future project work; TÜV Rheinland is its first project. Shared reusable methods and knowledge remain in the Second Brain.
+  - The user chose to learn through manual project work. A new technical implementation-design round is not the immediate requested next step.
+  - Created and verified only the two requested project directories. Project base files and subfolders are still proposals to discuss; no new project chat was created.
+  - The earlier New projects prototype, its TÜV material and protected sources remain where they were. No transfer, new research, ingestion, automation, skill change or technical continuation was performed.
+
+## 2026-09-09 | setup | prepare the accepted Project Hub and TÜV starter files
+
+- Sources:
+  - Rolf's acceptance of the proposed six-file, three-folder starter layout and explicit request to prepare it.
+  - The accepted Marketing OS working model and the project decisions from the current Codex task.
+- Changed:
+  - `../Project Hub/README.md` and `../Project Hub/AGENTS.md`.
+  - `../Project Hub/TÜV Rheinland/README.md`, `projektauftrag.md`, `entscheidungen.md` and `methoden-und-lernpunkte.md`.
+  - Created `../Project Hub/TÜV Rheinland/quellen/`, `kontext/` and `arbeit/`.
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md`, setup status within v1.1.
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Populated the agreed base files with the manual collaboration model, standalone-context requirements, delegated document-status review, source handling, selective links to existing Second Brain methods and an explicit new-chat entry point.
+  - Preserved TÜV's role as a learning case and possible target account without a client mandate or selected business-area focus. Earlier work remains separate; no old recommendation or run was adopted.
+  - Recorded learning objectives as objectives, not fabricated application findings. The three work folders intentionally contain no placeholder analyses or source files.
+  - Setup is complete; the first substantive analysis assignment remains to be agreed in the project chat. No new task was created and no research, source ingest, automation, migration, framework change or external action was started.
+  - Setup verification found exactly six populated Markdown files, all three intended work folders empty, and 26 valid local references with no missing targets. The Second Brain status wording and whitespace checks passed; existing unrelated line-ending findings were left unchanged.
+
+## 2026-09-09 | closeout | align canonical status with the prepared manual TÜV workspace
+
+- Sources:
+  - Rolf's accepted working model, Project Hub and TÜV workspace decisions, starter-layout approval and current closeout request in this Codex task.
+  - Existing working model, historical implementation record and the six prepared Project Hub base files.
+- Changed:
+  - [[marketing-operating-system]], current operational status and update date.
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md`, first manual project step within accepted v1.1.
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`, historical record v1.4 with the current-direction pointer and explicit earlier-container wording.
+  - [[index]]
+  - [[log]]
+- Notes:
+  - Removed the obsolete implication that the whole project remains paused or that old TÜV files must be reviewed before manual work can start. The earlier technical continuation stays paused; Project Hub/TÜV Rheinland is prepared for manual collaboration.
+  - Confirmed that the durable requirements are already covered: reusable methods in the Second Brain, project-owned context, real-source synthesis, reasoned method choice, separate analysis and strategy stages, standalone current contexts and delegated purpose-specific document status. Existing canonical coverage was retained rather than duplicated.
+  - Confirmed the six populated base files and three empty work folders. No new source analysis, pilot context or observed application learning exists in the new workspace yet; learning objectives remain labelled as objectives.
+  - The actual next project task is to agree the first company/account-intelligence assignment, its intended use and source selection in the new project chat. Old-file reuse is optional. Technical architecture, automation and further historical work packages are not current setup tasks.
+  - Preserved dated historical log entries and retained the earlier prototype and unaccepted TÜV focus recommendation as historical work. No new research, source ingest, project structure, migration, automation or framework change was started; the Project Hub files required no edits.
+  - Verification: Fast wiki integrity passed with zero errors and zero warnings; all 26 Project Hub references and 10 references in the two planning records resolved. Scoped whitespace checks passed. Line-ending policy passed; the thirteen pre-existing mixed-ending files remain outside this closeout, and original endings in the edited concept page were preserved.
+
+## 2026-09-09 | git-maintenance | retire reviewed historical and merged branches
+
+- Sources:
+  - User request to review and close all open branches; current Git refs and GitHub PR metadata for `bumpmeisters/Second_brain`.
+  - Existing historical recovery manifest and current successor publications through PR #44.
+- Changed:
+  - Git refs: 33 local branches and 24 remote feature branches retired; local `main` fast-forwarded to `2112dfb86e9444f781d6ae4fc1baf48b515df173`.
+  - `wiki/_outputs/recovery-manifest/branch-closure-2026-09-09.md`, per-branch disposition and preservation evidence.
+  - [[log]]
+- Notes:
+  - No open PRs remain; origin has only `main`. All 34 original non-main local heads remain reachable through local `archive/branch-closure-2026-09-09/` tags.
+  - All 31 worktrees retain their original HEAD, status and complete tracked diffs, verified before this report/log addition. No worktree or source was removed. Retired worktree branches are detached at their original commit.
+  - The active local `codex/recover-open-worktree-2026-08-19` branch remains for six pre-existing tracked modifications and 693 untracked status entries. Its remote was retired; current uncommitted work was not published or discarded. Full local retirement still requires bounded file-level reconciliation under the existing source and publication rules.
+  - No code, runtime activation, semantic promotion or new source ingest occurred. Historical archive tags preserve commit history without asserting acceptance of every historical file or completion of older backup-delta gates.
+
+## 2026-09-09 | configuration-fix | remove inactive newsletter profile from desktop permissions selector
+
+- Sources:
+  - Rolf's reproduction: Full Access displays correctly in a new task until its first message, then the label changes to newsletter-retrieval.
+  - Local Codex app build `26.901.6511.0`, `PermissionsModeDropdown` implementation; current user configuration and persisted current-task permissions.
+- Changed:
+  - User-level `.codex/config.toml`: removed only the inactive `permissions.newsletter-retrieval` definition.
+  - [[log]]
+- Notes:
+  - The installed dropdown contains the fallback `Ke??(!Ve&&R.length===1?R[0].id:null)`, selecting the single custom profile for display when explicit overrides are absent. The stored current-task profile was `:danger-full-access`, while managed newsletter activation was already restored and inactive. This explains the misleading label without evidence of an actual switch to newsletter restrictions.
+  - Created exact local backup `config.toml.before-newsletter-display-fix-20260909-124914.bak` beside the user config; SHA-256 `53C14A65FE207D4F26B5DD5A25B9667FA89C85EDD933557ED6A1C0D7685DC045`.
+  - Kept the repository profile template and opt-in installer/switcher intact. A future newsletter retrieval task must explicitly reinstall the profile before activation. No scheduler, source authority or actual session access level was changed.
+  - TOML parsing and structured comparison passed: only the inactive profile was removed; the global default remains `:workspace` and all other settings are unchanged. Profile Status confirms not installed, inactive, previous activation restored.
+  - UI confirmation remains pending: fully restart the desktop app and test a new task with Full Access through its first message. The application binary and live application state files were not modified.
+
+## 2026-09-09 | decision and topic review | extend ingest scope to AI coding and vibe coding
+
+- Sources:
+  - Rolf's explicit topic-scope extension and request to compare the clipping archive with the Second Brain's existing coverage in this chat.
+  - Filesystem titles of 578 files under `raw/Clippings/`; no clipping bodies reviewed.
+  - Existing wiki index, topic pages and reusable-practices router.
+- Changed:
+  - [[semantic-ingest-workflow]]: recorded the eight agreed topic fields plus AI coding and vibe coding; made project setup, memory, wikis and AI knowledge bases explicit.
+  - [[index]]: exposed the topic profile in the existing workflow entry.
+  - `wiki/_outputs/source-intake/topic-coverage-review-2026-09-09.md`: mapped title signals to existing coverage and optional additions.
+- Notes:
+  - Product development is already represented but merits an explicit label. Commercial AI services and local/hybrid AI infrastructure are proposed additional lenses; they are not yet accepted top-level fields.
+  - AI-mediated discovery, adoption, capability development, security and evaluation already have wiki coverage; they should not be presented as wholly new gaps.
+  - Title-level review cannot determine semantic novelty or resolve generic titles and known filename/content mismatches. All 18 cited clipping paths and the report's wiki links were verified.
+  - No protected source, selection flag, semantic decision or claim was changed. The earlier exact-source ingest checkpoint remains pending; this decision approves topic scope, not source promotion.
+
+## 2026-09-09 | decision | accept the additional ingest topic fields
+
+- Sources:
+  - Rolf's instruction in this chat: "Dann ergänze die Themenliste um Deine findings".
+- Changed:
+  - [[semantic-ingest-workflow]]: expanded the accepted topic profile to twelve fields, adding AI product development/product management, AI business models/services and local/hybrid AI infrastructure.
+  - Explicitly named SEO/GEO/AEO, AI adoption and work redesign, capability development, security, evaluation and reliable operation within the relevant fields or as cross-cutting concerns.
+  - [[index]] and `wiki/_outputs/source-intake/topic-coverage-review-2026-09-09.md`: updated the current scope and acceptance status.
+- Notes:
+  - This acceptance supersedes the pending-topic status in the preceding historical review entry. The canonical list remains in the existing ingest workflow; no separate topic system was created.
+  - Source-selection and evidence-promotion checkpoints remain unchanged. No source bodies were ingested or source claims adopted in this decision update.
+
+## 2026-09-09 | source review | P47 new clippings and inbox knowledge checkpoint
+
+- Sources:
+  - Exact 33-source selection in `wiki/_outputs/source-intake/proposed-new-knowledge-2026-09-09.csv`, approved by Rolf's subsequent instruction to ingest the new clippings and inbox files.
+  - 32 clipping paths plus `raw/assets/20260821_Matt Heinz_substack posts.docx`; current paths and SHA-256 in `wiki/_outputs/source-intake/p47-intake-2026-09-09.csv`.
+- Changed:
+  - [[new-knowledge-source-review-2026-09-09]]: 27 source-near content reviews, anchors, caveats and six duplicate mappings.
+  - P47 decision ledger, evidence matrix, package source bundle, checkpoint and exact proposed sections.
+  - [[index]], [[sources]] and clipping processing status.
+  - Authorized importer admitted the DOCX; readiness check validated `wiki/_extractions/raw/assets/20260821_matt-heinz_substack-posts.docx.md`.
+- Notes:
+  - Content review covers 27 distinct captured texts; nine substantive filename/body mismatches are retained explicitly without renaming originals.
+  - Proposed dispositions: 5 new-claim, 17 extended-claim, 3 corroborating, 2 registered-only and 6 duplicate-variant.
+  - 16 proposed evidence patterns cover AI evaluation, coding, product discovery, community knowledge capture, operating costs, infrastructure latency, ICP, qualification and GTM handoffs.
+  - One dedicated error-analysis method qualifies for a new reusable page; 15 patterns extend existing pages. No skill promotion.
+  - Source-selection approval is fulfilled; evidence-promotion approval remains pending. Canonical concepts are unchanged and P47 is not complete. All 33 rows remain open in the completion ledger pending approved dispositions.
+  - No new research report selected. Performance figures, universal market ratios, unverified forecasts and visual-only evidence were excluded.
+  - Wave/Fast validation passed with 33 decisions and 16 evidence rows; all 25 promotional source proposals are covered. Targeted verification passed all 33 source hashes, 32 reviewed clipping-register rows and 14 new-document wiki links; inbox has no remaining source files, and the protected tracked-source guard is clean. Results are recorded in P47 `package.json` and `review-verification.json`.
+
+## 2026-09-09 | ingest | P47 approved evidence applied
+
+- Sources:
+  - 33 exact paths in `wiki/_outputs/semantic-ingest/p47/decisions.csv`; 32 clippings and one admitted DOCX, 27 distinct contents.
+- Changed:
+  - [[domain-expert-error-analysis-loop]] created; registered in [[reusable-practices-library]] and [[reusable-practices-router]].
+  - 15 existing target pages updated as listed in [[new-knowledge-source-review-2026-09-09]]; [[index]] and [[sources]] updated.
+- Notes:
+  - Rolf approved P47-C01 through P47-C16, their restrictions and all 33 source dispositions with “Freigabe erteilt”. Approval and reviewed ledger/matrix hashes are recorded in the P47 manifest.
+  - All 16 patterns applied: AI coding and operational upkeep, evaluations, dependency checks, product discovery, community knowledge capture, qualification and GTM operations.
+  - 5 new-claim, 17 extended-claim, 3 corroborating, 2 registered-only and 6 duplicate-variant decisions approved. Zero sources remain open within P47; older archive backlog is outside this scope.
+  - No original-source mutation, new research, skill promotion or autonomy change. Source limitations and excluded claims remain explicit.
+  - Final/Full validation passed: 33 decisions, 16 patterns, 25 covered promotional sources and zero open P47 sources. Current validation provenance is recorded in `wiki/_outputs/semantic-ingest/p47/package.json`. P47 is complete.
+
+## 2026-09-09 | closeout | connect the manual TÜV planning decisions to the Second Brain
+
+- Sources:
+  - Rolf's manual TÜV project dialogue and closeout request, Codex task `01a086fc-f193-7610-ad58-37a665cfc12a`.
+  - Canonical project decisions D04–D06 and project README in `../Project Hub/TÜV Rheinland/`.
+- Changed:
+  - [[index]] and [[marketing-operating-system]]: current status and direct references to the project records.
+  - `wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md`: status correction within accepted v1.1, project-specific original custody and references to decisions and learning notes.
+  - `wiki/_outputs/marketing-harness-implementation-plan.md`: current-status pointers corrected; historical delivery remains intact.
+  - `../Project Hub/README.md`: project summary and original-custody reference.
+- Notes:
+  - Company basics precede product/service analysis and later area selection. Valuable originals are intended for the existing Second Brain intake; current provisional/final contexts remain in the project.
+  - Search strategy v0.1 exists as a proposal. Its budget and agent allocation remain unaccepted; research, downloads and subagents have not started.
+  - Project decisions and interaction observations were already documented consistently. Linked them without copying the strategy or promoting tentative learning hypotheses into shared methods.
+  - No new research, source ingest, automation, structure, old-result adoption or technical implementation was started. Existing historical log entries remain unchanged.
+  - Verification: Fast wiki integrity passed with zero errors and zero warnings; all 33 local Markdown references in the five updated status documents resolved. The concept page's original CRLF endings were preserved after the patch introduced one LF ending; no worktree-wide normalization was performed.
+
+## 2026-09-09 | decision and planning | accept the TÜV search strategy and plan reusable agentic execution
+
+- Sources:
+  - Rolf's explicit acceptance of the search-strategy recommendations and request for an implementation plan for a reusable agentic system, task `01a086fc-f193-7610-ad58-37a665cfc12a`.
+  - Canonical project decisions D07/D08 in `../Project Hub/TÜV Rheinland/entscheidungen.md`.
+- Changed:
+  - Project search strategy v1.0: acceptance recorded without changing the search method; practical validation remains pending.
+  - Created `../Project Hub/TÜV Rheinland/kontext/implementationsplan-agentisches-recherchesystem.md`, technical proposal v0.1.
+  - Project README, brief v1.2, decisions and learning notes; Project Hub overview.
+  - [[index]], [[marketing-operating-system]], working-model status and historical harness pointers.
+- Notes:
+  - The accepted strategy includes three reused subagents plus coordination, up to ten dependent work packages, source budget and learning loop. These decisions need no renewed agreement.
+  - The new plan proposes a common execution helper, separate company profiles/runs, source intake integration, interruption recovery, verification and five delivery steps. Technical choices and execution remain unapproved; no implementation or live pilot started.
+  - Local inventory confirmed existing intake/readiness tools and an available agent Python runtime. Their actual integration and the proposed agent workflow have not been tested.
+  - Shared methods remain at existing canonical locations. No new skill, runtime package, automation, source acquisition or old TÜV-result adoption was performed.
+  - Verification: Fast wiki integrity passed with zero errors and zero warnings; all 101 local Markdown references across eleven affected project/status documents resolved. The concept page's existing CRLF convention was preserved. These checks validate the documents, not the unimplemented system.
+
+## 2026-09-09 | implementation | Integrated YouTube acquisition and semantic worker
+
+- Sources:
+  - Rolf's explicit approval to implement the integrated worker plan.
+  - `wiki/_outputs/youtube-intelligence/recurring/20260909T174846Z-a01878c3.json`.
+- Changed:
+  - Worker routing, lease ownership, weekly acquisition policy and regression tests; existing daily automation updated, no second schedule created.
+  - Operating documentation, P35 amendment, restart checkpoint, worker review and derived source inventory.
+- Notes:
+  - 47 Python tests plus reconciliation, disposition, inbox and scheduler checks passed; live overlap protection returned busy without extra downloads. L2 remains the maximum enabled semantic authority.
+  - Exact approved 100-video bootstrap: 84 captured, seven not eligible, three quarantined, six HTTP-429 failures. Importer admitted 71 new immutable sources; 13 remained pending because they were new or still open. Inventory refreshed and checked at 4,114 files; disposition register checked at 915 rows with zero issues.
+- Run paused with capture-failures. No blind retry, semantic package, full-body semantic review or canonical claim promotion. Controlled recovery after the external rate limit remains necessary; end-to-end acceptance is not yet complete.
+
+## 2026-09-09 | implementation | Company research M1–M5 and fresh TÜV pilot completed
+
+- Sources:
+  - Rolf's explicit M1–M5 implementation and TÜV-pilot authorization; Project Hub/TÜV Rheinland/entscheidungen.md, D09.
+  - Fresh 2023–2025 company reports and sixteen supplementary sources; exact original paths registered under the TÜV project-evidence section in [[sources]].
+- Changed:
+  - `tools/company-intelligence/`: supervised reusable core, acquisition adapter, workflow, contracts, fixtures, tests and bounded explicit migration.
+  - `tools/import-source-inbox.ps1`: two parameter references corrected after a reproduced integration failure; existing policy and schedules preserved.
+  - [[index]], [[sources]], [[marketing-operating-system]] and the status references in the accepted functional working model.
+  - Project README, plan status, source index, final company context, technical acceptance, decisions and actual learning notes at their existing canonical project locations.
+- Notes:
+  - M1–M3 passed synthetic end-to-end, actual-importer and three-worker checks. M4 produced 52 source-reviewed facts across nine core fields, 19 selected sources and 18 admitted immutable originals; four noncritical evidence limits remain explicit. No earlier TÜV results were used.
+  - Three PDF derivatives retain their existing 40-page limit; approved relevant original pages were read and visually checked separately. One institutional source remains honestly URL-reviewed after its archive download failed.
+  - Source-level corrections, two stale archive notes and a compatible code migration were reviewed before the exact final context was published locally. M5 passed 64 tests, two synthetic profiles and six actual-importer checks; resume from revision 71 to 72 preserved accepted evidence and published bytes. Execution evidence is in the project's `arbeit/implementation/abnahme.md` and `m5-verification.json`.
+  - A bounded context-use test passed using a reused worker; it was not blinded. No general efficiency, cost or unattended-operation claim follows. No new schedule, skill promotion, shared-method rewrite or company-claim promotion was performed. Unrelated inbox admissions were not assigned to TÜV.
+  - The earlier log entry's unapproved-plan/not-started wording records its historical checkpoint; D09 and this completed execution supersede that status.
+  - Final documentation checks: 182 local links across 15 documents resolve; all 18 originals have exact register entries; the current context matches its reviewed SHA-256. Fast wiki integrity reports zero errors and warnings. Source inventory refreshed to 4,145 files. EOL policy passes with the unchanged baseline of 20 mixed legacy files; no worktree normalization performed.
+
+## 2026-09-09 | implementation | YouTube 429 recovery and immutable semantic snapshots
+
+- Sources:
+  - Rolf's explicit approval of the researched conservative recovery plan.
+  - Existing approved acquisition run `20260909T174846Z-a01878c3`; current operating contract and external reference links in `docs/youtube-integrated-worker.md`.
+- Changed:
+  - Caption backoff, retry history, serialized request ownership, first-429 stop, ten-video cap and single-probe recovery.
+  - Create-only semantic snapshot publishing, exact-source export ledger, local-only recovery command and existing automation prompt; no new schedule or L3/L4 authority.
+  - Worker policy amendment, operating documentation, existing review/checkpoint and derived inventory.
+- Notes:
+  - Local-only recovery registered all 84 existing captures and produced snapshot `20260909T174846Z-a01878c3-review-3a89eaa8f765`, SHA-256 `1229973A24CF820C412DED4555DCBC9CEBED833453C2F77C553A022CABBBE9D1`. Queue: 25 sources / 80,018 words, 84 unread. Replay preserved the exact snapshot and hash; worker leases released.
+  - Six failed videos remain in the persistent retry queue; earliest probe after 2026-09-10 20:57 Europe/Berlin, with local semantic backlog taking priority. The parent acquisition is paused independently of review readiness.
+  - 65 Python tests passed, including snapshot immutability, real standing-authority queue/completion, cooldown persistence, numeric/date Retry-After, request ownership, ten-video cap and one-probe retry. Eight reconciliation and twelve disposition assertions passed. Inbox assertions passed but one cleanup hit a temporary desktop.ini access denial; separate inbox and scheduler reruns passed without code changes.
+  - Inventory current at 4,145 files; disposition register at 928 rows with no issues. EOL policy passes; 20 existing mixed-ending files were not normalized.
+  - No new YouTube request, source-body semantic review, ingest package or canonical claim promotion occurred. The next scheduled semantic wave can use the ready snapshot; future YouTube availability is not guaranteed.
+
+## 2026-09-09 | repair | Restored newsletter source authority and live intake path
+
+- Sources:
+  - Rolf's explicit request to diagnose and restore the weekly newsletter-intelligence flow.
+  - Historical source registry from commit `240bda2691ba67d9fd1ebab4d4876f17cc67f819`, checked against the current identity registry.
+- Changed:
+  - Restored `wiki/_outputs/newsletter-intelligence/source-registry.json` with 122 stream decisions.
+  - Narrowed `.gitignore` so the source and identity registries remain versionable while all other private newsletter output stays ignored.
+  - Added a newsletter regression test for registry presence, schema validity, decision consistency, and Git visibility; documented the authority-file exception in [[newsletter-intelligence-pipeline]].
+- Notes:
+  - Root cause: the whole newsletter-output directory was ignored during branch recovery, so the required source registry disappeared and four weekly runs correctly failed closed before Gmail access.
+  - The restored registry exactly matches all 122 current identity-registry streams: 60 selected, 59 not selected, and three undecided, with zero missing, extra, or mismatched decisions.
+  - Gmail identity matched `ai.rolfpullrich@gmail.com`; a read-only live smoke found 95 messages from selected-sender candidates for 2026-08-31 through 2026-09-06 and read ten without mailbox mutation or external-link access.
+- Newsletter fixtures passed 182 assertions with zero failures. No external page retrieval, source analysis, durable claim promotion, commit, or push occurred.
+
+## 2026-09-09 | integration | Research entry modes and learning closeout embedded
+
+- Sources:
+  - Rolf's explicit integration request in the current Codex task; project decision D10.
+  - Existing core, workflow, TÜV implementation learning notes and authorized synthetic verification; no new company-source ingest.
+- Changed:
+  - [[index]], [[reusable-practices-router]], [[reusable-practices-library]] and the existing Company Evidence Intake skill now point to the canonical execution workflow.
+  - `tools/company-intelligence/`: workflow v1.1, common entry README/adopted-change references, entry companion, fictional demonstrations and 16 focused tests.
+  - Existing TÜV README, decisions and learning notes record D10 and the bounded findings without duplicating the common method.
+- Notes:
+  - Three modes are explicit: baseline, focused follow-up, complete context update. Predecessor integrity, retained coverage/facts/gaps, mandatory review and non-overwriting versioned publication are checked around the unchanged core.
+  - 64 existing regressions and 16 new tests passed; all 15 final synthetic demonstration checks passed. Fresh-context discovery found all three modes and required learning closeout; identified documentation conflicts were corrected and rechecked. Canonical evidence: `wiki/_outputs/company-intelligence/integration-verification.md`.
+  - Learning closeout records evidence, transferability, proposed change, actual verification and adoption status. It is a coordinator gate, not autonomous method promotion. No research, scheduling or reactivation of earlier systems occurred. The four pinned core files and real TÜV run remain unchanged.
+  - Earlier synthetic intermediary directories remain because automatic execution review rejected their recursive cleanup with only `blocked by policy`; no deletion or workaround was performed. Only the final demonstration linked in the canonical verification report is authoritative.
+  - Final checks: 75 local references across eleven documents resolve; workflow routing fields are present. Fast wiki audit initially found stale derived inventory; regeneration retained the 4,145-source count and final Fast passed with zero errors/warnings. EOL policy passes with the unchanged 20 mixed legacy files. No source admission or normalization occurred.
+
+## 2026-09-09 | implementation | Complete PDF text target with explicit coverage
+
+- Sources:
+  - Rolf's explicit request to implement the TÜV project's PDF-limit recommendation for new extractions (project decision D13); existing converter and policy, no new source ingest.
+- Changed:
+  - Existing canonical converter and synchronized skill copy, PDF policy settings, PowerShell forwarding, audit, registry/readiness and focused tests.
+  - [[raw-sources]] and the existing `skills/vault-source-conversion/SKILL.md` document profile `2026-09-09.1`.
+- Notes:
+  - All PDF pages are the default target. Separate worker time/memory and input/text-output limits protect resources; completed pages survive partial processing. Coverage, text presence, effective limits and stop reason are explicit. OCR remains disabled.
+  - 16 synthetic PDF tests and six PowerShell suites passed, including 45 pages, deliberate truncation, timeout/memory/output limits, textless pages, readiness and create-only repetition. Optional MarkItDown/Docling adapters used doubles because the libraries were absent; their real extraction quality was not verified.
+  - No live-library conversion, backfill or reconciliation ran. Originals, existing sidecars, TÜV context and completed run files were preserved. Future readiness checks block unknown legacy PDF coverage; migration is separately proposed, not executed.
+  - Full project evidence: `../Project Hub/TÜV Rheinland/arbeit/implementation/pdf-extraktion/umsetzung.md` relative to the Second Brain root. Resource defaults are operating choices, not performance benchmarks. No new search technology, research, package installation or schedule change.
+
+## 2026-09-09 | newsletter promotion | add facilitator and escalation design
+
+- Sources:
+  - [Agency and Agents](https://www.oneusefulthing.org/p/agency-and-agents)
+  - [Ajeya Cotra interview](https://www.dwarkesh.com/p/ajeya-cotra)
+- Changed:
+  - [[facilitator-escalation-design-2026-09-09]]
+  - [[agent-security]]
+  - [[agent-evaluation]]
+  - [[personal-ai-cowork-system]]
+  - [[index]], [[sources]], [[ethan-mollick-from-one-useful-thing]]
+- Notes:
+  - Added a bounded escalation contract for impossible or no-progress tasks, four reasons for human involvement, and correlated-agent review limits. Incident counts, causal claims, forecasts, and productivity claims remain excluded.
+
+## 2026-09-09 | newsletter promotion | add AI business-value gate
+
+- Sources:
+  - [AI Strategy Is Not a Strategy](https://firmsconsulting.com/ai-strategy-vs-corporate-strategy/)
+- Changed:
+  - [[ai-business-value-gate-2026-09-09]]
+  - [[reliable-ai-capability-rollout]]
+  - [[marketing-operating-system]]
+  - [[index]], [[sources]], [[kris-safarova-firmsconsulting]]
+- Notes:
+  - Added a bounded objective-and-value gate for AI capabilities. Adoption and activity remain diagnostic; ROIC-WACC universality, causal impact, and guaranteed financial outcomes remain excluded.
+
+## 2026-09-10 | harness patch | clarify YouTube semantic review boundaries
+
+- Sources:
+  - Rolf's explicit four-point harness patch request in the YouTube worker task.
+- Changed:
+  - `AGENTS.md`, `docs/youtube-integrated-worker.md`
+  - `tools/youtube-intelligence.ps1`, `tools/youtube_intelligence.py`, `tools/youtube_semantic_reader.py`
+  - `tools/reconcile-semantic-dispositions.ps1`, `tools/new-source-coverage-inventory.ps1`
+  - YouTube semantic-harness, completion and reconciliation regression tests.
+- Notes:
+  - Separated source-review completion, reviewed promotional proposals and recorded canonical coverage. Preserved the deprecated approval-count alias and historical decisions; added explicit receipt/inventory fields instead of migrating records.
+  - Isolated child diagnostics from queue JSON, retained nonzero failures, and checked pause state on direct semantic-queue invocation. Added a package/intake/manifest/hash-bound local reader with bounded lossless continuation and explicit EOF, never a review receipt.
+  - Replaced the stale disabled-L2 instruction with authoritative policy/runtime references. Used `claude-md-project-instructions` to keep the always-loaded rule short and put exact behavior in existing tools and regression tests; no new skill or framework.
+  - Validation: 76 Python tests passed, including 11 new semantic-harness tests; reconciliation, clipping gate, source inbox, scheduled-task contract, source coverage and wiki-integrity fixture suites passed. Scoped diff whitespace checks passed. Existing line-ending conventions were retained without a vault-wide normalization.
+  - No network acquisition, semantic wave, policy/authority/schedule change, historical receipt migration, live inventory refresh, commit or push. Canonical coverage remains recorded provenance, not a fresh audit of historical claims. Next bounded step: explicitly refresh the derived inventory and inspect the changed status counts without source review or promotion.
+
+## 2026-09-10 | clarification | Existing all-page PDF extraction and current readiness contract
+
+- Sources: Rolf's request to verify L05 adoption and remove the 40-page default in Project Hub/TÜV Rheinland; existing conversion profile 2026-09-09.1.
+- Changed: `tools/company-intelligence/workflow.md`, source-acquisition/readiness paragraph only. Existing profile requires explicit complete technical coverage; semantic correctness still needs review. Legacy sidecars remain separate and blocked originals cannot support core acceptance through manual inspection alone.
+- Verification: 16 existing synthetic PDF coverage tests passed in 29.215 seconds; active policy valid; packaged converter byte-identical. All-page defaults confirmed in Python, PowerShell and policy runner. Optional backend adapters use doubles; no new actual backend-quality claim.
+- Project evidence: `../Project Hub/TÜV Rheinland/arbeit/implementation/pdf-extraktion/nachpruefung-2026-09-10.md`, D18 and L19 in that project.
+- No converter, core, policy, authority or schedule change; no source read, regeneration, migration or external research. Workflow v1.1 retained as documentation clarification of the already implemented contract.
+
+## 2026-09-10 | newsletter promotion | add reproducible runtime-identity contract
+
+- Sources:
+  - [[agent-runtime-identity-source-family-2026-09-10]]
+- Changed:
+  - [[agent-evaluation]]
+  - [[reliable-ai-capability-rollout]]
+  - [[ainews]]
+  - [[latent-space]]
+  - [[ben-s-bites]]
+  - [[alex-volkov-from-thursdai]]
+  - [[index]], [[sources]]
+- Notes:
+  - Added a versioned runtime-identity record for agent comparisons and capability rollout.
+  - Total cost per accepted outcome is evaluated with routing, cache mix, quotas, retries, rework, monitorability, legitimate safety stops, false positives, availability, and human review effort.
+  - Astra and Fable links remain one family each; named-model rankings, current price advantages, product-quality claims, and safeguard effectiveness remain excluded.
+
+## 2026-09-10 | skill creation | central task closeout with conditional learning
+
+- Sources:
+  - Rolf's explicit request in the YouTube worker task to plan and create a central closeout skill with conditional checks.
+  - Existing [[continual-learning-for-agents]] architecture and the established AGENTS closeout invitation.
+- Changed:
+  - `skills/task-closeout/SKILL.md`, `.agents/skills/task-closeout/SKILL.md`
+  - `AGENTS.md`, `tools/config/local-skill-contracts.json`, `tests/task-closeout/scenarios.md`
+  - [[index]], [[continual-learning-for-agents]]
+- Notes:
+  - Implemented one small common completion check and conditional documentation, work-residue and harness-learning branches. The plan deliberately uses one canonical skill, one discovery entry and existing records, without a scheduler, cleanup script, new learning register or mandatory per-chat report.
+  - Replaced the long AGENTS procedure with a short routing reference; the established optional invitation lives unchanged in the skill. Specialist run-closeout requirements remain authoritative. Inspection, implementation authority, semantic promotion and disposal remain separate; no repeated closeout invitation after a completed closeout.
+  - Used `skill-creator` and `claude-md-project-instructions` for precise discovery, minimal structure, progressive checks and preserved authority boundaries. Automatic discovery is not mutation permission.
+  - Validation: local contract fallback passed without errors or warnings; official quick validation could not run because the selected Python lacks PyYAML (no dependency installed). Existing generic-validator and semantic-skill contract suites passed, with ten assertions. Discovery identity/target/metadata checks and scoped diff whitespace checks passed. Twelve acceptance scenarios received an author tabletop review, not an independent agent execution test.
+  - EOL policy audit passed; unrelated mixed legacy endings remain a separate hygiene finding. Only newly inserted contract lines were aligned with that file's existing CRLF convention. No raw source, historical decision, schedule or runtime policy was changed; no commit or push.
+  - Next-use verification remains open, not a claimed effectiveness result: on the next substantive requested closeout, inspect branch relevance, unnecessary reads/records, approval discipline and user correction effort. Retain or adjust this skill based on observed use; do not start a monitoring schedule.
+
+## 2026-09-10 | project-evidence | ISO 9001 scoped comparison (D23)
+
+- User-authorized project comparison completed as an exploratory self-comparison; [canonical result](../../Project%20Hub/T%C3%9CV%20Rheinland/kontext/methodenvergleich-iso9001.md). Three named certification bodies, 18 frozen sources, preserved baseline and separate G/F/P outputs.
+- Existing inbox importer admitted 13 HTTP originals and five received web-tool extracts under the exact 2026-09-10-iso9001 paths registered in sources.md. Four PDF extractions have full page coverage; four relevant pages visually inspected. No old raw source altered.
+- Sources registry and project pointer updated. D22 budget/context/timing deviations recorded; no causal method validation or supplier ranking. Project observations L27-L29 remain local; no shared framework, skill, automation, or semantic concept promotion. D16 remains paused.
+
+## 2026-09-11 | concept design | curated repository learning library
+
+- Sources:
+  - Rolf's concept request and three individually confirmed choices in this task.
+  - [[repository-mining]] and the existing GBrain and P30 analysis records.
+- Changed:
+  - [[_outputs/repository-learning-library-concept]]
+  - [[index]]
+- Notes:
+  - Recorded the confirmed direction: open exploration followed by focused review; complete fixed-version copies with an analysis in a dedicated repository area; reuse across the Second Brain, other work and future projects.
+  - Proposed a versioned dossier, lightweight discovery index and one analysis skill with selectively loaded modules. Learning value is distinct from immediate adoption need.
+  - This is a concept deliverable. The new source-class contract, directory, skill and pilot are not implemented; no repository was downloaded, analyzed anew, moved, installed or activated in this task.
+  - Existing canonical operating rules and protected sources remain in force; detailed implementation recommendations are distinguished from the three confirmed choices.
+  - Closeout: concept metadata and wiki links passed; scoped diff whitespace checks passed; original index/log content was preserved by reconstruction against pre-edit hashes. EOL policy audit passed with unrelated legacy mixed-ending findings; no policy or line-ending normalization. No new source ingest or runtime test was needed for this concept-only task.
+
+
+## 2026-09-10 | newsletter promotion | add AI-enabled team-contraction resilience gate
+
+- Sources:
+  - [[ai-team-contraction-resilience-source-family-2026-09-10]]
+- Changed:
+  - [[ai-enabled-team-contraction-resilience-gate]]
+  - [[reliable-ai-capability-rollout]]
+  - [[team-working-agreement-and-feedback-loop]]
+  - [[reusable-practices-library]], [[reusable-practices-router]]
+  - [[the-pragmatic-engineer]]
+  - [[index]], [[sources]]
+- Notes:
+  - Added a pre-decision gate for accepted outcomes, critical knowledge, failure and on-call coverage, organizational slack, learning, workload, human impact, legal and accessibility duties, and rollback.
+  - The gate does not authorize a workforce action or replace executive, HR, legal, employee-representation, accessibility, or fairness processes.
+  - Position 25 remains derivative of inaccessible Reuters position 26. No Meta-specific number, motive, event detail, productivity effect, or workforce outcome was promoted.
+
+
+## 2026-09-10 | newsletter promotion | add paid conversational-discovery boundary
+
+- Sources:
+  - [[paid-conversational-discovery-source-review-2026-09-10]]
+- Changed:
+  - [[ai-mediated-discovery-readiness-checklist]]
+  - [[full-funnel-media-role-and-evidence-map]]
+  - [[mindstream]]
+  - [[index]], [[sources]]
+- Notes:
+  - Separated organic AI answers from paid conversational placement and added controls for labeling, answer separation, context, consent, claims, brand safety, measurement, incrementality limits, region, ownership, and stop conditions.
+  - OpenAI's first-party announcement supports product intent only. Revenue, reach, trust, privacy-effectiveness, ROAS, adoption, and advertiser-outcome claims were not promoted.
+
+## 2026-09-11 | repository library | implement storage, analysis skill and Superpowers pilot
+
+- Sources:
+  - repositories/obra--superpowers/snapshots/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/
+  - repositories/obra--superpowers/manifests/b36e0829c6d0140e93cfef2ca599b1b07d4a7797.json
+- Changed:
+  - [Repository index](../repositories/index.md), [Superpowers dossier](../repositories/obra--superpowers/obra--superpowers-analysis.md)
+  - [Analysis skill](../skills/repository-analysis/SKILL.md), [dossier template](../templates/repository-analysis.md)
+  - [[repository-mining]], [[reusable-practices-library]], [[reusable-practices-router]], [[index]], [[sources]]
+  - [[_outputs/repository-learning-library-concept]], [pilot verification](_outputs/repository-library-pilot/verification.md)
+  - AGENTS.md; repository source policy and custody helper; source-readiness, coverage, semantic-ingest and publication checks; local skill discovery; Obsidian snapshot exclusion.
+- Notes:
+  - Rolf explicitly requested implementation and delegated pilot selection. Codex chose obra/superpowers for its connected workflow, skills, helpers and test examples.
+  - 195 files captured with exact Git-blob and SHA-256 identity; 28 selected files read in full or excerpts; eight qualified findings. Source custody remains inventory-only in the global register. No foreign code executed, skill installed or pilot claim canonically promoted.
+  - Independent retrieval exercise succeeded. Fourteen new tests, source-coverage and publication checks, the affected semantic generator/validator suites and Wiki Fast validation passed. Skill validation used the available local fallback because PyYAML is absent.
+  - The broader existing transaction-V2 suite fails at a large replacement round-trip in unchanged code. This does not invalidate the separately passing repo integration checks; it remains documented, not silently repaired.
+  - Preserve local snapshot backups separately from Git. No new backup service, scheduler, commit or push was created. The detailed report records remaining test and outcome limits.
+  - Automatic approval review blocked deletion of 18 task-owned EOL scratch files under `.tmp/repository-library-eol-repair/` with `blocked by policy`; they remain ignored and are not runtime dependencies.
+
+
+## 2026-09-11 | source intake | TÜV PV customer-perspective project evidence
+
+- Scope: D27 public comparison of TÜV Rheinland and VDE, Germany as customer market; user delegated selection and original preservation.
+- Added 15 exact originals through the existing inbox importer; four PDFs validated ready, DB PDF retained blocked with selected original-image review. No raw-source mutation, OCR, regeneration or semantic promotion.
+- Updated [[sources]] and [[index]] with project-local context and custody links. [Project register and provenance](../../Project%20Hub/TÜV%20Rheinland/arbeit/wettbewerb-kundenperspektive-pv/quellenregister.md), [actual review/limitations](../../Project%20Hub/TÜV%20Rheinland/arbeit/wettbewerb-kundenperspektive-pv/recherche-und-pruefung.md).
+- Provider/customer findings and L33 remain in the project. No frameworks, skills, automation or harness changes. D16 remains deferred; no outreach or interviews.
+
+## 2026-09-11 | documented reuse | TÜV PV closeout application record
+
+- Authority: Rolf explicitly requested task-closeout to make the completed process reusable in future projects and support later improvement (project D28).
+- Extended the existing [project review record](../../Project%20Hub/TÜV%20Rheinland/arbeit/wettbewerb-kundenperspektive-pv/recherche-und-pruefung.md#closeout-wiederverwendung-und-nächste-lernprüfung) with applicability, a seven-step account of the process, documented execution corrections, next-use checks and a portable task starter. Linked the example from [the existing company research workflow](../tools/company-intelligence/workflow.md#learn-and-improve) and [[index]].
+- This is a documented application example and discovery improvement, not a new mandatory workflow, changed routing table, skill, tool, autonomy level or semantically promoted customer claim. Future effectiveness/efficiency remains untested. The actual discovery check uses links in the same context, not an independent fresh-context agent.
+- Project README, D28 and L33 carry the status; existing customer report, sources and earlier verification remain intact. No new sources, no source-register change, no cleanup or background work.
+
+## 2026-09-11 | repository consolidation | Four repo families with consistent analytical dossiers
+
+- Authority: Rolf confirmed consolidation and deeper static review of the selected legacy repositories at their archived commits after the Superpowers pilot.
+- Sources:
+  - repositories/garrytan--gstack/snapshots/94993f74012782fd94416dd44b8314f6363a13a4/
+  - repositories/everyinc--compound-engineering-plugin/snapshots/0a2957852e2034d04eb01120fd7da6ed5307dc56/
+  - repositories/garrytan--gbrain/snapshots/15b9863d13635d173562a54f55a1d388bfcf546b/
+  - repositories/garrytan--gbrain-evals/snapshots/565b80754ffa6abb9afb041026f2fab048aa7553/
+- Changed:
+  - [Repository index](../repositories/index.md): four main families plus the GBrain Evals companion, five current dossiers and pinned source trees.
+  - [[index]], [[sources]], [[repository-mining]], [[gbrain-source-summary]] and the source-coverage inventory.
+  - Historical P30 briefs and GBrain deep-dive now point to current dossiers; the obsolete clone-relocation proposal is marked superseded. Historical source paths remain stable.
+- Notes:
+  - GStack and Compound Engineering now include implementation/test inspection; GBrain's existing deep-static review is preserved, selectively re-anchored and extended. Exact current selection: 19, 17, 16 and 12 files respectively. Learning value is separate from immediate adoption.
+  - Four archives unchanged; all snapshot Git blobs verified. GStack/Compound archive differences are CRLF-only; GBrain/Evals are byte-identical. Across five repos: 5,719 inventory-only source files, all Git-ignored.
+  - All five dossier checks passed; Fast wiki integrity returned 0 errors/0 warnings. Internal retrieval exercise completed. [Scope, findings and verification](_outputs/repository-library-consolidation/verification.md).
+  - No external code/test execution, installation, new canonical claim promotion, source deletion, commit, push or scheduled work. Existing unrelated work and prior pilot scratch residue were preserved.
+
+## 2026-09-11 | repository analysis | AnyDoc conversion architecture and learning dossier
+
+- Authority: Rolf directly selected firecrawl/anydoc for analysis in the existing Repository Learning Library.
+- Sources:
+  - repositories/firecrawl--anydoc/snapshots/261fc257d17c3eab0f673be31c408fd9fdc2171a/
+- Changed:
+  - [AnyDoc dossier](../repositories/firecrawl--anydoc/firecrawl--anydoc-analysis.md): architecture, three representative workflows, skill/context review, eight qualified findings, local comparison and exact reading coverage.
+  - [Repository index](../repositories/index.md), [[index]], [[sources]] and the source-coverage inventory.
+- Notes:
+  - 329 files preserved as inventory-only custody; 34 selected text files reviewed in full or exact excerpts. Binary fixtures not processed. Library now contains six technical repos in five families.
+  - Main learning: shared format model; conversion success versus completeness; parser budgets; explicit OCR backend transitions; targeted robustness tests; benchmark coverage and version-bound resumption.
+  - Dossier/snapshot/hash and retrieval checks recorded in [verification](_outputs/repository-analysis-anydoc/verification.md). Technical checks do not establish runtime quality or a performance advantage.
+  - Existing structures reused; no new skill, backend, policy, canonical claim promotion, installation, external test execution, source cleanup, commit or push. Proposed adaptations remain qualified dossier findings.
+
+## 2026-09-11 | controlled comparison | AnyDoc against current document converters
+
+- Authority: Rolf explicitly requested execution of the controlled comparison following the static repository review.
+- Evidence: [Versioned report, corpus and receipts](_outputs/source-conversions/anydoc-comparison-2026-09-11/report.md); released AnyDoc Windows wheel 0.2.4 with recorded SHA-256, distinct from the static Git-build identity.
+- Changed: [AnyDoc dossier](../repositories/firecrawl--anydoc/firecrawl--anydoc-analysis.md), [repo index](../repositories/index.md), [[index]] and [[sources]] now distinguish static review, executed comparison and proposed production adoption.
+- Results: eight controls plus eight readiness-approved real documents; three repetitions per backend, 96 runs. Five additional quality probes explored physical slide/page mapping. PPTX notes and DOCX title retention support targeted backend candidates; XLSX formula/hidden-content loss and PDF column/header issues oppose blanket replacement.
+- Preservation: source and existing sidecar hashes unchanged; production converter/policy unchanged. AnyDoc installed only in the local comparison folder. No global package, hosted OCR, document upload, canonical content promotion, source deletion, commit or push.
+- Closeout: report, fixtures, exact wheel, scripts and receipts retained together under the existing local source-conversions exclusion. Initial stale-sidecar exclusions and the corrected prototype ZIP-copy error are documented. No new skill or mandatory rule introduced; production integration is a proposed next task.
+
+## 2026-09-11 | implementation | Optional AnyDoc adapter for PPTX and DOCX
+
+- Authority: Rolf explicitly requested the proposed optional adapter implementation.
+- Changed: canonical source converter, synchronized packaged copy, extraction runner, existing conversion skill, hash-pinned Windows requirement and 15 adapter tests. Repo dossier/index and wiki discovery now identify the implemented state.
+- Behavior: explicit AnyDoc 0.2.4 selection; PPTX physical slide numbering including hidden slides, separate source-near speaker notes, local bounded worker, typed failures, provenance and audit. DOCX supports the same optional backend. Auto routing and standing policy unchanged.
+- Verification: 15 adapter tests and 16 PDF regression tests passed; policy and sync checks passed. Real runner pilot processed DOCX plus 19-slide PPTX with successful audit. [Implementation receipt](_outputs/source-conversions/anydoc-integration-2026-09-11/verification.md).
+- Preservation: eight original/sidecar pairs hash-checked unchanged. Only local isolated AnyDoc runtime installed; no global package, OCR, source mutation, existing sidecar regeneration, canonical claim promotion, schedule, commit or push.
+- Closeout: existing structure reused; installation and operation documented in the conversion skill. Optional adapter ready to select; bulk migration and automatic routing changes are outside this task.
+
+## 2026-09-11 | newsletter promotion | add issue-level source-method lens
+
+- Sources:
+  - [[newsletter-source-method-lens-source-review-2026-09-11]]
+- Changed:
+  - [[newsletter-intelligence-pipeline]]
+  - [[the-pragmatic-engineer]]
+  - [[index]], [[sources]]
+- Notes:
+  - Added separate issue-level fields for reporting mode, access path, correction transparency, and intended shelf life.
+  - The fields guide only evidence expectations, uncertainty, and refresh needs. They do not score a publisher, establish accuracy, alter source selection, waive verification, or authorize promotion.
+
+## 2026-09-11 | source synthesis and framework draft | Kaufrollen-Personas mit TÜV-Pilot
+
+- User request: Persona-Frameworks aus vorhandenem Wissen recherchieren, in das Second Brain einweben und im TÜV-Pilot anwenden; Rolf bestätigt alle 24 Angebotsfelder.
+- Sources: Drei Autorenseiten als unveränderte Firecrawl-rawHtml-Snapshots nach `raw/imports/persona-kaufrollen/2026-09-11/` aufgenommen; NNG-Personaformen aus D29 wiederverwendet. Vier Suchanfragen, neun inhaltliche Abrufe/Öffnungen; keine zusätzliche öffentliche TÜV-Fallrecherche.
+- Created: [[buying-role-persona-frameworks]] und `projects/No and low code_1st Marketing Agent/frameworks/audience-understanding/buying-role-persona-analysis.md` v0.1.0/composite/draft.
+- Woven into: [[b2b-persona-development]], [[persona-and-audience-library]], Framework-Root-/Domain-Index, [[reusable-practices-library]], [[reusable-practices-router]], [[sources]], [[index]].
+- Pilot: Acht vorläufige Arbeitstypen und 24 Feldzeilen; F24 ohne Persona, P05 schwach. Rollenbefugnisse nicht aus Titeln ergänzt. Selbstreview und strukturelles Lint, keine unabhängige Käufer-/Methodenvalidierung. Nutzung und Schwächen im Framework-Log/Backlog dokumentiert.
+- Boundary: Begrenzte Integration auf ausdrücklichen Auftrag; keine Roharchiv-Vollerschließung, bestehenden Originale oder globalen Skills geändert. Die zusätzliche öffentliche Fallrecherche bleibt eine offene Nutzerentscheidung.
+
+## 2026-09-12 | project source supplement | TÜV Persona-Fallbelege D34
+
+- User authorization: Rolf explicitly requested public cases that can confirm, change or challenge the existing buying-role assumptions; the D33 research permission question is resolved.
+- Sources: Twelve exact originals admitted through the existing importer, five HTML and seven PDF; manifest matched by source input path and SHA-256. Seven ready PDF sidecars checked before content use; nine original pages visually reviewed. No source mutation, OCR or sidecar regeneration by this task.
+- Result: [Persona context v0.2](../../Project%20Hub/TÜV%20Rheinland/kontext/personas-kaufrollen.md), nine provisional functional types and 24 offering fields. Public procurement perspective added; program commission, technical contribution and proof use better distinguished. Personal decision rights and recurring patterns remain open.
+- Evidence: [Case/change matrix](../../Project%20Hub/TÜV%20Rheinland/arbeit/persona-kaufrollen/fallrecherche/fallbelege-und-aenderungen.md), [source register](../../Project%20Hub/TÜV%20Rheinland/arbeit/persona-kaufrollen/fallrecherche/quellenregister.md), [review](../../Project%20Hub/TÜV%20Rheinland/arbeit/persona-kaufrollen/fallrecherche/pruefung.md); [[sources]] and framework usage log updated.
+- Boundary: Project source bookkeeping and bounded application observation only. No shared semantic claim promotion, framework version/status change, outreach, new test series, or technical extension. Forty-query stop reached; no automatic follow-up. D16 remains deferred.
+
+## 2026-09-12 | framework application trace | TÜV Webster & Wind D35
+
+- User authorized a first stock-based organizational-buying analysis across the existing 24 fields.
+- Existing framework usage log records direct use of the 1972 original and bounded application observations. No new canonical framework, source intake or shared semantic promotion.
+- [Project context v0.1](../../Project%20Hub/TÜV%20Rheinland/kontext/buying-center-organisationskauf.md) separates internal buying-center membership from external contribution, purchase from service delivery, and formal criteria from personal motivation. Individual powers and group dynamics remain largely open.
+- [Review and source boundaries](../../Project%20Hub/TÜV%20Rheinland/arbeit/webster-wind/pruefung.md): 14 existing originals, 14 visually checked pages, self-review only. Earlier personas/context preserved; D16 deferred. No follow-up automatically started.
+
+## 2026-09-12 | method source and application | TÜV Johnston & Bonoma D36
+
+- Source: `raw/assets/tuev-rheinland/johnston-bonoma/johnston-bonoma-1981.pdf`, original 1981 article newly admitted through the existing importer; ready sidecar, 15 pages. User explicitly requested this method application. Twelve prior case sources and one normative source reused; no new customer research.
+- Changed: [[johnston-bonoma-buying-center-source]], [[sources]], [[index]] and existing framework usage log. Source-near summary only; no shared customer-claim promotion, canonical framework activation or global rule/skill/technology change.
+- Result: [24-field structure/interaction context v0.1](../../Project%20Hub/TÜV%20Rheinland/kontext/buying-center-struktur-interaktionen.md), provisional. Five dimensions examined; no complete person-level networks or valid network metrics. Eleven source-typed relationship traces and four bounded marketing information contexts.
+- [Review and closeout](../../Project%20Hub/TÜV%20Rheinland/arbeit/johnston-bonoma/pruefung.md): source-based self-review, nine ready PDFs, six visual page checks, protected inputs preserved. D36/L40 and project README updated; D16 deferred. No optional briefing, further research or interviews executed.
+
+## 2026-09-12 | role/targeting source supplement | TÜV D37
+
+- User requested a job-role/targeting map across all 24 offering fields after identifying a gap between functional buying-role evidence and practical marketing audiences.
+- Four originals admitted under `raw/imports/tuev-rheinland/jobrollen-targeting-2026-09-12/`: two TÜV Academy role pages and two LinkedIn Help pages. Thirteen prior originals reused. [[tuev-jobrollen-targeting-quellen]], [[sources]], [[index]] and existing framework usage log updated; no canonical framework activation or customer-claim promotion.
+- [Project map v0.1](../../Project%20Hub/TÜV%20Rheinland/kontext/jobrollen-targeting-landkarte.md): ten overlapping role families, 24 rows, conditional procurement/finance/executive functions and conceptual targeting routes. Job titles and needs remain hypotheses; no live audience taxonomy or reach validation.
+- [Review](../../Project%20Hub/TÜV%20Rheinland/arbeit/jobrollen-targeting/pruefung.md): source-based self-review, two original report pages visually read while readiness remains blocked, seven factual PDFs ready, native HTML sections checked. Prior inputs and D16 preserved; project README/D37/L41 updated. No outreach, campaigns, interviews, strategic focus or technical expansion.
+
+## 2026-09-12 | requested task-closeout | TÜV D38–D41
+
+- Added missing application traces for the HP/IDG comparison and professional profiles, Crestodina questions, and Buying Committee synthesis to the [existing usage log](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/_meta/usage-log.md). [[persona-and-audience-library]] now links the scoped four-original comparison and TÜV application.
+- Navigation and application metadata only: no new source ingestion, customer-claim promotion, readiness change or global method/skill rule. Existing project learning L42–L45 retained without an additional learning entry.
+- [Scoped closeout record](../../Project%20Hub/TÜV%20Rheinland/arbeit/buying-committee/pruefung.md): prior completion checks and current links/input hashes checked; stale project handoff references corrected. Evidence artifacts retained. No optional follow-up executed.
+
+## 2026-09-12 | local content-strategy preparation | TÜV D42
+
+- Added the bounded HP/DB-Schenker reconstruction and method-comparison application to the [existing usage log](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/_meta/usage-log.md). The transferable observation remains source-scoped: thematic pillars, content jobs and focus/resource choices are distinguishable decisions, not one taxonomy.
+- [Project decision basis](../../Project%20Hub/TÜV%20Rheinland/kontext/content-strategie-entscheidungsgrundlage.md) remains provisional. Both user-confirmed purposes are open: decision utility and recognition/expert authority. No customer-evidence promotion, canonical framework change, new source ingestion, readiness change or global rule.
+- [Scoped review](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/pruefung.md) documents selected original access, evidence limits and retained visual reading aids. README/D42/L46 updated; no external research, final pillars, campaigns or production. D16 deferred.
+
+## 2026-09-12 | evaluation-system implementation planning | TÜV D43
+
+- Added the scoped planning application to the [existing usage log](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/_meta/usage-log.md). Reused local evaluation/error-analysis artifacts and explored current external practice for the user's requested shared strategy-evaluation system.
+- [Project plan](../../Project%20Hub/TÜV%20Rheinland/kontext/implementationsplan-content-strategie-eval-system.md) separates strategy appraisal, assessment reliability and later communication impact. The proposed rubric and implementation are not yet calibrated or built; no canonical method or source-claim promotion.
+- [Plan review](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/eval-system/planpruefung.md) records four manual design walkthroughs and documentation checks. README/D43/L47 updated; D42 inputs retained, D16 deferred. No source mutation, global rule, tool installation, schedule or model-evaluation run.
+
+## 2026-09-12 | project handoff | Independent-Judge-System pausiert und gesichert
+
+- Sources: user-requested read-only architecture review and subsequent explicit request to preserve all preparation for later continuation; existing local Newsletter, YouTube, Semantic-Ingest, Agent-Evaluation and Workflow-Assurance contracts.
+- Changed: [pausierter Implementierungsplan](_outputs/independent-judge-system/implementation-plan.md), [Prüfbefunde und Übergabe](_outputs/independent-judge-system/evidence-and-handoff.md), [[index]].
+- Preserved: roles, records, runtime/isolation, deterministic gates, semantic rubrics, adapters, verdicts, four-week shadow proposal, replay candidates, calibration/L3 conditions, target diffs, tests, costs, rollback, exact evidence pointers and inspection limits.
+- Authority: documentation only; design remains proposed and project paused. No implementation, live Judge, automation change, reminder, L3 activation, source ingest, private-source copying, commit or push. Existing operational contracts remain authoritative; historical memories and results remain evidence only.
+
+## 2026-09-12 | local strategy decision system | TÜV D44
+
+- User-authorized local build completed in the project: [working context](../../Project%20Hub/TÜV%20Rheinland/kontext/content-strategie-eval-system.md), [verification](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/eval-system/implementation/pruefung.md). Added only an application trace to the [existing usage log](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/_meta/usage-log.md).
+- Functional operation and shared human calibration remain distinct. Technical checks and known fixtures passed; provisional pilot judgments remain open. Version-bound review renewal is a scoped implementation observation, not a promoted universal rule.
+- README/D44/L48 updated. No canonical framework/skill, source, readiness, schedule or model-API change. Both content purposes open; D16 deferred.
+
+## 2026-09-12 | strategy-framework application | TÜV D46
+
+- User-authorized bounded application of HP plus four complements: [project outcome](../../Project%20Hub/TÜV%20Rheinland/kontext/content-strategie-anwendung-tuev.md), [application review](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/anwendung-d46/pruefung.md). Added a scoped application trace to the existing ContextOps usage log.
+- Four provisional strategy options; task and perception evidence separated, Industrial process prerequisites explicit. No confirmed audience gap, strategic focus, final pillars or effectiveness. Current profiles abstain where rubric prerequisites are absent; prior runs retained.
+- No raw-source/readiness changes, canonical promotion, shared skill/framework change or new automation. Both purposes open; D16 deferred.
+
+## 2026-09-12 | provisional content pillars | TÜV D47
+
+- Added a scoped application trace for the explicit pillar-development task: [five provisional candidates](../../Project%20Hub/TÜV%20Rheinland/kontext/content-pillar-kandidaten-tuev.md). Audience/problem, defensible contribution, utility and authority addressed for each.
+- Earlier situation comparisons retained as examples; themes and effects distinguished. User clarification recorded in project D47/L51. No validated market focus, canonical promotion, source/readiness change or shared method/skill change.
+
+## 2026-09-12 | pillar architecture application | TÜV D48
+
+- Added a bounded application trace: [P2/P3/P4 elaboration and open count review](../../Project%20Hub/TÜV%20Rheinland/kontext/pillar-vertiefung-und-architektur-tuev.md). User challenge exposed an insufficient distinction between three candidates for deeper work and final pillar count. Five remain a working recommendation; P1/P5 have explicit comparison kernels.
+- Detailed results and evidence limits remain in project D48/L52. No new canonical knowledge claim, source ingest, readiness change, shared framework/skill modification or production.
+
+## 2026-09-12 | pillar scope application | TÜV D50
+
+- Added a bounded framework-use trace for [five territories with explicit scope and boundaries](../../Project%20Hub/TÜV%20Rheinland/kontext/content-pillar-architektur-tuev.md), retaining the user-selected names and separating audience examples, POVs and both intended effects. Detailed findings remain in project D50/L54.
+- Boundary examples distinguish the leading question, not exclusive ownership of an object by one pillar. This is a project design observation, no canonical promotion, new source ingest/readiness change or shared method modification.
+
+## 2026-09-12 | strategic pillar development | TÜV D51
+
+- Added a bounded application trace for [thematic development of all five pillars and proposed interplay](../../Project%20Hub/TÜV%20Rheinland/kontext/content-pillar-strategie-tuev.md). Project D51/L55 preserve the distinction between thematic depth, individual cases and joint content-strategy decisions.
+- No source ingestion, canonical method promotion, shared skill modification, approved brand positioning or production. Detailed project hypotheses remain in the project.
+
+## 2026-09-12 | flow-framework source collection and review | TÜV D52
+
+- Sources: admitted `raw/assets/tuev-rheinland/flow-frameworks-d52/mctighe-wiggins-ubd-framework-2012.pdf` through the existing inbox importer; 13/13-page validated sidecar. Three attempted HTML captures returned 403; their online locators remain in the project register, no local copies claimed.
+- Changed: [[ubd-framework-source-and-tuev-flow-review]], [[sources]], [[index]], ContextOps framework usage log. Project comparison separates content specificity, design sequence, task progress and brand association; details remain in [D52](../../Project%20Hub/TÜV%20Rheinland/kontext/content-pillar-flows-frameworkvergleich.md).
+- Notes: selected source-near review and hypothetical P2/P4 applications, no effectiveness evidence or canonical method/skill promotion. No policy or schedule change.
+
+## 2026-09-13 | semantic ingest | P55 B2B-Lead-Management-Diskurs
+
+- Sources:
+  - research/2026-09-13-b2b-lead-management-diskurs.md
+  - Sieben Nutzerfolien bytegleich in `wiki/_assets/b2b-lead-management-diskurs-2026-09-13/`; Hashmanifest im P55-Paket.
+- Changed:
+  - [[b2b-lead-management-diskurs-2026-09-13]]
+  - [[full-funnel-media-role-and-evidence-map]]
+  - [[campaign-reporting-and-operations]]
+  - [[index]], [[sources]], [[reusable-practices-library]]
+- Notes:
+  - Rolf genehmigte den konkreten Übernahmevorschlag im Chat: „übernahme ist freigegeben“. Fünf begrenzte Erkenntnisse und sieben Prüffragen übernommen; KI-Rekonstruktion, persönliche Erfahrung, externe Prüfgrenzen und offene Hypothesen getrennt.
+  - Keine allgemeine Unwirtschaftlichkeit, Botquote, exakte 95:5-Quote oder automatische ABM-Überlegenheit übernommen. Bestehenden Medienworkflow erweitert; dessen Library-/Router-Registrierung bleibt bestehen. Keine Änderung des Enterprise Growth System, kein neuer Skill, keine Veröffentlichung.
+  - Validierungsprovenienz: `wiki/_outputs/semantic-ingest/p55/package.json`. Quellen und vorbestehende Änderungen bleiben erhalten; keine Bereinigung oder Normalisierung des übrigen Worktrees.
+  - Inhaltliche Übernahme umgesetzt; Wave/Fast bestanden. Final/Full durch vier globale Formatbefunde in `ai-enabled-team-contraction-resilience-gate.md` und `repository-mining.md` blockiert, daher Paket nicht vollständig abgeschlossen. Ein verkürzter Quellenlink auf der bearbeiteten Medienseite wurde repariert. Details im P55-Quellenbundle; kein Eingriff in die beiden anderen Artefakte.
+
+## 2026-09-13 | source-review | Old Marketing Playbook vollständig kritisch geprüft
+
+- Sources:
+  - raw/assets/20260212_End of the old way of Marketing_1_1.pptx
+  - research/abm-old-playbook-2026-09-13/index.md — exaktes Bundle mit 18 Einzelbriefen; Gesamtbewertung und Qualitätsreview als abgeleitete Synthese.
+- Changed:
+  - [[old-marketing-playbook-source-review-2026-09-13]]
+  - [[index]], [[sources]]
+  - Native Sidecar durch bestehenden Readiness-/Konversionsweg erstellt; separate manuelle Bildtext-Ergänzung, Prüfplan und Übernahmematrix.
+- Notes:
+  - Rolf autorisierte die genaue Präsentation, gründliche aktuelle Recherche und Subagents; spätere Agentaufträge Astra low entsprechend seiner Präferenz. 36 Folien und 18 Themen erfasst: neun Failures, fünf Pivots, drei Säulen plus Governance.
+  - Original im inbox unverändert; bytegleiche Kopie über bestehenden Importer aufgenommen. SHA-256 und Receipt in der Quellenzusammenfassung. Native Extraktion bleibt amber; keine OCR oder Regeneration. Bildbasierte Aussagen manuell geprüft.
+  - Teilweise verifizierte KI-Forschung mit Primärquellen, Methoden-/Zugriffsgrenzen, Zahlenkorrekturen, Gegenbelegen und Alltagstransfer. Keine allgemeine ABM-Überlegenheit, lokalen Effekte oder dekorativen Deckzahlen als Tatsachen übernommen.
+  - Zehn konkrete Erweiterungs-/Bestätigungsvorschläge für vorhandene Wiki-Seiten vorbereitet; neue kanonische Promotion und formales Semantic-Ingest-Paket noch offen. Frühere P55-Freigabe/Validierungsblockade bleibt getrennt und unverändert.
+  - Abschlussprüfung auf diesen Auftrag begrenzt: Dateiabdeckung, Quellenidentität, lokale Links und Register. Extrahierte Medien und Inventar als Prüfbelege behalten; keine Bereinigung, keine neue Skill-/Policy-/Automationänderung.
+
+## 2026-09-13 | source-ingest | P56 Weboriginale zum Old Marketing Playbook
+
+- Sources:
+  - Exakte 144 Quellen mit Pfad, URL und SHA-256 im Register `wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/url-register.csv`.
+- Changed:
+  - [[old-marketing-playbook-web-sources-2026-09-13]]
+  - [[old-marketing-playbook-source-review-2026-09-13]], [[index]], [[sources]]
+  - P56-Quellenledger, Einzelnotizen, Evidenzmatrix und konkreter Checkpoint; Forschungsindex verknüpft.
+- Notes:
+  - 145 Links geprüft; 133 Markdown-Captures und elf PDFs create-only über freigegebenen Importer aufgenommen. Alle 144 Quellenhashes stimmen. PDFs umfassen 415 Seiten mit nativen Sidecars; drei technische Amber-Fälle separat manuell ergänzt, nicht grün umdeklariert.
+  - Lesescope: 113 Haupttexte, zwölf Teilprüfungen, 18 Abstracts, eine manuelle Transkription; W144 ohne lesbaren Inhalt bleibt offen. Vollständige Archivierung ist nicht gleich vollständige fachliche Validierung.
+  - 15 Muster für bestehende Wiki-Seiten konkret vorbereitet; menschliche Evidenzfreigabe und anschließende kanonische Umsetzung/Finalprüfung bleiben offen. Keine pauschalen Wirksamkeitsclaims übernommen.
+  - Abschluss auf Quellenidentität, Register und Paket begrenzt. Captures, Receipts und manuelle Bildprüfungen als Auditbelege behalten; keine Bereinigung, neue Automation oder Harnessänderung. Technische Rate-Limit-/Fallback-Erfahrungen bleiben im lokalen Aufnahmeplan.
+
+## 2026-09-13 | semantic-promotion | P56 Output-Prüfung und fehlende Übernahmen
+
+- Sources:
+  - 144 exakte Quellen im P56-Entscheidungsledger; 15 Muster in der P56-Evidenzmatrix.
+  - Run-Inventar `wiki/_outputs/abm-old-playbook-2026-09-13/output-disposition.csv` mit 429 vorgefundenen Dateien; keine fehlenden Pfade im Snapshot.
+- Changed:
+  - [[full-funnel-media-role-and-evidence-map]], [[campaign-reporting-and-operations]], [[buying-groups-and-account-prioritization]], [[gtm-signals-and-contextual-intelligence]]
+  - [[buyer-question-coverage-checklist]], [[ai-mediated-discovery-readiness-checklist]], [[abm-sales-marketing-operating-contract]], [[account-based-marketing]]
+  - [[old-marketing-playbook-web-sources-2026-09-13]], [[old-marketing-playbook-source-review-2026-09-13]], [[index]], [[sources]], Forschungsindex und vorhandene Checkpoints.
+- Notes:
+  - Rolfs ausdrücklicher Auftrag, alle Run-Outputs zu prüfen und fehlende Übernahmen nachzuholen, autorisierte den vorliegenden 15-Muster-Checkpoint. Keine weitere Freigabe für diese fachliche Umsetzung erforderlich.
+  - 15 begrenzte Muster in acht vorhandene Seiten übernommen; keine neue Framework-/Skillstruktur. Quellenqualität, Gegenbelege und Zugriffslimits bleiben erhalten. E11 und sechs Arbeitsbeispiele sind bereits auffindbare Analyse; technische Dateien sind Auditbelege, keine eigenständigen Wissensclaims.
+  - Alle Entscheidungen approved; offener Paketbestand null. Vier vorbestehende reine Formatabweichungen in [[ai-enabled-team-contraction-resilience-gate]] und [[repository-mining]] korrigiert: erkannte Abschnittstitel und explizite Wiedergabe bereits vorhandener Trigger-/Outputdefinition, keine neue fachliche Regel. Falschen Wikilink auf der bearbeiteten Discovery-Seite korrigiert. P56 und P55 haben danach Final/Full mit RecordResult ohne Fehler oder Warnungen bestanden; beide Paketstatus complete. Keine zusätzliche P55-Promotion.
+  - Output-Audit und Verbleibsregister verknüpft. Präventionsvorschlag im bestehenden Run-Audit dokumentiert: jeder wertvolle Output braucht Entdeckungspfad, klaren Übernahmestatus oder expliziten Aufbewahrungsgrund. Keine Automation, dauerhafte Policyänderung oder Löschung vorgenommen.
+
+## 2026-09-13 | deferred-intent | Fachliche Heimat für wertvolle Outputs
+
+- Changed:
+  - [[obsidian-vault-design]], [[index]]
+- Notes:
+  - Rolf möchte später wertvolle Output-Dateien in fachlichen Bereichen sichtbar zugänglich machen; TÜV-Kontext/Meilensteine als Vorbild, ABM-Projekt als möglicher Pilot. Zielordner sind Brainstorming, keine beschlossene Architektur.
+  - Wunsch und begrenzter Vorschlag am bestehenden Architekturthema festgehalten. Keine Migration, Ordneranlage, Quellenmutation oder Automatisierung. Thema beim späteren ausdrücklichen Aufgreifen konkretisieren.
+
+## 2026-09-13 | method-research-start | Positionierungslandschaft: Bestand und Suchpilot
+
+- Sources:
+  - Bestehende kuratierte Frameworks, Methodenregister und Nutzungslog; öffentliche Pilotquellen mit Zugriffsumfang im Arbeitsbericht.
+- Changed:
+  - [Bestand und Pilot](_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md)
+  - [Suchstrategie v0.1 mit v0.2-Anpassung](_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md)
+  - [[index]]
+- Notes:
+  - Angeforderte Anfangsphase: kuratierte Abdeckung, Reifegrade, A/B/C-Trennung, vorab dokumentierte Suchstrategie und begrenzter Pilot. Strategische Autorenmethoden leichter auffindbar als Messliteratur; gezielte Reparatursuche erschließt Originalvergleich.
+  - Breite Landschaft, endgültige Auswahl, vollständige Rekonstruktionen und Evidenzmatrix-Review bleiben offen. Keine Unternehmensanwendung, kanonische Claim-Promotion, bestehende Frameworkänderung oder Quellenaufnahme abgeschlossen; Quellenregister des Piloten bleibt im Arbeitsbericht, sources.md unverändert.
+  - Unbeabsichtigte Extraktions-Snippets einer rekursiven Suche nicht als Evidenz verwendet; Folgesuche auf explizite kuratierte Dateien begrenzt. Keine Rohdateien verändert.
+
+## 2026-09-13 | method-research-review | Positionierungslandschaft RC1
+
+- Sources:
+  - Öffentliche Originalpublikationen, Autoren-/Institutsdokumentation und begrenzte Auszüge; S1–S19 mit Herkunft, gelesenen Abschnitten und Zugriffslimits im fortgeführten Arbeitsbericht/Suchprotokoll.
+  - Bestehender CEP-Draft zusätzlich gelesen; keine lokalen Rohquellen geöffnet.
+- Changed:
+  - [Landschaft und Review-Checkpoint](_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md)
+  - [Suchprotokoll und Quellenregister](_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md)
+  - [Evidenzmatrix](_outputs/positionierungslandschaft-2026-09-13/evidenzmatrix.csv)
+  - [[index]]
+- Notes:
+  - Ausweitung gemäß ausdrücklichem Folgeauftrag abgeschlossen: zwölf Familien einschließlich zurückgestelltem Kapferer-Kandidaten; vier Rekonstruktionsvorschläge, 20 Evidenzzeilen. Alle sieben Suchstränge bearbeitet; Budgetstopp, keine Sättigungs- oder Vollständigkeitsbehauptung.
+  - Vorgeschlagen: neue Audit-/Wahrnehmungsanalyse-Module; vorhandene Dunford-/CEP-Dokumente erweitern. Keine neuen Frameworkseiten, kein Aktivstatuswechsel, keine Unternehmensanwendung. Sämtliche Matrixentscheidungen bleiben pending-user-review.
+  - Erschlossene Studien prüfen unterschiedliche Dinge: Messverfahren, Differenzierungswahrnehmung, Urteile über Markenelemente. Keine allgemeine Wirksamkeitsvalidierung übernommen. Kapferer-/Keller-Zugang und Laddering-Fidelity bleiben offen.
+  - Nur Arbeitsdokumentation und Auffindbarkeit aktualisiert. Kein abgeschlossenes Quelleningest oder Semantic-Ingest-Paket; sources.md und Methodenregister bleiben unverändert. Keine automatische Harnessänderung oder Bereinigung.
+
+## 2026-09-13 | research-scope | Positionierungslandschaft auf Second-Brain-Wissen ausgerichtet
+
+- Sources:
+  - Nutzerpräzisierung im Chat vom 13.09.2026: Framework-Landschaft für das Second Brain, keine Bewertung am Piloten.
+- Changed:
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md
+  - [[index]]
+- Notes:
+  - Such- und Sammelstrategie v0.3 als maßgebliche Fassung ergänzt: Erkenntnisgewinn, Schulenvielfalt, lokale Wissenslücken und Quellenqualität bestimmen Sammlung und Vertiefung. Pilotpassung ist kein Kriterium.
+  - Quellennahe Rekonstruktion und Wissensreview von Anwendungstests getrennt. Historische Testentwürfe aus dem aktiven Auftrag genommen; RC1-Ziele bleiben vorläufige Wissensvorschläge.
+  - Suchpilot bezeichnet nur die bereits durchgeführte Rechercheerprobung. Keine neue Recherche, kein Quelleningest, keine Matrixfreigabe, keine kanonische Übernahme oder Aktivierung. Bestehende Budgets werden nicht zurückgesetzt.
+
+## 2026-09-13 | method-research | Positionierungslandschaft v0.3 ausgeführt
+
+- Sources:
+  - Öffentliche Quellen S20–S25 im fortgeführten Suchprotokoll; S8/S9 gezielt nachgelesen. Keine lokalen Rohquellen geöffnet.
+- Changed:
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/evidenzmatrix.csv
+  - [[index]]
+  - [[sources]]
+- Notes:
+  - Nutzerauftrag „Dann such und Sammeltstrategie ausführen“ als Freigabe der begrenzten Anschlusswelle behandelt. Zwölf Suchzeichenfolgen zusätzlich, kein Neustart des Bestandsaudits, keine Pilotbewertung.
+  - Zwölf Familien beibehalten; 26 Evidenzzeilen. Quellenzugänge, Teilumfang und Fehlschläge dokumentiert. Keller-Messabschnitt als fidelity-begrenzte Transkription, Mapping-Varianten und Reliabilitätsbaustein ergänzt. Kapferer/Laddering weiter offen; Corporate-Kandidat gesondert vorgemerkt.
+  - RC2 ersetzt RC1-Priorisierung: F01/F03/F06/F11 zur Wissensvertiefung vorgeschlagen. F02/F10 bleiben vorhandene Erweiterungsziele. Kein Framework aktiviert, keine kanonische Seite erstellt, sämtliche Matrixzeilen pending-user-review.
+  - Stopp nach begrenzter Lückenbearbeitung und Familienbudget, keine Sättigungsbehauptung. Keine lokalen Volltextkopien oder temporären Downloads; kein abgeschlossenes Semantic-Ingest-Paket.
+  - Geprüft: 26 eindeutige vollständige Matrixzeilen, zwölf Familien/Profilüberschriften, Quellen-IDs, ausschließlich pending-user-review, vier relative Dokumentlinks. Diff-Whitespaceprüfung und Zeilenendungs-Policy bestanden; 45 bereits vorhandene Mischformatdateien unverändert. Kein Anwendungstest und keine Final-Paketvalidierung. Keine globale Regel-/Skilländerung abgeleitet.
+
+## 2026-09-14 | ai-research-ingest | Paralleles Positionierungs-Deep-Research geprüft und eingewebt
+
+- Sources:
+  - research/2026-09-14-b2b-positioning-frameworks-for-contextops.md
+  - Separat geprüfte Webquellen S26–S30 sowie erneut S15 im bestehenden Such-/Quellenregister; S30 nur Zugangsbeleg.
+- Changed:
+  - [[b2b-positioning-contextops-research-review]]
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md
+  - wiki/_outputs/positionierungslandschaft-2026-09-13/evidenzmatrix.csv
+  - [[index]]
+  - [[sources]]
+- Notes:
+  - Exakt benannter Nutzerbericht vollständig gelesen, 779 Zeilen; byteidentisch aus dem externen Pfad nach research kopiert. Beide SHA-256 stimmen mit D66B53F1B353A5FA247318DD23B3CD1C3FA82883D8BA7FA87F8E527B978F4115 überein. Original unverändert, keine binäre Quelle ingestiert.
+  - Trust partially-verified: Modell/Prompt unbekannt, keine auflösbare Exportbibliografie; 114 interne Zitationsmarker mit 19 unterschiedlichen IDs. Sieben gezielte Verifikationssuchen, keine neue breite Landschaftswelle.
+  - Mehrwert: Keller-Variante 2009 besser erschlossen, CEP-Priorisierung korrigiert, Bain/Category Design/Narrative/Vorlage als Kandidaten; ODI ist bereits lokal vorhanden und wird verknüpft. KI-Ranking, Pflichtpipeline und Fragenkataloge nicht als validierte Originalmethoden übernommen.
+  - 29 Evidenzzeilen in zwölf Familien, neue E27–E29 und Anschlusskandidaten im bestehenden Arbeitsbericht. RC2-Auswahl bleibt Ausgangsvorlage, Keller ein besser belegter zusätzlicher Reviewkandidat. Quelle integriert; keine kanonischen Methoden-/Konzeptänderungen, Aktivierung oder Anwendungstests.
+  - Geprüft: Quellhashes, 29 eindeutige vollständige Matrixzeilen, zwölf Familien, gültige externe/lokale Quellen-IDs, ausschließlich pending-user-review und 14 relative Dateiverweise. Die erste lokale Quellen-ID-Prüfung war zu eng und wurde um die bereits registrierten L1/L2 korrigiert; Wiederholung bestanden. Scoped git diff --check bestanden, bekannte Zeilenendungswarnung nicht durch Normalisierung bearbeitet.
+  - Bounded closeout: keine temporären Downloads oder löschbedürftigen Task-Artefakte; keine globale Skill-/Regeländerung. Quellenreview und offene Übernahmevorschläge, kein als abgeschlossen ausgegebenes Semantic-Ingest-Paket; daher keine Final-Paketvalidierung. Offene Quellen-/Wirkungsnachweise und Reviewentscheidungen stehen im Quellenreview.
+
+## 2026-09-14 | ai-research-ingest | Value-Proposition-Frameworks geprüft und ergänzt
+
+- Sources:
+  - research/2026-09-14-b2b-value-proposition-frameworks-contextops.md
+  - Öffentliche Quellen S01–S14 im neuen, aufgabenspezifischen Quellenregister; bestehende ODI-/Positionierungsabdeckung als lokaler Anschluss.
+- Changed:
+  - [[value-proposition-frameworks-research-review]]
+  - wiki/_outputs/value-proposition-landschaft-2026-09-14/quellen-und-suchprotokoll.md
+  - wiki/_outputs/value-proposition-landschaft-2026-09-14/evidenzmatrix.csv
+  - [[index]]
+  - [[sources]]
+  - [[strategic-briefs]] und [[messaging-frameworks]]: ausschließlich Auffindbarkeitsverweise.
+  - [[b2b-positioning-contextops-research-review]]: Folgeuntersuchung verlinkt.
+- Notes:
+  - Exakt benannter Nutzerbericht vollständig gelesen: 1.284 Zeilen, 45.534 Bytes, elf Literatur-URLs. Original und create-only Kopie SHA-256 189E8EE95263BC7D742ED5F9C989260BD025E6DF9B2B2322B47B4C3FAECE2E31. Keine Quellmutation. Generator/Prompt unbekannt; Vertrauen partially-verified.
+  - 16 Suchzeichenfolgen zur Beleg-/Lückenprüfung. Acht Ausgangsansätze behalten; NABC, Value Delivery System, getrennte Conjoint/MaxDiff-Verfahren und Buyer Utility Map ergänzen die Sammlung. Kano und Beziehungswert als begrenzte Kandidaten. Keine Vollständigkeit behauptet.
+  - Korrekturen: Resonating Focus kann Parität enthalten; Laddering ist keine reale Kausalprüfung; VPC-Autorenprozess enthält Testarbeit; Wert-/Preisgrößen getrennt definieren. Payne-Sequenz und CVM-Haupttext offen. R1-Scores, Masterfragen, YAML und Zwei-Fakten-Regel nicht aktiviert.
+  - Quellenintegration abgeschlossen; 14 Evidenzzeilen mit Zielvorschlägen bleiben pending-user-review. Keine kanonische Methoden-/Claim-Promotion, keine neue Runtime, keine TÜV-Anwendung. Kein abgeschlossenes Semantic-Ingest-Paket behauptet, daher keine Final-Paketvalidierung.
+  - Qualitätskontrolle: 14 eindeutige vollständige Evidenzzeilen, Quellen-IDs, Reviewstatus, zehn relative Dateiverweise und identische Quellhashes geprüft. Scoped Diff-Whitespaceprüfung bestanden; bekannte Zeilenendungswarnung nicht normalisiert.
+  - Bounded closeout: Quellenfassung, Lesestatus, Zugangslücken und Auswahlgründe im vorhandenen Wissenssystem auffindbar. Keine temporären Downloads, kein Task-Cleanup nötig. Quellenkritik bleibt in dieser Bewertung dokumentiert; keine globale Regel-/Skilländerung aus dem Einzelfall. Offen sind der konkrete Evidenzreview und die bezeichneten methodentragenden Quellenlücken.
+
+## 2026-09-14 | application | Positionierungsreihe im bestehenden TÜV-Projekt abgeschlossen
+
+- Sources:
+  - Bestehender TÜV-Projektkontext D27/D46/D53–D57 und exakt abgegrenzter Nutzerauftrag; Methodenfundstellen je Anwendung dokumentiert.
+  - raw/assets/tuev-rheinland/pv-kunden-2026-09-11/k06-solarwatt-brandzertifikat.pdf: erneute Lektüre über vorhandenes validiertes Sidecar nach Readiness; keine Quelländerung.
+- Changed:
+  - Project Hub/TÜV Rheinland: acht sequenzielle Anwendungen/Nichtanwendungsbefunde, acht gesonderte Selbstreviews und ein Vergleich in arbeit/content-strategie/positionierungsreihe-d58/.
+  - Bestehende Pillar-Ausarbeitung v0.7, Abschnitt 3.1; Verweise in Marketing-Arbeitskontext S04 und D46, README, D58 und L62.
+  - projects/No and low code_1st Marketing Agent/frameworks/_meta/usage-log.md: begrenzte Nutzungsspur.
+  - [[index]]
+- Notes:
+  - Gemeinsamer PV-Varianten-/Nachweiskontext; frühere KI-Anwendungen keine unabhängige Evidenz. JTBD/ODI, Bain, Dunford, Keller, CEPs, Category Design, Raskin und Moore einzeln bearbeitet, unmittelbar qualitativ evaluiert; übrige Landschaft begrenzt gegengeprüft.
+  - Integriert: Aufgaben-/Beobachtungshypothesen, Information/Fachklärung/Prüfauftrag getrennt, situative Markenzuordnung für B und Claimgrenzen. Keine neue Unternehmenspositionierung, keine endgültige Fokuswahl, kein Wirkungsnachweis.
+  - Acht Berichte bestehen den strukturellen Prüfvertrag; 609 lokale Dateiverweise der Reihe und betroffenen Kontext-/Registerdateien ohne fehlende Ziele. Gesonderte Selbstreviews, keine unabhängige Validierung. Mehrere Vollanwendungen bleiben wegen fehlender Daten/Originale BLOCK.
+  - Zeilenendungs-Policy vorhanden; separater Audit meldet 46 gemischte Dateien im Arbeitsbaum. Keine Normalisierung oder fremde Bereinigung. Keine temporären Quellenkopien/Downloads oder zu entfernenden Taskartefakte.
+  - Nächste Empfehlung: P2-Fallkarte intern fachlich prüfen; kein Kontakt, Erhebungs- oder Produktionsauftrag gestartet. Fünf bestätigte Arbeitsrichtungen, offene A/B-Wirkungen und D16 erhalten; allgemeine P1-Vertiefung bleibt getrennt.
+  - task-closeout ausgeführt, projektbezogene Beobachtung L62 dokumentiert. Keine kanonische Framework-/Skilländerung oder semantische Quellenpromotion; offener RC2-Evidenzmatrix-Review unabhängig. Quellenregister unverändert, da keine neuen Quellen ins Second Brain ingestiert wurden.
+
+## 2026-09-14 | application-review | TÜV-PV-Fallkarte dokumentenbezogen geprüft
+
+- Sources:
+  - raw/assets/tuev-rheinland/pv-kunden-2026-09-11/k06-solarwatt-brandzertifikat.pdf; nach Readiness vollständig textuell und visuell geprüft.
+  - Vier öffentliche Fundstellen und begrenzte Zugriffsergebnisse im Projektbericht W59-1 bis W59-4; keine neue kanonische Quellenaufnahme.
+- Changed:
+  - Project Hub/TÜV Rheinland: fachpruefung-d59.md und fachpruefung-d59-pruefung.md im vorhandenen Content-Arbeitsbereich.
+  - P2-Fallkarte v0.8, README, D59 und L63; historische D58-Reihe erhält Folgehinweis.
+  - wiki/_outputs/tuev-pv-d59-k06-1.png, tuev-pv-d59-k06-2.png und tuev-pv-d59-k06-3.png: abgeleitete Sichtprüfnachweise, Original unverändert.
+  - [[index]]
+- Notes:
+  - „Keine Produktionsbewertung aus dem Zertifikat ableitbar“ und „Herstellerzuordnung ohne gesonderte TÜV-Bestätigung im Paket“ präzisiert; keine negative Tatsache aus fehlendem Beleg abgeleitet.
+  - Konkrete Produktnennung aus Unterlagen beantwortbar; eigener hypothetischer Glasdickenwechsel ausdrücklich kein reales Entwicklungsvorhaben. Individuelle Fachklärung empfohlen, keine automatische Neuprüfungs- oder Ungültigkeitsaussage.
+  - Prozess-/Contentbedarf nicht beobachtet. Fünf interne Klärungsfragen und funktionale Zuständigkeiten vorbereitet, keine Person kontaktiert. Reale Fallangaben und zuständige Fachstelle fehlen für technische Anwendung.
+  - Begrenzter Selbstreview PASS; technische Freigabe BLOCK. Keine Kunden-/Wirkungsvalidierung, Forschungspromotion, Framework-/Skilländerung oder neue Technik. Abschlussabgleich auf diesen Auftrag begrenzt; Sichtprüfnachweise als nachvollziehbare Derivate erhalten.
+
+## 2026-09-14 | application | Konzernweite TÜV-Positionierungsanalyse D60
+
+- Sources: kuratierter Projekt-/Methodenbestand und gezielte öffentliche Recherche. [Projektregister mit Quellen, Zugriff und 13 Claimgrenzen](../../Project%20Hub/TÜV%20Rheinland/arbeit/positionierung-d60/quellen-und-evidenz.md). Keine neuen Originale ins Second Brain ingestiert; raw/Sidecars unverändert. Quellenregister des Second Brain bleibt deshalb unverändert.
+- Changed: [maßgeblicher Gesamtbericht](../../Project%20Hub/TÜV%20Rheinland/kontext/positionierungsanalyse-tuev-rheinland.md), Vorabplan, Inhaltsanalyse, acht sequenzielle Ansätze samt Selbstreviews, 18 Teilanalysen, Architektursynthese und Abschlussreview im bestehenden TÜV-Projekt; README/D60/L64 und datierter Folgehinweis an D26. Hier nur Index/Log und bestehende ContextOps-Nutzungsspur.
+- Result: 24/24 Felder zugeordnet; globale Dachebene, überwiegend deutsche Leistungsfenster. A3/O2 (Dach plus Kontextpositionen und explizite Leistungsrollen) ist analytische Empfehlung. Kein empirisch belegter POD; NPS 53 im Eigenbericht ersetzt keine Markenassoziationsstudie. Zwei alte DE-Paarlücken modulbezogen ergänzt.
+- Review: getrennte Selbstreviews und qualitative Nutzenbewertung, kein unabhängiges Fachgutachten. Voll-ODI, mentale Positionierungs-/CEP-Befunde, Category Design, vollständiges Raskin-Narrativ und originale Moore-Vorlage bleiben bei fehlenden Voraussetzungen begrenzt/blockiert.
+- Boundaries: fünf Pillar-Richtungen, A/B, D16, PV-Grenzen D58/D59 und offener RC2-Evidenzreview erhalten. Keine kanonische Framework-/Skilländerung, neue Runtime, Ansprache, Befragung oder Veröffentlichung. Projektauftrag abgeschlossen; nächste strategische Entscheidung ist Architekturwahl und Auswahl der zu belegenden Kontextthesen.
+- Closeout: elf Reviewberichte bestehen den Strukturvalidator; 617 Projekt-Dateiverweise plus acht neue Second-Brain-Verweise ohne fehlendes Ziel; 24 Feldkennungen und 18 Profile geprüft. Separater EOL-Audit: Policy PASS, 51 gemischte Dateien im Arbeitsbaum, keine Normalisierung. Keine temporären D60-Downloads oder Löschkandidaten; episodische Lernnotiz L64, keine automatische Verallgemeinerung.
+
+## 2026-09-14 | application | TÜV-Positionierungsdraft D62
+
+- Auf Nutzerauftrag und der in D61 akzeptierten Architektur A3: [Diskussionspaket](../../Project%20Hub/TÜV%20Rheinland/kontext/positionierungsdraft-tuev-rheinland.md) mit empfohlenem Dach, zwei Gegenvarianten, drei Kontextpositionen und sieben Belegfragen samt Konsequenzen. Vorhandene D60-Evidenz, keine neue Recherche oder Originalquellenaufnahme.
+- [Gesonderter Selbstreview](../../Project%20Hub/TÜV%20Rheinland/arbeit/positionierung-d62/pruefung.md): PASS für interne Diskussion; eine implizite Wirkungsbehauptung als Absicht präzisiert. Weder externe Freigabe noch empirische Differenzierung oder Wirksamkeit belegt.
+- README, D62, L65 und Folgehinweis am Analysebericht integriert; hier Index/Log und bestehende Nutzungsspur ergänzt. Fünf Pillar-Richtungen, A/B, D16, PV-Grenzen und offener RC2-Review bleiben erhalten. Keine kanonische Framework-/Skilländerung, Ansprache oder Veröffentlichung.
+
+## 2026-09-14 | evidence-review | Positiver Nutzerreview beider Framework-Sammlungen
+
+- Entscheidung: Rolf erklärt „der evidenzreview vor kanonischer Methodenübernahme ist positiv“ als Antwort auf den Closeout beider Sammlungen. Geltungsbereich: Positionierung E01–E29 und Value Proposition E01–E14, jeweils mit dokumentierten Einschränkungen, Auswahlentscheidungen und Zurückstellungen.
+- Implementiert: 43 Matrixzeilen auf `approved-by-user` gesetzt; Statusnachträge in beiden Quellenreviews, Arbeitsbericht, Suchprotokollen, Index und Quellenregister. Frühere offene Reviewangaben sind vorheriger Stand.
+- Noch ausstehend: kanonische Umsetzung der freigegebenen Entscheidungen. Fehlende Originaltexte und bedingte Rekonstruktionen bleiben offen. Keine neue Recherche, Aktivierung oder empirische Validierung; Quellenvertrauen bleibt unverändert.
+- Matrizen: wiki/_outputs/positionierungslandschaft-2026-09-13/evidenzmatrix.csv und wiki/_outputs/value-proposition-landschaft-2026-09-14/evidenzmatrix.csv. Freigabeprovenienz ist die Nutzerentscheidung, kein automatischer Validator.
+
+## 2026-09-14 | ingest | P57 kanonische Framework-Übernahme
+
+- Sources:
+  - research/2026-09-14-b2b-positioning-frameworks-for-contextops.md
+  - research/2026-09-14-b2b-value-proposition-frameworks-contextops.md
+  - research/2026-09-14-framework-source-verification-p57.md
+- Changed:
+  - [[_outputs/semantic-ingest/p57/source-bundle]]: 43 freigegebene Zeilen mit tatsächlichen Zielseiten und Behandlung; drei sekundäre Quellen mit Hashes.
+  - [[brand-system]], [[messaging-frameworks]], [[strategic-briefs]], [[value-proposition-analysis]], [[historical-positioning-heuristics]].
+  - Sieben neue draft-Methodenreferenzen; bestehende Dunford-, CEP-, ODI- und Proof-led-Dokumente präzisiert; Frameworkindexes und beide Reusable-Practice-Register ergänzt.
+  - Quellenreviews und Suchberichte mit aktuellem Umsetzungsstatus; [[index]] und [[sources]] aktualisiert.
+- Notes:
+  - Expliziter positiver Nutzerreview und anschließender Umsetzungsauftrag tragen die Übernahme. Quellen- und Rekonstruktionslücken bleiben erhalten; AI-Rankings und Gesamtpipeline bleiben Vorschläge.
+  - Keine Unternehmensanwendung oder neue Aktivierung. Neue Fragen/Abläufe sind gekennzeichnete lokale Adaptionen. Prüfprovenienz wird in P57/package.json aufgezeichnet.
+  - Prüfung: Wave/Fast und Final/Full/RecordResult bestanden; drei Quellen, 43 Evidenzzeilen, offener Paketbacklog null. Elf Framework-Strukturprüfungen bestanden. Zeilenendungs-Policy bestanden; vorhandene globale Mischformate nicht normalisiert. Zwei bestehende Quellenpfade auf tatsächlich vorhandene Dateien präzisiert. Kein neuer Skill oder Harness-Eingriff.

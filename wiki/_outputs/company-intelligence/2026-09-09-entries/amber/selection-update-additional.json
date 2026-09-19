@@ -1,0 +1,15 @@
+{
+  "project_id": "amber",
+  "reviewed": true,
+  "reviewer": "fixture-author",
+  "sources": [
+    {
+      "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries\\amber\\originals\\record-2026.txt",
+      "sha256": "e389d54a09ef54bce51679bf2cc4d7e8a1eca4aea133b10080bc76d7c23029af",
+      "entity_ids": [
+        "amber-fictional-group"
+      ],
+      "selection_status": "approved-for-project-review"
+    }
+  ]
+}

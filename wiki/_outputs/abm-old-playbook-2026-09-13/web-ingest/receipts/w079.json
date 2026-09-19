@@ -1,0 +1,17 @@
+{
+  "id": "W079",
+  "url": "https://www.forrester.com/blogs/b2b-revenue-engine-alignment-a-cultural-transformation-that-begins-with-customer-obsession",
+  "research_briefs": [
+    "s04-revops-governance.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:09.860375+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w079.json",
+  "title": "B2B Revenue Engine Alignment: A Cultural Transformation That Begins With Customer Obsession",
+  "final_url": "https://www.forrester.com/blogs/b2b-revenue-engine-alignment-a-cultural-transformation-that-begins-with-customer-obsession/",
+  "characters": 16886,
+  "sha256": "99ebfdf16e5fc8f9e4caef72980c8bb53fc69868aaca5fe09971b7ac26eb24e4",
+  "http_status": 200
+}

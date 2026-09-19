@@ -1,0 +1,15 @@
+{
+  "packet_type": "fixture-contextops-content-packet",
+  "packet_id": "example-company-contextops-packet-v1",
+  "version": "1.0.0",
+  "source_project": "projects/example-company",
+  "packet_owner": "projects/example-company",
+  "approval_state": "approved",
+  "evidence_state": "sourced",
+  "freshness_state": "current",
+  "readiness_state": "ready",
+  "canonical_artifact_ids": [
+    "example-company-approved-context-v1"
+  ],
+  "fixture_only": true
+}

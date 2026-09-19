@@ -1,0 +1,17 @@
+{
+  "id": "W055",
+  "url": "https://spideraf.com/articles/fraud-bots-what-they-are-how-they-drain-your-ad-budget-and-how-to-stop-them",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:44.656448+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w055.json",
+  "title": "Fraud Bots: 2025 Playbook to Cut Click Waste| Spider Af Articles",
+  "final_url": "https://spideraf.com/articles/fraud-bots-what-they-are-how-they-drain-your-ad-budget-and-how-to-stop-them",
+  "characters": 18764,
+  "sha256": "e73cdd12ace76f473b2cbbe5c1a341f1f26e260e885b38a4ebeb2e977cc5eb45",
+  "http_status": 200
+}

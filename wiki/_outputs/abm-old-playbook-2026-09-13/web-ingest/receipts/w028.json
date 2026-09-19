@@ -1,0 +1,29 @@
+{
+  "id": "W028",
+  "url": "https://documentation.g2.com/docs/buyer-intent",
+  "research_briefs": [
+    "t01-identity-to-intent.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:57:45.084053+00:00",
+  "previous_attempt": {
+    "id": "W028",
+    "url": "https://documentation.g2.com/docs/buyer-intent",
+    "research_briefs": [
+      "t01-identity-to-intent.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T17:54:32.411986+00:00",
+    "status": "capture-failed",
+    "error": "Error: Rate limit exceeded. Consumed (req/min): 25, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 5s, resets at Sun Sep 13 2026 17:54:39 GMT+0000 (Coordinated Universal Time)\n"
+  },
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w028.json",
+  "title": "Buyer Intent",
+  "final_url": "https://documentation.g2.com/docs/buyer-intent",
+  "characters": 27770,
+  "sha256": "353f4a42cced4a5e7551db50fc261a226b18969cfb0317670dbc0c3024707043",
+  "http_status": 200
+}

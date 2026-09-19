@@ -1,0 +1,112 @@
+[
+  {
+    "attempt": 1,
+    "attempt_id": "5ec5f50def754fd4b1a8f077a44d4677",
+    "attempts": [
+      {
+        "attempt_id": "5ec5f50def754fd4b1a8f077a44d4677",
+        "input_revision": 1,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 1
+        },
+        "started_at": "2026-09-09T19:46:21.198207+00:00"
+      }
+    ],
+    "completion_criterion": "Source-located facts and a substantive review.",
+    "dependencies": [],
+    "fact_ids": [
+      "F-WORKFORCE"
+    ],
+    "id": "Q01",
+    "input_revision": 1,
+    "lease_expires": 1788986781.1982079,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Read the approved fictional company record.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "b9c2fc82e142838ac91b491d5dbc5cf4236dfee6ef7ba7ff7de3a0a208f8d3e0",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\follow-up\\results\\Q01.json",
+    "review": {
+      "at": "2026-09-09T19:46:21.235207+00:00",
+      "fact_reviews": [
+        {
+          "fact_id": "F-WORKFORCE",
+          "locator": "Section workforce",
+          "rationale": "Matches the named fixture section.",
+          "source_id": "S1",
+          "verdict": "verified"
+        }
+      ],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "Q01",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "da68e09198254234bc05d76f78ca33d2",
+    "attempts": [
+      {
+        "attempt_id": "da68e09198254234bc05d76f78ca33d2",
+        "input_revision": 5,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:21.282212+00:00"
+      }
+    ],
+    "completion_criterion": "Source-located facts and a substantive review.",
+    "dependencies": [
+      "Q01"
+    ],
+    "fact_ids": [],
+    "id": "Q02",
+    "input_revision": 5,
+    "lease_expires": 1788986781.282212,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Read the approved fictional company record.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "51d5e8aecd8b1e0bf6c60b9b708325bf5e49ad9f3052d9b876212a8176cf57ca",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\follow-up\\results\\Q02.json",
+    "review": {
+      "at": "2026-09-09T19:46:21.316213+00:00",
+      "fact_reviews": [],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "Q02",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  }
+]

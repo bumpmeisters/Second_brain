@@ -1,0 +1,17 @@
+{
+  "id": "W133",
+  "url": "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:51.539441+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w133.json",
+  "title": "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop - NN/G",
+  "final_url": "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/",
+  "characters": 23368,
+  "sha256": "bc5cb14bc0b894188b3e647bf10ddce11fe4f8606497d7742310bb1431f9d9ad",
+  "http_status": 200
+}

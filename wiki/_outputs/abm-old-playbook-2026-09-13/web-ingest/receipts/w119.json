@@ -1,0 +1,30 @@
+{
+  "id": "W119",
+  "url": "https://www.linkedin.com/help/linkedin/answer/a418929/audience-expansion-overview",
+  "research_briefs": [
+    "f01-targeting.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "status": "captured-web",
+  "previous_attempt": {
+    "id": "W119",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a418929/audience-expansion-overview",
+    "research_briefs": [
+      "f01-targeting.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T18:05:19.691855+00:00",
+    "status": "capture-failed",
+    "error": "Error: All scraping engines failed to retrieve content from this URL. Engines tried: [fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automated access, (3) The website is down or unreachable, (4) The page requires authentication. Double check the URL is correct and accessible in a browser. If the issue persists, contact us at help@firecrawl.com with your request ID for investigation.\n"
+  },
+  "attempted_at": "2026-09-13T18:12:03.706868+00:00",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w119.json",
+  "capture_method": "Direct public HTTPS GET; stdlib HTMLParser main/article transcription with links; no generative summary",
+  "title": "Use audience expansion in your ad set | LinkedIn Help",
+  "final_url": "https://www.linkedin.com/help/linkedin/answer/a418929/audience-expansion-overview",
+  "characters": 3708,
+  "sha256": "692078bff881002c30370a800babaa2428a1c6908294088652d982a74ee41e90",
+  "http_status": 200
+}

@@ -1,0 +1,35 @@
+{
+  "id": "W023",
+  "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+  "research_briefs": [
+    "gesamtbewertung.md",
+    "quality-review.md",
+    "s03-aeo.md",
+    "t05-seo-to-entity.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:57:13.127354+00:00",
+  "previous_attempt": {
+    "id": "W023",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "research_briefs": [
+      "gesamtbewertung.md",
+      "quality-review.md",
+      "s03-aeo.md",
+      "t05-seo-to-entity.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T17:54:24.862274+00:00",
+    "status": "capture-failed",
+    "error": "Error: Rate limit exceeded. Consumed (req/min): 20, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 13s, resets at Sun Sep 13 2026 17:54:39 GMT+0000 (Coordinated Universal Time)\n"
+  },
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w023.json",
+  "title": "Google's Guide to Optimizing for Generative AI Features on Google Search | Google Search Central  |  Documentation  |  Google for Developers",
+  "final_url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+  "characters": 25080,
+  "sha256": "9a53b203623c1c4e517c6c4b2d086e7eac671599913f36eb32fbf7957c405516",
+  "http_status": 200
+}

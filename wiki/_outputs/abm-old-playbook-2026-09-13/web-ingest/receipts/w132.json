@@ -1,0 +1,17 @@
+{
+  "id": "W132",
+  "url": "https://www.mediaratingcouncil.org/standards-and-guidelines",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:48.585803+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w132.json",
+  "title": "Minimum Standards for Media Rating Research | MRC",
+  "final_url": "https://www.mediaratingcouncil.org/standards-and-guidelines",
+  "characters": 11056,
+  "sha256": "27005cf3f775ddbf209c12b61ff5d65207592b48ebb827f0266d83e1eb412b6a",
+  "http_status": 200
+}

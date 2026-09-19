@@ -1,0 +1,57 @@
+{
+  "schema_version": "youtube-discovery/v1",
+  "scheduled_execution_enabled": false,
+  "state_directory": "wiki/_outputs/youtube-discovery-radar",
+  "core_policy_path": "tools/config/youtube-intelligence-policy.json",
+  "core_database_path": "wiki/_outputs/youtube-intelligence/youtube-intelligence.sqlite3",
+  "source_selection_policy_path": "tools/config/source-selection-policy.json",
+  "primary_window_hours": 24,
+  "fallback_window_hours": 72,
+  "minimum_duration_seconds": 120,
+  "max_search_queries": 5,
+  "max_results_per_query": 25,
+  "max_raw_candidates": 125,
+  "max_model_review_candidates": 30,
+  "max_model_review_videos_per_channel": 2,
+  "max_description_characters": 4000,
+  "safe_search": "moderate",
+  "region_code": null,
+  "recommendation_threshold": 70,
+  "max_video_recommendations": 5,
+  "max_channel_recommendations": 2,
+  "max_open_recommendations": 20,
+  "review_score_components": {
+    "second_brain_relevance": 30,
+    "knowledge_delta": 25,
+    "evidence_quality": 20,
+    "reuse_potential": 15,
+    "freshness_value": 10
+  },
+  "search_lanes": [
+    {
+      "id": "applied-ai-agentic",
+      "weight": 30,
+      "query": "AI agents|agentic AI|context engineering|AI evaluation|MCP"
+    },
+    {
+      "id": "b2b-marketing-sales",
+      "weight": 30,
+      "query": "B2B marketing|account based marketing|GTM|RevOps|enterprise sales"
+    },
+    {
+      "id": "second-brain-context",
+      "weight": 16,
+      "query": "second brain|knowledge management|Obsidian|ContextOps|personal knowledge system"
+    },
+    {
+      "id": "content-positioning-discovery",
+      "weight": 14,
+      "query": "content strategy|B2B positioning|thought leadership|AI discovery|AI search"
+    },
+    {
+      "id": "emerging-intersections",
+      "weight": 10,
+      "query": "AI future of work|AI business workflow|coding agents|human AI collaboration"
+    }
+  ]
+}

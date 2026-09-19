@@ -12,8 +12,11 @@ sources:
   - raw/imports/automated-clippings/youtube/UCFeFVytEkT8kaqPCJZGFswg/2026-08-07--FI4NdYXltA4.md
   - raw/imports/automated-clippings/youtube/UCjIMtrzxYc0lblGhmOgC_CA/2026-07-21--B9N0P5-R4m0.md
   - raw/imports/automated-clippings/youtube/UCPGrgwfbkjTIgPoOh2q1BAg/2026-08-07--xgkjtF89-44.md
+  - https://firmsconsulting.com/ai-strategy-vs-corporate-strategy/
+  - wiki/newsletters/ainews/linked-sources/agent-runtime-identity-source-family-2026-09-10.md
+  - wiki/newsletters/the-pragmatic-engineer/linked-sources/ai-team-contraction-resilience-source-family-2026-09-10.md
 created: 2026-07-26
-updated: 2026-08-19
+updated: 2026-09-10
 ---
 
 # Reliable AI Capability Rollout
@@ -29,9 +32,11 @@ Use this practice when an AI-assisted task repeats often enough to deserve a sta
 ## Inputs
 
 - A bounded job and named human owner.
+- A named organizational objective, accountable value owner, and pre-change baseline.
 - Stable transformations or rules that can be made deterministic.
 - Judgment steps that still require model or human interpretation.
 - A pass/fail verifier and a record of important failure modes.
+- An expected value mechanism and review horizon, including financial value, risk reduction, resilience, compliance, learning, or option value as applicable.
 
 ## Procedure
 
@@ -42,6 +47,29 @@ Use this practice when an AI-assisted task repeats often enough to deserve a sta
 5. Apply the verifier before human review and record failures and corrections.
 6. Convert recurring corrections into durable instructions or checks.
 7. Expand autonomy only for the portions that repeatedly pass review.
+
+### Runtime-identity checkpoint
+
+Before training mode, comparison, or autonomy expansion, attach the run to the runtime-identity contract in [[agent-evaluation]]. Record model/version, effort, harness and state/compaction behavior, product surface and access tier, safeguards, routing/fallback, concurrency, quotas, cache mix, price date, permissions, acceptance criteria, and accounting boundary. If any material field changes, treat the evidence as a new operating condition until a controlled comparison demonstrates equivalence.
+
+The run history should pair accepted-outcome cost and task success with monitorability, legitimate safety stops, false positives, interrupted-task availability, retries, rework, and human review effort. This prevents a rollout from earning autonomy from a model label, nominal token price, or safety score that hides a materially different runtime (source: [[agent-runtime-identity-source-family-2026-09-10]]; mixed vendor and secondary evidence, no independent model-performance validation).
+
+
+### Business-value gate
+
+Before training mode begins, record:
+
+1. the corporate, functional, or project objective the capability serves;
+2. the mechanism by which changed work is expected to create value;
+3. the baseline, full investment boundary, leading operational measures, and lagging outcome measures;
+4. the accountable owner, review date, and continue, revise, stop, or operationalize decision; and
+5. material edge cases: learning, strategic option value, resilience, compliance, safety, accessibility, and other obligations that may not produce an immediate financial return.
+
+Adoption, output volume, time saved, and model usage are diagnostic measures, not sufficient evidence of business value. When capital economics are material, return on invested capital relative to cost of capital can be one lens; it is not a universal score and should not erase uncertainty, public value, workforce effects, or nonfinancial duties. This adapts a consulting heuristic and requires local validation rather than treating it as proven causality ([Firms Consulting, 2026](https://firmsconsulting.com/ai-strategy-vs-corporate-strategy/); vendor content).
+
+### Workforce-resilience boundary
+
+Evidence that an AI capability improves accepted outcomes does not by itself authorize role removal or materially lower human capacity. Before capability evidence is used in a workforce decision, route the proposal through [[ai-enabled-team-contraction-resilience-gate]]. The separate gate tests critical domain knowledge, failure coverage, on-call capacity, organizational slack, learning, workload, human impact, legal and accessibility duties, and a workable rollback. It does not approve an employment action (source: [[ai-team-contraction-resilience-source-family-2026-09-10]]; secondary practitioner analysis, underlying Reuters evidence unavailable locally).
 
 ## Output
 

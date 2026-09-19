@@ -1,0 +1,14 @@
+{
+    "envelope_contract":  "g3e-scoped-snapshot/v1",
+    "snapshot_id":  "g3e1-2b697f4996c9313c",
+    "row_count":  130,
+    "restore_exact_count":  126,
+    "append_only_prefix_count":  3,
+    "verify_only_count":  1,
+    "selection_fingerprint":  "2B697F4996C9313CEAE6689C879470687A78DCC31D46D93A12F9AFA8167A2457",
+    "selection_manifest_sha256":  "C0AF7E73B4409F85A4D19CB744BF8AB614266EF475E67924DAF31A2BB5FAF8EC",
+    "manifest_sha256":  "C0AF7E73B4409F85A4D19CB744BF8AB614266EF475E67924DAF31A2BB5FAF8EC",
+    "archive_sha256":  "7056BDBB002789BD728328727F678C30931EBC1A922656CEAD62018130E4F5CF",
+    "capture_tool_sha256":  "F27EA7F920EEE7D1C8523E67CCD31E290FE79BE6DCB615A9CB1552EC05CFF722",
+    "authority_effect":  "none"
+}

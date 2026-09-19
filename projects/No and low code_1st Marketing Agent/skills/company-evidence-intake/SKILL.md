@@ -11,6 +11,8 @@ Use this skill to turn company/product sources into a trustworthy evidence basel
 
 ## Operating Principles
 
+For an authorized company research run, targeted follow-up search, or update of an existing reviewed company context, first read `tools/company-intelligence/workflow.md` relative to the Second Brain root. It is the canonical execution procedure for these three entries, including source selection, task graphs, predecessor checks, versioned outputs and learning closeout. Use its existing local core rather than recreating a research harness. Simple source inventory or a one-off source summary may use this skill directly without starting a run. The workflow supplements this skill's source taxonomy; it does not grant archive access or semantic promotion authority.
+
 - Do not modify files in `raw/`.
 - Treat official company sources as evidence for what the company says, not necessarily as independent proof.
 - Treat AI-generated research as leads unless independently verified.
@@ -24,9 +26,9 @@ Use this skill to turn company/product sources into a trustworthy evidence basel
    - Read `references/source-taxonomy.md` and classify each source.
 
 2. Preserve sources.
-   - Save immutable source copies in `raw/` when source capture is part of the task.
+   - Preserve immutable originals when capture is authorized. Inside the Second Brain, use the existing inbox/importer admission contract; do not write directly into protected `raw/` paths.
    - Save AI-generated research in `research/`.
-   - Put generated extracts, tables, or analysis files in `wiki/_outputs/`.
+   - Inside the Second Brain, run binary readiness first and keep required registered text sidecars under `wiki/_extractions/`; other generated tables and analyses belong in `wiki/_outputs/`. Use the actual paths returned by the existing tools.
 
 3. Extract usable content.
    - Extract text from web pages, PDFs, decks, spreadsheets, or images when feasible.

@@ -1,0 +1,1368 @@
+{
+  "schema_version": 1,
+  "extracted_at": "2026-08-04",
+  "source": "YouTube All subscriptions page",
+  "source_url": "https://www.youtube.com/feed/channels",
+  "extraction_scope": "All channel cards rendered on the authenticated All subscriptions page",
+  "record_count": 169,
+  "caveats": [
+    "Subscriber counts are display strings and may be rounded.",
+    "Notification settings reflect the UI at extraction time.",
+    "YouTube subscriptions can change; refresh this dataset before time-sensitive use."
+  ],
+  "records": [
+    {
+      "name": "Matthew Berman",
+      "handle": "matthew_berman",
+      "channel_path": "/@matthew_berman",
+      "url": "https://www.youtube.com/@matthew_berman",
+      "subscribers": "627K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Andrei Jikh",
+      "handle": "AndreiJikh",
+      "channel_path": "/@AndreiJikh",
+      "url": "https://www.youtube.com/@AndreiJikh",
+      "subscribers": "3.34M",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Diary Of A CEO",
+      "handle": "TheDiaryOfACEO",
+      "channel_path": "/@TheDiaryOfACEO",
+      "url": "https://www.youtube.com/@TheDiaryOfACEO",
+      "subscribers": "18.8M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Ryan Doser",
+      "handle": "RyanDoserAI",
+      "channel_path": "/@RyanDoserAI",
+      "url": "https://www.youtube.com/@RyanDoserAI",
+      "subscribers": "39.2K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Multiplai AI",
+      "handle": "Multiplai_AI",
+      "channel_path": "/@Multiplai_AI",
+      "url": "https://www.youtube.com/@Multiplai_AI",
+      "subscribers": "3.18K",
+      "notification": "all"
+    },
+    {
+      "name": "Tina Huang",
+      "handle": "TinaHuang1",
+      "channel_path": "/@TinaHuang1",
+      "url": "https://www.youtube.com/@TinaHuang1",
+      "subscribers": "1.27M",
+      "notification": "personalized"
+    },
+    {
+      "name": "How I AI",
+      "handle": "howiaipodcast",
+      "channel_path": "/@howiaipodcast",
+      "url": "https://www.youtube.com/@howiaipodcast",
+      "subscribers": "106K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Principles by Ray Dalio",
+      "handle": "principlesbyraydalio",
+      "channel_path": "/@principlesbyraydalio",
+      "url": "https://www.youtube.com/@principlesbyraydalio",
+      "subscribers": "3.17M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Cleo Abram",
+      "handle": "CleoAbram",
+      "channel_path": "/@CleoAbram",
+      "url": "https://www.youtube.com/@CleoAbram",
+      "subscribers": "8.51M",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Viable Edge",
+      "handle": "ViableEdge",
+      "channel_path": "/@ViableEdge",
+      "url": "https://www.youtube.com/@ViableEdge",
+      "subscribers": "2.33K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Allie K Miller",
+      "handle": "AKMofficial",
+      "channel_path": "/@AKMofficial",
+      "url": "https://www.youtube.com/@AKMofficial",
+      "subscribers": "54.9K",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI-Driven Marketer",
+      "handle": "AIDrivenMarketer",
+      "channel_path": "/@AIDrivenMarketer",
+      "url": "https://www.youtube.com/@AIDrivenMarketer",
+      "subscribers": "2.26K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Riley Brown",
+      "handle": "rileybrownai",
+      "channel_path": "/@rileybrownai",
+      "url": "https://www.youtube.com/@rileybrownai",
+      "subscribers": "269K",
+      "notification": "personalized"
+    },
+    {
+      "name": "David Ondrej",
+      "handle": "DavidOndrej",
+      "channel_path": "/@DavidOndrej",
+      "url": "https://www.youtube.com/@DavidOndrej",
+      "subscribers": "407K",
+      "notification": "personalized"
+    },
+    {
+      "name": "TBPN",
+      "handle": "TBPNLive",
+      "channel_path": "/@TBPNLive",
+      "url": "https://www.youtube.com/@TBPNLive",
+      "subscribers": "135K",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI News & Strategy Daily | Nate B Jones",
+      "handle": "NateBJones",
+      "channel_path": "/@NateBJones",
+      "url": "https://www.youtube.com/@NateBJones",
+      "subscribers": "310K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google DeepMind",
+      "handle": "googledeepmind",
+      "channel_path": "/@googledeepmind",
+      "url": "https://www.youtube.com/@googledeepmind",
+      "subscribers": "911K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Matt Wolfe",
+      "handle": "mreflow",
+      "channel_path": "/@mreflow",
+      "url": "https://www.youtube.com/@mreflow",
+      "subscribers": "990K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The AI Automators",
+      "handle": "TheAIAutomators",
+      "channel_path": "/@TheAIAutomators",
+      "url": "https://www.youtube.com/@TheAIAutomators",
+      "subscribers": "63.6K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Verge",
+      "handle": "TheVerge",
+      "channel_path": "/@TheVerge",
+      "url": "https://www.youtube.com/@TheVerge",
+      "subscribers": "3.52M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Simon Scrapes",
+      "handle": "simonscrapes",
+      "channel_path": "/@simonscrapes",
+      "url": "https://www.youtube.com/@simonscrapes",
+      "subscribers": "94.5K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google",
+      "handle": "Google",
+      "channel_path": "/@Google",
+      "url": "https://www.youtube.com/@Google",
+      "subscribers": "14.5M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Greg Isenberg",
+      "handle": "GregIsenberg",
+      "channel_path": "/@GregIsenberg",
+      "url": "https://www.youtube.com/@GregIsenberg",
+      "subscribers": "685K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Leveling Up with Eric Siu",
+      "handle": "LevelingUpOfficial",
+      "channel_path": "/@LevelingUpOfficial",
+      "url": "https://www.youtube.com/@LevelingUpOfficial",
+      "subscribers": "200K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Excess Returns",
+      "handle": "ExcessReturns",
+      "channel_path": "/@ExcessReturns",
+      "url": "https://www.youtube.com/@ExcessReturns",
+      "subscribers": "74.2K",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI Engineer",
+      "handle": "aiDotEngineer",
+      "channel_path": "/@aiDotEngineer",
+      "url": "https://www.youtube.com/@aiDotEngineer",
+      "subscribers": "609K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Marketing School - Daily Marketing Tips",
+      "handle": "marketingschoolpod",
+      "channel_path": "/@marketingschoolpod",
+      "url": "https://www.youtube.com/@marketingschoolpod",
+      "subscribers": "15.3K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Matt Pocock",
+      "handle": "mattpocockuk",
+      "channel_path": "/@mattpocockuk",
+      "url": "https://www.youtube.com/@mattpocockuk",
+      "subscribers": "331K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Cole Medin",
+      "handle": "ColeMedin",
+      "channel_path": "/@ColeMedin",
+      "url": "https://www.youtube.com/@ColeMedin",
+      "subscribers": "220K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Orbit Media Studios",
+      "handle": "Orbitmedia",
+      "channel_path": "/@Orbitmedia",
+      "url": "https://www.youtube.com/@Orbitmedia",
+      "subscribers": "30.3K",
+      "notification": "personalized"
+    },
+    {
+      "name": "OpenAI",
+      "handle": "OpenAI",
+      "channel_path": "/@OpenAI",
+      "url": "https://www.youtube.com/@OpenAI",
+      "subscribers": "2M",
+      "notification": "personalized"
+    },
+    {
+      "name": "GaryVee",
+      "handle": "garyvee",
+      "channel_path": "/@garyvee",
+      "url": "https://www.youtube.com/@garyvee",
+      "subscribers": "4.84M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Workspace",
+      "handle": "googleworkspace",
+      "channel_path": "/@googleworkspace",
+      "url": "https://www.youtube.com/@googleworkspace",
+      "subscribers": "1.09M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Peter H. Diamandis",
+      "handle": "peterdiamandis",
+      "channel_path": "/@peterdiamandis",
+      "url": "https://www.youtube.com/@peterdiamandis",
+      "subscribers": "518K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Glean",
+      "handle": "gleanwork",
+      "channel_path": "/@gleanwork",
+      "url": "https://www.youtube.com/@gleanwork",
+      "subscribers": "7.94K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Earley Information Science",
+      "handle": "EarleyInformationScience1",
+      "channel_path": "/@EarleyInformationScience1",
+      "url": "https://www.youtube.com/@EarleyInformationScience1",
+      "subscribers": "442",
+      "notification": "personalized"
+    },
+    {
+      "name": "Every",
+      "handle": "EveryInc",
+      "channel_path": "/@EveryInc",
+      "url": "https://www.youtube.com/@EveryInc",
+      "subscribers": "46.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Vox",
+      "handle": "Vox",
+      "channel_path": "/@Vox",
+      "url": "https://www.youtube.com/@Vox",
+      "subscribers": "12.7M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Dylan Curious",
+      "handle": "dylan_curious",
+      "channel_path": "/@dylan_curious",
+      "url": "https://www.youtube.com/@dylan_curious",
+      "subscribers": "33K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Peter Yang",
+      "handle": "PeterYangYT",
+      "channel_path": "/@PeterYangYT",
+      "url": "https://www.youtube.com/@PeterYangYT",
+      "subscribers": "103K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The MAD Podcast with Matt Turck",
+      "handle": "DataDrivenNYC",
+      "channel_path": "/@DataDrivenNYC",
+      "url": "https://www.youtube.com/@DataDrivenNYC",
+      "subscribers": "30.2K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Ads",
+      "handle": "GoogleAds",
+      "channel_path": "/@GoogleAds",
+      "url": "https://www.youtube.com/@GoogleAds",
+      "subscribers": "905K",
+      "notification": "personalized"
+    },
+    {
+      "name": "CALLEkocht - Grandma's Recipes",
+      "handle": "CALLEkocht",
+      "channel_path": "/@CALLEkocht",
+      "url": "https://www.youtube.com/@CALLEkocht",
+      "subscribers": "624K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Jamie Oliver",
+      "handle": "JamieOliver",
+      "channel_path": "/@JamieOliver",
+      "url": "https://www.youtube.com/@JamieOliver",
+      "subscribers": "6.21M",
+      "notification": "all"
+    },
+    {
+      "name": "Practical AI",
+      "handle": "practicalai_show",
+      "channel_path": "/@practicalai_show",
+      "url": "https://www.youtube.com/@practicalai_show",
+      "subscribers": "1.09K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Michael Asshauer • B2B Growth Marketing",
+      "handle": "michael.asshauer",
+      "channel_path": "/@michael.asshauer",
+      "url": "https://www.youtube.com/@michael.asshauer",
+      "subscribers": "4.43K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Content Marketing Institute",
+      "handle": "CMIContent",
+      "channel_path": "/@CMIContent",
+      "url": "https://www.youtube.com/@CMIContent",
+      "subscribers": "36.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "My First Million",
+      "handle": "MyFirstMillionPod",
+      "channel_path": "/@MyFirstMillionPod",
+      "url": "https://www.youtube.com/@MyFirstMillionPod",
+      "subscribers": "936K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Prof G Pod – Scott Galloway",
+      "handle": "TheProfGPod",
+      "channel_path": "/@TheProfGPod",
+      "url": "https://www.youtube.com/@TheProfGPod",
+      "subscribers": "807K",
+      "notification": "personalized"
+    },
+    {
+      "name": "David Perell",
+      "handle": "DavidPerellChannel",
+      "channel_path": "/@DavidPerellChannel",
+      "url": "https://www.youtube.com/@DavidPerellChannel",
+      "subscribers": "285K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Sequoia Capital",
+      "handle": "sequoiacapital",
+      "channel_path": "/@sequoiacapital",
+      "url": "https://www.youtube.com/@sequoiacapital",
+      "subscribers": "234K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Lisa Crosbie",
+      "handle": "LisaCrosbie",
+      "channel_path": "/@LisaCrosbie",
+      "url": "https://www.youtube.com/@LisaCrosbie",
+      "subscribers": "115K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Tech, KI & Schmetterlinge 🦋",
+      "handle": "Techundschmetterlinge",
+      "channel_path": "/@Techundschmetterlinge",
+      "url": "https://www.youtube.com/@Techundschmetterlinge",
+      "subscribers": "1.3K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Christopher Penn",
+      "handle": "cspenn",
+      "channel_path": "/@cspenn",
+      "url": "https://www.youtube.com/@cspenn",
+      "subscribers": "5.37K",
+      "notification": "personalized"
+    },
+    {
+      "name": "CiCi Li, Asian Home Cooking",
+      "handle": "CiCiLi",
+      "channel_path": "/@CiCiLi",
+      "url": "https://www.youtube.com/@CiCiLi",
+      "subscribers": "321K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Y Combinator",
+      "handle": "ycombinator",
+      "channel_path": "/@ycombinator",
+      "url": "https://www.youtube.com/@ycombinator",
+      "subscribers": "2.33M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Jack Vs. AI",
+      "handle": "JackVsAI",
+      "channel_path": "/@JackVsAI",
+      "url": "https://www.youtube.com/@JackVsAI",
+      "subscribers": "76K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Dwarkesh Patel",
+      "handle": "DwarkeshPatel",
+      "channel_path": "/@DwarkeshPatel",
+      "url": "https://www.youtube.com/@DwarkeshPatel",
+      "subscribers": "1.38M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Stacked Podcast",
+      "handle": "stackedpod",
+      "channel_path": "/@stackedpod",
+      "url": "https://www.youtube.com/@stackedpod",
+      "subscribers": "6.6K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Creator Magic",
+      "handle": "CreatorMagicAI",
+      "channel_path": "/@CreatorMagicAI",
+      "url": "https://www.youtube.com/@CreatorMagicAI",
+      "subscribers": "205K",
+      "notification": "personalized"
+    },
+    {
+      "name": "n8n",
+      "handle": "n8n-io",
+      "channel_path": "/@n8n-io",
+      "url": "https://www.youtube.com/@n8n-io",
+      "subscribers": "244K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Julia McCoy",
+      "handle": "JuliaMcCoy",
+      "channel_path": "/@JuliaMcCoy",
+      "url": "https://www.youtube.com/@JuliaMcCoy",
+      "subscribers": "305K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Small Business",
+      "handle": "GoogleSmallBiz",
+      "channel_path": "/@GoogleSmallBiz",
+      "url": "https://www.youtube.com/@GoogleSmallBiz",
+      "subscribers": "445K",
+      "notification": "personalized"
+    },
+    {
+      "name": "All About AI",
+      "handle": "AllAboutAI",
+      "channel_path": "/@AllAboutAI",
+      "url": "https://www.youtube.com/@AllAboutAI",
+      "subscribers": "226K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Talks at Google",
+      "handle": "talksatgoogle",
+      "channel_path": "/@talksatgoogle",
+      "url": "https://www.youtube.com/@talksatgoogle",
+      "subscribers": "2.4M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Brendon Burchard",
+      "handle": "BrendonBurchard",
+      "channel_path": "/@BrendonBurchard",
+      "url": "https://www.youtube.com/@BrendonBurchard",
+      "subscribers": "1.01M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Alex The Analyst",
+      "handle": "AlexTheAnalyst",
+      "channel_path": "/@AlexTheAnalyst",
+      "url": "https://www.youtube.com/@AlexTheAnalyst",
+      "subscribers": "1.41M",
+      "notification": "personalized"
+    },
+    {
+      "name": "neowake",
+      "handle": "neowakesound",
+      "channel_path": "/@neowakesound",
+      "url": "https://www.youtube.com/@neowakesound",
+      "subscribers": "959K",
+      "notification": "personalized"
+    },
+    {
+      "name": "LarsLP",
+      "handle": "LarsLP",
+      "channel_path": "/@LarsLP",
+      "url": "https://www.youtube.com/@LarsLP",
+      "subscribers": "658K",
+      "notification": "personalized"
+    },
+    {
+      "name": "freeCodeCamp.org",
+      "handle": "freecodecamp",
+      "channel_path": "/@freecodecamp",
+      "url": "https://www.youtube.com/@freecodecamp",
+      "subscribers": "11.8M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Statrys",
+      "handle": "Statrys",
+      "channel_path": "/@Statrys",
+      "url": "https://www.youtube.com/@Statrys",
+      "subscribers": "411K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Two Minute Papers",
+      "handle": "TwoMinutePapers",
+      "channel_path": "/@TwoMinutePapers",
+      "url": "https://www.youtube.com/@TwoMinutePapers",
+      "subscribers": "1.83M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Ben AI",
+      "handle": "BenAI92",
+      "channel_path": "/@BenAI92",
+      "url": "https://www.youtube.com/@BenAI92",
+      "subscribers": "216K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Cognitive Revolution \"How AI Changes Everything\"",
+      "handle": "CognitiveRevolutionPodcast",
+      "channel_path": "/@CognitiveRevolutionPodcast",
+      "url": "https://www.youtube.com/@CognitiveRevolutionPodcast",
+      "subscribers": "44.3K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Torben Platzer",
+      "handle": "TorbenPlatzer",
+      "channel_path": "/@TorbenPlatzer",
+      "url": "https://www.youtube.com/@TorbenPlatzer",
+      "subscribers": "588K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Neulandpro",
+      "handle": "neulandpro",
+      "channel_path": "/@neulandpro",
+      "url": "https://www.youtube.com/@neulandpro",
+      "subscribers": "37.6K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Terra X Lesch & Co",
+      "handle": "TerraXLeschundCo",
+      "channel_path": "/@TerraXLeschundCo",
+      "url": "https://www.youtube.com/@TerraXLeschundCo",
+      "subscribers": "1.25M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Stratechery",
+      "handle": "Stratechery",
+      "channel_path": "/@Stratechery",
+      "url": "https://www.youtube.com/@Stratechery",
+      "subscribers": "16.2K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Zapier",
+      "handle": "Zapier",
+      "channel_path": "/@Zapier",
+      "url": "https://www.youtube.com/@Zapier",
+      "subscribers": "77.6K",
+      "notification": "personalized"
+    },
+    {
+      "name": "a16z",
+      "handle": "a16z",
+      "channel_path": "/@a16z",
+      "url": "https://www.youtube.com/@a16z",
+      "subscribers": "284K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Alex Finn",
+      "handle": "AlexFinnOfficial",
+      "channel_path": "/@AlexFinnOfficial",
+      "url": "https://www.youtube.com/@AlexFinnOfficial",
+      "subscribers": "225K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Hannah Fry",
+      "handle": "fryrsquared",
+      "channel_path": "/@fryrsquared",
+      "url": "https://www.youtube.com/@fryrsquared",
+      "subscribers": "1.3M",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI Jason",
+      "handle": "AIJasonZ",
+      "channel_path": "/@AIJasonZ",
+      "url": "https://www.youtube.com/@AIJasonZ",
+      "subscribers": "229K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Vanishing Gradients",
+      "handle": "vanishinggradients",
+      "channel_path": "/@vanishinggradients",
+      "url": "https://www.youtube.com/@vanishinggradients",
+      "subscribers": "5.68K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Steve Mould",
+      "handle": "SteveMould",
+      "channel_path": "/@SteveMould",
+      "url": "https://www.youtube.com/@SteveMould",
+      "subscribers": "3.6M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Erik Frits",
+      "handle": "ErikFrits",
+      "channel_path": "/@ErikFrits",
+      "url": "https://www.youtube.com/@ErikFrits",
+      "subscribers": "22.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "NetworkChuck",
+      "handle": "NetworkChuck",
+      "channel_path": "/@NetworkChuck",
+      "url": "https://www.youtube.com/@NetworkChuck",
+      "subscribers": "5.35M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Curious Refuge",
+      "handle": "curiousrefuge",
+      "channel_path": "/@curiousrefuge",
+      "url": "https://www.youtube.com/@curiousrefuge",
+      "subscribers": "270K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Siraj Raval",
+      "handle": "SirajRaval",
+      "channel_path": "/@SirajRaval",
+      "url": "https://www.youtube.com/@SirajRaval",
+      "subscribers": "770K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Joma Tech",
+      "handle": "JomaTech",
+      "channel_path": "/@JomaTech",
+      "url": "https://www.youtube.com/@JomaTech",
+      "subscribers": "2.35M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Wes and Dylan",
+      "handle": "Wes-Dylan",
+      "channel_path": "/@Wes-Dylan",
+      "url": "https://www.youtube.com/@Wes-Dylan",
+      "subscribers": "10.6K",
+      "notification": "personalized"
+    },
+    {
+      "name": "BOI (Board of Innovation)",
+      "handle": "Boardofinnovation",
+      "channel_path": "/@Boardofinnovation",
+      "url": "https://www.youtube.com/@Boardofinnovation",
+      "subscribers": "7.66K",
+      "notification": "personalized"
+    },
+    {
+      "name": "All-In Podcast",
+      "handle": "allin",
+      "channel_path": "/@allin",
+      "url": "https://www.youtube.com/@allin",
+      "subscribers": "1.11M",
+      "notification": "personalized"
+    },
+    {
+      "name": "FRMWRKD-EXPLAINED",
+      "handle": "FRMWRKD-EXPLAINED",
+      "channel_path": "/@FRMWRKD-EXPLAINED",
+      "url": "https://www.youtube.com/@FRMWRKD-EXPLAINED",
+      "subscribers": "10.7K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Leckerschmecker",
+      "handle": "Leckerschmecker",
+      "channel_path": "/@Leckerschmecker",
+      "url": "https://www.youtube.com/@Leckerschmecker",
+      "subscribers": "710K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Search Central",
+      "handle": "GoogleSearchCentral",
+      "channel_path": "/@GoogleSearchCentral",
+      "url": "https://www.youtube.com/@GoogleSearchCentral",
+      "subscribers": "798K",
+      "notification": "personalized"
+    },
+    {
+      "name": "SISTRIX (German)",
+      "handle": "sistrix",
+      "channel_path": "/@sistrix",
+      "url": "https://www.youtube.com/@sistrix",
+      "subscribers": "5.11K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Latent Space",
+      "handle": "LatentSpacePod",
+      "channel_path": "/@LatentSpacePod",
+      "url": "https://www.youtube.com/@LatentSpacePod",
+      "subscribers": "89.6K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Alex Kantrowitz",
+      "handle": "Alex.kantrowitz",
+      "channel_path": "/@Alex.kantrowitz",
+      "url": "https://www.youtube.com/@Alex.kantrowitz",
+      "subscribers": "63.5K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Everyday AI",
+      "handle": "EverydayAI_",
+      "channel_path": "/@EverydayAI_",
+      "url": "https://www.youtube.com/@EverydayAI_",
+      "subscribers": "25.5K",
+      "notification": "all"
+    },
+    {
+      "name": "Lenny's Podcast",
+      "handle": "LennysPodcast",
+      "channel_path": "/@LennysPodcast",
+      "url": "https://www.youtube.com/@LennysPodcast",
+      "subscribers": "623K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Edwina - Voice of AI",
+      "handle": "edwinavoiceofai",
+      "channel_path": "/@edwinavoiceofai",
+      "url": "https://www.youtube.com/@edwinavoiceofai",
+      "subscribers": "61.5K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Wes Roth",
+      "handle": "WesRoth",
+      "channel_path": "/@WesRoth",
+      "url": "https://www.youtube.com/@WesRoth",
+      "subscribers": "324K",
+      "notification": "all"
+    },
+    {
+      "name": "Nate Herk | AI Automation",
+      "handle": "nateherk",
+      "channel_path": "/@nateherk",
+      "url": "https://www.youtube.com/@nateherk",
+      "subscribers": "901K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Austin Marchese",
+      "handle": "austin.marchese",
+      "channel_path": "/@austin.marchese",
+      "url": "https://www.youtube.com/@austin.marchese",
+      "subscribers": "81.3K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Made With Lau",
+      "handle": "MadeWithLau",
+      "channel_path": "/@MadeWithLau",
+      "url": "https://www.youtube.com/@MadeWithLau",
+      "subscribers": "1.81M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Silicon Valley Girl",
+      "handle": "SiliconValleyGirl",
+      "channel_path": "/@SiliconValleyGirl",
+      "url": "https://www.youtube.com/@SiliconValleyGirl",
+      "subscribers": "1.56M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Marketing Against the Grain",
+      "handle": "MATGpod",
+      "channel_path": "/@MATGpod",
+      "url": "https://www.youtube.com/@MATGpod",
+      "subscribers": "96.7K",
+      "notification": "all"
+    },
+    {
+      "name": "Nick Saraev",
+      "handle": "nicksaraev",
+      "channel_path": "/@nicksaraev",
+      "url": "https://www.youtube.com/@nicksaraev",
+      "subscribers": "489K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Asian Boss",
+      "handle": "AsianBoss",
+      "channel_path": "/@AsianBoss",
+      "url": "https://www.youtube.com/@AsianBoss",
+      "subscribers": "4.14M",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Calum Johnson Show",
+      "handle": "thecalumjohnsonshow",
+      "channel_path": "/@thecalumjohnsonshow",
+      "url": "https://www.youtube.com/@thecalumjohnsonshow",
+      "subscribers": "296K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Veritasium",
+      "handle": "veritasium",
+      "channel_path": "/@veritasium",
+      "url": "https://www.youtube.com/@veritasium",
+      "subscribers": "21.1M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Writer",
+      "handle": "getwriter",
+      "channel_path": "/@getwriter",
+      "url": "https://www.youtube.com/@getwriter",
+      "subscribers": "1.42K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Jack Roberts",
+      "handle": "Itssssss_Jack",
+      "channel_path": "/@Itssssss_Jack",
+      "url": "https://www.youtube.com/@Itssssss_Jack",
+      "subscribers": "249K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Anthropic",
+      "handle": "anthropic-ai",
+      "channel_path": "/@anthropic-ai",
+      "url": "https://www.youtube.com/@anthropic-ai",
+      "subscribers": "756K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Fullfunnel io",
+      "handle": "Fullfunnelio",
+      "channel_path": "/@Fullfunnelio",
+      "url": "https://www.youtube.com/@Fullfunnelio",
+      "subscribers": "2.18K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Ras Mic",
+      "handle": "rasmic",
+      "channel_path": "/@rasmic",
+      "url": "https://www.youtube.com/@rasmic",
+      "subscribers": "97.9K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Devin Kearns | CustomAI Studio",
+      "handle": "customaistudio",
+      "channel_path": "/@customaistudio",
+      "url": "https://www.youtube.com/@customaistudio",
+      "subscribers": "16.7K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Firecrawl",
+      "handle": "Firecrawl_dev",
+      "channel_path": "/@Firecrawl_dev",
+      "url": "https://www.youtube.com/@Firecrawl_dev",
+      "subscribers": "44.8K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Welch Labs",
+      "handle": "WelchLabs",
+      "channel_path": "/@WelchLabs",
+      "url": "https://www.youtube.com/@WelchLabs",
+      "subscribers": "893K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Bg2 Pod",
+      "handle": "Bg2Pod",
+      "channel_path": "/@Bg2Pod",
+      "url": "https://www.youtube.com/@Bg2Pod",
+      "subscribers": "103K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Primer",
+      "handle": "PrimerBlobs",
+      "channel_path": "/@PrimerBlobs",
+      "url": "https://www.youtube.com/@PrimerBlobs",
+      "subscribers": "1.94M",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI Andy",
+      "handle": "TheAIAndy",
+      "channel_path": "/@TheAIAndy",
+      "url": "https://www.youtube.com/@TheAIAndy",
+      "subscribers": "215K",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI and Games",
+      "handle": "AIandGames",
+      "channel_path": "/@AIandGames",
+      "url": "https://www.youtube.com/@AIandGames",
+      "subscribers": "232K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Ken Jee",
+      "handle": "KenJee_ds",
+      "channel_path": "/@KenJee_ds",
+      "url": "https://www.youtube.com/@KenJee_ds",
+      "subscribers": "279K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Liam Ottley",
+      "handle": "LiamOttley",
+      "channel_path": "/@LiamOttley",
+      "url": "https://www.youtube.com/@LiamOttley",
+      "subscribers": "831K",
+      "notification": "personalized"
+    },
+    {
+      "name": "MattVidPro",
+      "handle": "MattVidPro",
+      "channel_path": "/@MattVidPro",
+      "url": "https://www.youtube.com/@MattVidPro",
+      "subscribers": "300K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Corey Schafer",
+      "handle": "coreyms",
+      "channel_path": "/@coreyms",
+      "url": "https://www.youtube.com/@coreyms",
+      "subscribers": "1.55M",
+      "notification": "personalized"
+    },
+    {
+      "name": "CS Dojo",
+      "handle": "CSDojo",
+      "channel_path": "/@CSDojo",
+      "url": "https://www.youtube.com/@CSDojo",
+      "subscribers": "1.95M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Prof. Ryan Ahmed",
+      "handle": "professor-ryanahmed",
+      "channel_path": "/@professor-ryanahmed",
+      "url": "https://www.youtube.com/@professor-ryanahmed",
+      "subscribers": "267K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Code With Antonio",
+      "handle": "codewithantonio",
+      "channel_path": "/@codewithantonio",
+      "url": "https://www.youtube.com/@codewithantonio",
+      "subscribers": "419K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Pliny the Prompter",
+      "handle": "elder_plinius",
+      "channel_path": "/@elder_plinius",
+      "url": "https://www.youtube.com/@elder_plinius",
+      "subscribers": "5.56K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Ben Tossell (Ben's Bites)",
+      "handle": "bentossell694",
+      "channel_path": "/@bentossell694",
+      "url": "https://www.youtube.com/@bentossell694",
+      "subscribers": "2.48K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Logan Kilpatrick",
+      "handle": "LoganKilpatrickYT",
+      "channel_path": "/@LoganKilpatrickYT",
+      "url": "https://www.youtube.com/@LoganKilpatrickYT",
+      "subscribers": "10.8K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Mr. Paid Social",
+      "handle": "MrPaidSocial",
+      "channel_path": "/@MrPaidSocial",
+      "url": "https://www.youtube.com/@MrPaidSocial",
+      "subscribers": "20.2K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Jordan On tech",
+      "handle": "jordanontech",
+      "channel_path": "/@jordanontech",
+      "url": "https://www.youtube.com/@jordanontech",
+      "subscribers": "19.8K",
+      "notification": "personalized"
+    },
+    {
+      "name": "SmarterEveryDay",
+      "handle": "smartereveryday",
+      "channel_path": "/@smartereveryday",
+      "url": "https://www.youtube.com/@smartereveryday",
+      "subscribers": "11.9M",
+      "notification": "personalized"
+    },
+    {
+      "name": "Microsoft Copilot Studio",
+      "handle": "MicrosoftCopilotStudio",
+      "channel_path": "/@MicrosoftCopilotStudio",
+      "url": "https://www.youtube.com/@MicrosoftCopilotStudio",
+      "subscribers": "19.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Next Wave - AI and the Future of Technology",
+      "handle": "TheNextWavePod",
+      "channel_path": "/@TheNextWavePod",
+      "url": "https://www.youtube.com/@TheNextWavePod",
+      "subscribers": "37.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "SullyOmar",
+      "handle": "sullyomarr",
+      "channel_path": "/@sullyomarr",
+      "url": "https://www.youtube.com/@sullyomarr",
+      "subscribers": "2.81K",
+      "notification": "personalized"
+    },
+    {
+      "name": "3Blue1Brown",
+      "handle": "3blue1brown",
+      "channel_path": "/@3blue1brown",
+      "url": "https://www.youtube.com/@3blue1brown",
+      "subscribers": "8.52M",
+      "notification": "personalized"
+    },
+    {
+      "name": "AI Explained",
+      "handle": "aiexplained-official",
+      "channel_path": "/@aiexplained-official",
+      "url": "https://www.youtube.com/@aiexplained-official",
+      "subscribers": "439K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Upstream with Erik Torenberg",
+      "handle": "UpstreamwithErikTorenberg",
+      "channel_path": "/@UpstreamwithErikTorenberg",
+      "url": "https://www.youtube.com/@UpstreamwithErikTorenberg",
+      "subscribers": "17.7K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Landmark Labs",
+      "handle": "landmarklabs",
+      "channel_path": "/@landmarklabs",
+      "url": "https://www.youtube.com/@landmarklabs",
+      "subscribers": "1.65K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The AI Ready Show",
+      "handle": "theaireadyshow",
+      "channel_path": "/@theaireadyshow",
+      "url": "https://www.youtube.com/@theaireadyshow",
+      "subscribers": "1.72K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Der Dunkle Parabelritter",
+      "handle": "Parabelritter",
+      "channel_path": "/@Parabelritter",
+      "url": "https://www.youtube.com/@Parabelritter",
+      "subscribers": "712K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Stephen G. Pope",
+      "handle": "StephenGPope",
+      "channel_path": "/@StephenGPope",
+      "url": "https://www.youtube.com/@StephenGPope",
+      "subscribers": "89.5K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Pam Didner",
+      "handle": "PamDidner",
+      "channel_path": "/@PamDidner",
+      "url": "https://www.youtube.com/@PamDidner",
+      "subscribers": "1.88K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Eric Nowoslawski",
+      "handle": "ericnowoslawski",
+      "channel_path": "/@ericnowoslawski",
+      "url": "https://www.youtube.com/@ericnowoslawski",
+      "subscribers": "15.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "JustInBasil",
+      "handle": "JustInBasil",
+      "channel_path": "/@JustInBasil",
+      "url": "https://www.youtube.com/@JustInBasil",
+      "subscribers": "4.92K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Mark de Grasse",
+      "handle": "MarkdeGrasse",
+      "channel_path": "/@MarkdeGrasse",
+      "url": "https://www.youtube.com/@MarkdeGrasse",
+      "subscribers": "513",
+      "notification": "personalized"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "handle": "AndrejKarpathy",
+      "channel_path": "/@AndrejKarpathy",
+      "url": "https://www.youtube.com/@AndrejKarpathy",
+      "subscribers": "1.62M",
+      "notification": "all"
+    },
+    {
+      "name": "Pokémon Trading Card Game Live - Topic",
+      "handle": null,
+      "channel_path": "/channel/UCAZHikWjkLI8PdqLjIAQkkg",
+      "url": "https://www.youtube.com/channel/UCAZHikWjkLI8PdqLjIAQkkg",
+      "subscribers": "",
+      "notification": "personalized"
+    },
+    {
+      "name": "DarkIntegralGaming",
+      "handle": "darkintegralgaming",
+      "channel_path": "/@darkintegralgaming",
+      "url": "https://www.youtube.com/@darkintegralgaming",
+      "subscribers": "71.1K",
+      "notification": "personalized"
+    },
+    {
+      "name": "The Morpheus Tutorials",
+      "handle": "TheMorpheusTutorials",
+      "channel_path": "/@TheMorpheusTutorials",
+      "url": "https://www.youtube.com/@TheMorpheusTutorials",
+      "subscribers": "274K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Tony J. Hughes (Tony)",
+      "handle": "TonyHughesAustralia",
+      "channel_path": "/@TonyHughesAustralia",
+      "url": "https://www.youtube.com/@TonyHughesAustralia",
+      "subscribers": "2.37K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Cuisine Marocaine",
+      "handle": "CuisineMarocainefatima",
+      "channel_path": "/@CuisineMarocainefatima",
+      "url": "https://www.youtube.com/@CuisineMarocainefatima",
+      "subscribers": "1.82M",
+      "notification": "personalized"
+    },
+    {
+      "name": "chiefmartec",
+      "handle": "chiefmartec2922",
+      "channel_path": "/@chiefmartec2922",
+      "url": "https://www.youtube.com/@chiefmartec2922",
+      "subscribers": "559",
+      "notification": "personalized"
+    },
+    {
+      "name": "Steven Van Belleghem",
+      "handle": "StevenVanBelleghem",
+      "channel_path": "/@StevenVanBelleghem",
+      "url": "https://www.youtube.com/@StevenVanBelleghem",
+      "subscribers": "25.4K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Similarweb",
+      "handle": "Similarweb",
+      "channel_path": "/@Similarweb",
+      "url": "https://www.youtube.com/@Similarweb",
+      "subscribers": "9.37K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Demand Gen Report",
+      "handle": "Demandgenreport",
+      "channel_path": "/@Demandgenreport",
+      "url": "https://www.youtube.com/@Demandgenreport",
+      "subscribers": "448",
+      "notification": "personalized"
+    },
+    {
+      "name": "WFA",
+      "handle": "WFAMarketers",
+      "channel_path": "/@WFAMarketers",
+      "url": "https://www.youtube.com/@WFAMarketers",
+      "subscribers": "3.16K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Howard Roberts",
+      "handle": "howardroberts2464",
+      "channel_path": "/@howardroberts2464",
+      "url": "https://www.youtube.com/@howardroberts2464",
+      "subscribers": "4",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Maps",
+      "handle": "googlemaps",
+      "channel_path": "/@googlemaps",
+      "url": "https://www.youtube.com/@googlemaps",
+      "subscribers": "938K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Partners",
+      "handle": "GooglePartners",
+      "channel_path": "/@GooglePartners",
+      "url": "https://www.youtube.com/@GooglePartners",
+      "subscribers": "58K",
+      "notification": "personalized"
+    },
+    {
+      "name": "It's Ben Malol",
+      "handle": "ItsBenMalol",
+      "channel_path": "/@ItsBenMalol",
+      "url": "https://www.youtube.com/@ItsBenMalol",
+      "subscribers": "19.3K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Google Analytics",
+      "handle": "GoogleAnalytics",
+      "channel_path": "/@GoogleAnalytics",
+      "url": "https://www.youtube.com/@GoogleAnalytics",
+      "subscribers": "520K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Kissmetrics",
+      "handle": "kissmetrics",
+      "channel_path": "/@kissmetrics",
+      "url": "https://www.youtube.com/@kissmetrics",
+      "subscribers": "9.52K",
+      "notification": "personalized"
+    },
+    {
+      "name": "Eric Enge",
+      "handle": "stonetemplecons",
+      "channel_path": "/@stonetemplecons",
+      "url": "https://www.youtube.com/@stonetemplecons",
+      "subscribers": "4.66K",
+      "notification": "personalized"
+    }
+  ]
+}
+

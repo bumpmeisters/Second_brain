@@ -1,0 +1,15 @@
+{
+  "id": "W075",
+  "url": "https://www.edpb.europa.eu/system/files/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+  "research_briefs": [
+    "f05-dark-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:48.843336+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w075.pdf",
+  "final_url": "https://www.edpb.europa.eu/system/files/documents/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+  "bytes": 409348,
+  "sha256": "dbc1d37783e35ae8668925f92a590ae282eec24c98381a5a8f91b5c2048b5b03"
+}

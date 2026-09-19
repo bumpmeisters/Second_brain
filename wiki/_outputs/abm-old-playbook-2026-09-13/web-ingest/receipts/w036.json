@@ -1,0 +1,17 @@
+{
+  "id": "W036",
+  "url": "https://journals.sagepub.com/doi/10.1177/0956797611400616",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:03.534478+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w036.json",
+  "title": "The Omission Strategy - Peter DeScioli, John Christner, Robert Kurzban, 2011 ",
+  "final_url": "https://journals.sagepub.com/doi/10.1177/0956797611400616",
+  "characters": 31853,
+  "sha256": "c97318cfd455614a8469d6bb5d182dafded80062428fdffea5db6d6936a1c1cd",
+  "http_status": 200
+}

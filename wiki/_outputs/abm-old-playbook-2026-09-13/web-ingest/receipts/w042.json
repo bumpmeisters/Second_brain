@@ -1,0 +1,15 @@
+{
+  "id": "W042",
+  "url": "https://learn.seismic.com/rs/217-LXS-149/images/2023_Seismic_Content_Report-Spring-Release-Personalization-Payoff-FINAL.pdf",
+  "research_briefs": [
+    "s02-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:40.997107+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w042.pdf",
+  "final_url": "https://learn.seismic.com/rs/217-LXS-149/images/2023_Seismic_Content_Report-Spring-Release-Personalization-Payoff-FINAL.pdf",
+  "bytes": 4556691,
+  "sha256": "29bdcdcd95b35abb1690fad46d8ccd717576eb62aabfe18237c187e480f57d31"
+}

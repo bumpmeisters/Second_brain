@@ -1,0 +1,15 @@
+{
+  "id": "W031",
+  "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/7215_A_General_Model_for_Understanding.pdf",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:54:37.221342+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w031.pdf",
+  "final_url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/7215_A_General_Model_for_Understanding.pdf",
+  "bytes": 557699,
+  "sha256": "07f0ecfef7f8457da3e6449661182eb3ce36b15afe0437488c41cc926982ee3a"
+}

@@ -1,0 +1,51 @@
+{
+  "contract_id": "g3e2r-live-invariant-manifest/v1",
+  "columns": [
+    "invariant_id",
+    "state_scope",
+    "subject_type",
+    "repository_path",
+    "expected_fingerprint_v2",
+    "expected_file_count",
+    "expected_sha256",
+    "expected_bytes",
+    "mutation_policy",
+    "basis"
+  ],
+  "row_count": 28,
+  "protected_file_count": 14,
+  "sibling_controller_count": 3,
+  "tree_state_count": 9,
+  "wrapper_state_count": 2,
+  "protected_basis": "protected-file",
+  "sibling_basis": "sibling-controller",
+  "allowed_state_scopes": ["all", "pre", "post", "reverse", "pre-reverse"],
+  "allowed_subject_types": ["file-exact", "tree-fingerprint", "wrapper-set"],
+  "allowed_mutation_policies": ["must-not-change", "transaction-scoped", "restore-functional-prestate"],
+  "required_tree_ids": [
+    "TREE-LEGACY-PRE",
+    "TREE-LEGACY-POST",
+    "TREE-LEGACY-REVERSE",
+    "TREE-TARGET-PRE",
+    "TREE-TARGET-POST",
+    "TREE-TARGET-REVERSE",
+    "TREE-MOS-PRE",
+    "TREE-MOS-POST",
+    "TREE-MOS-REVERSE"
+  ],
+  "required_wrapper_ids": ["SET-WRAPPER-PRE-REVERSE", "SET-WRAPPER-POST"],
+  "expected_file_counts": {
+    "TREE-LEGACY-PRE": 215,
+    "TREE-LEGACY-POST": 122,
+    "TREE-LEGACY-REVERSE": 215,
+    "TREE-TARGET-PRE": 3,
+    "TREE-TARGET-POST": 98,
+    "TREE-TARGET-REVERSE": 3,
+    "TREE-MOS-PRE": 16,
+    "TREE-MOS-POST": 16,
+    "TREE-MOS-REVERSE": 16,
+    "SET-WRAPPER-PRE-REVERSE": 11,
+    "SET-WRAPPER-POST": 11
+  },
+  "unknown_columns": "reject"
+}

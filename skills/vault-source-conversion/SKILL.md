@@ -24,16 +24,61 @@ Exceptional external imports may use repeated `--external-root PREFIX=ABSPATH` a
 
 ## Environments and Backends
 
-`tools/run-source-extraction.ps1` derives the approved extraction environment from the parent of the vault (`.venvs/sb-extract`) and runs the canonical converter.
+`tools/run-source-extraction.ps1` resolves the approved Python through `tools/resolve-python-runtime.ps1 -Purpose Agent` and runs the canonical converter. Available backends depend on that resolved runtime; do not install dependencies implicitly.
 
 Backend routing via `--backend`:
 
 - `builtin`: dependency-light extractors.
-- `pandoc`: highest quality for DOCX.
+- `pandoc`: existing DOCX route; quality depends on the document and required structure.
 - `markitdown` / `docling`: converters for DOCX, PPTX, XLSX, and PDF.
 - `auto`: DOCX to pandoc, PPTX to markitdown, XLSX to docling, PDF to markitdown, with availability fallbacks.
+- `anydoc`: optional, explicitly selected PPTX/DOCX adapter, pinned to Firecrawl AnyDoc 0.2.4. It is never selected by `auto` or the current standing policy.
 
-Table-heavy PDFs can be rerun selectively with docling. Embedded images become placeholders pointing to the original. With `--defer-scanned-pdf`, PDFs without a usable text layer are recorded for a later OCR phase.
+## Optional AnyDoc adapter (2026-09-11)
+
+Use for an explicitly selected PPTX/DOCX batch when preserving speaker notes or Word titles is valuable. The [controlled comparison](../../wiki/_outputs/source-conversions/anydoc-comparison-2026-09-11/report.md) and [implementation checks](../../wiki/_outputs/source-conversions/anydoc-integration-2026-09-11/verification.md) record the evidence and limits. This adapter does not support PDF, XLSX, CSV or macro-enabled variants; explicit use on them fails rather than falling back.
+
+Run from the vault root. An approved manifest contains exact repository-relative source paths, one per line; an empty manifest is rejected. Normal conversion creates missing sidecars only:
+
+```powershell
+.\tools\run-source-extraction.ps1 -Convert -Backend anydoc -Manifest 'path-to-approved-manifest.txt'
+```
+
+To compare in a separate output area without regenerating existing sidecars:
+
+```powershell
+.\tools\run-source-extraction.ps1 -Pilot -PilotBackends 'anydoc,pandoc' -Manifest 'path-to-approved-manifest.txt' -ReportDir 'wiki/_outputs/source-conversions/my-anydoc-pilot'
+```
+
+The local pinned installation is `wiki/_outputs/source-conversions/runtimes/anydoc-0.2.4/site`, independent of the initial experiment. `-AnyDocSite` / `--anydoc-site` may select another isolated directory with the same version. Missing or incompatible packages fail; conversion never installs dependencies. For an explicitly authorized Windows x64 restore, resolve Python with `tools/resolve-python-runtime.ps1 -Purpose Agent -PathOnly`, then use that executable with `-m pip install --only-binary=:all: --no-deps --require-hashes --target wiki/_outputs/source-conversions/runtimes/anydoc-0.2.4/site -r tools/config/anydoc-windows-requirements.txt`. The recorded wheel hash is Windows-specific; other platforms need their own reviewed package.
+
+PPTX output uses physical `## Slide N` markers in presentation order, includes hidden slides with a label, and separates `### Speaker notes`. Slide content is converted by AnyDoc; notes are extracted directly from OOXML text paragraphs, excluding header/footer/date/slide-number placeholders. Notes retain text, not arbitrary formatting or visual annotations. Standard `ppt/presentation.xml` packages are supported. Cross-slide links and complex notes layouts are not guaranteed faithful. Blank text slides and emitted native diagnostics require review; invalid/missing slides fail the whole conversion with no partial sidecar. The audit checks adapter/version metadata and the exact slide-marker sequence before a result can be green.
+
+Each conversion uses a fresh local worker with OCR explicitly rejected, 300-second timeout, 2048-MiB process memory limit, 200-MiB input and 50-MiB final text ceiling. PPTX also limits package expansion (512 MiB), individual parts (128 MiB), XML (16 MiB), entries (10,000) and slides (500). Exceeding limits fails. These are operating bounds, not universal safety or speed guarantees. Sources are hashed before/after; normal atomic create-only publication is retained. Existing extraction audits and pre-ingest readiness remain authoritative. Source text presence and physical slide counts do not certify semantic completeness.
+
+Table-heavy PDFs may need a separately approved comparison with docling. Embedded images remain evidence to inspect in the original. PDF extraction never runs OCR automatically, regardless of backend; the older `--defer-scanned-pdf` flag remains accepted for compatibility.
+
+## PDF coverage contract (profile 2026-09-09.1)
+
+New PDFs target every page by default: `--max-pdf-pages 0` / `-MaxPdfPages 0`. A positive value deliberately extracts a prefix and cannot produce coverage-ready output. The policy-bound runner forwards `pdf_limits` from `tools/config/source-conversion-policy.json`; direct CLI and PowerShell defaults match that profile.
+
+| Limit per PDF | Policy key | Initial default |
+| --- | --- | --- |
+| Page ceiling | `max_pages` | `0` = all pages |
+| Worker wall time | `timeout_seconds` | 300 seconds |
+| Worker memory | `memory_mib` | 2048 MiB |
+| Input file size | `max_input_bytes` | 209715200 bytes (200 MiB) |
+| Extracted page text, including markers | `max_output_bytes` | 52428800 bytes (50 MiB) |
+
+These are configurable operating limits, not benchmark-derived guarantees. Windows uses a Job Object memory bound; POSIX uses an address-space bound. The coordinator enforces timeout and input size. Worker checkpoints preserve completed pages on timeout, output limit or conversion failure; temporary page files are owned and removed by the coordinator. Memory, time and output are bounded separately from the page count. The output limit covers extracted page blocks; frontmatter and checkpoint encoding add overhead.
+
+All PDF routes (`builtin`, MarkItDown, Docling, `auto`, and the existing `pandoc` fallback to builtin) use the same bounded worker and page markers. MarkItDown and Docling receive individual pages with a native text layer; Docling OCR is explicitly disabled. This preserves page identity but can reduce cross-page table reconstruction. Their actual dependencies/models must already be available; no installation is part of this contract. The pilot uses the same PDF conversion contract and labels partial results `review`.
+
+Every new PDF sidecar records `pdf_coverage_version`, total and processed physical PDF pages, missing pages, pages without text, coverage (`complete`, `partial`, `unknown`), stop reason, text-presence status, and effective resource limits. Unknown total is `-1`; unknown missing pages are `unknown`. `## Page N` uses one-based physical PDF pages, not printed page labels. A textless page counts as processed but triggers text review. `text-present` confirms text presence, not semantic accuracy or faithful layout.
+
+Audit checks page-marker sequence against coverage metadata. Readiness separately checks source hashes, audit state, full coverage and text presence. Partial or unknown coverage cannot be `ready`. Existing PDFs without the new metadata are `pdf-coverage-unknown` for future ingest, even if a historical registry row is green. Do not infer absence from a partial extraction.
+
+This profile never regenerates existing sidecars. Legacy assessment and any regeneration require a separate, explicit migration decision; preserve historical run evidence and original bytes. A new reconciliation may update the rebuildable registry's current status, but no reconciliation/backfill of the real library was run as part of the profile implementation. Verification used synthetic PDFs, including 45 pages, partial extraction, blank pages, resource aborts and create-only repetition. Optional backend adapters were tested with doubles because those libraries were absent in the resolved test runtime; their real extraction quality remains unverified.
 
 ## Local Sidecar Workflow
 

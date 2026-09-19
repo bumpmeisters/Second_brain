@@ -1,0 +1,63 @@
+{
+  "budgets": {
+    "annual_report": 3,
+    "community": 3,
+    "searches": 12,
+    "supplementary": 20
+  },
+  "company_name": "Amber Fictional Instruments",
+  "core_fields": [
+    "identity",
+    "workforce"
+  ],
+  "entity_ids": [
+    "amber-fictional-group"
+  ],
+  "excluded_stocks": [
+    "All real companies and other fictional companies"
+  ],
+  "language": "en",
+  "paths": {
+    "project_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber",
+    "publication_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context",
+    "run_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs",
+    "source_roots": [
+      "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\originals"
+    ],
+    "vault_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber"
+  },
+  "period": "2026",
+  "project_id": "amber",
+  "purpose": "Fictional company basis for downstream planning",
+  "region": "global",
+  "source_manifest": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\selection-update.json",
+    "sha256": "a3450b7c84948f4792c9b4ee9616bf2ad256f01f82758de8e1bfc9940142b997"
+  },
+  "strategy": {
+    "accepted": true,
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\strategy.md",
+    "sha256": "ce4238f51edb1c537a65b862b17ad3c449efcfb3476870362e36fe2b7e934450"
+  },
+  "worker_capacity": 3,
+  "entry": {
+    "mode": "update",
+    "question": "Fictional company basis for downstream planning",
+    "previous": {
+      "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline",
+      "run_sha256": "d79445d8f56bff971f0abef60e03f8c2c0018606644decb1f37f86ddcb7d5a4c",
+      "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\company-basis-v1.md",
+      "context_sha256": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c"
+    },
+    "carry_forward": {
+      "F1": {
+        "decision": "retain",
+        "reason": "Re-read and re-review identity against the selected original."
+      },
+      "F-WORKFORCE": {
+        "decision": "update",
+        "reason": "New year-end evidence replaces the current workforce figure."
+      }
+    }
+  }
+}

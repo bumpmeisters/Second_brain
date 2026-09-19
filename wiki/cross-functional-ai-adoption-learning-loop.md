@@ -6,10 +6,11 @@ use_when: "AI experimentation is spreading across functions and policy, practica
 avoid_when: "A single team is running one bounded experiment that does not require cross-functional policy or shared learning."
 output: "A governed experiment portfolio, usable policy, named owners, learning register, and recurring review cadence."
 sources:
+  - "raw/Clippings/(65) AI Won’t Transform Your Business Until You Redesign the Work.md"
   - raw/Clippings/Why generative AI demands new thinking, not just new tools  OnBase podcast.md
   - raw/imports/automated-clippings/youtube/UCV_PmkQVA8YkoY7twKhj3uA/2026-07-29--UarCP7KcKJU.md
 created: 2026-07-26
-updated: 2026-08-18
+updated: 2026-09-09
 ---
 
 # Cross-Functional AI Adoption Learning Loop
@@ -34,6 +35,16 @@ Use when AI experimentation is spreading across functions and policy, practical 
 8. Reward useful disclosure of failed experiments and safe stopping decisions.
 9. Scale onboarding, examples, training, and behavioral support only after the structural anchors can absorb the learning.
 10. Update policy, support, workflow design, and training from the accumulated evidence.
+
+## AI-Nutzen und zusätzliche Mitarbeiterarbeit gemeinsam prüfen
+
+Im Experimentregister neben dem Kundenergebnis auch zusätzliche Arbeit der beteiligten Menschen dokumentieren: Kontrolle, Nacharbeit, Ausnahmen, Eskalationen und Koordination. Bei scheinbar schnellerem Output prüfen, wohin Arbeit verlagert wurde. Betroffene Operatoren in die Neugestaltung einbeziehen und das tatsächliche Arbeitsdesign statt nur Toolnutzung bewerten.
+
+Bovas Beitrag ist ein fachlicher Standpunkt; die erwähnte Forschung wurde hier nicht primär geprüft. Keine behaupteten Effizienzgewinne oder allgemeinen Aussagen über Beschäftigung übernehmen.
+
+Methodische Ableitung P47-C07 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/(65) AI Won’t Transform Your Business Until You Redesign the Work.md` — Gesamter Artikel, insbesondere neue Kontroll-, Korrektur- und Koordinationsarbeit; practitioner.
 
 ## Output
 

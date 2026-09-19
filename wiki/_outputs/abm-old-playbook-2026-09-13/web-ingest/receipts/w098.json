@@ -1,0 +1,17 @@
+{
+  "id": "W098",
+  "url": "https://www.gartner.com/en/documents/7925209",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:03:12.951234+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w098.json",
+  "title": "Accelerate Sales With Digital Sales Rooms and Lift Customer Lifetime Value",
+  "final_url": "https://www.gartner.com/en/documents/7925209",
+  "characters": 7030,
+  "sha256": "4967f6316fe588f2d34f090585f4f59deed492cdad594e84abebedfe64dba91f",
+  "http_status": 200
+}

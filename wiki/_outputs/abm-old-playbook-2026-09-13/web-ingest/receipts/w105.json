@@ -1,0 +1,17 @@
+{
+  "id": "W105",
+  "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+  "research_briefs": [
+    "f08-rep-free.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:03:57.134772+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w105.json",
+  "title": "The B2B Buying Journey: Key Stages and How to Optimize Them",
+  "final_url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+  "characters": 14850,
+  "sha256": "59f35544cb0d1a5d7b89a19921e620392824f89bf4f48c46fb401f0cfbeba0e6",
+  "http_status": 200
+}

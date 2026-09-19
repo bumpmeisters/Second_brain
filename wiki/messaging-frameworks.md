@@ -8,10 +8,14 @@ sources:
   - raw/Clippings/Zarina Stanford on Mission-Driven Authentic Leadership.md
   - raw/imports/automated-clippings/youtube/UC8UlBlGqTRNCOiEdWIXNnhg/2026-07-22--jUt6r248w1A.md
 created: 2026-06-03
-updated: 2026-08-16
+updated: 2026-09-14
 ---
 
 # Messaging Frameworks
+
+## P57: Nutzenargumentation und Evidenz trennen
+
+Die freigegebene Auswahl unterscheidet [[value-proposition-design|Passungsmodellierung]], [[resonating-focus-value-proposition|Auswahl entscheidender Nutzenaspekte]] und [[nabc-value-proposition|Strukturierung der Argumentation]]. Ein klarer Text ist kein Nachweis von Nachfrage oder Zahlungsbereitschaft. [[value-proposition-analysis]] erklärt die Aufgabenauswahl und Quellenlücken. Eigene Synthese aus dem genehmigten Quellenstand (source: research/2026-09-14-framework-source-verification-p57.md); neue Methoden bleiben draft.
 
 **Summary**: Messaging frameworks organize positioning, value propositions, proof, audience relevance, and message hierarchy.
 
@@ -40,6 +44,8 @@ A competitor or category signal triggers review; it does not authorize an automa
 The source is a vendor product demonstration, not validation of the monitored market facts or the tool's classifications. Its current Canva and Figma claims, automatic competitor classification, product accuracy, semantic-search, and commercial-effect claims are excluded (source: 2026-07-22--jUt6r248w1A.md; analysis: P34-W3-C06).
 
 ## Related pages
+
+- [[value-proposition-frameworks-research-review]] — recherchierte Methoden, Korrekturen und offene Übernahmevorschläge zur Value Proposition; keine automatische Messaging- oder Methodenfreigabe.
 
 - [[buying-situation-message-calibration]]
 - [[brand-library]]

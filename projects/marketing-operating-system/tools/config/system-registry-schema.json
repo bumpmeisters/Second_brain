@@ -1,0 +1,154 @@
+{
+  "schema_format": "mos-declarative-schema/v1-draft",
+  "schema_id": "mos-system-registry/v1-draft",
+  "title": "Marketing Operating System Federation Registry",
+  "status": "draft",
+  "purpose": "Machine-checkable structural rules for the federation registry. This schema grants no operating authority.",
+  "semantic_contract": {
+    "canonical_path": "projects/marketing-operating-system/contracts/system-registry-and-ownership-contract.md",
+    "version": "0.2.0-draft",
+    "sha256": "14BFD407FB7555871BB3FC73D968086339FA717B96D68C20EBA8D9E0C8D6D63D"
+  },
+  "required_columns": [
+    "system_id",
+    "display_name",
+    "system_class",
+    "registration_status",
+    "current_root",
+    "target_root",
+    "current_lifecycle_status",
+    "target_lifecycle_status",
+    "transition_status",
+    "current_operational_authority",
+    "target_operational_authority",
+    "current_routing_status",
+    "target_routing_status",
+    "federation_boundary_contract_ref",
+    "controlling_authority_ref",
+    "next_transition_gate",
+    "evidence_ref"
+  ],
+  "additional_columns": false,
+  "required_system_ids": [
+    "root-second-brain",
+    "marketing-operating-system",
+    "marketing-contextops",
+    "abm-operating-system",
+    "content-operating-system",
+    "company-workspaces"
+  ],
+  "enums": {
+    "system_class": [
+      "vault-control-plane",
+      "interoperability-umbrella",
+      "shared-context-capability",
+      "specialist-gtm-capability",
+      "shared-content-capability",
+      "source-workspace-container"
+    ],
+    "registration_status": [
+      "draft"
+    ],
+    "current_lifecycle_status": [
+      "active",
+      "planned"
+    ],
+    "target_lifecycle_status": [
+      "active",
+      "planned"
+    ],
+    "transition_status": [
+      "stable",
+      "planned",
+      "cutover-pending"
+    ],
+    "current_operational_authority": [
+      "active",
+      "none"
+    ],
+    "target_operational_authority": [
+      "active",
+      "none"
+    ],
+    "current_routing_status": [
+      "active",
+      "inactive"
+    ],
+    "target_routing_status": [
+      "active",
+      "inactive"
+    ]
+  },
+  "path_fields": [
+    "current_root",
+    "target_root",
+    "federation_boundary_contract_ref",
+    "controlling_authority_ref"
+  ],
+  "evidence_delimiter": ";",
+  "rules": [
+    {
+      "rule_id": "registry.unique-system-id",
+      "kind": "unique",
+      "field": "system_id"
+    },
+    {
+      "rule_id": "registry.exact-required-system-set",
+      "kind": "exact-set",
+      "field": "system_id",
+      "values_from": "required_system_ids"
+    },
+    {
+      "rule_id": "registry.paths-resolve-within-vault",
+      "kind": "resolved-paths",
+      "fields_from": "path_fields",
+      "allow_literal_values": [
+        "none",
+        "not-applicable"
+      ]
+    },
+    {
+      "rule_id": "registry.evidence-resolves-within-vault",
+      "kind": "resolved-delimited-paths",
+      "field": "evidence_ref",
+      "delimiter_from": "evidence_delimiter"
+    },
+    {
+      "rule_id": "registry.planned-has-no-current-operation",
+      "kind": "conditional-none",
+      "when": {
+        "field": "current_lifecycle_status",
+        "equals": "planned"
+      },
+      "fields": [
+        "current_operational_authority",
+        "current_routing_status"
+      ]
+    },
+    {
+      "rule_id": "registry.federation-boundary-is-not-controller",
+      "kind": "different-fields",
+      "fields": [
+        "federation_boundary_contract_ref",
+        "controlling_authority_ref"
+      ]
+    },
+    {
+      "rule_id": "registry.transition-requires-next-gate",
+      "kind": "nonempty-when-different",
+      "current_fields": [
+        "current_root",
+        "current_lifecycle_status",
+        "current_operational_authority",
+        "current_routing_status"
+      ],
+      "target_fields": [
+        "target_root",
+        "target_lifecycle_status",
+        "target_operational_authority",
+        "target_routing_status"
+      ],
+      "required_field": "next_transition_gate"
+    }
+  ]
+}

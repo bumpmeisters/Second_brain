@@ -1,0 +1,17 @@
+{
+  "id": "W112",
+  "url": "https://www.humansecurity.com/newsroom/human-disrupts-sophisticated-mobile-app-fraud-scheme-slopads",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:38.464995+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w112.json",
+  "title": "HUMAN Disrupts Sophisticated Mobile App Fraud Scheme SlopAds - HUMAN Security",
+  "final_url": "https://www.humansecurity.com/newsroom/human-disrupts-sophisticated-mobile-app-fraud-scheme-slopads/",
+  "characters": 5280,
+  "sha256": "a107ba02a4d91a52827ea380d629f9bdf6528232a03eb79e66f1d73fbe39adb3",
+  "http_status": 200
+}

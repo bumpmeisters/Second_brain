@@ -1,0 +1,150 @@
+ISO 9001:2015/Amd 1:2024 - Quality management systems — Requirements — Amendment 1: Climate action changes (https://www.iso.org/standard/88431.html)
+citeturn35view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.iso.org/standard/88431.html","lineno":null}); Total lines: 164
+L0: cite0†Image L1: 
+L2: Amendment
+L3: 
+L4: International Standard
+L5: 
+L6: ISO 9001:2015/Amd 1:2024
+L7: 
+L8: Quality management systems — Requirements — Amendment 1: Climate action changes
+L9: 
+L10: Reference number
+L11: ISO 9001:2015/Amd 1:2024
+L12: 
+L13: Edition 5
+L14: 2024-02
+L15: 
+L16: © ISO 2026
+L17: 
+L18: Preview this standard in our Online Browsing Platform (OBP)
+L19: 
+L20: [Button: Read sample]
+L21: 
+L22: cite1†Published (Edition 5, 2024)
+L23: 
+L24: This amendment applies to cite2†ISO 9001:2015 L25: 
+L26: Expected to be replaced by cite3†ISO 9001 within the coming months.
+L27: ### ISO 9001:2015/Amd 1:2024
+L28: 
+L29: Language
+L30: 
+L31: [Select]
+L32: 
+L33: Format
+L34: 
+L35: [Input] PDF + ePub
+L36: 
+L37: [Input] Paper
+L38: 
+L39: [Input] PDF + ePub
+L40: 
+L41: [Input] Paper
+L42: 
+L43: [Input] PDF + ePub
+L44: 
+L45: [Input] Paper
+L46: 
+L47: CHF (Swiss francs) 0
+L48: 
+L49: [Button: Add to cart]
+L50: 
+L51: ### Preview ISO 9001:2015/Amd 1:2024
+L52: 
+L53: This amendment can be viewed on the cite4†ISO Online Browsing Platform (OBP) L54: ## General information
+L55: 
+L56:   * Status
+L57: 
+L58:  : Published
+L59: 
+L60: Publication date
+L61: 
+L62:  : 2024-02
+L63: 
+L64: Corrected version (fr)
+L65: 
+L66:  : 2024-08
+L67: 
+L68: Stage
+L69: 
+L70: : International Standard published [cite1†60.60 ]
+L71: 
+L72:   * Edition
+L73: 
+L74:  : 5
+L75: 
+L76: Number of pages
+L77: 
+L78:  : 1
+L79: 
+L80:   * Technical Committee :
+L81: 
+L82: cite5†ISO/TC 176/SC 2 L83: 
+L84: ICS :
+L85: 
+L86: cite6†03.100.70 cite7†03.120.10 L87: 
+L88:   * cite8†RSS updates
+L89: 
+L90: ## Life cycle
+L91: 
+L92:   * ### Now
+L93: 
+L94: Published
+L95: #### ISO 9001:2015/Amd 1:2024
+L96: 
+L97: cite9†Stage: 60.60 L98: 
+L99:     * 00
+L100: 
+L101: Preliminary
+L102: 
+L103:     * 10
+L104: 
+L105: Proposal
+L106: 
+L107:       * cite10†10.99 2023-09-19 New project approved L108:     * 20
+L109: 
+L110: Preparatory
+L111: 
+L112:     * 30
+L113: 
+L114: Committee
+L115: 
+L116:     * 40
+L117: 
+L118: Enquiry
+L119: 
+L120:     * 50
+L121: 
+L122: Approval
+L123: 
+L124:     * 60
+L125: 
+L126: Publication
+L127: 
+L128:       * cite11†60.00 2023-09-19 International Standard under publication L129:       * cite12†60.60 2024-02-23 International Standard published L130:     * 90
+L131: 
+L132: Review
+L133:       * cite13†90.20 International Standard under systematic review L134:       * cite14†90.92 International Standard to be revised L135:       * cite15†90.93 International Standard confirmed L136:       * cite16†90.99 Withdrawal of International Standard proposed by TC or SC L137:     * 95
+L138: 
+L139: Withdrawal
+L140: 
+L141:       * cite17†95.99 Withdrawal of International Standard L142:   * ### Revised by
+L143: 
+L144: Under development
+L145: #### cite3†ISO 9001 L146: #### Got a question?
+L147: 
+L148: Check out our cite18†Help and Support L149: 
+L150: Making lives easier, safer and better.
+L151: 
+L152: cite19†Sign up L153: 
+L154: for email updates
+L155: 
+L156: 
+L157: 
+L158: © All Rights Reserved
+L159: 
+L160: All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to copyright@iso.org.
+L161: With the exception of the content available through the cite20†ISO Open data page and subject to the terms contained therein, no ISO content may be used for any machine learning and/or artificial intelligence and/or similar technologies, including but not limited to accessing or using it to (i) train data for large language or similar models, or (ii) prompt or otherwise enable artificial intelligence or similar tools to generate responses.
+L162: We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please contact us (webmaster@iso.org).
+L163: #### Add to cart
+

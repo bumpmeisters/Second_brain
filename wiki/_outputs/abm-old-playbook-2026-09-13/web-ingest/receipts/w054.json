@@ -1,0 +1,17 @@
+{
+  "id": "W054",
+  "url": "https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click",
+  "research_briefs": [
+    "f09-zero-click.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:38.547637+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w054.json",
+  "title": "In 2026, Less than One Third of Google Searches Still Send a Click - SparkToro",
+  "final_url": "https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/",
+  "characters": 16305,
+  "sha256": "75ad21222f346c0f47ba53cad923368480c740bb8b1d1674c187f53614c0ee7a",
+  "http_status": 200
+}

@@ -5,7 +5,7 @@ sources: []
 schema: reusable-practice-routing/v1
 selection_rule: "Match the task to use_when, reject conflicts with avoid_when, then load only the smallest sufficient artifact set."
 created: 2026-07-27
-updated: 2026-08-18
+updated: 2026-09-11
 ---
 
 # Reusable Practices Router
@@ -18,9 +18,13 @@ updated: 2026-08-18
 
 | Artifact | Use when | Avoid when | Output |
 |---|---|---|---|
+| `projects/No and low code_1st Marketing Agent/frameworks/audience-understanding/buying-role-persona-analysis.md` (draft) | Ein definierter Leistungs-/Marktkontext soll rollenbezogene Personas für Marketing erhalten; Belege und Hypothesen können getrennt werden. | Jobtitel als Machtbeleg, synthetische Kaufgeschichten oder bestätigte Personas ohne passende Daten erwartet werden. | Rollenkarte, begründete Persona-Arbeitstypen, Informations-/Nachweisfragen und offene Annahmen; Pilotstatus beachten. |
+| `tools/company-intelligence/workflow.md` | Authorized company research needs a new Unternehmensbasis, a targeted Nachsuche/Such- und Sammelauftrag, or an Aktualisierung of a reviewed company context. | Only source inventory is needed, scope is undefined, or unattended operation/unapproved source access is expected. | Reviewed baseline, focused evidence answer or new context version; verifiable run and explicit learning closeout. |
+| `wiki/domain-expert-error-analysis-loop.md` | New or changed AI workflow lacks reliable domain criteria, or automated evaluations disagree with qualified human review. | Reviewers lack domain knowledge or full task context, cases cannot be used lawfully, or a deterministic oracle answers the entire question. | Annotated cases, reviewed error taxonomy, versioned rubric, calibrated evaluator record and bounded improvement decision. |
 | `wiki/ai-automation-foundation-and-separation-gate.md` | An AI automation will be shared, commercialized, connected to multiple applications, or used across customers or teams. | Owners, data classes, access rules, recovery expectations, or required security and legal review are undefined. | An approved boundary, access, schema, secret, recovery, cost, and migration record. |
 | `wiki/reliable-ai-capability-rollout.md` | A repeated AI task needs stable checks and evidence-based autonomy. | Failures are not detectable or consequential judgment lacks a human owner. | Verified capability, run history, and approved autonomy level. |
-| `wiki/repository-mining.md` | An external repository may contain reusable system, workflow, architecture, skill, or evaluation evidence relevant to a demonstrated Vault or project need. | The question is already covered, no exact commit is available, repository execution is required without separate authority, or the repository is an actively owned development project. | Commit-pinned custody, selected evidence, source-brief or existing-summary mapping, five-level evidence assessment, A-D decision, and any approved ingest proposal. |
+| `wiki/ai-enabled-team-contraction-resilience-gate.md` | AI capability evidence is being used to propose role removal, a materially smaller team, or lower human coverage. | Accepted outcomes, workload and incident data, critical knowledge, lawful decision ownership, safe employee input, or rollback cannot be established. | A stop, revise, bounded-pilot, or separately authorized workforce-decision record with resilience evidence and unresolved obligations. |
+| `wiki/repository-mining.md` → `skills/repository-analysis/SKILL.md` | A selected external repo warrants open learning, a focused static review or a version comparison; later example discovery starts at `repositories/index.md`. | An existing dossier suffices, source identity or selection authority is absent, or the task is owned-repo development or third-party execution. | Immutable snapshot, analytical dossier, evidence/coverage map, separate learning and adoption judgments, and task-based discovery. |
 | `wiki/shared-human-agent-delegation-queue.md` | Repeated bounded work is delegated asynchronously to agents. | Work is one-off or cannot have explicit tasks and owners. | Visible queue with state, evidence, review, and learning. |
 | `wiki/cross-functional-ai-adoption-learning-loop.md` | AI experiments, policy, support, and learning span several functions. | One team runs one bounded experiment. | Governed experiment portfolio, policy, owners, and learning register. |
 | `wiki/observable-capability-teach-back-loop.md` | Training must transfer into observable judgment and behavior. | Attendance alone is sufficient or realistic review is unavailable. | Teach-back, rubric feedback, second demonstration, and transfer evidence. |
@@ -70,6 +74,18 @@ updated: 2026-08-18
 | `wiki/video-led-microsite-build-contract.md` | An approved concept and licensed video should become a bounded, film-led commercial web experience with an inspectable production contract. | Media rights, audience, commercial objective, claims, owner, accessibility review, or technical verification cannot be established. | Build-ready microsite contract, working verified experience, and self-contained reconstruction brief tied to approved media and claims. |
 | `wiki/long-form-narrative-development-workflow.md` | A fiction or narrative project is large enough that premise quality, thematic coherence, continuity, research, and multiple review roles need durable control. | The task is short-form copy, evidence-led non-fiction governed by the content-engineering contract, or lacks an accountable author, lawful source access, or qualified review. | A versioned narrative project packet containing the accepted premise, theme, outline and open gaps, continuity bible, research notes, complete draft, feedback dispositions, and editorial decision. |
 | `wiki/long-horizon-marketing-program-sprint-loop.md` | An authorized multi-role marketing or GTM program has delayed outcomes, variable capacity, and needs a bridge from strategy to executable stages. | Authorization or accountable ownership is absent, capacity is assumed, activity will imply impact, or forecasts are being invented to justify the program. | Multi-sprint roadmap, capacity table, sprint contracts, cumulative evidence dashboard, retrospectives, and continuation decisions. |
+
+## P57: freigegebene Framework-Referenzen
+
+| Artifact | Use when | Avoid when | Output |
+|---|---|---|---|
+| `wiki/perceptual-positioning-analysis.md` (draft, P57) | Eine empirische Wahrnehmungsfrage benötigt ein passendes Erhebungs- und Analyseverfahren. | Nur Anbietertexte oder interne Einschätzungen vorliegen. | Methodenentscheidung, Datenvertrag, überprüfbare Karte und Interpretationsgrenzen. |
+| `wiki/positioning-communication-audit.md` (draft, P57) | Ein abgegrenztes Kommunikationskorpus soll nachvollziehbar verglichen werden. | Tatsächliche Kundenwahrnehmung oder Leistungsfähigkeit aus Texten bewiesen werden soll. | Codierbuch, belegte Codierungen, Vergleich und Evidenzlücken. |
+| `wiki/distinctive-brand-assets-analysis.md` (draft, P57) | Markenelemente sollen auf Käufererkennung und eindeutige Markenzuordnung untersucht werden. | Gestaltergeschmack oder behauptete Produktüberlegenheit als Wiedererkennung gelten soll. | Asset-Inventar, Messplan oder Messbefund und begründete Pflegepriorität. |
+| `wiki/keller-brand-positioning.md` (draft, P57) | Eine zukünftige Markenposition soll auf Bezugsrahmen, Parität und relevante Unterschiede geprüft werden. | Ein ausgefülltes Schema als gemessene Markenstärke gelten soll. | Begründeter Bezugsrahmen, POP/POD-Prüfung und interne Mantra-Hypothese. |
+| `wiki/resonating-focus-value-proposition.md` (draft, P57) | Ein kundenspezifisches B2B-Nutzenversprechen soll auf entscheidende Vergleichsvorteile konzentriert werden. | Kundenprioritäten oder Vergleichsalternative unbekannt sind und eine bestätigte Aussage erwartet wird. | Belegte Nutzenargumentation mit Vergleich, Paritäten und offenen Streitpunkten. |
+| `wiki/value-proposition-design.md` (draft, P57) | Kundenaufgaben und Angebotsbeiträge müssen als prüfbare Passungshypothesen verbunden werden. | Ein ausgefüllter Canvas als Kundenbeleg oder Nachfragevalidierung gelten soll. | Priorisierter Canvas, Annahmenregister und separat vereinbarbarer Prüfplan. |
+| `wiki/nabc-value-proposition.md` (draft, P57) | Eine Nutzenidee soll als vergleichbare, kritisierbare Argumentation strukturiert werden. | Eine Pitch-Struktur als Nachweis tatsächlicher Nachfrage gelten soll. | NABC-Argumentation mit Vergleichsbelegen und priorisierten Wissenslücken. |
 
 ## Selection protocol
 

@@ -15,7 +15,7 @@ sources:
   - raw/Clippings/Account-based journeys how enterprise sales reps create multi-channel journeys to book more calls.md
   - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-07-20--ltv-L5oMPIs.md
 created: 2026-07-18
-updated: 2026-08-15
+updated: 2026-09-13
 ---
 
 # GTM Signals and Contextual Intelligence
@@ -94,6 +94,14 @@ A PathFactory article applies this idea to B2B marketing by linking buyers, acco
 ## Reusable practices
 
 - [[contextual-next-best-action-loop]]
+
+## Scorelogik und Interventionswirkung prüfen
+
+**P56-E04:** Im Signaldatensatz beobachtete Aktivität, Identitätszuordnung, Account-Fit, Modellprognose und bestätigte Absicht getrennt dokumentieren. Ein Status benötigt Quelle, Regelversion, Zeitfenster und Qualifikationsgrund. Die im September 2026 archivierte 6sense-Dokumentation beschreibt beispielsweise, dass ein 6QA-Status trotz gesunkener Buying Stage bis zu 60 Tage bestehen kann und mehrere Konfigurationen zur Qualifikation beitragen können. Das ist Produktlogik, keine bestätigte Kaufabsicht oder CRM-Opportunity. Ein Statuswechsel muss deshalb in seinem konkreten Konfigurationskontext gelesen werden. (source: raw/imports/abm-old-playbook-web-2026-09-13/w058-support-6sense-com-6sense-qualified-accounts-6qas.md)
+
+**P56-E07:** Zusätzlich zwischen dem Risiko eines unerwünschten Ergebnisses und dem erwarteten Effekt einer bestimmten Maßnahme unterscheiden. Ascarzas Retention-Arbeit berichtet, dass besonders abwanderungsgefährdete Kunden nicht zwangsläufig die durch Retention am besten beeinflussbaren sind. Hier wurden Abstract und Einleitung geprüft; keine Effektzahlen und keine direkte B2B-/ABM-Übertragbarkeit übernehmen. Als methodische Konsequenz bei Priorisierung fragen: Was könnte genau diese Maßnahme für diesen Account verändern, und welche Vergleichsbeobachtung würde das prüfen? Regelbetreuung nicht allein von digitalen Intent-Signalen abhängig machen. (source: raw/assets/abm-old-playbook-web-2026-09-13/w109-www-hbs-edu-name-ascarza-jmr-18-pdf.pdf; Autorinnenfassung, geprüfte Seiten 1–2; Anwendung ist begrenzte Synthese)
+
+Weitere Definitionen, Gegenbelege und Geltungsgrenzen: [P56-E04/E07](_outputs/semantic-ingest/p56/evidence-matrix.csv), [[old-marketing-playbook-web-sources-2026-09-13]]. Identische Publikationsvarianten sind keine unabhängigen Bestätigungen.
 
 ## Related pages
 

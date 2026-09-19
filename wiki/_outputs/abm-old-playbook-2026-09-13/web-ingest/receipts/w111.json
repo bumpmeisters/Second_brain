@@ -1,0 +1,17 @@
+{
+  "id": "W111",
+  "url": "https://www.highspot.com/en-gb/solutions/sales-enablement",
+  "research_briefs": [
+    "t04-sales-to-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:30.827310+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w111.json",
+  "title": "AI-Powered Sales Enablement Software for GTM Teams",
+  "final_url": "https://www.highspot.com/en-gb/solutions/sales-enablement/",
+  "characters": 12622,
+  "sha256": "79cb627e5a1ed6f6a7a307aab75a5a85cdb8e9df781022b781e32ecb46a972ce",
+  "http_status": 200
+}

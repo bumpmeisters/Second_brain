@@ -1,0 +1,17 @@
+{
+  "id": "W134",
+  "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results",
+  "research_briefs": [
+    "f09-zero-click.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:55.542141+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w134.json",
+  "title": "Do people click on links in Google AI summaries? | Pew Research Center",
+  "final_url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+  "characters": 10822,
+  "sha256": "fb9dc25cb9ed77f3a564023bef0e571a1c4b4224db70b752976d696bfb3a8313",
+  "http_status": 200
+}

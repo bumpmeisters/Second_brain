@@ -6,10 +6,12 @@ use_when: "A leader is joining, a team is expanding or reorganizing, or recurrin
 avoid_when: "The issue requires a formal HR, legal, safeguarding, accessibility, grievance, disciplinary, or performance-management process, or the leader cannot invite genuine team challenge without retaliation."
 output: "A reciprocal working agreement, decision and escalation map, contribution record, and recurring review log with agreed changes."
 sources:
+  - "raw/Clippings/How to Come Back From Vacation Without the Panic.md"
   - raw/Clippings/Amanda Dyson on Nurturing and Growing Authentic Leadership.md
   - raw/Clippings/Ed Breault on communicating with clarity and leading with curiosity.md
+  - wiki/newsletters/the-pragmatic-engineer/linked-sources/ai-team-contraction-resilience-source-family-2026-09-10.md
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-09-10
 ---
 
 # Team Working Agreement and Feedback Loop
@@ -50,6 +52,20 @@ Use this workflow during a leadership transition, team formation or expansion, m
 When a leader repeatedly re-enters work after it was formally delegated, do not begin by reclaiming the task or judging the delegate. Restate the business or customer objective, derive the roles and capabilities required to reach it, and compare the current assignment across ownership, available capacity, craft or domain expertise, and access to context, tools, decisions, and support. Correct only the bounded gap: clarify an outcome or decision right, rebalance capacity, add coaching or specialist support, fund an approved resource, or change the assignment when necessary. Then restore explicit ownership and set a proportionate review point rather than converting support into permanent leader control.
 
 This diagnostic is an operational analysis derived from the source's strategy-first view, shared objective, cross-functional roles, and relay-style ownership; the interview does not itself validate this exact diagnostic or claim that it improves performance (source: Ed Breault on communicating with clarity and leading with curiosity.md; transcript anchors 8:56–16:32). Capability judgments must use role-relevant evidence and consistent criteria, give the delegate a safe opportunity to explain constraints, and avoid stereotyping or shifting chronic understaffing onto an individual. Budget or headcount changes require the appropriate approval. Reassignment, accommodation, compensation, employment-status, disciplinary, or performance-management decisions remain subject to company policy, HR, legal, accessibility, collective-agreement, and fairness requirements.
+
+### AI-related organization-change boundary
+
+When AI evidence is used to propose a materially smaller team or lower human coverage, preserve the reciprocal feedback and dissent channels in this agreement, but do not treat the agreement as the approval mechanism. Use [[ai-enabled-team-contraction-resilience-gate]] to examine accepted outcomes, knowledge concentration, absence and incident coverage, on-call load, learning capacity, workload, morale, safety, legal and accessibility duties, and rollback before any separate HR, legal, employee-representation, or executive decision (source: [[ai-team-contraction-resilience-source-family-2026-09-10]]; qualified decision lens, not outcome evidence).
+
+## Abwesenheits- und Rückkehrvereinbarung für Teams
+
+Vor Abwesenheit offene Abhängigkeiten, Vertretung und Eskalationswege klären; notwendige Entscheidungen nicht mit Inbox-Zero verwechseln. Für die Rückkehr eine knappe Übergabe über veränderte Entscheidungen, echte Dringlichkeiten und offene Aufgaben vorsehen und Zeit zur Orientierung schützen.
+
+Keine automatische Löschung ungelesener Nachrichten und keine pauschalen Erreichbarkeitsregeln. Teamvereinbarung, Rolle und gültige Aufbewahrungsregeln bleiben maßgeblich.
+
+Methodische Ableitung P47-C09 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/How to Come Back From Vacation Without the Panic.md` — Vorbereitung, Vertretung und geschützte Rückkehr; practitioner.
 
 ## Inspectable output
 

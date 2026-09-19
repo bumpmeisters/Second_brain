@@ -1,0 +1,17 @@
+{
+  "id": "W093",
+  "url": "https://www.gartner.com/en/documents/5669155",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:39.689589+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w093.json",
+  "title": "Improve B2B Buyer Experiences and Purchase Decisions With Sense Making",
+  "final_url": "https://www.gartner.com/en/documents/5669155",
+  "characters": 7114,
+  "sha256": "1e758e15d7767c29b0fd66daad6f337023c0b092698ea76ecd0f5792351ba5cf",
+  "http_status": 200
+}

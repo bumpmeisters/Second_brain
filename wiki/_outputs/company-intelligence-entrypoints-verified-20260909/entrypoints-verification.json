@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "checks": {
+    "three_modes_verify": true,
+    "baseline_bytes_preserved": true,
+    "follow_up_only_two_tasks": true,
+    "update_only_two_tasks": true,
+    "retained_identity_reverified": true,
+    "updated_workforce": true,
+    "old_workforce_remains_120": true,
+    "unrelated_company_isolated": true,
+    "distinct_publications": true
+  },
+  "network_used": false,
+  "real_source_library_mutated": false,
+  "engine_version": "1.0.0",
+  "unchanged_state_permission_error_retries": 0,
+  "runs": [
+    {
+      "mode": "baseline",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:39:49.876123+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\company-basis-v1.md",
+        "review": {
+          "at": "2026-09-09T19:39:49.752119+00:00",
+          "input_revision": 31,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c",
+          "status": "final"
+        },
+        "sha256": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline\\publication\\c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c.md",
+        "status": "final"
+      },
+      "entry": {
+        "mode": "baseline",
+        "question": "Fictional company basis for downstream planning"
+      }
+    },
+    {
+      "mode": "follow-up",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\follow-up\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:39:50.445130+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\workforce-follow-up-v1.md",
+        "review": {
+          "at": "2026-09-09T19:39:50.302125+00:00",
+          "input_revision": 8,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\follow-up\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "dbd389cb2db125d92fe5dce8c2d91760a088874579ca65770aca710a9756aa8b",
+          "status": "final"
+        },
+        "sha256": "dbd389cb2db125d92fe5dce8c2d91760a088874579ca65770aca710a9756aa8b",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\follow-up\\publication\\dbd389cb2db125d92fe5dce8c2d91760a088874579ca65770aca710a9756aa8b.md",
+        "status": "final"
+      },
+      "entry": {
+        "mode": "follow-up",
+        "previous": {
+          "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\company-basis-v1.md",
+          "context_sha256": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c",
+          "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline",
+          "run_sha256": "d79445d8f56bff971f0abef60e03f8c2c0018606644decb1f37f86ddcb7d5a4c"
+        },
+        "question": "Verify the exact 2025 year-end workforce definition only"
+      }
+    },
+    {
+      "mode": "update",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\update\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:39:51.154141+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\company-basis-v2.md",
+        "review": {
+          "at": "2026-09-09T19:39:50.971139+00:00",
+          "input_revision": 9,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\update\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "4d347a14a99bc59b8402df1c4f8045869f247a28952fe5dce7d8a136c04e472f",
+          "status": "final"
+        },
+        "sha256": "4d347a14a99bc59b8402df1c4f8045869f247a28952fe5dce7d8a136c04e472f",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\update\\publication\\4d347a14a99bc59b8402df1c4f8045869f247a28952fe5dce7d8a136c04e472f.md",
+        "status": "final"
+      },
+      "entry": {
+        "carry_forward": {
+          "F-WORKFORCE": {
+            "decision": "update",
+            "reason": "New year-end evidence replaces the current workforce figure."
+          },
+          "F1": {
+            "decision": "retain",
+            "reason": "Re-read and re-review identity against the selected original."
+          }
+        },
+        "mode": "update",
+        "previous": {
+          "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\company-basis-v1.md",
+          "context_sha256": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c",
+          "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline",
+          "run_sha256": "d79445d8f56bff971f0abef60e03f8c2c0018606644decb1f37f86ddcb7d5a4c"
+        },
+        "question": "Fictional company basis for downstream planning"
+      }
+    },
+    {
+      "mode": "baseline",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\runs\\baseline\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:39:52.619217+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\context\\company-basis-v1.md",
+        "review": {
+          "at": "2026-09-09T19:39:52.358217+00:00",
+          "input_revision": 31,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\runs\\baseline\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "770ba8a661e09337fcf048a3e9eb8508702ff1121563acbe9443ad5a342366d1",
+          "status": "final"
+        },
+        "sha256": "770ba8a661e09337fcf048a3e9eb8508702ff1121563acbe9443ad5a342366d1",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\runs\\baseline\\publication\\770ba8a661e09337fcf048a3e9eb8508702ff1121563acbe9443ad5a342366d1.md",
+        "status": "final"
+      },
+      "entry": {
+        "mode": "baseline",
+        "question": "Fictional company basis for downstream planning"
+      }
+    }
+  ],
+  "preserved_baseline_hashes": {
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline\\run.json": "d79445d8f56bff971f0abef60e03f8c2c0018606644decb1f37f86ddcb7d5a4c",
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context\\company-basis-v1.md": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c",
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs\\baseline\\publication\\c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c.md": "c6f1ea2a2f5b3e97bad6bc16734d20b370eb82bc1d2ab1385030a5f7afd7e58c",
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\originals\\record-2025.txt": "4e6d0a768b1a36ba77de09ad36a59ce0ac3628a59079aef24477c3792b815342"
+  },
+  "limitations": [
+    "Fictitious data and scripted self-review; no independent semantic validation.",
+    "No network, collector, or production inbox invoked.",
+    "Two core fields exercise coverage retention, not exhaustive company research."
+  ]
+}

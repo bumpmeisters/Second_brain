@@ -137,6 +137,10 @@ if ($Profile -eq 'Full') {
         $rootPath = Join-Path $vaultRoot $root
         if (Test-Path -LiteralPath $rootPath) {
             foreach ($file in @(Get-ChildItem -LiteralPath $rootPath -Recurse -File)) {
+                if ($root.TrimEnd('/') -eq 'repositories') {
+                    # Repo citations require exact versioned paths, never a coincidental basename match.
+                    continue
+                }
                 [void]$sourceNameIndex.Add($file.Name)
                 if ($file.Extension -eq '.md') { [void]$markdownNameIndex.Add($file.BaseName) }
             }
@@ -226,6 +230,16 @@ if ($selectionPolicy) {
 }
 
 $decisionBySource = @{}
+$repositoryRows = @($decisions | Where-Object { $_.canonical_source.Replace('\','/').StartsWith('repositories/', [StringComparison]::OrdinalIgnoreCase) })
+if ($repositoryRows.Count) {
+    try {
+        $repositoryPython = & (Join-Path $PSScriptRoot 'resolve-python-runtime.ps1') -Purpose Agent -PathOnly
+        $repositoryArgs = @('ready')
+        foreach ($repositoryRow in $repositoryRows) { $repositoryArgs += @('--source', $repositoryRow.canonical_source) }
+        $repositoryCheck = @(& $repositoryPython (Join-Path $PSScriptRoot 'repository_library.py') @repositoryArgs)
+        if ($LASTEXITCODE -ne 0) { Add-Issue error 'REPOSITORY_SOURCE_NOT_READY' ($repositoryCheck -join ' ') }
+    } catch { Add-Issue error 'REPOSITORY_SOURCE_GATE_UNAVAILABLE' $_.Exception.Message }
+}
 foreach ($row in $decisions) {
     $source = $row.canonical_source.Replace('\', '/')
     $standingAuthorized = $false
@@ -498,6 +512,8 @@ if ($package.raw_guard_required -and $Profile -eq 'Full') {
     try {
         $unstaged = @(& git -C $vaultRoot diff --name-only -- raw research/assets 2>$null)
         $staged = @(& git -C $vaultRoot diff --cached --name-only -- raw research/assets 2>$null)
+        $repositoryChanges = @(& git -C $vaultRoot diff --diff-filter=MDTR --name-only -- repositories 2>$null) + @(& git -C $vaultRoot diff --cached --diff-filter=MDTR --name-only -- repositories 2>$null)
+        $unstaged += @($repositoryChanges | Where-Object { $_ -match '^repositories/[^/]+/(snapshots|manifests)/' })
         foreach ($path in @($unstaged + $staged | Sort-Object -Unique | Where-Object { $_ })) {
             Add-Issue error 'PROTECTED_SOURCE_MODIFIED' 'Tracked protected source has local modifications.' $path
         }

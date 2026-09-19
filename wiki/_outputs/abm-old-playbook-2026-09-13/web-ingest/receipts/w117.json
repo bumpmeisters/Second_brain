@@ -1,0 +1,30 @@
+{
+  "id": "W117",
+  "url": "https://www.linkedin.com/business/marketing/blog/linkedin-ads/a-b2b-marketers-guide-to-every-linkedin-ad-type",
+  "research_briefs": [
+    "t03-lead-to-demand.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "status": "captured-web",
+  "previous_attempt": {
+    "id": "W117",
+    "url": "https://www.linkedin.com/business/marketing/blog/linkedin-ads/a-b2b-marketers-guide-to-every-linkedin-ad-type",
+    "research_briefs": [
+      "t03-lead-to-demand.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T18:05:08.959260+00:00",
+    "status": "capture-failed",
+    "error": "Error: All scraping engines failed to retrieve content from this URL. Engines tried: [fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automated access, (3) The website is down or unreachable, (4) The page requires authentication. Double check the URL is correct and accessible in a browser. If the issue persists, contact us at help@firecrawl.com with your request ID for investigation.\n"
+  },
+  "attempted_at": "2026-09-13T18:12:03.271226+00:00",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w117.json",
+  "capture_method": "Direct public HTTPS GET; stdlib HTMLParser main/article transcription with links; no generative summary",
+  "title": "A B2B Marketer’s Guide to Every LinkedIn Ad Type",
+  "final_url": "https://www.linkedin.com/business/marketing/blog/linkedin-ads/a-b2b-marketers-guide-to-every-linkedin-ad-type",
+  "characters": 37489,
+  "sha256": "4f00ca72937f8af58154c4da7a37d21ef89b7d700726197397b5750fef06b83f",
+  "http_status": 200
+}

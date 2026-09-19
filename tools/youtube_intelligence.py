@@ -115,6 +115,7 @@ def _run_windows_powershell(script_path: Path, parameters: dict[str, Any]) -> No
         [str(powershell), "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass", "-Command", bootstrap],
         check=True,
         env=environment,
+        stdout=sys.stderr,  # Child summaries are diagnostics, never part of the CLI JSON result.
     )
 
 
@@ -223,6 +224,15 @@ class App:
               status TEXT NOT NULL, source_packet TEXT, error TEXT, updated_at TEXT NOT NULL,
               PRIMARY KEY(run_id, video_id)
             );
+            CREATE TABLE IF NOT EXISTS youtube_caption_retries (
+              video_id TEXT PRIMARY KEY, run_id TEXT, attempts INTEGER NOT NULL,
+              error TEXT NOT NULL, next_attempt_at TEXT NOT NULL, status TEXT NOT NULL
+            );
+            CREATE TABLE IF NOT EXISTS youtube_semantic_exports (
+              parent_run_id TEXT NOT NULL, video_id TEXT NOT NULL, snapshot_run_id TEXT NOT NULL,
+              canonical_source TEXT NOT NULL, sha256 TEXT NOT NULL,
+              PRIMARY KEY(parent_run_id, video_id)
+            );
             CREATE UNIQUE INDEX IF NOT EXISTS ux_runs_one_active ON runs((1))
               WHERE status IN ('requested','running','stopping','paused');
             CREATE TABLE IF NOT EXISTS assessment_events (
@@ -318,6 +328,7 @@ class App:
 
     def credentials(self, interactive: bool):
         try:
+            from google.auth.exceptions import RefreshError
             from google.auth.transport.requests import Request
             from google.oauth2.credentials import Credentials
             from google_auth_oauthlib.flow import InstalledAppFlow
@@ -329,7 +340,15 @@ class App:
         if token_path.exists():
             credentials = Credentials.from_authorized_user_file(str(token_path), scopes)
         if credentials and credentials.expired and credentials.refresh_token:
-            credentials.refresh(Request())
+            try:
+                credentials.refresh(Request())
+            except RefreshError as exc:
+                if not interactive or not any(
+                    isinstance(arg, dict) and arg.get("error") == "invalid_grant"
+                    for arg in exc.args
+                ):
+                    raise
+                credentials = None
         if not credentials or not credentials.valid:
             if not interactive:
                 raise RuntimeError("OAuth token is missing or invalid; run the auth command interactively")
@@ -862,11 +881,16 @@ class App:
         raise RuntimeError(NO_SUPPORTED_CAPTIONS)
 
     def _extract(self, url: str) -> tuple[dict[str, Any], str, str, list[Segment], str]:
+        from youtube_backoff import paced_request
+        paced_request(self)
         try:
             import yt_dlp
         except ImportError as exc:
             raise RuntimeError("yt-dlp is missing; install tools/requirements-youtube-intelligence.txt") from exc
-        options = {"quiet": True, "no_warnings": True, "skip_download": True, "noplaylist": True}
+        options = {"quiet": True, "no_warnings": True, "skip_download": True, "noplaylist": True,
+                   "sleep_interval_requests": 1.0, "extractor_retries": 0, "retries": 0,
+                   "socket_timeout": 60,
+                   "cookiefile": None, "cookiesfrombrowser": None, "proxy": ""}
         with yt_dlp.YoutubeDL(options) as downloader:
             info = downloader.extract_info(url, download=False)
         if not info or info.get("extractor_key") not in {"Youtube", "YoutubeWebArchive"}:
@@ -874,6 +898,8 @@ class App:
         track_type, language, track = self._caption_track(info)
         headers = {str(k): str(v) for k, v in (info.get("http_headers") or {}).items()}
         request = urllib.request.Request(track["url"], headers=headers)
+        # This URL is fetched outside yt-dlp; its sleep-subtitles option cannot cover it.
+        time.sleep(5)
         with urllib.request.urlopen(request, timeout=60) as response:
             payload = response.read()
         extension = track["ext"]
@@ -886,7 +912,16 @@ class App:
         return self.inbox_prefix / relative, self.import_prefix / relative, relative.as_posix()
 
     def capture(self, url: str) -> dict[str, Any]:
-        info, track_type, language, segments, engine_version = self._extract(url)
+        from youtube_backoff import rate_limited, record_failure, succeeded, capture_lock
+        with capture_lock(self):
+            try:
+                info, track_type, language, segments, engine_version = self._extract(url)
+            except Exception as exc:
+                if rate_limited(exc):
+                    video_key = url.split('v=')[-1].split('&')[0].rstrip('/').split('/')[-1]
+                    record_failure(self, video_key, exc, getattr(self, '_capture_run_id', None))
+                raise
+            succeeded(self, str(info['id']))
         video_id = str(info["id"])
         channel_id = str(info.get("channel_id") or info.get("uploader_id") or "unknown-channel")
         published_raw = info.get("release_timestamp") or info.get("timestamp") or info.get("upload_date")
@@ -989,11 +1024,13 @@ class App:
         return self._acquire_rows(rows)
 
     def _acquire_rows(self, rows: Iterable[sqlite3.Row]) -> list[dict[str, Any]]:
-        rows = list(rows)
+        from youtube_backoff import assert_ready, state
+        assert_ready(self)
+        rows = list(rows)[:1 if state(self).get('failures') else 10]
         acquisition_policy = self.policy["transcript_acquisition"]
         request_delay = float(acquisition_policy.get("request_delay_seconds", 0))
         retry_delay = float(acquisition_policy.get("rate_limit_retry_seconds", 0))
-        retry_count = int(acquisition_policy.get("rate_limit_retries", 0))
+        retry_count = 0  # Persistent cooldown replaces immediate retries.
         results = []
         for index, row in enumerate(rows):
             final_error: Exception | None = None
@@ -1014,6 +1051,7 @@ class App:
                     connection.execute("UPDATE videos SET acquisition_status='failed',failure_reason=? WHERE video_id=?", (str(final_error)[:1000], row["video_id"]))
                 connection.close()
                 results.append({"video_id": row["video_id"], "status": "failed", "reason": str(final_error)})
+                break  # Never continue to another video after a failed request.
             if request_delay > 0 and index < len(rows) - 1:
                 time.sleep(request_delay)
         return results
@@ -1022,15 +1060,23 @@ class App:
         directory = self.state_dir / "recurring"
         directory.mkdir(parents=True, exist_ok=True)
         path = directory / f"{run_id}.json"
+        c = self.connect()
+        try:
+            row = c.execute('SELECT trigger_type FROM runs WHERE run_id=?', (run_id,)).fetchone()
+        finally:
+            c.close()
+        if row and row[0] == 'semantic-snapshot':
+            raise RuntimeError('Semantic review snapshots are immutable; never rewrite their report')
         temporary = path.with_suffix(".json.tmp")
         temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         os.replace(temporary, path)
         return path.relative_to(self.root).as_posix()
 
     def _capture_with_retries(self, video_id: str) -> tuple[dict[str, Any], str | None, bool]:
+        from youtube_backoff import rate_limited
         acquisition_policy = self.policy["transcript_acquisition"]
         retry_delay = float(acquisition_policy.get("rate_limit_retry_seconds", 0))
-        retry_count = int(acquisition_policy.get("rate_limit_retries", 0))
+        retry_count = 0  # Never retry 429 in the same invocation.
         final_error: Exception | None = None
         for attempt in range(retry_count + 1):
             try:
@@ -1044,7 +1090,7 @@ class App:
                     time.sleep(retry_delay)
         assert final_error is not None
         error = str(final_error)[:1000]
-        is_rate_limit = getattr(final_error, "code", None) == 429 or "429" in error
+        is_rate_limit = rate_limited(final_error)
         if error == NO_SUPPORTED_CAPTIONS:
             connection = self.connect()
             with connection:
@@ -1052,6 +1098,7 @@ class App:
                     "UPDATE videos SET acquisition_status='not-eligible',failure_reason=? WHERE video_id=?",
                     (error, video_id),
                 )
+                connection.execute("UPDATE youtube_caption_retries SET status='not-eligible' WHERE video_id=?", (video_id,))
             connection.close()
             return {"video_id": video_id, "status": "not-eligible", "reason": error}, error, False
         return {"video_id": video_id, "status": "failed", "reason": error}, error, is_rate_limit
@@ -1139,6 +1186,10 @@ class App:
         with register_path.open(encoding="utf-8-sig", newline="") as handle:
             dispositions = {row["canonical_source"]: row for row in csv.DictReader(handle)}
         connection = self.connect()
+        pause = connection.execute("SELECT state_value FROM system_state WHERE state_key='pipeline_pause'").fetchone()
+        if not pause or pause["state_value"] != "false":
+            connection.close()
+            raise RuntimeError("Pipeline is paused or pause state is missing")
         runs = connection.execute(
             "SELECT run_id,manifest_sha256,result_json FROM runs WHERE status='awaiting-semantic-worker' ORDER BY requested_at"
         ).fetchall()
@@ -1281,7 +1332,8 @@ class App:
             connection.close()
             if prior:
                 return {"run_id": run_id, "status": "completed", "package_id": package["package_id"],
-                        "decision_count": len(decisions), "remaining_unread_count": 0, "idempotent_replay": True}
+                        "decision_count": len(decisions), "remaining_unread_count": 0, "idempotent_replay": True,
+                        "status_scope": "source-review", "canonical_promotion_effect": "none; run completion only"}
             raise RuntimeError(f"Run was completed by a different semantic package: {run_id}")
         if not run or run["status"] != "awaiting-semantic-worker":
             connection.close()
@@ -1339,6 +1391,8 @@ class App:
             packet = result.get("source_packet", "").replace("\\", "/")
             if packet.startswith(inbox_prefix):
                 source_to_video[import_prefix + packet[len(inbox_prefix):]] = result["video_id"]
+            elif packet.startswith(import_prefix):
+                source_to_video[packet] = result['video_id']
         now = iso_utc()
         with connection:
             for source, row in decided.items():
@@ -1366,7 +1420,8 @@ class App:
                  json.dumps({"package_manifest": package_path.relative_to(self.root).as_posix(), "decision_count": len(decisions)}, sort_keys=True), now),
             )
         connection.close()
-        return {"run_id": run_id, "status": status, "package_id": package["package_id"], "decision_count": len(decisions), "remaining_unread_count": remaining, "idempotent_replay": False}
+        return {"run_id": run_id, "status": status, "package_id": package["package_id"], "decision_count": len(decisions), "remaining_unread_count": remaining, "idempotent_replay": False,
+                "status_scope": "source-review", "canonical_promotion_effect": "none; run completion only"}
 
     def request_run(self, run_type: str, trigger_type: str, channel_ids: list[str] | None = None,
                     limit: int | None = None, allow_disabled: bool = False,
@@ -1473,6 +1528,9 @@ class App:
         return requested
 
     def execute_run(self, run_id: str, admit: bool = False) -> dict[str, Any]:
+        from youtube_backoff import assert_ready, state as backoff_state
+        assert_ready(self)
+        capture_budget = 1 if backoff_state(self).get('failures') else 10
         connection = self.connect()
         run = connection.execute("SELECT * FROM runs WHERE run_id=?", (run_id,)).fetchone()
         if not run:
@@ -1504,7 +1562,7 @@ class App:
         items_by_id = {item["video_id"]: item for item in manifest["candidates"]}
         deferred_ids = set(manifest.get("deferred_candidate_ids", []))
         pending = connection.execute(
-            "SELECT * FROM run_items WHERE run_id=? AND status IN ('requested','failed') ORDER BY rowid", (run_id,)
+            "SELECT * FROM run_items WHERE run_id=? AND status IN ('requested','failed') ORDER BY CASE status WHEN 'failed' THEN 0 ELSE 1 END,rowid", (run_id,)
         ).fetchall()
         now = iso_utc()
         with connection:
@@ -1539,7 +1597,7 @@ class App:
             connection.close()
         results: list[dict[str, Any]] = []
         consecutive_rate_limits = 0
-        breaker = int(self.policy["recurring_execution"]["rate_limit_circuit_breaker"])
+        breaker = 1  # First 429 stops all further caption requests for this invocation.
         request_delay = float(self.policy["transcript_acquisition"].get("request_delay_seconds", 0))
         subbatch_size = int(self.policy["recurring_execution"]["subbatch_limit"])
         runtime_limit = int(self.policy["recurring_execution"]["runtime_limit_minutes"]) * 60
@@ -1547,6 +1605,9 @@ class App:
         stopped = False
         stop_reason: str | None = None
         for index, row in enumerate(pending):
+            if index >= capture_budget:
+                stopped, stop_reason = True, 'capture-budget'
+                break
             connection = self.connect()
             current = connection.execute("SELECT stop_requested FROM runs WHERE run_id=?", (run_id,)).fetchone()
             connection.close()
@@ -1558,7 +1619,11 @@ class App:
                 stopped = True
                 stop_reason = "runtime-limit"
                 break
-            result, error, rate_limited = self._capture_with_retries(row["video_id"])
+            self._capture_run_id = run_id
+            try:
+                result, error, rate_limited = self._capture_with_retries(row["video_id"])
+            finally:
+                self._capture_run_id = None
             status = result["status"]
             if error is None:
                 consecutive_rate_limits = 0
@@ -1580,6 +1645,9 @@ class App:
                      error or row["selection_reason"], manifest["policy_sha256"], manifest["preference_version"], iso_utc()),
                 )
             connection.close()
+            if error is not None and not rate_limited and status == 'failed':
+                stopped, stop_reason = True, 'capture-failures'
+                break
             if consecutive_rate_limits >= breaker:
                 stopped = True
                 stop_reason = "rate-limit-circuit-breaker"
@@ -1609,6 +1677,8 @@ class App:
             item.get("status") in {"captured", "already-admitted"} for item in all_results
         )
         final_status = "paused" if stopped else ("awaiting-semantic-worker" if has_captured_sources else "completed")
+        if not stopped and has_captured_sources and run['trigger_type'] in {'approved-chat-manifest', 'codex-weekly-acquisition'}:
+            final_status = 'acquisition-complete'
         now = iso_utc()
         with connection:
             connection.execute(
@@ -2132,17 +2202,35 @@ class App:
                 "videos": counts, "queue_count": len(self.queue())}
 
 
+class JsonResultParser(argparse.ArgumentParser):
+    def error(self, message):
+        if any(command in sys.argv[1:] for command in ("semantic-queue", "read-semantic-source")):
+            print(json.dumps({"status": "failed", "error": message}))
+        super().error(message)  # Preserve usage diagnostics and argparse's exit code 2.
+
+
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="YouTube intelligence intake for the second-brain vault")
+    parser = JsonResultParser(description="YouTube intelligence intake for the second-brain vault")
     parser.add_argument("--vault-root", default=str(Path(__file__).resolve().parents[1]))
     parser.add_argument("--policy", default="tools/config/youtube-intelligence-policy.json")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("status")
+    sub.add_parser("worker-cycle").add_argument('--no-acquire', action='store_true')
+    worker_release = sub.add_parser("worker-release")
+    worker_release.add_argument("lease_id")
     sub.add_parser("auth")
     sub.add_parser("scheduled-delta")
     semantic_queue = sub.add_parser("semantic-queue")
     semantic_queue.add_argument("--limit", type=int, default=25)
     semantic_queue.add_argument("--max-transcript-words", type=int, default=150_000)
+    reader = sub.add_parser("read-semantic-source")
+    reader.add_argument("--package-manifest", required=True)
+    reader.add_argument("--run-manifest-sha256", required=True)
+    reader.add_argument("--source", required=True)
+    reader.add_argument("--line", type=int, default=1)
+    reader.add_argument("--offset", type=int, default=0)
+    reader.add_argument("--max-lines", type=int, default=80)
+    reader.add_argument("--max-chars", type=int, default=12000)
     semantic_complete = sub.add_parser("complete-semantic-run")
     semantic_complete.add_argument("run_id")
     semantic_complete.add_argument("--package-manifest", required=True)
@@ -2210,10 +2298,16 @@ def main() -> int:
     policy = Path(args.policy)
     if not policy.is_absolute():
         policy = root / policy
-    app = App(root, policy)
     try:
+        app = App(root, policy)
         if args.command == "status":
             result: Any = app.status()
+        elif args.command == "worker-cycle":
+            from youtube_worker import worker_cycle
+            result = worker_cycle(app, no_acquire=args.no_acquire)
+        elif args.command == "worker-release":
+            from youtube_worker import release_worker
+            result = release_worker(app, args.lease_id)
         elif args.command == "auth":
             credentials = app.credentials(True)
             result = {"status": "authorized", "account": app.verify_account(credentials)}
@@ -2221,6 +2315,10 @@ def main() -> int:
             result = app.run_scheduled_delta()
         elif args.command == "semantic-queue":
             result = app.semantic_work_queue(args.limit, args.max_transcript_words)
+        elif args.command == "read-semantic-source":
+            from youtube_semantic_reader import read_source
+            result = read_source(app, args.package_manifest, args.run_manifest_sha256, args.source,
+                                 args.line, args.offset, args.max_lines, args.max_chars)
         elif args.command == "complete-semantic-run":
             result = app.complete_semantic_run(args.run_id, args.package_manifest)
         elif args.command == "sync":
@@ -2277,10 +2375,13 @@ def main() -> int:
             result = app.apply_approved_configuration_batch(args.proposal_id, args.actor, args.approval_reference)
         else:
             raise RuntimeError(f"Unsupported command: {args.command}")
-        print(json.dumps(result, ensure_ascii=False, indent=2))
+        print(json.dumps(result, ensure_ascii=args.command == "read-semantic-source", indent=2))
         return 0
     except Exception as exc:
-        print(json.dumps({"status": "failed", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
+        failure = json.dumps({"status": "failed", "error": str(exc)}, ensure_ascii=True)
+        if args.command in {"semantic-queue", "read-semantic-source"}:
+            print(failure)
+        print(failure, file=sys.stderr)
         return 1
 
 

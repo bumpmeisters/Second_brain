@@ -1,0 +1,215 @@
+{
+  "schema_format": "mos-declarative-schema/v1-draft",
+  "schema_id": "mos-cross-system-handoff/v1-draft",
+  "title": "Marketing Operating System Cross-System Handoff Envelope",
+  "status": "draft",
+  "purpose": "Machine-checkable structural and reference rules for a cross-system handoff. A valid envelope records authority; it does not create authority.",
+  "semantic_contract": {
+    "canonical_path": "projects/marketing-operating-system/contracts/cross-system-handoff-envelope.md",
+    "version": "0.2.0-draft",
+    "sha256": "EB0041B5338B76A7A698A3C5A1F3942EC88B3FC506CC7E4736D8343B99C79ED4"
+  },
+  "required_fields": [
+    "handoff_id",
+    "envelope_version",
+    "producer_system",
+    "consumer_system",
+    "source_project",
+    "authority_ref",
+    "decision_job",
+    "allowed_decision",
+    "prohibited_decisions",
+    "input_contract_ref",
+    "output_contract_ref",
+    "specialized_contract_ref",
+    "specialized_packet_ref",
+    "canonical_artifact_refs",
+    "evidence_state",
+    "freshness_state",
+    "refresh_trigger",
+    "approval_state",
+    "readiness_state",
+    "open_questions",
+    "escalation_owner",
+    "validator_ref",
+    "effect_mode",
+    "rollback_ref"
+  ],
+  "additional_fields": false,
+  "field_types": {
+    "handoff_id": "string",
+    "envelope_version": "string",
+    "producer_system": "string",
+    "consumer_system": "string",
+    "source_project": "string",
+    "authority_ref": "object",
+    "decision_job": "object",
+    "allowed_decision": "object",
+    "prohibited_decisions": "array",
+    "input_contract_ref": "object",
+    "output_contract_ref": "object",
+    "specialized_contract_ref": "object",
+    "specialized_packet_ref": "object",
+    "canonical_artifact_refs": "array",
+    "evidence_state": "string",
+    "freshness_state": "string",
+    "refresh_trigger": "string",
+    "approval_state": "string",
+    "readiness_state": "string",
+    "open_questions": "array",
+    "escalation_owner": "string",
+    "validator_ref": "object",
+    "effect_mode": "string"
+  },
+  "object_requirements": {
+    "authority_ref": [
+      "decision_id",
+      "canonical_path",
+      "sha256",
+      "decision_actor",
+      "decision_date",
+      "authorized_scope",
+      "approval_state"
+    ],
+    "decision": [
+      "id",
+      "description"
+    ],
+    "contract_ref": [
+      "contract_id",
+      "canonical_path",
+      "version",
+      "sha256",
+      "contract_owner"
+    ],
+    "specialized_packet_ref": [
+      "packet_id",
+      "canonical_path",
+      "version",
+      "sha256",
+      "packet_owner"
+    ],
+    "canonical_artifact_ref": [
+      "artifact_id",
+      "canonical_path",
+      "version",
+      "sha256",
+      "artifact_owner",
+      "approval_state",
+      "evidence_state",
+      "freshness_state"
+    ],
+    "validator_ref": [
+      "validator_id",
+      "result_state"
+    ],
+    "rollback_ref": [
+      "contract_id",
+      "canonical_path",
+      "version",
+      "sha256",
+      "contract_owner"
+    ]
+  },
+  "enums": {
+    "evidence_state": [
+      "sourced",
+      "inferred",
+      "hypothesis",
+      "needs-verification",
+      "contradicted",
+      "missing"
+    ],
+    "freshness_state": [
+      "current",
+      "unknown",
+      "stale"
+    ],
+    "approval_state": [
+      "approved",
+      "not-required",
+      "pending",
+      "held",
+      "rejected"
+    ],
+    "readiness_state": [
+      "ready",
+      "ready-with-hypotheses",
+      "blocked"
+    ],
+    "effect_mode": [
+      "non-mutating",
+      "state-changing"
+    ],
+    "validator_result_state": [
+      "pending",
+      "pass",
+      "block",
+      "error"
+    ]
+  },
+  "reference_fields": [
+    "authority_ref",
+    "input_contract_ref",
+    "output_contract_ref",
+    "specialized_contract_ref",
+    "specialized_packet_ref",
+    "canonical_artifact_refs",
+    "rollback_ref"
+  ],
+  "forbidden_payload_fields": [
+    "payload",
+    "specialized_packet",
+    "canonical_artifacts",
+    "content",
+    "body"
+  ],
+  "sha256_pattern": "^[A-F0-9]{64}$",
+  "legacy_unversioned_literal": "legacy-unversioned",
+  "not_applicable_literal": "not-applicable",
+  "reserved_upstream_decisions": [
+    "change-source-evidence",
+    "change-claim-status",
+    "change-market-definition",
+    "change-audience-definition",
+    "change-segmentation",
+    "change-positioning",
+    "change-brand-core",
+    "change-gtm-strategy",
+    "change-campaign-strategy",
+    "approve-publication",
+    "interpret-performance",
+    "promote-method"
+  ],
+  "readiness_rules": {
+    "blocking_evidence_states": [
+      "needs-verification",
+      "contradicted",
+      "missing"
+    ],
+    "hypothesis_evidence_states": [
+      "inferred",
+      "hypothesis"
+    ],
+    "blocking_freshness_states": [
+      "unknown",
+      "stale"
+    ],
+    "blocking_approval_states": [
+      "pending",
+      "held",
+      "rejected"
+    ]
+  },
+  "rules": [
+    "all references resolve within the vault and match their SHA-256 fingerprints",
+    "authority_ref scope contains the allowed decision and matches its authority record",
+    "canonical artifact ownership remains with the source project",
+    "producer and consumer must have active current authority and routing in the registry",
+    "allowed and prohibited decisions do not overlap and reserved upstream decisions are prohibited",
+    "declared readiness equals the conservative roll-up of artifact evidence, freshness, and approval",
+    "draft contracts cannot be asserted as active specialized contracts",
+    "state-changing handoffs require a resolvable rollback contract; non-mutating handoffs use not-applicable",
+    "references are pointers only; copied payload fields are forbidden"
+  ]
+}

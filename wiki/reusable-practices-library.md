@@ -2,6 +2,8 @@
 type: library
 status: active
 sources:
+  - wiki/_outputs/semantic-ingest/p55/evidence-matrix.csv
+  - wiki/_outputs/semantic-ingest/p47/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p11/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p12/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p13/evidence-matrix.csv
@@ -27,7 +29,7 @@ sources:
   - wiki/_outputs/semantic-ingest/p40/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p41/evidence-matrix.csv
 created: 2026-07-26
-updated: 2026-08-18
+updated: 2026-09-09
 ---
 
 # Reusable Practices Library
@@ -38,11 +40,18 @@ updated: 2026-08-18
 
 For token-efficient agent selection, read [[reusable-practices-router]] first and load only the smallest sufficient artifact set.
 
+## Implemented local research capability
+
+- [Company Intelligence workflow](../tools/company-intelligence/workflow.md) — canonical executable workflow for new company baselines, targeted follow-ups and reviewed context updates. Explicit integration authorized by Rolf on 2026-09-09; code and execution instructions remain in the existing tool package. The routing metadata is on that workflow, rather than a duplicate wiki method page. [Entry point and verification](../tools/company-intelligence/README.md). This is supervised project work, not semantic promotion or a scheduled service.
+
 ## AI work and adoption
+
+- `wiki/domain-expert-error-analysis-loop.md`
 
 - `wiki/ai-automation-foundation-and-separation-gate.md`
 - `wiki/reliable-ai-capability-rollout.md`
-- `wiki/repository-mining.md`
+- `wiki/ai-enabled-team-contraction-resilience-gate.md`
+- `wiki/repository-mining.md` - v2 adds the user-approved repository learning library and local `repository-analysis` skill; open learning and adoption fit are distinct. Examples: `repositories/index.md`.
 - `wiki/shared-human-agent-delegation-queue.md`
 - `wiki/cross-functional-ai-adoption-learning-loop.md`
 - `wiki/observable-capability-teach-back-loop.md`
@@ -108,6 +117,18 @@ For token-efficient agent selection, read [[reusable-practices-router]] first an
 - `wiki/career-aspiration-to-opportunity-loop.md`
 - `wiki/focused-talent-recruiting.md`
 
+## P57: freigegebene Framework-Referenzen
+
+| Artifact | Use when | Avoid when | Output |
+|---|---|---|---|
+| `wiki/perceptual-positioning-analysis.md` (draft, P57) | Eine empirische Wahrnehmungsfrage benötigt ein passendes Erhebungs- und Analyseverfahren. | Nur Anbietertexte oder interne Einschätzungen vorliegen. | Methodenentscheidung, Datenvertrag, überprüfbare Karte und Interpretationsgrenzen. |
+| `wiki/positioning-communication-audit.md` (draft, P57) | Ein abgegrenztes Kommunikationskorpus soll nachvollziehbar verglichen werden. | Tatsächliche Kundenwahrnehmung oder Leistungsfähigkeit aus Texten bewiesen werden soll. | Codierbuch, belegte Codierungen, Vergleich und Evidenzlücken. |
+| `wiki/distinctive-brand-assets-analysis.md` (draft, P57) | Markenelemente sollen auf Käufererkennung und eindeutige Markenzuordnung untersucht werden. | Gestaltergeschmack oder behauptete Produktüberlegenheit als Wiedererkennung gelten soll. | Asset-Inventar, Messplan oder Messbefund und begründete Pflegepriorität. |
+| `wiki/keller-brand-positioning.md` (draft, P57) | Eine zukünftige Markenposition soll auf Bezugsrahmen, Parität und relevante Unterschiede geprüft werden. | Ein ausgefülltes Schema als gemessene Markenstärke gelten soll. | Begründeter Bezugsrahmen, POP/POD-Prüfung und interne Mantra-Hypothese. |
+| `wiki/resonating-focus-value-proposition.md` (draft, P57) | Ein kundenspezifisches B2B-Nutzenversprechen soll auf entscheidende Vergleichsvorteile konzentriert werden. | Kundenprioritäten oder Vergleichsalternative unbekannt sind und eine bestätigte Aussage erwartet wird. | Belegte Nutzenargumentation mit Vergleich, Paritäten und offenen Streitpunkten. |
+| `wiki/value-proposition-design.md` (draft, P57) | Kundenaufgaben und Angebotsbeiträge müssen als prüfbare Passungshypothesen verbunden werden. | Ein ausgefüllter Canvas als Kundenbeleg oder Nachfragevalidierung gelten soll. | Priorisierter Canvas, Annahmenregister und separat vereinbarbarer Prüfplan. |
+| `wiki/nabc-value-proposition.md` (draft, P57) | Eine Nutzenidee soll als vergleichbare, kritisierbare Argumentation strukturiert werden. | Eine Pitch-Struktur als Nachweis tatsächlicher Nachfrage gelten soll. | NABC-Argumentation mit Vergleichsbelegen und priorisierten Wissenslücken. |
+
 ## Admission rule
 
 A promoted pattern or explicitly adopted pilot receives a standalone artifact only when the reviewed evidence supports all five elements:
@@ -123,6 +144,10 @@ Related evidence rows may share one artifact when they form the same executable 
 Directly reviewed pilots outside a semantic-ingest package must retain their source summary and decision-log provenance, remain visibly labeled until their own activation criteria are met, and must not imply semantic-ingest approval.
 
 ## Provenance
+
+### Directly reviewed addition · 2026-09-11
+
+- [Buying-Role Persona Analysis v0.1.0](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/audience-understanding/buying-role-persona-analysis.md), `draft`: Rollenbelege und Hypothesen in begründete Persona-Arbeitstypen für Marketing verdichten. [Quellenvergleich und erster 24-Feld-Pilot](buying-role-persona-frameworks.md); auf Rolfs ausdrücklichen Methoden-/Integrationsauftrag erstellt. Keine bestätigten Käuferprofile oder Routineaktivierung.
 
 The semantic-ingest retrospective mapping is recorded in `wiki/_outputs/p11-p15-reusable-artifact-retrospective-2026-07-26.md` (local-only); the original evidence matrices and their approval history remain unchanged. Directly reviewed additions retain provenance in their own source summary and in [[log]]. [[reference-calibrated-content-refinement-loop]] is currently the registered `draft` example of that second route.
 

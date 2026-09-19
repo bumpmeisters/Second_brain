@@ -1,0 +1,34 @@
+{
+  "envelope_contract": "g3e-exact-poststate-envelope/v1",
+  "snapshot_id": "g3e1-2b697f4996c9313c",
+  "authority_effect": "none-unless-separately-approved-and-invoked",
+  "row_count": 23,
+  "control_row_count": 11,
+  "mos_mutable_row_count": 12,
+  "replace_exact_count": 17,
+  "create_exact_count": 3,
+  "append_exact_count": 3,
+  "manifest": {
+    "canonical_path": "candidate/manifests/exact-poststate-manifest.csv",
+    "sha256": "4CBD5C5A62B494494E3925316734CDA2423E588195B18192D33A54F0A8428A75",
+    "bytes": 9309
+  },
+  "archive": {
+    "canonical_path": "candidate/poststate/exact-poststate.zip",
+    "sha256": "0BD0BA9E4A8E30A93DBAE02C1767F8145FD5581E0145DA2CBE06937C5C40C46F",
+    "bytes": 63915,
+    "entry_count": 23
+  },
+  "consumer_tool": {
+    "canonical_path": "candidate/tools/apply-exact-poststate.ps1",
+    "sha256": "A95E0DBB97A2E97A48EA2D3163EAA0B204C30B0A97AD521D67719727A5A76960",
+    "bytes": 11884
+  },
+  "bound_inputs": {
+    "component_posthashes_sha256": "5B6A59B13B72754E81E885845ECF9DC8C6F46B5308346B613DF6387508B70631",
+    "component_refactor_spec_sha256": "AE4F970EBAA319AB74FDEDBD45013B108C0B165DD1D39689036AC1C775A8EC0B",
+    "control_posthashes_sha256": "21CD260BD9056C764150D614202A754745128C784B45DE880F3BD088D04407E9",
+    "mos_posthashes_sha256": "70EA47A8D49C91B7160D98DFDF2E38DA640947F35B26BDDB5B9243F7503D4A57",
+    "wrapper_transition_manifest_sha256": "1DF0389F6EC504F98A0CB8063AFAD451A22C69EE9FC5D801581FF81B942925FC"
+  }
+}

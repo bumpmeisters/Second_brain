@@ -1,0 +1,17 @@
+{
+  "id": "W051",
+  "url": "https://sites0001.infolinks.com/press/the-psychology-of-banner-blindness",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:27.273292+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w051.json",
+  "title": "The Psychology of Banner Blindness",
+  "final_url": "https://sites0001.infolinks.com/press/the-psychology-of-banner-blindness",
+  "characters": 6245,
+  "sha256": "2f37aa3531ecc206756bddfd685685515383cc2cb72eb1641fef7e27bea3cf8c",
+  "http_status": 200
+}

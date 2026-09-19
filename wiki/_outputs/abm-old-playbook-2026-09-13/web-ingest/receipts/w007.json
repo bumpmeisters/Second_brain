@@ -1,0 +1,15 @@
+{
+  "id": "W007",
+  "url": "https://about.fb.com/ltam/wp-content/uploads/sites/14/2023/11/LeadGenerationGuide.pdf",
+  "research_briefs": [
+    "f01-targeting.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:56:16.965977+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w007.pdf",
+  "final_url": "https://about.fb.com/ltam/wp-content/uploads/sites/14/2023/11/LeadGenerationGuide.pdf",
+  "bytes": 13390635,
+  "sha256": "f774538f7dddc6e445a8ce190c0f6e7e474e2968b080ac021034691fae85a010"
+}

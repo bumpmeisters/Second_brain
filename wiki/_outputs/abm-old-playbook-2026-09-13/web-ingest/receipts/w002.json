@@ -1,0 +1,17 @@
+{
+  "id": "W002",
+  "url": "https://6sense.com/blog/the-great-b2b-gate-debate-is-over-dont-gate",
+  "research_briefs": [
+    "t03-lead-to-demand.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:37.937331+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w002.json",
+  "title": "The Great B2B Gate Debate… Is Over. Don’t Gate.   | 6sense",
+  "final_url": "https://6sense.com/blog/the-great-b2b-gate-debate-is-over-dont-gate/",
+  "characters": 18244,
+  "sha256": "5600ce15f106beedc050c9a469886bde15bb8cf7f7be8a881a7ff83b4442aa69",
+  "http_status": 200
+}

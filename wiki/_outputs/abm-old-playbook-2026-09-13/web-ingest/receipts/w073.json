@@ -1,0 +1,17 @@
+{
+  "id": "W073",
+  "url": "https://www.demandbase.com/resources/playbook/account-journey-setup-best-practices",
+  "research_briefs": [
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:42.080017+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w073.json",
+  "title": "Account Journey Setup Best Practices for GTM Teams",
+  "final_url": "https://www.demandbase.com/resources/playbook/account-journey-setup-best-practices/",
+  "characters": 27470,
+  "sha256": "2e6ddd63ddf536973b90a1d5a06abb5b13c9710d09cd65443d328eb536ef0c9b",
+  "http_status": 200
+}

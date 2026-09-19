@@ -1,5 +1,9 @@
 # YouTube Intelligence
 
+## Current scheduler contract — 2026-09-09
+
+Rolf approved the [integrated YouTube worker](youtube-integrated-worker.md): the existing daily 08:30 Codex automation now performs bounded weekly acquisition as well as backlog-first semantic review. The separate Windows collector and its baseline-before-installation dependency are superseded. Exact per-run manifests are still created, but bounded weekly selections no longer require another per-video approval. L2 remains staged-only; canonical promotion requires human approval. The older schedule/install statements below preserve the P35 implementation history.
+
 This is the operating contract for the hybrid YouTube intake pilot. It combines official subscription and metadata discovery with an explicitly separate caption-acquisition adapter. Both paths stop at source custody; neither path authorizes semantic review or claim promotion.
 
 ## Default scope
@@ -89,7 +93,7 @@ The SQLite database under `wiki/_outputs/youtube-intelligence/` is rebuildable o
 - Treat live and upcoming videos as not eligible. Announcements are not transcripts.
 - Refuse source-packet overwrite or path conflict.
 - Keep failed batch items resumable and record the failure in local state.
-- Space transcript requests and retry an HTTP 429 at most once after a bounded cooldown; never add proxy, cookie, or account-rotation evasion.
+- Follow the September 9 [caption safety amendment](youtube-integrated-worker.md): stop on the first HTTP 429, persist a minimum 24-hour cooldown, probe once after it expires, and never immediately retry. Successful admissions may proceed through immutable semantic snapshots. No proxy, cookie, or account-rotation evasion.
 - Do not silently fall back to audio extraction, cookies, proxies, or a logged-in browser session.
 
 ## Relationship to the Cole Medin reference repository
@@ -159,3 +163,11 @@ P35-W6R4 started on 2026-08-18 after a fresh sync found 171 subscriptions. Run `
 P43-P46 drained the remaining 74 FIFO sources. Their nine promotional evidence rows were consolidated, approved by Rolf, and applied as three approvals plus six qualified deltas across seven existing canonical pages; no new durable structure was created. P42-P46 pass recorded Final/Full validation, run `20260818T212926Z-188afb4b` is complete, and the semantic backlog is zero. Standing L3 authority remains disabled. Semantic backpressure is therefore no longer active, but another coverage capture still requires its own fresh exact manifest approval.
 
 The weekly Windows collector is not yet installed. Windows rejected the reviewed S4U/Limited task definition with `Access is denied` (HRESULT `0x80070005`), and inspection confirmed that no partial task exists. The pipeline therefore supports manual/control-center L1 runs and automatic L2 follow-up, but it does not yet initiate the Sunday collector automatically. An elevated one-time installation of `tools/install-youtube-intelligence-task.ps1` is required; no interactive-principal fallback or live capture was inferred.
+
+## Current-video discovery radar
+
+On 2026-08-21, Rolf approved a separate read-only vertical slice for discovering very recent public videos and channels outside the subscribed-channel inventory. The slice uses five versioned YouTube API search lanes, prefers the latest 24 hours inside a 72-hour fallback window, deduplicates exact video IDs against the current operational database and source-selection register, and can record one create-only immutable metadata manifest for later evaluation.
+
+The discovery radar has its own policy, output directory, and SQLite state. It does not add external channels to the existing `channels` table or candidates to the existing acquisition queue. Scheduling remains disabled. The first manual read-only API inspection passed on 2026-08-21: 92 unique raw results produced 68 metadata candidates, including 22 from the primary 24-hour window; no file or state row was written. Rolf then approved a deterministic model-review budget of at most 30 candidates per day: the primary 24-hour pool is consumed before the fallback pool, no channel contributes more than two videos, and selection rotates across all five search lanes.
+
+A same-day calibration run then exercised the complete review boundary against 69 filtered candidates. Its exact 30-item selection contained 23 primary and seven fallback candidates. The model receipt keeps five score components separate from eligibility, trust, claim risk, rationale, and uncertainty. The validator requires exact manifest and policy provenance, complete one-time candidate coverage, valid component totals, create-only receipt identity, at most five threshold-qualified video proposals, and at most two channel proposals backed by recommended videos. The exact run completed after all checks passed, producing five video and two channel proposals. Two later-day stability inspections, human review of the calibration rubric and proposals, and explicit activation approval remain before the 14-day schedule may be enabled. See `docs/plans/2026-08-21-001-feat-youtube-discovery-radar-pilot-plan.md`.

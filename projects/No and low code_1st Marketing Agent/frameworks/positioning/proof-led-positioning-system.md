@@ -3,9 +3,9 @@ framework: proof-led-positioning-system
 domain: positioning
 type: composite
 status: active
-version: 1.0.0
+version: 1.0.1
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-09-14
 source-confidence: high
 ---
 
@@ -102,6 +102,14 @@ Applied in MirrorSoft message-house and approved-claim work.
 ## Evolution Triggers
 
 Revise when positioning fails audience resonance, proof sufficiency, or downstream usability.
+
+## P57: genehmigte Quellen- und Schnittstellenpräzisierung
+
+Die bestehende aktive lokale Komposition bleibt project adaptation. Quellenvertrauen bedeutet keine empirische Validierung ihrer Gesamtkette. Drei getrennte Belegspuren: kommunizierte Positionierung ([[positioning-communication-audit]]), tatsächliche Wahrnehmung ([[perceptual-positioning-analysis]]) und zukünftige Optionen ([[keller-brand-positioning]], [[value-proposition-analysis]]).
+
+AI-Rangfolgen, Fragekataloge und Gesamtpipeline bleiben Vorschläge, keine verbindlichen Originalmethoden oder automatisch aktiven Regeln. Bestehende Anwendungshinweise bleiben erhalten; sie beweisen keine kausale Wirksamkeit.
+
+Auditspur: (source: research/2026-09-14-framework-source-verification-p57.md), sekundäre Prüfungszusammenstellung; [[_outputs/semantic-ingest/p57/source-bundle]].
 
 ## Sources And Provenance
 

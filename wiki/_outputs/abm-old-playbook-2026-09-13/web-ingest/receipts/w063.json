@@ -1,0 +1,17 @@
+{
+  "id": "W063",
+  "url": "https://support.6sense.com/v1/docs/company-identification-api-faq",
+  "research_briefs": [
+    "f05-dark-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:39.422570+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w063.json",
+  "title": "Company Identification API FAQ",
+  "final_url": "https://support.6sense.com/docs/company-identification-api-faq",
+  "characters": 5329,
+  "sha256": "9d81bc994b1212638e12d4d8d63f63054d8dee4cca9e63d25cf1cd6ea0e92e28",
+  "http_status": 200
+}

@@ -1,0 +1,469 @@
+[
+  {
+    "attempt": 1,
+    "attempt_id": "41a69521898249d3a8a36e7f7a6d9b71",
+    "attempts": [
+      {
+        "attempt_id": "41a69521898249d3a8a36e7f7a6d9b71",
+        "input_revision": 1,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 1
+        },
+        "started_at": "2026-09-09T19:46:20.467555+00:00"
+      }
+    ],
+    "completion_criterion": "Three reports covered or specific availability gaps; revenue and employee series accurately scoped.",
+    "dependencies": [],
+    "fact_ids": [
+      "F-WORKFORCE"
+    ],
+    "id": "P01",
+    "input_revision": 1,
+    "lease_expires": 1788986780.4675553,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Identify the latest three available complete annual reports and extract comparable company metrics with exact definitions and locators.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "294c55fc7e0ed7139ff5f1a43d8d43528322e8210ed7a9cb7f6350332eed3d6f",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P01.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.495516+00:00",
+      "fact_reviews": [
+        {
+          "fact_id": "F-WORKFORCE",
+          "locator": "Section workforce",
+          "rationale": "Matches the named fixture section.",
+          "source_id": "S1",
+          "verdict": "verified"
+        }
+      ],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P01",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "58ad5fa4a5d444e08e31f3a33d36833f",
+    "attempts": [
+      {
+        "attempt_id": "58ad5fa4a5d444e08e31f3a33d36833f",
+        "input_revision": 5,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:20.524518+00:00"
+      }
+    ],
+    "completion_criterion": "Group, brand and legal entities distinguished with source evidence.",
+    "dependencies": [],
+    "fact_ids": [
+      "F1"
+    ],
+    "id": "P02",
+    "input_revision": 5,
+    "lease_expires": 1788986780.5245187,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Verify target company identity, legal form, ownership and material legal entities from official sources.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "167d3a5f4b5c0ba2c165feb2fa829c5e7f95a73215c3dc19fdb5fae649841fee",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P02.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.549711+00:00",
+      "fact_reviews": [
+        {
+          "fact_id": "F1",
+          "locator": "Section identity",
+          "rationale": "Matches the named fixture section.",
+          "source_id": "S1",
+          "verdict": "verified"
+        }
+      ],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P02",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "252d45dfb95142dc986f9a70a61d620d",
+    "attempts": [
+      {
+        "attempt_id": "252d45dfb95142dc986f9a70a61d620d",
+        "input_revision": 9,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:20.581747+00:00"
+      }
+    ],
+    "completion_criterion": "Current operating structure and dated geographic coverage recorded with limitations.",
+    "dependencies": [],
+    "fact_ids": [],
+    "id": "P03",
+    "input_revision": 9,
+    "lease_expires": 1788986780.5817473,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Map operating business areas, regions and geographic presence; distinguish markets from owned sites.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "c4b6ae2d8c33b2e7f24ce7ea43d0e764438d9b152534e77a17697ce629343494",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P03.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.609749+00:00",
+      "fact_reviews": [],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P03",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "523839e3a4604765b1e90aff908e455a",
+    "attempts": [
+      {
+        "attempt_id": "523839e3a4604765b1e90aff908e455a",
+        "input_revision": 13,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:20.642713+00:00"
+      }
+    ],
+    "completion_criterion": "Source-near offering overview with descriptions, regions and references.",
+    "dependencies": [
+      "P03"
+    ],
+    "fact_ids": [],
+    "id": "P04",
+    "input_revision": 13,
+    "lease_expires": 1788986780.642713,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Map published offering navigation, service families and explicitly named products without selecting a strategic focus.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "edcb17bf7ed5ff073762a299c8f799dec3bbd99f6ce5031a1d28456db041fa53",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P04.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.668265+00:00",
+      "fact_reviews": [],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P04",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 0,
+    "attempt_id": null,
+    "attempts": [],
+    "completion_criterion": "Named offering gaps resolved or bounded after the allowed search routes.",
+    "dependencies": [
+      "P04"
+    ],
+    "id": "P05",
+    "input_revision": null,
+    "lease_expires": null,
+    "max_attempts": 3,
+    "optional": true,
+    "owner": null,
+    "question": "Resolve specific missing offering definitions through additional official product or service documents.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": null,
+    "review": null,
+    "skip_reason": "Synthetic two-field workflow fixture has no additional offering or community question.",
+    "source_ids": [],
+    "status": "skipped"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "5534e6f193c64dbc9e44914b493613c3",
+    "attempts": [
+      {
+        "attempt_id": "5534e6f193c64dbc9e44914b493613c3",
+        "input_revision": 17,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:20.703261+00:00"
+      }
+    ],
+    "completion_criterion": "Short dated chronology separating events, company explanations and analyst interpretation.",
+    "dependencies": [
+      "P01",
+      "P02",
+      "P03"
+    ],
+    "fact_ids": [],
+    "id": "P06",
+    "input_revision": 17,
+    "lease_expires": 1788986780.7032611,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Verify material developments in the report period and afterward: completed or announced acquisitions, disposals, restructuring and strategic changes.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "bed727d8b787e67f01d774364cb6ffe5d1f4ba145941ae403520e9814d0920db",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P06.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.731264+00:00",
+      "fact_reviews": [],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P06",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "733402ef7b34465f90a0dd4bfb84f749",
+    "attempts": [
+      {
+        "attempt_id": "733402ef7b34465f90a0dd4bfb84f749",
+        "input_revision": 21,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:20.768230+00:00"
+      }
+    ],
+    "completion_criterion": "Independent evidence or explicit search/availability limits recorded.",
+    "dependencies": [
+      "P01",
+      "P02",
+      "P03"
+    ],
+    "fact_ids": [],
+    "id": "P07",
+    "input_revision": 21,
+    "lease_expires": 1788986780.7682302,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Find useful independent reporting and company analyses; check provenance and contradictions rather than repeating press releases.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "68017a7d8b0c224ab8d5d429b44980ae76234267389833d813e0190e750c8f85",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P07.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.796262+00:00",
+      "fact_reviews": [],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P07",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  },
+  {
+    "attempt": 0,
+    "attempt_id": null,
+    "attempts": [],
+    "completion_criterion": "Each requested cross-check has evidence or a specific unresolved limit.",
+    "dependencies": [
+      "P02",
+      "P04",
+      "P07"
+    ],
+    "id": "P08",
+    "input_revision": null,
+    "lease_expires": null,
+    "max_attempts": 3,
+    "optional": true,
+    "owner": null,
+    "question": "Resolve concrete remaining identity, accreditation or service-scope questions against relevant institutional sources.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": null,
+    "review": null,
+    "skip_reason": "Synthetic two-field workflow fixture has no additional offering or community question.",
+    "source_ids": [],
+    "status": "skipped"
+  },
+  {
+    "attempt": 0,
+    "attempt_id": null,
+    "attempts": [],
+    "completion_criterion": "At most three relevant community sources or an explained no-additional-value result.",
+    "dependencies": [
+      "P04",
+      "P07"
+    ],
+    "id": "P09",
+    "input_revision": null,
+    "lease_expires": null,
+    "max_attempts": 3,
+    "optional": true,
+    "owner": null,
+    "question": "Inspect a bounded community sample for relevant supplementary questions; do not infer representative sentiment or company-wide quality.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": null,
+    "review": null,
+    "skip_reason": "Synthetic two-field workflow fixture has no additional offering or community question.",
+    "source_ids": [],
+    "status": "skipped"
+  },
+  {
+    "attempt": 1,
+    "attempt_id": "143d8aefac8749dc938c8dd69a5a9890",
+    "attempts": [
+      {
+        "attempt_id": "143d8aefac8749dc938c8dd69a5a9890",
+        "input_revision": 28,
+        "owner": "fixture-reader",
+        "reservation": {
+          "annual_report": 0,
+          "community": 0,
+          "searches": 0,
+          "supplementary": 0
+        },
+        "started_at": "2026-09-09T19:46:20.880231+00:00"
+      }
+    ],
+    "completion_criterion": "Source-specific review, core coverage and downstream-use result recorded with honest limitations.",
+    "dependencies": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09"
+    ],
+    "fact_ids": [],
+    "id": "P10",
+    "input_revision": 28,
+    "lease_expires": 1788986780.8802314,
+    "max_attempts": 3,
+    "next_question": null,
+    "optional": false,
+    "owner": "fixture-reader",
+    "problems": [],
+    "question": "Review the accumulated core findings against actual sources, resolve contradictions and test whether the context can support the next offering-analysis task.",
+    "reservation": {
+      "annual_report": 0,
+      "community": 0,
+      "searches": 0,
+      "supplementary": 0
+    },
+    "result_hash": "db6bf1ee37eb14e9cffd9a4a58935b30842975361126aa26e5fc09611c516b2a",
+    "result_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\results\\P10.json",
+    "review": {
+      "at": "2026-09-09T19:46:20.913205+00:00",
+      "fact_reviews": [],
+      "independent": false,
+      "rationale": "Fixture source and exact locator checked; claims are explicitly fictional.",
+      "reviewer": "scripted-fixture-review",
+      "task_id": "P10",
+      "verdict": "pass"
+    },
+    "source_ids": [],
+    "status": "done"
+  }
+]

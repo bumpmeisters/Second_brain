@@ -14,6 +14,7 @@ $vaultRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $target = [IO.Path]::GetFullPath($(if ([IO.Path]::IsPathRooted($Path)) { $Path } else { Join-Path $vaultRoot $Path }))
 if (-not $target.StartsWith($vaultRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw "Target is outside the vault: $Path" }
 $relative = $target.Substring($vaultRoot.Length + 1).Replace('\', '/')
+if ($relative -match '^repositories/[^/]+/(snapshots|manifests)/') { throw "Protected repository source cannot be edited: $relative" }
 foreach ($root in @('raw/', 'research/assets/')) {
     if ($relative.StartsWith($root, [StringComparison]::OrdinalIgnoreCase)) { throw "Protected source path cannot be edited: $relative" }
 }

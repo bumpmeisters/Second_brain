@@ -1,0 +1,15 @@
+{
+  "id": "W071",
+  "url": "https://www.davidreiley.com/papers/OnlineAdsOfflineSales.pdf",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:36.592668+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w071.pdf",
+  "final_url": "https://www.davidreiley.com/papers/OnlineAdsOfflineSales.pdf",
+  "bytes": 1410912,
+  "sha256": "876b3170e6c88d73b87b4967cd15148dc62f261cc69a6e0f2ed58a32b30dac57"
+}

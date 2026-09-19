@@ -1,0 +1,1290 @@
+[
+  {
+    "id": "W049",
+    "url": "https://schema.org/Service",
+    "title": "Service - Schema.org Type",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w049.json",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Offizielles Vokabular trennt Leistungsbeschreibung von Plattformwirkung.",
+    "key_claims": [
+      "Service bezeichnet eine von einer Organisation erbrachte Leistung.",
+      "Eigenschaften umfassen Anbieter, Leistungsregion, Zielgruppe, Zugangskanal und Leistungsoutput."
+    ],
+    "caveats": [
+      "Development-Version; Beispiele nicht vollständig geprüft.",
+      "Semantische Definition, kein Beleg für Ranking, Zitation oder Umsatz."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E09"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W050",
+    "url": "https://sites0001.infolinks.com/press/study-86-percent-of-customers-suffer-from-banner-blindness",
+    "title": "Study: 86% of Consumers Suffer From Banner Blindness",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w050.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Historische Herkunft der 86-Prozent-Zahl ermöglicht Korrektur ihres Messgegenstands.",
+    "key_claims": [
+      "Infolinks meldet am 19.03.2013, nur 14 Prozent der Befragten hätten letzte Displayanzeige und beworbenes Unternehmen/Produkt erinnert.",
+      "2,8 Prozent hielten die gesehene Anzeige für relevant; die Hälfte gab an, nie Onlineanzeigen anzuklicken."
+    ],
+    "caveats": [
+      "Proprietäre Anbieterbefragung; Stichprobe und Fragebogen fehlen.",
+      "Erinnerung ist weder Blickkontakt noch Werbewirkung; keine aktuelle B2B-Quote."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W051",
+    "url": "https://sites0001.infolinks.com/press/the-psychology-of-banner-blindness",
+    "title": "The Psychology of Banner Blindness",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w051.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Zeigt Verschiebung derselben Zahlenbehauptung von Erinnerung zu automatischem Ignorieren.",
+    "key_claims": [
+      "Der Beitrag vom 28.02.2014 erklärt Bannerblindheit als erlernte Vermeidung typischer Werbeflächen.",
+      "Er schreibt bis zu 86 Prozent automatisches Ignorieren Standardanzeigen zu und verweist auf die eigene frühere Studie."
+    ],
+    "caveats": [
+      "Keine überprüfbare Methodik für die Blick-/Gewohnheitsbehauptung.",
+      "Die 86-Prozent-Darstellung weicht vom Erinnerungsmaß des Beitrags W050 ab.",
+      "Anbieterargument für relevante Werbung, kein Kausaltest."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W053",
+    "url": "https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360",
+    "title": "2024 Zero-Click Search Study: For every 1,000 EU Google Searches, only 374 clicks go to the Open Web. In the US, it’s 360. - SparkToro",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w053.json",
+    "trust_class": "sponsored-research",
+    "read_scope": "full-main-text",
+    "value_reason": "Methodik und Nenner erklären Zero-Click und verhindern Verwechslung mit Ad-CTR.",
+    "key_claims": [
+      "Datos/SparkToro melden für 2024 58,5 Prozent Zero-Click in den USA und 59,7 Prozent in der EU.",
+      "Der Haupttext nennt 360 Open-Web-Klicks pro 1.000 US-Suchen und 374 pro 1.000 EU-Suchen.",
+      "Zero-Click umfasst Sitzung beendet oder neue Suchanfrage; mehrere Klicks pro Suche sind möglich."
+    ],
+    "caveats": [
+      "URL vertauscht US/EU gegenüber Titel und Haupttext; Haupttext maßgeblich.",
+      "Gewichtetes Clickstream-Panel, iPhones nicht enthalten; Mobile nur Januar–Mai 2024.",
+      "Keine kontrollierte AI-Wirkungsstudie; eingebettete Grafiken nicht visuell geprüft."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E15"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W054",
+    "url": "https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click",
+    "title": "In 2026, Less than One Third of Google Searches Still Send a Click - SparkToro",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w054.json",
+    "trust_class": "sponsored-research",
+    "read_scope": "full-main-text",
+    "value_reason": "Aktuelle Panelmethodik und explizite Vergleichsgrenzen für Zero-Click-Trend.",
+    "key_claims": [
+      "Similarweb/SparkToro melden 68,01 Prozent klicklose US-Google-Suchen Januar–April 2026.",
+      "Analyse gewichtet Mobile zu zwei Dritteln und Desktop zu einem Drittel; mobile Sitzung endet nach zehn Sekunden Inaktivität.",
+      "Historische Reihe kombiniert Jumpshot, Datos und Similarweb statt identischer Personen/Geräte."
+    ],
+    "caveats": [
+      "Google-Suchapp ausgeschlossen; mobile Paid-Klicks aus externem Verhältnis geschätzt.",
+      "Text verwendet wechselnde 2024-Baselines und fehlerhafte relative 45→68-Prozent-Rechnung; nicht unkritisch übernehmen.",
+      "AI-Verursachung ist Autoreninterpretation, kein isolierter Interventionseffekt; Marketingempfehlungen vom Befund trennen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E15"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W055",
+    "url": "https://spideraf.com/articles/fraud-bots-what-they-are-how-they-drain-your-ad-budget-and-how-to-stop-them",
+    "title": "Fraud Bots: 2025 Playbook to Cut Click Waste| Spider Af Articles",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w055.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Explizite unterschiedliche Nenner hinter Bot-, IVT- und Verlustzahlen.",
+    "key_claims": [
+      "Spider AF nennt 5,1 Prozent durchschnittliche Ad-Fraud-Rate auf gemessenen Web-Werbeplattformen 2024 und bis 46,9 Prozent in einzelnen Netzwerken.",
+      "Botaktivität stellt laut Beitrag 6,9 Prozent der ungültigen Klicks, nicht aller Zielgruppenprofile.",
+      "Der Beitrag beschreibt falsche Konversionen als möglichen Eingang fehlerhafter Optimierung und empfiehlt nachvollziehbare Invalid-Click-Logs."
+    ],
+    "caveats": [
+      "Anbieterblog mit Produktwerbung; zugrundeliegendes Whitepaper hier nicht geprüft.",
+      "Globale Verlusthochrechnung und Fallstudien-Uplifts sind keine allgemeine Kampagnenwirkung.",
+      "Internettraffic, Requests, Klicks und Budgetanteile bleiben getrennte Messgegenstände; regulatorische Aussagen nicht rechtlich geprüft."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W056",
+    "url": "https://spideraf.com/es/articles/tendencias-de-fraude-publicitario-en-2025-amenazas-clave-y-como-combatirlas",
+    "title": "Tendencias de fraude publicitario en 2025 | Spider AF",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w056.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Ergänzt Stichprobenumfang und Herkunft des Extremwerts.",
+    "key_claims": [
+      "Der spanische Beitrag nennt 4,15 Milliarden Ad-Klicks in sieben Ländern 2024 als Datenscope.",
+      "Er nennt 46,9 Prozent als Extremwert bestimmter Netzwerke, 5,1 Prozent als global bezeichneten Durchschnitt.",
+      "Fake-Lead-Raten werden mit 4,06 Prozent organisch und 0,91 Prozent bezahlt berichtet."
+    ],
+    "caveats": [
+      "Anbieterartikel, aktualisiert April 2026 mit 2025-Titel; Whitepaper nicht unabhängig geprüft.",
+      "Behauptung über mehr als halbe Branchenbudgets passt nicht ohne weiteres zu den separat genannten Branchenmittelwerten.",
+      "Verlustprognosen und Produktfallstudien nicht als belastbare Marktbenchmarks übernehmen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W057",
+    "url": "https://support.6sense.com/docs/6sense-product-glossary",
+    "title": "6sense Product Glossary",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w057.json",
+    "trust_class": "vendor",
+    "read_scope": "partial",
+    "value_reason": "Begriffliche Primärbeschreibung mit deutlicher Unternehmens-/Personengrenze.",
+    "key_claims": [
+      "6signal Graph und WebTag identifizieren laut Glossar Unternehmen, nicht Individuen.",
+      "6QA, Account-Fit, Buying Stage und Relevant Opportunity sind getrennte Produktbegriffe.",
+      "ABX wird als koordinierte Ansprache durch Marketing, Sales und Customer Success beschrieben."
+    ],
+    "caveats": [
+      "Glossar teilweise geprüft: allgemeine, Revenue-Marketing- und Sales-Intelligence-Begriffe; übrige Produktbegriffe nicht vollständig.",
+      "Vereinfachende Glossardefinitionen ersetzen detaillierte 6QA-Konfiguration nicht; keine Modellgüte."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E04"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W058",
+    "url": "https://support.6sense.com/docs/6sense-qualified-accounts-6qas",
+    "title": "6sense Qualified Accounts (6QAs)",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w058.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Konkrete Statuspersistenz und Mehrfachqualifikation schärfen Initiative- und Messvertrag.",
+    "key_claims": [
+      "6QA priorisiert von 6sense gemasterte Accounts zur SDR/BDR-Übergabe; keine CRM-Opportunity.",
+      "Standardqualifikation verbindet Decision/Purchase der letzten 60 Tage, Strong/Moderate Fit und Ausschluss jüngst erstellter/verlorener Opportunities.",
+      "Regeln werden pro Produkt/GTM-Segment konfiguriert; ein Account kann durch mehrere Konfigurationen qualifizieren.",
+      "6QA kann trotz abgefallener Buying Stage 60 Tage bestehen; neue Konfiguration überschreibt bisherige Qualifikationsbasis."
+    ],
+    "caveats": [
+      "Produktregeln/Versionsstand Juni 2026, kein Nachweis tatsächlicher Kaufabsicht.",
+      "Ein einzelnes Statusflag und Segmentüberlappung können mehrere Gründe verdecken; Reporting muss Konfiguration berücksichtigen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E04",
+      "E05"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W059",
+    "url": "https://support.6sense.com/docs/custom-fields-for-predictive-score-orchestrations",
+    "title": "Custom Fields for Predictive Score Orchestrations",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w059.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Datenvertrag unterscheidet individuelle Aktivität, Accountmuster, Modell und Aktualität.",
+    "key_claims": [
+      "Dokumentation führt getrennte Lead-, Contact- und Accountfelder für Intent und Profile Fit.",
+      "Account-Intent misst Ähnlichkeit des Verhaltens zu Accounts mit historisch eröffneten Opportunities; Kontaktintent erstparteiliches Engagement gegenüber früheren Käufern.",
+      "Mehrere Modelle benötigen produktkategoriespezifische Felder; Update-Datum und 6QA-Start/Ende/Alter sind gesondert vorgesehen."
+    ],
+    "caveats": [
+      "Felddefinitionen belegen Bedeutung, nicht Kalibrierung oder Prognosequalität.",
+      "Narrative Purchase-Beschreibung klingt verbindlicher als die tatsächliche verhaltensbasierte Kategorisierung; nicht als bestätigten Kauf lesen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E04"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W060",
+    "url": "https://support.6sense.com/docs/intent-model",
+    "title": "Intent Model",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w060.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Präzises Prognoseziel statt Gleichsetzung Score mit Kaufabsicht.",
+    "key_claims": [
+      "Intentmodell nutzt CRM ohne Task/Event, MAP, Web, B2BN-Keywords und Drittanbieteraktivität.",
+      "Konkretes Modellziel ist die Wahrscheinlichkeit einer Opportunity-Eröffnung in den nächsten 90 Tagen.",
+      "Score 0–100 wird täglich aktualisiert und speist Buying Stages sowie 6QA."
+    ],
+    "caveats": [
+      "Einleitende Kaufinteresse-Formulierung ist breiter als das definierte Opportunity-Ziel.",
+      "Keine Kalibrierungswerte, Fehlerraten oder kausalen Vertriebseffekte veröffentlicht."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E04"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W061",
+    "url": "https://support.6sense.com/docs/match-rates-vpns-and-firewalls",
+    "title": "Match Rates, VPNs, and Firewalls",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w061.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Konkrete Identitäts- und Standortfehlerquellen für Signalinterpretation.",
+    "key_claims": [
+      "Corporate VPN kann Unternehmensmatching erleichtern, aber Standortdaten verzerren.",
+      "Private oder wechselnde VPN-Adressen können Matchconfidence senken; Cookie-/Device-Signale ergänzen IP-Matching.",
+      "Firewall maskiert laut Anbieter im Allgemeinen keine IP-Adresse."
+    ],
+    "caveats": [
+      "Text widerspricht sich zur Priorisierung: Cookie-Layer vor IP versus kein Identifier standardmäßig priorisiert.",
+      "Keine empirischen Matchraten; Aussagen zu Anonymität/Personen nicht über Company-Matching hinaus verallgemeinern."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E04",
+      "E13"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W062",
+    "url": "https://support.6sense.com/docs/predictive-buying-stages",
+    "title": "Predictive Buying Stages",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w062.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Stageetikett und Messziel explizit auseinanderhalten.",
+    "key_claims": [
+      "Buying Stages geben geschätzte Chance auf Opportunity-Eröffnung/Fortschritt binnen 90 Tagen an.",
+      "Scorebänder reichen von Target 0–19 über Awareness 20–49, Consideration 50–69 und Decision 70–85 bis Purchase 86–100.",
+      "Purchase bezeichnet im Detail Accounts, die besonders wahrscheinlich bald eine Opportunity eröffnen."
+    ],
+    "caveats": [
+      "Purchase ist kein bestätigter Kauf und Stage kein objektiv beobachteter Journeyzustand.",
+      "Anbieterempfehlungen zu Aktivierung und höhere Konversionen ohne hier offengelegte Validierungsdaten."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E04",
+      "E05"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W063",
+    "url": "https://support.6sense.com/v1/docs/company-identification-api-faq",
+    "title": "Company Identification API FAQ",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w063.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Expliziter Nenner und Fehlzuordnungsbeispiele machen Matchquote auditierbar.",
+    "key_claims": [
+      "Usage-Matchrate ist Actionable Matches geteilt durch sämtliche API-Aufrufe.",
+      "Mobilfunk kann als Mobilfunkanbieter gematcht werden; Bürofehlzuordnungen können aus Vormietern/geteilten IP-Blöcken entstehen.",
+      "Non-actionable Matches umfassen nicht zuverlässig Unternehmen zuordenbare Bots, VPNs, Proxys und Cloudverkehr.",
+      "Bis 75 Prozent Matchrate wird nur für passende überwiegend US-B2B-Software/Tech-Websites als Möglichkeit genannt."
+    ],
+    "caveats": [
+      "Anbieterselbstauskunft, keine unabhängige Genauigkeitsmessung.",
+      "Ein Match ist keine belegte Identität einer Person oder vollständige Kaufjourney; Matchrate und Präzision verschieden."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E04",
+      "E13"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W064",
+    "url": "https://support.google.com/analytics/answer/10596866",
+    "title": "Get started with attribution - Analytics Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w064.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Korrigiert pauschale Direct-Überbewertung und präzisiert Attribution.",
+    "key_claims": [
+      "GA4-Attribution verteilt Gutschrift für Key Events auf beobachtete Touchpoints nach Modell.",
+      "Alle genannten Modelle schließen Direct vom Credit aus, außer der Pfad besteht vollständig aus Direct.",
+      "Data-driven Attribution nutzt konvertierende/nichtkonvertierende Pfade; Google beschreibt Gegenfaktualmodelle mit Daten aus randomisierten Holdbacks."
+    ],
+    "caveats": [
+      "Produktmethodik ist kein Beleg für vollständige Journeybeobachtung oder einen lokalen Experimentaleffekt.",
+      "Nicht pauschal als rein willkürliche Regel oder als umfassende Kausalrekonstruktion darstellen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E13"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W065",
+    "url": "https://support.google.com/analytics/answer/15258820?hl=en",
+    "title": "[GA4] Understand (direct) / (none) traffic - Analytics Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w065.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Offizielle alternative Erklärungen für unzugeordneten Traffic.",
+    "key_claims": [
+      "Direct/none bezeichnet Traffic ohne eindeutige Referralquelle.",
+      "Fehlende UTM-/Integrationsdaten, Redirects, Offline-Dokumentlinks und Adblocker können Direct/none erzeugen."
+    ],
+    "caveats": [
+      "Kategorie erlaubt keine eindeutige Rückrechnung auf Dark Social, Bekanntheit oder eine konkrete verlorene Quelle."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E13"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W066",
+    "url": "https://support.google.com/google-ads/answer/11182074?hl=en",
+    "title": "About invalid traffic - Google Ads Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w066.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Starker Primärbeleg gegen Gleichsetzung erkannter IVT mit endgültigem Budgetverlust.",
+    "key_claims": [
+      "Google trennt vor Rechnungsabschluss entfernten Invalid Traffic und später gegebenenfalls gutgeschriebene Invalid Activity.",
+      "Invalid-Clicks-Spalte und Credits zählen verschiedene Vorgänge; historische Kampagnenmetriken bleiben nach Monatsende eingefroren, Credit Report bietet Anpassung.",
+      "Gefilterte Ad-Klicks können Website/Formular dennoch erreichen; Leadvalidierung bleibt separate Aufgabe.",
+      "Ungültige Aktivität umfasst Bots, Fehlklicks und absichtliche menschliche Manipulation; eine normale universelle IVT-Quote wird verneint."
+    ],
+    "caveats": [
+      "Betreiberselbstauskunft zu eigenen Schutzmechanismen, keine Garantie vollständiger Erkennung.",
+      "Spezifische Detektionskriterien werden nicht offengelegt; Drittanbieterzahlen sind ohne Definitionsabgleich nicht vergleichbar."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W067",
+    "url": "https://support.google.com/google-ads/answer/2454071?hl=en-AU",
+    "title": "About columns in your statistics table - Google Ads Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w067.json",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Dokumentierte Metrikdefinitionen zur Vergleichbarkeit.",
+    "key_claims": [
+      "Impression zählt Anzeigenausspielung; Interactions variieren nach Format etwa Klicks oder Videoviews.",
+      "Invalid Clicks sind klassifizierte, gefilterte und nicht berechnete Klicks.",
+      "Relative CTR vergleicht eigene CTR mit durchschnittlicher CTR anderer Werber derselben Placements."
+    ],
+    "caveats": [
+      "Nur relevante Messdefinitionen geprüft, nicht jede Setup-/Gebotsspalte.",
+      "Spaltennamen allein gewährleisten keine vergleichbaren Populationen oder geschäftliche Wirkung."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E02",
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W068",
+    "url": "https://support.google.com/google-ads/answer/7029393?hl=en",
+    "title": "Understanding viewability and Active View reporting metrics - Google Ads Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w068.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Präzise Expositionsgrenzen und unterschiedliche Nenner.",
+    "key_claims": [
+      "Viewability verlangt bei gewöhnlichen Displayanzeigen mindestens 50 Prozent Fläche für eine Sekunde; bei Video zwei Sekunden.",
+      "Active View garantiert ausdrücklich nicht, dass der Nutzer auf den Bildschirm schaut.",
+      "Viewable Rate verwendet messbare Impressionen; Viewable Impression Distribution sämtliche Impressionen, einschließlich nicht messbarer."
+    ],
+    "caveats": [
+      "Große Displayanzeigen ab 242.500 Pixeln haben 30-Prozent-Ausnahme.",
+      "Nicht messbar bedeutet weder sichtbar noch unsichtbar; keine Aufmerksamkeits- oder Umsatzwirkung."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E12",
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W069",
+    "url": "https://support.google.com/webmasters/answer/16908024",
+    "title": "Search generative AI control - Search Console Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w069.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Aktuelle Trennung von Inclusion, Vererbung und Training.",
+    "key_claims": [
+      "Search-Generative-AI-Control umfasst AI Overviews, AI Mode und generative Discover-Funktionen.",
+      "Inclusion ist Standard; Child Properties können erben oder eigene Einstellung verwenden.",
+      "Die Steuerung betrifft Ausspielungsberechtigung, nicht AI-Training; dafür verweist Google auf Google-Extended."
+    ],
+    "caveats": [
+      "Lebende Betreiberhilfe nennt weltweiten Rollout 31.08.2026; konkrete Property nicht geprüft.",
+      "Berechtigung garantiert keine Ausspielung; Änderungen können wegen Cache/Propagation verzögert wirken."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E09"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W070",
+    "url": "https://support.google.com/webmasters/answer/16984139",
+    "title": "Generative AI performance report (Search) - Search Console Help",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w070.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Aktueller Messscope und Export-/Aggregationsgrenzen.",
+    "key_claims": [
+      "Generative-AI-Performance-Bericht dokumentiert Impressionen für AI Overviews und AI Mode.",
+      "Dimensionen sind Seite, Land, Datum und Gerät; Chart und Tabelle unterscheiden Property-/Seitenaggregation.",
+      "Daten sind zugleich im Web-Search-Performance-Bericht enthalten; Export wandelt nicht verfügbare Werte in Nullen."
+    ],
+    "caveats": [
+      "Kein separater Klick-/CTR-/Conversion-Nachweis in dieser Hilfe.",
+      "Weltweiter Rollout laut Kopf 31.08.2026 steht neben älter wirkender eingeschränkter Zugriffserklärung; Property nicht geprüft.",
+      "Search-Labs-Experimente ausgeschlossen; Exportnullen können Missingness verdecken."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E09"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W072",
+    "url": "https://www.demandbase.com/faq/account-based-experience-101",
+    "title": "What is account-based experience? (and why ABX matters) | Demandbase",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w072.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Lebenszyklusdefinition hält ABX breiter als Intentanzeigen.",
+    "key_claims": [
+      "Demandbase definiert ABX als datenbasierte Orchestrierung relevanter, vertrauenswürdiger Marketing-/Sales-Aktionen durch die Customer Journey.",
+      "ABX soll bestehende ABM-/Leadansätze durch CX-Prinzipien ergänzen.",
+      "Kundenphase umfasst Adoption, Beziehungspflege und weitere Nutzung, Opportunityphase Vergleich und Konsens."
+    ],
+    "caveats": [
+      "Anbieterpositionierung, keine Überlegenheitsstudie.",
+      "Genannte Wachstums-/Retentionquoten und Buying-Team-Mittelwerte ohne hier prüfbare Methodik; eingebettetes Video nicht transkribiert."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E07",
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/account-based-marketing.md",
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W073",
+    "url": "https://www.demandbase.com/resources/playbook/account-journey-setup-best-practices",
+    "title": "Account Journey Setup Best Practices for GTM Teams",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w073.json",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Besonders wertvoller konkreter Beleg für regelbedingte KPI-/Statusänderung.",
+    "key_claims": [
+      "Journeyregeln können Accountgröße, bekannte/anonyme Aktivität, relevante Personas und konkrete Aktionen unterschiedlich gewichten.",
+      "MQA-Standard nutzt 85+ Pipeline Predict ODER 100 Engagement Points über drei Monate; Haltefrist kann Status unabhängig von aktueller Schwelle erhalten.",
+      "Recycle und Disqualified lassen sich aus Volume-, Velocity- und Conversionmetriken ausschließen; Pre-Pipeline separat einschließen.",
+      "CRM/MAP-Integration, konfigurierte Modelle und Zustimmung von Ops/GTM-Leitung sind Voraussetzungen."
+    ],
+    "caveats": [
+      "Beispielschwellen sind Konfiguration, keine validierten Benchmarks.",
+      "Ausschlüsse und Haltefristen verändern Messpopulationen; Vergleich muss Regelversion offenlegen.",
+      "Anbieter verspricht Resultate ohne kontrollierten Wirkungsnachweis; Grafiken nicht visuell geprüft."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E05",
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W074",
+    "url": "https://www.demandgenreport.com/resources/state-of-sales-acceleration-demand-for-customer-value-leads-to-account-mapping-uncovering-buying-intent/7787",
+    "title": "State Of Sales Acceleration: Demand For Customer Value Leads To Account Mapping & Uncovering Buying Intent - Demand Gen Report",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w074.json",
+    "trust_class": "mixed",
+    "read_scope": "abstract-only",
+    "value_reason": "Nach Review nur als Herkunftshinweis registrieren; kein zusätzlicher belastbarer Claim.",
+    "key_claims": [
+      "Landingpage behauptet 57–70 Prozent Journeyfortschritt vor Saleskontakt.",
+      "Angekündigter Report behandelt Storytelling, Partnerschaften, Daten und Intent; Download verlangt Formular."
+    ],
+    "caveats": [
+      "Nur Landingpage, Report nicht gelesen.",
+      "Ursprungsforschung, Nenner und Methodik der Prozentbehauptung fehlen; keine tragfähige quantitative Evidenz."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W076",
+    "url": "https://www.facebook.com/business/help/273363992030035",
+    "title": "About Advantage+ Audience | Meta Business Help Center",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w076.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Aktuelle Betreiberbeschreibung für modellgestützte Auslieferung und Testbarkeit.",
+    "key_claims": [
+      "Advantage+ Audience nutzt laut Meta unter anderem vergangene Konversionen, Pixel-Daten und Anzeigeninteraktionen.",
+      "Meta empfiehlt A/B-Tests für fast alle Kampagnentypen außer Retargeting.",
+      "Audience-Automation und umfassendere Advantage+-Kampagnen werden unterschieden."
+    ],
+    "caveats": [
+      "Hilfeseite jetzt zugänglich, anders als früherer Forschungsabruf.",
+      "Controls/Suggestions nur verlinkt, nicht im Inhalt spezifiziert; keine abschließende Liste harter Grenzen.",
+      "Cost-per-Result-Vorteile ohne im Capture lesbare Studiendetails nicht übernehmen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W077",
+    "url": "https://www.forrester.com/b2b-marketing/buying-group-roles",
+    "title": "Get To Know Your B2B Buying Group",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w077.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Rollentypen als kontextabhängige Prüfperspektive statt fester Jobliste.",
+    "key_claims": [
+      "Forrester unterscheidet Champion, Decision-Maker, Influencer, User und Ratifier nach Beitrag, Zeitpunkt und Informationsbedarf.",
+      "Influencer können intern oder extern wirken; Championrolle hängt von Glaubwürdigkeit und nicht festem Organigrammplatz ab.",
+      "Ratifier handeln häufig Bedingungen/Preis aus; Decision-Maker prüfen Geschäftswert."
+    ],
+    "caveats": [
+      "Analystentypologie, keine universelle Besetzung oder fixe Zahl von Personen.",
+      "Keine veröffentlichte kausale Evidenz für rollengetrennte Personalisierung."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E03",
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W078",
+    "url": "https://www.forrester.com/b2b-marketing/six-steps-to-buying-group-success",
+    "title": "Six Steps To Buying Group Success - Forrester",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w078.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Explizite Account–Opportunity–Gruppenrelation und Verantwortungsfolge.",
+    "key_claims": [
+      "Ein Zielaccount kann mehrere produktbezogene Opportunities mit jeweils eigener Buying Group enthalten.",
+      "Forrester empfiehlt Gruppenmitglieder derselben Lösung zuzuordnen und zweite/dritte Leads als mögliche Bestätigung zu behandeln.",
+      "Marketing und RDR sollen frühe Opportunities qualifizieren und gemeinsam mit Sales fehlende Gruppenmitglieder und Informationsbedarfe adressieren."
+    ],
+    "caveats": [
+      "Operating-Model-Anleitung, kein kausaler Liftbeleg.",
+      "Mehrere Kontakte sind Hinweise; gemeinsames Vorhaben bleibt zu prüfen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W079",
+    "url": "https://www.forrester.com/blogs/b2b-revenue-engine-alignment-a-cultural-transformation-that-begins-with-customer-obsession",
+    "title": "B2B Revenue Engine Alignment: A Cultural Transformation That Begins With Customer Obsession",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w079.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Konkrete Ausführungsbereitschaft ergänzt organisatorischen Vertrag.",
+    "key_claims": [
+      "RevOps kann Koalition bestehender Teams oder vereinigte Funktion sein.",
+      "Execution Readiness umfasst Budget, Technik, Daten, Prozesse/SLAs, Enablement, gemeinsame KPIs und Governance.",
+      "Ops soll Ausführungslücken an Führung melden, damit Ressourcen ergänzt oder Prioritäten geändert werden."
+    ],
+    "caveats": [
+      "Analystenmodell; genannte Geschäftseffekte sind Erwartung, kein hier gemessener ROI.",
+      "Alignment verlangt konkrete Ressourcenentscheidungen, nicht nur gemeinsame Begriffe."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W080",
+    "url": "https://www.forrester.com/blogs/revenue-operations-nine-myths-and-two-realities",
+    "title": "Revenue Operations: Nine Myths And Two Realities",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w080.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Expliziter Gegenbeleg zu zwingender Zentralisierung oder Heilsversprechen.",
+    "key_claims": [
+      "RevOps wird als Fähigkeit vor Organisationsstruktur definiert.",
+      "Dezentrale, zentrale und hybride Strukturen mit CoE sind mögliche Ausprägungen.",
+      "Zusammenlegung ohne neue Fähigkeiten, Prozesse und Verantwortungen verfehlt laut Forrester das Ziel."
+    ],
+    "caveats": [
+      "Beratungs-/Operating-Model-Literatur, keine vergleichende Organisationswirkungsstudie."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W081",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-accounts-buying-groups-opportunities-oh-my-how-is-it-all-connected",
+    "title": "Accounts, Buying Groups, Opportunities, Oh My! How Is It All Connected?",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w081.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Kernbeleg gegen Gleichsetzung Accountaggregation mit gemeinsamer Kaufinitiative.",
+    "key_claims": [
+      "Eine Buying Group löst ein spezifisches Geschäftsproblem; eine Person kann in mehreren Gruppen unterschiedliche Kaufrollen haben.",
+      "Opportunity wird als Container für Account, Gruppenmitglieder, Signale und Lösung beschrieben.",
+      "Mehrere Opportunities pro Account können unterschiedliche Ressourcen und Erfolgserwartungen erfordern."
+    ],
+    "caveats": [
+      "Modell und vorgeschlagene Datendarstellung, kein empirischer Conversionbeweis.",
+      "Persona wird hier enger als sonst üblich an Unternehmensrolle/Titel gebunden; Begriffsgebrauch kenntlich machen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W082",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-how-does-the-buyers-journey-change-in-a-buying-groups-world",
+    "title": "How Does The Buyer’s Journey Change With Buying Groups?",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w082.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Verhindert falschen Frühphasenstart und unpassende Budgetfilter.",
+    "key_claims": [
+      "Käuferjourney und Anbieter-Revenueprozess sind unterschiedliche Perspektiven; Umstellung auf Buying Groups ändert nicht automatisch die Käuferjourney.",
+      "Erster beobachteter Kontakt kann spät in der Käuferjourney liegen.",
+      "Budget als Qualifikationspflicht kann bei neuen Konzepten zu streng sein; Kriterien müssen Bedarf und Marktreife berücksichtigen."
+    ],
+    "caveats": [
+      "Signalschluss auf Journey bleibt Hypothese; menschliche Qualifikation kann bestätigen.",
+      "Normative Analystenanleitung, keine universelle Stagelogik."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E04"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W083",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-sweet-and-no-sorrow",
+    "title": "Saying Goodbye To MQLs: A Parting That Is All Sweet And No Sorrow",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w083.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Primäre Attribution problematischer Folienzahlen plus explizite Nennerwarnung.",
+    "key_claims": [
+      "Forrester behauptet weniger als ein Prozent Lead-to-Closed und erläutert selbst mehrere Leads pro Opportunity.",
+      "50 Prozent höhere Meeting-to-Win-Konversion bei Übergabe mindestens dreier Mitglieder wird als Kundenbericht dargestellt.",
+      "Beitrag empfiehlt Buying-Group-Signale an Opportunities und Wirkung relativ zu Baseline statt reinem Marketing-Sourcing."
+    ],
+    "caveats": [
+      "Fallzahl, Kohortenfenster und ursprüngliche Forschungsdefinition der Prozentwerte fehlen.",
+      "Kundenbericht ist kein kontrollierter Lift; Leadquote kein Anteil verschwendeter Arbeit.",
+      "Text enthält unklare Formulierung zur direkten Opportunityvergleichbarkeit."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E05"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/buying-groups-and-account-prioritization.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W084",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-what-changes-in-the-rdr-function-when-we-move-to-buying-groups",
+    "title": "What Changes In The RDR Function When We Move To Buying Groups?",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w084.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Praktische Ausnahme und fortlaufende Verantwortlichkeit bei Gruppenqualifikation.",
+    "key_claims": [
+      "RDRs sollen relevante Kontakte während Validierung der Signale einer Opportunity zuordnen.",
+      "Explizite Kontaktanfragen sollen nicht durch vorherige Gruppenvervollständigung verzögert werden.",
+      "Alle Teams sollen nach Übergabe neue Gruppenmitglieder ergänzen können; Verkäufer müssen nicht jeden Kontakt gleich bearbeiten."
+    ],
+    "caveats": [
+      "Empfohlene Arbeitsweise, keine getestete Geschwindigkeits-/Conversionquote.",
+      "Angenommene Gruppenmitglieder von bestätigten Beteiligten unterscheiden; Outreach-Rechte separat prüfen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W085",
+    "url": "https://www.forrester.com/blogs/the-revenue-process-alignment-series-part-4-an-opportunity-centric-revenue-process-is-all-about-context",
+    "title": "The Revenue Process Alignment Series, Part 4: An Opportunity-Centric Revenue Process Is All About Context",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w085.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Direkte Erklärung des MQA-Kontextproblems und Opportunity-Doppelbegriffs.",
+    "key_claims": [
+      "MQL fehlen oft Account-/Lösungsbezug; MQA können mehrere Interessen innerhalb eines Accounts vermischen.",
+      "Opportunity als früher Informationscontainer ist von später salesqualifizierter Dealstufe zu unterscheiden.",
+      "Zeitgestempelte Stagehistorie kann Fortschritt, Conversion und Velocity abbilden."
+    ],
+    "caveats": [
+      "Konzeptionelle Analystenanleitung, keine garantierte Attribution oder Umsatzsteigerung.",
+      "Lösungsinteresse ist zunächst Hypothese; Containeranlage bestätigt keinen Deal."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E03",
+      "E05"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W086",
+    "url": "https://www.forrester.com/blogs/three-realities-about-b2b-buying-networks",
+    "title": "Three Realities About B2B Buying Networks",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w086.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Erweitert Rollenprüfung um externe und nachgelagerte Beteiligung.",
+    "key_claims": [
+      "Forrester nennt aus Buyers’ Journey Survey 2025 durchschnittlich 13 interne und neun externe Beteiligte sowie 73 Prozent Käufe mit mindestens drei Abteilungen.",
+      "Externe Experten, Peers und Communities beeinflussen laut Beitrag frühe Richtung.",
+      "Kaufnetzwerk bleibt auch für Adoption, Renewal und Expansion relevant."
+    ],
+    "caveats": [
+      "Surveyvolltext/Methodik nicht im Blog; Mittelwerte keine vorgeschriebene Besetzung.",
+      "Behaupteter Wettbewerbsvorteil nicht kausal nachgewiesen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E03",
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W087",
+    "url": "https://www.forrester.com/blogs/why-revenue-operations-revops-should-be-on-your-radar",
+    "title": "Why Revenue Operations (RevOps) Should Be On Your Radar",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w087.json",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Regionale Praxisperspektive corroboriert Capability statt Organigramm.",
+    "key_claims": [
+      "RevOps verbindet Daten, Prozesse, Technik und Talent entlang des Kundenlebenszyklus.",
+      "Fähigkeiten können in bestehenden Sales-/Marketing-Ops oder eigenem Team liegen.",
+      "APAC-Führungskräfte nennen laut Survey 2024 unpassende Technik, widersprüchliche Metriken und unzureichende Prozesse als Hindernisse."
+    ],
+    "caveats": [
+      "APAC-Survey ohne hier offengelegte Fallzahl; keine globale Häufigkeit ableitbar.",
+      "Operating-Model-Position, kein allgemeiner Wachstumsbeweis."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W088",
+    "url": "https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying",
+    "title": "Forrester: The State Of Business Buying, 2026",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w088.json",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Gegenbefund zur pauschalen Gruppengrößen-/Rep-free-Diagnose.",
+    "key_claims": [
+      "Pressemitteilung Januar 2026 beschreibt 13 interne Stakeholder plus neun externe Influencer als typische Kaufentscheidung.",
+      "94 Prozent Befragter mit Gruppen ab sechs berichten Nutzen; große Gruppen sind daher nicht ausschließlich Belastung.",
+      "Beschaffung werde in 53 Prozent der Kaufzyklen als Decision-Maker beteiligt; menschliche Validierung bleibe trotz GenAI wichtig.",
+      "Trials werden als Risikoreduktion beschrieben, mit Nutzung über 60 Prozent und höherer Quote bei sehr großen Käufen."
+    ],
+    "caveats": [
+      "Pressezusammenfassung eigener Forschung; Stichprobe, Frageformulierungen und Modelle hier nicht vollständig.",
+      "Selbstauskunft und Nutzungsquote belegen keine kausale Trialwirkung; Software/Investitionskontext nicht universal übertragen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E06",
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md",
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W089",
+    "url": "https://www.forrester.com/report/b2b-buyer-roles/RES173037?ref_search=3482829_1692110609219",
+    "title": "Understanding B2B Buyer Roles Is The Key To Navigating Buying Groups | Forrester",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w089.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Provenienz und Scope der Rollentypologie; keine Vollreportauswertung.",
+    "key_claims": [
+      "Abstract kündigt fünf häufige Buyerrollen und deren Teilnahme in unterschiedlichen Kaufsituationen an.",
+      "Grundlage wird als Forrester Buyers’ Journey Survey bezeichnet."
+    ],
+    "caveats": [
+      "Nur öffentlicher Abstract, aktualisiert April 2025; Report hinter Login/Kauf.",
+      "Rollen, Daten und Methodik des Vollreports nicht geprüft; W077 liefert separat lesbare Typologie."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E03"
+    ],
+    "target_pages": [
+      "wiki/buying-groups-and-account-prioritization.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W090",
+    "url": "https://www.forrester.com/report/revenue-operations-success-requires-an-operating-model-not-just/RES180040",
+    "title": "The Forrester High-Performance Operating Model Framework For Revenue Operations | Forrester",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w090.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Öffentlicher Abstract stützt begrenzt Betriebsmodell vor Strukturänderung.",
+    "key_claims": [
+      "Abstract warnt vor Organigrammen als hauptsächlichem Veränderungshebel ohne Gestaltungsrahmen und Betriebsprinzipien.",
+      "Framework soll ein passendes RevOps-Betriebsmodell entwerfen, implementieren und weiterentwickeln."
+    ],
+    "caveats": [
+      "Nur Abstract vom März 2024; Details und Wirksamkeit nicht geprüft.",
+      "Aktueller Titel weicht vom URL-Slug ab; identische URL ist kein früherer Volltextnachweis."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W091",
+    "url": "https://www.gartner.com/en/documents/5088931",
+    "title": "Help B2B Buyers Navigate Change Management for Complex Purchases",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w091.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Begrenzter öffentlicher Beleg für gemeinsame Entscheidungshilfe bei Unsicherheit.",
+    "key_claims": [
+      "Abstract empfiehlt Inhalte für Veränderungsaufgaben komplexer Käufe.",
+      "Sichtbare Key Findings warnen, rein individuelle Personalisierung könne gemeinsame Prioritäten schwächen und Unsicherheit erhöhen."
+    ],
+    "caveats": [
+      "Nur Abstract/angeschnittene Key Findings; Vollreport nicht geprüft.",
+      "78-Prozent-Dealqualitätsbehauptung ohne Methodik nicht als Kausalquote übernehmen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E06",
+      "E14"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W092",
+    "url": "https://www.gartner.com/en/documents/5381763",
+    "title": "Maximize Website Engagement With the Right Gated Content as a Tech CEO",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w092.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Gegenbeleg zu pauschaler Gate-/Ungate-Regel.",
+    "key_claims": [
+      "Abstract behandelt Entscheidung über Gating abhängig von Inhalt und Zeitpunkt.",
+      "Sichtbare Empfehlungen nennen einen Entscheidungsbaum mit fünf Ja/Nein-Fragen."
+    ],
+    "caveats": [
+      "Fragen und vollständige Methode nicht sichtbar; nicht rekonstruieren.",
+      "Keine universelle Ungatingquote oder gemessene Wirkung im Auszug."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W093",
+    "url": "https://www.gartner.com/en/documents/5669155",
+    "title": "Improve B2B Buyer Experiences and Purchase Decisions With Sense Making",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w093.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Begrifflicher Forschungshinweis, keine verifizierte Intervention.",
+    "key_claims": [
+      "Abstract beschreibt Informationsüberlastung als Kaufhürde.",
+      "Sense Making wird zur Vereinfachung des Kaufs und Zusammenarbeit von Anbieter/Kunde empfohlen."
+    ],
+    "caveats": [
+      "Nur kurzer Abstract; Methode und Wirksamkeitsdaten nicht zugänglich."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E14"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W094",
+    "url": "https://www.gartner.com/en/documents/5990571",
+    "title": "What Types of Buyer Enablement Do Buyers Value?",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w094.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Unterstützt begrenzt Kontextabhängigkeit von Käuferhilfen.",
+    "key_claims": [
+      "Abstract kündigt interaktives Tool für Käuferpräferenzen verschiedener Enablementformen je Kaufkategorie an.",
+      "Zweck ist kategoriespezifische Auswahl und Platzierung von Assets."
+    ],
+    "caveats": [
+      "Tool, Daten und Methodik hinter Login; keine Assetrangliste geprüft.",
+      "Kein Beleg einer universellen Wirkung einzelner Formate."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W095",
+    "url": "https://www.gartner.com/en/documents/6385743",
+    "title": "Drive B2B Buyer Decision Making Through Messaging and Content",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w095.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Präzise Spannung individuelle Relevanz versus Gruppenkonsens.",
+    "key_claims": [
+      "Abstract behauptet geringere Wahrscheinlichkeit hochwertiger Käufe bei rein rollenspezifischer Kommunikation.",
+      "Ziel der Empfehlung ist persönliche Anschlussfähigkeit zusammen mit Unterstützung der Gruppenentscheidung."
+    ],
+    "caveats": [
+      "40-Prozent-Angabe: Operationalisierung, Baseline, Modell und Kausalidentifikation nicht sichtbar.",
+      "Nicht als generelles Verbot rollenspezifischer Details auslegen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W096",
+    "url": "https://www.gartner.com/en/documents/6415075",
+    "title": "Case Study: Digital Sales Rooms for Faster Sales Cycles",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w096.json",
+    "trust_class": "practitioner",
+    "read_scope": "abstract-only",
+    "value_reason": "Qualifizierter Fallstudienhinweis mit klarer Zugriffsgrenze.",
+    "key_claims": [
+      "Abstract beschreibt frühen Einsatz Digital Sales Rooms für Discovery und Konsens.",
+      "Fallstudie behauptet schnellere Zyklen und höhere Win Rates."
+    ],
+    "caveats": [
+      "Fall, Vergleich, Zahlen und kritische Komponenten nicht sichtbar; Vollstudie ungelesen.",
+      "Keine allgemeine Softwarewirkung oder kausaler Lift aus Abstract ableitbar."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E06",
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "partial"
+  },
+  {
+    "id": "W052",
+    "url": "https://smart-freight-centre-media.s3.amazonaws.com/documents/GLEC_FRAMEWORK_v3_23_10_24_B.pdf",
+    "title": "Global Logistics Emissions Council Framework for Logistics Emissions Accounting and Reporting, v3.1 (2024)",
+    "capture_path": "wiki/_extractions/raw/assets/abm-old-playbook-web-2026-09-13/w052-smart-freight-centre-media-s3-amazonaws-com-glec-framework-v3-23-10-24-b-pdf.pdf.md",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Konkretes Logistikbeispiel für belastbare Kalkulation und zugängliche Annahmen.",
+    "key_claims": [
+      "GLEC v3.1 (2024) beschreibt Grenzen, Datenherkunft und Transport-/Hubaktivitäten für Logistikemissionen.",
+      "Reporting soll absolute Emissionen und Intensität gemeinsam darstellen sowie Auslassungen und Abweichungen erläutern.",
+      "Primär-/Sekundärdaten, Modellparameter und Defaultwerte müssen transparent sein; Kurzbericht mit zugänglicher Detailgrundlage ist möglich."
+    ],
+    "caveats": [
+      "Scope: Einführung und Reporting S.1–10,55–60; keine Vollprüfung aller 172 Seiten oder Rechenfaktoren.",
+      "Sektoraler Methodenbeleg für prüfbare Käuferinformation, kein nachgewiesener Sales-Lift.",
+      "Layout/Formeln aus Textableitung nicht visuell validiert; ISO selbst hier nicht unabhängig geprüft."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W071",
+    "url": "https://www.davidreiley.com/papers/OnlineAdsOfflineSales.pdf",
+    "title": "Online Ads and Offline Sales: Measuring the Effects of Retail Advertising via a Controlled Experiment on Yahoo!",
+    "capture_path": "wiki/_extractions/raw/assets/abm-old-playbook-web-2026-09-13/w071-www-davidreiley-com-onlineadsofflinesales-pdf.pdf.md",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Starker Gegenbeleg gegen Nichtklick gleich Wirkungslosigkeit, mit Identifikationsgrenzen.",
+    "key_claims": [
+      "Yahoo-/Retailer-Experiment randomisierte 1.577.256 bestehende Kunden im Herbst 2007 in werbeberechtigte Treatment- und Kontrollgruppe.",
+      "Autoren berichten positiven Kaufwirkungseffekt; 93 Prozent des geschätzten Effekts entfielen auf stationären Umsatz.",
+      "78 Prozent Gesamt-Lift bei Nichtklickern stammen aus DID-Zerlegung; Klicks selbst waren nicht randomisiert.",
+      "Hohe Umsatzvarianz erschwert selbst bei Millionen Stichprobe präzise Wirkungsmessung."
+    ],
+    "caveats": [
+      "Scope: Abstract, Design/Daten S.1–4,6–15, Nichtklickzerlegung S.36–39, Schluss S.44–46; übrige Schätzungen/Anhänge nicht vollständig geprüft.",
+      "2007-Bestandskunden eines anonymen Retailers, keine B2B-/Leadgen-Erfolgsquote.",
+      "DID benötigt zeitkonstante Heterogenität; 78-Prozent-Wert nicht als separat randomisierter Klickeffekt ausgeben.",
+      "Extraktion enthält Ligatur-/Nullzeichen; Tabellen/Formeln nicht visuell validiert."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md",
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "content_quality": "usable"
+  },
+  {
+    "id": "W075",
+    "url": "https://www.edpb.europa.eu/system/files/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+    "title": "Guidelines 2/2023 on Technical Scope of Art. 5(3) of ePrivacy Directive, Version 2.0",
+    "capture_path": "wiki/_extractions/raw/assets/abm-old-playbook-web-2026-09-13/w075-www-edpb-europa-eu-edpb-guidelines-202302-technical-scope-art-53-eprivacydirective-v2-en-0-pdf.pdf.md",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Technischer Geltungsbereich widerlegt Cookie-frei als automatische Freistellung.",
+    "key_claims": [
+      "EDPB-Leitlinie v2 vom 07.10.2024 behandelt technischen Scope von Art.5(3), nicht nur Cookies.",
+      "Analysierte Beispiele umfassen URL-/Pixeltracking, lokale Verarbeitung, IP-only-Tracking und eindeutige Identifier.",
+      "IP-only-Anwendbarkeit hängt unter anderem davon ab, ob Information aus Endgerät stammt; Artikelanwendbarkeit bedeutet nicht automatisch Einwilligungspflicht."
+    ],
+    "caveats": [
+      "Scope: Executive Summary, Einführung/Kriterien und Use Cases S.3,5–6,12–15; übrige Definitionsanalyse nicht vollständig geprüft.",
+      "Leitlinie bewertet Ausnahmen ausdrücklich nicht vollständig; nationale Umsetzung und konkreter Fall bleiben separat.",
+      "Keine rechtliche Freigabe irgendeines eingesetzten Matchingprodukts."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E04",
+      "E13"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "content_quality": "usable"
+  }
+]

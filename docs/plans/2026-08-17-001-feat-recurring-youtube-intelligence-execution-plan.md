@@ -514,6 +514,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File tools/install-youtube-in
 
 P35-W6 is complete only after W6R1–W6R5 pass. Until then, manual/control-center runs and active L2 processing remain available within their present authority, while the weekly collector remains absent.
 
+### Scheduler amendment approved 2026-09-09
+
+Rolf approved implementation of a single daily Codex worker with weekly bounded acquisition, backlog-first processing and automatic bounded selection. `docs/youtube-integrated-worker.md` and `tools/config/youtube-worker-policy.json` now govern scheduling. The earlier W6R5 Windows installation requirement and separate baseline-manifest approval loop are superseded for this integrated path. Existing capture limits, exact manifests, source authority and L2/L3 separation remain active. The exact September 9 bootstrap selection is approved. This amendment does not activate standing L3.
+
 ### P35-W7 — first monthly audit and possible L3 activation
 
 - Start only after P35-W6 is complete and the first full month of real steady-state work exists to audit.

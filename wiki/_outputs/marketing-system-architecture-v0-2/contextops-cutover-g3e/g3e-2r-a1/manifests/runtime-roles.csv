@@ -1,0 +1,5 @@
+"runtime_id","lookup_policy","version_probe_id","required_use"
+"POWERSHELL_HOST","absolute-seal-bound","powershell-version","current-host-and-powershell-subprocesses"
+"PYTHON_AGENT","absolute-seal-bound","python-version","wrapper-check-probe-and-transition"
+"RIPGREP","absolute-seal-bound","ripgrep-version","hard-literal-reference-scan"
+"GIT","absolute-seal-bound","git-version","read-only-staging-gates"

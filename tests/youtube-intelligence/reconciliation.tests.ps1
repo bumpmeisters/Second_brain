@@ -30,6 +30,7 @@ try {
     $arguments = @('-NoProfile','-ExecutionPolicy','Bypass','-File',$script,'-Package','P99','-DecisionLedger','wiki/_outputs/semantic-ingest/p99/decisions.csv')
     $dry = (& powershell.exe @arguments | Out-String) | ConvertFrom-Json
     if ($dry.changed_count -ne 1 -or -not $dry.dry_run) { throw 'Dry run did not report one exact change.' }
+    if ($dry.accepted_decision_count -ne 1 -or $dry.approved_decision_count -ne 1 -or $dry.explicitly_approved_decision_count -ne 1 -or $dry.reviewed_decision_count -ne 0) { throw 'Explicit approval counts or legacy alias changed.' }
     $applied = (& powershell.exe @arguments -Apply | Out-String) | ConvertFrom-Json
     if ($applied.changed_count -ne 1 -or $applied.dry_run) { throw 'Apply did not reconcile one exact row.' }
     $second = (& powershell.exe @arguments | Out-String) | ConvertFrom-Json
@@ -54,7 +55,7 @@ try {
     $runManifestHash = (Get-FileHash $runManifestPath -Algorithm SHA256).Hash
     @([pscustomobject][ordered]@{
         canonical_source = $standingSourceRelative; sha256 = $standingHash
-        semantic_decision = 'registered-only'; review_status = 'reviewed'; decision_authority = 'standing-policy'
+        semantic_decision = 'extended-claim'; review_status = 'reviewed'; decision_authority = 'standing-policy'
         authority_id = 'youtube-p35-l2'; decision_actor = 'codex-semantic-worker'; autonomy_level = 'L2'
         authority_policy_version = 'source-selection/v1'; authority_run_id = 'standing-run'; authority_manifest_sha256 = $runManifestHash
     }) | Export-Csv (Join-Path $standingDir 'decisions.csv') -NoTypeInformation -Encoding utf8
@@ -75,9 +76,11 @@ try {
     $standingArguments = @('-NoProfile','-ExecutionPolicy','Bypass','-File',$script,'-Package','P100','-DecisionLedger','wiki/_outputs/semantic-ingest/p100/decisions.csv','-PackageManifest','wiki/_outputs/semantic-ingest/p100/package.json')
     $standingApplied = (& powershell.exe @standingArguments -Apply | Out-String) | ConvertFrom-Json
     if ($standingApplied.standing_policy_decision_count -ne 1) { throw 'Standing-policy decision was not counted.' }
+    if ($standingApplied.accepted_decision_count -ne 1 -or $standingApplied.approved_decision_count -ne 1 -or $standingApplied.explicitly_approved_decision_count -ne 0 -or $standingApplied.reviewed_decision_count -ne 1 -or $standingApplied.reviewed_promotional_proposal_count -ne 1) { throw 'Reviewed proposal was confused with approval.' }
+    if ($standingApplied.canonical_promotion_effect -ne 'none; reconciliation records source review only') { throw 'Reconciliation implies canonical promotion.' }
     $standingRow = Import-Csv $registerPath | Where-Object canonical_source -eq $standingSourceRelative
     if ($standingRow.processing_status -ne 'reviewed' -or $standingRow.selection_status -ne 'pending' -or $standingRow.decided_by -ne 'codex-semantic-worker') { throw 'Standing-policy reconciliation state is incorrect.' }
-    Write-Host 'YouTube reconciliation tests passed (8 assertions).'
+    Write-Host 'YouTube reconciliation tests passed.'
 } finally {
     if (Test-Path -LiteralPath $fixture) { Remove-Item -LiteralPath $fixture -Recurse -Force }
 }

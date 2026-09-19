@@ -2,6 +2,7 @@
 
 | Framework / system | Observation | Evidence count | Proposed change | Risk | Status |
 |---|---|---:|---|---|---|
+| Buying-Role Persona Analysis v0.1.0 (`buying-role-persona-analysis`) | Erster TÜV-Pilot: P05 schwacher Fragenrahmen; P01/P03 können überlappen; reale Befugnisse fehlen. | 1 dokumentengestützter Selbstpilot über 24 Felder | Bei konkreter Briefingweiterverwendung prüfen, welche Typentrennung wirklich eine andere Antwort benötigt; bei realen Kaufdaten Rollen korrigieren. | Medium | observing; draft, keine automatische Aktivierung |
 | Audience Understanding library | Seven older framework documents were migrated to the universal builder schema. | 1 architecture review + structural lint | Evaluate question quality and framework fit across live cases. | Medium | completed |
 | Framework indexes | Router entries omit source confidence, evidence requirement, compatibility, and conflicts. | 1 architecture review | Extend router schema after two domains exist. | Low | queued |
 | Framework evaluation | No cross-case benchmark exists yet. | 1 architecture review | Add normal-fit, weak-evidence, wrong-fit, and alternate-business-model evaluation cases. | Medium | queued |

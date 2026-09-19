@@ -1,0 +1,22 @@
+{
+  "contract_id": "g3e2r-wrapper-full-tree/v1",
+  "inventory_root": ".agents/skills",
+  "file_rule": "every-live-file-is-exactly-one-immediate-child-SKILL.md",
+  "inventory_source": "complete-live-tree-at-B-build-time",
+  "transition_source": "unchanged-G3E1-wrapper-transition-manifest",
+  "transition_action": "transition",
+  "verify_only_action": "verify-only",
+  "transition_member_states": ["pre", "post", "reverse"],
+  "nonparticipant_state_scope": "all",
+  "pre_reverse_transition_allowed_states": ["pre", "post"],
+  "post_diff_policy": "only-transition-action-paths-may-change",
+  "noninterference_policy": "verify-only-and-all-unmanifested-live-wrappers-must-not-change",
+  "tree_fingerprint_v2": "sorted-repository-path-tab-bytes-tab-uppercase-sha256-joined-by-lf-then-sha256",
+  "reject_absolute_paths": true,
+  "reject_path_traversal": true,
+  "reject_reparse_points": true,
+  "reject_nested_extra_files": true,
+  "empty_directories_are_not_wrapper_members": true,
+  "reject_duplicate_skill_files": true,
+  "unknown_properties": "reject"
+}

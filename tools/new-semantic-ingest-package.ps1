@@ -127,6 +127,14 @@ $decisionRows = foreach ($item in $selected) {
 }
 
 $packageNumber = [int]($PackageId.Substring(1))
+$repositoryRows = @($decisionRows | Where-Object { $_.canonical_source.Replace('\','/').StartsWith('repositories/', [StringComparison]::OrdinalIgnoreCase) })
+if ($repositoryRows.Count) {
+    $repositoryPython = & (Join-Path $PSScriptRoot 'resolve-python-runtime.ps1') -Purpose Agent -PathOnly
+    $repositoryArgs = @('ready')
+    foreach ($repositoryRow in $repositoryRows) { $repositoryArgs += @('--source', $repositoryRow.canonical_source) }
+    $repositoryCheck = @(& $repositoryPython (Join-Path $PSScriptRoot 'repository_library.py') @repositoryArgs)
+    if ($LASTEXITCODE -ne 0) { throw "Repository source gate failed: $($repositoryCheck -join ' ')" }
+}
 $gatedRows = @($decisionRows | Where-Object {
     $source = $_.canonical_source.Replace('\', '/')
     @($selectionPolicyData.applies_to_prefixes | Where-Object { $source.StartsWith($_, [StringComparison]::OrdinalIgnoreCase) }).Count -gt 0

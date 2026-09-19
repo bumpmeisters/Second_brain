@@ -1,0 +1,17 @@
+{
+  "id": "W004",
+  "url": "https://6sense.com/platform/predictive-analytics",
+  "research_briefs": [
+    "s01-abx.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:41.916044+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w004.json",
+  "title": "B2B Predictive Analytics Software | 6sense",
+  "final_url": "https://6sense.com/platform/predictive-analytics/",
+  "characters": 28365,
+  "sha256": "a8b5f888b438ab7ec9d97b1623066e1e6644d2bda49f8f20fa57aa992d49fa67",
+  "http_status": 200
+}

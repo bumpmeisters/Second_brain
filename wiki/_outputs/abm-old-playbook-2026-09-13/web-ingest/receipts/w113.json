@@ -1,0 +1,17 @@
+{
+  "id": "W113",
+  "url": "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:44.553997+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w113.json",
+  "title": "Bad Bot Report 2026: Bots in the Agentic Age | Imperva",
+  "final_url": "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/",
+  "characters": 14583,
+  "sha256": "de07f6dcd6b22c26a395ee95877da4eb760da58b6208a10325f5d817d4f87ae2",
+  "http_status": 200
+}

@@ -1,0 +1,29 @@
+{
+  "id": "W025",
+  "url": "https://developers.google.com/tag-platform/tag-manager/server-side/api",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:57:25.469869+00:00",
+  "previous_attempt": {
+    "id": "W025",
+    "url": "https://developers.google.com/tag-platform/tag-manager/server-side/api",
+    "research_briefs": [
+      "f03-ad-fraud.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T17:54:27.705225+00:00",
+    "status": "capture-failed",
+    "error": "Error: Rate limit exceeded. Consumed (req/min): 22, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 10s, resets at Sun Sep 13 2026 17:54:39 GMT+0000 (Coordinated Universal Time)\n"
+  },
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w025.json",
+  "title": "Server-side tagging APIs  |  Google Tag Manager - Server-side  |  Google for Developers",
+  "final_url": "https://developers.google.com/tag-platform/tag-manager/server-side/api",
+  "characters": 113128,
+  "sha256": "e3e27eef66206a19678ec568a5c31731fd99f71eb01a9d08e6e950248d94a7b9",
+  "http_status": 200
+}

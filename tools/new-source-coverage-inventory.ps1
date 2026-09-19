@@ -12,8 +12,8 @@ if (-not $SourceRoot) { $SourceRoot = $VaultRoot }
 $SourceRoot = [IO.Path]::GetFullPath($SourceRoot)
 if (-not (Test-Path -LiteralPath $VaultRoot -PathType Container)) { throw "Vault root does not exist: $VaultRoot" }
 if (-not (Test-Path -LiteralPath $SourceRoot -PathType Container)) { throw "Source root does not exist: $SourceRoot" }
-$sourceLanes = @(@('raw', 'research') | Where-Object { Test-Path -LiteralPath (Join-Path $SourceRoot $_) -PathType Container })
-if (-not $sourceLanes.Count) { throw "Source root contains neither raw nor research: $SourceRoot" }
+$sourceLanes = @(@('raw', 'research', 'repositories') | Where-Object { Test-Path -LiteralPath (Join-Path $SourceRoot $_) -PathType Container })
+if (-not $sourceLanes.Count) { throw "Source root contains no raw, research or repositories lane: $SourceRoot" }
 if (-not $OutputPath) { $OutputPath = Join-Path $VaultRoot 'wiki\_outputs\source-coverage\source-inventory.csv' }
 
 function Get-RelativePath([string]$Base, [string]$Path) {
@@ -48,7 +48,7 @@ if (Test-Path -LiteralPath $sourcesPath -PathType Leaf) {
         $statusCellIndex = if ($aiResearchTable) { 4 } else { 3 }
         if ($cells.Count -le $statusCellIndex) { continue }
         $statusText = $cells[$statusCellIndex].Trim()
-        foreach ($match in [regex]::Matches($sourceCell, '`((?:raw|research)/[^`]+)`')) {
+        foreach ($match in [regex]::Matches($sourceCell, '`((?:raw|research|repositories)/[^`]+)`')) {
             $candidate = $match.Groups[1].Value.TrimEnd('/').Replace('\', '/')
             $candidateStatus = Get-StatusFromText $statusText
             $record = [pscustomobject]@{
@@ -66,16 +66,40 @@ if (Test-Path -LiteralPath $sourcesPath -PathType Leaf) {
     }
 }
 
-$decisionFiles = @(Get-ChildItem -LiteralPath (Join-Path $VaultRoot 'wiki\_outputs\semantic-ingest') -Recurse -File -Filter 'decisions.csv' -ErrorAction SilentlyContinue)
+function Test-RecordedPromotion($DecisionFile) {
+    # A decision (even approved) is not evidence that its canonical writes happened.
+    $manifestPath = Join-Path $DecisionFile.DirectoryName 'package.json'
+    if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf)) { return $false }
+    try {
+        $package = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+        $v = $package.validation
+        if ($package.status -ne 'complete' -or $v.validation_mode -ne 'Final' -or $v.validation_profile -ne 'Full' -or $v.validation_status -ne 'passed') { return $false }
+        if ($package.decision_ledger -ne (Get-RelativePath $VaultRoot $DecisionFile.FullName)) { return $false }
+        $evidence = [IO.Path]::GetFullPath((Join-Path $VaultRoot $package.evidence_matrix))
+        if (-not $evidence.StartsWith($VaultRoot.TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { return $false }
+        return ((Get-FileHash -LiteralPath $DecisionFile.FullName -Algorithm SHA256).Hash -eq $v.decision_ledger_sha256 -and
+            (Get-FileHash -LiteralPath $evidence -Algorithm SHA256).Hash -eq $v.evidence_matrix_sha256)
+    } catch { Write-Warning "Cannot verify recorded promotion in ${manifestPath}: $_"; return $false }
+}
+
+$decisionFiles = @(Get-ChildItem -LiteralPath (Join-Path $VaultRoot 'wiki\_outputs\semantic-ingest') -Recurse -File -Filter 'decisions.csv' -ErrorAction SilentlyContinue | Sort-Object FullName)
 foreach ($decisionFile in $decisionFiles) {
+    $recordedPromotion = Test-RecordedPromotion $decisionFile
     foreach ($row in @(Import-Csv -LiteralPath $decisionFile.FullName -Encoding UTF8)) {
         $source = ([string]$row.canonical_source).Replace('\', '/').Trim()
         if (-not $source -or $source -notmatch '^(raw|research)/') { continue }
         $decision = [string]$row.semantic_decision
-        $status = if ($decision -match '(?i)^registered-only$') { 'registered-only' } elseif ($decision -match '(?i)duplicate') { 'duplicate' } elseif ($decision -match '(?i)^out-of-scope$') { 'inventory-only' } elseif ($decision -match '(?i)^(new-claim|extended-claim|corroborating)$') { 'content-ingested' } else { 'pending-review' }
+        # Preserve recorded canonical coverage when a later package stages another delta.
+        if ($exactCoverage[$source.ToLowerInvariant()].status -eq 'content-ingested') { continue }
+        $reviewed = $row.review_status -in @('reviewed', 'approved')
+        $promotional = $decision -in @('new-claim', 'extended-claim', 'corroborating')
+        $promotion = if (-not $promotional) { 'not-proposed' } elseif ($row.review_status -eq 'approved' -and $recordedPromotion) { 'canonical-recorded' } elseif ($row.review_status -eq 'approved') { 'approved-not-confirmed' } elseif ($reviewed) { 'reviewed-proposal' } else { 'unreviewed-proposal' }
+        $status = if ($promotion -eq 'canonical-recorded') { 'content-ingested' } elseif ($decision -eq 'out-of-scope') { 'inventory-only' } elseif (-not $reviewed) { 'pending-review' } elseif ($decision -eq 'registered-only') { 'registered-only' } elseif ($decision -match '(?i)duplicate') { 'duplicate' } else { 'pending-review' }
         $exactCoverage[$source.ToLowerInvariant()] = [pscustomobject]@{
             status = $status
             reference = (Get-RelativePath $VaultRoot $decisionFile.FullName)
+            source_review_status = $(if ($reviewed) { 'reviewed' } else { 'not-confirmed' })
+            promotion_status = $promotion
         }
     }
 }
@@ -86,6 +110,7 @@ foreach ($lane in $sourceLanes) {
     if (-not (Test-Path -LiteralPath $laneRoot -PathType Container)) { continue }
     foreach ($file in Get-ChildItem -LiteralPath $laneRoot -Recurse -File -Force | Sort-Object FullName) {
         $relative = Get-RelativePath $SourceRoot $file.FullName
+        if ($lane -eq 'repositories' -and $relative -notmatch '^repositories/[^/]+/snapshots/[0-9a-f]{40}/') { continue }
         $coverage = $exactCoverage[$relative.ToLowerInvariant()]
         if (-not $coverage) {
             $match = $prefixCoverage | Where-Object { $relative.StartsWith($_.prefix, [StringComparison]::OrdinalIgnoreCase) } | Sort-Object { $_.prefix.Length } -Descending | Select-Object -First 1
@@ -94,7 +119,7 @@ foreach ($lane in $sourceLanes) {
         if (-not $coverage) {
             $coverage = [pscustomobject]@{ status = 'inventory-only'; reference = 'filesystem-inventory' }
         }
-        $kind = if ($relative -match '^(raw|research)/assets/') { 'binary-library' } elseif ($relative -match '^raw/Clippings/') { 'clipping' } elseif ($relative -match '/imports/') { 'import' } elseif ($lane -eq 'research') { 'ai-research' } else { 'native-source' }
+        $kind = if ($lane -eq 'repositories') { 'repository-snapshot' } elseif ($relative -match '^(raw|research)/assets/') { 'binary-library' } elseif ($relative -match '^raw/Clippings/') { 'clipping' } elseif ($relative -match '/imports/') { 'import' } elseif ($lane -eq 'research') { 'ai-research' } else { 'native-source' }
         $rows.Add([pscustomobject][ordered]@{
             source_path = $relative
             lane = $lane
@@ -102,6 +127,8 @@ foreach ($lane in $sourceLanes) {
             size_bytes = $file.Length
             coverage_status = $coverage.status
             coverage_ref = $coverage.reference
+            source_review_status = $(if ($coverage.status -eq 'content-ingested') { 'reviewed' } elseif ($coverage.source_review_status) { $coverage.source_review_status } else { 'not-confirmed' })
+            promotion_status = $(if ($coverage.status -eq 'content-ingested') { 'canonical-recorded' } elseif ($coverage.promotion_status) { $coverage.promotion_status } else { 'not-confirmed' })
         })
     }
 }

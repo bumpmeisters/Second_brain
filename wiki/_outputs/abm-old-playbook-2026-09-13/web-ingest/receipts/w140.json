@@ -1,0 +1,17 @@
+{
+  "id": "W140",
+  "url": "https://www.sciencedirect.com/science/article/pii/S2040712221000542",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:35.369790+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w140.json",
+  "title": "Does cluttered social media environment hurt advertising effectiveness? The moderation of ad types and personalization - ScienceDirect",
+  "final_url": "https://www.sciencedirect.com/org/science/article/abs/pii/S2040712221000542",
+  "characters": 2882,
+  "sha256": "c8d6a5a4e4396f44e2f84d0b1674d7a94a60638e22ce1ee6bbfec23efa9d28db",
+  "http_status": 200
+}

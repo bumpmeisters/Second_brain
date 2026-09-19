@@ -1,0 +1,14 @@
+{
+  "schema": "repository-library-policy/v1",
+  "source_root": "repositories",
+  "allowed_host": "github.com",
+  "visibility": "public-only",
+  "max_archive_bytes": 52428800,
+  "max_expanded_bytes": 209715200,
+  "max_files": 10000,
+  "source_mutation": false,
+  "automatic_acquisition": false,
+  "repository_execution": false,
+  "canonical_promotion": false,
+  "symlink_representation": "inert-target-text"
+}

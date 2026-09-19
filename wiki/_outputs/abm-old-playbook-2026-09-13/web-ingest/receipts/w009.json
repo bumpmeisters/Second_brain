@@ -1,0 +1,18 @@
+{
+  "id": "W009",
+  "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+  "research_briefs": [
+    "s03-aeo.md",
+    "t05-seo-to-entity.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:54.091419+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w009.json",
+  "title": "Introducing AI Performance in Bing Webmaster Tools Public Preview  ...",
+  "final_url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+  "characters": 7714,
+  "sha256": "2ab70bc29f6fb4ab4e6ffd7a2bb16495aae8fdc880dfa38808ded9cc90fc3194",
+  "http_status": 200
+}

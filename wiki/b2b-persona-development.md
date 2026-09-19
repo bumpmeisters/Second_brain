@@ -2,6 +2,8 @@
 type: concept
 status: active
 sources:
+  - "raw/Clippings/The ICP is Not Necessarily Your ICP  Episode 5 - B2B Effectiveness.md"
+  - "raw/Clippings/The MQL is NOT Dead!  Episode 1 - B2B Effectiveness.md"
   - raw/assets/04_Persona_und_Audience/Persona_Analysis
   - raw/assets/04_Persona_und_Audience/Persona_Templates
   - raw/Clippings/Your ICP should be more like a wiki than a document.md
@@ -11,7 +13,7 @@ sources:
   - raw/Clippings/How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md
   - raw/Clippings/Supercharge Your Go-To-Market Strategy with Full-Funnel Go-To-Market Template.md
 created: 2026-06-03
-updated: 2026-07-29
+updated: 2026-09-11
 ---
 
 # B2B Persona Development
@@ -64,9 +66,29 @@ When the marketing team lacks sufficient specialist knowledge, treat SMEs as hyp
 
 Community responses and specialist opinions are not representative market statistics. Preserve source, permission, uncertainty, contradictions, and permitted downstream use, and never conceal identity or bypass private access rules.
 
+## ICP um beidseitigen Fit und Bedienbarkeit erweitern
+
+Bei ICP-Hypothesen Käuferbedarf, Bereitschaft zur Berücksichtigung unseres Anbieters und unsere tatsächliche Fähigkeit zum Verkauf und zur Betreuung getrennt prüfen. Historische Gewinne, Verluste, Disqualifikationen, Vertriebsaufwand und Kundenwert einbeziehen. Ein außergewöhnlich großer gewonnener Kunde reicht nicht aus, um eine neue Zielgruppe als wiederholbar gewinnbar zu behandeln.
+
+Historie ist selektiert und kann bei verändertem Produkt, Compliance oder Vertrieb veralten. Keine fixen Marktanteile, 1/1200-Wahrscheinlichkeit aus gewonnenen Deals oder pauschale Unmöglichkeit von Enterprise-Verkäufen übernehmen.
+
+Methodische Ableitung P47-C10 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/The ICP is Not Necessarily Your ICP  Episode 5 - B2B Effectiveness.md` — 9:50–16:13; 19:53–25:38; 35:19–49:32; 55:22 bis Schluss; practitioner.
+- `raw/Clippings/The MQL is NOT Dead!  Episode 1 - B2B Effectiveness.md` — 1:43–15:49; 21:03–25:53; 31:31–36:27; 40:22–56:58; practitioner.
+
+Für den Vergleich konkurrierender Use Cases siehe [[use-case-cluster-prioritization-workflow]].
+
+## Personas anhand von Kaufrollen verdichten
+
+Der [[buying-role-persona-frameworks|Quellenvergleich vom 11.09.2026]] unterscheidet Rollenfunktion, Evidenzmodus und Darstellung. Eine Kaufrolle muss nicht zu einer eigenen Persona werden. Rollenbezogene Arbeitstypen werden in der neuen eigenen Kombination nur getrennt, wenn Aufgaben, Kriterien oder Informations-/Nachweisfragen für die beabsichtigte Verwendung wesentlich verschieden sind. Dies ist eine methodische Ableitung, keine universelle Taxonomie.
+
+Der [Frameworkentwurf](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/audience-understanding/buying-role-persona-analysis.md) erhält Befugnis, Handlung und Anliegen als getrennte Merkmale. Er erlaubt ausdrücklich markierte Proto-Persona-Arbeit und setzt echte Kaufgeschichten für eine Five-Rings-Rekonstruktion voraus. Der erste breite TÜV-Bestandspilot ist mit acht Arbeitstypen und sichtbaren Datenstopps dokumentiert; eine erfolgreiche Kundenvalidierung wird damit nicht behauptet. Originalquellen, Reichweiten und lokale Snapshots stehen im Quellenvergleich.
+
 ## Related pages
 
 - [[persona-and-audience-library]]
+- [[buying-role-persona-frameworks]]
 - [[customer-journey-mapping]]
 - [[synthetic-customer-intelligence]]
 - [[briefing-system]]

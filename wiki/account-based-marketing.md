@@ -28,7 +28,7 @@ sources:
   - raw/Clippings/B2B Demand Generation Playbook Webinar.md
   - raw/Clippings/Unpacking account-based marketing Conceptualization, key activities, and performance outcomes.md
 created: 2026-06-03
-updated: 2026-08-01
+updated: 2026-09-13
 ---
 
 # Account Based Marketing
@@ -125,6 +125,14 @@ For long-cycle accounts, define observable states and map timestamped marketing 
 For a long, non-linear account journey, combine two operating layers. Maintain a planned cadence of useful, stage-appropriate touches that does not depend on an account producing a fresh signal, and add a signal-triggered layer that first reviews account history, relationship context, buying-group coverage, and current state before choosing the next action. A promotion, content interaction, funding event, website visit, or other observation is a prompt to investigate; it is not purchase intent or automatic permission to pitch (source: Untitled 7.md; canonical title: *How to Create an Account-Based Playbook for Long Sales Cycles and Multiple Decision-Makers*; practitioner webinar; analysis: P29-W4-C22).
 
 Multithreading can extend beyond formal decision roles to power users, internal intermediaries, procurement, external advisers, associations, communities, and credible peers. Map why each role matters, who has an appropriate relationship, and what contact is authorized. Do not conceal commercial intent, request introductions without consent, imply endorsement, or treat the number of touches as attribution (same source; analysis: P29-W4-C23).
+
+## Kaufzeitfenster und Programmaufgaben
+
+P56-E16 präzisiert die häufig verwendete 95/5-Erzählung: Dawes bezeichnet die Zahl ausdrücklich als ungefähre Regel; der Anteil aktuell kaufender Kunden hängt von Kategorie, Wiederbeschaffungszeit und Betrachtungsperiode ab. Der Beitrag argumentiert für Gedächtnisverbindungen vor akutem Bedarf, ist aber keine neue randomisierte Wirkungsstudie. Daher weder fünf Prozent auf jede LinkedIn-Audience übertragen noch jede übrige Ausspielung automatisch als wirksamen Markenaufbau bewerten. (source: raw/assets/abm-old-playbook-web-2026-09-13/w016-business-linkedin-com-advertising-effectiveness-and-the-95-5-rule-pdf.pdf)
+
+Als Planungsfolge aktuelle Kaufunterstützung, längerfristige Relevanz und Bestandskundenarbeit mit eigenen Aufgaben, Zeitfenstern und Evidenz führen. Ob eine Leadkampagne, ein breiter Demand-Ansatz oder intensives Account-Programm wirtschaftlich passt, hängt von Kaufkontext, adressierbarem Potenzial, Content-Nutzen, Betreuungskosten und überprüfbaren Folgeergebnissen ab. Die Quellen belegen keine allgemeine Überlegenheit von ABM. Quellen und Geltungsgrenzen: [P56-E16](_outputs/semantic-ingest/p56/evidence-matrix.csv), [[old-marketing-playbook-web-sources-2026-09-13]].
+
+Für die Vermittlung von außen bleibt der [Entwurf mit sechs Arbeitsbeispielen](../research/abm-old-playbook-2026-09-13/gesamtbewertung.md) als gekennzeichnete Analyse nutzbar. Er macht alternative tägliche Arbeit vorstellbar, beweist aber noch keine operative Reife oder erzielte Wirkung beim Kunden.
 
 ## Reusable practices
 

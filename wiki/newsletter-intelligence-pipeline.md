@@ -6,7 +6,7 @@ sources:
   - tools/newsletter-intelligence.ps1
   - templates/newsletter-intelligence/priority-context.json
 created: 2026-07-03
-updated: 2026-08-16
+updated: 2026-09-11
 ---
 
 # Newsletter Intelligence Pipeline
@@ -49,6 +49,8 @@ Dedicated newsletter Gmail
 
 Private staging is excluded from Git. If it sits under this Google Drive vault it may still synchronize to Google Drive; device-local staging avoids that sync boundary. The choice must be accepted before any live body read.
 
+The bounded authority files `source-registry.json` and `identity-registry.json` are the deliberate exception: they contain source identity and human selection state, not message bodies, MIME, attachments, tracking data, or credentials. They remain versionable so a checkout or branch recovery cannot silently remove the authority needed by the weekly run. The fixture suite fails when either registry is missing, ignored, structurally invalid, or inconsistent with the other.
+
 ## Qualification review
 
 The generated workspace follows an evidence-first profile design. Each profile shows:
@@ -85,6 +87,26 @@ Candidate extraction and judgment are separate passes. A newsletter claim remain
 Current priorities are a dated navigation layer, not a closed topic allowlist. A candidate with no priority-keyword match remains reviewable when it records a bounded adjacent-enabler, convergence, strategic-surprise, emergent-topic, or exploratory hypothesis. The gate still enforces explicit source approval, retrieval budgets, commercial limits, safety checks, and human promotion authority; an unbounded topic label alone is insufficient (source: tools/newsletter-intelligence.ps1; source: templates/newsletter-intelligence/priority-context.json).
 
 The weekly brief is deliberately bounded. Each included signal must state novelty, relevance, evidence status, uncertainty, wiki connection, provenance, and a possible decision, experiment, or verification step. Overflow stays in staging rather than becoming a reading queue.
+
+## Issue-level source-method lens
+
+When a retained issue reaches Source Analysis or a promotion review, record its method context at issue level. Do not infer these fields from the newsletter's general reputation or copy them across issues:
+
+| Field | Bounded values | Decision use | Forbidden inference |
+|---|---|---|---|
+| `reporting_mode` | `fast_pulse`, `reported_analysis`, `interview_or_roundtable`, `practitioner_account`, `curated_roundup`, `first_party_retrospective`, `mixed`, `unknown` | Set the expected method detail, comparison depth, and volatility check. | A long or researched format is not automatically more accurate. |
+| `access_path` | `public_material`, `informal_sources`, `direct_participants`, `mixed`, `undisclosed` | Set claim-specific provenance and corroboration expectations. | Direct access is neither independence nor proof of an outcome. |
+| `correction_transparency` | `visible_correction_log`, `acknowledged_limitation_or_error`, `no_signal_in_reviewed_issue`, `unknown` | Preserve visible corrections, admitted limits, and unresolved correction history in uncertainty. | No observed correction is not evidence of accuracy or error absence. |
+| `intended_shelf_life` | `current_pulse`, `time_bounded`, `evergreen_intent`, `mixed`, `unknown` | Set the refresh trigger before consequential reuse. | Evergreen intent does not make a claim timeless. |
+
+Each field carries a short basis and its own uncertainty. `unknown` is valid and must not be filled from publisher-level assumptions. The four fields affect only evidence expectations, uncertainty, and refresh needs:
+
+- fast or current-pulse material requires a current check before consequential reuse;
+- informal or participant access requires claim-specific independence analysis;
+- visible correction behavior preserves what changed but cannot validate unaffected claims;
+- evergreen-intent material still requires a current applicability check when facts, products, prices, policies, people, or external conditions may have changed.
+
+The lens does not change source selection, assign a score or rank, establish truth, waive primary verification, or authorize promotion. Reporting mode, access, correction behavior, and shelf life remain separate from evidence status and commercial incentives (source: [[newsletter-source-method-lens-source-review-2026-09-11]]).
 
 ## Claim-responsive verification and closure
 

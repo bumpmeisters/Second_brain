@@ -7,7 +7,7 @@ canonical_id: publication-5953694c0d98205a
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-09-10
 ---
 
 # Mindstream
@@ -73,11 +73,11 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-10 — Paid conversational discovery boundary**: A reviewed first-party announcement supports separating organic assistant answers from paid conversational placement and recording label, context, consent, claims, brand safety, measurement, incrementality limits, region, ownership, and stop conditions. Product performance and outcome claims remain unverified (source: [[paid-conversational-discovery-source-review-2026-09-10]]).
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[paid-conversational-discovery-source-review-2026-09-10]] - First-party product-intent review supporting a governance distinction between organic answers and paid conversational placement; effectiveness claims excluded.
 
 ## Feedback and corrections
 

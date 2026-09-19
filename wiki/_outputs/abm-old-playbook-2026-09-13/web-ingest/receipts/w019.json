@@ -1,0 +1,29 @@
+{
+  "id": "W019",
+  "url": "https://developers.google.com/search/docs/appearance/ai-features",
+  "research_briefs": [
+    "f09-zero-click.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:56:46.415440+00:00",
+  "previous_attempt": {
+    "id": "W019",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "research_briefs": [
+      "f09-zero-click.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T17:54:18.528728+00:00",
+    "status": "capture-failed",
+    "error": "Error: Rate limit exceeded. Consumed (req/min): 16, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 19s, resets at Sun Sep 13 2026 17:54:39 GMT+0000 (Coordinated Universal Time)\n"
+  },
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w019.json",
+  "title": "AI Features and Your Website | Google Search Central  |  Documentation  |  Google for Developers",
+  "final_url": "https://developers.google.com/search/docs/appearance/ai-features",
+  "characters": 13031,
+  "sha256": "f0cc30033e229aa429fec5b319b8ba27998075e6cd1a6e1a474d9345b341774d",
+  "http_status": 200
+}

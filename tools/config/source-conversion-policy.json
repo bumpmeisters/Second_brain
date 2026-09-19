@@ -9,7 +9,14 @@
     "delete_files": false, "semantic_ingest": false
   },
   "backend": "auto",
-  "converter_profile_version": "2026-07-16.1",
+  "converter_profile_version": "2026-09-09.1",
+  "pdf_limits": {
+    "max_pages": 0,
+    "timeout_seconds": 300,
+    "memory_mib": 2048,
+    "max_input_bytes": 209715200,
+    "max_output_bytes": 52428800
+  },
   "thresholds": {
     "maximum_failure_rate_percent": 5,
     "maximum_unresolved_amber": 10,

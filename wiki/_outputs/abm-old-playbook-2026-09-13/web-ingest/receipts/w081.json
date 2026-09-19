@@ -1,0 +1,17 @@
+{
+  "id": "W081",
+  "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-accounts-buying-groups-opportunities-oh-my-how-is-it-all-connected",
+  "research_briefs": [
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:23.071791+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w081.json",
+  "title": "Accounts, Buying Groups, Opportunities, Oh My! How Is It All Connected?",
+  "final_url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-accounts-buying-groups-opportunities-oh-my-how-is-it-all-connected/",
+  "characters": 11994,
+  "sha256": "d4dcf4c67cd201146edde27dbb8f0d4ddab871a7ebfdc03c3fb7c8312802314d",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W135",
+  "url": "https://www.raconteur.net/marketing-sales/how-to-change-indecisive-customers-into-buyers",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:00.959575+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w135.json",
+  "title": "How do you change indecisive customers into buyers? - Raconteur",
+  "final_url": "https://www.raconteur.net/marketing-sales/how-to-change-indecisive-customers-into-buyers",
+  "characters": 10229,
+  "sha256": "d12c7230771edce8ed2f7f934c05b4abe086a3e2c1cdefc9f4b223a7f1c9b6b3",
+  "http_status": 200
+}

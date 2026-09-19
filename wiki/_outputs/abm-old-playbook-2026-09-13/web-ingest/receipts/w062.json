@@ -1,0 +1,17 @@
+{
+  "id": "W062",
+  "url": "https://support.6sense.com/docs/predictive-buying-stages",
+  "research_briefs": [
+    "f04-mql-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:31.728629+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w062.json",
+  "title": "Predictive Buying Stages",
+  "final_url": "https://support.6sense.com/docs/predictive-buying-stages",
+  "characters": 4281,
+  "sha256": "b3ae5a63c82a48b5070512174fd98920f71bd5c7254264251c0892ed24c2aeba",
+  "http_status": 200
+}

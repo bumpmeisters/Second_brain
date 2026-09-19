@@ -72,8 +72,8 @@ function Move-ToQuarantine([IO.FileInfo]$File,[string]$Lane,[string]$Reason,[str
 
 [Collections.Generic.List[object]]$results=[Collections.Generic.List[object]]::new()
 $counts=@{admitted=0;pending=0;quarantined=0}
-function Add-InboxResult([string]$Lane,[string]$Input,[string]$Status,[string]$Destination="",[string]$Sha256="",[string]$Message=""){
- $results.Add([pscustomobject]@{run_id=$runId;lane=$Lane;input=$Input;status=$Status;destination=$Destination;sha256=$Sha256;message=$Message})
+function Add-InboxResult([string]$Lane,[string]$SourceInput,[string]$Status,[string]$Destination="",[string]$Sha256="",[string]$Message=""){
+ $results.Add([pscustomobject]@{run_id=$runId;lane=$Lane;input=$SourceInput;status=$Status;destination=$Destination;sha256=$Sha256;message=$Message})
  if($Status -eq "admitted"){$counts.admitted++}elseif($Status -eq "pending"){$counts.pending++}elseif($Status -like "quarantined-*"){$counts.quarantined++}
 }
 

@@ -1,0 +1,50 @@
+{
+  "task_id": "P01",
+  "attempt_id": "8ac62f0807c6408687f1a21ca74d0537",
+  "input_revision": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "Violet Fictional Instruments",
+      "title": "Explicitly fictional company record",
+      "kind": "fixture-text",
+      "url": "https://violet.invalid/fixture",
+      "date": "2025-12-31",
+      "retrieved_at": "2026-09-09T00:00:00Z",
+      "entity_ids": [
+        "violet-fictional-group"
+      ],
+      "budget_class": "supplementary",
+      "local_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\originals\\record-2025.txt",
+      "sha256": "82e02ddceb0463d96ccdf5bc6838543582414de65281c61abd223cae2af145b2",
+      "readiness_status": "ready",
+      "acquisition_status": "imported",
+      "limitations": [
+        "Fabricated fixture; no evidence about a real company."
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "F-WORKFORCE",
+      "statement": "Fictional 2025 year-end headcount: 120 persons.",
+      "field": "workforce",
+      "entity_id": "violet-fictional-group",
+      "region": "global",
+      "period": "2025",
+      "classification": "fact",
+      "source_id": "S1",
+      "locator": "Section workforce",
+      "value": 120,
+      "unit": "persons",
+      "metric": "headcount",
+      "definition": "global group headcount at year-end"
+    }
+  ],
+  "gaps": [],
+  "used_budget": {
+    "searches": 0
+  },
+  "problems": [],
+  "next_question": null
+}

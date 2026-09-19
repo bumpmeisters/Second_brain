@@ -13,7 +13,7 @@ sources:
   - raw/Clippings/How to Create an Account-Based Playbook For Long Sales Cycles and Multiple Decision-Makers.md
   - raw/Clippings/Why Randstad Holding NV chooses Demandbase for ABM excellence.md
 created: 2026-07-18
-updated: 2026-08-01
+updated: 2026-09-13
 ---
 
 # Buying Groups and Account Prioritization
@@ -69,6 +69,14 @@ Vendor-specific labels such as 6QA can be useful inside their native systems but
 Turn stage language into an auditable working model. Define observable account states; normalize marketing and sales events with timestamps, recency, and uncertainty; create a current state inventory; then examine historical transitions, dwell time, stakeholder roles, and channel patterns. Use the result to identify stagnation and the next diagnosis, not to assume that observed touches caused movement (source: How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md; transcript anchors 23:16-28:40 and 39:07-46:39; mixed practitioner interview; analysis: [[account-progression-baseline-and-velocity-loop]]).
 
 States are hypotheses and historical ranges may become obsolete. Impressions do not prove awareness, activity does not prove intent, and transition history is neither attribution nor a deterministic forecast.
+
+## Account, Rollen und Vorhaben auseinanderhalten
+
+P56-E03 ergänzt die Qualifikation um eine explizite **Vorhaben-Hypothese**: Welche Lösung oder Beschaffungsfrage verbindet die beobachteten Kontakte, welche Business Unit ist betroffen, und welche Beobachtung würde zeigen, dass es getrennte Initiativen sind? Ein MQA-Flag allein beantwortet das nicht. Forrester beschreibt mehrere lösungsbezogene Opportunities und Buying Groups innerhalb eines Accounts. Weitere Kontakte können Bestätigung liefern, müssen aber demselben Vorhaben zugeordnet werden; eine reine Kontaktzahl genügt nicht. (source: raw/imports/abm-old-playbook-web-2026-09-13/w078-www-forrester-com-six-steps-to-buying-group-success.md; Operating-Model-Empfehlung, kein kausaler Liftbeleg)
+
+Das klassische Buying-Center-Modell unterscheidet Nutzer, Käufer, Beeinflusser, Entscheider und Gatekeeper, aber nicht fünf zwingend verschiedene Personen. Eine Person kann mehrere Rollen ausfüllen; mehrere Personen dieselbe Rolle. Rollen, Entscheidungskriterien und Informationsbedarf können sich im Verlauf verändern. Das Modell ist ein analytisches Gerüst, keine aktuelle Gruppengrößenmessung. (source: raw/assets/abm-old-playbook-web-2026-09-13/w031-faculty-wharton-upenn-edu-7215-a-general-model-for-understanding-pdf.pdf; Webster/Wind 1972, manuell transkribiert)
+
+Output der Ergänzung ist ein Account-Datensatz mit getrennten Vorhaben, zugeordneten und nur vermuteten Beteiligten, Belegen, alternativen Erklärungen und nächstem Prüfschritt. Vollständige Quellenzuordnung: [P56-E03](_outputs/semantic-ingest/p56/evidence-matrix.csv), [[old-marketing-playbook-web-sources-2026-09-13]].
 
 ## Migration risks
 

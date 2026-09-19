@@ -1,0 +1,205 @@
+ISO 9001 - Quality management systems — Requirements (https://www.iso.org/standard/9001)
+citeturn34view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn19view0","lineno":null}); Total lines: 241
+L0: cite0†Image L1: 
+L2: Under publication
+L3: 
+L4: ISO 9001
+L5: 
+L6: Quality management systems — Requirements
+L7: 
+L8: Reference number
+L9: ISO 9001
+L10: 
+L11: Edition 6
+L12: 2026-09
+L13: 
+L14: © ISO 2026
+L15: 
+L16: Under publication
+L17: 
+L18: cite1†Under publication (Edition 6, 2026)
+L19: 
+L20: Final production steps (up to seven weeks).
+L21: 
+L22: Will replace cite2†ISO 9001:2015 L23: 
+L24: ### Preview ISO 9001
+L25: ## What is ISO 9001?
+L26: 
+L27: ISO 9001 is a globally recognized standard for quality management. It helps organizations of all sizes and sectors to improve their performance, meet customer expectations and demonstrate their commitment to quality. Its requirements define how to establish, implement, maintain, and continually improve a quality management system (QMS).
+L28: Implementing ISO 9001 means your organization has put in place effective processes and trained staff to deliver flawless products or services time after time.
+L29: ## Why is ISO 9001 important?
+L30: 
+L31: With more than one million certificates issued to organizations in 189 countries, ISO 9001 is the most widely used quality management standard in the world. Within the ISO 9000 family, which defines seven quality management principles including a strong customer focus and continual improvement, ISO 9001 is the only standard that can be certified to (though certification is not mandatory).
+L32: 
+L33: Business benefits include:
+L34:   * Customer confidence: The standard ensures that organizations have robust quality control processes in place, leading to increased customer trust and satisfaction.
+L35:   * Effective complaint resolution: ISO 9001 offers guidelines for resolving customer complaints efficiently, contributing to timely and satisfactory problem-solving.
+L36:   * Process improvement: The standard helps identify and eliminate inefficiencies, reduce waste, streamline operations, and promote informed decision-making, resulting in cost savings and better outcomes.
+L37:   * Ongoing optimization: Regular audits and reviews encouraged by ISO 9001 enable organizations to continually refine their quality management systems, stay competitive, and achieve long-term success.
+L38: ## What is ISO 9001:2026?
+L39: 
+L40: Set to replace cite2†ISO 9001:2015 on 16 September 2026, this revision ensures the standard remains relevant, addressing modern business needs and stakeholder expectations.
+L41: #### Sign up for email updates
+L42: 
+L43: Register to receive resources and updates on ISO 9001 and related topics.
+L44: 
+L45: [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input]
+L46: 
+L47: [Input: Email] [Input]
+L48: 
+L49: Website [Input]
+L50: 
+L51: [Button: Subscribe]
+L52: Almost done!
+L53: You are only one step away from joining the ISO subscriber list. Please confirm your subscription by clicking on the email we've just sent to you. You will not be registered until you confirm your subscription. If you can't find the email, kindly check your spam folder and/or the promotions tab (if you use Gmail).
+L54: 
+L55: How your data will be used
+L56: Please see cite3†ISO privacy notice . This site is protected by reCAPTCHA and the Google cite4†Privacy Policy†policies.google.com and cite5†Terms of Service†policies.google.com apply.
+L57: 
+L58: Cookie consent is required
+L59: cite6†Please view on Vimeo†vimeo.com or adjust your privacy settings.
+L60: 
+L61: What is ISO 9001: Quick guide to ISO 9001:2015 Quality Management Systems
+L62: ## Benefits of ISO 9001
+L63: 
+L64:   *  Increased customer trust and satisfaction
+L65:   * Sound quality control processes
+L66:   *  Cost savings and productivity gains
+L67:   *  Culture of continuous improvement
+L68: 
+L69: ### FAQ
+L70: ### [Button: Who should use the ISO 9001 standard?]
+L71: Any organization that wants to improve its quality management system, meet customer and applicable statutory and regulatory requirements, and enhance customer satisfaction can use the ISO 9001 standard. It is suitable for organizations of any size, and applies to all sectors, including manufacturing, services, healthcare, education, government, and non-profit organizations.
+L72: ISO 9001 can also be used by certification bodies or other third parties to assess an organization’s conformity with this International Standard.
+L73: ### [Button: Is there a standard adapting the requirements of ISO 9001 to my sector?]
+L74: 
+L75: ISO has a range of standards for quality management systems that are based on ISO 9001 and adapted to specific sectors and industries. These include:
+L76:   * cite7†ISO 13485 on medical devices L77:   * cite8†ISO/TS 54001 on elections at all levels of government L78:   * cite9†ISO 18091 on local government sector applications L79:   * cite10†ISO 22163 on railway sector applications  L80:   * cite11†ISO 29001 on petroleum, petrochemical and natural gas-related products and services L81:   * cite12†ISO/IEC/IEEE 90003 on computer software L82: ### [Button: What topics does ISO 9001 cover?]
+L83: 
+L84: The ISO 9001 standard specifies requirements for the establishment, maintenance, and continuous improvement of a quality management system, covering a wide range of topics including:
+L85:   1. Context of the organization: ISO 9001 requires organizations to determine the external and internal factors that affect their ability to achieve the intended results of their quality management system.
+L86:   2. Leadership: The standard emphasizes the importance of leadership in implementing and maintaining a quality management system.
+L87:   3. Planning: The quality management system must include measures designed to achieve an organization’s quality objectives and continuously improve the system’s effectiveness.
+L88:   4. Support: ISO 9001 addresses issues such as resources, competence, awareness, communication and documented information.
+L89:   5. Operation: The processes necessary to meet customer requirements and increase customer satisfaction must be planned, implemented and controlled.
+L90:   6. Performance evaluation: The standard requires organizations to monitor, measure, analyze and evaluate the performance and effectiveness of their quality management system.
+L91:   7. Improvement: ISO 9001 emphasizes the importance of continuously increasing the effectiveness of the quality management system based on the results of performance evaluation and other data sources.
+L92: Overall, ISO 9001 helps organizations address all aspects of managing the quality of their products and services, with an emphasis on customer satisfaction and constant enhancement of the quality management system.
+L93: ### [Button: Why is this new edition of ISO 9001 being developed?]
+L94: 
+L95: The fifth edition of ISO 9001 was published in 2015. To maintain relevance, ISO conducts periodic reviews. After global consultation in 2023, a consensus confirmed that revising the standard would enhance its value, ensuring it meets the evolving needs of users and their communities.
+L96: ### [Button: What will the publication of the new edition in 2026 mean for organizations certified to ISO 9001:2015?]
+L97: 
+L98: The new edition presents an opportunity to review and refine your quality management system, ensuring it aligns with updated requirements and stakeholder expectations. cite13†Subscribe to our email updates for timely notifications.
+L99: Certified organizations will have to transition to the new version within the timeframe set by their certification cycle. For further information, they should contact their certification body.
+L100: ### [Button: What is ISO 9001 certification and does my organization need to get certified? ]
+L101: 
+L102: Certification to ISO 9001 is one way to demonstrate to stakeholders and customers that you are committed and able to consistently deliver high quality products or services. Holding a certificate issued by an accredited conformity assessment body may bring an additional layer of confidence, as an accreditation body has provided independent confirmation of the certification body’s competence.
+L103: As with other ISO management system standards, companies implementing ISO 9001 can choose whether they want to go through a certification process or not.
+L104: Checking that the system works is a vital part of ISO 9001. The standard recommends that an organization performs internal audits to check how its quality management system is working. An organization may decide to invite an independent certification body to verify that it is in conformity with the standard, but there is no requirement for this. Alternatively, you might invite your clients to audit the quality system for themselves.
+L105: As in other contexts, standards should always be referred to with their full reference in statements on certification such as “certified to ISO 9001:2015” (not just: “certified to ISO 9001). If you wish to use a logo to demonstrate certification, please contact the certification body that issued your certificate. See full details about cite14†use of the ISO logo .
+L106: ### [Button: Where can I find help with auditing ISO 9001?]
+L107: 
+L108: Support on auditing quality management systems can be found on the website of the cite15†ISO 9001 Auditing Practices Group†committee.iso.org . This is an informal group of quality management system experts, auditors and practitioners from ISO/TC 176 and the International Accreditation Forum.
+L109: ### [Button: What is the ISO definition of quality?]
+L110: A definition of quality is part of the core vocabulary for quality management which can be found in cite16†ISO 9000:2026 and applies to all ISO quality management standards, including ISO 9001. It says that quality is the “degree to which a set of inherent characteristics [or distinguishing features] of an object”, which in turn is defined as anything perceivable or conceivable, such as a product, service, process, person, organization, system or resource, “fulfils requirements.”
+L111: ### [Button: What is the difference between ISO 9001 and ISO 14001?]
+L112: ISO 9001 and ISO 14001 are both International Standards for organizational management but they have different goals. ISO 9001 helps organizations improve their quality management and customer satisfaction. ISO 14001 helps organizations reduce their environmental impact and promote sustainability. ISO standards that look at different types of management systems, such as ISO 9001 for quality and cite17†ISO 14001 for environmental management , are all structured in the same way.
+L113: This means that companies using one ISO management standard will find it easy to integrate other aspects of organizational management into their existing management system.
+L114: ### [Button: What is the difference between ISO 9001 and ISO 13485?]
+L115: The International Standards ISO 9001 and ISO 13485 both define requirements for quality management systems, but one has a much broader user group than the other. ISO 9001 provides a quality management framework that can apply to organizations of any size or sector. ISO 13485, on the other hand, has been developed specifically for the medical device industry with a focus on regulatory compliance.
+L116: The standard helps ensure the safety and effectiveness of medical devices, including risk management, traceability and process validation. Compared to ISO 9001, it contains additional requirements specific to organizations involved in the life cycle of medical devices, whereas elements of ISO 9001 that are not relevant as regulatory requirements are not part of ISO 13485.
+L117: In short, while ISO 9001 sets out a general framework for quality management, cite7†ISO 13485 provides specific guidance for the medical device industry.
+L118: ## General information
+L119: 
+L120:   * Status
+L121: 
+L122:  : Under development
+L123: 
+L124: Publication date
+L125: 
+L126:  : 2026-09
+L127: 
+L128: Stage
+L129: 
+L130: : International Standard under publication [cite1†60.00 ]
+L131: 
+L132:   * Edition
+L133: 
+L134:  : 6
+L135: 
+L136:   * Technical Committee :
+L137: 
+L138: cite18†ISO/TC 176/SC 2 L139: 
+L140: ICS :
+L141: 
+L142: cite19†03.100.70 cite20†03.120.10 L143: 
+L144:   * cite21†RSS updates
+L145: 
+L146: ## Life cycle
+L147: 
+L148:   * ### Previously
+L149: 
+L150: Published
+L151: 
+L152: #### cite2†ISO 9001:2015 L153: 
+L154: Published
+L155: 
+L156: #### cite22†ISO 9001:2015/Amd 1:2024 L157: 
+L158:   * ### Now
+L159: 
+L160: Under development
+L161: #### ISO 9001
+L162: 
+L163: cite23†Stage: 60.00 (Under publication) L164: 
+L165:     * 00
+L166: 
+L167: Preliminary
+L168: 
+L169:     * 10
+L170: 
+L171: Proposal
+L172: 
+L173:       * cite24†10.99 2023-11-16 New project approved L174:     * 20
+L175: 
+L176: Preparatory
+L177: 
+L178:       * cite25†20.00 2023-11-16 New project registered in TC/SC work programme L179:       * cite26†20.20 2023-12-16 Working draft (WD) study initiated L180:       * cite27†20.60 2024-01-21 Close of comment period L181:     * 30
+L182: 
+L183: Committee
+L184:       * cite28†30.00 2024-04-24 Committee draft (CD) registered L185:       * cite29†30.20 2024-04-26 CD consultation initiated L186:       * cite30†30.60 2024-06-29 Close of comment period L187:       * cite31†30.92 2024-07-23 CD referred back to Working Group L188:       * cite28†30.00 2025-01-16 Committee draft (CD) registered L189:       * cite29†30.20 2025-01-17 CD consultation initiated L190:       * cite30†30.60 2025-03-15 Close of comment period L191:       * cite32†30.99 2025-06-26 CD approved for registration as DIS L192:     * 40
+L193: 
+L194: Enquiry
+L195:       * cite33†40.00 2025-06-30 DIS registered L196:       * cite34†40.20 2025-08-27 DIS ballot initiated: 12 weeks L197:       * cite35†40.60 2025-11-20 Close of voting L198:       * cite36†40.99 2026-04-15 Full report circulated: DIS approved for registration as FDIS L199:     * 50
+L200: 
+L201: Approval
+L202:       * cite37†50.00 2026-04-20 Final text received or FDIS registered for formal approval L203:       * cite38†50.20 2026-05-14 Proof sent to secretariat or FDIS ballot initiated: 8 weeks L204:       * cite39†50.60 2026-07-10 Close of voting. Proof returned by secretariat L205:     * 60
+L206: 
+L207: Publication
+L208: 
+L209:       * cite40†60.00 2026-07-10 International Standard under publication L210:       * cite41†60.60 International Standard published L211:     * 90
+L212: 
+L213: Review
+L214: 
+L215:     * 95
+L216: 
+L217: Withdrawal
+L218: 
+L219: cite42†Image: Sustainable Development Goals L220: This standard contributes to the following cite43†Sustainable Development Goals L221: 
+L222: cite44†9 Industry, Innovation and Infrastructure cite45†12 Responsible Consumption and Production cite46†3 Good Health and Well-being cite47†8 Decent Work and Economic Growth cite48†10 Reduced Inequalities cite49†11 Sustainable Cities and Communities cite50†13 Climate Action L223: #### Got a question?
+L224: 
+L225: Check out our cite51†Help and Support L226: 
+L227: Making lives easier, safer and better.
+L228: 
+L229: cite52†Sign up L230: 
+L231: for email updates
+L232: 
+L233: 
+L234: 
+L235: © All Rights Reserved
+L236: 
+L237: All ISO publications and materials are protected by copyright and are subject to the user’s acceptance of ISO’s conditions of copyright. Any use, including reproduction requires our written permission. All copyright requests should be addressed to copyright@iso.org.
+L238: With the exception of the content available through the cite53†ISO Open data page and subject to the terms contained therein, no ISO content may be used for any machine learning and/or artificial intelligence and/or similar technologies, including but not limited to accessing or using it to (i) train data for large language or similar models, or (ii) prompt or otherwise enable artificial intelligence or similar tools to generate responses.
+L239: We are committed to ensuring that our website is accessible to everyone. If you have any questions or suggestions regarding the accessibility of this site, please contact us (webmaster@iso.org).
+L240: #### Add to cart
+

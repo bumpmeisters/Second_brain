@@ -1,0 +1,753 @@
+[
+  {
+    "slide": 1,
+    "text": [
+      "The Structural Collapse of the Legacy B2B Marketing Playbook",
+      "Implications and Revenue Architecture for DSV",
+      "Rolf-Peter Ullrich | DSV 2026/02/12"
+    ],
+    "images": [],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 2,
+    "text": [
+      "DSV",
+      "The Structural Collapse of the Legacy B2B Marketing Playbook",
+      "Implications and Revenue Architecture for DSV",
+      "Audience: DSV Business & Marketing Leadership",
+      "Feb 12, 2026"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image7.jpeg"
+    ],
+    "notes": [
+      "2"
+    ],
+    "links": []
+  },
+  {
+    "slide": 3,
+    "text": [
+      "The legacy Playbook Has Created The “Digital Debt”",
+      "The Digital Dept Crisis",
+      "Legacy GTM is obsolete",
+      "Lead gen, linear funnels, and demographic targeting no longer map to buyer reality.",
+      "Nine structural failures",
+      "Platform, funnel, buyer, and search crises are compounding efficiency loss.",
+      "Digital debt is costly",
+      "Inflates CAC, corrupts data, and obscures true demand; threatens post‑Schenker agility.",
+      "Mandate: Shift to Revenue Enablement",
+      "Move from MQL volume to account‑level intent, governance, and buying‑group orchestration.",
+      "Outcomes for DSV",
+      "Lower CAC, higher‑quality pipeline, and faster synergy capture from the Schenker integration."
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image8.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image9.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image10.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image11.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image12.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image13.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 4,
+    "text": [
+      "Executive Crisis Dashboard",
+      "Digital debt threatens post‑Schenker commercial agility",
+      "DSV",
+      "<1%",
+      "Inquiry → Win",
+      "MQL model underperforms; individuals ≠ accounts",
+      "70–90%",
+      "Buyer journey invisible",
+      "Dark Funnel across peers, communities, third‑party sites",
+      "IVT up to 46.9%",
+      "Programmatic networks",
+      "~19.9% on premium inventory; corrupts optimization data",
+      "−50%",
+      "Organic traffic by 2028",
+      "Zero‑Click/AI answers reduce sessions and pageviews",
+      "Outcome:",
+      "Rising CAC, data corruption, and missed demand"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image14.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image15.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image15.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image16.png"
+    ],
+    "notes": [
+      "4"
+    ],
+    "links": []
+  },
+  {
+    "slide": 5,
+    "text": [
+      "Why the Old Playbook Is Failing",
+      "Nine structural fractures in legacy lead generation",
+      "LinkedIn Delusion",
+      "Taxonomy mismatch inflates CAC; premium CPMs for vanity titles and “sell‑to” vs “in‑industry” confusion wastes budget.",
+      "Banner Blindness",
+      "Impressions ≠ influence. Feed saturation and generic imagery trigger scroll‑by behavior.",
+      "Ad Fraud / Bot Traffic",
+      "Programmatic leakage drains budget and corrupts retargeting pools (algos optimize to bots).",
+      "IVT up to 46.9%",
+      "Broken Funnel (MQL)",
+      "Individuals ≠ accounts. Low‑intent form fills create “lead fatigue” and misaligned handoffs.",
+      "<1% inquiry → win",
+      "Dark Funnel",
+      "Off‑site research (peers, communities, podcasts) goes untracked; “Direct” is over‑credited.",
+      "≈90% invisible",
+      "Buying Committee",
+      "Single‑threaded deals fail; targeting must include Finance, Sustainability, and Ops.",
+      "6–10 stakeholders",
+      "Indecision (No Decision)",
+      "FOMU stalls consensus; “sense‑making” content is needed to reduce status‑quo risk.",
+      "40–60% lost",
+      "Zero‑Click / AI",
+      "AI answers in‑SERP; shift from SEO to Entity Authority to stay visible.",
+      "Organic −50% by 2028",
+      "Rep‑Free Preference",
+      "Gates block education; buyers choose vendors with ungated, self‑serve info.",
+      "75% prefer rep‑free",
+      "Master template: problem_grid"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image17.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image18.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image19.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image20.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image21.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image22.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image23.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image24.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image25.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image26.png"
+    ],
+    "notes": [
+      "5"
+    ],
+    "links": []
+  },
+  {
+    "slide": 6,
+    "text": [
+      "The Nine Structural Fractures in the Legacy Model",
+      "A 3x3 overview of the core failure points and the directional shifts required",
+      "LinkedIn Delusion",
+      "Job‑title targeting wastes spend; pivot to intent + firmographic fit.",
+      "Billboard Effect",
+      "Banner blindness drives low CTR; optimize for sense‑making and engagement density.",
+      "Ad Fraud",
+      "Invalid traffic drains budget and corrupts data; enforce inclusion lists and fraud controls.",
+      "MQL Failure",
+      "Individuals ≠ accounts; inquiry‑to‑win < 1%. Shift to MQA (buying‑group signals).",
+      "Gated Content",
+      "Gates block education; 75% prefer rep‑free. Ungate early‑stage content.",
+      "Dark Funnel",
+      "70–90% of research is invisible; deanonymize to reveal surging accounts.",
+      "Buying Committee",
+      "6–10 stakeholders; indecision risk. Provide decision‑support and sense‑making.",
+      "Zero‑Click/AI Future",
+      "SEO wanes; build AEO + entity authority and prepare for AI‑agent buying.",
+      "Digital Debt",
+      "Orphaned systems and fragmented data; unify a machine‑readable commercial layer.",
+      "Template: Fractures Overview Grid (3x3) · Key colors — Navy: #0A2140, Red: #B91C1C"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image27.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image28.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image29.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image30.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image31.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image32.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image33.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image34.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image35.png"
+    ],
+    "notes": [
+      "6"
+    ],
+    "links": []
+  },
+  {
+    "slide": 7,
+    "text": [
+      "7",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      "THE COLLAPSE OF LEGACY LEVERS"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image36.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 8,
+    "text": [
+      "Failure #1 — The LinkedIn Delusion (Taxonomy ≠ Intent)",
+      "8",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image37.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 9,
+    "text": [
+      "Failure #2 — Banner Blindness and the Billboard Effect",
+      "Impressions ≠ Awareness (saturated feeds)",
+      "9",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      " ",
+      "The feed is saturated. Buyers have developed a neurological defense mechanism against sponsored content. Impressions are now vanity metrics",
+      "0.05% ",
+      "Average Display CTR",
+      "86% ",
+      "Consumers with Banner Blindness",
+      "Problem: Buyers ignore ad‑like UI; banners are low‑trust and rarely earn deliberate attention."
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image38.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image39.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 10,
+    "text": [
+      "Failure #3 — Ad Fraud and the Data Corruption Loop",
+      "The IVT Problem (Invalid Traffic)",
+      "10",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      "46.9% ",
+      "Invalid Traffic on some programmatic networks",
+      "19.88% ",
+      "IVT on premium Platforms (LinkedIn)",
+      "$45-63B",
+      "Estimated global losses to ad fraud",
+      "How Bots Corrupt Decisions",
+      "The optimization loop turns fake clicks into fake “success.”",
+      "Result: Budgets shift to fraudulent inventory while true demand is underfunded.",
+      "The IVT Problem",
+      "Fraud steals budget and muddies performance data, inflating CAC and misguiding optimization.",
+      "Governance Actions Now",
+      "Suspend audience networks by default; buy only on verified inventory.",
+      "Enable third‑party verification (pre‑bid/post‑bid); enforce platform allow‑lists.",
+      "Use server‑side tracking; tighten conversion webhooks to block fake events.",
+      "Quarantine suspicious sessions from CRM; exclude from lookalikes/attribution.",
+      "Publish IVT KPIs in governance: target <5% IVT; audit quarterly.",
+      "Bot clicks",
+      "Simulated engagement",
+      "Algorithms optimizes",
+      "CTR favors bots",
+      "CRM pollutes",
+      "Fake leads, bad signals",
+      "1",
+      "2",
+      "3",
+      "Waste accelerates",
+      "Lookalikes train on bots",
+      "4"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image40.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image41.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image42.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 11,
+    "text": [
+      "11",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      "THE NEW REALITIES"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image36.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image43.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 12,
+    "text": [
+      "Failure #4 — The Broken Funnel (MQL)",
+      "Why MQL ",
+      " Revenue",
+      " ",
+      "The old MQL based model tracks individuals - but accounts make the decision. ",
+      "This structural disconnect results in a 99% implied failure rate of the process"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image440.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image44.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image45.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 13,
+    "text": [
+      "Failure #4 — The Broken Funnel (MQL) ",
+      "The Architectural Pivot - From Lead Generation to Revenue Enablement",
+      "13",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image45.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image46.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 14,
+    "text": [
+      "Failure #5 — The Dark Funnel and Invisible Influence",
+      "97% of the Buyers Journey is invisible",
+      "14",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image47.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 15,
+    "text": [
+      "15",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image48.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 16,
+    "text": [
+      "Failure #6 — The Buying Committee",
+      "Decision are made by groups, not individuals (SMB, enterprise)",
+      "16",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      "10.1",
+      "Avg stakeholders",
+      "Winning requires parallel engagement across functions",
+      "160+",
+      "Interactions/deal",
+      "Volume and variety of touches demand orchestration",
+      "DSV Play",
+      "Multi-thread",
+      "Persona-based content + Digital Sales Rooms to enable consensus"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image49.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 17,
+    "text": [
+      "17",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      "THE RISE OF THE AUTONOMOUS BUYER"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image36.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image43.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image50.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 18,
+    "text": [
+      "Failure #7 The Indecision Gap",
+      "Lack of Action / Fear of Messing Up (FOMU) ",
+      "18",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date",
+      "Drivers of Indecision",
+      "Omission Bias and fear of career penalty",
+      "Buyers prioritize risk mitigation over potential upside."
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image51.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 19,
+    "text": [
+      "Failure #8 — The Human /AI Paradox",
+      "Rep‑Free Now, Human Later",
+      "19",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image52.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 20,
+    "text": [
+      "Failure #9 — The End of Search",
+      "The Rise of Zero-Click Search and AEO",
+      "20",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image53.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 21,
+    "text": [],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image54.jpeg"
+    ],
+    "notes": [
+      "21"
+    ],
+    "links": []
+  },
+  {
+    "slide": 22,
+    "text": [
+      "The Strategic Pivot: Retiring the Legacy Playbook",
+      "22",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image55.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 23,
+    "text": [],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image56.jpeg"
+    ],
+    "notes": [
+      "23"
+    ],
+    "links": []
+  },
+  {
+    "slide": 24,
+    "text": [
+      "24",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image57.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 25,
+    "text": [
+      "25",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image58.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 26,
+    "text": [
+      "26",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image59.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 27,
+    "text": [
+      "The New Revenue Architecture — 3 Pillars",
+      "From Lead Generation to Revenue Enablement: illuminate the Dark Funnel, engage buying committees, and earn entity authority",
+      "ABX — Account-Based Experience",
+      "Reveal, prioritize, and orchestrate buying groups",
+      "Intent platforms (6sense/Demandbase) to de-anonymize in‑market accounts",
+      "Signal-led spend: suppress cold; surge on active buying groups (MQA)",
+      "Intercept churn signals in Schenker base with reassurance plays",
+      "Outcome: Higher pipeline quality and lower CAC",
+      "Buyer Enablement — The Anti‑Gate",
+      "Help champions sell DSV internally",
+      "Ungated content hubs; self‑serve pricing, calculators, and documentation",
+      "Digital Sales Rooms (Seismic/Highspot) tailored to buying committees",
+      "Persona‑specific assets: CFO business case, Procurement checklist, ESG impact",
+      "Outcome: Faster consensus and stage velocity",
+      "AEO — Answer Engine Optimization",
+      "Be cited by AI and zero‑click interfaces",
+      "Entity authority: schema markup and machine‑readable product/service data",
+      "Proprietary logistics datasets and video‑first proofs to earn citations",
+      "Optimize for AI agents evaluating vendors via APIs and structured content",
+      "Outcome: Share of model and qualified inbound",
+      "Unified RevOps Governance",
+      "Single operating model across Marketing, SDR, Sales, and Finance",
+      "Quarterly experiments with guardrails; account‑level KPIs",
+      "Targets: IVT < 5%, CAC −20%, MQAs +35%, stage velocity +15%",
+      "Measure pipeline and revenue impact, not MQL volume; align incentives to Qualified Accounts and Opportunities",
+      "Template: architecture_pillars",
+      "Pillars: ABX • Buyer Enablement • AEO • RevOps"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image60.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image61.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image62.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image29.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image63.png"
+    ],
+    "notes": [
+      "27"
+    ],
+    "links": []
+  },
+  {
+    "slide": 28,
+    "text": [
+      "Strategic Pivot Framework: Four Transformations",
+      "Move from legacy mechanics to a revenue enablement architecture aligned to DSV’s scale and AI‑shaped buying",
+      "From: Lead Gen",
+      "To: Demand Gen",
+      "Ungate, educate, build entity authority",
+      "Ungate ~most early content to enable research in the dark funnel",
+      "Publish sense‑making assets that educate and attract",
+      "Build entity authority to be cited by humans and AI",
+      "Education over capture",
+      "From: MQLs",
+      "To: MQAs",
+      "Aggregate buying‑group intent, orchestrate accounts",
+      "Combine signals across stakeholders into account‑level intent",
+      "Trigger coordinated plays for SDRs/AE/Marketing",
+      "Measure MQAs → SQOs → pipeline velocity",
+      "Account‑centric motion",
+      "From: SEO",
+      "To: Entity Authority",
+      "Structure content for LLMs and AI agents",
+      "Use schema, structured data, and clear service pages",
+      "Publish authoritative facts to earn AI citations",
+      "Expose capabilities via APIs for machine queries",
+      "Answer Engine Optimization",
+      "From: Sales Enablement",
+      "To: Buyer Enablement",
+      "Sense‑making tools that de‑risk decisions",
+      "Frameworks to prioritize trade‑offs and align stakeholders",
+      "Diagnostics and business‑case builders for Finance/Procurement",
+      "Enable champions to navigate internal consensus",
+      "Help buyers buy",
+      "Future state (recommended)",
+      "Legacy risk",
+      "Template: Pillars Framework (2x2)"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image64.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image64.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image64.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image64.png"
+    ],
+    "notes": [
+      "28"
+    ],
+    "links": []
+  },
+  {
+    "slide": 29,
+    "text": [
+      "29",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 30,
+    "text": [
+      "30",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image45.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 31,
+    "text": [
+      "31",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image65.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 32,
+    "text": [
+      "32",
+      "DB SCHENKER | Rolf-Peter Ullrich | Global Marketing | Date"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image66.png"
+    ],
+    "notes": [],
+    "links": []
+  },
+  {
+    "slide": 33,
+    "text": [
+      "Measurement Crisis: MQLs, Gates, and the Dark Funnel",
+      "Three fractures where metrics and mechanics fail—visualized to show the scale of waste and invisibility",
+      "MQL Failure",
+      "Individuals ≠ accounts; ",
+      "<1% inquiry-to-win",
+      "Illustrative: 99% non-converting vs ~1% converting",
+      "Non-converting",
+      "Converting",
+      "Lead object hides the buying group; signal scattered.",
+      "Shift to ",
+      "MQA",
+      ": aggregate account intent and orchestrate.",
+      "Gated Content",
+      "75%",
+      " prefer rep-free experience",
+      "Prefer rep-free",
+      "Other",
+      "Gates block education; buyers bounce.",
+      "Ungate ~",
+      "90%",
+      " of content; track consumption signals.",
+      "Dark Funnel",
+      "70–90%",
+      " of research is invisible",
+      "Invisible",
+      "Visible",
+      "Standard attribution ignores off-site research.",
+      "Deploy deanonymization (e.g., ",
+      "account resolution",
+      ") to reveal surging accounts.",
+      "Navy: Recommended shift/solution",
+      "Red: Risk/inefficiency",
+      "Template: Data Story – Key Metrics"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image30.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image67.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image31.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image68.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image32.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image69.png"
+    ],
+    "notes": [
+      "33"
+    ],
+    "links": []
+  },
+  {
+    "slide": 34,
+    "text": [],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image70.jpeg"
+    ],
+    "notes": [
+      "34"
+    ],
+    "links": []
+  },
+  {
+    "slide": 35,
+    "text": [],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image71.jpeg"
+    ],
+    "notes": [
+      "35"
+    ],
+    "links": []
+  },
+  {
+    "slide": 36,
+    "text": [
+      "Failure #8 — Rep‑Free Now, Human Later",
+      "Buyers want digital self‑service today, but will prefer human guidance for complex decisions by 2030",
+      "Today — Digital, Rep‑Free Preference",
+      "61%",
+      "Prefer a rep‑free buying experience",
+      "Gartner (2025)",
+      "Self‑serve discovery, pricing, and evaluation.",
+      "AI/chat and content drive early decisions.",
+      "Low tolerance for forms, delays, and friction.",
+      "2030 — Human for Complex, High‑Stakes",
+      "75%",
+      "Will prefer human interaction for complex deals",
+      "Gartner (2030)",
+      "AI for information; humans for confidence.",
+      "Risk mitigation, validation, and consensus building.",
+      "Executive assurance for final commitments.",
+      "Hybrid Strategy for DSV — Rep‑Free Early, Human Last Mile",
+      "Design the journey to satisfy today’s preference while preparing for tomorrow’s human‑led reassurance",
+      "Rep‑Free Early",
+      "Self‑serve pricing, calculators, transparent docs.",
+      "Ungated content and product walkthroughs.",
+      "Human Last Mile",
+      "High‑EQ experts for sense‑making and risk removal.",
+      "Pilots, opt‑outs, and outcome‑based SLAs.",
+      "Signals & Orchestration",
+      "Intent‑based routing (ABX) triggers human engagement.",
+      "Digital Sales Rooms to equip buying committees.",
+      "Template: comparison_split",
+      "Sources: Gartner (2025 rep‑free preference), Gartner (2030 human preference for complex deals)"
+    ],
+    "images": [
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image72.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image73.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image29.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image74.png",
+      "wiki/_outputs/abm-old-playbook-2026-09-13/media/image75.png"
+    ],
+    "notes": [
+      "36"
+    ],
+    "links": []
+  }
+]

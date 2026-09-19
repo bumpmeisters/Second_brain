@@ -1,0 +1,22 @@
+{
+  "contract_id": "g3e2r-temporal-boundary/v1",
+  "reference_clock": "System.DateTimeOffset.UtcNow",
+  "verification_reference": "capture-once-per-document-validation",
+  "ttl_seconds": 900,
+  "maximum_future_clock_skew_seconds": 60,
+  "prepared_approval_order": "independent",
+  "seal_input_rules": [
+    "prepared_at_utc <= verification_now_utc + 60s",
+    "approved_at_utc <= verification_now_utc + 60s"
+  ],
+  "sealed_rules": [
+    "prepared_at_utc <= sealed_at_utc",
+    "approved_at_utc <= sealed_at_utc",
+    "sealed_at_utc <= verification_now_utc + 60s",
+    "not_after_utc == sealed_at_utc + 900s"
+  ],
+  "forward_expiry_rule": "verification_now_utc <= not_after_utc",
+  "reverse_expiry_rule": "ignore-expiry-only",
+  "reverse_retained_checks": ["lexical-format", "time-relations", "ttl", "hash-closure", "approval", "authority"]
+}
+

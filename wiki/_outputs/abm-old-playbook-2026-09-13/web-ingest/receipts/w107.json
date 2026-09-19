@@ -1,0 +1,17 @@
+{
+  "id": "W107",
+  "url": "https://www.gong.io/blog/lou-wolf-the-1-signal-a-deal-wont-close",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:10.244687+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w107.json",
+  "title": "Lou Wolf: The #1 Signal a Deal Won't Close",
+  "final_url": "https://www.gong.io/blog/lou-wolf-the-1-signal-a-deal-wont-close",
+  "characters": 12617,
+  "sha256": "ab0c503071a8488f40fc0f5ed1c0d24d1aa7f0c754972ae9a92be0f608811122",
+  "http_status": 200
+}

@@ -6,16 +6,46 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-08-20
+updated: 2026-09-14
 ---
 
 # Wiki Index
 
+- **P57 · 14.09.2026 · Kanonische Framework-Übernahme umgesetzt:** [[_outputs/semantic-ingest/p57/source-bundle|43 Reviewentscheidungen und Zielseiten]], sieben neue draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierte bestehende Frameworks. Einstieg: [[brand-system]], [[value-proposition-analysis]], [[historical-positioning-heuristics]]. Der folgende Freigabeeintrag ist historisch; Quellenlücken bleiben bestehen.
+
+- **14.09.2026 · Positiver Evidenzreview:** Rolf gibt die dokumentierten Übernahmeentscheidungen der [[b2b-positioning-contextops-research-review|Positionierungslandschaft]] (29 Zeilen) und [[value-proposition-frameworks-research-review|Value-Proposition-Sammlung]] (14 Zeilen) einschließlich ihrer Grenzen frei. Kanonische Umsetzung noch ausstehend; frühere Hinweise auf offenen Review in den Einträgen unten sind überholt. Keine automatische Aktivierung oder empirische Validierung.
+
+- [TÜV D62: Diskussionspaket zur Positionierung](../../Project%20Hub/TÜV%20Rheinland/kontext/positionierungsdraft-tuev-rheinland.md) — 14.09.2026: auf der in D61 akzeptierten Architektur A3; ein empfohlenes Dach, zwei Gegenvarianten, drei Kontextpositionen und sieben entscheidende Belegfragen. Eigene Formulierungen und Hypothesen, noch keine freigegebene Positionierung. [Selbstreview](../../Project%20Hub/TÜV%20Rheinland/arbeit/positionierung-d62/pruefung.md): PASS für interne Diskussion; keine neue Recherche oder Methodenpromotion.
+
+- [TÜV D60: Positionierungsanalyse der gesamten Gruppe](../../Project%20Hub/TÜV%20Rheinland/kontext/positionierungsanalyse-tuev-rheinland.md) — 14.09.2026: vier Bereiche/24 Felder aktualitätsgeprüft, 18 Kontextanalysen; acht Ansätze sequenziell geprüft, Inhaltsanalyse und Architektursynthese ergänzt. Gemeinsames Dach plus Kontextpositionen analytisch empfohlen, keine verbindliche Markenentscheidung oder empirisch belegte Alleinstellung. [Quellen/Beleggrenzen](../../Project%20Hub/TÜV%20Rheinland/arbeit/positionierung-d60/quellen-und-evidenz.md), [Abschlussreview](../../Project%20Hub/TÜV%20Rheinland/arbeit/positionierung-d60/abschlussreview.md). Anwendungsspur, keine kanonische Methodenpromotion; D58/D59 bleiben PV-begrenzt, RC2-Review offen.
+
+- [TÜV D59: PV-Fallkarte geprüft und Unterstützung abgegrenzt](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/positionierungsreihe-d58/fachpruefung-d59.md) — 14.09.2026: drei K06-Seiten textuell/visuell abgeglichen, zwei Aussagen präzisiert. Produktzuordnung aus Unterlagen beantwortbar; hypothetischer Materialwechsel benötigt individuelle Fachklärung. Kein belegter Prozess-/Contentbedarf, keine technische Freigabe. Aktueller P2-Kontext v0.8; D58 bleibt Herkunft.
+
+- [TÜV D58: acht Positionierungsansätze am gemeinsamen PV-Fall](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/positionierungsreihe-d58/vergleich.md) — 14.09.2026: sequenzielle Anwendungen und begrenzte Nichtanwendungsbefunde, je gesonderter Selbstreview und konkrete Nutzenevaluation. Ergebnisse in der bestehenden P2-Fallkarte integriert; [Nutzungsspur](../projects/No%20and%20low%20code_1st%20Marketing%20Agent/frameworks/_meta/usage-log.md). Projektprobe autorisiert und abgeschlossen, keine empirische Wirksamkeit oder kanonische Methodenfreigabe; offener RC2-Evidenzreview bleibt getrennt.
+
+- [[value-proposition-frameworks-research-review|Value-Proposition-Frameworks: Abdeckung und Second-Brain-Eignung]] — 14.09.2026: Nutzerbericht vollständig ingestiert, acht Ausgangsansätze geprüft und um NABC, Value Delivery System, empirische Präferenzprüfung sowie Buyer Utility Map ergänzt. [Quellen-/Suchprotokoll](_outputs/value-proposition-landschaft-2026-09-14/quellen-und-suchprotokoll.md), [14 Evidenzzeilen](_outputs/value-proposition-landschaft-2026-09-14/evidenzmatrix.csv). Teilweise verifiziert, konkrete Korrekturen und offene Übernahmeentscheidungen; keine TÜV-Anwendung oder Methodenaktivierung.
+
+- [Positionierungslandschaft: Vergleich und Wissensreview RC2](_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md) — 14.09.2026: zwölf Familien, 29 Evidenzzeilen; [Such-/Quellenregister](_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md) und [[b2b-positioning-contextops-research-review|Review des parallelen Deep Research]] fortgeführt. Keller-Zugang verbessert, CEP-Vorschlag korrigiert, weitere Kandidaten mit Grenzen erfasst. RC2-Auswahl bleibt Ausgangsvorlage; keine Anwendungstests, kanonische Methodenübernahme oder Aktivierung.
+
+- [[obsidian-vault-design]] — vorgemerkt 13.09.2026: wertvolle Outputs später an fachliche Themen-/Projektorte überführen; aktuelle Arbeitsgrundlagen und Meilensteine sichtbar machen. Noch keine Migration beschlossen.
+
+- [[old-marketing-playbook-web-sources-2026-09-13]] — P56: 144 lokale Quellen aus 145 Links; 15 begrenzte Muster in acht Fachseiten übernommen, Output-Audit verlinkt. Final/Full geprüft und abgeschlossen.
+
+- [[old-marketing-playbook-source-review-2026-09-13]] — 36 Folien, 18 kritische Einzelprüfungen, Synthese und sechs illustrative Arbeitsbeispiele; begrenzte fachliche Übernahmen über P56 umgesetzt.
+
+- [[b2b-lead-management-diskurs-2026-09-13]] — P55: freigegebene Diagnose zu Zielgruppenübersetzung, Optimierungszielen und fehlender Rückkopplung; bestehende Medien- und Reportingpraxis erweitert. Kein Nachweis allgemeiner Unwirtschaftlichkeit.
+
+- [[ubd-framework-source-and-tuev-flow-review]] — ASCD-Original zu rückwärtiger Lernplanung und begrenzte Anwendungsspur TÜV D52; kein Nachweis von Content-/Kaufwirkung.
+
 **Summary**: Table of contents for the second brain wiki.
+
+- [[tuev-jobrollen-targeting-quellen]] — D37: vier offizielle Quellen für Rollenwortschatz und LinkedIn-Targetingmerkmale; 24-Felder-Landkarte als markierter Marketingentwurf. Keine persönlichen Kaufrechte oder live geprüften Audiences.
+
+- [[johnston-bonoma-buying-center-source]] — Originalmethode zu persönlichen Kaufkommunikationsnetzen; begrenzte TÜV-Anwendung D36 über 24 Felder. Quelle geprüft, keine vollständig messbaren Kundennetze oder neue Frameworkaktivierung.
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-08-20
+**Last updated**: 2026-09-11
 
 ---
 
@@ -23,16 +53,33 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 ## Operating pages
 
+- [Independent-Judge-System: pausierter Entwurf](_outputs/independent-judge-system/implementation-plan.md) — Gesicherte Architektur, Run-/Judge-/Release-Records, Rubriken, Replay, Shadow und Freigabestufen mit [Prüfbefunden und Übergabe](_outputs/independent-judge-system/evidence-and-handoff.md). Nur Ablage freigegeben; Implementierung, Automation-Änderungen und L3 bleiben offen.
+
+- [[buying-role-persona-frameworks]] — Quellenvergleich und Frameworkentwurf zu Kaufrollen, Personaformen und markierten Arbeitshypothesen; erster TÜV-Bestandspilot über 24 Felder dokumentiert, keine Käufervalidierung.
+
+- [Task closeout](../skills/task-closeout/SKILL.md) - Central, bounded completion check with conditional documentation, work-residue and harness-learning review; no blanket mutation authority.
+
+- [Company research on demand](../tools/company-intelligence/README.md) - Start a new company baseline, a targeted evidence follow-up, or an update to a reviewed context. The [canonical workflow](../tools/company-intelligence/workflow.md) defines mode selection, source checks and required learning closeout. Use a specific authorized project assignment; no background execution.
+
+- [[new-knowledge-source-review-2026-09-09]] - P47: 33 new source paths reviewed as 27 distinct contents; 16 approved patterns applied, including AI coding, product management, knowledge bases and operating costs.
+- [[domain-expert-error-analysis-loop]] - P47: domain-expert trace review, error taxonomy, versioned criteria and calibrated evaluations.
 - [[sources]] - Register of raw files and ingest status.
 - [[log]] - Append-only record of wiki operations.
-- [[semantic-ingest-workflow]] - Governed package workflow for approved semantic review, evidence decisions, validation, and explicit promotion checkpoints.
+- [[semantic-ingest-workflow]] - Twelve agreed ingest fields, including AI coding/vibe coding, product development, AI business models/services and local/hybrid infrastructure; explicit project setup, knowledge bases and cross-cutting topics; governed semantic review and promotion checkpoints.
 - [[continual-learning-for-agents]] - Active three-layer architecture for context, inspectable memory, and governed external learning; weight-level learning remains inactive behind explicit evidence and safety gates.
-- [YouTube Intelligence operations](../docs/youtube-intelligence.md) - Local discovery, bounded transcript intake, recurring-run contracts, and the loopback-only control center; W6R4 remains at 119/171-channel metadata coverage, all 96 admitted sources are reviewed, P42-P46 are complete, and the semantic backlog is zero. The weekly collector remains uninstalled and another coverage run requires a fresh exact approval.
+- [YouTube Intelligence operations](../docs/youtube-intelligence.md) - The integrated daily Codex worker now combines weekly bounded acquisition with backlog-first L2 review. Its September 9 contract replaces the separate Windows collector and repeated bounded-selection approvals; canonical promotion remains human-reviewed. Current commands and recovery: [integrated worker](../docs/youtube-integrated-worker.md).
 - [[reusable-practices-router]] - Active low-cost routing index for the recovered reusable practice pages.
 - [[reusable-practices-library]] - Active provenance register for reusable workflows, checklists, playbooks, gates, assessments, experiments, and operating contracts.
+- [[ai-enabled-team-contraction-resilience-gate]] - Pre-decision evidence gate for resilience, human coverage, obligations, and rollback when AI capability is used to argue for a materially smaller team.
 
 ## Project workspaces
 
+- [TÜV project: Audience method landscape](../../Project%20Hub/TÜV%20Rheinland/kontext/frameworklandschaft-audience-analyse.md) - D29, 2026-09-11: bounded method research and workflow transfer completed; nine originals registered in [[sources]]. Internal adaptations, recorded applications and provenance gaps distinguished. Final for method orientation and analysis-brief preparation; no audience analysis, personas, strategic focus choice or shared framework activation. [Research and closeout](../../Project%20Hub/TÜV%20Rheinland/arbeit/audience-frameworks/recherche-und-pruefung.md). D16 remains deferred.
+
+- [TÜV project: PV customer perspective](../../Project%20Hub/TÜV%20Rheinland/kontext/kundenperspektive-pv-pruefung-zertifizierung.md) - D27, 2026-09-11: bounded public comparison of TÜV Rheinland and VDE for Germany; 15 originals registered in [[sources]]. Requirements, proof scope and public communication distinguished from unproven buyer preferences. D28 adds the [documented reusable sequence and next-use checks](../../Project%20Hub/TÜV%20Rheinland/arbeit/wettbewerb-kundenperspektive-pv/recherche-und-pruefung.md#closeout-wiederverwendung-und-nächste-lernprüfung), also linked from the existing research workflow. Provisional project context; no shared semantic promotion, supplier ranking or strategic focus choice. D16 remains deferred.
+- [Marketing OS: fachliches Arbeitsmodell](_outputs/marketing-os-fachliches-arbeitsmodell.md) - Accepted functional model v1.1. The [TÜV project README](../../Project%20Hub/TÜV%20Rheinland/README.md) and [decisions D04–D09](../../Project%20Hub/TÜV%20Rheinland/entscheidungen.md) are canonical. The authorized company-research implementation M1–M5 and fresh TÜV pilot are complete: [shared core](../tools/company-intelligence/README.md), reviewed company context and project-specific verification. Original sources are registered in [[sources]]. Technical portability and bounded context use were tested; general effectiveness and efficiency remain unproven. Shared methods remain here; company findings and learning notes remain in the project.
+- [TÜV project: ISO 9001 comparison](../../Project%20Hub/TÜV%20Rheinland/kontext/methodenvergleich-iso9001.md) - D23, 2026-09-10: three certification bodies on 18 frozen sources; careful baseline and exploratory G/F/P self-comparison. Small explicit process implication, no supplier ranking or causal method validation. Budget/context/timing limitations recorded. Source custody in [[sources]]; findings and L27–L29 remain project-local. D16 stays paused.
+- [Marketing Harness implementation record](_outputs/marketing-harness-implementation-plan.md) - Historical A1–A3/B1 delivery in `../New projects/` is retained; its technical continuation remains paused. Current manual project work belongs in the prepared Project Hub workspace described above. Existing methods remain canonical here. The earlier TÜV focus recommendation is unaccepted; AI/Zelostat pilots stay paused. Review or reuse of earlier TÜV files is optional, not a prerequisite for starting the new project.
 - `projects/ai/README.md` - Recovered internal AI project for governed context, Creative Directions, briefs, draft assets, approval records, reviews, and pilot learning. Recovery does not authorize publication.
 - `projects/content-operating-system/README.md` - Shared internal contracts for creative direction, content execution, controlled publication states, and bounded learning. Recovery does not authorize publication.
 - `projects/No and low code_1st Marketing Agent/README.md` - Marketing ContextOps workspace and legacy provenance that hands approved upstream context to the Content Operating System.
@@ -40,6 +87,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 ## Input zones
 
+- [Repository Learning Library](../repositories/index.md) - Superpowers, GStack, Compound Engineering, GBrain with companion GBrain Evals, and AnyDoc: six pinned snapshots and current dossiers. Use this index for architecture, workflow, skill, context, document-conversion and evaluation questions. [AnyDoc dossier](../repositories/firecrawl--anydoc/firecrawl--anydoc-analysis.md): controlled comparison and [implemented optional PPTX/DOCX adapter](_outputs/source-conversions/anydoc-integration-2026-09-11/verification.md); automatic routing unchanged.
 - `raw/` - Primary or original source files, including clippings, PDFs, tables, slides, and source attachments.
 - `research/` - AI-generated deep-research reports and other uncertain secondary syntheses.
 - `wiki/` - Codex-maintained pages created from sources and analysis.
@@ -92,11 +140,22 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[production-agent-engineering-clippings-june-2026]] - Production lessons on agent harnesses, context reduction/offloading/isolation, verification, memory, observability, and cost controls.
 - [[agent-session-verification-postmortem-2026-08-14]] - Practitioner postmortem on plan review, end-to-end verification, compaction handoffs, and exact artifact versions.
 - [[continual-learning-memory-boundary-2026-08-14]] - Primary-research-qualified distinction between external agent memory and parametric continual learning.
+- [[facilitator-escalation-design-2026-09-09]] - Qualified design proposal for impossible-task escalation, proactive human involvement, and correlated-agent review.
+- [[agent-runtime-identity-source-family-2026-09-10]] - Mixed vendor and newsletter source review supporting a reproducible runtime-identity contract for agent evaluations.
+- [[newsletter-source-method-lens-source-review-2026-09-11]] - First-party process review supporting issue-level reporting-mode, access-path, correction-transparency, and shelf-life metadata without publisher scoring.
+- [[aeo-measurement-method-source-review-2026-09-14]] - Publisher-operated AEO method supporting a configuration-complete measurement record while excluding rankings and causal outcomes.
+- [[agentic-code-review-source-review-2026-09-14]] - Partial practitioner review supporting risk-routed human review surfaces for agent-generated code.
+- [[forward-deployed-engineering-product-learning-source-review-2026-09-14]] - Vendor-founder account supporting a field-to-platform correction and inheritance loop.
+- [[anthropic-agent-incident-assessment-source-review-2026-09-14]] - First-party incident report corroborating layered agent-security and evaluation controls with explicit prevalence limits.
+- [[plg-to-enterprise-transition-source-review-2026-09-14]] - Sponsored practitioner analysis supporting a bounded PLG-to-enterprise transition and revenue-credit rule.
+- [[paid-conversational-discovery-source-review-2026-09-10]] - First-party product-intent review supporting separate governance for organic AI answers and paid conversational placement.
 - [[ai-workflow-builder-clippings-june-2026]] - Seven transcripts on planning, roles, skills, parallel sessions, bounded loops, and file-based AI operating systems.
 - [[agentic-marketing-intelligence-clippings-june-2026]] - Marketing judgment, proprietary intelligence layers, evidence-backed positioning, and model selection.
 - [[frontier-ecosystem-human-and-token-capital]] - Essay on compounding human and organizational AI capability in a model-independent learning loop.
 - [[from-agi-to-asi-google-deepmind-2026]] - Google DeepMind report on four possible pathways from AGI to ASI and their bottlenecks.
 - [[logistics-market-intelligence-library]] - Inventory-level summary of 597 unverified AI-generated logistics deep-research reports and corresponding prompts.
+- [[ai-business-value-gate-2026-09-09]] - Qualified decision scaffold connecting AI initiatives to objectives, value mechanisms, baselines, costs, owners, and review horizons.
+- [[ai-team-contraction-resilience-source-family-2026-09-10]] - Secondary source-family review supporting a bounded resilience gate while excluding all Meta-specific workforce claims.
 - [[merchant-of-record-vs-payment-service-provider]] - Commercial-source comparison of owning a commerce stack versus outsourcing merchant-of-record responsibilities.
 - [[_outputs/semantic-ingest/p32/source-bundle|P32 YouTube pilot source bundle]] - P32 completes the 31-source YouTube semantic pilot: sixteen approved knowledge patterns across ten waves, fourteen `registered-only` sources, one duplicate variant, and no open source decisions.
 - [[_outputs/semantic-ingest/p33/source-bundle|P33 YouTube follow-up source bundle]] - P33 completes the 23-source YouTube follow-up: ten approved knowledge patterns across six waves, thirteen `registered-only` sources, and no open source decisions.
@@ -106,13 +165,14 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[_outputs/semantic-ingest/p34/w3-checkpoint|P34-W3 semantic review checkpoint]] - Approved semantic checkpoint and exact promotion boundary for the fifteen-source validation batch.
 - [[_outputs/youtube-channel-evaluation/p34/w4-checkpoint|P34-W4 channel-mode calibration checkpoint]] - Applied calibration of 3 automatic-recent, 17 explicitly selected, and 150 metadata-only channels; its historical no-acquisition boundary was later superseded by the exact P35-W5/P35-W6 approvals.
 - [[_outputs/semantic-ingest/p35/source-bundle|P35 supervised-run source bundle]] - P35 completes the ten-source B57D semantic comparison: one new reusable practice, three extensions, one corroborating evidence role, five `registered-only` sources, and no open semantic decision.
-- [[_outputs/youtube-intelligence/p35/w6-checkpoint|P35-W6 activation and run checkpoint]] - Recurring L1/L2 activation plus completed W6R2 and W6R4 semantic drains; metadata coverage is 119/171, the semantic backlog is zero, and the weekly Windows collector remains uninstalled.
+- [[_outputs/youtube-intelligence/p35/w6-checkpoint|P35-W6 activation and run checkpoint]] - Historical L1/L2 activation and completed W6R2/W6R4 drains; its Windows scheduler requirement is superseded by the September 9 integrated worker.
 - [[_outputs/youtube-intelligence/p35/w6r3-semantic-checkpoint|P35-W6R3 consolidated semantic checkpoint]] - Approved 28-row P36–P41 promotion set and completed review of all 96 admitted sources.
 - [[_outputs/semantic-ingest/p42/source-bundle|P42 YouTube W6R4 source bundle]] - P42 completes the first 22-source W6R4 slice: twenty `registered-only`, one duplicate variant, and two approved GTM context-governance extensions from one vendor source.
 - [[_outputs/semantic-ingest/p43-p46-l3-decision-checkpoint-2026-08-19|P43-P46 consolidated L3 checkpoint]] - Approved and applied nine qualified evidence promotions from P43-P46 into seven existing canonical pages.
 
 ## Analysis pages
 
+- [Repository Learning Library: Konzept](_outputs/repository-learning-library-concept.md) - Implemented design: open exploration, complete commit-pinned copies and learning for the Second Brain and wider work. The repo index, dossier template and analysis skill are in use; the Superpowers pilot and retrieval check are documented.
 - [[agentic-and-applied-ai-gap-review]] - Gap review for the vault's agentic and applied AI knowledge, with closure plan.
 
 ## Concept pages

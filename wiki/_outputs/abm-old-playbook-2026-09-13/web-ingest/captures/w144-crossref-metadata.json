@@ -1,0 +1,622 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          28
+        ]
+      ],
+      "date-time": "2026-06-28T13:40:00Z",
+      "timestamp": 1782654000607,
+      "version": "3.54.5"
+    },
+    "reference-count": 71,
+    "publisher": "Informa UK Limited",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              19
+            ]
+          ],
+          "date-time": "2026-02-19T00:00:00Z",
+          "timestamp": 1771459200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "www.tandfonline.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "International Journal of Advertising"
+    ],
+    "DOI": "10.1080/02650487.2026.2624918",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          19
+        ]
+      ],
+      "date-time": "2026-02-19T10:11:29Z",
+      "timestamp": 1771495889000
+    },
+    "page": "1-27",
+    "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+    "source": "Crossref",
+    "is-referenced-by-count": 2,
+    "title": [
+      "The carousel effect: leveraging sideways swiping for enhanced ad effectiveness in social media"
+    ],
+    "prefix": "10.1080",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0003-6631-5523",
+        "authenticated-orcid": false,
+        "given": "Stefan",
+        "family": "Rohrbach",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Schumpeter School of Business and Economics, University of Wuppertal",
+            "place": [
+              "Wuppertal, Germany"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0199-9990",
+        "authenticated-orcid": false,
+        "given": "Daniel",
+        "family": "Bruns",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Schumpeter School of Business and Economics, University of Wuppertal",
+            "place": [
+              "Wuppertal, Germany"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6582-1702",
+        "authenticated-orcid": false,
+        "given": "Tobias",
+        "family": "Langner",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Schumpeter School of Business and Economics, University of Wuppertal",
+            "place": [
+              "Wuppertal, Germany"
+            ]
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "301",
+    "published-online": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          19
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_5_2_1",
+        "unstructured": "AICarousels.com. 2025. Carousel maker and generator: The fastest way to create social media carousels. https://www.aicarousels.com/ (accessed June 1 2025)."
+      },
+      {
+        "key": "e_1_3_5_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3389/fpsyg.2013.00328"
+      },
+      {
+        "key": "e_1_3_5_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2022.2140524"
+      },
+      {
+        "key": "e_1_3_5_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1509/jmkr.44.2.175"
+      },
+      {
+        "key": "e_1_3_5_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.2020.1867263"
+      },
+      {
+        "key": "e_1_3_5_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.foodqual.2019.103839"
+      },
+      {
+        "key": "e_1_3_5_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2021.1986256"
+      },
+      {
+        "key": "e_1_3_5_9_1",
+        "volume-title": "Proceedings of the 20th ICORIA",
+        "author": "Borgmann L.",
+        "year": "2022",
+        "unstructured": "Borgmann, L., J.F. Kopka, and T. Langner. 2022. Ad reception in the living room: A mobile eye-tracking study of attention to the ad and ad recall in real-life media encounters. Proceedings of the 20th ICORIA, Prague, Czech Republic."
+      },
+      {
+        "key": "e_1_3_5_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00218499.1997.12466659"
+      },
+      {
+        "key": "e_1_3_5_11_1",
+        "unstructured": "Canva. 2025. Free customizable carousel Instagram post templates. https://www.canva.com/instagram-posts/templates/carousel/ (accessed October 24 2025)."
+      },
+      {
+        "key": "e_1_3_5_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2020.1772656"
+      },
+      {
+        "key": "e_1_3_5_13_1",
+        "unstructured": "DataReportal. 2025. Digital 2025. Global overview report. https://datareportal.com/ (accessed June 1 2025)."
+      },
+      {
+        "key": "e_1_3_5_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10660-021-09523-7"
+      },
+      {
+        "key": "e_1_3_5_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/08838151.2014.998222"
+      },
+      {
+        "key": "e_1_3_5_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.2019.1585306"
+      },
+      {
+        "key": "e_1_3_5_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/13548565231208135"
+      },
+      {
+        "key": "e_1_3_5_18_1",
+        "unstructured": "Facebook. 2018. News feed ranking in three minutes flat. https://about.fb.com/news/2018/05/inside-feed-news-feed-ranking/ (accessed March 8 2024)."
+      },
+      {
+        "key": "e_1_3_5_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0065-2601(08)60372-X"
+      },
+      {
+        "key": "e_1_3_5_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/209515"
+      },
+      {
+        "key": "e_1_3_5_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2022.2153529"
+      },
+      {
+        "key": "e_1_3_5_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/0022-3514.79.5.701"
+      },
+      {
+        "key": "e_1_3_5_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/jcom.12093"
+      },
+      {
+        "key": "e_1_3_5_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.1985.10672924"
+      },
+      {
+        "key": "e_1_3_5_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2018.1473023"
+      },
+      {
+        "key": "e_1_3_5_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-04028-4_35"
+      },
+      {
+        "key": "e_1_3_5_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.chb.2020.106637"
+      },
+      {
+        "key": "e_1_3_5_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/15252019.2019.1707729"
+      },
+      {
+        "key": "e_1_3_5_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/mksc.2020.1240"
+      },
+      {
+        "key": "e_1_3_5_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/209250"
+      },
+      {
+        "key": "e_1_3_5_31_1",
+        "unstructured": "Interbrand. 2023. Best global brands: How iconic brand lead across arenas. https://interbrand.com/thinking/best-global-brands-2023-report-download/ (accessed June 1 2025)."
+      },
+      {
+        "key": "e_1_3_5_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/a0028347"
+      },
+      {
+        "key": "e_1_3_5_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2021.1991107"
+      },
+      {
+        "key": "e_1_3_5_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/002224299305700101"
+      },
+      {
+        "key": "e_1_3_5_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1207/s1532785xmep0803_1"
+      },
+      {
+        "key": "e_1_3_5_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/0146167295211007"
+      },
+      {
+        "key": "e_1_3_5_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-73331-7_56"
+      },
+      {
+        "key": "e_1_3_5_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1108/JRIM-09-2018-0115"
+      },
+      {
+        "key": "e_1_3_5_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.2002.10673685"
+      },
+      {
+        "key": "e_1_3_5_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.2018.1556138"
+      },
+      {
+        "key": "e_1_3_5_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/002224298905300401"
+      },
+      {
+        "key": "e_1_3_5_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jbusres.2017.09.028"
+      },
+      {
+        "key": "e_1_3_5_43_1",
+        "unstructured": "Meta. 2024. Buying ads. Buy Facebook ads on any budget. https://www.facebook.com/business/ads/pricing/ (accessed November 5 2024)."
+      },
+      {
+        "key": "e_1_3_5_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1177/16094069231205789"
+      },
+      {
+        "key": "e_1_3_5_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2501/JAR-53-2-186-191"
+      },
+      {
+        "key": "e_1_3_5_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2021.2014702"
+      },
+      {
+        "key": "e_1_3_5_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/isre.2019.0907"
+      },
+      {
+        "key": "e_1_3_5_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/653087"
+      },
+      {
+        "key": "e_1_3_5_49_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1287/mnsc.48.6.765.192"
+      },
+      {
+        "key": "e_1_3_5_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jml.2008.02.002"
+      },
+      {
+        "key": "e_1_3_5_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1057/s41262-021-00237-7"
+      },
+      {
+        "key": "e_1_3_5_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.2024.2399657"
+      },
+      {
+        "key": "e_1_3_5_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.intmar.2019.06.003"
+      },
+      {
+        "key": "e_1_3_5_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3604275"
+      },
+      {
+        "key": "e_1_3_5_55_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2024.2354081"
+      },
+      {
+        "key": "e_1_3_5_56_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/209512"
+      },
+      {
+        "key": "e_1_3_5_57_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/0022-3514.63.2.198"
+      },
+      {
+        "key": "e_1_3_5_58_1",
+        "volume-title": "Marketing communications: Objectives, strategy, tactics",
+        "author": "Rossiter J.R.",
+        "year": "2018",
+        "unstructured": "Rossiter, J.R., L. Percy, and L. Bergkvist. 2018. Marketing communications: Objectives, strategy, tactics. London: SAGE Publications, Inc."
+      },
+      {
+        "key": "e_1_3_5_59_1",
+        "unstructured": "Sato M. 2024. You can now share 20 slides in one Instagram post. https://www.theverge.com/2024/8/8/24216111/instagram-carousel-post-expansion (accessed June 1 2025)."
+      },
+      {
+        "key": "e_1_3_5_60_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jbusres.2019.02.062"
+      },
+      {
+        "key": "e_1_3_5_61_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/0022-3514.71.3.549"
+      },
+      {
+        "key": "e_1_3_5_62_1",
+        "unstructured": "Sloane G. 2015. Facebook’s carousel ads are 10 times better than its regular ads. https://digiday.com/media/facebooks-carousel-ads-10-times-better-regular-ads/ (accessed June 1 2025)."
+      },
+      {
+        "key": "e_1_3_5_63_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2501/JAR-55-2-216-227"
+      },
+      {
+        "key": "e_1_3_5_64_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.1460-2466.1992.tb00812.x"
+      },
+      {
+        "key": "e_1_3_5_65_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/mar.22011"
+      },
+      {
+        "key": "e_1_3_5_66_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3389/fnins.2021.578439"
+      },
+      {
+        "key": "e_1_3_5_67_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/673383"
+      },
+      {
+        "key": "e_1_3_5_68_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/08911762.2021.1956665"
+      },
+      {
+        "key": "e_1_3_5_69_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00913367.2023.2216262"
+      },
+      {
+        "key": "e_1_3_5_70_1",
+        "unstructured": "WARC. 2022. Over 80% of ads fail to reach ‘attention threshold’. https://www.warc.com/content/feed/over-80-of-ads-fail-to-reach-attention-threshold/en-GB/6899 (accessed October 19 2024)."
+      },
+      {
+        "key": "e_1_3_5_71_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/15252019.2021.1977736"
+      },
+      {
+        "key": "e_1_3_5_72_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/02650487.2014.996117"
+      }
+    ],
+    "container-title": [
+      "International Journal of Advertising"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.tandfonline.com/doi/pdf/10.1080/02650487.2026.2624918",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          5
+        ]
+      ],
+      "date-time": "2026-03-05T22:14:44Z",
+      "timestamp": 1772748884000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2624918"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          19
+        ]
+      ]
+    },
+    "references-count": 71,
+    "alternative-id": [
+      "10.1080/02650487.2026.2624918"
+    ],
+    "URL": "https://doi.org/10.1080/02650487.2026.2624918",
+    "relation": {},
+    "ISSN": [
+      "0265-0487",
+      "1759-3948"
+    ],
+    "issn-type": [
+      {
+        "value": "0265-0487",
+        "type": "print"
+      },
+      {
+        "value": "1759-3948",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          19
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+        "order": 1,
+        "name": "peerreview_statement",
+        "label": "Peer Review Statement"
+      },
+      {
+        "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=rina20",
+        "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=rina20",
+        "order": 2,
+        "name": "aims_and_scope_url",
+        "label": "Aim & Scope"
+      },
+      {
+        "value": "2024-11-06",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2026-01-26",
+        "order": 1,
+        "name": "revised",
+        "label": "Revised",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2026-01-27",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2026-02-19",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

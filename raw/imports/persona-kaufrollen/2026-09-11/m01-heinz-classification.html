@@ -1,0 +1,740 @@
+<!DOCTYPE html><html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+img.wp-smiley, img.emoji { display: inline !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0px 0.07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0px !important; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --wp-block-synced-color: #7a00df; --wp-block-synced-color--rgb: 122,0,223; --wp-bound-block-color: var(--wp-block-synced-color); --wp-editor-canvas-background: #ddd; --wp-admin-theme-color: #007cba; --wp-admin-theme-color--rgb: 0,124,186; --wp-admin-theme-color-darker-10: #006ba1; --wp-admin-theme-color-darker-10--rgb: 0,107,160.5; --wp-admin-theme-color-darker-20: #005a87; --wp-admin-theme-color-darker-20--rgb: 0,90,135; --wp-admin-border-width-focus: 2px; }
+
+@media (min-resolution: 192dpi) {
+  :root { --wp-admin-border-width-focus: 1.5px; }
+}
+
+.wp-element-button { cursor: pointer; }
+
+:root .has-very-light-gray-background-color { background-color: rgb(238, 238, 238); }
+
+:root .has-very-dark-gray-background-color { background-color: rgb(49, 49, 49); }
+
+:root .has-very-light-gray-color { color: rgb(238, 238, 238); }
+
+:root .has-very-dark-gray-color { color: rgb(49, 49, 49); }
+
+:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background { background: linear-gradient(135deg, rgb(0, 208, 132), rgb(6, 147, 227)); }
+
+:root .has-purple-crush-gradient-background { background: linear-gradient(135deg, rgb(52, 226, 228), rgb(71, 33, 251) 50%, rgb(171, 29, 254)); }
+
+:root .has-hazy-dawn-gradient-background { background: linear-gradient(135deg, rgb(250, 172, 168), rgb(218, 208, 236)); }
+
+:root .has-subdued-olive-gradient-background { background: linear-gradient(135deg, rgb(250, 250, 225), rgb(103, 166, 113)); }
+
+:root .has-atomic-cream-gradient-background { background: linear-gradient(135deg, rgb(253, 215, 154), rgb(0, 74, 89)); }
+
+:root .has-nightshade-gradient-background { background: linear-gradient(135deg, rgb(51, 9, 104), rgb(49, 205, 207)); }
+
+:root .has-midnight-gradient-background { background: linear-gradient(135deg, rgb(2, 3, 129), rgb(40, 116, 252)); }
+
+:root { --wp--preset--font-size--normal: 16px; --wp--preset--font-size--huge: 42px; }
+
+.has-regular-font-size { font-size: 1em; }
+
+.has-larger-font-size { font-size: 2.625em; }
+
+.has-normal-font-size { font-size: var(--wp--preset--font-size--normal); }
+
+.has-huge-font-size { font-size: var(--wp--preset--font-size--huge); }
+
+:root .has-text-align-center { text-align: center; }
+
+:root .has-text-align-left { text-align: left; }
+
+:root .has-text-align-right { text-align: right; }
+
+.has-fit-text { white-space: nowrap !important; }
+
+#end-resizable-editor-section { display: none; }
+
+.aligncenter { clear: both; }
+
+.items-justified-left { justify-content: flex-start; }
+
+.items-justified-center { justify-content: center; }
+
+.items-justified-right { justify-content: flex-end; }
+
+.items-justified-space-between { justify-content: space-between; }
+
+.screen-reader-text { border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; overflow-wrap: normal !important; word-break: normal !important; }
+
+.screen-reader-text:focus { background-color: rgb(221, 221, 221); clip-path: none; color: rgb(68, 68, 68); display: block; font-size: 1em; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+
+html :where(.has-border-color) { border-style: solid; }
+
+html :where([style^="border-color"], [style*=";border-color"], [style*="; border-color"]) { border-style: solid; }
+
+html :where([style^="border-top-color"], [style*=";border-top-color"], [style*="; border-top-color"]) { border-top-style: solid; }
+
+html :where([style^="border-right-color"], [style*=";border-right-color"], [style*="; border-right-color"]) { border-right-style: solid; }
+
+html :where([style^="border-bottom-color"], [style*=";border-bottom-color"], [style*="; border-bottom-color"]) { border-bottom-style: solid; }
+
+html :where([style^="border-left-color"], [style*=";border-left-color"], [style*="; border-left-color"]) { border-left-style: solid; }
+
+html :where([style^="border-width"], [style*=";border-width"], [style*="; border-width"]) { border-style: solid; }
+
+html :where([style^="border-top-width"], [style*=";border-top-width"], [style*="; border-top-width"]) { border-top-style: solid; }
+
+html :where([style^="border-right-width"], [style*=";border-right-width"], [style*="; border-right-width"]) { border-right-style: solid; }
+
+html :where([style^="border-bottom-width"], [style*=";border-bottom-width"], [style*="; border-bottom-width"]) { border-bottom-style: solid; }
+
+html :where([style^="border-left-width"], [style*=";border-left-width"], [style*="; border-left-width"]) { border-left-style: solid; }
+
+html :where(img[class*="wp-image-"]) { height: auto; max-width: 100%; }
+
+:where(figure) { margin: 0px 0px 1em; }
+
+html :where(.is-position-sticky) { --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height,0px); }
+
+@media screen and (max-width: 600px) {
+  html :where(.is-position-sticky) { --wp-admin--admin-bar--position-offset: 0px; }
+}</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.wp-block-button__link { color: rgb(255, 255, 255); background-color: rgb(50, 55, 60); border-radius: 9999px; box-shadow: none; text-decoration: none; padding: calc(0.667em + 2px) calc(1.333em + 2px); font-size: 1.125em; }
+
+.wp-block-file__button { background: rgb(50, 55, 60); color: rgb(255, 255, 255); text-decoration: none; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --wp--preset--aspect-ratio--square: 1; --wp--preset--aspect-ratio--4-3: 4/3; --wp--preset--aspect-ratio--3-4: 3/4; --wp--preset--aspect-ratio--3-2: 3/2; --wp--preset--aspect-ratio--2-3: 2/3; --wp--preset--aspect-ratio--16-9: 16/9; --wp--preset--aspect-ratio--9-16: 9/16; --wp--preset--color--black: #000000; --wp--preset--color--cyan-bluish-gray: #abb8c3; --wp--preset--color--white: #ffffff; --wp--preset--color--pale-pink: #f78da7; --wp--preset--color--vivid-red: #cf2e2e; --wp--preset--color--luminous-vivid-orange: #ff6900; --wp--preset--color--luminous-vivid-amber: #fcb900; --wp--preset--color--light-green-cyan: #7bdcb5; --wp--preset--color--vivid-green-cyan: #00d084; --wp--preset--color--pale-cyan-blue: #8ed1fc; --wp--preset--color--vivid-cyan-blue: #0693e3; --wp--preset--color--vivid-purple: #9b51e0; --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%); --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%); --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%); --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%); --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%); --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%); --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%); --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%); --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%); --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%); --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%); --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%); --wp--preset--font-size--small: 13px; --wp--preset--font-size--medium: 20px; --wp--preset--font-size--large: 36px; --wp--preset--font-size--x-large: 42px; --wp--preset--spacing--20: 0.44rem; --wp--preset--spacing--30: 0.67rem; --wp--preset--spacing--40: 1rem; --wp--preset--spacing--50: 1.5rem; --wp--preset--spacing--60: 2.25rem; --wp--preset--spacing--70: 3.38rem; --wp--preset--spacing--80: 5.06rem; --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2); --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4); --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2); --wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0); --wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0); }
+
+.wp-block-button { --wp--preset--dimension--25: 25%; --wp--preset--dimension--50: 50%; --wp--preset--dimension--75: 75%; --wp--preset--dimension--100: 100%; }
+
+:where(body) { margin: 0px; }
+
+:where(.is-layout-flex) { gap: 0.5em; }
+
+:where(.is-layout-grid) { gap: 0.5em; }
+
+body .is-layout-flex { display: flex; }
+
+.is-layout-flex { flex-wrap: wrap; align-items: center; }
+
+.is-layout-flex > :is(*, div) { margin: 0px; }
+
+body .is-layout-grid { display: grid; }
+
+.is-layout-grid > :is(*, div) { margin: 0px; }
+
+body { padding: 0px; }
+
+:root :where(.wp-element-button, .wp-block-button__link) { background-color: rgb(50, 55, 60); border-width: 0px; color: rgb(255, 255, 255); font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; padding: calc(0.667em + 2px) calc(1.333em + 2px); text-decoration: none; text-transform: inherit; }
+
+.has-black-color { color: var(--wp--preset--color--black) !important; }
+
+.has-cyan-bluish-gray-color { color: var(--wp--preset--color--cyan-bluish-gray) !important; }
+
+.has-white-color { color: var(--wp--preset--color--white) !important; }
+
+.has-pale-pink-color { color: var(--wp--preset--color--pale-pink) !important; }
+
+.has-vivid-red-color { color: var(--wp--preset--color--vivid-red) !important; }
+
+.has-luminous-vivid-orange-color { color: var(--wp--preset--color--luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-amber-color { color: var(--wp--preset--color--luminous-vivid-amber) !important; }
+
+.has-light-green-cyan-color { color: var(--wp--preset--color--light-green-cyan) !important; }
+
+.has-vivid-green-cyan-color { color: var(--wp--preset--color--vivid-green-cyan) !important; }
+
+.has-pale-cyan-blue-color { color: var(--wp--preset--color--pale-cyan-blue) !important; }
+
+.has-vivid-cyan-blue-color { color: var(--wp--preset--color--vivid-cyan-blue) !important; }
+
+.has-vivid-purple-color { color: var(--wp--preset--color--vivid-purple) !important; }
+
+.has-black-background-color { background-color: var(--wp--preset--color--black) !important; }
+
+.has-cyan-bluish-gray-background-color { background-color: var(--wp--preset--color--cyan-bluish-gray) !important; }
+
+.has-white-background-color { background-color: var(--wp--preset--color--white) !important; }
+
+.has-pale-pink-background-color { background-color: var(--wp--preset--color--pale-pink) !important; }
+
+.has-vivid-red-background-color { background-color: var(--wp--preset--color--vivid-red) !important; }
+
+.has-luminous-vivid-orange-background-color { background-color: var(--wp--preset--color--luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-amber-background-color { background-color: var(--wp--preset--color--luminous-vivid-amber) !important; }
+
+.has-light-green-cyan-background-color { background-color: var(--wp--preset--color--light-green-cyan) !important; }
+
+.has-vivid-green-cyan-background-color { background-color: var(--wp--preset--color--vivid-green-cyan) !important; }
+
+.has-pale-cyan-blue-background-color { background-color: var(--wp--preset--color--pale-cyan-blue) !important; }
+
+.has-vivid-cyan-blue-background-color { background-color: var(--wp--preset--color--vivid-cyan-blue) !important; }
+
+.has-vivid-purple-background-color { background-color: var(--wp--preset--color--vivid-purple) !important; }
+
+.has-black-border-color { border-color: var(--wp--preset--color--black) !important; }
+
+.has-cyan-bluish-gray-border-color { border-color: var(--wp--preset--color--cyan-bluish-gray) !important; }
+
+.has-white-border-color { border-color: var(--wp--preset--color--white) !important; }
+
+.has-pale-pink-border-color { border-color: var(--wp--preset--color--pale-pink) !important; }
+
+.has-vivid-red-border-color { border-color: var(--wp--preset--color--vivid-red) !important; }
+
+.has-luminous-vivid-orange-border-color { border-color: var(--wp--preset--color--luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-amber-border-color { border-color: var(--wp--preset--color--luminous-vivid-amber) !important; }
+
+.has-light-green-cyan-border-color { border-color: var(--wp--preset--color--light-green-cyan) !important; }
+
+.has-vivid-green-cyan-border-color { border-color: var(--wp--preset--color--vivid-green-cyan) !important; }
+
+.has-pale-cyan-blue-border-color { border-color: var(--wp--preset--color--pale-cyan-blue) !important; }
+
+.has-vivid-cyan-blue-border-color { border-color: var(--wp--preset--color--vivid-cyan-blue) !important; }
+
+.has-vivid-purple-border-color { border-color: var(--wp--preset--color--vivid-purple) !important; }
+
+.has-vivid-cyan-blue-to-vivid-purple-gradient-background { background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important; }
+
+.has-light-green-cyan-to-vivid-green-cyan-gradient-background { background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important; }
+
+.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background { background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-orange-to-vivid-red-gradient-background { background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important; }
+
+.has-very-light-gray-to-cyan-bluish-gray-gradient-background { background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important; }
+
+.has-cool-to-warm-spectrum-gradient-background { background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important; }
+
+.has-blush-light-purple-gradient-background { background: var(--wp--preset--gradient--blush-light-purple) !important; }
+
+.has-blush-bordeaux-gradient-background { background: var(--wp--preset--gradient--blush-bordeaux) !important; }
+
+.has-luminous-dusk-gradient-background { background: var(--wp--preset--gradient--luminous-dusk) !important; }
+
+.has-pale-ocean-gradient-background { background: var(--wp--preset--gradient--pale-ocean) !important; }
+
+.has-electric-grass-gradient-background { background: var(--wp--preset--gradient--electric-grass) !important; }
+
+.has-midnight-gradient-background { background: var(--wp--preset--gradient--midnight) !important; }
+
+.has-small-font-size { font-size: var(--wp--preset--font-size--small) !important; }
+
+.has-medium-font-size { font-size: var(--wp--preset--font-size--medium) !important; }
+
+.has-large-font-size { font-size: var(--wp--preset--font-size--large) !important; }
+
+.has-x-large-font-size { font-size: var(--wp--preset--font-size--x-large) !important; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --admin-bar-top: 7px; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.rll-youtube-player { position: relative; padding-bottom: 56.23%; height: 0px; overflow: hidden; max-width: 100%; }
+
+.rll-youtube-player:focus-within { outline: currentcolor solid 2px; outline-offset: 5px; }
+
+.rll-youtube-player iframe { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 100; background: 0px 0px; }
+
+.rll-youtube-player img { inset: 0px; display: block; margin: auto; max-width: 100%; width: 100%; position: absolute; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; height: auto; transition: 0.4s; }
+
+.rll-youtube-player img:hover { filter: brightness(75%); }
+
+.rll-youtube-player .play { height: 100%; width: 100%; left: 0px; top: 0px; position: absolute; background-image: url("https://www.heinzmarketing.com/wp-content/plugins/wp-rocket/assets/img/youtube.png"); background-position: center center; background-size: initial; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; cursor: pointer; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; background-color: transparent !important; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://www.heinzmarketing.com/blog/persona-classification-the-buyi/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-K895TSH"></script><script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v28.4 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Persona Classification and the Buying Committee: The What, How, and Why - Pt. 1 | Heinz Marketing</title>
+	<meta name="description" content="Developing an accurate and actionable understanding of the B2B buying committee and the buyer personas that make it can be challenging.">
+	<link rel="canonical" href="https://www.heinzmarketing.com/blog/persona-classification-the-buyi/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Persona Classification and the Buying Committee: The What, How, and Why - Pt. 1 | Heinz Marketing">
+	<meta property="og:description" content="Developing an accurate and actionable understanding of the B2B buying committee and the buyer personas that make it can be challenging.">
+	<meta property="og:url" content="https://www.heinzmarketing.com/blog/persona-classification-the-buyi/">
+	<meta property="og:site_name" content="Heinz Marketing">
+	<meta property="article:published_time" content="2023-05-03T18:00:27+00:00">
+	<meta property="article:modified_time" content="2023-08-01T20:11:16+00:00">
+	<meta property="og:image" content="https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1.jpeg">
+	<meta property="og:image:width" content="1600">
+	<meta property="og:image:height" content="1067">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Winfield Dean-Salyards">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Winfield Dean-Salyards">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="3 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#article","isPartOf":{"@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/"},"author":{"name":"Winfield Dean-Salyards","@id":"https:\/\/www.heinzmarketing.com\/#\/schema\/person\/f65a3d2b439626c8552a47e26107c791"},"headline":"Persona Classification and the Buying Committee: The What, How, and Why &#8211; Pt. 1","datePublished":"2023-05-03T18:00:27+00:00","dateModified":"2023-08-01T20:11:16+00:00","mainEntityOfPage":{"@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/"},"wordCount":630,"publisher":{"@id":"https:\/\/www.heinzmarketing.com\/#organization"},"image":{"@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#primaryimage"},"thumbnailUrl":"https:\/\/www.heinzmarketing.com\/wp-content\/uploads\/2023\/06\/AdobeStock_198191090-scaled-1.jpeg","articleSection":["Account-Based Marketing","Target Market"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/","url":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/","name":"Persona Classification and the Buying Committee: The What, How, and Why - Pt. 1 | Heinz Marketing","isPartOf":{"@id":"https:\/\/www.heinzmarketing.com\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#primaryimage"},"image":{"@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#primaryimage"},"thumbnailUrl":"https:\/\/www.heinzmarketing.com\/wp-content\/uploads\/2023\/06\/AdobeStock_198191090-scaled-1.jpeg","datePublished":"2023-05-03T18:00:27+00:00","dateModified":"2023-08-01T20:11:16+00:00","description":"Developing an accurate and actionable understanding of the B2B buying committee and the buyer personas that make it can be challenging.","breadcrumb":{"@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#primaryimage","url":"https:\/\/www.heinzmarketing.com\/wp-content\/uploads\/2023\/06\/AdobeStock_198191090-scaled-1.jpeg","contentUrl":"https:\/\/www.heinzmarketing.com\/wp-content\/uploads\/2023\/06\/AdobeStock_198191090-scaled-1.jpeg","width":1600,"height":1067},{"@type":"BreadcrumbList","@id":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Blog","item":"https:\/\/www.heinzmarketing.com\/blog\/"},{"@type":"ListItem","position":2,"name":"Persona Classification and the Buying Committee: The What, How, and Why &#8211; Pt. 1"}]},{"@type":"WebSite","@id":"https:\/\/www.heinzmarketing.com\/#website","url":"https:\/\/www.heinzmarketing.com\/","name":"Heinz Marketing","description":"","publisher":{"@id":"https:\/\/www.heinzmarketing.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.heinzmarketing.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/www.heinzmarketing.com\/#organization","name":"Heinz Marketing","url":"https:\/\/www.heinzmarketing.com\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.heinzmarketing.com\/#\/schema\/logo\/image\/","url":"https:\/\/www.heinzmarketing.com\/wp-content\/uploads\/2023\/04\/heinz-logo.svg","contentUrl":"https:\/\/www.heinzmarketing.com\/wp-content\/uploads\/2023\/04\/heinz-logo.svg","caption":"Heinz Marketing"},"image":{"@id":"https:\/\/www.heinzmarketing.com\/#\/schema\/logo\/image\/"}},{"@type":"Person","@id":"https:\/\/www.heinzmarketing.com\/#\/schema\/person\/f65a3d2b439626c8552a47e26107c791","name":"Winfield Dean-Salyards","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/secure.gravatar.com\/avatar\/9513cdd798ffa64f6d3701483432e38a6ee760b52e44d2e0055fd04b1b64d28b?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/9513cdd798ffa64f6d3701483432e38a6ee760b52e44d2e0055fd04b1b64d28b?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/9513cdd798ffa64f6d3701483432e38a6ee760b52e44d2e0055fd04b1b64d28b?s=96&d=mm&r=g","caption":"Winfield Dean-Salyards"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
+<link rel="dns-prefetch" href="https://app-sj07.marketo.com/">
+<link rel="dns-prefetch" href="https://use.typekit.net/">
+<link rel="dns-prefetch" href="https://use.fontawesome.com/">
+
+<link rel="alternate" type="application/rss+xml" title="Heinz Marketing » Feed" href="https://www.heinzmarketing.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Heinz Marketing » Comments Feed" href="https://www.heinzmarketing.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Heinz Marketing » Persona Classification and the Buying Committee: The What, How, and Why – Pt. 1 Comments Feed" href="https://www.heinzmarketing.com/blog/persona-classification-the-buyi/feed/">
+
+
+
+
+
+
+
+<link rel="stylesheet" id="wpa-style-css" href="https://www.heinzmarketing.com/wp-content/plugins/wp-accessibility/css/wpa-style.css?ver=2.3.5" media="all">
+
+<link data-minify="1" rel="stylesheet" id="dashicons-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-includes/css/dashicons.min.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="megamenu-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-content/uploads/maxmegamenu/style.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="megamenu-genericons-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-content/plugins/megamenu-pro/icons/genericons/genericons/genericons.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="megamenu-fontawesome-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-content/plugins/megamenu-pro/icons/fontawesome/css/font-awesome.min.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="megamenu-fontawesome5-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-content/plugins/megamenu-pro/icons/fontawesome5/css/all.min.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="megamenu-fontawesome6-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-content/plugins/megamenu-pro/icons/fontawesome6/css/all.min.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="typekit-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/jfy8myn.css?ver=1789049370" media="all">
+<link data-minify="1" rel="stylesheet" id="font-awesome-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/releases/v6.1.1/css/all.css?ver=1789049371" media="all">
+<link rel="stylesheet" id="layout-css" href="https://www.heinzmarketing.com/wp-content/themes/orbit-media/resources/css/min/layout.min.css?ver=1680299625" media="all">
+<link data-minify="1" rel="stylesheet" id="support-css" href="https://www.heinzmarketing.com/wp-content/cache/min/1/wp-content/themes/orbit-media/resources/css/support.css?ver=1789049371" media="all">
+
+<script id="jquery-core-js" src="https://www.heinzmarketing.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+
+<script id="file_uploads_nfpluginsettings-js-extra">
+var params = {"clearLogRestUrl":"https://www.heinzmarketing.com/wp-json/nf-file-uploads/debug-log/delete-all","clearLogButtonId":"file_uploads_clear_debug_logger","downloadLogRestUrl":"https://www.heinzmarketing.com/wp-json/nf-file-uploads/debug-log/get-all","downloadLogButtonId":"file_uploads_download_debug_logger"};
+//# sourceURL=file_uploads_nfpluginsettings-js-extra
+</script>
+
+
+<link rel="https://api.w.org/" href="https://www.heinzmarketing.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.heinzmarketing.com/wp-json/wp/v2/posts/12545"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.heinzmarketing.com/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://www.heinzmarketing.com/?p=12545">
+<!-- Stream WordPress user activity plugin v4.4.0 -->
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"single-post","pageCategory":["account-based-marketing","target-market"],"pagePostAuthor":"Winfield Dean-Salyards"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer="">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K895TSH');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->    
+    			
+			<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link rel="stylesheet" id="shariffcss-css" href="https://www.heinzmarketing.com/wp-content/plugins/shariff/css/shariff.min.css?ver=4.6.22" media="all">
+
+<meta name="generator" content="WP Rocket 3.23.3.3" data-wpr-features="wpr_defer_js wpr_minify_concatenate_js wpr_lazyload_images wpr_lazyload_iframes wpr_minify_css wpr_cdn wpr_desktop"><script nonce="" src="https://app-sj07.marketo.com/index.php/form/getForm?munchkinId=966-VWE-480&amp;form=1020&amp;url=https%3A%2F%2Fwww.heinzmarketing.com%2Fblog%2Fpersona-classification-the-buyi%2F&amp;callback=jQuery37105778331102098475_1789161537891&amp;_=1789161537892"></script></head>
+<body class="wp-singular post-template-default single single-post postid-12545 single-format-standard wp-custom-logo wp-theme-orbit-media wp-schema-pro-2.12.0 mega-menu-primary-menu has_js">
+
+
+
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K895TSH" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<header data-rocket-location-hash="36c6bcf25eaacb5252c744cc88a6cc2e" class="site-header" role="banner">
+
+        <a href="https://www.heinzmarketing.com/blog/persona-classification-the-buyi/#content" class="skip-to-content visually-hidden-focusable">Skip to Main Content</a>
+
+    <div data-rocket-location-hash="aa6604bcb4e0befc743703ce3edf3347" class="site-header-top d-none d-lg-block">
+        <div data-rocket-location-hash="fe0ce8c8f8fc8e7f23ee593b99868c0f" class="container-fluid">
+            <nav aria-label="Secondary">
+                <ul id="menu-secondary-nav" class="menu flex-row justify-content-end"><li id="menu-item-9546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9546 nav-item"><a href="https://www.heinzmarketing.com/about/" class="nav-link">About</a></li>
+<li id="menu-item-9661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9661 nav-item"><a href="https://www.heinzmarketing.com/events/" class="nav-link">Events &amp; Podcasts</a></li>
+<li id="menu-item-9547" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-9547 nav-item"><a href="https://www.heinzmarketing.com/blog/" class="nav-link">Blog</a></li>
+</ul>
+                            </nav>
+        </div>
+    </div>
+
+    <div data-rocket-location-hash="516752e22b50cdcbb43f174fe9339e72" class="site-header-bottom">
+        <div data-rocket-location-hash="57f5f94b700c18128ff11e2d8b2bec34" class="container-fluid">
+            <nav class="navbar navbar-expand-lg" aria-label="Primary">
+
+                <a href="https://www.heinzmarketing.com/" class="navbar-brand skip-lazy" rel="Home"><span class="visually-hidden">Back to home</span><img width="1" height="1" src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/heinz-logo.svg" class="skip-lazy navbar-brand__image" alt="Heinz Marketing"></a>
+                <div class="navbar-toggle-container">
+                                        <div class="navbar-toggler">
+                        <button class="js-navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle Navigation">
+
+                        </button>
+                        <object aria-label="Mobile Menu Toggle" id="navbar-toggler-svg" class="js-navbar-toggler-svg" type="image/svg+xml" data="cid:frame-E87D583DE825C58DF1FEA45087982513@mhtml.blink"></object>
+                    </div>
+
+                </div>
+                <div id="primary-nav" class="primary-nav collapse navbar-collapse justify-content-md-end">
+                    <div id="mega-menu-wrap-primary-menu" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class="mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-0"><button aria-controls="mega-menu-primary-menu" aria-expanded="false" aria-haspopup="true" aria-label="Toggle Menu" class="mega-toggle-animated mega-toggle-animated-slider" type="button">
+                  <span class="mega-toggle-animated-box">
+                    <span class="mega-toggle-animated-inner"></span>
+                  </span>
+                </button></div></div></div><ul id="mega-menu-primary-menu" class="mega-menu max-mega-menu mega-menu-horizontal" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="false" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="768" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical" data-mobile-back-text="{parent_title}"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-megamenu menu-grid align-bottom-left menu-item-9544 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-9544" id="mega-menu-item-9544"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/" aria-expanded="false" aria-controls="mega-sub-menu-9544">B2B Demand Generation<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role="presentation" id="mega-sub-menu-9544">
+<li class="menu-row mega-menu-row" id="mega-menu-9544-0">
+	<ul class="mega-sub-menu" style="--columns:12" role="presentation">
+<li class="menu-column menu-columns-4-of-12 mega-menu-column mega-menu-columns-4-of-12" style="--columns:12; --span:4" id="mega-menu-9544-0-0">
+		<ul class="mega-sub-menu">
+<li class="menu-item menu-item-type-widget menu-widget-class-widget_text menu-item-text-8 mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-8" id="mega-menu-item-text-8"><div class="mega-block-title">The Predictable Pipeline Journey</div>			<div class="textwidget"><p>A data-driven approach to understanding your audience, aligning your team, and reaching your revenue goals.</p>
+<p><a class="cta-link" href="https://www.heinzmarketing.com/b2b-demand-generation/">Learn More about the Predictable Pipeline Method</a></p>
+</div>
+		</li>		</ul>
+</li><li class="menu-column menu-columns-4-of-12 mega-menu-column mega-menu-columns-4-of-12" style="--columns:12; --span:4" id="mega-menu-9544-0-1">
+		<ul class="mega-sub-menu">
+<li class="menu-item menu-item-type-widget menu-widget-class-widget_custom_html menu-item-custom_html-3 mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-3" id="mega-menu-item-custom_html-3"><div class="mega-block-title">Our Services</div><div class="textwidget custom-html-widget"></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9558 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-9558" id="mega-menu-item-9558"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/target-market/">Target Market Consulting</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9554 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-9554" id="mega-menu-item-9554"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/content-messaging/">Content Strategy &amp; Messaging Development</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9557 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-9557" id="mega-menu-item-9557"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/sales-cycle/">Sales Cycle Optimization</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9556 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-9556" id="mega-menu-item-9556"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/ai-technology/">AI &amp; Technology Assessment</a></li>		</ul>
+</li><li class="menu-column menu-columns-4-of-12 mega-menu-column mega-menu-columns-4-of-12" style="--columns:12; --span:4" id="mega-menu-9544-0-2">
+		<ul class="mega-sub-menu">
+<li class="menu-item menu-item-type-widget menu-widget-class-widget_custom_html menu-item-custom_html-4 mega-menu-item mega-menu-item-type-widget widget_custom_html mega-menu-item-custom_html-4" id="mega-menu-item-custom_html-4"><div class="textwidget custom-html-widget"></div></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9555 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-9555" id="mega-menu-item-9555"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/metrics-kpis/">Metrics &amp; KPI Refinement</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9553 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-9553" id="mega-menu-item-9553"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/campaigns-programs/">Campaign &amp; Program Strategy</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19731 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-19731" id="mega-menu-item-19731"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/customer-led-growth/">Customer-Led Growth</a></li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19764 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-19764" id="mega-menu-item-19764"><a class="mega-menu-link" href="https://www.heinzmarketing.com/b2b-demand-generation/b2b-content-development/">Content Development &amp; Promotion</a></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16846 mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-16846" id="mega-menu-item-16846"><a class="mega-menu-link" href="https://www.heinzmarketing.com/marketing-orchestration/">Marketing Orchestration</a></li><li class="menu-item menu-item-type-post_type_archive menu-item-object-oms_case_studies menu-item-14056 mega-menu-item mega-menu-item-type-post_type_archive mega-menu-item-object-oms_case_studies mega-menu-item-14056" id="mega-menu-item-14056"><a class="mega-menu-link" href="https://www.heinzmarketing.com/results/">Client Results</a></li><li class="menu-item menu-item-type-post_type_archive menu-item-object-oms_resources menu-item-14057 mega-menu-item mega-menu-item-type-post_type_archive mega-menu-item-object-oms_resources mega-menu-item-14057" id="mega-menu-item-14057"><a class="mega-menu-link" href="https://www.heinzmarketing.com/resources/">Knowledge Hub</a></li><li class="nav-button menu-item menu-item-type-post_type menu-item-object-page menu-item-791 nav-button mega-nav-button mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-791 nav-button init" id="mega-menu-item-791"><a class="mega-menu-link" href="https://www.heinzmarketing.com/contact/">Contact Us</a><div class="button-bg"></div></li></ul></div>                    <ul id="menu-main-nav" class="menu no-buttons d-block d-lg-none"><li id="menu-item-9544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9544 nav-item dropdown"><a href="https://www.heinzmarketing.com/b2b-demand-generation/" class="nav-link">B2B Demand Generation</a><button type="button" data-toggle="dropdown" class="open-section"><i class="fa fa-plus" aria-hidden="true"></i><span class="visually-hidden">Expand Sub Links</span></button><button type="button" data-toggle="dropdown" class="close-section"><i class="fa fa-minus" aria-hidden="true"></i><span class="visually-hidden">Collapse Sub Links</span></button>
+<ul class="dropdown-menu">
+	<li id="menu-item-9558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9558 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/target-market/" class="nav-link">Target Market Consulting</a></li>
+	<li id="menu-item-9554" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9554 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/content-messaging/" class="nav-link">Content Strategy &amp; Messaging Development</a></li>
+	<li id="menu-item-9557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9557 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/sales-cycle/" class="nav-link">Sales Cycle Optimization</a></li>
+	<li id="menu-item-9556" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9556 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/ai-technology/" class="nav-link">AI &amp; Technology Assessment</a></li>
+	<li id="menu-item-9555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9555 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/metrics-kpis/" class="nav-link">Metrics &amp; KPI Refinement</a></li>
+	<li id="menu-item-9553" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9553 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/campaigns-programs/" class="nav-link">Campaign &amp; Program Strategy</a></li>
+	<li id="menu-item-19731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19731 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/customer-led-growth/" class="nav-link">Customer-Led Growth</a></li>
+	<li id="menu-item-19764" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19764 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/b2b-content-development/" class="nav-link">Content Development &amp; Promotion</a></li>
+</ul>
+</li>
+<li id="menu-item-16846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16846 nav-item"><a href="https://www.heinzmarketing.com/marketing-orchestration/" class="nav-link">Marketing Orchestration</a></li>
+<li id="menu-item-14056" class="menu-item menu-item-type-post_type_archive menu-item-object-oms_case_studies menu-item-14056 nav-item"><a href="https://www.heinzmarketing.com/results/" class="nav-link">Client Results</a></li>
+<li id="menu-item-14057" class="menu-item menu-item-type-post_type_archive menu-item-object-oms_resources menu-item-14057 nav-item"><a href="https://www.heinzmarketing.com/resources/" class="nav-link">Knowledge Hub</a></li>
+<li id="menu-item-791" class="nav-button menu-item menu-item-type-post_type menu-item-object-page menu-item-791 nav-item init"><a href="https://www.heinzmarketing.com/contact/" class="nav-link">Contact Us</a><div class="button-bg"></div></li>
+</ul>                    <ul id="menu-secondary-nav-1" class="menu top-right-menu-mobile d-block d-lg-none"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9546 nav-item"><a href="https://www.heinzmarketing.com/about/" class="nav-link">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9661 nav-item"><a href="https://www.heinzmarketing.com/events/" class="nav-link">Events &amp; Podcasts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-9547 nav-item"><a href="https://www.heinzmarketing.com/blog/" class="nav-link">Blog</a></li>
+</ul>                    <ul id="menu-main-nav-1" class="menu only-buttons d-block d-lg-none"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9544 nav-item dropdown"><a href="https://www.heinzmarketing.com/b2b-demand-generation/" class="nav-link">B2B Demand Generation</a><button type="button" data-toggle="dropdown" class="open-section"><i class="fa fa-plus" aria-hidden="true"></i><span class="visually-hidden">Expand Sub Links</span></button><button type="button" data-toggle="dropdown" class="close-section"><i class="fa fa-minus" aria-hidden="true"></i><span class="visually-hidden">Collapse Sub Links</span></button>
+<ul class="dropdown-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9558 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/target-market/" class="nav-link">Target Market Consulting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9554 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/content-messaging/" class="nav-link">Content Strategy &amp; Messaging Development</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9557 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/sales-cycle/" class="nav-link">Sales Cycle Optimization</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9556 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/ai-technology/" class="nav-link">AI &amp; Technology Assessment</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9555 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/metrics-kpis/" class="nav-link">Metrics &amp; KPI Refinement</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9553 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/campaigns-programs/" class="nav-link">Campaign &amp; Program Strategy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19731 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/customer-led-growth/" class="nav-link">Customer-Led Growth</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19764 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/b2b-content-development/" class="nav-link">Content Development &amp; Promotion</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16846 nav-item"><a href="https://www.heinzmarketing.com/marketing-orchestration/" class="nav-link">Marketing Orchestration</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-oms_case_studies menu-item-14056 nav-item"><a href="https://www.heinzmarketing.com/results/" class="nav-link">Client Results</a></li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-oms_resources menu-item-14057 nav-item"><a href="https://www.heinzmarketing.com/resources/" class="nav-link">Knowledge Hub</a></li>
+<li class="nav-button menu-item menu-item-type-post_type menu-item-object-page menu-item-791 nav-item init"><a href="https://www.heinzmarketing.com/contact/" class="nav-link">Contact Us</a><div class="button-bg"></div></li>
+</ul>                                    </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<div data-rocket-location-hash="18ea01c78d86b57f0743bc5041b29df0" class="mobile-menu-overlay js-mobile-menu-overlay"></div>
+
+    <main data-rocket-location-hash="a65ee22ade21394c6b0045948eb5c1c4" id="content">
+
+        <div data-rocket-location-hash="32c5c7e37ea17d9a98b3abadb58964bf" class="container-fluid">
+            <div data-rocket-location-hash="101c550418fcae4e29d05773bbacb152" class="row">
+                <div class="col-12 col-lg-8 offset-lg-2">
+
+                    <div class="blog-post-top">
+                        <div class="bread-crumb"><a href="https://www.heinzmarketing.com/blog/">Blog</a></div><h1 class="post-title">Persona Classification and the Buying Committee: The What, How, and Why – Pt. 1</h1>
+        <div class="post-meta d-flex flex-wrap">
+            <div class="post-meta__item post-meta__item--author"><img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="attachment-headshot size-headshot" alt="Winfield Salyards" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-190x190.jpg 190w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-150x150.jpg"><noscript><img width="150" height="150" src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-150x150.jpg" class="attachment-headshot size-headshot" alt="Winfield Salyards" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Win_Headshot-190x190.jpg 190w" sizes="(max-width: 150px) 100vw, 150px" /></noscript><span>Winfield Dean-Salyards</span></div><span class="post-meta__delimiter">|</span><div class="post-meta__item post-meta__item--date">May 3, 2023</div>
+        </div>
+    <div class="featured-img"><img width="1600" height="1067" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201600%201067'%3E%3C/svg%3E" class="attachment-extra-large size-extra-large wp-post-image" alt="Persona Classification and the Buying Committee: The What, How, and Why – Pt. 1" decoding="async" fetchpriority="high" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1.jpeg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-768x512.jpeg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-992x661.jpeg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-1536x1024.jpeg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-2048x1366.jpeg 2048w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-576x384.jpeg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-600x400.jpeg 600w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-230x153.jpeg 230w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-675x450.jpeg 675w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-278x185.jpeg 278w" data-lazy-sizes="(max-width: 1600px) 100vw, 1600px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-1600x1067.jpeg"><noscript><img width="1600" height="1067" src="https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-1600x1067.jpeg" class="attachment-extra-large size-extra-large wp-post-image" alt="Persona Classification and the Buying Committee: The What, How, and Why &#8211; Pt. 1" decoding="async" fetchpriority="high" srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1.jpeg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-768x512.jpeg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-992x661.jpeg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-1536x1024.jpeg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-2048x1366.jpeg 2048w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-576x384.jpeg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-600x400.jpeg 600w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-230x153.jpeg 230w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-675x450.jpeg 675w, https://www.heinzmarketing.com/wp-content/uploads/2023/06/AdobeStock_198191090-scaled-1-278x185.jpeg 278w" sizes="(max-width: 1600px) 100vw, 1600px" /></noscript></div>                    </div>
+
+                    <div class="content">
+                        <div class="post-share-wrapper"><div class="shariff shariff-align-center shariff-widget-align-center"><div class="ShariffHeadline">Share</div><ul class="shariff-buttons theme-round orientation-horizontal buttonsize-medium"><li class="shariff-button facebook shariff-nocustomcolor" style="background-color:#4273c8"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.heinzmarketing.com%2Fblog%2Fpersona-classification-the-buyi%2F" aria-label="Share on Facebook" role="button" rel="nofollow" class="shariff-link" style="; background-color:#3b5998; color:#fff" target="_blank"><span class="shariff-icon" style=""><svg width="32px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 32"><path fill="#3b5998" d="M17.1 0.2v4.7h-2.8q-1.5 0-2.1 0.6t-0.5 1.9v3.4h5.2l-0.7 5.3h-4.5v13.6h-5.5v-13.6h-4.5v-5.3h4.5v-3.9q0-3.3 1.9-5.2t5-1.8q2.6 0 4.1 0.2z"></path></svg></span><span class="visually-hidden"> Opens a new window</span></a></li><li class="shariff-button twitter shariff-nocustomcolor" style="background-color:#595959"><a href="https://twitter.com/share?url=https%3A%2F%2Fwww.heinzmarketing.com%2Fblog%2Fpersona-classification-the-buyi%2F&amp;text=Persona%20Classification%20and%20the%20Buying%20Committee%3A%20The%20What%2C%20How%2C%20and%20Why%20%E2%80%93%20Pt.%201" aria-label="Share on X" role="button" rel="noopener nofollow" class="shariff-link" style="; background-color:#000; color:#fff" target="_blank"><span class="shariff-icon" style=""><svg width="32px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" d="M14.258 10.152L23.176 0h-2.113l-7.747 8.813L7.133 0H0l9.352 13.328L0 23.973h2.113l8.176-9.309 6.531 9.309h7.133zm-2.895 3.293l-.949-1.328L2.875 1.56h3.246l6.086 8.523.945 1.328 7.91 11.078h-3.246zm0 0"></path></svg></span><span class="visually-hidden"> Opens a new window</span></a></li></ul></div></div><p><em>By&nbsp;<a href="https://www.linkedin.com/in/winfield-salyards/" target="_blank" rel="noopener">Win Salyards<span class="visually-hidden"> Opens a new window</span></a>, Senior Marketing Consultant at Heinz Marketing</em></p>
+<p><span data-preserver-spaces="true">Developing an accurate and actionable understanding of the <a href="https://www.heinzmarketing.com/2022/12/should-detractors-be-on-your-buying-committees/">B2B buying committee</a> and the buyer personas that make it can be challenging, especially when your buying cycle is complex. The titles in an active buying committee can vary widely depending on the size of the company, the vertical, the industry, or one of the many other differentiating factors that makes your customers unique. So, how do you go about organizing and understanding your BC? You classify and generalize. Over the next three posts, I will break down the B2B buying committee and build an understanding of each persona type that could be included and the what, how, and why you should be classifying your personas this way.&nbsp;</span></p>
+<h2><span data-preserver-spaces="true">Persona Classifi-</span><em><span data-preserver-spaces="true">What?</span></em><span data-preserver-spaces="true">&nbsp;</span></h2>
+<p><span data-preserver-spaces="true">Persona classification breaks out the different buyer personas acting within the buying committee. Much like taxonomy in biology or the concept of archetypes in literature, persona classification should immediately clarify a persona’s role and how they relate to other buying committee members. And similar to taxonomy, persona classification has a bit of a hierarchy. The way I breakdown classification levels, from highest to lowest, is as such:</span></p>
+<ul>
+<li><strong>Power</strong>
+<ul>
+<li class="ql-indent-1"><span data-preserver-spaces="true">What power do they wield within the buying committee?</span></li>
+</ul>
+</li>
+<li><strong>Action</strong>
+<ul>
+<li class="ql-indent-1"><span data-preserver-spaces="true">What are the steps they take during the buying process?</span></li>
+</ul>
+</li>
+<li><strong>Concern</strong>
+<ul>
+<li class="ql-indent-1"><span data-preserver-spaces="true">What are they most concerned with?</span></li>
+</ul>
+</li>
+</ul>
+<h2><strong><span data-preserver-spaces="true">Power:</span></strong><span data-preserver-spaces="true">&nbsp;Decision-Maker vs. Influencer vs. Validator</span></h2>
+<p><span data-preserver-spaces="true">I break down types of power into three categories:</span></p>
+<ul>
+<li><span data-preserver-spaces="true">The power to influence</span></li>
+<li>The power to say no, and</li>
+<li><span data-preserver-spaces="true">The power to say yes.<br>
+</span></li>
+</ul>
+<p><span data-preserver-spaces="true">These categories determine whether a persona (and its associated titles) is classified as a decision-maker, influencer, or validator. </span></p>
+<p><span data-preserver-spaces="true">If they have the power to say yes, they’re a <strong>decision-maker. </strong></span></p>
+<p><span data-preserver-spaces="true">If they primarily have the power to say no, they’re a <strong>validator</strong>. </span></p>
+<p><span data-preserver-spaces="true">And if they primarily have the power to influence, they are <strong>influencers. </strong></span></p>
+<p><span data-preserver-spaces="true">If you’re familiar with this terminology, you may ask, “<em>Where is the <strong>champion</strong></em>?” that’s where action comes in.&nbsp;</span></p>
+<h2><strong><span data-preserver-spaces="true">Action:</span></strong><span data-preserver-spaces="true">&nbsp;Where is the Champion?&nbsp;</span></h2>
+<p><span data-preserver-spaces="true">When I say ‘action,’ I refer to the activities the different personas take or are primarily responsible for during an accounts’ buying journey. </span></p>
+<p><span data-preserver-spaces="true">These can be loosely broken down into: </span></p>
+<ul>
+<li><span data-preserver-spaces="true">Research</span></li>
+<li><span data-preserver-spaces="true">Drive, and </span></li>
+<li><span data-preserver-spaces="true">Block</span></li>
+</ul>
+<p><span data-preserver-spaces="true">And this is how we identify the <strong>champion. </strong></span></p>
+<p><span data-preserver-spaces="true"><strong>Champions</strong> are <strong>influencers</strong> who drive the buying process forward. </span></p>
+<p><span data-preserver-spaces="true">Rather than <strong>everyday influencers</strong> whose primary action is research, <em><strong>champions</strong> do both.</em></span></p>
+<p><span data-preserver-spaces="true">Regarding the third category, block, this action is how we can be sure if someone is primarily a <strong>decision-maker</strong> or <strong>validator</strong> because <strong>validators</strong> are hurdles or roadblocks to jump over before finalizing the final decision. </span></p>
+<p><span data-preserver-spaces="true">The process can stall when the <strong>validator</strong> gets involved during the buying process, which is why we frequently see legal, compliance, and security titles in <strong>validator r</strong>oles. </span></p>
+<p><span data-preserver-spaces="true">In contrast, <strong>decision-maker</strong> roles can <em>both drive and block</em>.&nbsp;</span></p>
+<h2><strong><span data-preserver-spaces="true">Concern:</span></strong><span data-preserver-spaces="true">&nbsp;Is it IT? It’s IT.</span></h2>
+<p><span data-preserver-spaces="true">The final persona classification is concern, and this is where we break things out into:<br>
+</span></p>
+<ul>
+<li><span data-preserver-spaces="true">Business</span></li>
+<li><span data-preserver-spaces="true">Technical, or </span></li>
+<li><span data-preserver-spaces="true">Other varieties depending on the industry or product. </span></li>
+</ul>
+<p><span data-preserver-spaces="true">In this case, a concern is the focus of a persona’s actions. </span></p>
+<p><span data-preserver-spaces="true">For example, a <strong>business influencer</strong> researches the business case for a solution during the buying process, whereas a <strong>technical influencer</strong> researches the technical aspects of a potential solution. </span></p>
+<p><span data-preserver-spaces="true">Concerns can apply to <em>any persona</em>.</span></p>
+<p><span data-preserver-spaces="true"> In some cases, there may be<strong> technical</strong> and <strong>business champions. </strong></span></p>
+<p><span data-preserver-spaces="true">From the<strong> validator</strong> side, this is where you have legal, compliance, or risk validators, depending on their concern.&nbsp;</span></p>
+<p>&nbsp;</p>
+<p><span data-preserver-spaces="true">This way of categorizing personas and how they relate to the buying committee makes it easier to understand how different titles can apply to a BC. </span></p>
+<p><span data-preserver-spaces="true">Next time I’ll go over how we can make this actionable.&nbsp;</span></p>
+
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+<section data-rocket-location-hash="3249e70ee1b54ab8b6f5a6325aa25d6b" class="pageblock js-pageblock pageblock-related pageblock--oms-post-feed bg-color-dot-matrix">
+    <div data-rocket-location-hash="8c8473c8280730386e51c36d1219cf04" class="pageblock__inner">
+        <div data-rocket-location-hash="ee0aac67e26a1b3cee32579b01f3155f" class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+
+                    <div class="row pageblock-header justify-content-center">
+                        <div class="col-12 col-sm-10 col-lg-8 l-pageblock-header__col">
+                            <div class="pageblock-header__content text-center">
+                                <h2>Related Articles</h2>                            </div>
+                        </div>
+                    </div>
+
+                    <div class="l-posts__row row">
+                        <div class="l-posts__col col-12 col-sm-6 col-lg-4">
+<a href="https://www.heinzmarketing.com/blog/life-lessons-from-a-50-year-old/" id="post-20520" class="post-teaser card-item post-20520 post type-post status-publish format-standard has-post-thumbnail hentry category-internal-roles-and-functions category-strategy tag-career-lessons tag-cmo-leadership tag-courage-failures tag-decision-making tag-hiring tag-work-life-balance">
+                <div class="post-teaser__image card-item__image ratio ratio-5x3 landscape">
+            <img width="800" height="400" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20400'%3E%3C/svg%3E" class="featured-image" alt="Life Lessons from a 50 Year Old" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image.png 980w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-768x384.png 768w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-576x288.png 576w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-800x400.png 800w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-230x115.png 230w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-278x139.png 278w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image.png"><noscript><img width="800" height="400" src="https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image.png" class="featured-image" alt="Life Lessons from a 50 Year Old" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image.png 980w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-768x384.png 768w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-576x288.png 576w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-800x400.png 800w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-230x115.png 230w, https://www.heinzmarketing.com/wp-content/uploads/2026/08/Matts-Substack-Blog-Image-278x139.png 278w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>        </div>
+    
+    <div class="post-teaser__content card-item__content">
+        <div class="card-item__content-top">
+            
+        <div class="post-meta d-flex flex-wrap">
+            <div class="post-meta__item post-meta__item--author"><img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="attachment-headshot size-headshot" alt="Matt Heinz" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-2048x2048.jpg 2048w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-190x190.jpg 190w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-150x150.jpg"><noscript><img width="150" height="150" src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-150x150.jpg" class="attachment-headshot size-headshot" alt="Matt Heinz" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-2048x2048.jpg 2048w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Matt_Headshot-190x190.jpg 190w" sizes="(max-width: 150px) 100vw, 150px" /></noscript><span>Matt Heinz</span></div>
+        </div>
+                <h2 class="post-teaser__title card-item__title">Life Lessons from a 50 Year Old</h2>
+                    </div>
+        <div class="card-item__content-bottom"><div class="post-meta__item post-meta__item--category"><span>Internal Roles &amp; Functions</span>, <span>Strategy</span></div></div>    </div>
+</a></div><div class="l-posts__col col-12 col-sm-6 col-lg-4">
+<a href="https://www.heinzmarketing.com/blog/how-a-better-marketing-operating-model-creates-better-work-and-better-results/" id="post-20512" class="post-teaser card-item post-20512 post type-post status-publish format-standard has-post-thumbnail hentry category-ai category-strategy tag-ai-enabled-marketing tag-marketing-productivity tag-productivity-for-b2b">
+                <div class="post-teaser__image card-item__image ratio ratio-5x3 landscape">
+            <img width="800" height="533" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20533'%3E%3C/svg%3E" class="featured-image" alt="How a Better Marketing Operating Model Creates Better Work (And Better Results!)" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-992x661.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-768x512.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-1536x1024.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-2048x1365.jpg 2048w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-576x384.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-600x400.jpg 600w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-230x153.jpg 230w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-675x450.jpg 675w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-278x185.jpg 278w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-992x661.jpg"><noscript><img width="800" height="533" src="https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-992x661.jpg" class="featured-image" alt="How a Better Marketing Operating Model Creates Better Work (And Better Results!)" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-992x661.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-768x512.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-1536x1024.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-2048x1365.jpg 2048w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-576x384.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-600x400.jpg 600w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-230x153.jpg 230w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-675x450.jpg 675w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/contemporary-passional-dance-man-woman-blog-Sept-2026-278x185.jpg 278w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>        </div>
+    
+    <div class="post-teaser__content card-item__content">
+        <div class="card-item__content-top">
+            
+        <div class="post-meta d-flex flex-wrap">
+            <div class="post-meta__item post-meta__item--author"><img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="attachment-headshot size-headshot" alt="Maria Geokezas" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-190x190.jpg 190w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-150x150.jpg"><noscript><img width="150" height="150" src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-150x150.jpg" class="attachment-headshot size-headshot" alt="Maria Geokezas" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Maria_Headshot-190x190.jpg 190w" sizes="(max-width: 150px) 100vw, 150px" /></noscript><span>Maria Geokezas</span></div>
+        </div>
+                <h2 class="post-teaser__title card-item__title">How a Better Marketing Operating Model Creates Better Work (And Better Results!)</h2>
+                    </div>
+        <div class="card-item__content-bottom"><div class="post-meta__item post-meta__item--category"><span>Artificial Intelligence (AI)</span>, <span>Strategy</span></div></div>    </div>
+</a></div><div class="l-posts__col col-12 col-sm-6 col-lg-4">
+<a href="https://www.heinzmarketing.com/blog/why-ai-wont-fix-your-launch-cycle/" id="post-20496" class="post-teaser card-item post-20496 post type-post status-publish format-standard has-post-thumbnail hentry category-ai category-internal-roles-and-functions category-marketing-orchestration category-strategy tag-agentic-ai tag-ai-agents tag-ai-for-b2b tag-internal-roles-and-functions tag-marketing-orchestration tag-marketing-org-chart tag-marketing-tools">
+                <div class="post-teaser__image card-item__image ratio ratio-5x3 landscape">
+            <img width="800" height="400" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20400'%3E%3C/svg%3E" class="featured-image" alt="Why AI Won’t Fix Your 30-Day Launch Cycle" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1.png 980w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-768x384.png 768w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-576x288.png 576w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-800x400.png 800w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-230x115.png 230w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-278x139.png 278w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1.png"><noscript><img width="800" height="400" src="https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1.png" class="featured-image" alt="Why AI Won’t Fix Your 30-Day Launch Cycle" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1.png 980w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-768x384.png 768w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-576x288.png 576w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-800x400.png 800w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-230x115.png 230w, https://www.heinzmarketing.com/wp-content/uploads/2026/09/blog-header-1-278x139.png 278w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>        </div>
+    
+    <div class="post-teaser__content card-item__content">
+        <div class="card-item__content-top">
+            
+        <div class="post-meta d-flex flex-wrap">
+            <div class="post-meta__item post-meta__item--author"><img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="attachment-headshot size-headshot" alt="Payal Parikh" decoding="async" data-lazy-srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-190x190.jpg 190w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-150x150.jpg"><noscript><img width="150" height="150" src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-150x150.jpg" class="attachment-headshot size-headshot" alt="Payal Parikh" decoding="async" srcset="https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-150x150.jpg 150w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-768x768.jpg 768w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-992x992.jpg 992w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-1536x1536.jpg 1536w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-576x576.jpg 576w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot.jpg 1600w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-400x400.jpg 400w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-900x900.jpg 900w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-100x100.jpg 100w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-450x450.jpg 450w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-278x278.jpg 278w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-60x60.jpg 60w, https://www.heinzmarketing.com/wp-content/uploads/2023/04/Payal_Headshot-190x190.jpg 190w" sizes="(max-width: 150px) 100vw, 150px" /></noscript><span>Payal Parikh</span></div>
+        </div>
+                <h2 class="post-teaser__title card-item__title">Why AI Won’t Fix Your 30-Day Launch Cycle</h2>
+                    </div>
+        <div class="card-item__content-bottom"><div class="post-meta__item post-meta__item--category"><span>Artificial Intelligence (AI)</span>, <span>Internal Roles &amp; Functions</span>, <span>Marketing Orchestration</span>, <span>Strategy</span></div></div>    </div>
+</a></div>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        
+    <div class="new-window-warning" style="display: none;"></div></main>
+
+<!-- FOOTER -->
+<footer data-rocket-location-hash="ca4fc89e9769a41a471ceceeea66dcd7" class="site-footer text-center text-md-start">
+    <div data-rocket-location-hash="03761a94c41ff117e38dea47442547f3" class="site-footer-top">
+        <div data-rocket-location-hash="639e83ac5f7b7ca249dd06980f9e8a64" class="container-fluid">
+            <div class="row l-site-footer-top__row">
+                <div class="l-site-footer-top__col col-12 col-md-6 col-lg-5 col-xl-4">
+                    <div class="open-content-column">
+                                                    <p><img decoding="async" class="alignnone size-full wp-image-9293" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/heinz-logo.svg" width="300" height="150"><noscript><img decoding="async" class="alignnone size-full wp-image-9293" src="https://www.heinzmarketing.com/wp-content/uploads/2023/04/heinz-logo.svg" alt="" /></noscript></p>
+<p>Receive the latest B2B news, trends and helpful how-to’s delivered to your inbox every month.</p>
+                                                <form id="mktoForm_1020"></form>                    </div>
+                </div>
+                <div class="l-site-footer-top__col col-12 col-sm-6 col-md-3 offset-lg-1 offset-xl-2">
+                                        <ul id="menu-footer-menu" class="menu"><li id="menu-item-9671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9671 nav-item"><a href="https://www.heinzmarketing.com/b2b-demand-generation/" class="nav-link">B2B Demand Generation</a></li>
+<li id="menu-item-16867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16867 nav-item"><a href="https://www.heinzmarketing.com/marketing-orchestration/" class="nav-link">Marketing Orchestration</a></li>
+<li id="menu-item-14075" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14075 nav-item"><a href="https://www.heinzmarketing.com/results/" class="nav-link">Client Results</a></li>
+<li id="menu-item-14074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14074 nav-item"><a href="https://www.heinzmarketing.com/resources/" class="nav-link">Knowledge Hub</a></li>
+</ul>                </div>
+                <div class="l-site-footer-top__col col-12 col-sm-6 col-md-3">
+                                        <ul id="menu-footer-menu-2" class="menu"><li id="menu-item-9679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9679 nav-item"><a href="https://www.heinzmarketing.com/about/" class="nav-link">About</a></li>
+<li id="menu-item-9677" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-9677 nav-item"><a href="https://www.heinzmarketing.com/blog/" class="nav-link">Blog</a></li>
+<li id="menu-item-9678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9678 nav-item"><a href="https://www.heinzmarketing.com/careers/" class="nav-link">Careers</a></li>
+<li id="menu-item-9680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9680 nav-item"><a href="https://www.heinzmarketing.com/contact/" class="nav-link">Contact</a></li>
+</ul>                </div>
+            </div>
+        </div>
+    </div>
+    <div data-rocket-location-hash="79089d35b8c6aaf894301af893d49c51" class="site-footer-bottom">
+        <div class="container-fluid">
+            <div class="l-site-footer-bottom__row row justify-content-between align-content-center">
+                <div class="l-site-footer-bottom__col col-12 order-2 order-sm-1 col-sm-auto">
+                    <div class="copyright d-flex flex-column flex-md-row align-items-center">
+                        <p class="copyright__info mb-3 mb-md-0">© 2026 Heinz Marketing</p>
+                        <nav aria-label="Copyright">
+                            <ul id="menu-copyright-menu" class="copyright__menu menu flex-row"><li id="menu-item-8334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8334 nav-item"><a href="https://www.heinzmarketing.com/sitemap/" class="nav-link">Sitemap</a></li>
+<li id="menu-item-9676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9676 nav-item"><a href="https://www.heinzmarketing.com/privacy-statement/" class="nav-link">Privacy Statement</a></li>
+<li id="menu-item-9083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9083 nav-item"><a href="https://www.heinzmarketing.com/accessibility-statement/" class="nav-link">Accessibility Statement</a></li>
+<li id="menu-item-18549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18549 nav-item"><a href="https://www.heinzmarketing.com/ai-use-policy/" class="nav-link">AI Use Policy</a></li>
+</ul>                        </nav>
+                    </div>
+                </div>
+                <div class="l-site-footer-bottom__col col-12 order-1 order-sm-2 col-sm-auto">
+                                                                        <nav class="social-media" aria-label="Social">
+                                <ul class="social-media__menu menu flex-row justify-content-center">
+                                                                            <li class="menu-item">
+                                            <a href="https://www.linkedin.com/company/heinz-marketing-inc/" target="_blank" class="nav-link">
+                                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>                                                <span class="visually-hidden">LinkedIn</span>
+                                            <span class="visually-hidden"> Opens a new window</span></a>
+                                        </li>
+                                                                            <li class="menu-item">
+                                            <a href="https://www.facebook.com/HeinzMarketingInc/" target="_blank" class="nav-link">
+                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>                                                <span class="visually-hidden">Facebook </span>
+                                            <span class="visually-hidden"> Opens a new window</span></a>
+                                        </li>
+                                                                            <li class="menu-item">
+                                            <a href="https://www.instagram.com/heinz_marketing/" target="_blank" class="nav-link">
+                                                <i class="fab fa-instagram" aria-hidden="true"></i>                                                <span class="visually-hidden">Instagram</span>
+                                            <span class="visually-hidden"> Opens a new window</span></a>
+                                        </li>
+                                                                            <li class="menu-item">
+                                            <a href="https://www.youtube.com/@heinzmarketing" target="_blank" class="nav-link">
+                                                <i class="fab fa-youtube" aria-hidden="true"></i>                                                <span class="visually-hidden">YouTube</span>
+                                            <span class="visually-hidden"> Opens a new window</span></a>
+                                        </li>
+                                                                    </ul>
+                            </nav>
+                                                            </div>
+            </div>
+        </div>
+    </div>
+    <div data-rocket-location-hash="7349207601767379e7c90bb6fe577425" class="back-to-top text-center p-3">
+        <p>
+            <a href="https://www.heinzmarketing.com/blog/persona-classification-the-buyi/#">Back to top</a>
+        </p>
+    </div>
+</footer>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/orbit-media/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- Schema optimized by Schema Pro --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.heinzmarketing.com/blog/persona-classification-the-buyi/"},"headline":"Persona Classification and the Buying Committee: The What, How, and Why - Pt. 1","image":{"@type":"ImageObject","url":"https://www.heinzmarketing.com/wp-content/uploads/2023/05/AdobeStock_198191090-scaled-1-1.jpeg","width":1600,"height":1067},"datePublished":"2023-05-03T13:00:27","dateModified":"2023-05-23T11:38:30","author":{"@type":"Person","name":"Winfield Salyards","url":"https://www.heinzmarketing.com/blog/author/winfield-s"},"publisher":{"@type":"Organization","name":"Heinz Marketing","logo":{"@type":"ImageObject","url":"https://www.heinzmarketing.com/wp-content/uploads/2023/04/heinz-logo.svg"}}}</script><!-- / Schema optimized by Schema Pro --><!-- site-navigation-element Schema optimized by Schema Pro --><script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"B2B Demand Generation","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Target Market Consulting","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/target-market\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Content Strategy &amp; Messaging Development","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/content-messaging\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Sales Cycle Optimization","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/sales-cycle\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"AI &amp; Technology Assessment","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/ai-technology\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Metrics &#038; KPI Refinement","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/metrics-kpis\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Campaign &#038; Program Strategy","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/campaigns-programs\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Customer-Led Growth","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/customer-led-growth\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Content Development &amp; Promotion","url":"https:\/\/www.heinzmarketing.com\/b2b-demand-generation\/b2b-content-development\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Marketing Orchestration","url":"https:\/\/www.heinzmarketing.com\/marketing-orchestration\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Client Results","url":"https:\/\/www.heinzmarketing.com\/results\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Knowledge Hub","url":"https:\/\/www.heinzmarketing.com\/resources\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Contact Us","url":"https:\/\/www.heinzmarketing.com\/contact\/"}]}</script><!-- / site-navigation-element Schema optimized by Schema Pro --><script>
+	var relevanssi_rt_regex = /(&|\?)_(rt|rt_nonce)=(\w+)/g
+	var newUrl = window.location.search.replace(relevanssi_rt_regex, '')
+	if (newUrl.substr(0, 1) == '&') {
+		newUrl = '?' + newUrl.substr(1)
+	}
+	history.replaceState(null, null, window.location.pathname + newUrl + window.location.hash)
+</script>
+
+<script id="gtm4wp-form-move-tracker-js-before">
+var gtm4wp_form_move_config = {"filledOnly":false};
+//# sourceURL=gtm4wp-form-move-tracker-js-before
+</script>
+
+
+<script id="gtm4wp-youtube-js-before">
+window.gtm4wp_media_gate_expected = true;
+//# sourceURL=gtm4wp-youtube-js-before
+</script>
+
+<script id="oms_pageblocks-js-extra">
+var oms_pageblocks = {"scroll_offset":"120"};
+//# sourceURL=oms_pageblocks-js-extra
+</script>
+
+
+
+
+<script id="wp-accessibility-js-extra">
+var wpa = {"skiplinks":{"enabled":false,"output":""},"target":"","tabindex":"1","underline":{"enabled":false,"target":"a"},"videos":"","dir":"ltr","viewport":"1","lang":"en-US","titles":"1","labels":"1","wpalabels":{"s":"Search","author":"Name","email":"Email","url":"Website","comment":"Comment"},"alt":"","altSelector":".hentry img[alt]:not([alt=\"\"]), .comment-content img[alt]:not([alt=\"\"]), #content img[alt]:not([alt=\"\"]),.entry-content img[alt]:not([alt=\"\"])","current":"","errors":"","tracking":"","ajaxurl":"https://www.heinzmarketing.com/wp-admin/admin-ajax.php","security":"a10bd1a251","action":"wpa_stats_action","url":"disabled","post_id":"12545","continue":"","pause":"Pause video","play":"Play video","restUrl":"https://www.heinzmarketing.com/wp-json/wp/v2/media","ldType":"button","ldHome":"https://www.heinzmarketing.com","ldText":"\u003Cspan class=\"dashicons dashicons-media-text\" aria-hidden=\"true\"\u003E\u003C/span\u003E\u003Cspan class=\"screen-reader\"\u003ELong Description\u003C/span\u003E"};
+//# sourceURL=wp-accessibility-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="wp-accessibility-js" src="https://www.heinzmarketing.com/wp-content/plugins/wp-accessibility/js/wp-accessibility.min.js?ver=2.3.5"></script>
+
+<script id="megamenu-js" src="https://www.heinzmarketing.com/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=3.10.7"></script>
+
+			
+			<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://www.heinzmarketing.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><div data-rocket-location-hash="5f1c95da194597cde3b4e17cac80a74e" class="cover-image-mask-template">
+    <svg class="js-cover-image-mask" width="0" height="0" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <defs>
+            <clipPath id="left-image-mask" clipPathUnits="objectBoundingBox">
+                <path d="M0.977,0.115 L0,0 L0,0.882 L1,1 L1,0.138 C1,0.126,0.99,0.116,0.977,0.115"></path>
+            </clipPath>
+            <clipPath id="right-image-mask" clipPathUnits="objectBoundingBox" style="">
+                <path d="M0.023,0.115 L1,0 L1,0.882 L0,1 L0,0.138 C0,0.126,0.01,0.116,0.023,0.115"></path>
+            </clipPath>
+        </defs>
+    </svg>
+</div>
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/www.heinzmarketing.com\/wp-admin\/admin-ajax.php","nonce":"e46b6c283d","url":"https:\/\/www.heinzmarketing.com\/blog\/persona-classification-the-buyi","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src="https://www.heinzmarketing.com/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js" async=""></script><script src="https://www.heinzmarketing.com/wp-content/cache/min/1/cdeebe4f404c9532f42a2b9a6a109fe2.js" data-minify="1" data-rocket-defer="" defer=""></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a399b5356e269c7f',t:'MTc4OTE2MTUzNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><div height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; visibility: hidden;" data-original-tag="iframe"></div>
+
+
+</body></html><!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

@@ -12,6 +12,12 @@ $allowedExtensions = @(".txt", ".csv", ".json", ".yaml", ".yml", ".html", ".htm"
 foreach ($extension in @($policy.eligible_extensions)) { if ($extension -notin $allowedExtensions) { throw "Policy contains unknown eligible extension: $extension" } }
 foreach ($extension in @($policy.native_markdown_extensions)) { if ($extension -notin @(".md", ".markdown")) { throw "Policy contains unsafe native Markdown extension: $extension" } }
 if($policy.backend -notin @("auto","builtin","pandoc","markitdown","docling")){throw "Policy contains unknown backend: $($policy.backend)"}
+$pdf=$policy.pdf_limits
+if(-not $pdf -or $null -eq $pdf.max_pages -or [int64]$pdf.max_pages -lt 0){throw "PDF max_pages must be explicit and nonnegative (0 = all pages)."}
+foreach($key in @("timeout_seconds","memory_mib","max_input_bytes","max_output_bytes")){
+ if($null -eq $pdf.$key -or [int64]$pdf.$key -le 0){throw "PDF resource limit must be positive: $key"}
+}
+if([int64]$pdf.timeout_seconds -gt 86400 -or [int64]$pdf.memory_mib -lt 64 -or [int64]$pdf.memory_mib -gt 65536 -or [int64]$pdf.max_input_bytes -gt 2147483647 -or [int64]$pdf.max_output_bytes -gt 2147483647 -or [int64]$pdf.max_pages -gt 2147483647){throw "PDF resource limits exceed supported runner bounds."}
 $actions = $policy.automatic_actions
 if (-not $actions.create_missing_sidecars -or -not $actions.validate_sidecars -or -not $actions.update_registry) { throw "Policy must authorize create-only conversion, validation, and registry updates." }
 foreach ($unsafe in @("overwrite_sidecars", "run_ocr", "modify_sources", "delete_files", "semantic_ingest")) { if ($actions.$unsafe) { throw "Unsafe automatic action is enabled: $unsafe" } }

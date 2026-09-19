@@ -18,6 +18,14 @@ updated: 2026-08-16
 
 # Brand System
 
+## P57: Positionierungslandschaft als kanonische Wissensbasis
+
+Die eigene Aufgabentrennung unterscheidet drei Ebenen: [[positioning-communication-audit|bestehende Kommunikation analysieren]], [[perceptual-positioning-analysis|tatsächliche Wahrnehmung untersuchen]] und zukünftige Optionen entwickeln. Für letztere ergänzen [[keller-brand-positioning]] und [[value-proposition-analysis]] die bestehenden Dunford-/Proof-led-Dokumente. Selbstbeschreibung, realisierte Leistung und Kundenimage benötigen jeweils eigene Belege.
+
+[[historical-positioning-heuristics]] bewahrt die historische Schule als begrenzte Referenz. [[distinctive-brand-assets-analysis]] ergänzt Wiedererkennung und Eindeutigkeit; diese Fragen sind nicht gleichbedeutend mit funktionaler Differenzierung. Kapferers vollständige Identitätsmethode bleibt mangels Kapitelzugang zurückgestellt. Kein universeller Methodensieger und keine vollständige Landschaft behauptet.
+
+Eigene Synthese der genehmigten Originalprüfungen: (source: research/2026-09-14-framework-source-verification-p57.md). Quellenfassungen und alle 43 Übernahmeentscheidungen: [[_outputs/semantic-ingest/p57/source-bundle]]. Neue Methodenreferenzen bleiben draft; der positive Evidenzreview ist keine empirische Anwendungsvalidierung.
+
 **Summary**: The brand system combines business-minded brand strategy, identity rules, messaging frameworks, writing guidance, and PowerPoint design standards.
 
 ---
