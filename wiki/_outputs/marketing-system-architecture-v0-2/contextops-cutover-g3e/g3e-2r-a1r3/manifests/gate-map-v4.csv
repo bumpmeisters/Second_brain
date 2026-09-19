@@ -39,5 +39,3 @@
 "REV","10","REV-010","recovery","Test-ReverseReferencesAndResidue","idempotent witnesses 41/41 reverse references and known residue reconciliation pass","HOLD_MANUAL_RECOVERY"
 "REV","11","REV-011","recovery","Invoke-ReverseRegressions","MOS 16/16 Root Fast 0/0 ordinal-v3 dynamic reverse invariants and staging observed","HOLD_MANUAL_RECOVERY"
 "REV","12","REV-012","recovery","Close-ReverseEvidence","functional prestate retained external nonparticipant drift classified routing frozen","KEEP_ROUTING_FROZEN"
-
-

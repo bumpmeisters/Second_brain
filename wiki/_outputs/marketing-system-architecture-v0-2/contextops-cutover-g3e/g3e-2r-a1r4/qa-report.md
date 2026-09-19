@@ -2,49 +2,86 @@
 
 ## Validation Target
 
-- Artifact: G3E2R-A1R4 supplemental compatibility overlay
-- Version: manifest-bound create-only candidate
-- Intended use: close CTR-07 before any G3E2R-B candidate or live seal exists
-- Downstream consumer: a separately approved A1R4-based G3E2R-B checkpoint
+- Artifact: G3E2R-A1R4 supplemental compatibility and artifact-path boundary overlay
+- Version: evidence-closure candidate
+- Intended use: close the A1R4 artifact-path export boundary without crossing a live boundary
+- Downstream consumer: the separately verified A1R5R Core correction candidate
 
 ## Applied Contracts And Profiles
 
-- A1R3 dependency manifest CDED0EB7C90B51F32F4D1B85740E967F740C30D3159F8238215AD1393330A326
-- g3e2r-json-time/v1
-- g3e2r-temporal-boundary/v1
-- g3e2r-live-seal-contract/v2-a1r4
+- A1R3 dependency manifest `7623ABE786EF793C9A2FEF8386C514C81A33F9ED437DC8D3133D6B0E738146EF`
+- `g3e2r-json-time/v1`
+- `g3e2r-temporal-boundary/v1`
+- `g3e2r-live-seal-contract/v2-a1r4`
 - G3E2R-A1R4 regression contract
 - Technical, contract, boundary, downstream-usability, and no-live-effect validation
 
 ## Verdict
 
-PASS
+PASS_PRE_EVIDENCE
+CONDITIONAL_FINAL_PASS_AFTER_EXACT_RECLOSURE_REVALIDATION
 
 ## Findings
 
-None.
+None in the pre-evidence candidate.
 
-## Passed Checks
+## Passed Pre-Evidence Checks
 
-- The first complete candidate run passed 64/64 groups, including separate PS7 en-US and en-DE processes and the unchanged A1R3 48/48 regression in its accepted historical runner.
-- The raw-property scanner was independently hardened to reject canonical duplicates and escaped semantic property aliases; the targeted recheck passed.
-- Prepared, Approval, Sealed, and Not-After use one canonical UTC representation and invariant ParseExact semantics.
-- Closure is 9/52/15/4 with eight external hash boundaries and Gate Map v5 remains 9/19/12 without FWD-020.
-- Root Fast remained 0/0, MOS remained 16/16, upstream and S5R hashes remained exact, and temporary fixtures were removed.
-- B, snapshot, live seal, capability probe, component mutation, authority change, staging, and commit remained absent.
+- Manifest `3137DB95BE6957F527A69396A1F155C26EA187E108CD29B3818D74BC7E4A84F9`, closure 14/14, and snapshot `8BE597865F26273A5DBB2C3D3218E82A0E189A9E8E2FEF889AD98CD4C2300C97` were exact.
+- One direct A1R4 run passed 64/64, and both A1R5R acceptance runs independently reported the nested A1R4 regression at 64/64.
+- T56 proved closure 9/52/15/4 and the exact fifteen artifact paths derived through the exported A1R4 boundary.
+- No A1R4 production path called the transitive `Get-G3E2RA1RArtifactPaths` command.
+- The canonical timestamp checks, A1R3 48/48 regression, Root Fast 0/0, MOS 16/16, upstream hashes, and policy-safe S5 hashes remained green.
+- Temporary fixtures were removed; B, snapshot, live seal, capability probe, live mutation, authority change, staging, commit, and routing change remained absent.
 
-## Missing Inputs Or Decisions
+## Historical Evidence Preserved
 
-None for A1R4 acceptance. B creation and every live action remain separate user-authorized checkpoints.
+The earlier CTR-07 timestamp evidence, duplicate-property hardening result, and raw-lexeme learning signal remain valid and are not recharacterized as new evidence.
+
+## Conditional Acceptance Boundary
+
+After this report, the README, and the review decision are manifest-bound, require one external A1R4 64/64 run against that exact manifest. Its hash-bound command output activates the conditional final PASS without rewriting any evidence member. A1R5R acceptance remains a separate two-run boundary after its transitive dependency re-closure.
 
 ## Revision Instructions
 
-None. Preserve all passed checks and the create-only rollback boundary.
-
-## Revalidation Scope
-
-Regenerate the manifest after this report and the review decision are finalized, then require one final 64/64 run against that exact manifest. The external final manifest hash is the acceptance identity.
+Change no implementation member while closing evidence. Any post-verification evidence edit requires another re-closure and invalidates the prior final run.
 
 ## Learning Signal
 
-CTR-07 demonstrates that timestamp validation must bind raw canonical JSON lexemes rather than the runtime-specific object type inferred by ConvertFrom-Json.
+Artifact-path helpers required by a derived overlay must be provided through that overlay's exported boundary rather than through a non-exported transitive module command.
+
+## 2026-09-05 | Hash-scope-closure pre-evidence
+
+**Verdict**: `PASS_PRE_EVIDENCE`
+**Conditional verdict**: `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`
+
+Two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0`, exactly one valid JSON document, PASS `57/57`, Receipt `12/12`, T46 `10/10`, nested A1R4 `64/64`, A1R3 `48/48`, A1R2 `40/40`, A1R `34/34`, A1 `27/27`, passing T57, `nested_hash_scope: 6/6`, Seal-Closure `10/63/15/4`, `live_capability_probe: not-run`, and a complete null delta. The observed A1R4 check count was `64/64` in each run.
+
+The runs prove the synthetic full-chain hash-scope contract, including module-local Utility manifest identity and uppercase SHA-256 behavior. They do not prove a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.
+
+Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.
+
+## 2026-09-06 | External-runtime-closure pre-evidence
+
+**Verdict**: `PASS_PRE_EVIDENCE`
+**Conditional verdict**: `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`
+
+Two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0` and exactly one valid JSON document. Each run passed `58/58`, T27, T42, Receipt `12/12`, T46 `10/10`, nested A1R4 `64/64`, A1R3 `48/48`, A1R2 `40/40`, A1R `34/34`, A1 `27/27`, T57 with `nested_hash_scope: 6/6`, T58 with `external_runtime_closure: 10/10`, and Seal-Closure `10/63/15/4`. Both runs reported `live_capability_probe: not-run` and a complete null delta. The observed A1R4 check count was `64/64` in each run.
+
+The runs prove the local synthetic full-chain external-runtime contract: Ripgrep and Git were resolved only through explicit canonical paths; path, SHA-256, version, x64, and non-reparse boundaries were checked; negative path, hash, version, architecture, and reparse cases passed; and the fresh Windows PowerShell 5.1 child ran with a PATH cleaned of ambient Ripgrep and Git. T27 and T42 also passed.
+
+They do not prove a capability probe against the actual Vault, successful Prepare against a B candidate, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate. Historical evidence remains unchanged as provenance.
+
+Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.
+
+## 2026-09-07 | File-hash-scope-closure evidence boundary
+
+Verdict: PASS_PRE_EVIDENCE
+
+The two controlled pre-evidence A1R5R full-chain runs returned identical JSON receipts, each with exit code 0, exactly one JSON document, PASS 58/58, passing T12, T27 and T42, Receipt 12/12, T46 10/10, A1R4 64/64 and its checked upstream chain A1R3 48/48, A1R2 40/40, A1R 34/34 and A1 27/27, T57 nested_hash_scope: 6/6, T58 external_runtime_closure: 10/10, Seal-Closure 10/63/15/4 and live_capability_probe: not-run. Candidate byte identities and the checked B, Ref, FETCH_HEAD and Vault gates were unchanged before and after each run.
+
+The evidence supports the six guard file-hash interfaces and the A1R5R harness bootstrap hash path without Get-FileHash dependence in those paths. T57 used a synthetic B-present file in a fresh Windows PowerShell 5.1 module chain. T42 proves only the expected B-absence stop, not successful Prepare with the real B candidate. This is not a claim that every harness or platform operation is independent of Get-FileHash.
+
+Final acceptance is CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS. It requires two separately authorized new A1R5R full-chain runs against the exact evidence-closed bytes with all agreed checks and unchanged protected gates. After both pass, no evidence file may be changed.
+
+No real B Prepare success, capability probe, live seal, live mutation, live cutover, authority effect or probe-observed wrapper/residue poststate is claimed or authorized. All previous sections remain unchanged historical provenance, not acceptance of this new candidate.

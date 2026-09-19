@@ -2,8 +2,9 @@ $ErrorActionPreference = 'Stop'
 $repo = Resolve-Path (Join-Path $PSScriptRoot '..\..')
 $tempRoot = Join-Path ([IO.Path]::GetTempPath()) ('wiki-integrity-' + [guid]::NewGuid().ToString('N'))
 try {
-    New-Item -ItemType Directory -Force (Join-Path $tempRoot 'tools'), (Join-Path $tempRoot 'wiki/newsletters'), (Join-Path $tempRoot 'wiki/_outputs/newsletter-intelligence'), (Join-Path $tempRoot 'wiki/_outputs/source-conversions'), (Join-Path $tempRoot 'raw/assets'), (Join-Path $tempRoot 'research') | Out-Null
+    New-Item -ItemType Directory -Force (Join-Path $tempRoot 'tools/config'), (Join-Path $tempRoot 'wiki/newsletters'), (Join-Path $tempRoot 'wiki/_outputs/newsletter-intelligence'), (Join-Path $tempRoot 'wiki/_outputs/source-conversions'), (Join-Path $tempRoot 'raw/assets'), (Join-Path $tempRoot 'research') | Out-Null
     Copy-Item -LiteralPath (Join-Path $repo 'tools/test-wiki-integrity.ps1') -Destination (Join-Path $tempRoot 'tools/test-wiki-integrity.ps1')
+    Copy-Item -LiteralPath (Join-Path $repo 'tools/test-local-source-integrity.ps1') -Destination (Join-Path $tempRoot 'tools/test-local-source-integrity.ps1')
     Copy-Item -LiteralPath (Join-Path $repo 'tools/new-source-coverage-inventory.ps1') -Destination (Join-Path $tempRoot 'tools/new-source-coverage-inventory.ps1')
     Set-Content -LiteralPath (Join-Path $tempRoot 'raw/source.md') -Encoding UTF8 -Value '# Source'
     Set-Content -LiteralPath (Join-Path $tempRoot 'raw/assets/unreviewed.pdf') -Encoding UTF8 -Value 'fixture'
@@ -51,15 +52,31 @@ updated: 2026-08-08
 '@ | Set-Content -LiteralPath (Join-Path $tempRoot 'wiki/newsletters/index.md') -Encoding UTF8
     '{"record_type":"newsletter_identity_registry","canonical_newsletters":[]}' | Set-Content -LiteralPath (Join-Path $tempRoot 'wiki/_outputs/newsletter-intelligence/identity-registry.json') -Encoding UTF8
     '"source","target"' | Set-Content -LiteralPath (Join-Path $tempRoot 'wiki/_outputs/source-conversions/source-conversion-registry.csv') -Encoding UTF8
+    @'
+{
+  "contract": "local-source-integrity/v1",
+  "locator_normalization": "repository-relative forward-slash UTF-8, ordinal case-sensitive",
+  "coverage": {"tracked_source_count": 3, "bound_local_source_count": 0, "total_source_count": 3},
+  "source_bindings": [],
+  "local_link_targets": []
+}
+'@ | Set-Content -LiteralPath (Join-Path $tempRoot 'tools/config/local-source-integrity-contract.json') -Encoding UTF8
 
     $coverageTool = Join-Path $tempRoot 'tools/new-source-coverage-inventory.ps1'
     $lintTool = Join-Path $tempRoot 'tools/test-wiki-integrity.ps1'
+    $localIntegrityTool = Join-Path $tempRoot 'tools/test-local-source-integrity.ps1'
+    $previousErrorActionPreference = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    $localIntegrityOutput = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $localIntegrityTool -VaultRoot $tempRoot -Mode Auto -Json 2>&1 | Out-String
+    $localIntegrityExit = $LASTEXITCODE
+    $ErrorActionPreference = $previousErrorActionPreference
+    if ($localIntegrityExit -ne 0) { throw "Clean fixture local-source contract failed: $localIntegrityOutput" }
     & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $coverageTool -VaultRoot $tempRoot 2>&1 | Out-Null
     if ($LASTEXITCODE -ne 0) { throw 'Fixture source inventory generation failed.' }
     $unreviewed = Import-Csv -LiteralPath (Join-Path $tempRoot 'wiki/_outputs/source-coverage/source-inventory.csv') -Encoding UTF8 | Where-Object source_path -eq 'raw/assets/unreviewed.pdf'
     if ($unreviewed.coverage_status -ne 'inventory-only') { throw 'A source path mentioned only in output notes was incorrectly promoted.' }
     $cleanJson = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $lintTool -VaultRoot $tempRoot -Profile Fast -Json 2>&1 | Out-String
-    if ($LASTEXITCODE -ne 0) { throw 'Clean fixture did not pass wiki integrity.' }
+    if ($LASTEXITCODE -ne 0) { throw "Clean fixture did not pass wiki integrity: $cleanJson" }
     $clean = $cleanJson | ConvertFrom-Json
     foreach ($rule in @('newsletter.generator')) {
         $finding = $clean.findings | Where-Object rule_id -eq $rule

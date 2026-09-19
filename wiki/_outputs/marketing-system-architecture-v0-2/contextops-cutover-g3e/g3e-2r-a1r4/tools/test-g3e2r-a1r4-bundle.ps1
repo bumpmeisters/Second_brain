@@ -1,7 +1,13 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory=$true)][string]$VaultRoot,[string]$OverlayRoot,
-    [Parameter(Mandatory=$true)][string]$PythonExecutable,[switch]$Json
+    [Parameter(Mandatory=$true)][string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,[switch]$Json
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
@@ -9,12 +15,12 @@ if([string]::IsNullOrWhiteSpace($OverlayRoot)){$OverlayRoot=Join-Path $PSScriptR
 $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve-Path -LiteralPath $OverlayRoot).Path.TrimEnd('\')
 $manifest=Join-Path $overlay 'a1r4-bundle-manifest.csv'
 $expectedA1R4=(Get-FileHash -LiteralPath $manifest -Algorithm SHA256).Hash.ToUpperInvariant()
-$expectedA1R3='CDED0EB7C90B51F32F4D1B85740E967F740C30D3159F8238215AD1393330A326'
-$expectedA1R2='9E17F6A3A8C36208C828B6A188AEF550279D2F0280D5B6394E08044BFF041A1D'
-$expectedA1R='714E902B74E5A9B8AB572A48F57B32F542D4B37FE16F272F0C30879243CADE64'
-$expectedA1='44745E35300B3401B9C2C162728760F9832EAD5DBC0C31C84AF5414EF5820073'
-$expectedS5Disposition='CD3C4EC544D23B009A7E637829B669FA467C25463F756292392D2897DD35686E'
-$expectedS5Coverage='A94DE9170CD34067F4ACE2BE927BF6324ADBB421AB80213BBA53817EA704413B'
+$expectedA1R3='8C0F280FAA7203E8CC895D0593827B4E67246A55D5E6607DE175DF4BA689A8F4'
+$expectedA1R2='0CDC7DD779C6B22949C893B07355BC7906C44F45DC8E12D7DF73BC6366654AD0'
+$expectedA1R='29B5FFA27A975EDEB409D65D829548BC7C622FA46050BFD72F02E2B810BECDCD'
+$expectedA1='40CC378BD288BFF319A84879A0A93145909ED39F2DEED1E7D8D5B945B8703C4D'
+$expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
+$expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
 $ps7=(Get-Process -Id $PID).Path
 $ps5='C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
 if($PSVersionTable.PSEdition-cne'Core'){throw 'A1R4 test harness must run in the bound PS7 host.'}
@@ -81,7 +87,7 @@ try{
     $rows=@(Import-Csv -LiteralPath $manifest);$actual=@(Get-ChildItem -LiteralPath $overlay -Recurse -File|ForEach-Object{$_.FullName.Substring($overlay.Length+1).Replace('\','/')})
     Add-Check T01-EXACT-A1R4-INVENTORY ($rows.Count-eq 14-and$actual.Count-eq 15-and(Test-G3E2RA1R4OrdinalSetEqual (@($rows.overlay_path)+'a1r4-bundle-manifest.csv') $actual)) '14 bound members plus manifest'
     $lock=@(Import-Csv -LiteralPath (Join-Path $overlay 'dependency-lock.csv'))
-    Add-Check T02-ONE-LINE-A1R3-LOCK ($lock.Count-eq 1-and$lock[0].dependency_id-ceq'G3E2R-A1R3-BUNDLE'-and$lock[0].sha256-ceq$expectedA1R3-and[int64]$lock[0].bytes-eq 1738) 'one immutable A1R3 dependency'
+    Add-Check T02-ONE-LINE-A1R3-LOCK ($lock.Count-eq 1-and$lock[0].dependency_id-ceq'G3E2R-A1R3-BUNDLE'-and$lock[0].sha256-ceq$expectedA1R3-and[int64]$lock[0].bytes-eq 1739) 'one immutable A1R3 dependency'
     $a1r3Rows=Test-G3E2RA1R4BoundManifest $context.A1R3Manifest $context.A1R3Root 'overlay_path' @('role','overlay_path','sha256','bytes') 14 'A1R3 bundle'
     Add-Check T03-A1R3-EXACT-CLOSURE ($a1r3Rows.Count-eq 14) 'accepted A1R3 manifest and members'
     $upstreamOk=(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1-and(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R4Sha256 $context.A1R2Manifest)-ceq$expectedA1R2
@@ -207,19 +213,20 @@ $result|ConvertTo-Json -Depth 8 -Compress
     $parseErrors=@();foreach($tool in @('g3e2r-a1r4-guard-lib.psm1','finalize-g3e2r-live-seal-a1r4.ps1','invoke-g3e2-transaction-a1r4.ps1','invoke-g3e2-reverse-a1r4.ps1','test-g3e2r-a1r4-bundle.ps1')){$parseErrors+=@(Parse-Tool (Join-Path $overlay ('tools/'+$tool)))}
     $bindingOk=$finalizerText.Contains('Read-G3E2RA1R4SealInputDocument')-and$finalizerText.Contains('Complete-G3E2RA1R4SealTimes')-and$forwardText.Contains('Read-G3E2RA1R4Seal')-and$reverseText.Contains('Read-G3E2RA1R4Seal')-and$guardText-notmatch'\[DateTimeOffset\]::Parse\('-and$finalizerText-notmatch"\.ToString\('o'\)"
     Add-Check T55-PRODUCTION-CALL-PATH-BOUND ($parseErrors.Count-eq 0-and$bindingOk) 'five scripts parse and all time paths use shared exact helpers'
-    Add-Check T56-NINE-FIFTYTWO-FIFTEEN-FOUR ($context.SealContract.bundle_binding_count-eq 9-and$context.SealContract.execution_binding_count-eq 52-and$context.SealContract.artifact_binding_count-eq 15-and$context.SealContract.runtime_binding_count-eq 4) 'seal closure cardinality exact'
+    $artifactPaths=Get-G3E2RA1R4ArtifactPaths $context
+    Add-Check T56-NINE-FIFTYTWO-FIFTEEN-FOUR ($context.SealContract.bundle_binding_count-eq 9-and$context.SealContract.execution_binding_count-eq 52-and$context.SealContract.artifact_binding_count-eq 15-and$context.SealContract.runtime_binding_count-eq 4-and$artifactPaths.Count-eq 15-and(Test-G3E2RA1R4OrdinalSetEqual @($context.SealContract.required_artifact_binding_ids) @($artifactPaths.Keys))) 'seal closure cardinality and 15 exact artifact paths'
     Add-Check T57-EIGHT-HASH-BOUNDARIES ($context.SealContract.expected_hash_boundary_count-eq 8-and$finalizerText.Contains('ExpectedA1R3Hash')-and$finalizerText.Contains('ExpectedA1R4Hash')) 'A1 A1R A1R2 A1R3 A1R4 B inputs seal'
     $gates=@($context.Gates)
     Add-Check T58-GATE-MAP-V5 ($gates.Count-eq 40-and@($gates|Where-Object direction -CEQ 'SEAL').Count-eq 9-and@($gates|Where-Object direction -CEQ 'FWD').Count-eq 19-and@($gates|Where-Object direction -CEQ 'REV').Count-eq 12-and@($gates|Where-Object step_id -CEQ 'FWD-020').Count-eq 0) 'Gate Map v5 9/19/12'
     Add-Check T59-B-COMPATIBILITY ($context.SealContract.b_candidate_file_count-eq 19-and$context.SealContract.b_bundle_bound_file_count-eq 18-and$context.SealContract.b_sealed_file_count-eq 20-and$context.SealContract.seal_inputs_contract-ceq'g3e2r-seal-inputs/v2-a1r4') 'B 19/18/20 with regenerated input profile'
     Add-Check T60-ORDINAL-V3-UNCHANGED ($context.FingerprintContract.contract_id-ceq'g3e2r-ordinal-fingerprint/v3'-and$context.InvariantContract.contract_id-ceq$context.A1R3Context.InvariantContract.contract_id) 'A1R3 ordinal and invariant contracts reused'
     $a1r3Test=Join-Path $context.A1R3Root 'tools/test-g3e2r-a1r3-bundle.ps1'
-    $a1r3=Invoke-DirectJsonFile $ps5 $a1r3Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1R3Root,'-PythonExecutable',$PythonExecutable,'-Json')
+    $a1r3=Invoke-DirectJsonFile $ps5 $a1r3Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1R3Root,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     Add-Check T61-UNCHANGED-A1R3-REGRESSION ($a1r3.verdict-ceq'PASS'-and[int]$a1r3.groups-eq 48-and$a1r3.expected_a1r3_hash-ceq$expectedA1R3) 'A1R3 48/48 in accepted historical runner'
     Invoke-RootFast;Invoke-Mos
     Add-Check T62-ROOT-AND-MOS $true 'Root Fast 0/0 and MOS 16/16'
-    $hashesOk=(Get-G3E2RA1R4Sha256 $context.A1R3Manifest)-ceq$expectedA1R3-and(Get-G3E2RA1R4Sha256 $context.A1R2Manifest)-ceq$expectedA1R2-and(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1-and(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R4Sha256 (Join-Path $root 'wiki/_outputs/source-intake/clipping-dispositions.csv'))-ceq$expectedS5Disposition-and(Get-G3E2RA1R4Sha256 (Join-Path $root 'wiki/_outputs/source-coverage/source-inventory.csv'))-ceq$expectedS5Coverage
-    Add-Check T63-UPSTREAM-AND-S5R-HASHES $hashesOk 'A1R3 A1R2 A1R A1 and S5R exact'
+    $hashesOk=(Get-G3E2RA1R4Sha256 $context.A1R3Manifest)-ceq$expectedA1R3-and(Get-G3E2RA1R4Sha256 $context.A1R2Manifest)-ceq$expectedA1R2-and(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1-and(Get-G3E2RA1R4Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R4Sha256 (Join-Path $root 'tools/config/local-source-integrity-contract.json'))-ceq$expectedS5LocalSourceContract-and(Get-G3E2RA1R4Sha256 (Join-Path $root 'tools/config/newsletter-index-contract.json'))-ceq$expectedS5NewsletterContract
+    Add-Check T63-UPSTREAM-AND-POLICY-SAFE-S5-CONTRACTS $hashesOk 'A1R3 A1R2 A1R A1 and policy-safe S5 contracts exact'
 }finally{
     if(Test-Path -LiteralPath $tempResolved){Remove-Item -LiteralPath $tempResolved -Recurse -Force}
 }
@@ -230,5 +237,5 @@ $bRoot=Resolve-G3E2RA1R4InRoot $root ([string]$context.BContract.canonical_root)
 $seals=@(Get-ChildItem -LiteralPath (Split-Path -Parent $overlay) -Recurse -File -Filter 'live-seal-v2.json')
 Add-Check T64-FINAL-LIVE-SCOPE ($checks.Count-eq 63-and-not(Test-Path -LiteralPath $tempResolved)-and-not(Test-Path -LiteralPath $bRoot)-and$seals.Count-eq 0-and$staged.Count-eq 0-and$context.SealContract.routing_state-ceq'frozen') 'fixtures removed B snapshot seal probe mutation staging residue absent routing frozen'
 if($checks.Count-ne 64){throw "A1R4 test count differs from 64: $($checks.Count)"}
-$result=[ordered]@{contract='g3e2r-a1r4-test/v1';verdict='PASS';groups=64;expected_a1_hash=$expectedA1;expected_a1r_hash=$expectedA1R;expected_a1r2_hash=$expectedA1R2;expected_a1r3_hash=$expectedA1R3;expected_a1r4_hash=$expectedA1R4;s5r_disposition_hash=$expectedS5Disposition;s5r_coverage_hash=$expectedS5Coverage;seal_closure='9/52/15/4';expected_hash_boundaries=8;gate_map='9/19/12';timestamp_format="yyyy-MM-dd'T'HH:mm:ss.fffffffzzz";ttl_seconds=900;future_skew_seconds=60;cross_culture=@('en-US','en-DE');checks=@($checks);temporary_fixture_removed=$true;live_mutation='none';live_capability_probe='not-run';b_candidate='absent';snapshot='absent';live_seal='absent';routing_state='frozen';git_staging='empty'}
+$result=[ordered]@{contract='g3e2r-a1r4-test/v1';verdict='PASS';groups=64;expected_a1_hash=$expectedA1;expected_a1r_hash=$expectedA1R;expected_a1r2_hash=$expectedA1R2;expected_a1r3_hash=$expectedA1R3;expected_a1r4_hash=$expectedA1R4;s5r_local_source_contract_hash=$expectedS5LocalSourceContract;s5r_newsletter_contract_hash=$expectedS5NewsletterContract;seal_closure='9/52/15/4';expected_hash_boundaries=8;gate_map='9/19/12';timestamp_format="yyyy-MM-dd'T'HH:mm:ss.fffffffzzz";ttl_seconds=900;future_skew_seconds=60;cross_culture=@('en-US','en-DE');checks=@($checks);temporary_fixture_removed=$true;live_mutation='none';live_capability_probe='not-run';b_candidate='absent';snapshot='absent';live_seal='absent';routing_state='frozen';git_staging='empty'}
 if($Json){$result|ConvertTo-Json -Depth 12 -Compress}else{Write-Output "PASS | 64/64 | A1R4 $expectedA1R4 | routing frozen"}

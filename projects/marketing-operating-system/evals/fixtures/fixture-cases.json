@@ -17,7 +17,7 @@
     },
     {
       "canonical_path": "projects/No and low code_1st Marketing Agent/workflows/contextops-handoff-contract.md",
-      "sha256": "93CB2BC2F53E9862371027FC12FCBAF55C0084C542CE5608E91E1D2E89ECC560"
+      "sha256": "03CC49A3B9A15289D14E05AF0A6007F35B3EC0DCB9C4A06D4B7968798F1E2398"
     },
     {
       "canonical_path": "projects/No and low code_1st Marketing Agent/frameworks/orchestration-and-learning/contextops-stage-contract.md",
@@ -25,15 +25,15 @@
     },
     {
       "canonical_path": "projects/content-operating-system/workflows/contextops-intake-contract.md",
-      "sha256": "2B5390C0D2B2AFA17AEED461010F96BA6ABAE5C70E5F9E061A96392180E41BE9"
+      "sha256": "1A2CD0002297D34FD8596163233DAC37CF4B2268F9E9F272B9554CC843E55E77"
     },
     {
       "canonical_path": "projects/content-operating-system/templates/content-context-packet.md",
-      "sha256": "82E23A44241F95AFBC7984B665E1EC9AD459A81D4F2D8843D560AD7BF9A90DAE"
+      "sha256": "7B2122C70E229441B1DF7522FAA02ED55317C4AE5AC8B42A42B7624D53AF9A84"
     },
     {
       "canonical_path": "projects/content-operating-system/tools/config/content-object-contract.json",
-      "sha256": "DBEB0D25ED36920B59D370EDB52F4D0DC10C370F7BF4C10896728B0E60E28D9E"
+      "sha256": "07290BF52C4217E649B90E02067DFF550AC9F35C7D93AA5F13A7996A7A625802"
     }
   ],
   "fixture_inputs": [
@@ -51,7 +51,7 @@
     },
     {
       "canonical_path": "projects/marketing-operating-system/evals/fixtures/cross-system-handoff-valid.json",
-      "sha256": "3159A0FC29A9DCC36A30D1537F1E52BEF48F6A50ED1963D5F9875226DA28001C"
+      "sha256": "93538C72B0EBAE494412BA6F25A5E91D3399E07D4F790ED335E7D89F184A2877"
     },
     {
       "canonical_path": "projects/marketing-operating-system/evals/fixtures/support/authority-record.json",

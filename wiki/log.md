@@ -3106,3 +3106,21 @@ updated: 2026-09-14
   - Expliziter positiver Nutzerreview und anschließender Umsetzungsauftrag tragen die Übernahme. Quellen- und Rekonstruktionslücken bleiben erhalten; AI-Rankings und Gesamtpipeline bleiben Vorschläge.
   - Keine Unternehmensanwendung oder neue Aktivierung. Neue Fragen/Abläufe sind gekennzeichnete lokale Adaptionen. Prüfprovenienz wird in P57/package.json aufgezeichnet.
   - Prüfung: Wave/Fast und Final/Full/RecordResult bestanden; drei Quellen, 43 Evidenzzeilen, offener Paketbacklog null. Elf Framework-Strukturprüfungen bestanden. Zeilenendungs-Policy bestanden; vorhandene globale Mischformate nicht normalisiert. Zwei bestehende Quellenpfade auf tatsächlich vorhandene Dateien präzisiert. Kein neuer Skill oder Harness-Eingriff.
+
+## 2026-09-19 | git-consolidation | Lokale Arbeitsbranches mit main zusammenführen
+
+- Sources:
+  - Nutzerauftrag zum Commit und Schließen aller Arbeitsbranches; ausdrücklicher Folgeauftrag zur Konfliktauflösung.
+  - Git-Sicherungscommit `2a5bcb2` und bisheriger `main`-Stand `2112dfb`.
+- Changed:
+  - 127 Dateikonflikte aufgelöst. Die Commits `3ddc672` und `00b97da` haben denselben Git-Dateibaum `eb416e0e7e6109b41b27c391f64725fdeb90193d`; dieser Vergleich trennt gemeinsame Vorgeschichte von späteren Änderungen.
+  - 34 Konfliktdateien behalten die neuere lokale Fassung, da `main` sie seit dem identischen Ausgangsbaum nicht verändert hat. 89 G3E-Bündeldateien und zwei MOS-Testfixtures übernehmen die späteren Korrekturen aus `main`. Git-Ausschlüsse und [[raw-sources]] verbinden beide Änderungen.
+  - Bereits konfliktfrei zusammengeführte Änderungen am Wiki-Validator und Veröffentlichungstest behalten sowohl die lokale Repository-Abdeckung als auch die Korrekturen aus `main`.
+- Notes:
+  - Prüfung aller einseitigen Änderungen gegen den identischen Ausgangsbaum: keine unerwarteten Abweichungen. Kein Delta unter `raw/` oder `research/assets/`; keine neue Quellenbewertung oder Claim-Promotion.
+  - Bestanden: Veröffentlichungsschranke, Wiki-Integritäts-Testfixtures, YouTube-Suite (76 Python-Tests und ergänzende PowerShell-Suites), Newsletter-Suite (182 Assertions und 13 Python-Tests), Newsletter-Index-Test, Semantic-Ingest-Profil All (7 Suites), PowerShell-Parser (39 Dateien), `git diff --cached --check` und Zeilenendungs-Policy.
+  - MOS-Übergabeverträge: 16/16 im frischen Prüfcheckout. Der Test im bestehenden Arbeitsverzeichnis trifft auf historische Zeilenenden und abweichende Byte-Fingerprints; keine globale Normalisierung vorgenommen.
+  - Offener Befund: Der aus `main` übernommene lokale Quellenintegritätsvertrag erwartet im Clean-Checkout noch 44 Quelldateien; der Sicherungscommit enthält inzwischen 1.201. Der Produktionsteil dieser Suite ist deshalb nicht grün. Historische Quellbindungen und die darauf aufbauenden G3E-Hashverträge werden nicht lediglich zur Erzeugung eines grünen Tests umgeschrieben.
+  - G3E-Gesamtprüfung nicht bestanden: Der erste vollständige Versuch traf auf die veraltete feste Bindung an PowerShell 7.6.4 statt der bereitgestellten 7.6.5. Eine isolierte offizielle 7.6.4 mit exakt passender SHA-256-Prüfsumme beseitigte diese Laufzeitsperre; die Kette brach anschließend im verschachtelten A/A1-Regressionslauf ab. Der separat ausgeführte Root-Fast-Check des Prüfcheckouts meldete ebenfalls `passed: false`, Exit 2. Kein vollständiger G3E-Pass und keine neue Annahme historischer Kandidaten behauptet.
+  - Inbox-Dateien und SQLite-Laufzeitdateien bleiben außerhalb des Commits. Kein Push und keine Aktivierung von Cutover, Scheduling oder Live-Probes.
+  - Arbeitsreste: Der saubere, abgetrennte Prüfcheckout `.tmp/branch-merge-validation-20260919` sowie `.tmp/merge-powershell-7.6.4` und das zugehörige ZIP bleiben lokal erhalten. Die automatische Freigabeprüfung hat den Aufräumbefehl mit `blocked by policy` abgelehnt; keine Umgehung oder Löschung vorgenommen.

@@ -5,6 +5,12 @@ param(
     [string]$RepairRoot,
     [string]$SealEnvelope,
     [string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,
     [string]$ExpectedSealHash,
     [switch]$AllowLiveMutation,
@@ -218,7 +224,7 @@ else {
         forward_transaction_sha256 = Get-G3E2RSha256 -LiteralPath $forwardPath
         reverse_transaction_sha256 = Get-G3E2RSha256 -LiteralPath $reversePath
     }
-    $runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+    $runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
     $seal = Read-G3E2RA1SealV2 -Context $context -LiteralPath $SealEnvelope -ExpectedA1Hash $ExpectedA1Hash -ExpectedSealHash $ExpectedSealHash -ActualRuntimeBindings $runtimeBindings -Use Reverse
     $seal = Add-G3E2RA1CompatibilityProperties -Seal $seal
     Test-G3E2RA1BManifest -Context $context -Seal $seal

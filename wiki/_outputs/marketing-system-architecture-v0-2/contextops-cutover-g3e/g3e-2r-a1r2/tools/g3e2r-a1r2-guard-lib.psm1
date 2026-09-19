@@ -1,13 +1,40 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+function Import-G3E2RA1R2PlatformModules {
+    $edition = [string]$PSVersionTable.PSEdition
+    switch -CaseSensitive ($edition) {
+        'Desktop' { $requiredVersion = [version]'3.1.0.0' }
+        'Core' { $requiredVersion = [version]'7.0.0.0' }
+        default { throw "Unsupported PowerShell edition: $edition" }
+    }
+    foreach ($moduleName in @('Microsoft.PowerShell.Management','Microsoft.PowerShell.Utility')) {
+        $manifestPath = Join-Path $PSHOME ("Modules/{0}/{0}.psd1" -f $moduleName)
+        if (-not [IO.File]::Exists($manifestPath)) { throw "Required platform module manifest is missing: $moduleName" }
+        $expectedManifestPath = [IO.Path]::GetFullPath($manifestPath)
+        $available = @(Get-Module -ListAvailable -Name $manifestPath | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($available.Count -ne 1) { throw "Required platform module identity mismatch: $moduleName $requiredVersion $edition" }
+        $imported = @(Import-Module -Name $manifestPath -RequiredVersion $requiredVersion -Scope Local -Force -PassThru -ErrorAction Stop)
+        $matchingImported = @($imported | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($imported.Count -ne 1 -or $matchingImported.Count -ne 1) { throw "Imported platform module identity mismatch: $moduleName $requiredVersion $edition" }
+    }
+}
+. Import-G3E2RA1R2PlatformModules
+
 function Get-G3E2RA1R2Sha256 {
     param([Parameter(Mandatory=$true)][string]$LiteralPath)
     if(-not(Test-Path -LiteralPath $LiteralPath -PathType Leaf)){throw "File is missing: $LiteralPath"}
-    return (Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RA1R2BytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RA1R2Bytes { param([string]$LiteralPath) return (Get-Item -LiteralPath $LiteralPath -Force).Length }
+
+function Get-G3E2RA1R2BytesSha256 {
+    param([Parameter(Mandatory=$true)][AllowEmptyCollection()][byte[]]$Bytes)
+    $sha=[Security.Cryptography.SHA256]::Create()
+    try{return ([BitConverter]::ToString($sha.ComputeHash($Bytes))).Replace('-','')}
+    finally{$sha.Dispose()}
+}
 
 function Resolve-G3E2RA1R2InRoot {
     param([string]$Root,[string]$RepositoryPath,[switch]$ForMutation)
@@ -68,7 +95,7 @@ function Get-G3E2RA1R2Context {
     if(@($gates|Where-Object direction -CEQ 'SEAL').Count-ne 9-or@($gates|Where-Object direction -CEQ 'FWD').Count-ne 19-or@($gates|Where-Object direction -CEQ 'REV').Count-ne 12-or@($gates.step_id|Sort-Object -Unique).Count-ne 40-or@($gates|Where-Object step_id -CEQ 'FWD-020').Count-ne 0){throw 'A1R2 gate map does not have the exact 9/19/12 shape.'}
     if($seal.ttl_seconds-ne 900-or$seal.bundle_binding_count-ne 7-or$seal.execution_binding_count-ne 36-or$seal.artifact_binding_count-ne 15-or$seal.runtime_binding_count-ne 4){throw 'A1R2 seal contract cardinality differs from approval.'}
     $transition=Resolve-G3E2RA1R2InRoot $root ([string]$invariant.transition_manifest_repository_path)
-    if((Get-G3E2RA1R2Sha256 $transition)-cne'1DF0389F6EC504F98A0CB8063AFAD451A22C69EE9FC5D801581FF81B942925FC'){throw 'G3E1 wrapper transition manifest changed.'}
+    if((Get-G3E2RA1R2Sha256 $transition)-cne'5DA801A1CE4160181EEB098CD17EE7EFFDAADAA0AC756B543FB537B08DFC9EA1'){throw 'G3E1 wrapper transition manifest changed.'}
     return [pscustomobject]@{Root=$root;Overlay=$overlay;Manifest=$manifest;A1RManifest=$a1rManifest;A1RRoot=$a1rRoot;A1RContext=$a1rContext;SealContract=$seal;InvariantContract=$invariant;WrapperContract=$wrapper;Gates=$gates;TransitionManifest=$transition;BContract=$a1rContext.BContract;HardReferenceContract=$a1rContext.HardReferenceContract}
 }
 
@@ -206,11 +233,21 @@ function Enter-G3E2RA1R2ClosureLock {
 function Test-G3E2RA1R2ClosureLock { param([object]$Lock);foreach($item in @($Lock.Handles)){$item.Stream.Position=0;$sha=[Security.Cryptography.SHA256]::Create();try{$hash=([BitConverter]::ToString($sha.ComputeHash($item.Stream))).Replace('-','')}finally{$sha.Dispose()};if($hash-cne$item.Sha256-or($null-ne$item.Bytes-and$item.Stream.Length-ne[int64]$item.Bytes)){throw "Held closure changed: $($item.Path)"}} }
 function Exit-G3E2RA1R2ClosureLock { param([object]$Lock);if($null-ne$Lock){foreach($item in @($Lock.Handles|Sort-Object Path -Descending)){$item.Stream.Dispose()}} }
 
-function Get-G3E2RA1R2RuntimeBindings { param([object]$Context,[string]$PythonExecutable);return @(Get-G3E2RA1RRuntimeBindings -Context $Context.A1RContext -PythonExecutable $PythonExecutable) }
+function Get-G3E2RA1R2RuntimeBindings {
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1RRuntimeBindings -Context $Context.A1RContext -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
+}
 function Test-G3E2RA1R2BManifest {
     param([object]$Context,[string]$ExpectedBHash,[switch]$AllowSealed)
-    $bRoot=Resolve-G3E2RA1R2InRoot $Context.Root ([string]$Context.BContract.canonical_root);$bManifest=Join-Path $bRoot ([string]$Context.BContract.bundle_manifest_filename)
-    if(-not[string]::IsNullOrWhiteSpace($ExpectedBHash)-and(Test-Path -LiteralPath $bManifest -PathType Leaf)-and(Get-G3E2RA1R2Sha256 $bManifest)-cne$ExpectedBHash.ToUpperInvariant()){throw 'Expected-B-Hash mismatch.'}
     return Test-G3E2RA1RBManifest -Context $Context.A1RContext -ExpectedBHash $ExpectedBHash -AllowSealed:$AllowSealed
 }
 function Get-G3E2RA1R2Artifact { param([object]$Seal,[string]$Id);return Get-G3E2RA1RArtifact $Seal $Id }

@@ -2,6 +2,8 @@
 
 A1R passes only when all thirty-four groups pass in one run, all temporary fixtures are removed, A1 and its transitive A/G3E-1 roots remain exact, Git staging stays empty, transaction residue stays zero, no G3E2R-B candidate exists, Root Fast is 0/0, and MOS remains 16/16.
 
+The A1R guard must close its own host-local Management/Utility dependency at Desktop 3.1.0.0 or Core 7.0.0.0 and use the module-qualified Utility SHA-256 command; the same boundary remains mandatory for the nested A1 guard.
+
 ## Test groups
 
 1. T01-EXACT-A1R-INVENTORY — fourteen bound members plus one manifest.
@@ -49,3 +51,7 @@ A1R passes only when all thirty-four groups pass in one run, all temporary fixtu
 - Unknown bytes in transaction-owned paths stop reverse; already restored or exactly witnessed bytes are accepted.
 - Workspace drift is Advisory only. Protected and sibling drift after mutation is reported while restoration proceeds.
 - The harness creates no B candidate, snapshot, live seal, capability-probe result, component mutation, routing change, staging, or commit.
+
+## Explicit external runtime closure
+
+A1R accepts `RipgrepExecutable`, `ExpectedRipgrepSha256`, `ExpectedRipgrepVersion`, `GitExecutable`, `ExpectedGitSha256`, and `ExpectedGitVersion` as mandatory inputs on every published entrypoint. The values are forwarded through every runtime-binding boundary to A1. A1 requires canonical absolute literal regular-file paths without reparse traversal, exact static SHA-256 and version matches, x64 PE architecture, and launches each version probe only through the verified absolute path. Ambient `Get-Command rg` and `Get-Command git` resolution is forbidden. All four runtime bindings remain compared byte-for-byte with the seal or capability-probe authority before stateful execution.

@@ -1,11 +1,31 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+function Import-G3E2RA1R3PlatformModules {
+    $edition = [string]$PSVersionTable.PSEdition
+    switch -CaseSensitive ($edition) {
+        'Desktop' { $requiredVersion = [version]'3.1.0.0' }
+        'Core' { $requiredVersion = [version]'7.0.0.0' }
+        default { throw "Unsupported PowerShell edition: $edition" }
+    }
+    foreach ($moduleName in @('Microsoft.PowerShell.Management','Microsoft.PowerShell.Utility')) {
+        $manifestPath = Join-Path $PSHOME ("Modules/{0}/{0}.psd1" -f $moduleName)
+        if (-not [IO.File]::Exists($manifestPath)) { throw "Required platform module manifest is missing: $moduleName" }
+        $expectedManifestPath = [IO.Path]::GetFullPath($manifestPath)
+        $available = @(Get-Module -ListAvailable -Name $manifestPath | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($available.Count -ne 1) { throw "Required platform module identity mismatch: $moduleName $requiredVersion $edition" }
+        $imported = @(Import-Module -Name $manifestPath -RequiredVersion $requiredVersion -Scope Local -Force -PassThru -ErrorAction Stop)
+        $matchingImported = @($imported | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($imported.Count -ne 1 -or $matchingImported.Count -ne 1) { throw "Imported platform module identity mismatch: $moduleName $requiredVersion $edition" }
+    }
+}
+. Import-G3E2RA1R3PlatformModules
 $script:G3E2RA1R3Utf8NoBom = [Text.UTF8Encoding]::new($false)
 
 function Get-G3E2RA1R3Sha256 {
     param([Parameter(Mandatory=$true)][string]$LiteralPath)
     if(-not(Test-Path -LiteralPath $LiteralPath -PathType Leaf)){throw "File is missing: $LiteralPath"}
-    return (Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RA1R3BytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RA1R3Bytes {
@@ -121,7 +141,7 @@ function Get-G3E2RA1R3Context {
     if($seal.ttl_seconds-ne 900-or$seal.bundle_binding_count-ne 8-or$seal.execution_binding_count-ne 44-or$seal.artifact_binding_count-ne 15-or$seal.runtime_binding_count-ne 4){throw 'A1R3 seal contract cardinality differs from approval.'}
     if($fingerprint.contract_id-cne'g3e2r-ordinal-fingerprint/v3'-or$fingerprint.comparer-cne'System.StringComparer.Ordinal'-or$fingerprint.encoding-cne'UTF-8-no-BOM'-or$fingerprint.line_separator-cne'LF'-or$fingerprint.trailing_line_separator-ne$false){throw 'A1R3 ordinal fingerprint contract differs from approval.'}
     $transition=Resolve-G3E2RA1R3InRoot $root ([string]$invariant.transition_manifest_repository_path)
-    if((Get-G3E2RA1R3Sha256 $transition)-cne'1DF0389F6EC504F98A0CB8063AFAD451A22C69EE9FC5D801581FF81B942925FC'){throw 'G3E1 wrapper transition manifest changed.'}
+    if((Get-G3E2RA1R3Sha256 $transition)-cne'5DA801A1CE4160181EEB098CD17EE7EFFDAADAA0AC756B543FB537B08DFC9EA1'){throw 'G3E1 wrapper transition manifest changed.'}
     return [pscustomobject]@{Root=$root;Overlay=$overlay;Manifest=$manifest;A1R2Manifest=$a1r2Manifest;A1R2Root=$a1r2Root;A1R2Context=$a1r2Context;SealContract=$seal;InvariantContract=$invariant;FingerprintContract=$fingerprint;Gates=$gates;TransitionManifest=$transition;BContract=$a1r2Context.BContract;HardReferenceContract=$a1r2Context.HardReferenceContract}
 }
 
@@ -446,8 +466,17 @@ function Exit-G3E2RA1R3ClosureLock {
 }
 
 function Get-G3E2RA1R3RuntimeBindings {
-    param([object]$Context,[string]$PythonExecutable)
-    return @(Get-G3E2RA1R2RuntimeBindings -Context $Context.A1R2Context -PythonExecutable $PythonExecutable)
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1R2RuntimeBindings -Context $Context.A1R2Context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
 }
 
 function Test-G3E2RA1R3BManifest {

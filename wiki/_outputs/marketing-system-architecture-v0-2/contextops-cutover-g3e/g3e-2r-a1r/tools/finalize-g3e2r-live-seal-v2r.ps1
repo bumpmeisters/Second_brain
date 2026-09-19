@@ -6,6 +6,12 @@ param(
     [string]$InputPath,
     [string]$OutputPath,
     [string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,
     [string]$ExpectedA1RHash,
     [string]$ExpectedBHash,
@@ -97,7 +103,7 @@ else {
     if ($resolvedInput -cne $requiredInput -or (Get-G3E2RA1RSha256 $resolvedInput) -cne $ExpectedSealInputsHash.ToUpperInvariant()) { throw 'Expected-Seal-Inputs-Hash or canonical input path mismatch.' }
     $sealInput = Get-Content -LiteralPath $resolvedInput -Raw -Encoding UTF8 | ConvertFrom-Json
     Assert-G3E2RA1RSealInput -Context $context -SealInput $sealInput
-    $runtimeBindings = Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+    $runtimeBindings = Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
     $seal = New-G3E2RA1RSeal -Context $context -SealInput $sealInput -RuntimeBindings $runtimeBindings -BState $bState
     Assert-G3E2RA1RSealClosure -Context $context -Seal $seal -AllowPreparedB
 

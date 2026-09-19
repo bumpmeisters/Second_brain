@@ -5,6 +5,12 @@ param(
     [string]$RepairRoot,
     [string]$SealEnvelope,
     [string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$FailAtStep,
     [string]$ExpectedA1Hash,
     [string]$ExpectedSealHash,
@@ -255,7 +261,7 @@ elseif ($Mode -eq 'Simulate') {
         $result = [ordered]@{ contract = 'g3e2r-transaction/v2'; verdict = 'HOLD_NO_MUTATION'; mode = $Mode; failed_step = $FailAtStep; completed = @($completed); reverse_invoked = $false; authority_effect = 'none' }
     }
     else {
-        $reverseResult = & $reverseTool -Mode Simulate -VaultRoot $root -RepairRoot $overlay -Json | ConvertFrom-Json
+        $reverseResult = & $reverseTool -Mode Simulate -VaultRoot $root -RepairRoot $overlay -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion -Json | ConvertFrom-Json
         if ($reverseResult.verdict -cne 'REVERSED_ROUTING_FROZEN') { throw 'Reverse simulation did not reach its closed state.' }
         $result = [ordered]@{ contract = 'g3e2r-transaction/v2'; verdict = 'REVERSED_ROUTING_FROZEN'; mode = $Mode; failed_step = $FailAtStep; completed = @($completed); reverse_invoked = $true; reverse_steps = @($reverseResult.completed); authority_effect = 'none' }
     }
@@ -278,7 +284,7 @@ else {
         forward_transaction_sha256 = Get-G3E2RSha256 -LiteralPath $forwardPath
         reverse_transaction_sha256 = Get-G3E2RSha256 -LiteralPath $reversePath
     }
-    $runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+    $runtimeBindings = Get-G3E2RA1RuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
     $seal = Read-G3E2RA1SealV2 -Context $context -LiteralPath $SealEnvelope -ExpectedA1Hash $ExpectedA1Hash -ExpectedSealHash $ExpectedSealHash -ActualRuntimeBindings $runtimeBindings -Use Forward
     $seal = Add-G3E2RA1CompatibilityProperties -Seal $seal
     Test-G3E2RA1BManifest -Context $context -Seal $seal
@@ -348,7 +354,7 @@ else {
                 $mutexReleased = $true
                 $null = Invoke-PowerShellTool -Script $reverseTool -Arguments @(
                     '-Mode', 'Apply', '-VaultRoot', $root, '-RepairRoot', $overlay,
-                    '-SealEnvelope', $SealEnvelope, '-PythonExecutable', $PythonExecutable,
+                    '-SealEnvelope', $SealEnvelope, '-PythonExecutable', $PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,
                     '-ExpectedA1Hash', $ExpectedA1Hash, '-ExpectedSealHash', $ExpectedSealHash,
                     '-AllowLiveMutation', '-AllowReverse'
                 ) -Timeout 900

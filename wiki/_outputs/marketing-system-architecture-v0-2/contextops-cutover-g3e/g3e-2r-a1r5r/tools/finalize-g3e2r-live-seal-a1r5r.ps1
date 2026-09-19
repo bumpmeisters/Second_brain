@@ -3,6 +3,12 @@ param(
     [Parameter(Mandatory=$true)][ValidateSet('Validate','Prepare','Seal')][string]$Mode,
     [Parameter(Mandatory=$true)][string]$VaultRoot,
     [string]$OverlayRoot,[string]$InputPath,[string]$OutputPath,[string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,[string]$ExpectedA1RHash,[string]$ExpectedA1R2Hash,[string]$ExpectedA1R3Hash,[string]$ExpectedA1R4Hash,[string]$ExpectedA1R5RHash,
     [string]$ExpectedBHash,[string]$ExpectedSealInputsHash,
     [switch]$AllowSealCreation,[switch]$Json
@@ -26,12 +32,12 @@ function Invoke-RootAndMos{$rootFast=Invoke-BoundPowerShell (Join-Path $context.
 function Invoke-SealPreflight{param([object]$Seal,[object[]]$Runtimes);Test-ComponentPrestate;Invoke-WrapperCheck $Runtimes;foreach($command in @('VerifyBundle','CheckLivePreState','CheckFunctionalPrestate','RestorePlan')){$null=Invoke-SnapshotGate $command $Seal};Test-G3E2RA1R5RWorkspaceAdvisory $context $Seal;$null=Test-G3E2RA1R5RLiveInvariants $context $Seal pre;$git=[string](@($Runtimes|Where-Object runtime_id -CEQ 'GIT')[0].executable_path);$rg=[string](@($Runtimes|Where-Object runtime_id -CEQ 'RIPGREP')[0].executable_path);Assert-G3E2RA1R5RGitStagingEmpty $context.Root $git;Assert-G3E2RA1R5RNoResidue $context.Root;Test-G3E2RA1R5RHardReferences $context $Seal pre $rg;Invoke-RootAndMos}
 function Write-ExclusiveUtf8{param([string]$LiteralPath,[string]$Text);$parent=Split-Path -Parent $LiteralPath;if(-not(Test-Path -LiteralPath $parent -PathType Container)){throw "Seal output parent is missing: $parent"};$bytes=[Text.UTF8Encoding]::new($false).GetBytes($Text);$stream=[IO.File]::Open($LiteralPath,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::None);try{$stream.Write($bytes,0,$bytes.Length);$stream.Flush($true)}finally{$stream.Dispose()}}
 
-if($Mode-ceq'Validate'){$result=[ordered]@{contract='g3e2r-live-seal-finalizer/a1r5r';verdict='PASS';mode='Validate';state_effect='none';detached_input=$true;bundles=10;executions=61;artifacts=15;runtimes=4;ttl_seconds=900;future_skew_seconds=60;expected_hash_boundaries=9;fingerprint='ordinal-v3';json_time='invariant-parseexact-utc';import_receipt=$importReceipt.receipt_id}}
+if($Mode-ceq'Validate'){$result=[ordered]@{contract='g3e2r-live-seal-finalizer/a1r5r';verdict='PASS';mode='Validate';state_effect='none';detached_input=$true;bundles=10;executions=63;artifacts=15;runtimes=4;ttl_seconds=900;future_skew_seconds=60;expected_hash_boundaries=9;fingerprint='ordinal-v3';json_time='invariant-parseexact-utc';import_receipt=$importReceipt.receipt_id}}
 else{
     foreach($value in @($InputPath,$PythonExecutable,$ExpectedA1Hash,$ExpectedA1RHash,$ExpectedA1R2Hash,$ExpectedA1R3Hash,$ExpectedA1R4Hash,$ExpectedA1R5RHash,$ExpectedBHash,$ExpectedSealInputsHash)){if([string]::IsNullOrWhiteSpace([string]$value)){throw "$Mode requires all eight pre-seal expected hashes and the runtime path."}}
     $bState=Test-G3E2RA1R5RBManifest $context $ExpectedBHash;$resolvedInput=[IO.Path]::GetFullPath($InputPath);$requiredInput=Join-Path $bState.Root 'seal/seal-inputs.json'
     if($resolvedInput-cne$requiredInput-or(Get-G3E2RA1R5RSha256 $resolvedInput)-cne$ExpectedSealInputsHash.ToUpperInvariant()){throw 'Expected-Seal-Inputs-Hash or canonical input path mismatch.'}
-    $input=Read-G3E2RA1R5RSealInputDocument $context $resolvedInput;$runtimes=Get-G3E2RA1R5RRuntimeBindings $context $PythonExecutable;$seal=New-G3E2RA1R5RSeal $context $input $runtimes $bState;Assert-G3E2RA1R5RSealClosure $context $seal -AllowPreparedB
+    $input=Read-G3E2RA1R5RSealInputDocument $context $resolvedInput;$runtimes=Get-G3E2RA1R5RRuntimeBindings $context $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion;$seal=New-G3E2RA1R5RSeal $context $input $runtimes $bState;Assert-G3E2RA1R5RSealClosure $context $seal -AllowPreparedB
     if($Mode-ceq'Prepare'){Invoke-SealPreflight $seal $runtimes;$result=[ordered]@{contract='g3e2r-live-seal-finalizer/a1r5r';verdict='PREPARED_READ_ONLY';mode='Prepare';state_effect='none';expected_a1_hash=$ExpectedA1Hash.ToUpperInvariant();expected_a1r_hash=$ExpectedA1RHash.ToUpperInvariant();expected_a1r2_hash=$ExpectedA1R2Hash.ToUpperInvariant();expected_a1r3_hash=$ExpectedA1R3Hash.ToUpperInvariant();expected_a1r4_hash=$ExpectedA1R4Hash.ToUpperInvariant();expected_a1r5r_hash=$ExpectedA1R5RHash.ToUpperInvariant();expected_b_hash=$ExpectedBHash.ToUpperInvariant();expected_seal_inputs_hash=$ExpectedSealInputsHash.ToUpperInvariant();import_receipt=$importReceipt.receipt_id}}
     else{
         if(-not$AllowSealCreation-or-not(Test-G3E2RA1R5RAdministrator)){throw 'Seal mode requires explicit creation authority and one elevated runner.'};foreach($field in @('live_capability_probe_approved','live_mutation_approved','automatic_reverse_approved','independent_reverse_approved')){if(-not[bool]$input.Value.approval.$field){throw "Seal approval is missing: $field"}}

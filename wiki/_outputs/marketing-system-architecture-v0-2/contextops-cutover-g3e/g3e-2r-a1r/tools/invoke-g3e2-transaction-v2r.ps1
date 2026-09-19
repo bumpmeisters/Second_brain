@@ -5,6 +5,12 @@ param(
     [string]$OverlayRoot,
     [string]$SealEnvelope,
     [string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$FailAtStep,
     [string]$ExpectedA1Hash,
     [string]$ExpectedA1RHash,
@@ -126,7 +132,7 @@ elseif($Mode -eq 'Simulate'){
     foreach($step in $static.Forward){if([int]$step.sequence-ge 10){$mutationStarted=$true};if($step.step_id-ceq$FailAtStep){break};$completed.Add([string]$step.step_id)}
     if([string]::IsNullOrWhiteSpace($FailAtStep)){$result=[ordered]@{contract='g3e2r-transaction/v2r';verdict='PASS_ROUTING_FROZEN';mode='Simulate';completed=@($completed);reverse_invoked=$false;authority_effect='none'}}
     elseif(-not$mutationStarted){$result=[ordered]@{contract='g3e2r-transaction/v2r';verdict='HOLD_NO_MUTATION';mode='Simulate';failed_step=$FailAtStep;completed=@($completed);reverse_invoked=$false;authority_effect='none'}}
-    else{$reverse=&$reverseTool -Mode Simulate -VaultRoot $root -OverlayRoot $context.Overlay -ExpectedA1Hash $ExpectedA1Hash -ExpectedA1RHash $ExpectedA1RHash -Json|ConvertFrom-Json;if($reverse.verdict-cne'REVERSED_ROUTING_FROZEN'-or@($reverse.completed).Count-ne 12){throw 'A1R reverse simulation failed.'};$result=[ordered]@{contract='g3e2r-transaction/v2r';verdict='REVERSED_ROUTING_FROZEN';mode='Simulate';failed_step=$FailAtStep;completed=@($completed);reverse_invoked=$true;reverse_steps=@($reverse.completed);authority_effect='none'}}
+    else{$reverse=&$reverseTool -Mode Simulate -VaultRoot $root -OverlayRoot $context.Overlay -ExpectedA1Hash $ExpectedA1Hash -ExpectedA1RHash $ExpectedA1RHash -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion -Json|ConvertFrom-Json;if($reverse.verdict-cne'REVERSED_ROUTING_FROZEN'-or@($reverse.completed).Count-ne 12){throw 'A1R reverse simulation failed.'};$result=[ordered]@{contract='g3e2r-transaction/v2r';verdict='REVERSED_ROUTING_FROZEN';mode='Simulate';failed_step=$FailAtStep;completed=@($completed);reverse_invoked=$true;reverse_steps=@($reverse.completed);authority_effect='none'}}
 }
 else{
     if(-not$AllowLiveMutation-or-not$AllowAutomaticReverse-or-not$AllowCapabilityProbe){throw 'Apply requires -AllowLiveMutation, -AllowAutomaticReverse, and -AllowCapabilityProbe.'}
@@ -136,7 +142,7 @@ else{
     try{
         $mutex=Enter-G3E2RA1RMutex $root
         $sealPath=[IO.Path]::GetFullPath($SealEnvelope);if(-not$sealPath.StartsWith($root+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Live seal must remain inside the Vault.'}
-        $runtimeBindings=Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+        $runtimeBindings=Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
         $seal=Read-G3E2RA1RSealV2 -Context $context -LiteralPath $sealPath -ExpectedA1Hash $ExpectedA1Hash -ExpectedA1RHash $ExpectedA1RHash -ExpectedSealHash $ExpectedSealHash -ActualRuntimeBindings $runtimeBindings -Use Forward
         $seal=Add-G3E2RA1RCompatibilityProperties $seal
         Invoke-PreMutationChecks -Seal $seal -RuntimeBindings $runtimeBindings -Components $static.Components -CapabilityProbe
@@ -169,7 +175,7 @@ else{
         if($mutationStarted){
             Exit-G3E2RA1RClosureLock $closureLock;$closureLock=$null
             if($null-ne$mutex){Exit-G3E2RA1RMutex $mutex;$mutex=$null;$mutexReleased=$true}
-            try{$reverseResult=Invoke-BoundPowerShell -Script $reverseTool -Arguments @('-Mode','Apply','-VaultRoot',$root,'-OverlayRoot',$context.Overlay,'-SealEnvelope',$sealPath,'-PythonExecutable',$PythonExecutable,'-ExpectedA1Hash',$ExpectedA1Hash,'-ExpectedA1RHash',$ExpectedA1RHash,'-ExpectedSealHash',$ExpectedSealHash,'-AllowLiveMutation','-AllowReverse') -Timeout 900}catch{throw "Forward and automatic reverse failed. Forward: $forwardError Reverse: $_"}
+            try{$reverseResult=Invoke-BoundPowerShell -Script $reverseTool -Arguments @('-Mode','Apply','-VaultRoot',$root,'-OverlayRoot',$context.Overlay,'-SealEnvelope',$sealPath,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-ExpectedA1Hash',$ExpectedA1Hash,'-ExpectedA1RHash',$ExpectedA1RHash,'-ExpectedSealHash',$ExpectedSealHash,'-AllowLiveMutation','-AllowReverse') -Timeout 900}catch{throw "Forward and automatic reverse failed. Forward: $forwardError Reverse: $_"}
             throw "Forward failed after mutation; complete reverse passed and routing remains frozen. Cause: $forwardError"
         }
         throw $forwardError

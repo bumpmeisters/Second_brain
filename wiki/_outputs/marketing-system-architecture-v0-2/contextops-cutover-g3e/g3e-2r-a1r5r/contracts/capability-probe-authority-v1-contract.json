@@ -1,0 +1,40 @@
+{
+  "contract_id": "g3e2r-capability-probe-authority-contract/v1-a1r5r",
+  "authority_contract_id": "g3e2r-capability-probe-authority/v1-a1r5r",
+  "receipt_contract_id": "g3e2r-capability-probe-receipt/v1-a1r5r",
+  "required_top_level": [
+    "authority_contract", "authority_id", "approved_by", "time", "control_root",
+    "target_vault_root", "routing_state", "approval", "expected_hashes",
+    "runtime_bindings", "target_prestate"
+  ],
+  "required_time_fields": ["approved_at_utc", "not_after_utc"],
+  "required_approval_fields": [
+    "live_capability_probe_approved", "live_mutation_approved",
+    "automatic_reverse_approved", "independent_reverse_approved"
+  ],
+  "required_expected_hash_fields": [
+    "a1", "a1r", "a1r2", "a1r3", "a1r4", "a1r5r", "b", "seal_inputs"
+  ],
+  "required_runtime_ids": ["POWERSHELL_HOST", "PYTHON_AGENT", "RIPGREP", "GIT"],
+  "required_target_prestate_fields": [
+    "git_branch", "git_head", "git_status_line_count", "git_status_sha256",
+    "git_staged_count", "component_count", "wrapper_pre_fingerprint_v3", "residue_count"
+  ],
+  "expected_completed": ["FWD-001", "FWD-002", "FWD-003", "FWD-004"],
+  "watchdog_seconds": 45,
+  "maximum_future_clock_skew_seconds": 60,
+  "maximum_authority_lifetime_seconds": 900,
+  "wrapper_participant_count": 11,
+  "component_count": 95,
+  "required_residue_count": 0,
+  "success_verdict": "PASS_CAPABILITY_PROBE",
+  "pre_probe_failure_verdict": "HOLD_NO_PROBE",
+  "probe_failure_verdict": "HOLD_PROBE_FAILED",
+  "timeout_verdict": "HOLD_PROBE_TIMEOUT",
+  "abort_verdict": "HOLD_PROBE_ABORTED",
+  "poststate_failure_verdict": "BLOCK_PROBE_POSTSTATE",
+  "authority_effect": "capability_probe_only",
+  "success_state_effect": "transient_probe_final_delta_none",
+  "routing_state": "frozen",
+  "unknown_properties": "reject"
+}

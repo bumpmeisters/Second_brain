@@ -30,4 +30,3 @@
   "virtual_post_diff_policy": "exactly-the-transition-action-wrapper-paths",
   "unknown_columns": "reject"
 }
-

@@ -1,11 +1,31 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+function Import-G3E2RA1R4PlatformModules {
+    $edition = [string]$PSVersionTable.PSEdition
+    switch -CaseSensitive ($edition) {
+        'Desktop' { $requiredVersion = [version]'3.1.0.0' }
+        'Core' { $requiredVersion = [version]'7.0.0.0' }
+        default { throw "Unsupported PowerShell edition: $edition" }
+    }
+    foreach ($moduleName in @('Microsoft.PowerShell.Management','Microsoft.PowerShell.Utility')) {
+        $manifestPath = Join-Path $PSHOME ("Modules/{0}/{0}.psd1" -f $moduleName)
+        if (-not [IO.File]::Exists($manifestPath)) { throw "Required platform module manifest is missing: $moduleName" }
+        $expectedManifestPath = [IO.Path]::GetFullPath($manifestPath)
+        $available = @(Get-Module -ListAvailable -Name $manifestPath | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($available.Count -ne 1) { throw "Required platform module identity mismatch: $moduleName $requiredVersion $edition" }
+        $imported = @(Import-Module -Name $manifestPath -RequiredVersion $requiredVersion -Scope Local -Force -PassThru -ErrorAction Stop)
+        $matchingImported = @($imported | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($imported.Count -ne 1 -or $matchingImported.Count -ne 1) { throw "Imported platform module identity mismatch: $moduleName $requiredVersion $edition" }
+    }
+}
+. Import-G3E2RA1R4PlatformModules
 $script:G3E2RA1R4Utf8NoBom = [Text.UTF8Encoding]::new($false)
 
 function Get-G3E2RA1R4Sha256 {
     param([Parameter(Mandatory=$true)][string]$LiteralPath)
     if(-not(Test-Path -LiteralPath $LiteralPath -PathType Leaf)){throw "File is missing: $LiteralPath"}
-    return (Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RA1R4BytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RA1R4Bytes {
@@ -124,7 +144,7 @@ function Get-G3E2RA1R4Context {
     if($temporal.contract_id-cne'g3e2r-temporal-boundary/v1'-or$temporal.ttl_seconds-ne 900-or$temporal.maximum_future_clock_skew_seconds-ne 60-or$temporal.prepared_approval_order-cne'independent'){throw 'A1R4 temporal contract differs from approval.'}
     if($fingerprint.contract_id-cne'g3e2r-ordinal-fingerprint/v3'-or$fingerprint.comparer-cne'System.StringComparer.Ordinal'-or$fingerprint.encoding-cne'UTF-8-no-BOM'-or$fingerprint.line_separator-cne'LF'-or$fingerprint.trailing_line_separator-ne$false){throw 'A1R4 ordinal fingerprint contract differs from approval.'}
     $transition=Resolve-G3E2RA1R4InRoot $root ([string]$invariant.transition_manifest_repository_path)
-    if((Get-G3E2RA1R4Sha256 $transition)-cne'1DF0389F6EC504F98A0CB8063AFAD451A22C69EE9FC5D801581FF81B942925FC'){throw 'G3E1 wrapper transition manifest changed.'}
+    if((Get-G3E2RA1R4Sha256 $transition)-cne'5DA801A1CE4160181EEB098CD17EE7EFFDAADAA0AC756B543FB537B08DFC9EA1'){throw 'G3E1 wrapper transition manifest changed.'}
     return [pscustomobject]@{Root=$root;Overlay=$overlay;Manifest=$manifest;A1R3Manifest=$a1r3Manifest;A1R3Root=$a1r3Root;A1R3Context=$a1r3Context;A1R2Manifest=$a1r3Context.A1R2Manifest;A1R2Root=$a1r3Context.A1R2Root;A1R2Context=$a1r3Context.A1R2Context;SealContract=$seal;JsonTimeContract=$jsonTime;TemporalContract=$temporal;InvariantContract=$invariant;FingerprintContract=$fingerprint;Gates=$gates;TransitionManifest=$transition;BContract=$a1r3Context.BContract;HardReferenceContract=$a1r3Context.HardReferenceContract}
 }
 
@@ -283,6 +303,16 @@ function Get-G3E2RA1R4ExecutionPaths {
     return $paths
 }
 
+function Get-G3E2RA1R4ArtifactPaths {
+    param([object]$Context)
+    $paths=[ordered]@{}
+    foreach($member in @($Context.BContract.members|Where-Object{-not[string]::IsNullOrWhiteSpace([string]$_.artifact_id)})){$paths[[string]$member.artifact_id]=([string]$Context.BContract.canonical_root).TrimEnd('/')+'/'+[string]$member.bundle_path}
+    $dependency=$Context.A1R2Context.A1RContext.ADependencies['G3E1-POSTSTATE-ARCHIVE']
+    if($null-eq$dependency){throw 'A1R4 poststate archive dependency is missing.'}
+    $paths['G3E1-EXACT-POSTSTATE-ARCHIVE']=Get-G3E2RA1R4RepositoryPath $Context.Root $dependency.Path
+    return $paths
+}
+
 function New-G3E2RA1R4FileBinding {
     param([string]$IdName,[string]$Id,[object]$Context,[string]$RepositoryPath)
     $full=Resolve-G3E2RA1R4InRoot $Context.Root $RepositoryPath;$value=[ordered]@{};$value[$IdName]=$Id
@@ -373,7 +403,7 @@ function New-G3E2RA1R4Seal {
     $bundlePaths=Get-G3E2RA1R4BundlePaths $Context $BState
     $bundles=foreach($id in @($Context.SealContract.required_bundle_binding_ids)){New-G3E2RA1R4FileBinding bundle_id $id $Context $bundlePaths[$id]}
     $executionPaths=Get-G3E2RA1R4ExecutionPaths;$executions=foreach($id in @($Context.SealContract.required_execution_binding_ids)){New-G3E2RA1R4FileBinding execution_id $id $Context $executionPaths[$id]}
-    $artifactPaths=Get-G3E2RA1RArtifactPaths $Context.A1R2Context.A1RContext;$artifacts=foreach($id in @($Context.SealContract.required_artifact_binding_ids)){New-G3E2RA1R4FileBinding artifact_id $id $Context $artifactPaths[$id]}
+    $artifactPaths=Get-G3E2RA1R4ArtifactPaths $Context;$artifacts=foreach($id in @($Context.SealContract.required_artifact_binding_ids)){New-G3E2RA1R4FileBinding artifact_id $id $Context $artifactPaths[$id]}
     $approval=[pscustomobject][ordered]@{approval_id=[string]$sealInput.approval.approval_id;approved_by=[string]$sealInput.approval.approved_by;approved_at_utc=$SealInputDocument.Approved.Lexeme;live_capability_probe_approved=[bool]$sealInput.approval.live_capability_probe_approved;live_mutation_approved=[bool]$sealInput.approval.live_mutation_approved;automatic_reverse_approved=[bool]$sealInput.approval.automatic_reverse_approved;independent_reverse_approved=[bool]$sealInput.approval.independent_reverse_approved}
     return [pscustomobject][ordered]@{seal_contract='g3e2r-live-seal/v2';state='sealed';transaction_id=[string]$sealInput.transaction_id;vault_root=$Context.Root;routing_state='frozen';legacy_token=[string]$sealInput.legacy_token;approval=$approval;time=[pscustomobject][ordered]@{prepared_at_utc=$SealInputDocument.Prepared.Lexeme;sealed_at_utc='';not_after_utc='';ttl_seconds=900};bundle_bindings=@($bundles);execution_bindings=@($executions);artifact_bindings=@($artifacts);runtime_bindings=@($RuntimeBindings);baseline=$sealInput.baseline}
 }
@@ -436,7 +466,7 @@ function Assert-G3E2RA1R4SealClosure {
     $bundlePaths=Get-G3E2RA1R4BundlePaths $Context ([pscustomobject]@{Manifest=$bManifest})
     foreach($id in $bundlePaths.Keys){$row=@($Seal.bundle_bindings|Where-Object bundle_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$bundlePaths[$id]){throw "Seal bundle canonical path mismatch: $id"}}
     $executionPaths=Get-G3E2RA1R4ExecutionPaths;foreach($id in $executionPaths.Keys){$row=@($Seal.execution_bindings|Where-Object execution_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$executionPaths[$id]){throw "Seal execution canonical path mismatch: $id"}}
-    $artifactPaths=Get-G3E2RA1RArtifactPaths $Context.A1R2Context.A1RContext;foreach($id in $artifactPaths.Keys){$row=@($Seal.artifact_bindings|Where-Object artifact_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$artifactPaths[$id]){throw "Seal artifact canonical path mismatch: $id"}}
+    $artifactPaths=Get-G3E2RA1R4ArtifactPaths $Context;foreach($id in $artifactPaths.Keys){$row=@($Seal.artifact_bindings|Where-Object artifact_id -CEQ $id);if($row.Count-ne 1-or[string]$row[0].repository_path-cne[string]$artifactPaths[$id]){throw "Seal artifact canonical path mismatch: $id"}}
     $b=@($Seal.bundle_bindings|Where-Object bundle_id -CEQ 'G3E2R-B-BUNDLE');$null=Test-G3E2RA1R4BManifest $Context ([string]$b[0].sha256) -AllowSealed:(-not$AllowPreparedB)
 }
 
@@ -517,8 +547,17 @@ function Exit-G3E2RA1R4ClosureLock {
 }
 
 function Get-G3E2RA1R4RuntimeBindings {
-    param([object]$Context,[string]$PythonExecutable)
-    return @(Get-G3E2RA1R3RuntimeBindings -Context $Context.A1R3Context -PythonExecutable $PythonExecutable)
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1R3RuntimeBindings -Context $Context.A1R3Context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
 }
 
 function Test-G3E2RA1R4BManifest {
@@ -546,7 +585,7 @@ Export-ModuleMember -Function @(
     'Import-G3E2RA1R4ExactCsv','Test-G3E2RA1R4BoundManifest','Get-G3E2RA1R4Context',
     'Get-G3E2RA1R4TreeStateV3','Get-G3E2RA1R4TreeFingerprintV3','Get-G3E2RA1R4WrapperInventory',
     'Get-G3E2RA1R4TransitionRows','Get-G3E2RA1R4WrapperFingerprintV3','Test-G3E2RA1R4InvariantSchema',
-    'Test-G3E2RA1R4LiveInvariants','Get-G3E2RA1R4ExecutionPaths','Assert-G3E2RA1R4Baseline',
+    'Test-G3E2RA1R4LiveInvariants','Get-G3E2RA1R4ExecutionPaths','Get-G3E2RA1R4ArtifactPaths','Assert-G3E2RA1R4Baseline',
     'ConvertTo-G3E2RA1R4CanonicalTimestamp','Read-G3E2RA1R4JsonDocument','Get-G3E2RA1R4TimestampLexeme',
     'Assert-G3E2RA1R4SealInput','Read-G3E2RA1R4SealInputDocument','New-G3E2RA1R4Seal','Complete-G3E2RA1R4SealTimes','Test-G3E2RA1R4LiveSealTemporalDocument','Assert-G3E2RA1R4RuntimeBindings',
     'Assert-G3E2RA1R4SealClosure','Read-G3E2RA1R4Seal','Enter-G3E2RA1R4ClosureLock',

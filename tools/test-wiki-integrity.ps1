@@ -33,6 +33,12 @@ function Get-Frontmatter([string]$Text) {
     return $matches[1]
 }
 
+function Get-TextSha256([string]$Text) {
+    $sha = [Security.Cryptography.SHA256]::Create()
+    try { return ([BitConverter]::ToString($sha.ComputeHash([Text.Encoding]::UTF8.GetBytes($Text)))).Replace('-', '') }
+    finally { $sha.Dispose() }
+}
+
 $activePages = @(Get-ChildItem -LiteralPath (Join-Path $VaultRoot 'wiki') -Recurse -File -Filter '*.md' | Where-Object {
     $relative = Get-RelativePath $_.FullName
     $relative -notmatch '^wiki/_(outputs|extractions)/' -and $relative -ne 'wiki/log.md'
@@ -120,16 +126,43 @@ if (Test-Path -LiteralPath $practiceLibraryPath -PathType Leaf) {
     }
 }
 
+$localIntegrityTool = Join-Path $VaultRoot 'tools\test-local-source-integrity.ps1'
+$localIntegrityContractPath = Join-Path $VaultRoot 'tools\config\local-source-integrity-contract.json'
+$localIntegrityPassed = $false
+$contractedSourceLocators = @{}
+$contractedLinkLocators = @{}
+if (-not (Test-Path -LiteralPath $localIntegrityTool -PathType Leaf) -or -not (Test-Path -LiteralPath $localIntegrityContractPath -PathType Leaf)) {
+    Add-Finding 'source.local-integrity-contract' 'error' 'tools/config/local-source-integrity-contract.json' 0 'Local-source integrity integration is missing.' 'Restore the public path-opaque source contract and its validator.'
+}
+else {
+    $previousErrorActionPreference = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $localIntegrityTool -VaultRoot $VaultRoot -SourceRoot $SourceRoot -Mode Auto 2>&1 | Out-Null
+    $localIntegrityExit = $LASTEXITCODE
+    $ErrorActionPreference = $previousErrorActionPreference
+    if ($localIntegrityExit -ne 0) {
+        Add-Finding 'source.local-integrity-contract' 'error' 'tools/config/local-source-integrity-contract.json' 0 'Local-source integrity contract did not validate.' 'Repair the opaque source, sidecar, link, or coverage bindings.'
+    }
+    else {
+        $localIntegrityPassed = $true
+        $localIntegrityContract = [IO.File]::ReadAllText($localIntegrityContractPath, [Text.Encoding]::UTF8) | ConvertFrom-Json
+        foreach ($row in @($localIntegrityContract.source_bindings)) { $contractedSourceLocators[[string]$row.source_locator_sha256] = $true }
+        foreach ($row in @($localIntegrityContract.local_link_targets)) { $contractedLinkLocators[[string]$row.target_locator_sha256] = $true }
+    }
+}
+
 $coverageTool = Join-Path $VaultRoot 'tools\new-source-coverage-inventory.ps1'
 if (-not (Test-Path -LiteralPath $coverageTool)) {
     Add-Finding 'sources.coverage-tool' 'warning' 'tools/new-source-coverage-inventory.ps1' 0 'Source coverage integration is not installed in this recovery wave.' 'Restore the source coverage generator in its dedicated source-governance wave.'
-} else {
+} elseif (Test-Path -LiteralPath (Join-Path $VaultRoot 'wiki\_outputs\source-coverage\source-inventory.csv') -PathType Leaf) {
     $previousErrorActionPreference = $ErrorActionPreference
     $ErrorActionPreference = 'Continue'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $coverageTool -VaultRoot $VaultRoot -SourceRoot $SourceRoot -Check 2>&1 | Out-Null
     $coverageExit = $LASTEXITCODE
     $ErrorActionPreference = $previousErrorActionPreference
     if ($coverageExit -ne 0) { Add-Finding 'sources.coverage-stale' 'error' 'wiki/_outputs/source-coverage/source-inventory.csv' 0 'Source coverage inventory is missing or stale.' 'Regenerate the inventory after source admission or registration changes.' }
+} elseif (-not $localIntegrityPassed) {
+    Add-Finding 'sources.coverage-stale' 'error' 'wiki/_outputs/source-coverage/source-inventory.csv' 0 'Neither a current local source inventory nor a valid clean-checkout contract is available.' 'Restore the local inventory or the public path-opaque source contract.'
 }
 
 $newsletterTool = Join-Path $VaultRoot 'tools\update-newsletter-index.ps1'
@@ -157,7 +190,10 @@ foreach ($page in $activePages) {
         $source = $match.Groups[1].Value.Replace('\', '/')
         $sourcePath = Join-Path $SourceRoot $source
         if (-not (Test-Path -LiteralPath $sourcePath -PathType Leaf)) {
-            Add-Finding 'source.cited-missing' 'error' $relative 0 "Cited binary source does not exist: $source" 'Correct the citation or restore the source through the approved inbox.'
+            $sourceLocator = Get-TextSha256 $source
+            if (-not $contractedSourceLocators.ContainsKey($sourceLocator)) {
+                Add-Finding 'source.cited-missing' 'error' $relative 0 "Cited binary source does not exist: $source" 'Correct the citation or restore the source through the approved inbox.'
+            }
             continue
         }
         $record = $conversionBySource[$source.ToLowerInvariant()]
@@ -186,7 +222,8 @@ foreach ($page in $activePages) {
         $candidate = $target.ToLowerInvariant()
         $candidateWithWiki = ('wiki/' + $target).ToLowerInvariant()
         $candidateSidecar = ($target + '.md').ToLowerInvariant()
-        if (-not $targets.ContainsKey($candidate) -and -not $targets.ContainsKey($candidateWithWiki) -and -not $targets.ContainsKey($candidateSidecar)) {
+        $localLinkLocator = Get-TextSha256 $target
+        if (-not $targets.ContainsKey($candidate) -and -not $targets.ContainsKey($candidateWithWiki) -and -not $targets.ContainsKey($candidateSidecar) -and -not $contractedLinkLocators.ContainsKey($localLinkLocator)) {
             Add-Finding 'link.unresolved' 'warning' $relative 0 "Wiki link did not resolve uniquely: $target" 'Correct the target or document the intentional placeholder.'
         } else {
             $inbound[$candidate] = 1

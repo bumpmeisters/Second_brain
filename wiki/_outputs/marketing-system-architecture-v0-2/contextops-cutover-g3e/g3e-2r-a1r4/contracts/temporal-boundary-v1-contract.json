@@ -19,4 +19,3 @@
   "reverse_expiry_rule": "ignore-expiry-only",
   "reverse_retained_checks": ["lexical-format", "time-relations", "ttl", "hash-closure", "approval", "authority"]
 }
-

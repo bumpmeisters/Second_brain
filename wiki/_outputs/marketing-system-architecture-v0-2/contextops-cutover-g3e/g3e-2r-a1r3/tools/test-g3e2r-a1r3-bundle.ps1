@@ -1,7 +1,13 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory=$true)][string]$VaultRoot,[string]$OverlayRoot,
-    [Parameter(Mandatory=$true)][string]$PythonExecutable,[switch]$Json
+    [Parameter(Mandatory=$true)][string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,[switch]$Json
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
@@ -10,11 +16,11 @@ $root=(Resolve-Path -LiteralPath $VaultRoot).Path.TrimEnd('\');$overlay=(Resolve
 Import-Module (Join-Path $overlay 'tools/g3e2r-a1r3-guard-lib.psm1') -Force
 $manifest=Join-Path $overlay 'a1r3-bundle-manifest.csv'
 $expectedA1R3=Get-G3E2RA1R3Sha256 $manifest
-$expectedA1R2='9E17F6A3A8C36208C828B6A188AEF550279D2F0280D5B6394E08044BFF041A1D'
-$expectedA1R='714E902B74E5A9B8AB572A48F57B32F542D4B37FE16F272F0C30879243CADE64'
-$expectedA1='44745E35300B3401B9C2C162728760F9832EAD5DBC0C31C84AF5414EF5820073'
-$expectedS5Disposition='CD3C4EC544D23B009A7E637829B669FA467C25463F756292392D2897DD35686E'
-$expectedS5Coverage='A94DE9170CD34067F4ACE2BE927BF6324ADBB421AB80213BBA53817EA704413B'
+$expectedA1R2='0CDC7DD779C6B22949C893B07355BC7906C44F45DC8E12D7DF73BC6366654AD0'
+$expectedA1R='29B5FFA27A975EDEB409D65D829548BC7C622FA46050BFD72F02E2B810BECDCD'
+$expectedA1='40CC378BD288BFF319A84879A0A93145909ED39F2DEED1E7D8D5B945B8703C4D'
+$expectedS5LocalSourceContract='12CB11614006F3643B5E159635D9451031C24C1E9DADEDFEFFAD9B1BA7A101FD'
+$expectedS5NewsletterContract='F5FFDE88F2D827C9DF85BFD3F926B14B491EC4E577B88625E989AB4F47292592'
 $context=Get-G3E2RA1R3Context $root $overlay $expectedA1 $expectedA1R $expectedA1R2 $expectedA1R3
 $checks=[Collections.Generic.List[string]]::new();$powerShell=(Get-Process -Id $PID).Path
 
@@ -73,7 +79,7 @@ Add-Check T01-EXACT-A1R3-INVENTORY ($bundleRows.Count-eq 14-and@(Get-ChildItem -
 $lock=@(Import-Csv -LiteralPath (Join-Path $overlay 'dependency-lock.csv'))
 Add-Check T02-ONE-LINE-A1R2-LOCK ($lock.Count-eq 1-and$lock[0].dependency_id-ceq'G3E2R-A1R2-BUNDLE'-and$lock[0].sha256-ceq$expectedA1R2) 'one immutable A1R2 dependency'
 Add-Check T03-A1R2-EXACT-CLOSURE ((Get-G3E2RA1R3Sha256 $context.A1R2Manifest)-ceq$expectedA1R2-and@(Import-Csv -LiteralPath $context.A1R2Manifest).Count-eq 14) 'accepted A1R2 manifest and members'
-Add-Check T04-TRANSITIVE-UPSTREAM-CLOSURE ((Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1-and(Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RContext.A1Context.Dependencies['G3E1-BUNDLE'])-ceq'5749898D67B26BBFA433529023117FF0A2686929685F0FBAA105FFCB04BBDAB2') 'A1R A1 A and G3E1 exact'
+Add-Check T04-TRANSITIVE-UPSTREAM-CLOSURE ((Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1-and(Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RContext.A1Context.Dependencies['G3E1-BUNDLE'])-ceq'D581C9535B6359F7058DA33C3CB9E229EC8EF1C8C2C6C4D49311C75189D20E50') 'A1R A1 A and G3E1 exact'
 Add-Check T05-CONTRACT-SCHEMAS ($context.SealContract.contract_id-ceq'g3e2r-live-seal-contract/v2-a1r3'-and$context.InvariantContract.contract_id-ceq'g3e2r-live-invariant-manifest/v3'-and$context.FingerprintContract.contract_id-ceq'g3e2r-ordinal-fingerprint/v3') 'three A1R3 contracts exact'
 $invRaw=Get-Content -LiteralPath (Join-Path $overlay 'contracts/live-invariant-v3-contract.json') -Raw
 Add-Check T06-V3-VERSION-SEPARATION ($invRaw.Contains('expected_fingerprint_v3')-and(-not$invRaw.Contains('expected_fingerprint_v2'))-and$context.SealContract.required_baseline_fields-contains'wrapper_pre_fingerprint_v3') 'v3 fields replace v2 fields'
@@ -221,7 +227,7 @@ print(json.dumps({"sha256": digest, "count": len(records)}))
 
     $finalizer=Join-Path $overlay 'tools/finalize-g3e2r-live-seal-a1r3.ps1';$forward=Join-Path $overlay 'tools/invoke-g3e2-transaction-a1r3.ps1';$reverseTool=Join-Path $overlay 'tools/invoke-g3e2-reverse-a1r3.ps1'
     $parseOk=@($toolPaths+(Join-Path $overlay 'tools/test-g3e2r-a1r3-bundle.ps1')|ForEach-Object{@(Parse-Tool $_).Count-eq 0}|Where-Object{-not$_}).Count-eq 0
-    $common=@('-VaultRoot',$root,'-OverlayRoot',$overlay,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-ExpectedA1R2Hash',$expectedA1R2,'-ExpectedA1R3Hash',$expectedA1R3,'-Json')
+    $common=@('-VaultRoot',$root,'-OverlayRoot',$overlay,'-ExpectedA1Hash',$expectedA1,'-ExpectedA1RHash',$expectedA1R,'-ExpectedA1R2Hash',$expectedA1R2,'-ExpectedA1R3Hash',$expectedA1R3,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json')
     $fv=Invoke-JsonScript $finalizer (@('-Mode','Validate')+$common);$fwv=Invoke-JsonScript $forward (@('-Mode','Validate')+$common);$rv=Invoke-JsonScript $reverseTool (@('-Mode','Validate')+$common)
     Add-Check T39-PARSE-AND-VALIDATE ($parseOk-and$fv.verdict-ceq'PASS'-and$fv.bundles-eq 8-and$fv.executions-eq 44-and$fwv.verdict-ceq'PASS'-and$rv.verdict-ceq'PASS') 'five scripts parse and three entrypoints validate read-only'
 
@@ -248,17 +254,17 @@ finally{
 Add-Check T46-TEMP-CLEANUP-AND-NO-LIVE-EFFECT ($tempRemoved-and(-not(Test-Path -LiteralPath $bRoot))-and@(Get-ChildItem -LiteralPath (Split-Path -Parent $overlay) -Recurse -File -Filter 'live-seal-v2.json').Count-eq 0) 'fixtures removed and no B snapshot seal probe or mutation'
 
 $a1r2Test=Join-Path $context.A1R2Root 'tools/test-g3e2r-a1r2-bundle.ps1'
-$a1r2Result=Invoke-JsonScript $a1r2Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1R2Root,'-PythonExecutable',$PythonExecutable,'-Json') 1800
+$a1r2Result=Invoke-JsonScript $a1r2Test @('-VaultRoot',$root,'-OverlayRoot',$context.A1R2Root,'-PythonExecutable',$PythonExecutable,'-RipgrepExecutable',$RipgrepExecutable,'-ExpectedRipgrepSha256',$ExpectedRipgrepSha256,'-ExpectedRipgrepVersion',$ExpectedRipgrepVersion,'-GitExecutable',$GitExecutable,'-ExpectedGitSha256',$ExpectedGitSha256,'-ExpectedGitVersion',$ExpectedGitVersion,'-Json') 1800
 Add-Check T47-UNCHANGED-A1R2-REGRESSION ($a1r2Result.verdict-ceq'PASS'-and$a1r2Result.groups-eq 40-and@($a1r2Result.checks|Where-Object{$_-match'^T39-UPSTREAM-REGRESSIONS'}).Count-eq 1) 'A1R2 40/40 includes A1R 34/34 and A1 27/27'
 
 $rootFast=Invoke-RootFast;$mos=Invoke-Mos
-$git=[string]((Get-Command git -CommandType Application|Select-Object -First 1).Source)
+$git=$GitExecutable
 Assert-G3E2RA1R3GitStagingEmpty $root $git;Assert-G3E2RA1R3NoResidue $root
 $upstreamsExact=(Get-G3E2RA1R3Sha256 $context.A1R2Manifest)-ceq$expectedA1R2-and(Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RManifest)-ceq$expectedA1R-and(Get-G3E2RA1R3Sha256 $context.A1R2Context.A1RContext.A1Manifest)-ceq$expectedA1
 $treesExact=(Get-G3E2RA1R3TreeFingerprintV3 $context.A1R2Root)-ceq$a1r2Before-and(Get-G3E2RA1R3TreeFingerprintV3 $context.A1R2Context.A1RRoot)-ceq$a1rBefore-and(Get-G3E2RA1R3TreeFingerprintV3 $context.A1R2Context.A1RContext.A1Root)-ceq$a1Before-and(Get-G3E2RA1R3TreeFingerprintV3 $context.A1R2Context.A1RContext.A1Context.ARoot)-ceq$aBefore-and(Get-G3E2RA1R3TreeFingerprintV3 $context.A1R2Context.A1RContext.A1Context.G3E1Root)-ceq$g3e1Before
-$s5Exact=(Get-G3E2RA1R3Sha256 (Join-Path $root 'wiki/_outputs/source-intake/clipping-dispositions.csv'))-ceq$expectedS5Disposition-and(Get-G3E2RA1R3Sha256 (Join-Path $root 'wiki/_outputs/source-coverage/source-inventory.csv'))-ceq$expectedS5Coverage
+$s5ContractsExact=(Get-G3E2RA1R3Sha256 (Join-Path $root 'tools/config/local-source-integrity-contract.json'))-ceq$expectedS5LocalSourceContract-and(Get-G3E2RA1R3Sha256 (Join-Path $root 'tools/config/newsletter-index-contract.json'))-ceq$expectedS5NewsletterContract
 $rootGreen=($rootFast-join[char]10)-match'(?im)0\s+errors?'-and($rootFast-join[char]10)-match'(?im)0\s+warnings?';$mosGreen=($mos-join[char]10)-match'(?im)16/16'
-Add-Check T48-FINAL-LIVE-SCOPE ($rootGreen-and$mosGreen-and$upstreamsExact-and$treesExact-and$s5Exact-and(-not(Test-Path -LiteralPath $bRoot))-and@(git diff --cached --name-only).Count-eq 0-and$checks.Count-eq 47) 'Root 0/0 MOS 16/16 hashes exact B absent staging residue zero routing frozen'
+Add-Check T48-FINAL-LIVE-SCOPE ($rootGreen-and$mosGreen-and$upstreamsExact-and$treesExact-and$s5ContractsExact-and(-not(Test-Path -LiteralPath $bRoot))-and@(git diff --cached --name-only).Count-eq 0-and$checks.Count-eq 47) 'Root 0/0 MOS 16/16 policy-safe S5 contracts exact B absent staging residue zero routing frozen'
 
 $result=[ordered]@{
     contract='g3e2r-a1r3-test/v1'
@@ -268,8 +274,8 @@ $result=[ordered]@{
     expected_a1r_hash=$expectedA1R
     expected_a1r2_hash=$expectedA1R2
     expected_a1r3_hash=$expectedA1R3
-    s5r_disposition_hash=$expectedS5Disposition
-    s5r_coverage_hash=$expectedS5Coverage
+    s5r_local_source_contract_hash=$expectedS5LocalSourceContract
+    s5r_newsletter_contract_hash=$expectedS5NewsletterContract
     wrapper_files=16
     transition_actions=10
     verify_only_actions=1

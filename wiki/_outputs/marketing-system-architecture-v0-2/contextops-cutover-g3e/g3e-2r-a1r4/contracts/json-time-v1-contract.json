@@ -16,4 +16,3 @@
   "seal_input_fields": ["prepared_at_utc", "approved_at_utc"],
   "live_seal_fields": ["prepared_at_utc", "approved_at_utc", "sealed_at_utc", "not_after_utc"]
 }
-

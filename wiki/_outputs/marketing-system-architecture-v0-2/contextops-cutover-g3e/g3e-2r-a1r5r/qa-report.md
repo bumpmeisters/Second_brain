@@ -1,16 +1,67 @@
-# G3E2R A1R5R R2 QA report
+# G3E2R A1R5R R3 capability-probe boundary QA report
 
-## Accepted candidate evidence
+## Verdict
 
-- Candidate inventory: 16 files (15 manifest members plus manifest).
-- Immutable dependency: A1R4 manifest `E58496E8887170DD58FE9349E6ECD2F99B891DFC44F7099168CE2E0EA4E823DB`, 1728 bytes.
-- Entrypoint closure: P2/C5; P10/P20 then O10/O20.
-- Receipt contract: `g3e2r-entrypoint-import-receipt/v2-a1r5r`.
+PASS_PRE_EVIDENCE
+CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_RECLOSURE_RUNS
+
+## Verified pre-evidence candidate
+
+- Candidate manifest: `FD329EDCB043F6BACE4C0009A1369262791A6DDB364079B26E689934E49426EF`, closure 17/17, snapshot `1C5CE50C2EC4DCC4E202C28A9CA79922BF2E4193C42F4802ED0ACF739ECD324D`.
+- Tested A1R4 dependency: manifest `99A9C68F0F8206D2D500D7983284FCED6C0CBB6D26DEAF1FC6F419786F352849`, closure 14/14, snapshot `E126D0B3440C61A241C490FE6EC08823E32193AF329D6717472517730B973313`.
+- Inventory: 18 files, comprising 17 manifest members plus the manifest.
+- Entrypoint closure: P2/C6; P10/P20 then O10/O20; receipt contract `g3e2r-entrypoint-import-receipt/v3-a1r5r`.
+- Capability-probe boundary: separate manifest-bound entrypoint, disjoint control and target roots, external single-purpose authority, FWD-001 through FWD-004 only, one 45-second watchdog, 11/11 wrapper pre/post proof, zero-residue requirement, and fail-closed JSON receipt model.
+- Two unchanged full runs each passed 56/56, Receipt 12/12, T46 10/10, nested A1R4 64/64, T49 through T56, seal closure 10/63/15/4, and the final no-effect gate.
+- Hosts: canonical 64-bit Windows PowerShell 5.1 for A1R5R and isolated bound PowerShell 7.6.4 for T46.
+- Both runs explicitly reported `live_capability_probe: not-run`; validation used static boundaries and synthetic fixtures only. No capability probe was executed against the actual Vault.
+- Effects: no B, snapshot, live seal, capability probe, live mutation, routing change, staging, commit, or protected-state delta.
+
+## Historical evidence preserved
+
+- Preceding published A1R5R manifest: `35AE6EE781A886A50F694CDEE87E0B1E6B445E303351072469D09F907AC03DD3`, closure 15/15, snapshot `166C88EDA241DEC985D71280B211D3FA21DAC8A272F4DAD3F30AD7736825FE39`.
+- Its two evidence-closed runs each passed 48/48, Receipt 10/10, T46 10/10, nested A1R4 64/64, T15, T23, and no effect.
 - Prior R1 receipt preflight: 10/10, evidence SHA-256 `94E76E9A72B8EB9DD35B421A5D75B830E5E18A9674CDCEC9AEE58E9294624952`.
-- Seal closure: 10/61/15/4; nine hash boundaries; gate map v6 9/19/12.
-- R2 acceptance: two unchanged full runs, each 48/48; each receipt preflight 10/10; each T46 10/10; each nested unchanged A1R4 regression 64/64.
-- Host: canonical 64-bit Windows PowerShell 5.1 for A1R5R; exact bound Core 64-bit PowerShell 7.6.4 for T46.
-- Finalizer Prepare: stopped only at the expected absent-B gate.
-- Effects: no B, snapshot, live seal, capability probe, live mutation, routing change, staging, or commit.
+- These historical boundaries remain provenance only and are not presented as identities or execution evidence of the capability-probe boundary candidate.
 
-The command output is the run evidence; no mutable evidence file is written into the candidate during verification.
+## Conditional acceptance boundary
+
+After README, QA report, review decision, and their manifest rows are reclosed, require two new A1R5R 56/56 runs against identical evidence-closed bytes. Each must retain Receipt 12/12, T46 10/10, nested A1R4 64/64, T49 through T56, seal closure 10/63/15/4, `live_capability_probe: not-run`, and no effect. Their hash-bound command output activates the conditional final PASS without rewriting any evidence member.
+
+Any post-verification evidence edit requires another re-closure and invalidates both final runs. The command output remains the run evidence; verification writes no mutable run artifact into the candidate.
+
+## 2026-09-05 | Hash-scope-closure pre-evidence
+
+**Verdict**: `PASS_PRE_EVIDENCE`
+**Conditional verdict**: `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`
+
+Two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0`, exactly one valid JSON document, PASS `57/57`, Receipt `12/12`, T46 `10/10`, nested A1R4 `64/64`, A1R3 `48/48`, A1R2 `40/40`, A1R `34/34`, A1 `27/27`, passing T57, `nested_hash_scope: 6/6`, Seal-Closure `10/63/15/4`, `live_capability_probe: not-run`, and a complete null delta. The observed A1R5R check count was `57/57` in each run.
+
+The runs prove the synthetic full-chain hash-scope contract, including module-local Utility manifest identity and uppercase SHA-256 behavior. They do not prove a capability probe, Prepare success, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate.
+
+Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.
+
+## 2026-09-06 | External-runtime-closure pre-evidence
+
+**Verdict**: `PASS_PRE_EVIDENCE`
+**Conditional verdict**: `CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS`
+
+Two identical pre-evidence top-level A1R5R full-chain runs completed with exit code `0` and exactly one valid JSON document. Each run passed `58/58`, T27, T42, Receipt `12/12`, T46 `10/10`, nested A1R4 `64/64`, A1R3 `48/48`, A1R2 `40/40`, A1R `34/34`, A1 `27/27`, T57 with `nested_hash_scope: 6/6`, T58 with `external_runtime_closure: 10/10`, and Seal-Closure `10/63/15/4`. Both runs reported `live_capability_probe: not-run` and a complete null delta. The observed A1R5R check count was `58/58` in each run.
+
+The runs prove the local synthetic full-chain external-runtime contract: Ripgrep and Git were resolved only through explicit canonical paths; path, SHA-256, version, x64, and non-reparse boundaries were checked; negative path, hash, version, architecture, and reparse cases passed; and the fresh Windows PowerShell 5.1 child ran with a PATH cleaned of ambient Ripgrep and Git. T27 and T42 also passed.
+
+They do not prove a capability probe against the actual Vault, successful Prepare against a B candidate, live seal, live mutation, live cutover, authority effect, or an actual wrapper/residue poststate. Historical evidence remains unchanged as provenance.
+
+Conditional final acceptance activates only after two new top-level A1R5R runs pass against the exact evidence-closed bytes. No evidence file may be edited after those runs.
+
+## 2026-09-07 | File-hash-scope-closure evidence boundary
+
+Verdict: PASS_PRE_EVIDENCE
+
+The two controlled pre-evidence A1R5R full-chain runs returned identical JSON receipts, each with exit code 0, exactly one JSON document, PASS 58/58, passing T12, T27 and T42, Receipt 12/12, T46 10/10, A1R4 64/64 and its checked upstream chain A1R3 48/48, A1R2 40/40, A1R 34/34 and A1 27/27, T57 nested_hash_scope: 6/6, T58 external_runtime_closure: 10/10, Seal-Closure 10/63/15/4 and live_capability_probe: not-run. Candidate byte identities and the checked B, Ref, FETCH_HEAD and Vault gates were unchanged before and after each run.
+
+The evidence supports the six guard file-hash interfaces and the A1R5R harness bootstrap hash path without Get-FileHash dependence in those paths. T57 used a synthetic B-present file in a fresh Windows PowerShell 5.1 module chain. T42 proves only the expected B-absence stop, not successful Prepare with the real B candidate. This is not a claim that every harness or platform operation is independent of Get-FileHash.
+
+Final acceptance is CONDITIONAL_FINAL_PASS_AFTER_TWO_EXACT_FULL_CHAIN_RECLOSURE_RUNS. It requires two separately authorized new A1R5R full-chain runs against the exact evidence-closed bytes with all agreed checks and unchanged protected gates. After both pass, no evidence file may be changed.
+
+No real B Prepare success, capability probe, live seal, live mutation, live cutover, authority effect or probe-observed wrapper/residue poststate is claimed or authorized. All previous sections remain unchanged historical provenance, not acceptance of this new candidate.

@@ -1,15 +1,42 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+function Import-G3E2RA1RPlatformModules {
+    $edition = [string]$PSVersionTable.PSEdition
+    switch -CaseSensitive ($edition) {
+        'Desktop' { $requiredVersion = [version]'3.1.0.0' }
+        'Core' { $requiredVersion = [version]'7.0.0.0' }
+        default { throw "Unsupported PowerShell edition: $edition" }
+    }
+    foreach ($moduleName in @('Microsoft.PowerShell.Management','Microsoft.PowerShell.Utility')) {
+        $manifestPath = Join-Path $PSHOME ("Modules/{0}/{0}.psd1" -f $moduleName)
+        if (-not [IO.File]::Exists($manifestPath)) { throw "Required platform module manifest is missing: $moduleName" }
+        $expectedManifestPath = [IO.Path]::GetFullPath($manifestPath)
+        $available = @(Get-Module -ListAvailable -Name $manifestPath | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($available.Count -ne 1) { throw "Required platform module identity mismatch: $moduleName $requiredVersion $edition" }
+        $imported = @(Import-Module -Name $manifestPath -RequiredVersion $requiredVersion -Scope Local -Force -PassThru -ErrorAction Stop)
+        $matchingImported = @($imported | Where-Object { $_.Name -ceq $moduleName -and $_.Version -eq $requiredVersion -and @($_.CompatiblePSEditions) -ccontains $edition -and $_.Path -and [IO.Path]::GetFullPath($_.Path).Equals($expectedManifestPath,[StringComparison]::OrdinalIgnoreCase) })
+        if ($imported.Count -ne 1 -or $matchingImported.Count -ne 1) { throw "Imported platform module identity mismatch: $moduleName $requiredVersion $edition" }
+    }
+}
+. Import-G3E2RA1RPlatformModules
+
 function Get-G3E2RA1RSha256 {
     param([Parameter(Mandatory = $true)][string]$LiteralPath)
     if (-not (Test-Path -LiteralPath $LiteralPath -PathType Leaf)) { throw "File is missing: $LiteralPath" }
-    return (Get-FileHash -LiteralPath $LiteralPath -Algorithm SHA256).Hash.ToUpperInvariant()
+    return (Get-G3E2RA1RBytesSha256 -Bytes ([IO.File]::ReadAllBytes($LiteralPath)))
 }
 
 function Get-G3E2RA1RBytes {
     param([Parameter(Mandatory = $true)][string]$LiteralPath)
     return (Get-Item -LiteralPath $LiteralPath -Force).Length
+}
+
+function Get-G3E2RA1RBytesSha256 {
+    param([Parameter(Mandatory=$true)][AllowEmptyCollection()][byte[]]$Bytes)
+    $sha=[Security.Cryptography.SHA256]::Create()
+    try{return ([BitConverter]::ToString($sha.ComputeHash($Bytes))).Replace('-','')}
+    finally{$sha.Dispose()}
 }
 
 function Resolve-G3E2RA1RInRoot {
@@ -198,8 +225,17 @@ function Assert-G3E2RA1RSealInput {
 }
 
 function Get-G3E2RA1RRuntimeBindings {
-    param([object]$Context,[string]$PythonExecutable)
-    return @(Get-G3E2RA1RuntimeBindings -Context $Context.A1Context -PythonExecutable $PythonExecutable)
+    param(
+        [Parameter(Mandatory = $true)][object]$Context,
+        [Parameter(Mandatory = $true)][string]$PythonExecutable,
+        [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+        [Parameter(Mandatory = $true)][string]$GitExecutable,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+        [Parameter(Mandatory = $true)][string]$ExpectedGitVersion
+    )
+    return @(Get-G3E2RA1RuntimeBindings -Context $Context.A1Context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion)
 }
 
 function Assert-G3E2RA1RRuntimeBindings {

@@ -5,6 +5,12 @@ param(
     [string]$OverlayRoot,
     [string]$SealEnvelope,
     [string]$PythonExecutable,
+    [Parameter(Mandatory = $true)][string]$RipgrepExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedRipgrepVersion,
+    [Parameter(Mandatory = $true)][string]$GitExecutable,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitSha256,
+    [Parameter(Mandatory = $true)][string]$ExpectedGitVersion,
     [string]$ExpectedA1Hash,
     [string]$ExpectedA1RHash,
     [string]$ExpectedSealHash,
@@ -70,7 +76,7 @@ else{
     $mutex=$null;$closureLock=$null
     try{
         $mutex=Enter-G3E2RA1RMutex $root;$sealPath=[IO.Path]::GetFullPath($SealEnvelope);if(-not$sealPath.StartsWith($root+'\',[StringComparison]::OrdinalIgnoreCase)){throw 'Live seal must remain inside the Vault.'}
-        $runtimeBindings=Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable
+        $runtimeBindings=Get-G3E2RA1RRuntimeBindings -Context $context -PythonExecutable $PythonExecutable -RipgrepExecutable $RipgrepExecutable -ExpectedRipgrepSha256 $ExpectedRipgrepSha256 -ExpectedRipgrepVersion $ExpectedRipgrepVersion -GitExecutable $GitExecutable -ExpectedGitSha256 $ExpectedGitSha256 -ExpectedGitVersion $ExpectedGitVersion
         $seal=Read-G3E2RA1RSealV2 -Context $context -LiteralPath $sealPath -ExpectedA1Hash $ExpectedA1Hash -ExpectedA1RHash $ExpectedA1RHash -ExpectedSealHash $ExpectedSealHash -ActualRuntimeBindings $runtimeBindings -Use Reverse
         $seal=Add-G3E2RA1RCompatibilityProperties $seal
         $closureLock=Enter-G3E2RA1RClosureLock -Context $context -Seal $seal -SealPath $sealPath -ExpectedSealHash $ExpectedSealHash
