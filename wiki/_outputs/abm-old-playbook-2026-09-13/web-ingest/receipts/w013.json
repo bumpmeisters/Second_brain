@@ -1,0 +1,29 @@
+{
+  "id": "W013",
+  "url": "https://bombora.com/what-is-intent-data",
+  "research_briefs": [
+    "t01-identity-to-intent.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:56:19.531529+00:00",
+  "previous_attempt": {
+    "id": "W013",
+    "url": "https://bombora.com/what-is-intent-data",
+    "research_briefs": [
+      "t01-identity-to-intent.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T17:54:06.883278+00:00",
+    "status": "capture-failed",
+    "error": "Error: Rate limit exceeded. Consumed (req/min): 12, Remaining (req/min): 0. Upgrade your plan at https://firecrawl.dev/pricing for increased rate limits or please retry after 30s, resets at Sun Sep 13 2026 17:54:39 GMT+0000 (Coordinated Universal Time)\n"
+  },
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w013.json",
+  "title": "What is Intent data | Bombora",
+  "final_url": "https://bombora.com/what-is-intent-data/",
+  "characters": 6637,
+  "sha256": "f5ecfe4a8b3ff307646693a1d752cd2262e37c73f07571ab969f4dc92f2cb0df",
+  "http_status": 200
+}

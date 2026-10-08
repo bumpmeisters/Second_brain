@@ -1,0 +1,17 @@
+{
+  "id": "W115",
+  "url": "https://www.jolteffect.com",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:59.956581+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w115.json",
+  "title": "\n      \n        JOLT Effect: Overcome Customer Indecision & Win More Deals\n      \n    ",
+  "final_url": "https://www.jolteffect.com/",
+  "characters": 8899,
+  "sha256": "d023a86ac4e3663a28192b82d3c863e54ddf02ca74d4647c4e2151aacf1e3070",
+  "http_status": 200
+}

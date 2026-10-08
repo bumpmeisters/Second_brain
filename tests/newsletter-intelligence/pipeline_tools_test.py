@@ -92,6 +92,22 @@ def main() -> None:
             "www.youtube.com",
             "www.aisi.gov.uk",
             "github.com",
+            "hugobowne.substack.com",
+            "www.oneusefulthing.org",
+            "www.bensbites.com",
+            "www.dwarkesh.com",
+            "firmsconsulting.com",
+            "www.kieranflanagan.io",
+            "sub.thursdai.news",
+            "blog.google",
+            "openai.com",
+            "every.to",
+            "wondertools.substack.com",
+            "www.reuters.com",
+            "www.cnbc.com",
+            "techcrunch.com",
+            "www.ainauten.com",
+            "nextplayso.substack.com",
         }
 
         review["recommended_batch"][0]["url"] = "http://127.0.0.1/private"

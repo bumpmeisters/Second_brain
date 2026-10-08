@@ -1,0 +1,164 @@
+{
+  "passed": true,
+  "checks": {
+    "three_modes_verify": true,
+    "baseline_bytes_preserved": true,
+    "follow_up_only_two_tasks": true,
+    "update_only_two_tasks": true,
+    "retained_identity_reverified": true,
+    "updated_workforce": true,
+    "old_workforce_remains_120": true,
+    "unrelated_company_isolated": true,
+    "learning_closeouts_record_no_change": true,
+    "project_references_all_three_contexts": true,
+    "follow_up_preserves_current_basis": true,
+    "update_switches_current_basis_and_retains_history": true,
+    "learning_closeouts_identify_run_and_review": true,
+    "update_change_table_exposes_retained_and_updated_claims": true,
+    "distinct_publications": true
+  },
+  "network_used": false,
+  "real_source_library_mutated": false,
+  "engine_version": "1.0.0",
+  "implementation_hashes": {
+    "engine.py": "9023abebaf68a157c506019a9108f87dcd5717bf2c7bf98eddd710e1c48055e3",
+    "cli.py": "e12415c8446af99d93f0c92fe04f0ab43d01c040e985ada72bef02352518534c",
+    "contract.json": "b9b94ede7c8313ad76e1e813ea4141be44845cdc1187f7da2c7378ed1518a75f",
+    "acquisition.py": "b79de6f38ac9afd4daaa75fd8b3054f8a9cc0e4cd9900c3937350cb23d95ebff",
+    "entrypoints.py": "a30bb808775a5ea907261e7036110209e4633491e5d452a6aa999bec20873418",
+    "entrypoints_demo.py": "d7955bd128a17291752ffbaecfce8564e61b9e6f89539c7f3ea7acc2fa233837",
+    "test_entrypoints.py": "042c9d8e147806cfffb96cf1084e809fb3c145274c54dc84e23dcd1100585c33"
+  },
+  "unchanged_state_permission_error_retries": 0,
+  "runs": [
+    {
+      "mode": "baseline",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:46:21.069209+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\context\\company-basis-v1.md",
+        "review": {
+          "at": "2026-09-09T19:46:20.990209+00:00",
+          "input_revision": 31,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a",
+          "status": "final"
+        },
+        "sha256": "37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\publication\\37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a.md",
+        "status": "final"
+      },
+      "entry": {
+        "mode": "baseline",
+        "question": "Fictional company basis for downstream planning"
+      }
+    },
+    {
+      "mode": "follow-up",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\follow-up\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:46:21.485269+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\context\\workforce-follow-up-v1.md",
+        "review": {
+          "at": "2026-09-09T19:46:21.378264+00:00",
+          "input_revision": 8,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\follow-up\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "62420e5f4a10496a3a4c38669acb09c76188975b94c3ce5dba6149b110da3aae",
+          "status": "final"
+        },
+        "sha256": "62420e5f4a10496a3a4c38669acb09c76188975b94c3ce5dba6149b110da3aae",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\follow-up\\publication\\62420e5f4a10496a3a4c38669acb09c76188975b94c3ce5dba6149b110da3aae.md",
+        "status": "final"
+      },
+      "entry": {
+        "mode": "follow-up",
+        "previous": {
+          "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\context\\company-basis-v1.md",
+          "context_sha256": "37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a",
+          "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline",
+          "run_sha256": "74e282306783c0afb0b44cec8e47fd306990b684ae3c009ce2ecd14efe40fbae"
+        },
+        "question": "Verify the exact 2025 year-end workforce definition only"
+      }
+    },
+    {
+      "mode": "update",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\update\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:46:22.064272+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\context\\company-basis-v2.md",
+        "review": {
+          "at": "2026-09-09T19:46:21.914271+00:00",
+          "input_revision": 9,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\update\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "13f3e590ca94e12aa5723d3824503c855516f842ba7ff4d954e1edb7a9b7b555",
+          "status": "final"
+        },
+        "sha256": "13f3e590ca94e12aa5723d3824503c855516f842ba7ff4d954e1edb7a9b7b555",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\update\\publication\\13f3e590ca94e12aa5723d3824503c855516f842ba7ff4d954e1edb7a9b7b555.md",
+        "status": "final"
+      },
+      "entry": {
+        "carry_forward": {
+          "F-WORKFORCE": {
+            "decision": "update",
+            "reason": "New year-end evidence replaces the current workforce figure."
+          },
+          "F1": {
+            "decision": "retain",
+            "reason": "Re-read and re-review identity against the selected original."
+          }
+        },
+        "mode": "update",
+        "previous": {
+          "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\context\\company-basis-v1.md",
+          "context_sha256": "37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a",
+          "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline",
+          "run_sha256": "74e282306783c0afb0b44cec8e47fd306990b684ae3c009ce2ecd14efe40fbae"
+        },
+        "question": "Fictional company basis for downstream planning"
+      }
+    },
+    {
+      "mode": "baseline",
+      "run": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\violet\\runs\\baseline\\run.json",
+      "publication": {
+        "at": "2026-09-09T19:46:23.140290+00:00",
+        "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\violet\\context\\company-basis-v1.md",
+        "review": {
+          "at": "2026-09-09T19:46:23.038278+00:00",
+          "input_revision": 31,
+          "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\violet\\runs\\baseline\\context-draft.md",
+          "rationale": "Scripted acceptance fixture checks identity coverage, source locator, explicit fabricated-data limits and exact draft bytes.",
+          "reviewer": "fixture-independent-reviewer",
+          "sha256": "b5ac4c4c2bffc861243cbfd0d1dfb3d7a416355e6bfa5f5ef62a4da0996e590a",
+          "status": "final"
+        },
+        "sha256": "b5ac4c4c2bffc861243cbfd0d1dfb3d7a416355e6bfa5f5ef62a4da0996e590a",
+        "snapshot": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\violet\\runs\\baseline\\publication\\b5ac4c4c2bffc861243cbfd0d1dfb3d7a416355e6bfa5f5ef62a4da0996e590a.md",
+        "status": "final"
+      },
+      "entry": {
+        "mode": "baseline",
+        "question": "Fictional company basis for downstream planning"
+      }
+    }
+  ],
+  "preserved_baseline_hashes": {
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\run.json": "74e282306783c0afb0b44cec8e47fd306990b684ae3c009ce2ecd14efe40fbae",
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\context\\company-basis-v1.md": "37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a",
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\runs\\baseline\\publication\\37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a.md": "37a0b4da2fbfa20a888b41d3533a7f0cc7fb648825bf2a3351ec08d19a84e69a",
+    "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence\\2026-09-09-entries-final\\amber\\originals\\record-2025.txt": "4e6d0a768b1a36ba77de09ad36a59ce0ac3628a59079aef24477c3792b815342"
+  },
+  "limitations": [
+    "Fictitious data and scripted self-review; no independent semantic validation.",
+    "No network, collector, or production inbox invoked.",
+    "Two core fields exercise coverage retention, not exhaustive company research."
+  ]
+}

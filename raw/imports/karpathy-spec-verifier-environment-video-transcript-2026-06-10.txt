@@ -1,0 +1,1693 @@
+Ich bin von dem Konzept in diesem video https://youtu.be/7zZy1QTvokM?si=KFWYVpOrNlHZeDjD (<transcript>) begeistert. Ich verstehe alles, aber dann ist es doch zu viel, um sich alles zu merken. Ich bin auch sehr visuell veranlagt. 
+
+Du sollst mir helfen die Idee besser im Kopf zu verarbeiten. Das Ziel ist eigentlich ein Blueprint den ich immer wieder rausholen kann
+
+
+
+<transcript>
+
+
+
+I just listened to Andrea Cararpathy
+
+0:01
+
+speak at AISN 2026 and I learned
+
+0:04
+
+something that I wasn't expecting.
+
+0:05
+
+Almost everyone is prompting Claude
+
+0:07
+
+wrong. So I decided to dig deeper and
+
+0:08
+
+see exactly how Carpathy, the former
+
+0:11
+
+head of AI at Tesla, uses AI in 2026.
+
+0:13
+
+And it turns out that Karpathy's method
+
+0:15
+
+for building 10 times faster can be
+
+0:18
+
+broken down into three simple layers. So
+
+0:20
+
+in today's video, I'll be breaking down
+
+0:21
+
+each layer so that anybody can apply
+
+0:23
+
+them. And then I'll show you the one
+
+0:24
+
+thing that Carpathy said to focus on in
+
+0:26
+
+the age of AI. So layer one is the spec.
+
+Layer 1
+
+0:28
+
+AI models are incredibly smart, but
+
+0:30
+
+they're still missing something. To
+
+0:32
+
+showcase their current limitation,
+
+0:34
+
+Carpathy explained a simple question AI
+
+0:37
+
+will get wrong. I want to go to a car
+
+0:38
+
+wash to wash my car and it's 50 m away.
+
+0:41
+
+Should I drive or should I walk? And
+
+0:44
+
+state-of-the-art models today will tell
+
+0:46
+
+you to walk because it's so close.
+
+0:48
+
+At first, I actually didn't believe
+
+0:49
+
+this. So, I went to Claude, Gemini,
+
+0:50
+
+Grock, and Chad GBT, asked them the same
+
+0:53
+
+question, and they all gave me the same
+
+0:54
+
+answer, and it reveals the whole
+
+0:56
+
+foundation of this video. AI is
+
+0:58
+
+brilliant at what can be measured, but
+
+1:00
+
+for context driven things like needing a
+
+1:03
+
+car for a car wash, it has no signal to
+
+1:05
+
+act on. So, how do you bridge this gap
+
+1:07
+
+between your understanding and your
+
+1:08
+
+contextual information and AI's
+
+1:10
+
+computational power? That's where the
+
+1:12
+
+spec comes in. And a spec is how you
+
+1:13
+
+deliver your understanding to Claude in
+
+1:15
+
+a format it can use. A term you may have
+
+1:17
+
+heard is Claude's plan mode, which
+
+1:20
+
+essentially can be used to help you
+
+1:21
+
+create a plan before building anything.
+
+1:22
+
+But Carpathy thinks that this is too
+
+1:25
+
+high level. I actually don't even like
+
+1:26
+
+the plan mode. I I would I mean
+
+1:29
+
+obviously it's very useful, but I think
+
+1:30
+
+there's something more general here
+
+1:31
+
+where you have to work with your agent
+
+1:32
+
+to design a spec that is very detailed.
+
+1:34
+
+Now, Carpathy isn't telling you that
+
+1:36
+
+plan mode is bad. What he's actually
+
+1:38
+
+saying is you have to go deeper. Work
+
+1:40
+
+with these AI tools to design the actual
+
+1:43
+
+spec. So, how do you create a spec that
+
+1:44
+
+Claude can successfully use to build
+
+1:46
+
+what you're trying to build? The first
+
+1:48
+
+step is you have to uncover your goal.
+
+1:50
+
+If you just say create a end of month
+
+1:52
+
+report, that's a task. But the actual
+
+1:54
+
+goal is a conclusion you're trying to
+
+1:56
+
+draw. The decision the report drives.
+
+1:59
+
+And what the goal actually is is
+
+2:00
+
+something AI will literally never be
+
+2:02
+
+able to decide. So to help you do this,
+
+2:04
+
+we'll tell Claude to interview me to
+
+2:07
+
+identify the goal of this project. This
+
+2:09
+
+is the way to get the information out of
+
+2:11
+
+you and into the spec. Now step two is
+
+2:13
+
+be agile with how you work. There are
+
+2:15
+
+two methods of completing any task. The
+
+2:17
+
+first is waterfall and the other is
+
+2:19
+
+agile. Waterfall is you take a big task
+
+2:22
+
+and you complete the entire thing and
+
+2:24
+
+then you show the final product. Agile
+
+2:26
+
+on the other hand is you break that same
+
+2:28
+
+task into small buckets and you show the
+
+2:30
+
+result throughout the entire process to
+
+2:32
+
+make sure you're going in the right
+
+2:34
+
+direction. And people are extremely
+
+2:35
+
+susceptible to using AI agents in a
+
+2:37
+
+waterfall manner because they want to
+
+2:39
+
+give them everything to do at once. The
+
+2:41
+
+better move is agile specking. You want
+
+2:43
+
+to have a tight scope, a clear
+
+2:45
+
+checkpoint. You want to review the
+
+2:46
+
+output, adjust it, and then repeat. To
+
+2:48
+
+help with this, we'll tell Claw to bias
+
+2:50
+
+towards smaller and more
+
+2:52
+
+compartmentalized specs. Step three is
+
+2:54
+
+you want to be precise and use your
+
+2:56
+
+brain. The more precise you are, the
+
+2:58
+
+less AI has to assume. And every
+
+2:59
+
+assumption that AI makes is a chance for
+
+3:01
+
+it to drift from the final product you
+
+3:03
+
+actually want. And when you have AI
+
+3:05
+
+create a spec for you, you have to use
+
+3:07
+
+your brain to think critically about
+
+3:09
+
+what that spec actually says. So to help
+
+3:12
+
+you use your brain, you can say, "Make
+
+3:14
+
+me verify key decisions explicitly to
+
+3:16
+
+ensure nothing is missed." And when you
+
+3:18
+
+put these three pieces together, we have
+
+3:20
+
+a final prompt we can use in Claude to
+
+3:22
+
+help create a tightly scoped,
+
+3:24
+
+wellthoughtout spec that aligns with our
+
+3:26
+
+actual goal. This is a process that I
+
+3:28
+
+call modern engineering, which every
+
+3:30
+
+successful person has to become. Now,
+
+3:32
+
+layer two is the verifier. Layer two
+
+Layer 2
+
+3:35
+
+sits on top of the spec. This is the
+
+3:36
+
+verification process. One of the most
+
+3:38
+
+frustrating things about AI is reviewing
+
+3:41
+
+and verifying the output. And unlike a
+
+3:43
+
+human, it can't grasp non-measurable
+
+3:46
+
+things. So, how can we help AI verify
+
+3:48
+
+its own outputs? Well, first you need to
+
+3:50
+
+understand the mental model behind this.
+
+3:51
+
+And Carpathy explains it as animals
+
+3:54
+
+versus ghosts. Here's him getting asked
+
+3:56
+
+a question about this in a recent
+
+3:58
+
+interview. And if it sounds confusing,
+
+3:59
+
+don't worry. I will simplify it after.
+
+4:01
+
+And the idea is that we're not building
+
+4:03
+
+animals, we are summoning ghosts. Why
+
+4:05
+
+does that framing matter? And what does
+
+4:08
+
+it actually change about how you build
+
+4:09
+
+and deploy and evaluate or even trust
+
+4:12
+
+them?
+
+4:12
+
+Yeah, I think the reason I wrote about
+
+4:14
+
+this is because I'm trying to wrap my
+
+4:15
+
+head around what these things are,
+
+4:16
+
+right? Because if you have a good model
+
+4:18
+
+of what they are or are not, then you're
+
+4:19
+
+going to be more competent at uh using
+
+4:21
+
+them. I think it's just um coming to
+
+4:23
+
+terms with the fact that these things
+
+4:25
+
+are not, you know, animal intelligences,
+
+4:27
+
+like if you yell at them, they're not
+
+4:28
+
+going to work better or worse or it
+
+4:30
+
+doesn't have any impact. Um and uh it's
+
+4:33
+
+all just kind of like these statistical
+
+4:35
+
+simulation circuits. It's more just
+
+4:36
+
+being suspicious of it and um figuring
+
+4:39
+
+out over time.
+
+4:40
+
+Now that's some gigab brain stuff but
+
+4:41
+
+let me simplify it. People me and you
+
+4:43
+
+are used to interacting with people
+
+4:45
+
+which Carpathy is calling animals. These
+
+4:48
+
+animals are driven by different
+
+4:49
+
+motivators and emotions which help
+
+4:51
+
+produce the final product and output
+
+4:53
+
+within a team setting. And if you say to
+
+4:55
+
+a person become an expert at SEO
+
+4:57
+
+marketing in the next 14 days or you're
+
+4:59
+
+fired, they're going to figure it out.
+
+5:01
+
+That's because they have these intrinsic
+
+5:03
+
+motivations. But AI is not that.
+
+5:06
+
+Carpathy describes it as a ghost. But in
+
+5:08
+
+my eyes, that's a little too confusing.
+
+5:09
+
+So throw it out the window. Instead,
+
+5:10
+
+think of it like a robot librarian. If
+
+5:12
+
+you ask it that same SEO question, the
+
+5:15
+
+librarian will only suggest resources
+
+5:17
+
+and answers based on the books in its
+
+5:19
+
+library. If it doesn't have a book, it
+
+5:21
+
+can't help you. And part of the
+
+5:22
+
+challenge here is that the librarian
+
+5:24
+
+doesn't know when it's missing a
+
+5:26
+
+specific book. So, it may just
+
+5:28
+
+confidently make something up. And
+
+5:30
+
+that's what's happening when AI nails
+
+5:31
+
+math and fumbles things with context.
+
+5:34
+
+It's brilliant because the library has
+
+5:35
+
+the clear answers. But if it doesn't,
+
+5:37
+
+then it's confidently wrong or
+
+5:40
+
+uncertain, which means interacting with
+
+5:42
+
+it like it's an animal, i.e. a human,
+
+5:44
+
+doesn't help, right? Yelling at it,
+
+5:46
+
+pleading, just saying, "Make this
+
+5:47
+
+better," doesn't necessarily work.
+
+5:49
+
+Really, the only lever you have, which
+
+5:50
+
+most people don't even think to use, is
+
+5:53
+
+the verification lever. Because by
+
+5:55
+
+optimizing this, it makes it so that
+
+5:56
+
+you're playing within the actual rules
+
+5:58
+
+that the AI follows. So, how do you help
+
+6:00
+
+AI verify the output so it's up to the
+
+6:02
+
+standard you want? Well, there are three
+
+6:04
+
+places to focus on. First, you want to
+
+6:06
+
+set the evaluation criteria up front.
+
+6:08
+
+Before Claude touches a single thing,
+
+6:10
+
+whether that's technical or
+
+6:11
+
+non-technical tasks, define what good
+
+6:14
+
+looks like with precision. For example,
+
+6:16
+
+a vague way to evaluate an output is
+
+6:17
+
+make this report look good. Whereas, a
+
+6:20
+
+precise way would say the report must
+
+6:22
+
+have three sections. Each ends with a
+
+6:24
+
+recommendation. And if you're making the
+
+6:26
+
+connection, this is very similar to what
+
+6:27
+
+we covered in layer 1. The more precise
+
+6:29
+
+you are up front, the less room Claude
+
+6:31
+
+will have to make mistakes. To help
+
+6:33
+
+enforce this, we'll add this to our
+
+6:34
+
+verification Claude prompt. Outline the
+
+6:37
+
+evaluation criteria you will use to
+
+6:38
+
+ensure a highquality final product. Be
+
+6:41
+
+precise. The second step is use a second
+
+6:43
+
+AI model as the critic. Think of this
+
+6:45
+
+like a second robot librarian from a
+
+6:48
+
+different library. You use that
+
+6:49
+
+librarian to grade the output of the
+
+6:52
+
+first librarian. this other librarian
+
+6:53
+
+has a whole different set of books and
+
+6:56
+
+that may give them insight into why this
+
+6:57
+
+first librarian is right or wrong. Now a
+
+6:59
+
+tactical way to do this if you use claw
+
+7:01
+
+code you could install the codeex plugin
+
+7:04
+
+which will allow you to directly ask
+
+7:06
+
+codec questions within your claude code
+
+7:08
+
+session. So you could say something like
+
+7:09
+
+if this turns into a complex build run
+
+7:12
+
+the final output by codeex to ensure
+
+7:14
+
+both systems agree. And step three is
+
+7:16
+
+pull external signal where possible. The
+
+7:19
+
+question here is how can you bring in
+
+7:20
+
+additional context that will help you
+
+7:22
+
+verify an output? Here are two concrete
+
+7:24
+
+examples. Let's say you're deploying an
+
+7:25
+
+app and you're not sure if it's
+
+7:27
+
+successfully deployed. What you can do
+
+7:28
+
+instead is connect your clawed session
+
+7:30
+
+with your system where it's deployed so
+
+7:32
+
+it can verify that it has been deployed
+
+7:34
+
+successfully. We are making a connection
+
+7:36
+
+to pull external data to enhance our
+
+7:38
+
+verification layer. And now if it says
+
+7:41
+
+that the deployment was successful, we
+
+7:42
+
+know for certainty that it actually was.
+
+7:44
+
+In a non-technical example, let's say
+
+7:46
+
+you're working on a monthly report. You
+
+7:48
+
+could bring in your historical reports
+
+7:49
+
+to use as reference for the exact format
+
+7:52
+
+that the final output should be in.
+
+7:53
+
+Pulling in data and empowering the
+
+7:55
+
+verification process. Now bring in this
+
+7:57
+
+concept with the first two points.
+
+7:58
+
+Combining this third point with the
+
+8:00
+
+first two points, here is a prompt that
+
+8:02
+
+you can run in Claude which will help
+
+8:03
+
+ensure that you are adding a proper
+
+8:05
+
+evaluation layer where it makes sense. I
+
+8:07
+
+can't stress how important this is. The
+
+8:08
+
+creator of Claude Code, Boris Churnney,
+
+8:10
+
+said it best. If Claude has a feedback
+
+8:12
+
+loop, it will two to 3x quality of the
+
+8:14
+
+final result. So layer 1 and layer two
+
+8:16
+
+are about creating specs and evaluating
+
+8:18
+
+the output. The third layer, however, is
+
+8:20
+
+where we build a foundation that can't
+
+8:21
+
+be replicated. But before we get to
+
+8:23
+
+that, if this is your first video of
+
+8:25
+
+mine, welcome to the channel. If it's
+
+8:27
+
+your second or more, here is our
+
+8:28
+
+anti-slop agreement. The visuals, the
+
+8:30
+
+testing, the hours of research that went
+
+8:32
+
+into this video, this is entirely built
+
+8:34
+
+for humans, not for AI clankers. So all
+
+8:37
+
+that I ask is that you subscribe as part
+
+8:38
+
+of this agreement because it helps it
+
+8:40
+
+reach more people so that I can keep
+
+8:41
+
+making videos like this. Also, every
+
+8:43
+
+couple of weeks I give away a Claude Max
+
+8:45
+
+subscription. So, comment below with
+
+8:46
+
+whatever you're building to enter. Layer
+
+Layer 3
+
+8:48
+
+three, the environment. So, layer 1 and
+
+8:50
+
+layer two need somewhere to live. And
+
+8:52
+
+that's layer three, which is the
+
+8:53
+
+environment that you build in. Think of
+
+8:54
+
+this layer as a workshop. The spec is a
+
+8:56
+
+blueprint pinned to the wall. The
+
+8:58
+
+verifier is the quality check station by
+
+9:00
+
+the door. And then the environment is
+
+9:02
+
+the workshop itself. You need to create
+
+9:04
+
+the proper tooling and the proper system
+
+9:06
+
+so that the whole thing can function at
+
+9:07
+
+a high level. Now, the problem here is
+
+9:09
+
+that most people use a workshop from
+
+9:10
+
+scratch every time they use AI and know
+
+9:13
+
+if you have a single chat with your
+
+9:14
+
+entire conversation history. That is not
+
+9:16
+
+what I'm talking about. So, how do you
+
+9:18
+
+create a proper workspace that improves
+
+9:20
+
+over time? First is you need to set up a
+
+9:22
+
+proper Claude MD file. Every time you
+
+9:24
+
+prompt Claude, your claw.md file gets
+
+9:27
+
+injected automatically. It's essentially
+
+9:28
+
+the first thing that Claude reads to
+
+9:30
+
+help determine how it should operate.
+
+9:32
+
+For example, you can add to your Claude
+
+9:33
+
+MD before building anything multi-step
+
+9:35
+
+include a verification plan. Now
+
+9:37
+
+verification is forced into every build,
+
+9:39
+
+not something that you have to remember
+
+9:41
+
+to say. This is just one of the ways
+
+9:42
+
+that you can improve this Claude MD. And
+
+9:44
+
+here's actually mine on the screen. And
+
+9:46
+
+I'm going to call out a couple of
+
+9:47
+
+sections. The first is I outline how
+
+9:49
+
+this repo works. So think of my repo as
+
+9:51
+
+my workspace. It gives high level to the
+
+9:53
+
+details around it. I then tell it the
+
+9:55
+
+custom skills and how they're routed,
+
+9:57
+
+how to use them. I then outline the
+
+9:59
+
+architecture of the training data or
+
+10:01
+
+knowledge architecture so that the AI
+
+10:03
+
+knows where to look for certain
+
+10:04
+
+information. And then I have key working
+
+10:06
+
+rules that it should follow no matter
+
+10:08
+
+what. Make this your environment. It's
+
+10:10
+
+your world and AI is living in it. It
+
+10:12
+
+should not feel like the other way
+
+10:13
+
+around. The second step is you need to
+
+10:15
+
+build your LLM knowledge base. Carpathy
+
+10:17
+
+went viral for this concept on Twitter
+
+10:19
+
+that he calls his LLM knowledge base.
+
+10:21
+
+And this is essentially creating a
+
+10:22
+
+folder system on your machine that
+
+10:24
+
+you're able to ingest your own training
+
+10:26
+
+data in a way that makes it really easy
+
+10:28
+
+for Claude to understand where
+
+10:30
+
+information is. This is so important
+
+10:33
+
+because your data is your mode. And this
+
+10:35
+
+begins the process of building out your
+
+10:37
+
+own intellectual data property. And step
+
+10:40
+
+three is you have to start building out
+
+10:42
+
+your skill set. A general rule of thumb
+
+10:44
+
+that I have is if you plan on doing
+
+10:46
+
+something repeatedly, create a custom
+
+10:48
+
+skill for that. Think of this like a
+
+10:49
+
+handbook to complete a specific task.
+
+10:50
+
+And the more you use these skills, the
+
+10:52
+
+better they'll become. I have a saying
+
+10:53
+
+that I tell my team, the best way to
+
+10:55
+
+find a leak in a hose is to run water
+
+10:57
+
+through it. And it's the same with
+
+10:58
+
+skills. The more you use them, the more
+
+11:00
+
+you'll realize where you need to fix
+
+11:02
+
+them and where they're really good. Keep
+
+11:04
+
+running water through it and your
+
+11:05
+
+system's going to compound over time.
+
+11:07
+
+Step four is create rules for what the
+
+11:09
+
+AI can and can't work on. Depending on
+
+11:11
+
+the cost of getting something wrong, you
+
+11:13
+
+need to establish different AI guard
+
+11:14
+
+rails. So, here's how to think of this,
+
+11:16
+
+right? So, take the claw.md file that I
+
+11:18
+
+mentioned earlier. You could add a line
+
+11:20
+
+that says don't make up information, but
+
+11:23
+
+that's a guide, not necessarily a hard
+
+11:25
+
+rule. So, at the end of the day, AI can
+
+11:27
+
+still ignore it. So if you have things
+
+11:28
+
+that are critical not to get wrong, then
+
+11:30
+
+you need to introduce rulebased guard
+
+11:32
+
+rails to ensure that the AI can't bypass
+
+11:35
+
+them. To help you visualize this,
+
+11:37
+
+imagine you have a folder called
+
+11:38
+
+important don'tedit. You could have a
+
+11:40
+
+rule in Claude MD that says don't touch
+
+11:42
+
+anything in the /important don'tedit
+
+11:44
+
+folder. And that might get you 80% of
+
+11:46
+
+the way there, but it's essentially a
+
+11:49
+
+request, not a rule. Claude can still
+
+11:52
+
+touch those files. So instead, you add a
+
+11:54
+
+pre-tool use hook before Claude uses the
+
+11:57
+
+write or edit tool and it checks to see
+
+12:00
+
+the file that it's trying to edit. Now
+
+12:02
+
+Claude literally can't make the edit and
+
+12:04
+
+it's enforced at the tool level, not the
+
+12:06
+
+prompt level. And as a result of this,
+
+12:08
+
+this is now a concrete rule that the
+
+12:10
+
+agent can't bypass. So with this in
+
+12:12
+
+mind, bucket things into three groups.
+
+12:14
+
+The first is always do. This is things
+
+12:16
+
+that AI should run on autopilot. The
+
+12:18
+
+second is ask first. So this is anything
+
+12:21
+
+that you want to double check. And then
+
+12:23
+
+the third is never do. These are lines
+
+12:24
+
+that can't be crossed that are
+
+12:26
+
+absolutely critical not to get wrong.
+
+12:28
+
+Here's a prompt that brings all of these
+
+12:30
+
+four points that I mentioned to help
+
+12:32
+
+audit your system and create an
+
+12:33
+
+optimized environment for claw to
+
+12:35
+
+interact with. That's the Carpathy
+
+One Thing to Focus On
+
+12:37
+
+method end to end. The spec, the
+
+12:38
+
+verifier, and the environment. But
+
+12:40
+
+there's a question that needs to be
+
+12:41
+
+answered. What's the one thing that
+
+12:43
+
+Carpathy thinks we should focus on in
+
+12:44
+
+the age of AI? Here's him getting asked
+
+12:46
+
+this in an interview. What still remains
+
+12:49
+
+worth learning deeply when intelligence
+
+12:52
+
+gets cheap as we move into the next era
+
+12:54
+
+of AI?
+
+12:55
+
+You can outsource your thinking, but you
+
+12:57
+
+can't outsource your understanding.
+
+12:58
+
+And the thing with everything we covered
+
+13:00
+
+here is that the three layers are
+
+13:01
+
+centered around your understanding of
+
+13:03
+
+the bigger picture. You need to
+
+13:04
+
+understand your goals and what's needed
+
+13:06
+
+to direct AI to start working for you.
+
+13:08
+
+Now, if you like this video, you will
+
+13:10
+
+love this one where I do a deep dive
+
+13:11
+
+into four clawed projects that you need
+
+13:13
+
+to build today using these three layers.
+
+13:16
+
+I'll see you over there.
+
+</transcript>

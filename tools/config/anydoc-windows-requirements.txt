@@ -1,0 +1,2 @@
+# Optional isolated Windows x64 CPython >=3.10 wheel; verified in the 2026-09-11 comparison.
+firecrawl-anydoc==0.2.4 --hash=sha256:7c9ffc81946e6954c124560ed1d395e0103a1a08fdc0f6be382e2f35daf6dbc9

@@ -1,0 +1,17 @@
+{
+  "id": "W104",
+  "url": "https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience",
+  "research_briefs": [
+    "f08-rep-free.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:03:50.551140+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w104.json",
+  "title": "Gartner Sales Survey Finds 67% of B2B Buyers Prefer a Rep-Free Experience",
+  "final_url": "https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience",
+  "characters": 10013,
+  "sha256": "a015c7b0b94f3898ac8734c7bbd0e1b964caae7d3065f977c15370804670db86",
+  "http_status": 200
+}

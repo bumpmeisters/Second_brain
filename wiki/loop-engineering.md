@@ -3,6 +3,7 @@ type: concept
 status: active
 trust: unverified
 sources:
+  - "raw/Clippings/You're Prompting Claude Wrong. Use this Stanford Method Instead.md"
   - raw/Clippings/Only the best are using them.md
   - wiki/newsletters/the-pragmatic-engineer/linked-sources/loop-engineering-field-analysis-2026-07-15.md
   - raw/Clippings/Finally. Agent Loops Clearly Explained.md
@@ -16,7 +17,7 @@ sources:
   - https://lilianweng.github.io/posts/2026-07-04-harness/
   - https://www.bensbites.com/p/bens-session
 created: 2026-06-11
-updated: 2026-08-14
+updated: 2026-09-09
 ---
 
 # Loop Engineering
@@ -73,6 +74,16 @@ The BUILD material situates loop engineering after a curated knowledge base and 
 ## Harness-improvement loop
 
 A harness-improvement loop follows `observe failures -> propose bounded edit -> evaluate -> accept or reject`. Verifiers, permissions and evaluation configuration stay outside the editable surface. Passing behavior and rejected attempts are preserved so the loop cannot erase counterevidence or attribute gains to confounded changes (source: [[week3-primary-verification-dossier-2026-07-16]]).
+
+## Workflow-Abhängigkeiten vor Parallelisierung prüfen
+
+Vor dem Aufteilen eines Workflows prüfen, welche Schritte wirklich das Ergebnis oder den veränderten Zustand eines Vorgängers benötigen. Unabhängige Zweige dürfen parallel laufen; beim Zusammenführen Vollständigkeit und Fehlerstatus aller benötigten Ergebnisse prüfen. Routing nur bei tatsächlich unterschiedlichen Folgeabläufen verwenden und Wiederholungen mit überprüfbaren Zielen sowie festen Abbruchgrenzen versehen.
+
+Die Graph-Bezeichnungen sind didaktische Hilfen. Kein Stanford-Nachweis, keine 99%- oder 10x-Behauptung; mehr Zweige oder Agenten bedeuten nicht automatisch bessere Ergebnisse.
+
+Methodische Ableitung P47-C05 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/You're Prompting Claude Wrong. Use this Stanford Method Instead.md` — Chain; diamond and wait test; routing; bounded loops; practitioner.
 
 ## Open questions
 

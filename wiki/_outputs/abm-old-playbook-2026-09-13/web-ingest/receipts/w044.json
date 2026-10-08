@@ -1,0 +1,17 @@
+{
+  "id": "W044",
+  "url": "https://openai.com/index/buy-it-in-chatgpt",
+  "research_briefs": [
+    "s03-aeo.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:46.180483+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w044.json",
+  "title": "Buy it in ChatGPT: Instant Checkout and the Agentic Commerce Protocol | OpenAI",
+  "final_url": "https://openai.com/index/buy-it-in-chatgpt/",
+  "characters": 7670,
+  "sha256": "a5cabc2942f97e6d11e0724398a896b5ceedb8369361df79dc099ceb93cad5f0",
+  "http_status": 200
+}

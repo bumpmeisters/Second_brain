@@ -4,7 +4,7 @@ status: active
 sources:
   - raw/assets/04_Persona_und_Audience
 created: 2026-06-03
-updated: 2026-06-03
+updated: 2026-09-12
 ---
 
 # Persona and Audience Library
@@ -45,8 +45,17 @@ The Microsoft Stream MP4 was cataloged but not transcribed in this pass, so its 
 - [[customer-journey-mapping]]
 - [[synthetic-customer-intelligence]]
 
-## Related pages
+## Ergänzung: Kaufrollen und Personaformen
+
+[[buying-role-persona-frameworks]] ergänzt den vorhandenen Bestand um drei gesicherte Autorenseiten und den Vergleich von Rollenfunktion, Personaform und Evidenzmodus. Der dort verlinkte Frameworkentwurf ist eine eigene Kombination für rollenbezogene Marketingarbeit. Die oben katalogisierten HP-/IDG-Rohmaterialien wurden dafür nicht pauschal neu erschlossen; ihre bisherigen Zugangs- und Prüfgrenzen bleiben bestehen.
+
+## Gezielte Anwendung im TÜV-Projekt, 12.09.2026
+
+D38 hat ausschließlich die vier ausgewählten HP-/IDG-Originale visuell verglichen: SMB ITDM/BDM, EMEA HPS, Pan-Commercial Services und IDG Persona/Journey. [Originalvergleich und Fundstellen](../../Project%20Hub/TÜV%20Rheinland/arbeit/jobrollen-persona-frameworks/originalvergleich.md) sowie [gewählte Profilstruktur](../../Project%20Hub/TÜV%20Rheinland/kontext/jobrollen-persona-profilstruktur.md) dokumentieren die Unterschiede. D39 überträgt die Struktur auf [berufliche Arbeitsprofile über 24 TÜV-Felder](../../Project%20Hub/TÜV%20Rheinland/kontext/berufliche-arbeitsprofile.md). Die TÜV-Profile bleiben vorläufige Arbeitsannahmen; der Vergleich erschließt nicht den gesamten Bibliotheksbestand und hebt keine bestehenden Readiness-Sperren auf. Keine neue kanonische Methode oder empirische Persona-Validierung.
+
+## Verwandte Seiten
 
 - [[marketing-assets-library]]
+- [[buying-role-persona-frameworks]]
 - [[briefing-template-library]]
 - [[hp-examples-library]]

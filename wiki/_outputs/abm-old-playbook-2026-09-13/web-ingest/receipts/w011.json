@@ -1,0 +1,17 @@
+{
+  "id": "W011",
+  "url": "https://bombora.com/blog/demystifying-intent-data-myths-and-truths",
+  "research_briefs": [
+    "t01-identity-to-intent.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:54:01.847465+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w011.json",
+  "title": "Demystifying Intent data myths and truths - Bombora",
+  "final_url": "https://bombora.com/blog/demystifying-intent-data-myths-and-truths/",
+  "characters": 5999,
+  "sha256": "b943b6cc9c01b0802504a299b229f10482c9fb72e1d87ae1b4bee14d370c4d95",
+  "http_status": 200
+}

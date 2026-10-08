@@ -7,7 +7,7 @@ canonical_id: publication-f26278a5e4af204d
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-09-10
 ---
 
 # Alex Volkov from ThursdAI
@@ -57,11 +57,11 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-10 — Reproducible runtime identity**: The Astra roundup contributes configuration and monitorability questions but no independent performance confirmation because the author had not used the model at publication time (source: [[agent-runtime-identity-source-family-2026-09-10]]).
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[agent-runtime-identity-source-family-2026-09-10]] - Astra-family context for harness, effort, state, and monitorability; launch claims remain unverified.
 
 ## Feedback and corrections
 

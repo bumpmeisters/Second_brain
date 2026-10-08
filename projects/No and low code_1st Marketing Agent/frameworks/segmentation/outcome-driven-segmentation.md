@@ -3,9 +3,9 @@ framework: outcome-driven-segmentation
 domain: segmentation
 type: adapted
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-09-14
 source-confidence: high
 ---
 
@@ -99,6 +99,14 @@ Draft until applied with genuine outcome data.
 ## Evolution Triggers
 
 Revise after first quantitative application or repeated ambiguity in outcome wording.
+
+## P57: genehmigte Quellen- und Schnittstellenpräzisierung
+
+[Strategyns ODI-Darstellung](https://strategyn.com/outcome-driven-innovation-process/) verbindet Jobausführende, gewünschte Ergebnisse und Quantifizierung unerfüllter Bedürfnisse. Qualitative Ergebnisse dürfen Hypothesen tragen; quantifizierte Prioritäten und Segmente benötigen passende Erhebung. Kein vollständiger Abgleich mit HBR 2002 behauptet.
+
+Für [[value-proposition-design]] und [[resonating-focus-value-proposition]] werden Jobkontext, Ergebnisformulierungen, Erhebungsbasis und Prioritätsunsicherheit übergeben. Dieser Bedarfseingang ist noch kein fertiges Nutzenversprechen.
+
+Auditspur: (source: research/2026-09-14-framework-source-verification-p57.md), sekundäre Prüfungszusammenstellung; [[_outputs/semantic-ingest/p57/source-bundle]].
 
 ## Sources And Provenance
 

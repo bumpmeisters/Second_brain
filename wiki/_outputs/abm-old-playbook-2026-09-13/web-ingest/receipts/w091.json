@@ -1,0 +1,17 @@
+{
+  "id": "W091",
+  "url": "https://www.gartner.com/en/documents/5088931",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:28.231287+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w091.json",
+  "title": "Help B2B Buyers Navigate Change Management for Complex Purchases",
+  "final_url": "https://www.gartner.com/en/documents/5088931",
+  "characters": 8047,
+  "sha256": "42b87919c56f1c4b475900237749567a8ed9fd903ab22c7434aa9062c772fee6",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W138",
+  "url": "https://www.salesforce.com/marketing/what-is-demand-generation-marketing?bc=OTH",
+  "research_briefs": [
+    "t03-lead-to-demand.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:22.146807+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w138.json",
+  "title": "What is Demand Generation? Strategies & Benefits | Salesforce",
+  "final_url": "https://www.salesforce.com/marketing/what-is-demand-generation-marketing/?bc=OTH",
+  "characters": 23597,
+  "sha256": "ccaa2cb066ac41805f953a00a4d0858e18f73b8da6030a95e1bdc7e805604b4f",
+  "http_status": 200
+}

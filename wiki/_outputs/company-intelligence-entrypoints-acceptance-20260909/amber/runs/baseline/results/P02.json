@@ -1,0 +1,25 @@
+{
+  "task_id": "P02",
+  "attempt_id": "50348255c5424476bcb721946783ce13",
+  "input_revision": 5,
+  "sources": [],
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "Amber Fictional Instruments is an invented test company.",
+      "field": "identity",
+      "entity_id": "amber-fictional-group",
+      "region": "global",
+      "period": "2025",
+      "classification": "fact",
+      "source_id": "S1",
+      "locator": "Section identity"
+    }
+  ],
+  "gaps": [],
+  "used_budget": {
+    "searches": 0
+  },
+  "problems": [],
+  "next_question": null
+}

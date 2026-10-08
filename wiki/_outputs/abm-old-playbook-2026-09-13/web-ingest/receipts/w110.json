@@ -1,0 +1,17 @@
+{
+  "id": "W110",
+  "url": "https://www.highspot.com/en-gb/product/digital-sales-rooms",
+  "research_briefs": [
+    "s02-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:24.346962+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w110.json",
+  "title": "Digital Sales Rooms Fueled by AI to Accelerate Deals",
+  "final_url": "https://www.highspot.com/en-gb/product/digital-sales-rooms/",
+  "characters": 9875,
+  "sha256": "ae3ac173abb6e4c2c9e11ce99d1684c61137d9af15c7a097d19719c1c47eb423",
+  "http_status": 200
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "D1",
+    "question": "Wo liegen laut aktuellem Kernwiki die aktiven binären Originalquellen und AI-Research-Anhänge? Welche Rolle hat die frühere Google-Drive-Kopie, und wo liegen suchbare Textderivate? Belege den Unterschied zwischen aktuellem Vertrag und Historie."
+  },
+  {
+    "id": "D2",
+    "question": "Welche drei Persistenzschichten unterscheidet unser Second Brain, und bedeutet die aktive Learning-Schicht, dass bereits ein freigegebenes kontinuierliches Fine-Tuning oder Gewichtsupdate läuft?"
+  },
+  {
+    "id": "D3",
+    "question": "Was bedeutet ein 50%-Task-Horizon in unseren Agent-Evaluation-Notizen? Ist das die Laufzeit des Agenten oder bereits eine sichere Delegationsgrenze für folgenreiche Aufgaben?"
+  },
+  {
+    "id": "D4",
+    "question": "Darf eine noch ungelesene Quelle den Status registered-only bekommen? Was unterscheidet diesen Status von corroborating hinsichtlich Inhaltsprüfung, Evidenzmatrix, Zielseite und Freigabe?"
+  },
+  {
+    "id": "D5",
+    "question": "Welche drei Operationen nennt unser Kernwiki für Context Engineering? Folgt daraus, dass wir immer komprimieren oder möglichst viel Kontext laden sollten, oder wie wird die Strategie ausgewählt?"
+  },
+  {
+    "id": "D6",
+    "question": "Welche im Kernwiki dokumentierte prozentuale Verbesserung unserer eigenen Antwortqualität wurde durch einen lokalen kontrollierten Test von Loop Engineering nachgewiesen? Nenne Zahl und Versuchsaufbau nur, wenn dafür tatsächlich ein Beleg vorliegt."
+  }
+]

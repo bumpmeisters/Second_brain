@@ -1,0 +1,220 @@
+Prüf- und Zertifizierordnung (PZO) | TÜV SÜD (https://www.tuvsud.com/de-de/agb/pzo)
+citeturn36view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"turn27view0","lineno":null}); Total lines: 406
+L0: cite0†iframe†www.googletagmanager.com L1: 
+L2: cite1†Home L3: 
+L4: Close menu
+L5: 
+L6:   * Branchen und Dienstleistungen Go to next level
+L7: 
+L8: Branchen und Dienstleistungen
+L9: Branchen
+L10:     * cite2†Chemie- und Prozessindustrie L11:     * cite3†Energie Go to next level
+L12:       * cite4†Erneuerbare Energien L13:       * cite5†Kraftwerke L14:       * cite6†Netze & Speicher L15:       * cite7†Energieeffizienz L16:     * cite8†Gesundheit und Medizintechnik L17:     * cite9†Infrastruktur und Bahn Go to next level
+L18:       * cite10†Bahn L19:       * cite11†Freizeitparks und Seilbahnen L20:       * cite12†Infrastruktur L21:     * cite13†Konsumgüter und Handel Go to next level
+L22:       * cite14†Haus und Garten L23:       * cite15†Lebensmittel L24:       * cite16†Licht L25:       * cite17†Spielzeug und Produkte für Kinder L26:       * cite13†ALLE SERVICES L27:       *     * cite18†Mobilität und Automotive Go to next level
+L28:       * cite19†Autohaus & Werkstatt L29:       * cite20†Automotive L30:       * cite21†Führerschein & Prüfung L31:       * cite22†Hauptuntersuchung (HU) L32:       * cite23†OEM & Industrial Fleet L33:       * cite24†Truck L34:     * cite25†Produzierende Industrie Go to next level
+L35:       * cite26†Anlagenbau und -betrieb L36:       * cite27†Druckbehälter und Dampfkessel L37:       * cite28†Maschinen, Geräte und Ausrüstung L38:       * cite29†Robotik und FTS L39:     * cite30†Real Estate Go to next level
+L40:       * cite31†Immobilien L41:       * cite32†Technische Gebäudeausrüstung und Aufzüge L42: Dienstleistungen
+L43:     * cite33†Auditierung und Zertifizierung L44:     * cite34†Produktprüfung und -zertifizierung L45:     * cite35†Berufliche Weiterbildung L46:     * cite36†Funktionale Sicherheit L47:     * cite37†Netinform L48:     * cite38†Weitere Dienstleistungen L49: 
+L50: Fokusthemen
+L51:     * cite39†Nachhaltigkeit L52:     * cite40†Wasserstoff L53:     * cite41†CyberSecurity L54:     * cite42†Künstliche Intelligenz L55: 
+L56:   * Wissen und Info Go to next level
+L57: 
+L58: Wissen und Info
+L59: Wissen & Info
+L60:     * cite43†Wissenswert L61:     * cite44†Newsletter L62:     * cite45†Veranstaltungen L63:     * cite46†Indust-RE L64:     * cite47†Prüfzeichen und Zertifikate L65: 
+L66: Publikationen
+L67:     * cite48†ABOUT TRUST Magazin L68:     * cite49†Geschäftsbericht†geschaeftsbericht.tuvsud.com L69:     * cite50†INSICHT Magazin L70:     * cite51†Nachhaltigkeitsbericht†nachhaltigkeitsbericht.tuvsud.com L71:     * cite52†TÜV Report L72: 
+L73:   * Store Go to next level
+L74: 
+L75: Store
+L76: Store
+L77:     * cite53†Baucontrolling & -abnahme L78:     * cite54†Berufliche Weiterbildung L79:     * cite55†Business Assurance L80:     * cite56†Datenblattservice L81:     * cite57†ISTA Testing & BattVO Services L82: 
+L83:   * cite58†SERVICE-CENTER L84: 
+L85:   * cite59†Über uns L86:   * cite60†Karriere L87:   * cite61†Newsroom L88:   * cite62†Kontakt L89: 
+L90:   * WORLDWIDE
+L91: 
+L92:   * cite58†SERVICE-CENTER L93:   * cite63†Standorte L94: Toggle search bar Toggle mobile menu
+L95: 
+L96: Suche [Input: Suche] Suche
+L97: 
+L98: cite64†Image: Headerbild L99: # Prüf-, Zertifizierungs-, Validierungs- und Verifizierungsordnung (PZVVO)
+L100: 
+L101: Prüf-, Zertifizierungs-, Validierungs- und Verifizierungsordnung (PZVVO) der TÜV SÜD Gruppe
+L102: +++ NEU +++ NEU +++ NEU +++
+L103: Ab 01.01.2024 gibt es für die Kunden der TÜV SÜD Gruppe eine neue Version der Prüf- und Zertifizierungsordnung (PZO). Diese wurde in einigen Punkten überarbeitet und im Wesentlichen durch die Prüfleistungen zur Validierung und Verifizierung ergänzt. Sie wird entsprechend künftig auch den Titel Prüf-, Zertifizierungs-, Validierungs- und Verifizierungsordnung (PZVVO) tragen.
+L104: Sobald der Wechsel auf die neue Version der PZVVO für Ihr Vertragsverhältnis wirksam wird, werden Sie von ihrem konkreten Vertragspartner in der TÜV SÜD Gruppe entsprechend informiert. In der Übergangsphase bleiben die Regelungen der bisherigen PZO weiter gültig.
+L105: 
+L106: Module in der PZVVO:
+L107: 
+L108: Die PZVVO besteht aus verschiedenen Modulen, die in unterschiedlicher Kombination verwendet werden können.
+L109:  MODUL  | GELTUNGSBEREICH
+L110: A  | Allgemeine Bedingungen
+L111: B1  | Besondere Bedingungen für die Prüfung und Zertifizierung von Produkten
+L112: B2  | Besondere Bedingungen für die Auditierung und Zertifizierung von Managementsystemen
+L113: B3  | Besondere Bedingungen für die Zertifizierung von Personen
+L114: B4  | Besondere Bedingungen für die Validierung und Verifizierung von Informationen (Behauptungen)
+L115: C1  | Besondere Bedingungen für EU Benannte Stellen im Bereich Medizinprodukte und für TÜV SÜD Product Service GmbH (TÜV SÜD PS) als Zertifizierungsstelle für Qualitätsmanagementsysteme nach ISO 13485
+L116: C2  | Besondere Bedingungen für Leistungen der TÜV SÜD Management Service GmbH (TÜV SÜD MS)
+L117: C3  | Besondere Bedingungen für Zertifizierungen durch TUV SUD BABT Unltd. (TUV SUD BABT)
+L118: C4  | Besondere Bedingungen von TÜV SÜD America Inc. (TÜV SÜD America) für die Prüfung und Zertifizierung von Produkten
+L119: C5  | Besondere Bedingungen für TUV SUD PSB Pte Ltd (TUV SUD PSB)
+L120: C6  | Besondere Bedingungen für TUV SUD South Asia Pvt. Ltd. (TUV SUD South Asia)
+L121: C7  | Besondere Bedingungen für den Bereich Netzverträglichkeit, Zertifizierung von Erzeugungseinheiten (EZE), -anlagen und Speicher (EZA) sowie deren Komponenten nach FGW e.V. (Fördergesellschaft Windenergie) Technische Richtlinie (TR) 8 bei der TÜV SÜD Industrie Service GmbH (TÜV SÜD IS) sowie der TÜV SÜD Product Service GmbH (TÜV SÜD PS)
+L122: Die Kombination der verschiedenen Module ergibt unterschiedliche geschäftliche Anwendungsfälle.
+L123: 
+L124: Sie können die entsprechenden Module gemäß der untenstehenden Tabelle herunterladen.
+L125: BESCHREIBUNG  | MODULE
+L126: PZVVO für Produkten  | cite65†AB1 L127: PZVVO für Produkte und Managementsysteme  | cite66†AB1B2 L128: PZVVO für die Zertifizierung von Personen  | cite67†AB3 L129: PZVVO für Produkte und die Validierung und Verifizierung von Informationen  | cite68†AB1B4 L130: PZVVO für spezifische Managementsysteme und die Validierung und Verifizierung von Informationen  | cite69†AB2B4 L131: PZVVO für die Validierung und Verifizierung von Informationen  | cite70†AB4 L132: PZVVO für Produkte und Managementsysteme allgemein sowie besondere Bedingungen für den Bereich Medizinprodukte (TÜV PS)  | cite71†AB1B2C1 L133: PZVVO für spezifische Managementsysteme und Managementsysteme allgemein (TÜV MS)  | cite72†AB2C2 L134: PZVVO für spezifische Managementsysteme sowie Produkte und Managementsysteme allgemein  | cite73†AB1B2C2 L135: PZVVO für Produkte und Managementsysteme, von Personen sowie für die Validierung und Verifizierung von Informationen der TUV SUD BABT UNLIMITED  | cite74†AB1B2B3B4C3 L136: PZVVO für Produkte und Managementsysteme der TÜV SÜD America Inc.  | cite75†AB1B2C4 L137: PZVVO für Produkte und Managementsysteme der TUV SUD PSB Pte.Ltd.  | cite76†AB1B2C5 L138: PZVVO für Produkte und Managementsysteme der TUV SUD South Asia Pvt. Ltd.  | cite77†AB1B2C6 L139: PZVVO für Netzverträglichkeit sowie von Produkten und Managementsystemen allgemein  | cite78†AB1B2C7 L140: PZVVO TÜV SÜD komplett  | cite79†AB1B2B3B4C1C2C3C4C5C6C7 L141: Glossar  | cite80†Glossar L142: PZVVO TÜV SÜD komplett inklusive Glossar  | cite81†AB1B2B3B4C1C2C3C4C5C6C7 & Glossar L143: * * *
+L144: 
+L145: Prüf- und Zertifizierordnung (PZO), Version 05/2021:
+L146: Module in der Prüf- und Zertifizierungsverordnung:
+L147: Die PZO besteht aus verschiedenen Modulen, die in unterschiedlicher Kombination verwendet werden können. Eine vollständige Liste der Module und ihre Beschreibung finden Sie unten.
+L148: • A: Allgemeine Bedingungen
+L149: • B1: Besondere Bedingungen für die Prüfung und Zertifizierung von Produkten
+L150: • B2: Besondere Bedingungen für die Auditierung und Zertifizierung von Managementsystemen
+L151: • C1: Besondere Bedingungen für den Bereich Medizinprodukte durch TÜV SÜD Product Service GmbH
+L152: • C2: Besondere Bedingungen für die Auditierung und Zertifizierung von bestimmten Managementsystemen durch TÜV SÜD Management Service GmbH
+L153: • C3: Besondere Bedingungen für die Zertifizierung durch TUV SUD BABT UNLIMITED
+L154: • C4: Besondere Bedingungen von TÜV SÜD America Inc. für die Prüfung und Zertifizierung von Produkten
+L155: • C5: Besondere Bedingungen für TUV SUD PSB Pte. Ltd.
+L156: • C6: Besondere Bedingungen für TUV SUD South Asia Pvt. Ltd.
+L157: • C7: Besondere Bedingungen für den Bereich Netz-verträglichkeit, Zertifizierung von Erzeugungseinheiten (EZE), -anlagen und Speicher (EZA)
+L158: Identifizieren der richtigen Module für Ihre Bedürfnisse:
+L159: Die Kombination der verschiedenen Module ergibt unterschiedliche geschäftliche Anwendungsfälle. Sie können die entsprechenden Module gemäß der untenstehenden Tabelle herunterladen.
+L160:  MODULE  | SCOPE
+L161: cite82†ABI |  PZO von Produkten
+L162: cite83†AB1B2 |  PZO von Produkten und Managementsystemen allgemein
+L163: cite84†AB1B2C1 |  PZO von Produkten und Managementsystemen allgemein sowie besondere Bedingungen für den Bereich Medizinprodukte (TÜV SÜD PS)
+L164: cite85†AB2C2 |  PZO von spezifischen Managementsystemen und Managementsystemen allgemein (TÜV SÜD MS)
+L165: cite86†AB1B2C2 | PZO von spezifischen Managementsystemen sowie Produkten und Managementsystemen allgemein
+L166: cite87†AB1B2C3 | PZO von Produkten und Managementsystemen der TUV SUD BABT UNLIMITED
+L167: cite88†AB1B2C4 | PZO von Produkten und Managementsystemen der TÜV SÜD America Inc.
+L168: cite89†AB1B2C5 | PZO von Produkten und Managementsystemen der TUV SUD PSB Pte. Ltd
+L169: cite77†AB1B2C6 | PZO von Produkten und Managementsystemen der TUV South Asia Pvt. Ltd.
+L170: cite78†AB1B2C7 | PZO für Netzwerkverträglichkeit sowie von Produkten und Managementsystemen allgemein
+L171: cite90†AB1B2C1C2C3C4C5C6C7 | PZO TÜV SÜD komplett
+L172: English version:
+L173: 
+L174: cite91†Find out more  L175: ### Wie können wir Ihnen helfen?
+L176: 
+L177: cite92†// Feedback L178: 
+L179: cite47†// Prüfzeichen L180: 
+L181: cite63†// Standorte L182: 
+L183:   * cite93†AGB L184:   * cite94†Slavery Statement L185:   * cite95†Impressum L186:   * cite96†Datenschutz L187:   * cite97†Lieferantenportal L188:   * cite98†SERVICE-CENTER L189: 
+L190: COPYRIGHT © 2026 TÜV SÜD
+L191: 
+L192: To top
+L193: 
+L194: WORLDWIDE
+L195: 
+L196: Germany
+L197: 
+L198: cite1†German L199: 
+L200: Global
+L201: 
+L202: cite99†TÜV SÜD Global L203: 
+L204: cite99†English L205: 
+L206: Americas
+L207: 
+L208: cite100†Brazil L209: 
+L210: cite100†Português L211: 
+L212: cite101†Canada L213: 
+L214: cite101†English L215: 
+L216: cite102†Canada L217: 
+L218: cite102†Français L219: 
+L220: cite103†Mexico L221: 
+L222: cite103†Español L223: 
+L224: cite101†USA L225: 
+L226: cite101†English L227: 
+L228: Asia
+L229: 
+L230: cite104†Bangladesh L231: cite104†English L232: 
+L233: cite105†China†www.tuvsud.cn L234: 
+L235: cite105†简体中文†www.tuvsud.cn L236: 
+L237: cite106†China L238: 
+L239: cite106†繁體中文 L240: 
+L241: cite107†Indonesia L242: 
+L243: cite107†English L244: 
+L245: cite108†India L246: 
+L247: cite108†English L248: 
+L249: cite109†Japan L250: 
+L251: cite109†日本語 L252: 
+L253: cite110†Korea L254: 
+L255: cite110†한국어 L256: 
+L257: cite111†Malaysia L258: 
+L259: cite111†English L260: 
+L261: cite112†Philippines L262: 
+L263: cite112†English L264: 
+L265: cite113†Singapore L266: 
+L267: cite113†English L268: 
+L269: cite114†Thailand L270: 
+L271: cite114†ภาษาไทย L272: 
+L273: cite115†Vietnam L274: 
+L275: cite115†Tiếng Việt L276: 
+L277: Europe
+L278: 
+L279: cite116†Austria L280: 
+L281: cite116†German L282: 
+L283: cite117†Belgium L284: 
+L285: cite117†Dutch L286: 
+L287: cite118†Belgium L288: 
+L289: cite118†English L290: 
+L291: cite119†Belgium L292: 
+L293: cite119†Français L294: cite120†Bosnia and Herzegovina L295: 
+L296: cite120†Bosnian L297: 
+L298: cite121†Croatia L299: 
+L300: cite121†Croatian L301: 
+L302: cite122†Czech Republic L303: 
+L304: cite122†Czech L305: 
+L306: cite123†Denmark L307: 
+L308: cite123†Dansk L309: 
+L310: cite124†Finland L311: 
+L312: cite124†English L313: 
+L314: cite102†France L315: 
+L316: cite102†Français L317: 
+L318: cite1†Germany L319: 
+L320: cite1†German L321: 
+L322: cite125†Hungary L323: 
+L324: cite125†Magyar (Hungarian) L325: 
+L326: cite126†Italy L327: 
+L328: cite126†Italiano L329: 
+L330: cite127†Netherlands L331: 
+L332: cite127†English L333: 
+L334: cite128†Norway L335: 
+L336: cite128†English L337: 
+L338: cite129†Poland L339: 
+L340: cite129†Polish L341: 
+L342: cite130†Portugal L343: 
+L344: cite130†Português L345: 
+L346: cite131†Romania L347: 
+L348: cite131†Romanian L349: 
+L350: cite132†Slovakia L351: 
+L352: cite132†Slovak L353: 
+L354: cite133†Slovenia L355: 
+L356: cite133†Slovene L357: cite134†Spain L358: 
+L359: cite134†Español L360: 
+L361: cite135†Sweden L362: 
+L363: cite135†English L364: 
+L365: cite136†Switzerland L366: 
+L367: cite136†German L368: 
+L369: cite137†Turkey L370: 
+L371: cite137†Turkish L372: 
+L373: cite138†United Kingdom L374: 
+L375: cite138†English L376: 
+L377: Middle East and Africa
+L378: 
+L379: cite139†Bahrain L380: 
+L381: cite139†English L382: 
+L383: cite139†Egypt L384: 
+L385: cite139†English L386: 
+L387: cite139†Oman L388: 
+L389: cite139†English L390: 
+L391: cite139†Qatar L392: 
+L393: cite139†English L394: 
+L395: cite139†Saudi Arabia L396: 
+L397: cite139†English L398: 
+L399: cite140†South Africa L400: 
+L401: cite140†English L402: 
+L403: cite139†United Arab Emirates L404: 
+L405: cite139†English 

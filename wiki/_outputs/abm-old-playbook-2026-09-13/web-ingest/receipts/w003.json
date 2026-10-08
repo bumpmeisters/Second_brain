@@ -1,0 +1,18 @@
+{
+  "id": "W003",
+  "url": "https://6sense.com/guides/how-genai-and-llms-are-changing-b2b-buyer-research-and-how-to-respond",
+  "research_briefs": [
+    "f05-dark-funnel.md",
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:41.647045+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w003.json",
+  "title": "The Impact of GenAI and LLMs on B2B Buyer Research",
+  "final_url": "https://6sense.com/guides/how-genai-and-llms-are-changing-b2b-buyer-research-and-how-to-respond/",
+  "characters": 65651,
+  "sha256": "a3010b960fe8c14c4ca56784e1c694838fc55106e9d07e0d4bba035305323b9f",
+  "http_status": 200
+}

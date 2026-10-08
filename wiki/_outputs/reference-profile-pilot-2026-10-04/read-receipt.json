@@ -1,0 +1,95 @@
+{
+  "review_completed_utc": "2026-10-04T19:57:17.639937+00:00",
+  "profile_frozen_before_heldback_full_read": true,
+  "scope": "Complete main article text only; author attribution visible; image content, summaries, related articles, comments and subscription UI not used",
+  "sources": [
+    {
+      "id": "D01",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d01-sales-report-into-marketing.md",
+      "sha256": "ef0ff8a5f5de354405d73bd38c23905dd0ef8f603bc6ef74a7d5ed14246705b8",
+      "main_article_lines": [
+        22,
+        126
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "D02",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d02-brand-dirty-word.md",
+      "sha256": "20006f7157a71f97803c9a4dbca987876798752af6a7c05e8b59ef349576b4ea",
+      "main_article_lines": [
+        22,
+        142
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "D03",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d03-ai-review-bottleneck.md",
+      "sha256": "b5cef4c6df2b0cfd1e0c25c39dbb143cbaecb021021e2d0d46ec73b66d7357b0",
+      "main_article_lines": [
+        22,
+        98
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "D04",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d04-compounding-drag.md",
+      "sha256": "0564b382c92c750cb371853f1c176cf58dc2fadfe32e49a1c727ad444d18de34",
+      "main_article_lines": [
+        22,
+        148
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "D05",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d05-life-lessons.md",
+      "sha256": "d39ede7e9086ff50fc067d230401b21f226e1bde8c3f8d4a73da2d8fb5b2063b",
+      "main_article_lines": [
+        24,
+        152
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "D06",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d06-powerpoint-template.md",
+      "sha256": "fd09f7efec54736b7346bc9e0be85372c202cdfead681c65b4c91b1401f4dc97",
+      "main_article_lines": [
+        22,
+        86
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "H01",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/h01-more-than-b2b.md",
+      "sha256": "4b2c769ed1d7c2fed4c7af2e1b50d672f720d5e257ab3a5ba60b7b29b8ccd84d",
+      "main_article_lines": [
+        18,
+        78
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    },
+    {
+      "id": "H02",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/h02-human-trust.md",
+      "sha256": "4600753db00fc3694353f9dfca3df8f8cdb8d819e44a78ccf08a4db123cda64f",
+      "main_article_lines": [
+        37,
+        238
+      ],
+      "status": "content-reviewed",
+      "claim_endorsement": false
+    }
+  ]
+}

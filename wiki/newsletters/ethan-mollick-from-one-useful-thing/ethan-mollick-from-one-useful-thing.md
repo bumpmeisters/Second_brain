@@ -7,7 +7,7 @@ canonical_id: publication-c10ef2398701053c
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-09-09
 ---
 
 # Ethan Mollick from One Useful Thing
@@ -61,7 +61,7 @@ No decision-relevant signals have been approved for this dossier yet. Future ent
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[facilitator-escalation-design-2026-09-09]] — Bounded design inference for impossible-task handling, proactive human involvement, and correlated-agent review; incident causality remains qualified.
 
 ## Feedback and corrections
 

@@ -10,6 +10,8 @@ updated: 2026-06-23
 
 # Index
 
+- 2026-09-23: Begrenzte Taste-Arbeitshilfe in Audience- und Message-House-Vorlagen; [Quellenreview und Übernahmegrenzen](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md). Optionale Präzisierung, keine Änderung der Stage-Gates.
+
 **Summary**: Entry point for the project wiki and source-tracking system.
 
 ---

@@ -1,0 +1,19 @@
+{
+  "id": "W069",
+  "url": "https://support.google.com/webmasters/answer/16908024",
+  "research_briefs": [
+    "quality-review.md",
+    "s03-aeo.md",
+    "t05-seo-to-entity.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:24.439900+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w069.json",
+  "title": "Search generative AI control - Search Console Help",
+  "final_url": "https://support.google.com/webmasters/answer/16908024",
+  "characters": 12264,
+  "sha256": "ff7b6e81b74c36eb07d428b4154d6cba4345253a9c567c50e0f459f681244b63",
+  "http_status": 200
+}

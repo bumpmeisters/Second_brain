@@ -1,0 +1,15 @@
+{
+  "id": "W131",
+  "url": "https://www.mediaratingcouncil.org/sites/default/files/Standards/2024_IVT_Interim_Updates_FINAL.pdf",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:47.258763+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w131.pdf",
+  "final_url": "https://www.mediaratingcouncil.org/sites/default/files/Standards/2024_IVT_Interim_Updates_FINAL.pdf",
+  "bytes": 272751,
+  "sha256": "8d8fbf3c74eaa10a99cc9f89a70a61ad9c5f16f70f9dbeacca1e1c30d045f531"
+}

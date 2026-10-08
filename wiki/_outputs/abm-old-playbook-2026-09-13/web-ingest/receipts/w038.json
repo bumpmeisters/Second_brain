@@ -1,0 +1,17 @@
+{
+  "id": "W038",
+  "url": "https://journals.sagepub.com/doi/10.1509/jmr.13.0483",
+  "research_briefs": [
+    "s01-abx.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:18.520435+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w038.json",
+  "title": "The Perils of Proactive Churn Prevention Using Plan Recommendations: Evidence from a Field Experiment - Eva Ascarza, Raghuram Iyengar, Martin Schleicher, 2016 ",
+  "final_url": "https://journals.sagepub.com/doi/10.1509/jmr.13.0483",
+  "characters": 58637,
+  "sha256": "c5d4fbedc43f2f38710ea961711ddcf1a6432892e29a4bb3990141f65cde332f",
+  "http_status": 200
+}

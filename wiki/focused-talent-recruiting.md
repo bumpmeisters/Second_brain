@@ -6,9 +6,10 @@ use_when: "A role is scarce and consequential enough that high-volume funnel opt
 avoid_when: "The role, success criteria, accountable hiring manager, lawful sourcing boundary, or fair and accessible evaluation process is undefined."
 output: "A documented candidate universe, evidence-bearing introductions, relationship history, two-way work-sample record, hiring decision, and acceptance-to-start plan."
 sources:
+  - "raw/Clippings/We've Forgotten How to Hire a Marketing Leader.md"
   - raw/imports/automated-clippings/youtube/UC6t1O76G0jYXOAoYCm153dA/2026-08-09--zegYJ6dhIg4.md
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-09-09
 ---
 
 # Focused Talent Recruiting
@@ -39,6 +40,16 @@ Use this workflow when the role materially affects outcomes, the credible candid
 6. Keep the hiring manager accountable for judgment, relationship quality, and timely decisions.
 7. Manage offer acceptance through start explicitly, including unresolved constraints, communication, and withdrawal risk.
 8. Record the decision and later compare on-the-job evidence with the original success criteria.
+
+## AI-Kompetenz in Recruiting über überprüfbare Urteile prüfen
+
+Für Marketing-Führungsrollen vorhandene, freigebbare Arbeitsbeispiele und einen begrenzten gemeinsamen Fall nutzen. Nach Entscheidungen, verworfenen Optionen, Ergebnissen und Fehlern fragen. AI-Kompetenz daran prüfen, welche Teile delegiert wurden, welche Fehler erkannt wurden und wie der Kandidat die Qualität beurteilte. Erfolgskriterien, verfügbare Unterstützung und realistische Anlaufzeit gegenseitig klären.
+
+Keine vollständige unbezahlte Jahresstrategie verlangen; Vertraulichkeit, faire Kriterien und angemessener Aufwand gelten weiter. Weder Ähnlichkeit noch rhetorische Sicherheit als Leistungsnachweis verwenden.
+
+Methodische Ableitung P47-C08 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/We've Forgotten How to Hire a Marketing Leader.md` — Vorhandene Arbeitsbeispiele; gemeinsame Fallprüfung; AI-Arbeit zeigen; Erfolgskriterien; practitioner.
 
 ## Inspectable output
 

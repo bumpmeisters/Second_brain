@@ -1,0 +1,491 @@
+{
+  "locks_verified": 10,
+  "runs": [
+    {
+      "run": "dev-b-1",
+      "complete": true,
+      "case_order": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "calls": 15,
+      "context_chars": 119577,
+      "shared_chars": 82082,
+      "nonshared_chars": 37495,
+      "answer_words": 654,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T13:56:20.135152+00:00",
+      "last_query_utc": "2026-09-19T13:57:54.002477+00:00",
+      "answer_sha256": "e5ad61b8de1002c0ec363a2ffea350ab88d14c75f6ceeed9f03a01d23e7c3b9e",
+      "trace_sha256": "e43671ac6400efba4f24d4e6f1ec238af96bc3a93a40bcb0c58050d6c9e54330",
+      "per_case": {
+        "shared": {
+          "calls": 2,
+          "chars": 82082,
+          "denied": 0
+        },
+        "D1": {
+          "calls": 1,
+          "chars": 8188,
+          "denied": 0
+        },
+        "D2": {
+          "calls": 1,
+          "chars": 8963,
+          "denied": 0
+        },
+        "D3": {
+          "calls": 3,
+          "chars": 7434,
+          "denied": 1
+        },
+        "D4": {
+          "calls": 3,
+          "chars": 7353,
+          "denied": 0
+        },
+        "D5": {
+          "calls": 2,
+          "chars": 4411,
+          "denied": 0
+        },
+        "D6": {
+          "calls": 3,
+          "chars": 1146,
+          "denied": 1
+        }
+      }
+    },
+    {
+      "run": "dev-b-2",
+      "complete": true,
+      "case_order": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "calls": 14,
+      "context_chars": 119771,
+      "shared_chars": 43464,
+      "nonshared_chars": 76307,
+      "answer_words": 649,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T13:56:40.152137+00:00",
+      "last_query_utc": "2026-09-19T13:57:58.311207+00:00",
+      "answer_sha256": "d2801e989461445cda8fc341d2dc5b7bcdb09ae7312a6b5fd2f4f74277f4d067",
+      "trace_sha256": "f2665644663fd54345d6b61fac446de058369700f490d1a89015778ba348b558",
+      "per_case": {
+        "shared": {
+          "calls": 2,
+          "chars": 43464,
+          "denied": 0
+        },
+        "D6": {
+          "calls": 3,
+          "chars": 17651,
+          "denied": 0
+        },
+        "D5": {
+          "calls": 1,
+          "chars": 8305,
+          "denied": 0
+        },
+        "D4": {
+          "calls": 1,
+          "chars": 15169,
+          "denied": 0
+        },
+        "D3": {
+          "calls": 1,
+          "chars": 25039,
+          "denied": 0
+        },
+        "D2": {
+          "calls": 1,
+          "chars": 8963,
+          "denied": 0
+        },
+        "D1": {
+          "calls": 5,
+          "chars": 1180,
+          "denied": 3
+        }
+      }
+    },
+    {
+      "run": "dev-v-1",
+      "complete": true,
+      "case_order": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "calls": 16,
+      "context_chars": 92370,
+      "shared_chars": 41041,
+      "nonshared_chars": 51329,
+      "answer_words": 714,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T13:56:34.982697+00:00",
+      "last_query_utc": "2026-09-19T13:58:06.452637+00:00",
+      "answer_sha256": "3c8bf4603521e50a9825787ce671d13466b568842fed6264413d6a7ac307153b",
+      "trace_sha256": "045a2b75c55233f56f0647d8dafa75f32c09bfbc1587e013d31425a53292fd53",
+      "per_case": {
+        "shared": {
+          "calls": 1,
+          "chars": 41041,
+          "denied": 0
+        },
+        "D1": {
+          "calls": 2,
+          "chars": 7915,
+          "denied": 0
+        },
+        "D2": {
+          "calls": 2,
+          "chars": 7367,
+          "denied": 0
+        },
+        "D3": {
+          "calls": 2,
+          "chars": 5433,
+          "denied": 0
+        },
+        "D4": {
+          "calls": 2,
+          "chars": 9370,
+          "denied": 0
+        },
+        "D5": {
+          "calls": 2,
+          "chars": 5538,
+          "denied": 0
+        },
+        "D6": {
+          "calls": 5,
+          "chars": 15706,
+          "denied": 0
+        }
+      }
+    },
+    {
+      "run": "dev-v-2",
+      "complete": true,
+      "case_order": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "calls": 15,
+      "context_chars": 88913,
+      "shared_chars": 41041,
+      "nonshared_chars": 47872,
+      "answer_words": 696,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T13:59:17.174746+00:00",
+      "last_query_utc": "2026-09-19T14:00:59.314369+00:00",
+      "answer_sha256": "ffa95065f91f0668ed4d78df5dfc60b4a5c1cf1801e21260bfd801ba2bb72001",
+      "trace_sha256": "61278d52509032c9ef98de9ec2fc9c4a4599cd730fbc7ed236c49098f877fa77",
+      "per_case": {
+        "shared": {
+          "calls": 1,
+          "chars": 41041,
+          "denied": 0
+        },
+        "D6": {
+          "calls": 3,
+          "chars": 14163,
+          "denied": 0
+        },
+        "D5": {
+          "calls": 2,
+          "chars": 5538,
+          "denied": 0
+        },
+        "D4": {
+          "calls": 2,
+          "chars": 9370,
+          "denied": 0
+        },
+        "D3": {
+          "calls": 2,
+          "chars": 5433,
+          "denied": 0
+        },
+        "D2": {
+          "calls": 2,
+          "chars": 7367,
+          "denied": 0
+        },
+        "D1": {
+          "calls": 3,
+          "chars": 6001,
+          "denied": 0
+        }
+      }
+    },
+    {
+      "run": "holdout-b-1",
+      "complete": true,
+      "case_order": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ],
+      "calls": 13,
+      "context_chars": 113295,
+      "shared_chars": 41041,
+      "nonshared_chars": 72254,
+      "answer_words": 651,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T14:05:34.505475+00:00",
+      "last_query_utc": "2026-09-19T14:07:10.215956+00:00",
+      "answer_sha256": "7cff1ae1bdce68f7294e426dc8eb5ef1b1e6e5a2cdc37d3095de58a7f15e1a8d",
+      "trace_sha256": "eb73d1e10fd976915d589dc4b610bd59eedecd5969c6292fe9bc1118fc1d48c5",
+      "per_case": {
+        "shared": {
+          "calls": 1,
+          "chars": 41041,
+          "denied": 0
+        },
+        "H1": {
+          "calls": 2,
+          "chars": 12058,
+          "denied": 0
+        },
+        "H2": {
+          "calls": 3,
+          "chars": 25749,
+          "denied": 0
+        },
+        "H3": {
+          "calls": 1,
+          "chars": 3530,
+          "denied": 0
+        },
+        "H4": {
+          "calls": 4,
+          "chars": 26216,
+          "denied": 1
+        },
+        "H5": {
+          "calls": 1,
+          "chars": 3076,
+          "denied": 0
+        },
+        "H6": {
+          "calls": 1,
+          "chars": 1625,
+          "denied": 0
+        }
+      }
+    },
+    {
+      "run": "holdout-b-2",
+      "complete": true,
+      "case_order": [
+        "H6",
+        "H5",
+        "H4",
+        "H3",
+        "H2",
+        "H1"
+      ],
+      "calls": 11,
+      "context_chars": 94582,
+      "shared_chars": 41041,
+      "nonshared_chars": 53541,
+      "answer_words": 586,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T14:05:59.910653+00:00",
+      "last_query_utc": "2026-09-19T14:07:09.879103+00:00",
+      "answer_sha256": "cb41ef26c6adc1c607660327a37f534301903b8650d5013c842d765d2a3fd3e6",
+      "trace_sha256": "65da79609b2eacade718a03f5d3119b6c48906b4bf4f01d1f640bef4da358814",
+      "per_case": {
+        "shared": {
+          "calls": 1,
+          "chars": 41041,
+          "denied": 0
+        },
+        "H6": {
+          "calls": 2,
+          "chars": 10820,
+          "denied": 0
+        },
+        "H5": {
+          "calls": 1,
+          "chars": 3076,
+          "denied": 0
+        },
+        "H4": {
+          "calls": 3,
+          "chars": 12470,
+          "denied": 0
+        },
+        "H3": {
+          "calls": 1,
+          "chars": 12583,
+          "denied": 0
+        },
+        "H2": {
+          "calls": 2,
+          "chars": 13166,
+          "denied": 0
+        },
+        "H1": {
+          "calls": 1,
+          "chars": 1426,
+          "denied": 0
+        }
+      }
+    },
+    {
+      "run": "holdout-v-1",
+      "complete": true,
+      "case_order": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ],
+      "calls": 21,
+      "context_chars": 73716,
+      "shared_chars": 41041,
+      "nonshared_chars": 32675,
+      "answer_words": 584,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T14:05:45.623924+00:00",
+      "last_query_utc": "2026-09-19T14:08:00.044219+00:00",
+      "answer_sha256": "2e0218f3db05fd127311fb2eddcabe896302ff2f9d4fa9a82aaa415ca918201f",
+      "trace_sha256": "beb8461afa14bb3fe93a19216301fde89f7ed0d27f3620d73ad1a3079f2c4ecc",
+      "per_case": {
+        "shared": {
+          "calls": 1,
+          "chars": 41041,
+          "denied": 0
+        },
+        "H1": {
+          "calls": 4,
+          "chars": 8838,
+          "denied": 0
+        },
+        "H2": {
+          "calls": 6,
+          "chars": 8767,
+          "denied": 0
+        },
+        "H3": {
+          "calls": 3,
+          "chars": 3804,
+          "denied": 0
+        },
+        "H4": {
+          "calls": 3,
+          "chars": 6199,
+          "denied": 0
+        },
+        "H5": {
+          "calls": 2,
+          "chars": 3034,
+          "denied": 0
+        },
+        "H6": {
+          "calls": 2,
+          "chars": 2033,
+          "denied": 0
+        }
+      }
+    },
+    {
+      "run": "holdout-v-2",
+      "complete": true,
+      "case_order": [
+        "H6",
+        "H5",
+        "H4",
+        "H3",
+        "H2",
+        "H1"
+      ],
+      "calls": 18,
+      "context_chars": 77471,
+      "shared_chars": 41041,
+      "nonshared_chars": 36430,
+      "answer_words": 594,
+      "within_recorded_limits": true,
+      "first_call_index": true,
+      "first_query_utc": "2026-09-19T14:08:33.118628+00:00",
+      "last_query_utc": "2026-09-19T14:10:51.796317+00:00",
+      "answer_sha256": "bd09db91f1bbded2e1958516ef58318f7425df5a331ad1cd39ef874d314d1d56",
+      "trace_sha256": "71a93597502368657053ba76224b0ece52cff972f127e34f981405ffbd0ebe34",
+      "per_case": {
+        "shared": {
+          "calls": 1,
+          "chars": 41041,
+          "denied": 0
+        },
+        "H6": {
+          "calls": 3,
+          "chars": 7470,
+          "denied": 0
+        },
+        "H5": {
+          "calls": 2,
+          "chars": 3034,
+          "denied": 0
+        },
+        "H4": {
+          "calls": 4,
+          "chars": 11199,
+          "denied": 0
+        },
+        "H3": {
+          "calls": 2,
+          "chars": 1859,
+          "denied": 0
+        },
+        "H2": {
+          "calls": 5,
+          "chars": 8229,
+          "denied": 0
+        },
+        "H1": {
+          "calls": 1,
+          "chars": 4639,
+          "denied": 0
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Characters count exact reader JSON responses including search/headings and repeated reads.",
+    "Unlogged interpreter/pre-reader errors require separate run-note audit.",
+    "Output truncation at tool layer can make model-visible context smaller than reader output.",
+    "Actual model tokens, cached tokens, reasoning tokens, money and human review time are unknown."
+  ]
+}

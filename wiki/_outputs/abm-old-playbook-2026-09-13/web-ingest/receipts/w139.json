@@ -1,0 +1,18 @@
+{
+  "id": "W139",
+  "url": "https://www.salesforce.com/sales/win-rate",
+  "research_briefs": [
+    "s04-revops-governance.md",
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:29.123640+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w139.json",
+  "title": "What Is A Win Rate In Sales? | Salesforce",
+  "final_url": "https://www.salesforce.com/sales/win-rate/",
+  "characters": 14681,
+  "sha256": "d819386666d670059fdea9f1ab45e785b8e444478e87ab16245060d4c4994dac",
+  "http_status": 200
+}

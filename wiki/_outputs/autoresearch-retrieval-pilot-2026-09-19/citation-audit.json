@@ -1,0 +1,710 @@
+{
+  "runs": [
+    {
+      "run": "dev-b-1",
+      "citations": [
+        {
+          "citation": "wiki/raw-sources.md:L20-L35",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/raw-sources.md:L64-L68",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L54-L60",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L62-L64",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L103-L105",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L105-L107",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L58-L65",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L52-L52",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L62-L75",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L33-L33",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L39-L43",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/index.md:L239-L239",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L88-L92",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "dev-b-2",
+      "citations": [
+        {
+          "citation": "wiki/raw-sources.md:L20-L25",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/index.md:L104-L104",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/index.md:L121-L121",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L54-L60",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L62-L64",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L103-L105",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L107-L107",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L58-L65",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L62-L63",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L67-L77",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L87-L89",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L33-L33",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L41-L43",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L37-L39",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L31-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L50-L54",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L66-L72",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/only-the-best-are-using-them.md:L28-L32",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "dev-v-1",
+      "citations": [
+        {
+          "citation": "wiki/raw-sources.md:L20-L35",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/raw-sources.md:L64-L68",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L54-L60",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L62-L64",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L66-L72",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L103-L105",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L107-L107",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L58-L65",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L62-L73",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L87-L89",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L50-L52",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L33-L33",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L41-L43",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L35-L39",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L48-L54",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L66-L76",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/only-the-best-are-using-them.md:L28-L32",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "dev-v-2",
+      "citations": [
+        {
+          "citation": "wiki/raw-sources.md:L20-L35",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/raw-sources.md:L64-L68",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L54-L64",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L32-L40",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/continual-learning-for-agents.md:L66-L72",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/agent-evaluation.md:L103-L107",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L58-L75",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L50-L52",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/semantic-ingest-workflow.md:L87-L89",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L29-L33",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/context-engineering.md:L35-L43",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L48-L58",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/loop-engineering.md:L66-L76",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "holdout-b-1",
+      "citations": [
+        {
+          "citation": "wiki/index.md:L16-L18",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L20-L38",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L67-L83",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L28-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L67-L75",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L32-L34",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L81-L87",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L32-L38",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L41-L45",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L57-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L62-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L66-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-analysis.md:L36-L36",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L14-L14",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L16-L18",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "holdout-b-2",
+      "citations": [
+        {
+          "citation": "wiki/nabc-value-proposition.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L14-L16",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L18-L20",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L66-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L66-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-analysis.md:L36-L36",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L41-L45",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L57-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L10-L13",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L36-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L69-L75",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L32-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L69-L75",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L81-L87",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L23-L27",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/index.md:L16-L18",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L27-L27",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "holdout-v-1",
+      "citations": [
+        {
+          "citation": "wiki/index.md:L16-L18",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-analysis.md:L45-L49",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L20-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L20-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L21-L27",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L32-L34",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L41-L45",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L57-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L62-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L66-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-analysis.md:L36-L36",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L14-L14",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L16-L18",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/nabc-value-proposition.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    },
+    {
+      "run": "holdout-v-2",
+      "citations": [
+        {
+          "citation": "wiki/nabc-value-proposition.md:L93-L95",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L14-L16",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/johnston-bonoma-buying-center-source.md:L18-L20",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L64-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-frameworks-research-review.md:L66-L66",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/value-proposition-analysis.md:L36-L36",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L41-L45",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L20-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/perceptual-positioning-analysis.md:L20-L42",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L23-L27",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L32-L34",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/index.md:L16-L18",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/index.md:L28-L30",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/positioning-communication-audit.md:L24-L26",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        },
+        {
+          "citation": "wiki/brand-system.md:L27-L27",
+          "valid_range": true,
+          "all_lines_in_reader_trace": true
+        }
+      ]
+    }
+  ],
+  "excluded_failed_delivery": {
+    "run": "holdout-b-1",
+    "trace_ordinal": 8,
+    "chars": 19259
+  },
+  "limitation": "The documented stdout failure is excluded. Remaining trace availability does not prove the model saw untruncated tool output or interpreted evidence correctly. Range coverage may include nonessential adjacent lines; semantic support needs review."
+}

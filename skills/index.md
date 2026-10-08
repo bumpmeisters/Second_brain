@@ -11,6 +11,8 @@ Local skill system for reusable AI work patterns in this vault.
 
 ## Notes
 
+- `repository-analysis/` - Explore selected external repositories, preserve exact snapshots, and create task-discoverable learning dossiers. Repo examples: `repositories/index.md` from the vault root.
+
 - Each skill lives in its own folder and has a required `SKILL.md`.
 - These skills are stored inside the vault for local reuse and iteration.
 - When a skill proves broadly useful, consider installing or copying it into the main Codex skills directory.

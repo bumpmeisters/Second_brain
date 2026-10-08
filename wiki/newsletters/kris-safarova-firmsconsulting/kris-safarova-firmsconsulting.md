@@ -7,7 +7,7 @@ canonical_id: publication-63b006576a9a7bdb
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-09-09
 ---
 
 # Kris Safarova / FIRMSconsulting
@@ -80,7 +80,7 @@ No decision-relevant signals have been approved for this dossier yet. Future ent
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[ai-business-value-gate-2026-09-09]] — Qualified decision scaffold linking AI initiatives to organizational objectives, value mechanisms, baselines, full cost boundaries, owners, and review horizons.
 
 ## Feedback and corrections
 

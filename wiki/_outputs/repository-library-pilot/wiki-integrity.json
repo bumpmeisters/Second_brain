@@ -1,0 +1,10 @@
+{
+    "audit_version":  "wiki-integrity/v1",
+    "profile":  "Fast",
+    "passed":  true,
+    "errors":  0,
+    "warnings":  0,
+    "findings":  [
+
+                 ]
+}

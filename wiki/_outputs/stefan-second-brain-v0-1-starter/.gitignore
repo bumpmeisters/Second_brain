@@ -1,0 +1,9 @@
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.claude/settings.local.json
+.env
+.env.*
+outputs/*.pptx
+outputs/*.pdf
+outputs/*.html
+!outputs/README.md

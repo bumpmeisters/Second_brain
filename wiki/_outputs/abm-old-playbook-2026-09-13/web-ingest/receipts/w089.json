@@ -1,0 +1,17 @@
+{
+  "id": "W089",
+  "url": "https://www.forrester.com/report/b2b-buyer-roles/RES173037?ref_search=3482829_1692110609219",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:15.656802+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w089.json",
+  "title": "Understanding B2B Buyer Roles Is The Key To Navigating Buying Groups | Forrester",
+  "final_url": "https://www.forrester.com/report/b2b-buyer-roles/RES173037?ref_search=3482829_1692110609219",
+  "characters": 1850,
+  "sha256": "3c69df556d65cf4cfe072e39b55277181c780209787bf7d56536383efe55b62b",
+  "http_status": 200
+}

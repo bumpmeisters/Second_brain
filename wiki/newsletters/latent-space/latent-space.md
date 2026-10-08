@@ -7,7 +7,7 @@ canonical_id: publication-0e1d3cb672f6ac26
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-15
+updated: 2026-09-14
 ---
 
 # Latent.Space
@@ -58,11 +58,16 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-10 — Reproducible runtime identity**: The reviewed Astra material supports treating harness, state, access, safeguards, routing, and accounting as part of the evaluated system. Astra performance and cost claims remain unverified (source: [[agent-runtime-identity-source-family-2026-09-10]]).
+- **2026-09-14 — Configuration-complete AEO measurement**: The publisher-operated tracker supports recording prompt variants, model and search configuration, extraction identity, score disclosure, failed coverage, source evidence, and self-preference. Rankings, ROI, and causal effects remain excluded (source: [[aeo-measurement-method-source-review-2026-09-14]]).
+- **2026-09-14 — FDE field-to-platform learning**: A vendor-founder account supports capturing customer semantics and corrections, classifying local fixes, and recording what later deployments inherit. FDE superiority and commercial outcomes remain excluded (source: [[forward-deployed-engineering-product-learning-source-review-2026-09-14]]).
 
 ## Linked-source analyses
 
 - [[ai-engineering-systems-trends-2026-07-14]] - Conference synthesis on harnesses, outer-loop control, enterprise implementation, and skills as maintained procedures.
+- [[agent-runtime-identity-source-family-2026-09-10]] - Astra-family contribution to a configuration-complete evaluation record; no independent model-performance confirmation.
+- [[aeo-measurement-method-source-review-2026-09-14]] - Publisher-operated AEO method supporting a more complete run record; no ranking or outcome validation.
+- [[forward-deployed-engineering-product-learning-source-review-2026-09-14]] - Practitioner account supporting a field-to-platform correction loop with explicit organizational and outcome limits.
 
 ## Feedback and corrections
 

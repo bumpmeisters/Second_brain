@@ -1,0 +1,73 @@
+{
+  "archive_checks": [
+    {
+      "path": "raw/assets/repositories/garrytan/gstack/gstack-94993f74012782fd94416dd44b8314f6363a13a4.zip",
+      "unchanged": true
+    },
+    {
+      "path": "raw/assets/repositories/everyinc/compound-engineering-plugin/compound-engineering-plugin-0a2957852e2034d04eb01120fd7da6ed5307dc56.zip",
+      "unchanged": true
+    },
+    {
+      "path": "raw/assets/gbrain/repositories/gbrain-15b9863d13635d173562a54f55a1d388bfcf546b.zip",
+      "unchanged": true
+    },
+    {
+      "path": "raw/assets/gbrain/repositories/gbrain-evals-565b80754ffa6abb9afb041026f2fab048aa7553.zip",
+      "unchanged": true
+    }
+  ],
+  "snapshot_files": 5719,
+  "git_ignored_snapshot_files": 5719,
+  "tracked_snapshot_files": 0,
+  "reviewed_source_hashes_checked": 64,
+  "task_file_eol": {
+    "repositories/index.md": {
+      "crlf": 0,
+      "lf": 41
+    },
+    "wiki/index.md": {
+      "crlf": 0,
+      "lf": 248
+    },
+    "wiki/sources.md": {
+      "crlf": 0,
+      "lf": 283
+    },
+    "wiki/log.md": {
+      "crlf": 0,
+      "lf": 2654
+    },
+    "wiki/repository-mining.md": {
+      "crlf": 107,
+      "lf": 107
+    },
+    "wiki/gbrain-source-summary.md": {
+      "crlf": 95,
+      "lf": 95
+    },
+    "wiki/_outputs/repository-clone-relocation-proposal-2026-08-09.md": {
+      "crlf": 0,
+      "lf": 68
+    },
+    "wiki/_outputs/gbrain-deep-dive-p30-c1-field-test-2026-08-08.md": {
+      "crlf": 0,
+      "lf": 162
+    },
+    "wiki/_outputs/source-briefs/2026-08-08/p30/gstack-agentic-system-source-brief.md": {
+      "crlf": 0,
+      "lf": 70
+    },
+    "wiki/_outputs/source-briefs/2026-08-08/p30/compound-engineering-agentic-system-source-brief.md": {
+      "crlf": 0,
+      "lf": 81
+    }
+  },
+  "manifests": {
+    "repositories/everyinc--compound-engineering-plugin/manifests/0a2957852e2034d04eb01120fd7da6ed5307dc56.json": "bc95d09d5e228b4f383887be21cd31f1e2876a8e4aa9e1f71306b04e3108679d",
+    "repositories/garrytan--gbrain/manifests/15b9863d13635d173562a54f55a1d388bfcf546b.json": "8fe7fcae7ecf223f39d73d73da5256d1901b56045bcd048111e1d1801982b214",
+    "repositories/garrytan--gbrain-evals/manifests/565b80754ffa6abb9afb041026f2fab048aa7553.json": "b18fadc77fe0bc2059711e3053899b1cc5430f93fa55e5c295527c5cf5a6baae",
+    "repositories/garrytan--gstack/manifests/94993f74012782fd94416dd44b8314f6363a13a4.json": "7cfbdb4f05d7ab189e237e05aa9e9f0285181d26c7aea9ae200218451c6ef17a",
+    "repositories/obra--superpowers/manifests/b36e0829c6d0140e93cfef2ca599b1b07d4a7797.json": "b820bbbdb568d7a7f669175ceb2ad46009bd91f379813794ef065728254a8c64"
+  }
+}

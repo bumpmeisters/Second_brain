@@ -1,0 +1,52 @@
+{
+  "budgets": {
+    "annual_report": 3,
+    "community": 3,
+    "searches": 12,
+    "supplementary": 20
+  },
+  "company_name": "Amber Fictional Instruments",
+  "core_fields": [
+    "workforce"
+  ],
+  "entity_ids": [
+    "amber-fictional-group"
+  ],
+  "excluded_stocks": [
+    "All real companies and other fictional companies"
+  ],
+  "language": "en",
+  "paths": {
+    "project_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber",
+    "publication_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\context",
+    "run_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\runs",
+    "source_roots": [
+      "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\originals"
+    ],
+    "vault_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber"
+  },
+  "period": "2025",
+  "project_id": "amber",
+  "purpose": "Verify the exact 2025 year-end workforce definition only",
+  "region": "global",
+  "source_manifest": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\selection-follow-up.json",
+    "sha256": "b4b9f7d27d6a9a4b5f65c82d3338058cb35bc57bc02720f607a8e2b36763876e"
+  },
+  "strategy": {
+    "accepted": true,
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\strategy.md",
+    "sha256": "ce4238f51edb1c537a65b862b17ad3c449efcfb3476870362e36fe2b7e934450"
+  },
+  "worker_capacity": 3,
+  "entry": {
+    "mode": "follow-up",
+    "question": "Verify the exact 2025 year-end workforce definition only",
+    "previous": {
+      "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\runs\\baseline",
+      "run_sha256": "8f6055a2bbd6930691b619415d0958406616ec118658fee03c419ef6418ad46c",
+      "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\context\\company-basis-v1.md",
+      "context_sha256": "b79efd7cb522521d3128242ed9e9ce1b7c177255bff0beb19d6826c3319d6886"
+    }
+  }
+}

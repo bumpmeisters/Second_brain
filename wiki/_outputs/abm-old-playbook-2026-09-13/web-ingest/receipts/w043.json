@@ -1,0 +1,17 @@
+{
+  "id": "W043",
+  "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+  "research_briefs": [
+    "t05-seo-to-entity.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:42.366109+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w043.json",
+  "title": "What is the Model Context Protocol (MCP)? - Model Context Protocol",
+  "final_url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+  "characters": 3706,
+  "sha256": "545112ee97d2bc54e17a8d8adbf57f8000df8a3fe9c53f8a444a1280b820ee0e",
+  "http_status": 200
+}

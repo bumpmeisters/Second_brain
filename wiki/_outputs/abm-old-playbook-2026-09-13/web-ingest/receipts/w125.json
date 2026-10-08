@@ -1,0 +1,30 @@
+{
+  "id": "W125",
+  "url": "https://www.linkedin.com/help/lms/answer/a6862237",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "status": "captured-web",
+  "previous_attempt": {
+    "id": "W125",
+    "url": "https://www.linkedin.com/help/lms/answer/a6862237",
+    "research_briefs": [
+      "f03-ad-fraud.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T18:05:58.758773+00:00",
+    "status": "capture-failed",
+    "error": "Error: All scraping engines failed to retrieve content from this URL. Engines tried: [fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automated access, (3) The website is down or unreachable, (4) The page requires authentication. Double check the URL is correct and accessible in a browser. If the issue persists, contact us at help@firecrawl.com with your request ID for investigation.\n"
+  },
+  "attempted_at": "2026-09-13T18:12:06.036729+00:00",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w125.json",
+  "capture_method": "Direct public HTTPS GET; stdlib HTMLParser main/article transcription with links; no generative summary",
+  "title": "How LinkedIn handles invalid traffic (IVT) | Marketing Solutions Help",
+  "final_url": "https://www.linkedin.com/help/lms/answer/a6862237",
+  "characters": 4099,
+  "sha256": "29665ad95de88e57ac01fdc5a00ec649d3a19c7748535bdf50eacb3f3970949b",
+  "http_status": 200
+}

@@ -3,6 +3,14 @@ type: concept
 status: active
 trust: unverified
 sources:
+  - "raw/Clippings/André M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md"
+  - "raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md"
+  - "raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md"
+  - "raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md"
+  - "raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md"
   - research/assets/06_AI_Prompting/02_Context_Engineering
   - research/imports/karpathy-method-agentic-workflows-ai-synthesis-2026-06-10.txt
   - raw/assets/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/Karparthy 10x blueprint/The Karpathy Method Blueprint (1).docx
@@ -13,7 +21,7 @@ sources:
   - raw/Clippings/Sales Pipeline Radio - Matt Heinz and Jason Yarborough.md
   - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-08-17--WP3hjUXd918.md
 created: 2026-06-03
-updated: 2026-08-19
+updated: 2026-10-08
 ---
 
 # Context Engineering
@@ -78,7 +86,34 @@ Expert context is not only more text. Define the task with expert distinctions, 
 - Which context claims are backed by real tests rather than model-generated advice?
 - Which prompt-level rules are important enough to become hard guardrails or approval gates?
 
+## Accountable intent-to-proof context
+
+Keep a traceable chain from the originator's intent and accepted requirements to the technical plan, implementation, tests, and review. Name the acceptance owner, constraints, files/order/risks, and the evidence that would establish completion. Record justified deviations with the work so a later handoff can reconstruct the decision.
+
+Treat changes to model, prompt, skill, hook, or other workflow configuration as reasons to run relevant regression evaluations. Turn observed incidents into suitable evaluation cases; propose improvements from traces rather than allowing unsupported automatic rule rewrites. This sharpens the existing specification lifecycle using vendor/practitioner proposals, not measured productivity evidence. Illustrative test-set sizes and control bands are not universal quotas or security policies.
+
+Source and review boundary (P58-C02, user-approved 2026-09-21):
+
+- `raw/Clippings/BMAD's Founder on the Future of AI Coding (And the Slop Apocalypse).md` — [[ai-engineering-source-review-2026-09-21]].
+- `raw/Clippings/Claude Codes New INTENT.MD, What is It.md` — [[ai-engineering-source-review-2026-09-21]].
+- `raw/Clippings/The AI-Native SDLC playbook  Claude by Anthropic.md` — [[ai-engineering-source-review-2026-09-21]].
+
+## Kontext aus der fachlichen Frage ableiten
+
+Die TokenMade-Interviews konkretisieren vorhandenes reduce–offload–isolate:
+
+- Eine schlanke Startinstruktion kann zum passenden Prozess und zur Person-/Projektseite in einer gemeinsamen Ablage routen. TM21 verwendet dieselbe Notion-Wissensbasis für Menschen und KI; TM07 entwickelt Datei-/Projektkontext aus konkreten Aufgaben. Gemeinsame Ablage belegt keine identischen Zugriffsrechte. (source: raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md; 16:25–22:33; qualifizierter Interviewbericht, nicht unabhängig verifiziert.) (source: [[raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md|TM07-Originaltranskript]]; 7:33–10:38; 14:28–18:44; qualifizierter Interviewbericht, nicht unabhängig verifiziert.)
+- Fachlich gepflegte Stammdaten und häufige Bewegungsdaten dürfen unterschiedliche Ablagen haben, brauchen aber stabile Zuordnung. TM04 trennt diese Datenarten; TM14 verknüpft Rohstoff, Rezeptur, Probe, Analytik und Sensorik über IDs. Vollständigkeit und richtige Verknüpfung bleiben prüfpflichtig. (source: raw/Clippings/André M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md; 15:22–16:17; qualifizierter Interviewbericht, nicht unabhängig verifiziert.) (source: raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md; 5:09–9:37; qualifizierter Interviewbericht, nicht unabhängig verifiziert.)
+- Unterschiedliche Fragen benötigen unterschiedliche Abrufverträge: vollständige Zeitraum-/Schwellenlisten über strukturierte Filter, konkrete Aussagen über zugeordnete Originaltexte. Siehe [[customer-conversation-evidence-workflow]]. (source: raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md; 7:37–12:44; 19:14–20:12; qualifizierter Interviewbericht, nicht unabhängig verifiziert.)
+- Marken-/Architektur-/Zielkontext muss zur konkreten Aufgabe passen. TM11 und TM24 beschreiben gezielte Briefings; TM19 widerspricht kontextfreier Zielgenerierung. Personen-/Workshop-Simulation bleibt eine Hypothesenquelle und ersetzt kein reales Befragen. (source: raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md; 9:56–12:36; 24:45–26:27; qualifizierter Interviewbericht, nicht unabhängig verifiziert.) (source: raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md; 7:34–10:50; qualifizierter Interviewbericht, nicht unabhängig verifiziert.) (source: raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md; 27:13–30:29; 31:26–34:30; qualifizierter Interviewbericht, nicht unabhängig verifiziert.)
+
+P61-C06: Präzisierung des bestehenden Kontextmodells. Keine technische Überlegenheit von Notion, Files, SQL oder RAG ohne lokale Aufgabe/Evaluation.
+
+Methodische Übernahme: P61-C06; Rolf, ausdrückliche Freigabe 2026-10-08. Quellen- und Verifikationsgrenzen bleiben erhalten.
+
 ## Related pages
+
+- [[tokenmade-ai-use-cases-source-review-2026-10-08]]
 
 - [[ai-prompting-research-library]]
 - [[prompt-engineering-research]]

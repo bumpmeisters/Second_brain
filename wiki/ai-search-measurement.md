@@ -5,8 +5,9 @@ trust: partially-verified
 sources:
   - wiki/newsletters/growth-unhinged/linked-sources/ai-search-measurement-2026-07-15.md
   - https://www.tryprofound.com/blog/the-ai-mention-effect
+  - wiki/newsletters/latent-space/linked-sources/aeo-measurement-method-source-review-2026-09-14.md
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-09-14
 ---
 
 # AI Search Measurement
@@ -27,6 +28,10 @@ AI answers can influence discovery, consideration, and vendor perception without
 4. Track changes in visibility and answer quality without treating volatile single observations as trends.
 5. Connect the panel monthly to buyer attribution, sales-call evidence, win rate, influenced pipeline, and revenue where available.
 6. Preserve the prompt set, model or surface, date, geography, and evaluation rules so changes remain interpretable (source: [[ai-search-measurement-2026-07-15]]; analysis).
+
+### Configuration-complete AEO runs
+
+For every run, also record the prompt variant, answer-model and search configuration, extraction-model identity, scoring rule or its undisclosed status, failed and excluded runs, cited-source evidence, and possible model self-preference. Interpret stability only alongside answer quality and coverage: low variation can reflect rigidity rather than confidence. Keep visibility and proprietary tracker scores separate from buyer behavior, pipeline, revenue, and causal content effects (source: [[aeo-measurement-method-source-review-2026-09-14]]; unverified publisher-operated method).
 
 ## Measurement stack
 

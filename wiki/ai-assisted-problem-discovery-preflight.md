@@ -6,10 +6,11 @@ use_when: A team suspects automation opportunities but cannot yet name or rank t
 avoid_when: Observation scope, permissions, decision owner, or acceptable evidence cannot be established, or the agent would act on its own proposal.
 output: An evidence-linked problem-candidate set, comparison, human selection or rejection, and bounded pilot brief.
 sources:
+  - "raw/Clippings/The Biggest AI Opportunities Are Hiding in Boring Businesses.md"
   - raw/imports/automated-clippings/youtube/UC0C-17n9iuUQPylguM1d-lQ/2026-07-17--uCWKXIyvM_8.md
   - wiki/_outputs/semantic-ingest/p32/evidence-matrix.csv
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-10-07
 ---
 
 # AI-Assisted Problem-Discovery Preflight
@@ -60,6 +61,12 @@ The preflight is complete only when it leaves:
 - Independent proposals reduce premature convergence but do not make the candidates correct or representative.
 - Do not infer causality, savings, privacy, growth, or business value without suitable pilot evidence.
 - This workflow authorizes discovery only. It does not authorize implementation, deployment, external communication, data mutation, or an agent acting on its own recommendation.
+
+## Übergangslücken und ein enger Pilot
+
+Beim aktuellen Ablauf vom Erstkontakt bis Leistung oder Zahlung besonders Wartezeiten, manuelle Übertragungen und Nachfragen markieren. Ermitteln, welche beobachtbaren Ausgaben das Unternehmen bereits für dieses konkrete Problem hat. Für ein enges Angebot im begrenzten Pilot drei Fragen prüfen: Bezahlt jemand dafür? Ist das Ergebnis wiederholbar? Wird die Lieferung beim zweiten Kunden leichter? Das ergänzt die vorhandene Candidate-/Pilotprüfung; 90 Tage sind eine Quellenheuristik und kein fester Standard. Branchenrankings und Markt-/ROI-Behauptungen werden nicht übernommen. (source: raw/Clippings/The Biggest AI Opportunities Are Hiding in Boring Businesses.md; practitioner; Analyse P60-C09; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].
 
 ## Related pages
 

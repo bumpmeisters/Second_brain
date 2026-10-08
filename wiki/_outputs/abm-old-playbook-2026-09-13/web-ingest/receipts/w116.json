@@ -1,0 +1,17 @@
+{
+  "id": "W116",
+  "url": "https://www.jolteffect.com/resources",
+  "research_briefs": [
+    "f07-indecision.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:05:02.007601+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w116.json",
+  "title": "\n      \n        Resources\n      \n    ",
+  "final_url": "https://www.jolteffect.com/resources",
+  "characters": 3578,
+  "sha256": "30a5e8236e722558b761f70bb39c60bae7892489f862d26255cb82f8d636acb1",
+  "http_status": 200
+}

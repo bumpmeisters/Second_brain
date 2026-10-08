@@ -65,6 +65,8 @@ Parametric continual learning is not active. The vault has no approved weight-up
 
 ## External learning lifecycle
 
+The user-requested operational entry point is now [Task Closeout](../skills/task-closeout/SKILL.md), created on 2026-09-10. It turns a relevant task ending into a bounded completion, documentation, residue and learning review. It reuses existing records, preserves approval boundaries and checks adopted changes on a later comparable authorized task; it does not schedule learning or guarantee improvement. This is an implementation of the existing external-learning decision, not a new autonomous-learning authority.
+
 Use two distinct memory levels. A **learning** records one incident, its context, evidence, provenance, confidence, and resolution. A **pattern** is a more general rule supported by several relevant learnings; it has higher reuse value and higher staleness risk. One successful episode should therefore remain episodic until repeated evidence supports promotion (source: CONCEPTS.md; source: SKILL.md; Compound Engineering learning contracts).
 
 Refresh both levels explicitly with **Keep**, **Update**, **Consolidate**, **Replace**, or **Delete**. Age alone does not establish staleness, and evidence that cannot currently be verified is not automatically false; record the verification gap and contradiction state. For this vault, consolidation, replacement, and deletion remain reviewable proposals rather than silent maintenance actions. GStack's local learning log adds useful practitioner detail through provenance classes, confidence, and contradiction checks, but it does not bypass the vault's human semantic-promotion gate (source: SKILL.md; historical local analysis record: `wiki/_outputs/semantic-ingest/p30/source-bundle.md`).

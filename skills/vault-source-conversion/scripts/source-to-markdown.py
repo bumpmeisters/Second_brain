@@ -12,12 +12,20 @@ import argparse
 import csv
 import hashlib
 import html
+import io
+import copy
+import posixpath
+import zipfile
+from xml.etree import ElementTree as ET
+from importlib import metadata as package_metadata
+import importlib.util
 import json
 import os
 import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from dataclasses import dataclass, fields
 from datetime import datetime
@@ -28,7 +36,7 @@ from typing import Iterable
 
 TEXT_EXTENSIONS = {".txt", ".csv", ".json", ".yaml", ".yml", ".html", ".htm"}
 NATIVE_MARKDOWN_EXTENSIONS = {".md", ".markdown"}
-CONVERTER_PROFILE_VERSION = "2026-07-16.1"
+CONVERTER_PROFILE_VERSION = "2026-09-09.1"
 CONVERTIBLE_EXTENSIONS = TEXT_EXTENSIONS | {".docx", ".pdf", ".pptx", ".xlsx"}
 ASSET_EXTENSIONS = {
     ".png",
@@ -172,7 +180,198 @@ def import_optional(module_name: str):
 
 SOURCE_PREFIX_MAP: dict[str, Path] = {}
 
-BACKEND_CHOICES = ["builtin", "pandoc", "markitdown", "docling", "auto"]
+BACKEND_CHOICES = ["builtin", "pandoc", "markitdown", "docling", "auto", "anydoc"]
+ANYDOC_VERSION = "0.2.4"
+ANYDOC_ADAPTER_VERSION = "1"
+
+
+def anydoc_site(value: str = "") -> Path:
+    return Path(value).resolve() if value else (Path.cwd() / "wiki/_outputs/source-conversions/runtimes" / f"anydoc-{ANYDOC_VERSION}" / "site").resolve()
+
+
+def anydoc_xml(blob: bytes) -> ET.Element:
+    declarations = blob.replace(b"\x00", b"").upper()  # UTF-8/16/32 XML declarations
+    if len(blob) > 16 * 1024**2 or b"<!DOCTYPE" in declarations or b"<!ENTITY" in declarations:
+        raise RuntimeError("AnyDoc adapter: XML exceeds limits or declares entities")
+    return ET.fromstring(blob)
+
+
+def anydoc_part(base: str, target: str) -> str:
+    if "\\" in target or ":" in target:
+        raise RuntimeError("AnyDoc adapter: invalid package relationship")
+    part = posixpath.normpath(target.lstrip("/") if target.startswith("/") else posixpath.join(posixpath.dirname(base), target))
+    if part == ".." or part.startswith("../"):
+        raise RuntimeError("AnyDoc adapter: relationship escapes package")
+    return part
+
+
+def anydoc_pptx(data: bytes, module) -> tuple[str, dict]:
+    """Preserve physical order and hidden slides; separate source-near notes.
+
+    Native conversion sees one slide and no notes relationship at a time.
+    Notes are extracted from OOXML text paragraphs, never guessed from quotes.
+    Package rewriting is in memory only; every selected slide must succeed.
+    """
+    ns = {"p": "http://schemas.openxmlformats.org/presentationml/2006/main",
+          "a": "http://schemas.openxmlformats.org/drawingml/2006/main"}
+    rel_id = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
+    with zipfile.ZipFile(io.BytesIO(data)) as archive:
+        infos = archive.infolist()
+        if len(infos) > 10000 or sum(i.file_size for i in infos) > 512 * 1024**2:
+            raise RuntimeError("AnyDoc adapter: package budget exceeded")
+        payload = {}
+        for info in infos:
+            if info.filename in payload or info.file_size > 128 * 1024**2:
+                raise RuntimeError("AnyDoc adapter: duplicate or oversized part")
+            if info.filename.startswith("/") or "\\" in info.filename or ".." in info.filename.split("/"):
+                raise RuntimeError("AnyDoc adapter: unsafe package part")
+            with archive.open(info) as stream:
+                blob = stream.read(min(info.file_size, 128 * 1024**2) + 1)
+            if len(blob) != info.file_size:
+                raise RuntimeError("AnyDoc adapter: part size mismatch")
+            payload[info.filename] = blob
+        main = "ppt/presentation.xml"
+        presentation = anydoc_xml(payload[main])
+        ids = presentation.find("p:sldIdLst", ns)
+        if ids is None or not 1 <= len(ids) <= 500:
+            raise RuntimeError("AnyDoc adapter: expected 1..500 slides in standard PPTX package")
+        relationships = anydoc_xml(payload["ppt/_rels/presentation.xml.rels"])
+        by_id = {r.get("Id"): r for r in relationships}
+        if len(by_id) != len(relationships):
+            raise RuntimeError("AnyDoc adapter: duplicate presentation relationships")
+        blocks, hidden, empty = [], [], []
+        for number, slide_id in enumerate(ids, 1):
+            relation = by_id.get(slide_id.get(rel_id))
+            if relation is None or relation.get("TargetMode") == "External" or not relation.get("Type", "").endswith("/slide"):
+                raise RuntimeError(f"AnyDoc adapter: invalid slide relationship {number}")
+            slide_part = anydoc_part(main, relation.get("Target", ""))
+            slide = anydoc_xml(payload[slide_part])
+            is_hidden = slide.get("show", "1") in ("0", "false")
+            if is_hidden:
+                hidden.append(number)
+            slide.set("show", "1")  # extraction includes hidden slides explicitly
+            rel_part = posixpath.join(posixpath.dirname(slide_part), "_rels", posixpath.basename(slide_part) + ".rels")
+            replacements = {slide_part: ET.tostring(slide, encoding="utf-8")}
+            note_lines = []
+            if rel_part in payload:
+                rels = anydoc_xml(payload[rel_part])
+                notes = [r for r in rels if r.get("Type", "").endswith("/notesSlide")]
+                if len(notes) > 1:
+                    raise RuntimeError(f"AnyDoc adapter: ambiguous notes for slide {number}")
+                for relation in notes:
+                    if relation.get("TargetMode") == "External":
+                        raise RuntimeError("AnyDoc adapter: external notes are unsupported")
+                    note_root = anydoc_xml(payload[anydoc_part(slide_part, relation.get("Target", ""))])
+                    for shape in note_root.findall(".//p:sp", ns):
+                        ph = shape.find(".//p:ph", ns)
+                        if ph is not None and ph.get("type") in {"hdr", "ftr", "dt", "sldNum", "sldImg"}:
+                            continue
+                        for paragraph in shape.findall(".//a:p", ns):
+                            text = "".join((e.text or "") if e.tag == "{" + ns["a"] + "}t" else
+                                           "\n" if e.tag == "{" + ns["a"] + "}br" else "" for e in paragraph.iter())
+                            note_lines.extend(line.strip() for line in text.splitlines() if line.strip())
+                    rels.remove(relation)
+                replacements[rel_part] = ET.tostring(rels, encoding="utf-8")
+            single = copy.deepcopy(presentation)
+            subset = single.find("p:sldIdLst", ns)
+            for j, element in enumerate(list(subset), 1):
+                if j != number:
+                    subset.remove(element)
+            replacements[main] = ET.tostring(single, encoding="utf-8")
+            buffer = io.BytesIO()
+            with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as target:
+                for info in infos:
+                    target.writestr(copy.copy(info), replacements.get(info.filename, payload[info.filename]))
+            text = module.to_markdown_bytes(buffer.getvalue(), "pptx", ocr="reject").strip()
+            if not text:
+                empty.append(number)
+            # Source headings cannot impersonate the adapter's physical markers.
+            text = re.sub(r"(?m)^## (Slide \d+)\s*$", r"### \1", text)
+            block = f"## Slide {number}\n\n" + ("_Hidden slide in original; included for evidence._\n\n" if is_hidden else "")
+            block += text or "_No extractable slide text; inspect the original visual._"
+            if note_lines:
+                block += "\n\n### Speaker notes\n\n" + "\n".join("> " + line for line in note_lines)
+            blocks.append(block)
+            if sum(len(b.encode("utf-8")) for b in blocks) > 50 * 1024**2:
+                raise RuntimeError("AnyDoc adapter: output budget exceeded")
+    return "\n\n".join(blocks), {"anydoc_slides_total": len(ids), "anydoc_slides_processed": len(ids),
+        "anydoc_hidden_slides": ",".join(map(str, hidden)) or "none",
+        "anydoc_empty_slides": ",".join(map(str, empty)) or "none", "anydoc_notes_method": "ooxml-text-paragraphs"}
+
+
+def anydoc_worker(request_path: str, result_path: str) -> int:
+    request = json.loads(Path(request_path).read_text(encoding="utf-8"))
+    try:
+        pdf_memory_limit(2048)
+        site = Path(request["site"])
+        if not site.is_dir():
+            raise RuntimeError("AnyDoc isolated site missing; see vault-source-conversion skill")
+        dist = next((d for d in package_metadata.distributions(path=[str(site)]) if d.metadata["Name"] == "firecrawl-anydoc"), None)
+        if dist is None or dist.version != ANYDOC_VERSION:
+            raise RuntimeError(f"AnyDoc requires isolated firecrawl-anydoc=={ANYDOC_VERSION}")
+        sys.path.insert(0, str(site))
+        import anydoc
+        if not Path(anydoc.__file__).resolve().is_relative_to(site.resolve()):
+            raise RuntimeError("AnyDoc imported outside selected site")
+        path = Path(request["source"])
+        if path.suffix.lower() not in {".pptx", ".docx"} or path.stat().st_size > 200 * 1024**2:
+            raise RuntimeError("AnyDoc supports only PPTX/DOCX up to 200 MiB in this adapter")
+        data = path.read_bytes()
+        if hashlib.sha256(data).hexdigest() != request["sha256"]:
+            raise RuntimeError("AnyDoc source changed before worker read")
+        meta = {"anydoc_adapter_version": ANYDOC_ADAPTER_VERSION, "anydoc_version": ANYDOC_VERSION,
+                "anydoc_execution": "local-ocr-reject"}
+        if path.suffix.lower() == ".pptx":
+            body, detail = anydoc_pptx(data, anydoc)
+            meta.update(detail)
+        else:
+            body = anydoc.to_markdown_bytes(data, "docx", ocr="reject").strip()
+            if not body:
+                raise RuntimeError("AnyDoc returned no DOCX text")
+        if len(body.encode("utf-8")) > 50 * 1024**2:
+            raise RuntimeError("AnyDoc output exceeds 50 MiB")
+        Path(result_path).write_text(json.dumps({"body": body, "metadata": meta}), encoding="utf-8")
+        return 0
+    except Exception as exc:
+        Path(result_path).write_text(json.dumps({"error": f"{type(exc).__name__}: {exc}"}), encoding="utf-8")
+        return 1
+
+
+def convert_anydoc(path: Path, args: argparse.Namespace) -> tuple[str, str, str]:
+    if path.suffix.lower() not in {".pptx", ".docx"}:
+        raise RuntimeError("Optional AnyDoc adapter supports only .pptx and .docx; select another backend")
+    if path.stat().st_size > 200 * 1024**2:
+        raise RuntimeError("AnyDoc input exceeds 200 MiB")
+    with tempfile.TemporaryDirectory(prefix="anydoc-extraction-") as directory:
+        root = Path(directory)
+        request, result = root / "request.json", root / "result.json"
+        before_sha = file_sha256(path)
+        request.write_text(json.dumps({"source": str(path.resolve()), "sha256": before_sha,
+            "site": str(anydoc_site(getattr(args, "anydoc_site", "")))}), encoding="utf-8")
+        command = [sys.executable, "-X", "utf8", str(Path(__file__).resolve()), "--anydoc-worker", str(request), str(result)]
+        with (root / "stderr.txt").open("w", encoding="utf-8") as errors:
+            try:
+                run = subprocess.run(command, stdout=subprocess.DEVNULL, stderr=errors, timeout=300,
+                    creationflags=0x08000000 if os.name == "nt" else 0)
+            except subprocess.TimeoutExpired as exc:
+                raise RuntimeError("AnyDoc worker timed out after 300 seconds; no sidecar published") from exc
+        if not result.exists() or result.stat().st_size > 64 * 1024**2:
+            raise RuntimeError("AnyDoc worker failed or exceeded result budget; no sidecar published")
+        response = json.loads(result.read_text(encoding="utf-8"))
+        if run.returncode or "error" in response:
+            raise RuntimeError(response.get("error", "AnyDoc worker failed"))
+        if file_sha256(path) != before_sha:
+            raise RuntimeError("AnyDoc source changed during conversion")
+        meta = response["metadata"]
+        diagnostics = (root / "stderr.txt").stat().st_size
+        meta["anydoc_diagnostic_bytes"] = diagnostics
+        args.anydoc_metadata = meta
+        with (root / "stderr.txt").open(encoding="utf-8", errors="replace") as stream:
+            excerpt = stream.read(2000).strip()
+        note = f"AnyDoc {ANYDOC_VERSION}, local adapter {ANYDOC_ADAPTER_VERSION}; diagnostics={diagnostics} bytes; structural extraction, inspect original for visual fidelity"
+        if excerpt:
+            note += "\n\nDiagnostic excerpt (up to 2000 characters):\n\n" + "\n".join("> " + line for line in excerpt.splitlines())
+        return response["body"], note, "anydoc"
 
 # Generated report/audit filenames that live inside the extraction output tree
 # but are not themselves conversion derivatives, so the audit must skip them.
@@ -310,11 +509,16 @@ def check_pdf_text_layer(path: Path, min_chars_per_page: int) -> None:
         )
 
 
-def backend_available(backend: str) -> bool:
+def backend_available(backend: str, probe_only: bool = False, site: str = "") -> bool:
+    if backend == "anydoc":
+        return any(d.metadata["Name"] == "firecrawl-anydoc" and d.version == ANYDOC_VERSION
+                   for d in package_metadata.distributions(path=[str(anydoc_site(site))]))
     if backend == "builtin":
         return True
     if backend == "pandoc":
         return find_pandoc() is not None
+    if probe_only and backend in {"markitdown", "docling"}:
+        return importlib.util.find_spec(backend) is not None
     if backend == "markitdown":
         return import_optional("markitdown") is not None
     if backend == "docling":
@@ -519,31 +723,156 @@ def convert_docx(path: Path) -> tuple[str, str]:
     return "\n".join(lines).strip(), f"extracted {len(document.paragraphs)} paragraphs and {len(document.tables)} tables"
 
 
-def convert_pdf(path: Path, max_pages: int) -> tuple[str, str]:
-    pypdf = import_optional("pypdf")
-    if pypdf is None:
-        raise RuntimeError("pypdf is not available")
-    reader = pypdf.PdfReader(str(path))
-    lines: list[str] = []
-    pages = min(len(reader.pages), max_pages)
-    empty_pages = 0
-    for idx in range(pages):
-        text = reader.pages[idx].extract_text() or ""
-        text = text.strip()
-        lines.append(f"## Page {idx + 1}")
-        lines.append("")
-        if text:
-            lines.append(text)
-        else:
-            lines.append("_No extractable text found on this page._")
-            empty_pages += 1
-        lines.append("")
-    note = f"extracted {pages} of {len(reader.pages)} pages"
-    if pages < len(reader.pages):
-        note += f"; truncated at --max-pdf-pages={max_pages}"
-    if empty_pages:
-        note += f"; {empty_pages} pages had no extractable text"
-    return "\n".join(lines).strip(), note
+def pdf_memory_limit(mib: int) -> None:
+    """Bound only the disposable PDF worker, never the coordinator process."""
+    if os.name != "nt":
+        import resource
+        resource.setrlimit(resource.RLIMIT_AS, (mib * 1024**2, mib * 1024**2))
+        return
+    import ctypes
+    from ctypes import wintypes as w
+
+    class Basic(ctypes.Structure):
+        _fields_ = [("process_time", ctypes.c_int64), ("job_time", ctypes.c_int64),
+                    ("flags", w.DWORD), ("min_ws", ctypes.c_size_t),
+                    ("max_ws", ctypes.c_size_t), ("processes", w.DWORD),
+                    ("affinity", ctypes.c_size_t), ("priority", w.DWORD), ("scheduling", w.DWORD)]
+    class Limits(ctypes.Structure):
+        _fields_ = [("basic", Basic), ("io", ctypes.c_uint64 * 6),
+                    ("process_memory", ctypes.c_size_t), ("job_memory", ctypes.c_size_t),
+                    ("peak_process", ctypes.c_size_t), ("peak_job", ctypes.c_size_t)]
+    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel.CreateJobObjectW.argtypes = [ctypes.c_void_p, w.LPCWSTR]
+    kernel.CreateJobObjectW.restype = w.HANDLE
+    kernel.SetInformationJobObject.argtypes = [w.HANDLE, ctypes.c_int, ctypes.c_void_p, w.DWORD]
+    kernel.AssignProcessToJobObject.argtypes = [w.HANDLE, w.HANDLE]
+    kernel.GetCurrentProcess.restype = w.HANDLE
+    job = kernel.CreateJobObjectW(None, None)
+    limits = Limits()
+    limits.basic.flags = 0x200 | 0x2000  # job memory + kill descendants when worker exits
+    limits.job_memory = mib * 1024**2
+    if not job or not kernel.SetInformationJobObject(job, 9, ctypes.byref(limits), ctypes.sizeof(limits)) or not kernel.AssignProcessToJobObject(job, kernel.GetCurrentProcess()):
+        raise RuntimeError(f"Cannot enforce PDF memory limit: {ctypes.get_last_error()}")
+    # Keep the non-inheritable job handle open for this worker's entire lifetime.
+
+
+def pdf_worker(request_path: str, progress_path: str) -> int:
+    """Checkpoint complete pages; no source writes, OCR, or implicit backend retry."""
+    request = json.loads(Path(request_path).read_text(encoding="utf-8"))
+    with open(progress_path, "w", encoding="utf-8") as progress:
+        def emit(value: dict) -> None:
+            progress.write(json.dumps(value, ensure_ascii=False) + "\n")
+            progress.flush()
+        try:
+            pdf_memory_limit(request["memory_mib"])
+            from pypdf import PdfReader, PdfWriter
+            reader = PdfReader(request["source"])
+            total = len(reader.pages)
+            emit({"total": total})
+            backend = resolve_backend(request["backend"], ".pdf")
+            emit({"backend": backend})
+            if total == 0:
+                emit({"reason": "empty-document"})
+                return 0
+            # Docling defaults to OCR. Disable it explicitly for this text-only contract.
+            if backend == "docling":
+                global _DOCLING_CONVERTER
+                from docling.document_converter import DocumentConverter, PdfFormatOption
+                from docling.datamodel.base_models import InputFormat
+                from docling.datamodel.pipeline_options import PdfPipelineOptions
+                options = PdfPipelineOptions(do_ocr=False)
+                _DOCLING_CONVERTER = DocumentConverter(format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=options)})
+            maximum = min(total, request["pages"]) if request["pages"] else total
+            size = 0
+            # Parent owns cleanup even when this worker is forcibly terminated.
+            with tempfile.TemporaryDirectory(prefix="pdf-page-", dir=Path(request_path).parent) as temp:
+                page_path = Path(temp) / "page.pdf"
+                for idx in range(maximum):
+                    page = reader.pages[idx]
+                    native = (page.extract_text() or "").strip()
+                    # A blank/image page cannot become OCR merely by backend selection.
+                    text = native
+                    if native and backend in {"markitdown", "docling"}:
+                        writer = PdfWriter()
+                        writer.add_page(page)
+                        writer.write(str(page_path))
+                        convert = convert_with_markitdown if backend == "markitdown" else convert_with_docling
+                        text, _ = convert(page_path)
+                        text = text.strip()
+                    block = f"## Page {idx + 1}\n\n{text or '_No extractable text found on this page._'}\n\n"
+                    size += len(block.encode("utf-8"))
+                    if size > request["output_bytes"]:
+                        emit({"reason": "output-limit"})
+                        return 0
+                    emit({"page": idx + 1, "text": block, "empty": not bool(text)})
+            emit({"reason": "page-limit" if maximum < total else "complete"})
+        except BaseException as exc:
+            emit({"reason": "memory-limit" if isinstance(exc, MemoryError) else "conversion-error",
+                  "error": f"{type(exc).__name__}: {str(exc)[:500]}"})
+    return 0
+
+
+def convert_pdf_bounded(path: Path, args: argparse.Namespace) -> tuple[str, str, str, dict]:
+    limits = {"source": str(path.resolve()), "backend": getattr(args, "backend", "builtin"),
+              "pages": getattr(args, "max_pdf_pages", 0),
+              "memory_mib": getattr(args, "pdf_memory_mib", 2048),
+              "output_bytes": getattr(args, "pdf_max_output_bytes", 50 * 1024**2)}
+    seconds = getattr(args, "pdf_timeout_seconds", 300)
+    max_input = getattr(args, "pdf_max_input_bytes", 200 * 1024**2)
+    if limits["pages"] < 0 or min(seconds, limits["memory_mib"], limits["output_bytes"], max_input) <= 0:
+        raise ValueError("PDF limits must be positive; only max-pdf-pages accepts 0 (all pages)")
+    records = []
+    reason = "input-limit" if path.stat().st_size > max_input else "worker-failed"
+    if reason != "input-limit":
+        with tempfile.TemporaryDirectory(prefix="pdf-extraction-") as temp:
+            request = Path(temp) / "request.json"
+            progress = Path(temp) / "progress.jsonl"
+            request.write_text(json.dumps(limits), encoding="utf-8")
+            command = [sys.executable, "-X", "utf8", str(Path(__file__).resolve()), "--pdf-worker", str(request), str(progress)]
+            with subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                                  creationflags=0x08000000 if os.name == "nt" else 0) as process:
+                try:
+                    process.wait(timeout=seconds)
+                except subprocess.TimeoutExpired:
+                    reason = "timeout"
+                    process.kill()
+                    process.wait()
+            if progress.exists():
+                # Incomplete last checkpoint after termination is deliberately ignored.
+                for line in progress.read_bytes().splitlines():
+                    try:
+                        records.append(json.loads(line.decode("utf-8")))
+                    except (json.JSONDecodeError, UnicodeDecodeError):
+                        break
+    total = next((r["total"] for r in records if "total" in r), -1)
+    backend = next((r["backend"] for r in records if "backend" in r), "unresolved")
+    pages = [r for r in records if "page" in r]
+    if reason != "timeout":
+        reason = next((r["reason"] for r in reversed(records) if "reason" in r), reason)
+    complete = reason == "complete" and total > 0 and len(pages) == total
+    coverage = {"pdf_coverage_version": 1, "pdf_pages_total": total,
+                "pdf_pages_processed": len(pages),
+                "pdf_pages_missing": "unknown" if total < 0 else (f"{len(pages)+1}-{total}" if len(pages) < total else "none"),
+                "pdf_pages_without_text": ",".join(str(r["page"]) for r in pages if r["empty"]) or "none",
+                "pdf_coverage": "complete" if complete else ("partial" if total >= 0 else "unknown"),
+                "pdf_stop_reason": reason,
+                "pdf_text_quality": "needs-review" if not pages or any(r["empty"] for r in pages) else "text-present",
+                "pdf_limit_pages": limits["pages"], "pdf_limit_timeout_seconds": seconds,
+                "pdf_limit_memory_mib": limits["memory_mib"], "pdf_limit_input_bytes": max_input,
+                "pdf_limit_output_bytes": limits["output_bytes"]}
+    detail = next((r["error"] for r in reversed(records) if "error" in r), "")
+    note = f"extracted {len(pages)} of {total if total >= 0 else 'unknown'} pages; {reason}"
+    if detail:
+        note += f"; {detail}"
+    body = "".join(r["text"] for r in pages).strip()
+    if not body:
+        body = "No PDF text extracted. Inspect the coverage metadata before use."
+    return body, note, backend, coverage
+
+
+def convert_pdf(path: Path, max_pages: int = 0) -> tuple[str, str]:
+    body, note, _, _ = convert_pdf_bounded(path, argparse.Namespace(max_pdf_pages=max_pages))
+    return body, note
 
 
 def convert_pptx(path: Path) -> tuple[str, str]:
@@ -648,7 +977,7 @@ def categorize(extension: str, filename: str) -> tuple[str, str, str]:
 
 
 def frontmatter(
-    item: InventoryItem, target: Path, status: str, note: str, backend: str = "builtin", source_sha256: str = ""
+    item: InventoryItem, target: Path, status: str, note: str, backend: str = "builtin", source_sha256: str = "", coverage: dict | None = None
 ) -> str:
     source = item.rel_to_vault.as_posix()
     source_link = relative_markdown_link(target, item.path)
@@ -669,6 +998,7 @@ def frontmatter(
             f"converter_profile: {CONVERTER_PROFILE_VERSION}",
             f"created: {today}",
             f"converter: {converter_name}",
+            *[f"{key}: {value}" for key, value in (coverage or {}).items()],
             "preservation: extraction-derivative",
             "---",
             "",
@@ -693,6 +1023,13 @@ def frontmatter(
 def convert_item(item: InventoryItem, args: argparse.Namespace) -> tuple[str, str, str]:
     """Convert one file. Returns (body, note, backend_used)."""
     ext = item.extension
+    args.pdf_coverage = None
+    args.anydoc_metadata = None
+    if getattr(args, "backend", "builtin") == "anydoc":
+        return convert_anydoc(item.path, args)
+    if ext == ".pdf":
+        body, note, used, args.pdf_coverage = convert_pdf_bounded(item.path, args)
+        return body, note, used
     if ext in {".md", ".txt", ".yaml", ".yml"}:
         body, note = convert_plain_text(item.path, args.max_chars)
         return body, note, "builtin"
@@ -708,9 +1045,6 @@ def convert_item(item: InventoryItem, args: argparse.Namespace) -> tuple[str, st
 
     backend = resolve_backend(getattr(args, "backend", "builtin"), ext)
 
-    if ext == ".pdf" and getattr(args, "defer_scanned_pdf", False):
-        check_pdf_text_layer(item.path, getattr(args, "min_pdf_chars", 100))
-
     if backend == "pandoc" and ext == ".docx":
         body, note = convert_docx_pandoc(item.path)
         return body, note, "pandoc"
@@ -723,9 +1057,6 @@ def convert_item(item: InventoryItem, args: argparse.Namespace) -> tuple[str, st
 
     if ext == ".docx":
         body, note = convert_docx(item.path)
-        return body, note, "builtin"
-    if ext == ".pdf":
-        body, note = convert_pdf(item.path, args.max_pdf_pages)
         return body, note, "builtin"
     if ext == ".pptx":
         body, note = convert_pptx(item.path)
@@ -1172,8 +1503,44 @@ def audit_markdown_file(path: Path, vault: Path) -> AuditItem:
         issues.append(f"no-extractable-text:{no_extractable_count}")
     if converter == "pdf-text" and page_count == 0:
         issues.append("pdf-pages-not-detected")
+    if Path(source).suffix.lower() == ".pdf":
+        if meta.get("pdf_coverage_version") != "1":
+            issues.append("pdf-coverage-legacy-unknown")
+        else:
+            try:
+                total = int(meta["pdf_pages_total"])
+                processed = int(meta["pdf_pages_processed"])
+                markers = [int(n) for n in re.findall(r"^## Page (\d+)$", body, flags=re.MULTILINE)]
+                if total < 1 or processed < 0 or processed > total or markers != list(range(1, processed + 1)):
+                    issues.append("pdf-coverage-invalid")
+                if meta.get("pdf_coverage") != "complete" or processed != total or meta.get("pdf_pages_missing") != "none" or meta.get("pdf_stop_reason") != "complete":
+                    issues.append("pdf-coverage-incomplete")
+                if meta.get("pdf_text_quality") != "text-present" or meta.get("pdf_pages_without_text") != "none":
+                    issues.append("pdf-text-review-required")
+            except (KeyError, ValueError):
+                issues.append("pdf-coverage-invalid")
     if converter == "pptx-text" and slide_count == 0:
         issues.append("slides-not-detected")
+    if converter == "anydoc":
+        if meta.get("anydoc_adapter_version") != ANYDOC_ADAPTER_VERSION or meta.get("anydoc_version") != ANYDOC_VERSION or meta.get("anydoc_execution") != "local-ocr-reject":
+            issues.append("anydoc-provenance-invalid")
+        if meta.get("anydoc_diagnostic_bytes") != "0":
+            issues.append("anydoc-diagnostics-review-required")
+        if Path(source).suffix.lower() == ".pptx":
+            try:
+                total = int(meta["anydoc_slides_total"])
+                processed = int(meta["anydoc_slides_processed"])
+                markers = [int(n) for n in re.findall(r"^## Slide (\d+)$", body, flags=re.MULTILINE)]
+                if total < 1 or total != processed or markers != list(range(1, total + 1)):
+                    issues.append("anydoc-slide-coverage-invalid")
+                if meta.get("anydoc_empty_slides") != "none":
+                    issues.append("anydoc-empty-slide-review-required")
+                if meta.get("anydoc_notes_method") != "ooxml-text-paragraphs":
+                    issues.append("anydoc-notes-provenance-invalid")
+            except (KeyError, ValueError):
+                issues.append("anydoc-slide-coverage-invalid")
+        elif Path(source).suffix.lower() != ".docx":
+            issues.append("anydoc-format-unsupported")
     if converter == "xlsx-preview" and sheet_count == 0:
         issues.append("sheets-not-detected")
     if converter in {"csv-preview", "xlsx-preview"} and table_count == 0:
@@ -1372,10 +1739,22 @@ def write_conversions(
                 raise RuntimeError("source changed during conversion")
             target.parent.mkdir(parents=True, exist_ok=True)
             body = "\n".join(line.rstrip() for line in body.splitlines())
-            content = frontmatter(item, target, "extracted", note, backend, before_sha) + body.strip() + "\n"
+            coverage = getattr(args, "pdf_coverage", None)
+            status = "extracted"
+            if coverage:
+                if coverage["pdf_coverage"] != "complete":
+                    status = "partial-extraction"
+                elif coverage["pdf_text_quality"] != "text-present":
+                    status = "deferred-ocr" if coverage["pdf_pages_without_text"].count(",") + 1 == coverage["pdf_pages_total"] else "extracted"
+            metadata = {**(coverage or {}), **(getattr(args, "anydoc_metadata", None) or {})}
+            content = frontmatter(item, target, status, note, backend, before_sha, metadata) + body.strip() + "\n"
             temp_target = target.with_name(f"{target.name}.tmp-{os.getpid()}")
             temp_target.write_text(content, encoding="utf-8")
-            temp_target.replace(target)
+            if args.overwrite:
+                temp_target.replace(target)
+            else:
+                os.link(temp_target, target)  # atomic create-only, including concurrent writers
+                temp_target.unlink()
             converted += 1
         except OcrDeferred as exc:
             if temp_target and temp_target.exists():
@@ -1426,8 +1805,9 @@ def write_deferred_csv(deferred: list[tuple[InventoryItem, str]], path: Path) ->
 def run_pilot(items: list[InventoryItem], vault: Path, args: argparse.Namespace) -> int:
     """Convert the same selection with every requested backend for side-by-side review."""
     backends = [name.strip() for name in args.pilot_backends.split(",") if name.strip()]
-    unavailable = [name for name in backends if not backend_available(name)]
-    backends = [name for name in backends if backend_available(name)]
+    # Discovery must not import a heavy PDF backend outside the bounded worker.
+    unavailable = [name for name in backends if not backend_available(name, probe_only=True, site=getattr(args, "anydoc_site", ""))]
+    backends = [name for name in backends if name not in unavailable]
     if not backends:
         print("No requested pilot backend is available.", file=sys.stderr)
         return 2
@@ -1461,9 +1841,18 @@ def run_pilot(items: list[InventoryItem], vault: Path, args: argparse.Namespace)
             try:
                 body, note, used = convert_item(item, run_args)
                 target.parent.mkdir(parents=True, exist_ok=True)
-                content = frontmatter(item, target, "pilot", note, used) + body.strip() + "\n"
+                metadata = {**(getattr(run_args, "pdf_coverage", None) or {}), **(getattr(run_args, "anydoc_metadata", None) or {})}
+                content = frontmatter(item, target, "pilot", note, used, coverage=metadata) + body.strip() + "\n"
                 target.write_text(content, encoding="utf-8")
-                row[backend] = f"ok:{len(body)}ch:{time.perf_counter() - started:.1f}s"
+                coverage = getattr(run_args, "pdf_coverage", None)
+                result_status = "ok"
+                if coverage and (coverage["pdf_coverage"] != "complete" or coverage["pdf_text_quality"] != "text-present"):
+                    result_status = f"review({coverage['pdf_coverage']}/{coverage['pdf_stop_reason']})"
+                if used == "anydoc":
+                    audit = audit_markdown_file(target, vault)
+                    if audit.status != "ok":
+                        result_status = f"review({','.join(audit.issues)})"
+                row[backend] = f"{result_status}:{len(body)}ch:{time.perf_counter() - started:.1f}s"
             except OcrDeferred as exc:
                 row[backend] = f"deferred-ocr ({exc})"
             except Exception as exc:
@@ -1483,7 +1872,7 @@ def run_pilot(items: list[InventoryItem], vault: Path, args: argparse.Namespace)
         + (f" Unavailable: {', '.join(unavailable)}." if unavailable else ""),
         f"Files piloted: {len(rows)}. Outputs under `{(pilot_root.relative_to(vault)).as_posix()}/<backend>/`.",
         "",
-        "Result format: `ok:<chars>ch:<seconds>s`.",
+        "Result format: `ok:<chars>ch:<seconds>s` or `review(coverage/reason):<chars>ch:<seconds>s`.",
         "",
         "| source | " + " | ".join(backends) + " |",
         "| --- | " + " | ".join("---" for _ in backends) + " |",
@@ -1535,9 +1924,10 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         "--backend",
         choices=BACKEND_CHOICES,
         default="builtin",
-        help="Converter backend. 'auto' routes DOCX->pandoc, PPTX/PDF->markitdown, XLSX->docling.",
+        help="Converter backend. 'auto' unchanged; 'anydoc' is explicit, pinned and PPTX/DOCX-only.",
     )
     parser.add_argument("--pilot", action="store_true", help="Convert the selection with all --pilot-backends side by side.")
+    parser.add_argument("--anydoc-site", default="", help="Isolated site containing firecrawl-anydoc 0.2.4; default: local source-conversions/runtimes/anydoc-0.2.4/site.")
     parser.add_argument(
         "--pilot-backends",
         default="builtin,pandoc,markitdown,docling",
@@ -1562,7 +1952,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=0, help="Maximum number of conversions to create. 0 means no limit.")
     parser.add_argument("--max-chars", type=int, default=500_000, help="Maximum characters for text-like extraction.")
     parser.add_argument("--max-rows", type=int, default=50, help="Maximum rows per CSV or spreadsheet preview.")
-    parser.add_argument("--max-pdf-pages", type=int, default=40, help="Maximum PDF pages to extract per file.")
+    parser.add_argument("--max-pdf-pages", type=int, default=0, help="PDF page ceiling; 0 (default) means all pages. Partial output is never coverage-ready.")
+    parser.add_argument("--pdf-timeout-seconds", type=float, default=300, help="Wall time per isolated PDF worker.")
+    parser.add_argument("--pdf-memory-mib", type=int, default=2048, help="OS-enforced PDF worker memory ceiling.")
+    parser.add_argument("--pdf-max-input-bytes", type=int, default=200 * 1024**2)
+    parser.add_argument("--pdf-max-output-bytes", type=int, default=50 * 1024**2)
     parser.add_argument("--validate", action="store_true", help="Audit generated Markdown derivatives.")
     parser.add_argument(
         "--analyze-bundles",
@@ -1575,7 +1969,14 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 
 def main(argv: list[str]) -> int:
+    if len(argv) == 3 and argv[0] == "--anydoc-worker":
+        return anydoc_worker(argv[1], argv[2])
+    if len(argv) == 3 and argv[0] == "--pdf-worker":
+        return pdf_worker(argv[1], argv[2])
     args = parse_args(argv)
+    if args.backend == "anydoc" and args.convert and not (args.include_manifest or args.include_source):
+        print("AnyDoc conversion requires an explicit --include-manifest or --include-source selection.", file=sys.stderr)
+        return 2
     if args.metadata:
         print(json.dumps({
             "converter_profile_version": CONVERTER_PROFILE_VERSION,
@@ -1628,6 +2029,9 @@ def main(argv: list[str]) -> int:
             for line in manifest_path.read_text(encoding="utf-8-sig").splitlines()
             if line.strip()
         )
+    if args.backend == "anydoc" and args.convert and not include_sources:
+        print("AnyDoc selection is empty; refusing an unfiltered conversion.", file=sys.stderr)
+        return 2
     items = build_inventory(
         vault, root_specs, output_dir, sidecar=args.sidecar,
         include_sources=include_sources or None,

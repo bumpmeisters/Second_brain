@@ -13,7 +13,7 @@ sources:
   - raw/Clippings/Accela propels sales to success by implementing Demandbase One.md
   - raw/Clippings/The early bird wins the sale Achievers elevates timely outreach, collaboration, and pipeline visibility through Demandbase insights.md
 created: 2026-07-26
-updated: 2026-07-30
+updated: 2026-09-13
 ---
 
 # ABM Sales-Marketing Operating Contract
@@ -69,6 +69,12 @@ When several teams share an account, route planned customer-facing activity thro
 For global adoption, pair the contract with concise role training, regional office hours, a maintained resource hub, recurring contextual reports, and a feedback path from questions, rejected recommendations, errors, and local adaptations into model and playbook review (source: The early bird wins the sale Achievers elevates timely outreach, collaboration, and pipeline visibility through Demandbase insights.md; body title: *CyberArk achieves 4x higher close rates with an ABX approach powered by Demandbase*; section “Enablement”; vendor case; analysis: P26-C02).
 
 A Demandbase-authored Denodo case provides a concrete, qualified example of this contract in operation: one shared account score was embedded in Salesforce and Marketo, marketing, sales, and BDR teams used a weekly snapshot review to discuss accounts in motion and assign next actions, and sales enablement covered interpretation of engagement and journey context. The case corroborates the shared-data, shared-cadence, and enablement pattern; it does not establish that the score was accurate or that the platform caused commercial outcomes (source: Denodo transforms its go-to-market with Demandbase.md; sections “Building a unified scoring model,” “Embedding Demandbase into daily workflows,” and “Empowering sales adoption”; vendor case).
+
+## Ergänzende Governance-Evidenz und Ressourcenentscheidung
+
+P56-E10 bestätigt den bestehenden Vertrag mit einer wichtigen Grenze: RevOps ist eine koordinierte Fähigkeit, nicht zwingend eine neue Abteilung oder ein monolithischer Stack. Forrester beschreibt zentrale, dezentrale und hybride Ausprägungen und verbindet Execution Readiness mit Budget, Daten, Technik, Prozessen, Enablement, gemeinsamen Kennzahlen und Governance. Das ist Operating-Model-Literatur, kein vergleichender ROI-Nachweis. (source: raw/imports/abm-old-playbook-web-2026-09-13/w079-www-forrester-com-b2b-revenue-engine-alignment-a-cultural-transformation-that-begins-with-customer-o.md; source: raw/imports/abm-old-playbook-web-2026-09-13/w080-www-forrester-com-revenue-operations-nine-myths-and-two-realities.md)
+
+Bei jedem vereinbarten Play daher zusätzlich festhalten: verfügbare Kapazität, entscheidungsbefugter Owner, Regelversion, Rückmeldeweg und Vorgehen bei fehlender Ausführbarkeit. Eine Lücke führt zu einer Ressourcen- oder Prioritätsentscheidung, nicht nur zu einem weiteren Alignment-Termin. Produktänderungen an Scoring, Status und Ausschlüssen müssen in die gemeinsame Regelpflege zurückfließen. Dieser Anwendungsschluss ergänzt vorhandene Vertragsfelder; ein neues Label oder Tool belegt keinen Effekt. Weitere unterstützende Quellen und Grenzen: [P56-E10](_outputs/semantic-ingest/p56/evidence-matrix.csv), [[old-marketing-playbook-web-sources-2026-09-13]].
 
 ## Guardrails
 

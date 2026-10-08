@@ -1,0 +1,739 @@
+{
+    "schema_version":  "1.0",
+    "record_type":  "source_registry",
+    "updated_at":  "2026-07-06T10:31:30.9167191Z",
+    "sources":  [
+                    {
+                        "newsletter_id":  "newsletter-634f6b4335e11215",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9647220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-644ccbb40e2bc15a",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9657174Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-df761a536c925967",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9657174Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-8cf654d852b66ab4",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9657174Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-6ea18060c048e98f",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9657174Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-c46d19650f15b675",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9657174Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-42523ffa19463b8d",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9667219Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-4dd848cf30b9c6c8",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9667219Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-070e30ce923656d2",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9667219Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-9d5b7d96eeddee55",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9667219Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-84342e119b26013e",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9667219Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-401cc4c557d0cb66",
+                        "decision":  "undecided",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9667219Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-d3b7bbefb5f36fa9",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-974a7e2ff5f49eef",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-763eb1662e9d0766",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5413c51b26bd3903",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-43924a342bb6f349",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-c99062d68e984761",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-08f435742729496f",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9677213Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-b8d62ae3c00d5b3a",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-3e23be65852acc1b",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-55314c786581057a",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-b1e2705158963d20",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-7292de3f86aba6f2",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-9f0ae8f078827f3b",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-8495023537c1ca1e",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-02a5923a0e759867",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9687204Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-b17eb0f32c9c4768",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-9c1ba122fcb05ebe",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-3262a41b48ad7a0b",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-45803afa6027feb3",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-7421f648577c502c",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-301012829b318048",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-18e5909623ba0b11",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-f48f10890e6d72da",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9697185Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-62355e578ca3a458",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-c4901919d205b64a",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-d9e19c33ced44bee",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-0c258e566de7aaf9",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-7d2206e6d74b6273",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5a9a23df0cec47c4",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-b90cd19a18204364",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-763b610fac7d327f",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9707227Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-028bb9313115fc8e",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-ff92b13f2a21bad3",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-03db2f04b5b832a4",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-89b5fe0810d1ff56",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-9944936d991bba42",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-28ba2410c856c2d6",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-b9828125510985d0",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-88bdafc3420cf3a7",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9717232Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-f7200e76699aefd4",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5b26767ad9500139",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-cf173f38da987e8f",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-98319c39d95ba92e",
+                        "decision":  "undecided",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-1cbf64fc5d1dcc79",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-c22dec0216d5896c",
+                        "decision":  "undecided",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-60323ae33d81f34b",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-20639a53364ad7fa",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9727226Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-eb88a0f57f32b713",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-3f37e5a245e4c080",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-372b57d63106180c",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-3ead5cb251d255e8",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-16067efd15d03291",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-0a96a39b8a7d7a33",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-874a4b93e5ee87fa",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-2a63926ea6205ebb",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9737224Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-37e43de31a678cbf",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-d6838909bfc5b6e9",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-31ad9f3538e9d175",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-0db7e19a2300eb94",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-00410f37a61f9d92",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-7bcd691c44ba3bfd",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-662c667d9ca446ff",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-17e9407eb416324b",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9747218Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-4e23a5b337d40582",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-2f08497054932d1d",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-a71d849f354592b3",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-0ce0ab5b30364b6c",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-8002b3ea19eedf4f",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-dcdcfbafc98e81ad",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-432b8fc0eac4ce09",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-d8570de9ea2fbf74",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9757216Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-d906cdddb233cae5",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-1519ff602f355b2c",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-fae326110304d27e",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-eb56f630002b0534",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-10e03fe4d28fac47",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-f69e02374bb18c32",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5c2e391fbb421720",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9767228Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-eaef14ba041e6230",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-38c4d8de60e27622",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-97996f479988c7d7",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-64377fe74c0767ea",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-1f5d400c16b274da",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-431e4697e6a4ef44",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-8922f1b74ae58398",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-05da3008aff427d8",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9777220Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-2fe0ffd2a9e2191f",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5f18473d821efb88",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-ec7c1ca3c6b11134",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-21005a2b80ec0f68",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-67b42c78ddb71879",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-2daebba3b355932a",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-9156087385a21d9f",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9787221Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-e2496efd79a59566",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-74ac31095bd1207c",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5648c349688619bc",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-4407e4cc89383835",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-5c14068b2928dfed",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-c976062ef3ae0806",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-6dd31869e5911caf",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9797166Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-7634700dbff39ab4",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-ad722fd32b7ad8d4",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-54e9116830b9f5e8",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-8079f2156ebc8402",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-e11a322b01659130",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-25fda6be2a04f1fd",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-e6cc03435aab1961",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-a33ad83846b49f42",
+                        "decision":  "selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9807192Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-54e26ba983f86c68",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9817173Z"
+                    },
+                    {
+                        "newsletter_id":  "newsletter-40b7f23c8a4ff561",
+                        "decision":  "not_selected",
+                        "note":  "",
+                        "decided_at":  "2026-07-06T10:31:30.9817173Z"
+                    }
+                ]
+}

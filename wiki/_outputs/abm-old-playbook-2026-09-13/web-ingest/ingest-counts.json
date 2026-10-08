@@ -1,0 +1,21 @@
+{
+  "urls": 145,
+  "reviewed": 145,
+  "local_sources": 144,
+  "patterns": 15,
+  "scope_counts": {
+    "full-main-text": 113,
+    "partial": 12,
+    "abstract-only": 18,
+    "manual-transcription": 1,
+    "blocked": 1
+  },
+  "decision_counts": {
+    "extended-claim": 92,
+    "registered-only": 9,
+    "corroborating": 43
+  },
+  "unadmitted": [
+    "W144"
+  ]
+}

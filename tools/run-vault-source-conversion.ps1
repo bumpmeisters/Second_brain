@@ -50,6 +50,7 @@ function Get-StateRows($Inventory,$Audits,$OldBySource){
   $sourcePath=Join-Path $vaultRoot $source
   $target=if($item.target){$item.target.Replace("\","/")}else{""}
   $old=$OldBySource[$source]
+  $pdfMeta=@{};$rowProfile=$policy.converter_profile_version
   if($old -and $old.size_bytes -eq $item.size_bytes -and $old.modified -eq $item.modified){$sha=$old.sha256}
   else{$sha=(Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash.ToLowerInvariant()}
   $state="unsupported";$auditStatus=""
@@ -61,6 +62,16 @@ function Get-StateRows($Inventory,$Audits,$OldBySource){
    $targetExists=Test-Path -LiteralPath $targetPath -PathType Leaf
    $recordedSha=if($targetExists){Read-SidecarFingerprint $targetPath}else{""}
    $sidecarStatus=if($targetExists){Read-SidecarStatus $targetPath}else{""}
+   if($targetExists){
+    $sidecar=Get-Content -LiteralPath $targetPath -Raw
+    $parts=$sidecar -split '---',3
+    $front=if($parts.Count -eq 3 -and -not $parts[0].Trim()){$parts[1]}else{""}
+    $profileMatch=[regex]::Match($front,'(?m)^converter_profile:\s*([^\r\n]+)')
+    if($profileMatch.Success){$rowProfile=$profileMatch.Groups[1].Value.Trim()}
+    if($item.extension -eq ".pdf"){
+     foreach($m in [regex]::Matches($front,'(?m)^(pdf_[a-z_]+):\s*([^\r\n]+)')){$pdfMeta[$m.Groups[1].Value]=$m.Groups[2].Value.Trim()}
+    }
+   }
    $expectedSha=if($recordedSha){$recordedSha}elseif($old){$old.sha256}else{""}
    if($targetExists -and $expectedSha -and $expectedSha -ne $sha){$state="stale-blocked"}
    elseif($targetExists -and $sidecarStatus -eq "deferred-ocr" -and $expectedSha -eq $sha){$state="amber";$auditStatus="deferred-ocr"}
@@ -79,9 +90,10 @@ function Get-StateRows($Inventory,$Audits,$OldBySource){
     }
    }
   }
+  if($item.extension -eq ".pdf" -and $state -eq "green" -and ($pdfMeta.pdf_coverage_version -ne "1" -or $pdfMeta.pdf_coverage -ne "complete" -or $pdfMeta.pdf_text_quality -ne "text-present")){$state="amber";$auditStatus="pdf-coverage-review"}
   $rowRunId=$runId
-  if($old -and $old.sha256 -eq $sha -and $old.profile -eq $policy.converter_profile_version -and $old.target -eq $target -and $old.audit_status -eq $auditStatus -and $old.state -eq $state){$rowRunId=$old.run_id}
-  [pscustomobject]@{source=$source;size_bytes=$item.size_bytes;modified=$item.modified;sha256=$sha;profile=$policy.converter_profile_version;target=$target;audit_status=$auditStatus;state=$state;run_id=$rowRunId}
+  if($old -and $old.sha256 -eq $sha -and $old.profile -eq $rowProfile -and $old.target -eq $target -and $old.audit_status -eq $auditStatus -and $old.state -eq $state){$rowRunId=$old.run_id}
+  [pscustomobject]@{source=$source;size_bytes=$item.size_bytes;modified=$item.modified;sha256=$sha;profile=$rowProfile;target=$target;audit_status=$auditStatus;state=$state;run_id=$rowRunId;pdf_coverage=$pdfMeta.pdf_coverage;pdf_pages_total=$pdfMeta.pdf_pages_total;pdf_pages_processed=$pdfMeta.pdf_pages_processed;pdf_pages_missing=$pdfMeta.pdf_pages_missing;pdf_stop_reason=$pdfMeta.pdf_stop_reason}
  }
 }
 
@@ -130,7 +142,8 @@ try{
   $selectionManifest=Join-Path $runRoot "selected-sources.txt"
   $selection.source|Set-Content -Encoding UTF8 $selectionManifest
   $conversionReport="$runRelative/conversion"
-  & $extract -Convert -Manifest $selectionManifest -ReportDir $conversionReport -Backend $policy.backend 2>&1|Tee-Object -FilePath $logFile -Append
+  $pdfParams=@{MaxPdfPages=$policy.pdf_limits.max_pages;PdfTimeoutSeconds=$policy.pdf_limits.timeout_seconds;PdfMemoryMiB=$policy.pdf_limits.memory_mib;PdfMaxInputBytes=$policy.pdf_limits.max_input_bytes;PdfMaxOutputBytes=$policy.pdf_limits.max_output_bytes}
+  & $extract -Convert -Manifest $selectionManifest -ReportDir $conversionReport -Backend $policy.backend @pdfParams 2>&1|Tee-Object -FilePath $logFile -Append
   $convertedInventory=Import-Rows (Join-Path $vaultRoot "$conversionReport/source-inventory.csv")
   $convertedAudits=Import-Rows (Join-Path $vaultRoot "$conversionReport/conversion-audit.csv")
   $convertedRows=@(Get-StateRows $convertedInventory $convertedAudits $oldBySource)

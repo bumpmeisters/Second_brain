@@ -1,0 +1,30 @@
+{
+  "id": "W118",
+  "url": "https://www.linkedin.com/help/linkedin/answer/a417950/audience-targeting-for-linkedin-ads-best-practices?lang=en",
+  "research_briefs": [
+    "f01-targeting.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "status": "captured-web",
+  "previous_attempt": {
+    "id": "W118",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a417950/audience-targeting-for-linkedin-ads-best-practices?lang=en",
+    "research_briefs": [
+      "f01-targeting.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T18:05:15.054873+00:00",
+    "status": "capture-failed",
+    "error": "Error: All scraping engines failed to retrieve content from this URL. Engines tried: [fire-engine;chrome-cdp, fire-engine(retry);chrome-cdp]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automated access, (3) The website is down or unreachable, (4) The page requires authentication. Double check the URL is correct and accessible in a browser. If the issue persists, contact us at help@firecrawl.com with your request ID for investigation.\n"
+  },
+  "attempted_at": "2026-09-13T18:12:02.826247+00:00",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w118.json",
+  "capture_method": "Direct public HTTPS GET; stdlib HTMLParser main/article transcription with links; no generative summary",
+  "title": "Best practices for LinkedIn Ads audience targeting | LinkedIn Help",
+  "final_url": "https://www.linkedin.com/help/linkedin/answer/a417950/audience-targeting-for-linkedin-ads-best-practices?lang=en",
+  "characters": 11898,
+  "sha256": "d16be1a2fe6846f69e6ea22cbb28c83e79dd72c809455caaaa9f928f1ae3013e",
+  "http_status": 200
+}

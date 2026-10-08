@@ -7,7 +7,7 @@ canonical_id: publication-46428a9db48451a3
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-15
+updated: 2026-09-10
 ---
 
 # AINews
@@ -73,7 +73,7 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-10 — Reproducible runtime identity**: A cross-family source review supports recording the complete runtime configuration and safety-availability measures for agent comparisons. Named-model rankings, current price advantages, and safeguard effectiveness remain unverified (source: [[agent-runtime-identity-source-family-2026-09-10]]).
 
 ## Linked-source analyses
 
@@ -81,6 +81,7 @@ No decision-relevant signals have been approved for this dossier yet. Future ent
 - [[skill-engineering-design-2026-07-02]] - Creator account of skills as compressed expert vocabulary and human steering interfaces.
 - [[production-agent-shape-vercel-eve-2026-06-17]] - Officially checked agent architecture covering durable execution, sandboxes, approvals, skills, evals, and Git-based change control.
 - [[agent-evaluation-infrastructure-roundup-2026-07-14]] - Secondary discovery map for evidence re-fetching, longitudinal degradation, routing stability, and harness observability; primary-source checks remain open.
+- [[agent-runtime-identity-source-family-2026-09-10]] - Mixed vendor and newsletter evidence for a configuration-complete evaluation record; model rankings and price or safety claims remain excluded.
 
 ## Feedback and corrections
 

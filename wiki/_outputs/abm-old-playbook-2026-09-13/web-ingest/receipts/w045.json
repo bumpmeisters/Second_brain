@@ -1,0 +1,17 @@
+{
+  "id": "W045",
+  "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+  "research_briefs": [
+    "s03-aeo.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:49.795902+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w045.json",
+  "title": "Powering Product Discovery in ChatGPT | OpenAI",
+  "final_url": "https://openai.com/index/powering-product-discovery-in-chatgpt/",
+  "characters": 14064,
+  "sha256": "c0801f88058c9d5472e55ba5668cf832ce532784761a37fae4f7b11d54e17179",
+  "http_status": 200
+}

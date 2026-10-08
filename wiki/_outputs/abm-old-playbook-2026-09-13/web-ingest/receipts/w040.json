@@ -1,0 +1,17 @@
+{
+  "id": "W040",
+  "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/pricing-calculator",
+  "research_briefs": [
+    "s02-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:34.695867+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w040.json",
+  "title": "Estimate costs with the Azure pricing calculator - Microsoft Cost Management | Microsoft Learn",
+  "final_url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/pricing-calculator",
+  "characters": 17255,
+  "sha256": "5330214ac8df192920a3772d8daa65b1a7d7ca9946175a6bcb331c67f6b065b4",
+  "http_status": 200
+}

@@ -19,6 +19,7 @@ try {
     }
 
     $excludedOutputs = @($tracked | Where-Object {
+        $_ -match '^repositories/[^/]+/snapshots/' -or
         $_ -like 'wiki/_extractions/*' -or
         $_ -like 'wiki/_outputs/source-conversions/*' -or
         $_ -like 'wiki/_outputs/source-curation/*'

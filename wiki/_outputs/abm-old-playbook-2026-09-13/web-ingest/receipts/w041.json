@@ -1,0 +1,17 @@
+{
+  "id": "W041",
+  "url": "https://learn.microsoft.com/en-us/dynamics365/sales/qualify-lead-convert-opportunity-sales",
+  "research_briefs": [
+    "f04-mql-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:38.062595+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w041.json",
+  "title": "Qualify and convert a lead to opportunity | Microsoft Learn",
+  "final_url": "https://learn.microsoft.com/en-us/dynamics365/sales/qualify-lead-convert-opportunity-sales",
+  "characters": 16142,
+  "sha256": "33b24a676bd3c57413201760af630f9a4315d3b828d007d3131133a017330682",
+  "http_status": 200
+}

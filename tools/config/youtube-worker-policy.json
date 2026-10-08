@@ -1,0 +1,29 @@
+{
+  "schema_version": "youtube-worker/v1",
+  "enabled": true,
+  "approved_by": "Rolf",
+  "approved_on": "2026-09-09",
+  "approval_reference": "Implement the proposed integrated daily semantic worker with weekly acquisition",
+  "acquisition_interval_days": 7,
+  "lease_hours": 20,
+  "bootstrap_manifest": "wiki/_outputs/youtube-intelligence/preflight/restart-2026-09-09--E6A783FBD952.json",
+  "bootstrap_file_sha256": "8344ECAA042349C3DEC23BBBB29C192D2DBEC8B4858400334A4CC01307B4992A",
+  "topic_scope": "wiki/semantic-ingest-workflow.md",
+  "scheduler": "codex-youtube-semantic-worker",
+  "windows_collector_required": false,
+  "caption_safety": {
+    "approved_on": "2026-09-09",
+    "approval_reference": "Rolf approved the researched rate-limit decoupling and conservative recovery plan",
+    "max_videos_per_invocation": 10,
+    "probe_videos": 1,
+    "caption_slot_seconds": 60,
+    "extractor_request_pause_seconds": 1,
+    "before_caption_pause_seconds": 5,
+    "backoff_hours": [24, 48, 96],
+    "max_rate_limit_failures": 3,
+    "stop_on_first_429": true,
+    "immediate_retries": 0,
+    "respect_retry_after": true,
+    "immutable_semantic_snapshots": true
+  }
+}

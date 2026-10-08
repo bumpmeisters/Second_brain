@@ -1,0 +1,52 @@
+{
+  "budgets": {
+    "annual_report": 3,
+    "community": 3,
+    "searches": 12,
+    "supplementary": 20
+  },
+  "company_name": "Amber Fictional Instruments",
+  "core_fields": [
+    "workforce"
+  ],
+  "entity_ids": [
+    "amber-fictional-group"
+  ],
+  "excluded_stocks": [
+    "All real companies and other fictional companies"
+  ],
+  "language": "en",
+  "paths": {
+    "project_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber",
+    "publication_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\context",
+    "run_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\runs",
+    "source_roots": [
+      "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\originals"
+    ],
+    "vault_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber"
+  },
+  "period": "2025",
+  "project_id": "amber",
+  "purpose": "Verify the exact 2025 year-end workforce definition only",
+  "region": "global",
+  "source_manifest": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\selection-follow-up.json",
+    "sha256": "c243a7023d096008d13b4569c636c13103465f92a1aa5471b38e9b7e2173db0e"
+  },
+  "strategy": {
+    "accepted": true,
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\strategy.md",
+    "sha256": "ce4238f51edb1c537a65b862b17ad3c449efcfb3476870362e36fe2b7e934450"
+  },
+  "worker_capacity": 3,
+  "entry": {
+    "mode": "follow-up",
+    "question": "Verify the exact 2025 year-end workforce definition only",
+    "previous": {
+      "run_dir": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\runs\\baseline",
+      "run_sha256": "0098c2dbc6f736731d11e2970ccf2bdeb5e8138bf8fbc669b98b6cf707094775",
+      "context_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-acceptance-20260909\\amber\\context\\company-basis-v1.md",
+      "context_sha256": "18143169f285389a458484bb0603f584b9fbc3b75356649896902782e35702ce"
+    }
+  }
+}

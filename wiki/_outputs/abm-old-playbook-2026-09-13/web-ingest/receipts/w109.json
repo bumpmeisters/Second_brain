@@ -1,0 +1,28 @@
+{
+  "id": "W109",
+  "url": "https://www.hbs.edu/ris/download.aspx?name=ascarza_jmr_18.pdf",
+  "research_briefs": [
+    "s01-abx.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "status": "captured-pdf",
+  "previous_attempt": {
+    "id": "W109",
+    "url": "https://www.hbs.edu/ris/download.aspx?name=ascarza_jmr_18.pdf",
+    "research_briefs": [
+      "s01-abx.md"
+    ],
+    "selection": "selected-for-capture-and-review",
+    "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+    "attempted_at": "2026-09-13T18:04:24.235980+00:00",
+    "status": "capture-failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "attempted_at": "2026-09-13T18:06:38.442593+00:00",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w109.pdf",
+  "final_url": "https://evaascarza.com/papers/ascarza_18.pdf",
+  "bytes": 327683,
+  "sha256": "47e79a70df9884c15e305b3612f59cfea50988fb2437bfdf7a7c131564919e11",
+  "recovery": "Same named paper, author-hosted original located via primary-source search after HBS403; not a new research topic"
+}

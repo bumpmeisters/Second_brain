@@ -2,11 +2,12 @@
 type: concept
 status: active
 sources:
+  - "raw/Clippings/The Human Element of Community Cannot Be Automated (So I Let AI Do The Rest).md"
   - "raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md"
   - raw/imports/automated-clippings/youtube/UCwvXnrOCRlhokHlJwohf2OA/2026-07-02--zwl9Uyw2DjA.md
   - raw/Clippings/How to Build Second Brains for Clients The AI Business I’d Start Today.md
 created: 2026-05-30
-updated: 2026-08-16
+updated: 2026-09-09
 ---
 
 # LLM Wiki
@@ -38,6 +39,18 @@ A portable Markdown bundle can standardize how knowledge is packaged and navigat
 For volatile structures, keep the compiled concept page thin and link it to the living code file, table, API, or other governed source rather than copying every detail. Put deterministic checks around automated maintenance so a rewrite cannot silently remove required citations or required structure; then retain human review for meaning, authority, conflict, and promotion. A live-resource link does not itself prove permission, freshness, trust, or claim approval.
 
 This source does not establish OKF as the vault's standard. Its adoption, interoperability, tool support, product details, retrieval comparisons, and performance claims remain current and unverified.
+
+## Community-Wissen aus Gesprächen in eine gepflegte Bibliothek überführen
+
+Für ausdrücklich freigegebene Community-Inhalte Gesprächszusammenfassungen, wiederkehrende Fragen und geteilte Ressourcen in eine durchsuchbare Bibliothek überführen. Herkunft, Beitragende, Thema und Nutzungskontext erhalten. Ein Digest führt zur Bibliothek zurück; die Sammlung kann neue Onboarding- und Wiederverwendungsbedarfe sichtbar machen. Menschliche Moderation, Vertrauen und Beziehungsentscheidungen bleiben eigene Aufgaben.
+
+Die Quelle beschreibt einen Praxisfall. Aufnahme in eine Community oder Zugriff auf Slack erlaubt weder Sammlung noch Weiterveröffentlichung. Kein automatischer Versand und kein 90%-Automatisierungsversprechen.
+
+Methodische Ableitung P47-C06 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/The Human Element of Community Cannot Be Automated (So I Let AI Do The Rest).md` — Acquisition/onboarding; engagement; knowledge capture and resource library; practitioner.
+
+Für den engeren Austausch konkreter Experimente siehe [[marketing-peer-experiment-exchange]].
 
 ## Related pages
 

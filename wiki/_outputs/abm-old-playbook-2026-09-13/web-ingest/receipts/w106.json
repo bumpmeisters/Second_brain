@@ -1,0 +1,17 @@
+{
+  "id": "W106",
+  "url": "https://www.gartner.com/en/sales/topics/sales-enablement",
+  "research_briefs": [
+    "t04-sales-to-buyer-enablement.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:04.248985+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w106.json",
+  "title": "What Is Sales Enablement? The CSO’s Ultimate Guide | Gartner",
+  "final_url": "https://www.gartner.com/en/sales/topics/sales-enablement",
+  "characters": 23879,
+  "sha256": "8d04f693fcd271848ad50d7f8f23498642dbc13fe71158865ec47cc949bbb799",
+  "http_status": 200
+}

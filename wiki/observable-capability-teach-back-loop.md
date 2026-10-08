@@ -6,11 +6,12 @@ use_when: "A sales, marketing, customer, or operational capability must transfer
 avoid_when: "Completion or attendance is sufficient evidence, or no realistic scenario and accountable reviewer can be provided."
 output: "A teach-back record, scenario artifact, rubric feedback, second demonstration, and transfer evidence."
 sources:
+  - "raw/assets/tuev-rheinland/academy/2026-10-07/ee8fe20c8e5afc333a120e85f759bdb9b4f560354e016af55377c9c2aeb9315f.pdf"
   - raw/Clippings/How teach-back sales training, AI coaching and culture drive real sales performance  OnBase podcast.md
   - raw/imports/automated-clippings/youtube/UCN5xPNTy8hLoRVTGbECznMg/2026-08-04--hnVwF42gGMA.md
   - raw/imports/automated-clippings/youtube/UCN5xPNTy8hLoRVTGbECznMg/2026-08-12--EYXs4h_cLMk.md
 created: 2026-07-26
-updated: 2026-08-16
+updated: 2026-10-07
 ---
 
 # Observable Capability Teach-Back Loop
@@ -46,6 +47,12 @@ AI is a coach and practice aid, not the sole evaluator or a surveillance mechani
 Protecting a first-pass learner judgment does not authorize unchecked novice publication or imply that automation should be withheld from consequential work. The “formative debt” source is a practitioner argument, not outcome evidence; its industry-wide employment, career-pipeline, productivity, and universal expertise claims are excluded (source: 2026-08-04--hnVwF42gGMA.md; analysis: P33-W2-C01).
 
 The judgment-training extension is also practitioner guidance, not evidence of historical continuity, training effectiveness, organizational scale, career progression, or employment outcomes. Keep the rubric, reviewer authority, and release controls appropriate to the consequence of the work (source: 2026-08-12--EYXs4h_cLMk.md; analysis: P34-W3-C01).
+
+## Transfer-Voraussetzungen vor dem Teach-Back
+
+Vor der Weiterbildung gemeinsam einen konkreten späteren Anwendungsfall, Erwartungen und beteiligte Unterstützer festhalten. Führung und Kollegen müssen wissen, welche Anwendung geplant ist; Zeit und Gelegenheit für die Umsetzung gehören in den Transferplan. Nach der Weiterbildung tatsächliche Anwendung mit dem Lernenden prüfen, statt allein die absolvierte Schulung zu zählen. Diese organisatorische Vorprüfung ergänzt die vorhandene Demonstration und Rubrik; sie ersetzt keine beobachtbare Kompetenzprüfung. (source: raw/assets/tuev-rheinland/academy/2026-10-07/ee8fe20c8e5afc333a120e85f759bdb9b4f560354e016af55377c9c2aeb9315f.pdf; vendor; Analyse P59-C03; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[academy-priority-source-review-2026-10-07]].
 
 ## Related pages
 

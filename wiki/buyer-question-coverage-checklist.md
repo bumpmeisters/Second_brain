@@ -10,7 +10,7 @@ sources:
   - raw/Clippings/How to create awareness among strategic accounts 2.md
   - raw/imports/automated-clippings/youtube/UCKmFUXhOuINEkFlgnXOOEig/2026-06-16--xGDgK1LpTwU.md
 created: 2026-07-26
-updated: 2026-08-16
+updated: 2026-09-13
 ---
 
 # Buyer Question Coverage Checklist
@@ -42,6 +42,16 @@ Use during content planning, audit, briefing, or pre-publication review for cons
 ## Commercial explainer sequence
 
 For a commercial explainer or Video Sales Letter, make the persuasive sequence inspectable. Explicitly connect the intended audience and problem to useful teaching, the offer, verifiable proof, material objections and alternatives, price or other trade-offs, fit and non-fit, and a low-friction next step. Keep education and selling legible, and do not treat testimonials, engagement, or the sequence itself as causal proof (source: 2026-06-16--xGDgK1LpTwU.md; vendor walkthrough; analysis: P32-W8-C01).
+
+## Gemeinsame Entscheidung, Zugang und Nichtentscheidung
+
+Die P56-Ergänzung erweitert die Coverage-Prüfung um drei Fragen. Sie ist eine begrenzte Synthese aus den in [[old-marketing-playbook-web-sources-2026-09-13]] einzeln geprüften Quellen; deren Befragungen und Empfehlungen belegen keine universelle Wirkung dieser Checklist.
+
+- **Gemeinsame Basis (P56-E06):** Können alle Beteiligten dasselbe Problem, dieselben Kernannahmen und dieselben Zielkonflikte erkennen? Rollenspezifische Prüftiefe ergänzen, ohne widersprüchliche Nutzenversprechen oder isolierte Persona-Geschichten zu erzeugen. Konsenslücken und widersprechende Kriterien ausdrücklich in den Coverage-Gap aufnehmen. Gartner beschreibt Konflikte und Gruppenrelevanz als Problem; zugängliche Befragungen/Abstracts erlauben keinen allgemeinen kausalen Lift. (source: wiki/old-marketing-playbook-web-sources-2026-09-13.md; E06, unter anderem W097)
+- **Passender Zugang (P56-E08):** Was gehört zur öffentlichen Orientierung, was zu einem freiwilligen Kontaktangebot, was in vertrauliche gemeinsame Unterlagen und wann wird kompetente menschliche Hilfe benötigt? Die Zugangsentscheidung je Käuferaufgabe dokumentieren. Keine universelle Ungatingquote und keine Gleichsetzung von Selbstservice mit vollständiger Verkäufervermeidung. Ein Digital Sales Room stellt eine Arbeitsfläche bereit; er erledigt keine offenen Beweis-, Abstimmungs- oder Entscheidungsaufgaben von selbst. (source: wiki/old-marketing-playbook-web-sources-2026-09-13.md; E08, Quellen und Grenzen in der Evidenzmatrix)
+- **Grund für Nichtentscheidung (P56-E14):** Fehlen Informationen, Konsens oder Sicherheit, oder ist Nichtkaufen angesichts Kosten, Alternativen und Implementierungsrisiken sinnvoll? No Decision, Status quo und psychologische Entscheidungsvermeidung nicht synonym führen. Die Meta-Analyse zu Decision Avoidance und Regret liefert differenzierte, nicht B2B-spezifische Befunde und weist Publikationsbias aus; sie rechtfertigt kein pauschales FOMU-Narrativ für verlorene Deals. (source: raw/imports/abm-old-playbook-web-2026-09-13/w046-pmc-ncbi-nlm-nih-gov-pmc10575496.md)
+
+Das bestehende Output-Dokument erhält dafür konkrete Konsistenz-, Zugangs- und Diagnose-Lücken mit Belegbedarf und Owner. Alle ergänzenden Quellen einschließlich gegensätzlicher Befunde bleiben über die [P56-Evidenzmatrix](_outputs/semantic-ingest/p56/evidence-matrix.csv) nachvollziehbar.
 
 ## Output
 

@@ -1,0 +1,17 @@
+{
+  "id": "W008",
+  "url": "https://blog.google/products-and-platforms/products/search/ai-search-driving-more-queries-higher-quality-clicks",
+  "research_briefs": [
+    "f09-zero-click.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:50.816990+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w008.json",
+  "title": "AI in Search: Driving more queries and higher quality clicks",
+  "final_url": "https://blog.google/products-and-platforms/products/search/ai-search-driving-more-queries-higher-quality-clicks/",
+  "characters": 9522,
+  "sha256": "cd00fc09d068892d7c87219f49d5276efed58c71500d101c705cc191ccb754db",
+  "http_status": 200
+}

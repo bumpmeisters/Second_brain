@@ -7,7 +7,7 @@ canonical_id: publication-642c81df9a8669ad
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-09-14
 ---
 
 # AInauten
@@ -58,11 +58,11 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-14 — autonomous-agent incident controls**: Anthropic's first-party report corroborates explicit scope, egress control, impossible-task stops, action evidence, adversarial replay, and layered monitoring. Prevalence, production safety, and safeguard sufficiency remain excluded (source: [[anthropic-agent-incident-assessment-source-review-2026-09-14]]).
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[anthropic-agent-incident-assessment-source-review-2026-09-14]] - First-party incident assessment retained as bounded corroboration for existing security, evaluation, and governance controls.
 
 ## Feedback and corrections
 

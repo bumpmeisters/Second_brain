@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "api": {
+    "initialize(profile_path, run_dir, task_specs)": "Returns complete run dict; refuses existing run. Absolute profile path; task_specs list.",
+    "load_run(run_dir)": "Returns integrity-checked run dict without mutation.",
+    "execute(run_dir, action, payload=null, expected_revision=null)": "Returns action data including revision. Mutations require expected_revision, lock and atomic CAS; preflight/next/verify are read-only. Errors raise EngineError (ValueError subclass)."
+  },
+  "profile_required": ["project_id", "entity_ids", "purpose", "core_fields", "paths", "strategy", "budgets"],
+  "profile_paths": {"project_root":"absolute existing directory", "vault_root":"absolute existing directory", "run_root":"absolute directory within project_root", "source_roots":"array of absolute existing original directories", "publication_root":"absolute directory within project_root; outside original roots"},
+  "strategy": {"path":"absolute existing file", "sha256":"exact digest", "accepted":true},
+  "source_manifest": {"path":"absolute JSON file; source_manifest may initially be null or omitted", "sha256":"exact digest"},
+  "manifest_shape": {"project_id":"matches profile", "reviewed":true, "reviewer":"nonempty actor", "sources":[{"path":"absolute original path within source_roots, or omit path/hash and provide exact url for URL-only project review", "sha256":"exact digest for local original", "entity_ids":["target entity"], "selection_status":"approved-for-project-review"}]},
+  "budget_keys": {"annual_report":3, "supplementary":20, "community":3, "searches":100},
+  "budget_note": "community is a subset of supplementary. Counts are global unique source IDs/hash; reservations checked before claim. profile may lower but not raise 3/20/3 caps.",
+  "task_shape": {"id":"P01", "question":"specific bounded task", "dependencies":[], "source_ids":[], "optional":false, "completion_criterion":"inspectable output", "max_attempts":3},
+  "actions": {
+    "revise-source-notes": {"source_id":"S1", "updated_limitations":["Nonempty revised limitation text"], "reason":"Why these provenance notes changed", "reviewer":"Coordinator reviewer; old and new limitations retained in dated source.note_history; only limitations and note_history may change; draft review is invalidated"},
+    "preflight": {},
+    "next": {},
+    "claim": {"task_id":"P01", "owner":"worker-id", "reserve":{"annual_report":0,"supplementary":1,"community":0,"searches":2}, "lease_seconds":3600},
+    "accept": {"result_path":"absolute JSON path inside run_dir/results"},
+    "review": {"task_id":"P01", "reviewer":"actor", "independent":true, "verdict":"pass|rework", "rationale":"source-near substantive judgment", "fact_reviews":[{"fact_id":"F1", "verdict":"verified|limited|rejected", "source_id":"S1", "locator":"page/section", "rationale":"why evidence supports/limits claim"}]},
+    "done": {"task_id":"P01"},
+    "skip": {"task_id":"P10", "reason":"optional package unnecessary"},
+    "resume": {"abandon_running":false, "reason":"session changed; if abandoning"},
+    "select-sources": {"manifest_path":"absolute reviewed JSON manifest", "sha256":"digest"},
+    "reconcile": {"source_id":"S1", "submission":{"input":"inbox relative input", "lane":"raw", "sha256":"digest"}, "receipt":{"input":"...", "destination":"...", "status":"admitted", "sha256":"..."}, "readiness":null},
+    "review-draft": {"draft_path":"absolute .md within run_dir", "sha256":"exact digest", "reviewer":"actor", "rationale":"coverage and substantive review", "status":"final|vorläufig"},
+    "publish": {"target_name":"unternehmensbasis.md"},
+    "stop": {"reason":"user instruction"},
+    "continue": {"reason":"user instruction"},
+    "verify": {}
+  },
+  "result_shape": {"task_id":"P01", "attempt_id":"from claim", "input_revision":1, "sources":[], "facts":[], "gaps":[], "used_budget":{"searches":1}, "problems":[], "next_question":"specific next question or null"},
+  "source_required": ["id","publisher","title","kind","url","date","retrieved_at","entity_ids","budget_class","local_path","sha256","readiness_status","limitations"],
+  "source_note": "date may be null only with nonempty date_note; kind any descriptive string; budget_class annual_report|supplementary|community; community also consumes supplementary. Binary requires readiness_status=ready and extraction_path plus extraction_sha256. Web capture original HTML and optional separate reading text retained. Candidate with local_path=null requires acquisition_status=candidate and cannot support factual claims until reconciled. Public nonbinary URL-only sources require explicit acquisition_status=url-reviewed, readiness_status=ready, exact reviewed manifest URL and entity IDs, no invented file hash. Project selection grants no wiki semantic-ingest authority; legacy selection label accepted for synthetic fixtures only by convention.",
+  "fact_required": ["id","statement","field","entity_id","region","period","classification","source_id","locator"],
+  "fact_note": "classification fact|self-description|calculation|hypothesis. Hypothesis can have null source only when uncertainty nonempty; normal facts require reconciled approved original. Quantities add value/unit/metric/definition; calculations add input_fact_ids with matching unit,definition,entity_id,region; incomparable inputs rejected.",
+  "gap_required": ["id","field","impact","needed_evidence","search_routes","critical","decision"],
+  "gap_note": "decision follow-up|unresolved|out-of-scope|resolved; follow-up at most once and only before two distinct unsuccessful search routes. unresolved records honest uncertainty. A later result may update same gap ID with unchanged field and all prior routes retained; history is persisted. resolved needs resolved_by accepted fact ID.",
+  "state_notes": ["run.json sole state of record; checksum detects accidental corruption", "run.json.lock fails closed; stale lock removal is manual after verifying no live writer", "formal verify reports structural evidence only, never truth", "core/profile/strategy hashes pin run; version drift rejects mutation/resume", "read-only source manifest is loaded only on init or explicit select-sources; use a new immutable manifest for additional selections", "publication copies exact reviewed Markdown bytes locally with durable handoff journal and previous-byte rollback; project README/index integration belongs to coordinator", "draft gate requires project ID, exact purpose, status and every source/fact/gap ID; final requires verified non-hypothesis fact per core field and no unresolved critical gap", "claim returns task with input_revision and attempt_id; reuse those exact values in result", "resume accepts saved current-attempt result even after lease expiry into submitted for mandatory review; older attempts remain reported for explicit review", "rework replaces the task's whole active fact set and preserves previous facts in fact_history; external calculations referencing replaced facts fail closed", "reconcile preserves blocked readiness as a source state; blocked sources cannot support facts", "binary sidecar frontmatter must identify current source_sha256"]
+}

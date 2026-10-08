@@ -13,6 +13,10 @@ try {
     Set-Content -LiteralPath $hiddenPath -Encoding UTF8 -Value 'hidden fixture'
     (Get-Item -LiteralPath $hiddenPath).Attributes = (Get-Item -LiteralPath $hiddenPath).Attributes -bor [IO.FileAttributes]::Hidden
     Set-Content -LiteralPath (Join-Path $sourceRoot 'research/report.md') -Encoding UTF8 -Value '# Research'
+    $repoSnapshot = 'repositories/owner--repo/snapshots/' + ('a' * 40)
+    New-Item -ItemType Directory -Force (Join-Path $sourceRoot $repoSnapshot) | Out-Null
+    Set-Content -LiteralPath (Join-Path $sourceRoot ($repoSnapshot + '/README.md')) -Encoding UTF8 -Value '# Repository fixture'
+    Set-Content -LiteralPath (Join-Path $sourceRoot 'repositories/owner--repo/owner--repo-analysis.md') -Encoding UTF8 -Value '# Derived dossier'
     @'
 # Sources
 
@@ -21,6 +25,7 @@ try {
 | `raw/source.md` | Markdown | content-ingested |
 | `raw/unknown.md` | Markdown | mystery-status |
 | `raw/assets/` | Folder | inventory-only |
+| `repositories/owner--repo/snapshots/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/` | Repository snapshot | inventory-only |
 '@ | Set-Content -LiteralPath (Join-Path $vault 'wiki/sources.md') -Encoding UTF8
     @'
 "canonical_source","semantic_decision"
@@ -35,7 +40,10 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Split-root source coverage generation failed.' }
     $output = Join-Path $vault 'wiki/_outputs/source-coverage/source-inventory.csv'
     $rows = @(Import-Csv -LiteralPath $output -Encoding UTF8)
-    if ($rows.Count -ne 5) { throw "Expected five inventory rows, found $($rows.Count)." }
+    if ($rows.Count -ne 6) { throw "Expected six inventory rows, found $($rows.Count)." }
+    $repository = $rows | Where-Object source_path -eq ($repoSnapshot + '/README.md')
+    if ($repository.source_kind -ne 'repository-snapshot' -or $repository.coverage_status -ne 'inventory-only') { throw 'Repository source custody was not inventoried separately.' }
+    if (@($rows | Where-Object source_path -like '*-analysis.md').Count) { throw 'Derived dossier was counted as an original source.' }
     $registered = $rows | Where-Object source_path -eq 'raw/source.md'
     $unknown = $rows | Where-Object source_path -eq 'raw/unknown.md'
     $binary = $rows | Where-Object source_path -eq 'raw/assets/document.pdf'
@@ -78,5 +86,7 @@ try {
     if ($staleExit -ne 2) { throw "Stale source inventory did not fail closed (exit $staleExit)." }
     Write-Host 'Source coverage tests passed.'
 } finally {
+    $resolvedTempRoot = [IO.Path]::GetFullPath($tempRoot)
+    if ((Split-Path -Parent $resolvedTempRoot).TrimEnd('\') -ne [IO.Path]::GetTempPath().TrimEnd('\') -or (Split-Path -Leaf $resolvedTempRoot) -notlike 'source-coverage-*') { throw 'Unsafe fixture cleanup target.' }
     Remove-Item -LiteralPath $tempRoot -Recurse -Force -ErrorAction SilentlyContinue
 }

@@ -13,7 +13,7 @@ sources:
   - tools/test-line-ending-policy.ps1
   - raw/Clippings/Your AI Second Brain Is Slowly Rotting (Here's How to Fix It).md
 created: 2026-07-18
-updated: 2026-08-16
+updated: 2026-09-09
 ---
 
 # Semantic Ingest Workflow
@@ -21,6 +21,29 @@ updated: 2026-08-16
 **Summary**: A spec-anchored workflow that separates canonical source identity, semantic judgment, evidence review, knowledge promotion, and deterministic package validation.
 
 ---
+
+## Agreed topic scope - 2026-09-09
+
+Rolf accepted the eight topic fields discussed in this chat, extended them to AI coding and vibe coding, and then approved the three additional fields and explicit subtopics identified in the clipping-title review. The twelve fields below form the agreed source-selection relevance profile. Topic acceptance does not authorize reading an entire archive or promoting its claims (source: Rolf's topic-scope decisions, 2026-09-09).
+
+| Topic field | Relevant knowledge |
+|---|---|
+| Market, customer and audience understanding | Market analysis, segmentation, ICPs, personas, buying groups, buying situations, needs, barriers and journeys. |
+| Marketing strategy, positioning and brand | Strategic choices, differentiation, value propositions, messaging, brand and proof. |
+| B2B GTM, ABM and sales enablement | Account selection, sales motions, plays, marketing-sales collaboration, pipeline and customer expansion. |
+| Demand generation and campaigns | Full-funnel planning, qualification, scoring, nurturing, events, communities, partners and channels. |
+| Content, thought leadership and creative work | Strategy, briefs, storytelling, creative direction, quality, distribution and reuse; SEO, GEO and AEO, including discoverability in AI-mediated search. |
+| Marketing operations and measurement | Processes, roles, handoffs, data quality, reporting, experiments, KPIs and attribution limits; evidence quality and limits of AI-visibility measurement. |
+| AI-assisted work and agentic systems | Task design, prompting, skills, tools, orchestration, evaluation, human oversight, security and reliability. |
+| Second brains, ContextOps and methods | Knowledge acquisition, curation, retrieval, source verification, reusable context, framework selection and learning from application. |
+| AI coding and vibe coding | AI-assisted software development and exploratory app building, including problem/specification work, prototyping, coding, debugging, tests, review, refactoring, deployment and maintenance; permissions, security evaluation and reliable software operation; assess limitations and counterevidence alongside successful examples. |
+| AI product development and product management | Problem selection, user value, requirements, project scoping, prototypes, product validation, prioritization and learning from use. |
+| AI business models and services | Customer problems, offer design, service boundaries, pricing, economics, delivery, support and maintenance of commercial AI solutions, including second brains and knowledge systems for clients. |
+| Local and hybrid AI infrastructure | Local models and inference, model/runtime selection, local/cloud division, hardware suitability, privacy, costs, portability, maintainability and operation. |
+
+AI project setup is explicitly included: `AGENTS.md`, `CLAUDE.md`, memory files such as `MEMORY.md`, project wikis, context organization and the separation of instructions, knowledge, skills and executable checks. Second brains and the construction and maintenance of AI-based knowledge bases are explicitly included. This names subject matter; it does not prescribe a universal file convention or claim equal maturity of existing coverage (source: Rolf's clarification, 2026-09-09; existing coverage: [[claude-md-project-instructions]], [[context-engineering]], [[continual-learning-for-agents]], [[llm-wiki]], [[rag]]).
+
+AI adoption, work redesign, organization, leadership, collaboration and capability development are explicit cross-cutting topics where they improve these fields. Security, evaluation and reliable operation apply across agentic work, coding, knowledge systems and infrastructure. Topic fit alone is insufficient: durable contribution, evidence quality, reuse boundaries and the approval gates below still apply. The title-level review and subsequent acceptance are recorded in `wiki/_outputs/source-intake/topic-coverage-review-2026-09-09.md`; acceptance establishes topic relevance, not source validity or claim approval (source: Rolf's acceptance of the findings, 2026-09-09).
 
 ## Control surfaces
 

@@ -7,7 +7,7 @@ canonical_id: publication-36369f364fbf498a
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-15
+updated: 2026-09-11
 ---
 
 # The Pragmatic Engineer
@@ -53,6 +53,7 @@ This dossier currently represents one sender-derived profile. Its identity remai
 - Newsletter claims have not been independently verified and must not be promoted as facts without primary or authoritative evidence.
 - Sender-derived identities lacked List-ID metadata during qualification; source grouping remains explicitly reviewable.
 - Commercial, affiliate, community, course, or account-notification material may occur and should be discounted during signal judging.
+- Issue-level reporting mode, access path, correction transparency, and intended shelf life are recorded only when observed for that issue; they do not score this publication or establish accuracy.
 
 ## Representative issue subjects
 
@@ -71,11 +72,16 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-10 — AI-enabled team-contraction resilience**: A bounded source-family review supports a pre-decision resilience gate for accepted outcomes, critical knowledge, failure coverage, on-call capacity, slack, learning, workload, human impact, obligations, and rollback. Meta-specific facts and effects remain unverified (source: [[ai-team-contraction-resilience-source-family-2026-09-10]]).
+- **2026-09-11 — issue-level source-method lens**: A first-party retrospective supports recording reporting mode, access path, correction transparency, and intended shelf life as separate issue metadata for evidence expectations, uncertainty, and refresh needs. It does not support a publisher score or an accuracy claim (source: [[newsletter-source-method-lens-source-review-2026-09-11]]).
+- **2026-09-14 — risk-routed agentic code review**: The accessible article supports routing human review to scope, exit criteria, plans, tests, interfaces, authentication, schemas, and irreversible state. Later paid sections and self-reported outcome figures remain excluded (source: [[agentic-code-review-source-review-2026-09-14]]).
 
 ## Linked-source analyses
 
 - [[loop-engineering-field-analysis-2026-07-15]] - Practitioner field analysis of bounded iterations, verification, compressed state, drift, and cost.
+- [[ai-team-contraction-resilience-source-family-2026-09-10]] - Qualified decision lens for resilience before AI-related team contraction; the inaccessible Reuters member remains unverified.
+- [[newsletter-source-method-lens-source-review-2026-09-11]] - First-party process retrospective supporting issue-level method metadata with explicit non-scoring and claim exclusions.
+- [[agentic-code-review-source-review-2026-09-14]] - Partial practitioner analysis supporting risk-routed review surfaces without declaring human review obsolete.
 
 ## Feedback and corrections
 

@@ -1,0 +1,17 @@
+{
+  "id": "W067",
+  "url": "https://support.google.com/google-ads/answer/2454071?hl=en-AU",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:03.898854+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w067.json",
+  "title": "About columns in your statistics table - Google Ads Help",
+  "final_url": "https://support.google.com/google-ads/answer/2454071?hl=en-AU",
+  "characters": 40302,
+  "sha256": "39c930a9fb13df9a8027a20b14355a5d68895e30f90a17504b15ade0c98e20fd",
+  "http_status": 200
+}

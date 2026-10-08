@@ -1,0 +1,17 @@
+{
+  "id": "W085",
+  "url": "https://www.forrester.com/blogs/the-revenue-process-alignment-series-part-4-an-opportunity-centric-revenue-process-is-all-about-context",
+  "research_briefs": [
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:48.784468+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w085.json",
+  "title": "The Revenue Process Alignment Series, Part 4: An Opportunity-Centric Revenue Process Is All About Context",
+  "final_url": "https://www.forrester.com/blogs/the-revenue-process-alignment-series-part-4-an-opportunity-centric-revenue-process-is-all-about-context/",
+  "characters": 14780,
+  "sha256": "df9df9e9f16dc41ed016e4270330beafa974fccc669215b1be33c841c721482a",
+  "http_status": 200
+}

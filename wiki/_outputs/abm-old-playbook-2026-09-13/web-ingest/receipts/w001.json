@@ -1,0 +1,18 @@
+{
+  "id": "W001",
+  "url": "https://6sense.com/blog/b2b-form-fill-rates-are-very-low-what-are-marketing-organizations-doing-about-it",
+  "research_briefs": [
+    "f05-dark-funnel.md",
+    "t03-lead-to-demand.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:37.935330+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w001.json",
+  "title": "Low B2B Form Fill Rates: How Marketing Teams Are Responding",
+  "final_url": "https://6sense.com/blog/b2b-form-fill-rates-are-very-low-what-are-marketing-organizations-doing-about-it/",
+  "characters": 28784,
+  "sha256": "8026de3335fe4f5ac1f569a6211678deb7ef053cb8f3116448d27dd5fbdd2526",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W130",
+  "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/focusing-your-m-and-a-team-on-revenue-growth",
+  "research_briefs": [
+    "s04-revops-governance.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:43.743368+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w130.json",
+  "title": "Focusing your M&A team on revenue growth | McKinsey",
+  "final_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/focusing-your-m-and-a-team-on-revenue-growth",
+  "characters": 19069,
+  "sha256": "e192e588f058909e591b1b03175f72dc26a38ccf689567dfb30f1f268c947ce7",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W108",
+  "url": "https://www.gong.io/resources/guides/the-data-backed-guide-to-multi-threading-and-team-selling",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:17.357856+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w108.json",
+  "title": "The data-backed guide to multi-threading and team selling",
+  "final_url": "https://www.gong.io/resources/guides/the-data-backed-guide-to-multi-threading-and-team-selling",
+  "characters": 1261,
+  "sha256": "5c0611e22e459f8a04a8643abcef007e9fdcccf8191c30729b527a526dcda941",
+  "http_status": 200
+}

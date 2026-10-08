@@ -1,6 +1,32 @@
 {
   "contract_version": "local-skill-contract/v1",
   "skills": {
+    "repository-analysis": {
+      "require_openai_yaml": true,
+      "required_paths": [
+        ".agents/skills/repository-analysis/SKILL.md",
+        "templates/repository-analysis.md",
+        "repositories/index.md",
+        "tools/repository-library.ps1",
+        "tools/repository_library.py",
+        "tools/config/repository-library-policy.json",
+        "tests/repository-library/test_repository_library.py",
+        "skills/repository-analysis/references/custody.md",
+        "skills/repository-analysis/references/architecture.md",
+        "skills/repository-analysis/references/workflows.md",
+        "skills/repository-analysis/references/skills-context.md",
+        "skills/repository-analysis/references/quality-learning.md",
+        "skills/repository-analysis/references/transfer.md"
+      ]
+    },
+    "task-closeout": {
+      "require_openai_yaml": false,
+      "required_paths": [
+        ".agents/skills/task-closeout/SKILL.md",
+        "wiki/continual-learning-for-agents.md",
+        "tests/task-closeout/scenarios.md"
+      ]
+    },
     "linkedin-dashboard-updater": {
       "require_openai_yaml": true,
       "required_paths": [

@@ -1,0 +1,29 @@
+{
+  "canonical_source_count": 144,
+  "hashes_match": true,
+  "decision_rows": 144,
+  "evidence_patterns": 15,
+  "pdf_pages": {
+    "W016": 5,
+    "W017": 79,
+    "W031": 8,
+    "W042": 16,
+    "W007": 8,
+    "W048": 31,
+    "W052": 172,
+    "W071": 50,
+    "W075": 15,
+    "W109": 20,
+    "W131": 11
+  },
+  "pdf_page_total": 415,
+  "canonical_promotion": "pending-human-evidence-approval",
+  "manual_supplements": [
+    "W007",
+    "W017",
+    "W031"
+  ],
+  "unavailable_content": [
+    "W144"
+  ]
+}

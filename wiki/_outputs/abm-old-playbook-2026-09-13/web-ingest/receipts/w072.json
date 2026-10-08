@@ -1,0 +1,17 @@
+{
+  "id": "W072",
+  "url": "https://www.demandbase.com/faq/account-based-experience-101",
+  "research_briefs": [
+    "s01-abx.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:37.973946+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w072.json",
+  "title": "What is account-based experience? (and why ABX matters) | Demandbase",
+  "final_url": "https://www.demandbase.com/faq/account-based-experience-101/",
+  "characters": 11159,
+  "sha256": "49d69406600b72da8adfd9be9b5eb7dc23f59767554c7c71b6940ada5a093bd0",
+  "http_status": 200
+}

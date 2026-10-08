@@ -1,0 +1,9 @@
+{
+  "name": "loop-marketing-book",
+  "version": "0.1.0",
+  "description": "Official AI companion to Loop: Outlearn. Outmarket. Outgrow. by Kipp Bodnar and Kieran Flanagan. Five skills that turn the book's frameworks into live tools — Taste Profile, Buyer Sim, Tailor, Prompt Coach, and 4 Rs Scorecard.",
+  "author": {
+    "name": "HubSpot Media"
+  },
+  "keywords": ["marketing", "loop-marketing", "hubspot", "taste-profile", "buyer-sim", "content"]
+}

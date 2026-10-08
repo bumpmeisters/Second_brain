@@ -6,9 +6,10 @@ use_when: "An AI automation will be shared, commercialized, connected to multipl
 avoid_when: "Owners, data classes, access rules, recovery expectations, or required security and legal review are undefined."
 output: "An approved boundary, access, schema, secret, recovery, cost, and migration record."
 sources:
+  - "raw/assets/20260821_Matt Heinz_substack posts.docx"
   - raw/Clippings/313  The things you must know before starting to build any AI automation with Kevin Williams.md
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-09-09
 ---
 
 # AI Automation Foundation and Separation Gate
@@ -50,6 +51,16 @@ The underlying practitioner interview describes how convenient shared databases,
 8. **Plan migration before expansion.** Identify coupled data, credentials, integrations, and users; define the safe sequence, validation checks, rollback point, and responsible approver.
 9. **Verify the foundation.** Test access denial, secret exclusion, schema integrity, backup restoration, rollback, cost limits, and representative application behavior.
 10. **Approve or stop.** Record the remaining risks and approve, revise, defer, or reject the scale transition.
+
+## AI Coding und AI Services brauchen ein Betriebsbudget
+
+Vor der Übernahme einer selbst gebauten AI-Anwendung zusätzlich zum Bauaufwand die laufende Verantwortung festhalten: Versionspflege, Berechtigungen, redaktionelle oder Markenfreigabe, Monitoring, Fehlerkorrektur, Modellwechsel, Wiederherstellung und Übergabe. Ein durch AI-Code ersetztes CMS beseitigt diese Aufgaben nicht. Im Kostenrecord Nutzer-/Nutzungsannahmen, laufenden Review- und Wartungsaufwand sowie einen Fall mit geänderten Providerpreisen oder Ausfall dokumentieren.
+
+Analyse aus Practitioner-Notizen, kein bewiesener Business Case. Weder pauschal buy statt build noch Preissteigerungen, Personalabbau oder konkrete Toolüberlegenheit behaupten.
+
+Methodische Ableitung P47-C03 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/assets/20260821_Matt Heinz_substack posts.docx` — Notizensammlung, insbesondere 16./20./22. April, 6./15./20. Mai und 8./19./23. Juni 2026; mixed.
 
 ## Output
 

@@ -1,0 +1,108 @@
+{
+  "date": "2026-09-13",
+  "topic_briefs": 18,
+  "reviewed_files_link_checked": 24,
+  "slides_in_inventory": 36,
+  "source_sha256": "53d0809384bebc5eff64c392118cc0b8dfd1637bc63017dd55448cb210076051",
+  "original_equal": true,
+  "errors": [],
+  "scope": "File coverage, local links and source identity only; not a semantic promotion validator or fresh verification of all web facts.",
+  "files": [
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f01-targeting.md",
+      "sha256": "8e4b4509f29db5a4442f17b0aa41a5db9ef086f9408234bc6c7d18d1dd03ac01"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f02-banner-blindness.md",
+      "sha256": "c60b4d9b9be2e0c2089e77c4b19ab5ad537a46390a211f06f8561d7c08dc7209"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f03-ad-fraud.md",
+      "sha256": "8f183b7b00fa6ee91046bd40d1670b95b9da96699a5891222edc8d808f9a2e17"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f04-mql-funnel.md",
+      "sha256": "f0db90dcaab049804481a2fcab3ec60a81f01124da427b9a7b6cde382a38fa28"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f05-dark-funnel.md",
+      "sha256": "3e701a40565d6e6128a2f99eec3b6d32fe712e309ea88e69bc2ddf0ac01de93f"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f06-buying-committee.md",
+      "sha256": "32c97938cb0b1c4c2c7c9cefd4e8dce972c4444c92e7983882e761ac74e2bef6"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f07-indecision.md",
+      "sha256": "bc4a6332a2091d52d9744bfb87d40979efaed699c2373527e5f19fac30598dff"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f08-rep-free.md",
+      "sha256": "d28a7de61ccca302873b6ab378185e0863dfa994f34b4e5fe764a34d399fc83a"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/f09-zero-click.md",
+      "sha256": "cf7e5ba134133d9abf1032275bf3020e045d60684f75fc0b9b7dcbf4423dbf63"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/gesamtbewertung.md",
+      "sha256": "1a58b9799b19b45e67031db505d92cc384f70cc024a15424d4ff88f6270a2651"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/index.md",
+      "sha256": "e8f4bd0318a8221c47e50cc9889bf2bf577286dec0ee3a3e261578700416f034"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/quality-review.md",
+      "sha256": "49be4fc43f137481f13194bd10770df2e3eee00a2190e4a2252b8576303ce6c6"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/s01-abx.md",
+      "sha256": "8fb37e1367ffdf4e46f2191bc116987295918319577c45a11da873c90e3d537b"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/s02-buyer-enablement.md",
+      "sha256": "1db5830459b80cf80818a3c03929dd89fbe3f64c0dfb5c5f3cdad224dfcfe6c0"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/s03-aeo.md",
+      "sha256": "cffde409c893f47e3b0bf8e939027016aecac82c69a294902618f6acc26a39f7"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/s04-revops-governance.md",
+      "sha256": "84b2182d420c3a06891c1a25ac2b7d0a5447bf24fc562cbfff4d2b8e452d16d5"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/t01-identity-to-intent.md",
+      "sha256": "6e13bf28aece2d47e808a282b84d2fc67c85201c0b57ee2edb4de185c2ca98f0"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/t02-mql-to-mqa.md",
+      "sha256": "b36b2eb83243fbcd5a347c09309b9943271a03921587fd8618754c998b9e4edc"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/t03-lead-to-demand.md",
+      "sha256": "e18b2f08505c57fb512eb9413276f3debf234d61bf4f554774d15f53d9d9659f"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/t04-sales-to-buyer-enablement.md",
+      "sha256": "ab9e8f5870d26fe40215a128d8862da54962d807c6461a9e46eb1359116850b4"
+    },
+    {
+      "path": "research/abm-old-playbook-2026-09-13/t05-seo-to-entity.md",
+      "sha256": "741e0e99225e17206b7e82e6fefcf2a4f1481d3b175e39ffbc7ade1a42f9a0e9"
+    },
+    {
+      "path": "wiki/old-marketing-playbook-source-review-2026-09-13.md",
+      "sha256": "e68856284d711dc02a300378488915cf4d56fc353718a686bf1f52f88321a897"
+    },
+    {
+      "path": "wiki/_outputs/abm-old-playbook-2026-09-13/evidence-proposals.md",
+      "sha256": "1755ec52ea79bd5ff81b40da14a477dd9dede8ff2119284846b73e7e0b3c0b03"
+    },
+    {
+      "path": "wiki/_outputs/abm-old-playbook-2026-09-13/review-plan.md",
+      "sha256": "91114654bce6d22069e104d0fd2fda52b69da3213cb8798e434e2c47ed914518"
+    }
+  ]
+}

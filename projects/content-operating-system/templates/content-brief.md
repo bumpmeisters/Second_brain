@@ -65,6 +65,16 @@ State how this variant bundle should express the approved Creative Direction.
 - **External editor**: `planned | not-planned | undecided`
 - **Human-ownership verdict required before approval**: `recognisably-mine`
 
+## Optional Material Basis Before Multiplying Variants
+
+When planning derivatives, briefly reference the approved data, observed case, customer evidence or reasoned original analysis that carries them. Reuse the controlling direction's evidence rather than inventing a new contribution. A useful, sourced synthesis of public knowledge also qualifies; exclusive data is not required.
+
+- **Supporting material / canonical reference and status**:
+- **Audience value of the planned derivatives beyond cosmetic wording**:
+- **Limits or missing material**:
+
+Do not invent experiences, quotes or numbers to fill this field. If the existing brief already makes the basis clear, reference it without duplication. This is an optional aid, not a new approval gate. Source: [Loop transcript review, 14:24–14:31](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md); bounded adoption approved by the user on 2026-09-23.
+
 ## Asset plan
 
 | Variant ID | Artifact path | Status | Approval record |

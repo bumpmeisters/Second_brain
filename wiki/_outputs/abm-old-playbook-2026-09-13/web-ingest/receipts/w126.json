@@ -1,0 +1,17 @@
+{
+  "id": "W126",
+  "url": "https://www.lunio.ai/2026-global-invalid-traffic-report",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:05.111514+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w126.json",
+  "title": "2026 Global Invalid Traffic Report",
+  "final_url": "https://www.lunio.ai/2026-global-invalid-traffic-report",
+  "characters": 5536,
+  "sha256": "bb4b140ea6c164ed9e9ed10fc712141dcf569786387d8245a149edd2273d297e",
+  "http_status": 200
+}

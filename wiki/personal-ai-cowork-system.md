@@ -6,8 +6,9 @@ sources:
   - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
   - raw/assets/10_Agentic_Workflows/CLAUDE Set-up/CLAUDEmd & Folder setup/INitialize Prompt_Folder/20260606_Executive Assistant Initialize Prompt.txt
   - wiki/newsletters/latent-space/linked-sources/chatgpt-work-interview-2026-08-03.md
+  - https://www.oneusefulthing.org/p/agency-and-agents
 created: 2026-06-03
-updated: 2026-08-03
+updated: 2026-09-09
 ---
 
 # Personal AI Cowork System
@@ -37,6 +38,12 @@ In Rolf's second brain, this principle should connect to [[briefing-system]], [[
 Tina instructs Cowork to push back when a plan appears off-strategy, technically wrong, inconsistent, or missing trade-offs (source: tina-claude-cowork-system-2026-06-03.png).
 
 For this vault, pushback should be explicit in agent instructions: ask before ambiguous categorization, challenge weak sources, flag missing evidence, and distinguish verified facts from AI-generated research claims.
+
+### Proactive human involvement
+
+A useful coworker should ask for human involvement for four distinct reasons: fresh authorization before consequential action; missing domain expertise; a genuinely independent perspective when model outputs are likely correlated; and decisions whose human ownership preserves judgment, learning, or meaningful agency. The escalation should state why the human is needed and what remains blocked; it should not turn the request itself into permission.
+
+These four reasons adapt the proposed “Twilight Factory” into a design checklist, not a validated productivity model ([Ethan Mollick, 2026](https://www.oneusefulthing.org/p/agency-and-agents)). Operational thresholds, queue capacity, and autonomy changes should be tested through [[reliable-ai-capability-rollout]] before becoming default behavior.
 
 ### Aggressive note-taking
 

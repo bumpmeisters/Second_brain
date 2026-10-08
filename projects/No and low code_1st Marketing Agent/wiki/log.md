@@ -792,3 +792,10 @@ updated: 2026-07-14
   - Strategic Creative Direction and Content Execution are owned by the Content Operating System.
   - Campaign Role Architecture remains in this project and does not cross into creative production.
   - No new skill, specialist agent, publication action, or production automation was introduced.
+
+
+## 2026-09-23 | method | Begrenzte Taste-Arbeitshilfe aufgenommen
+
+- Sources: [Quellenreview](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md); Nutzerfreigabe in Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075.
+- Changed: bestehende Audience-Context-, Message-House- und Content-Context-Vorlagen; Content Marketing Strategy und zugehörige Quellen-/Indexeinträge.
+- Notes: Vier optionale Ergänzungen zu Vertrauensbarrieren, realen Kundensituationen, Selbstbild/Kundenwahrnehmung und kompakter Übergabe. Quellen und Hypothesen bleiben getrennt; unbekannte Felder sind zulässig. Keine neue Pflichtstufe, kein Plugin installiert, keine Wirksamkeit behauptet. Beim nächsten autorisierten Einsatz auf Klarheit und Doppelarbeit achten. Rücknahme nur der neuen optionalen Abschnitte; vorhandene Verträge bleiben gültig.

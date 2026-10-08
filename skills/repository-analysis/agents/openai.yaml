@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository Analysis"
+  short_description: "Explore repositories and preserve practical learning"
+  default_prompt: "Use $repository-analysis to analyze this selected repository and create a source-traceable learning dossier."

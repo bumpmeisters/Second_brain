@@ -7,7 +7,7 @@ canonical_id: publication-26c7e36e961527df
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-07-06
+updated: 2026-09-14
 ---
 
 # Lenny's Newsletter
@@ -73,11 +73,11 @@ This dossier currently represents one sender-derived profile. Its identity remai
 
 ## Aggregated signal ledger
 
-No decision-relevant signals have been approved for this dossier yet. Future entries should be timestamped and link to their issue provenance, evidence status, and downstream use.
+- **2026-09-14 — PLG-to-enterprise transition**: A sponsored practitioner essay supports separating product-generated from sales-generated demand, using account-level assistance signals, measuring incremental value, and preserving self-service. Numeric thresholds and growth claims remain excluded (source: [[plg-to-enterprise-transition-source-review-2026-09-14]]).
 
 ## Linked-source analyses
 
-No linked newsletter pages have been retained yet. Promising links should receive a separate source-analysis note only after passing the downstream-value and safety gate.
+- [[plg-to-enterprise-transition-source-review-2026-09-14]] - Sponsored practitioner analysis supporting a bounded transition and revenue-credit rule without universal thresholds.
 
 ## Feedback and corrections
 

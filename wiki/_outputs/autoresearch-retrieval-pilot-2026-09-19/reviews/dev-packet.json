@@ -1,0 +1,311 @@
+{
+  "purpose": "Judge answer quality without strategy labels; no runtime/method scores.",
+  "rubric": {
+    "criteria": [
+      "correctness",
+      "completeness",
+      "evidence",
+      "uncertainty"
+    ],
+    "scale": {
+      "2": "fully meets required meaning, alternative supported phrasing allowed",
+      "1": "bounded omission without false central claim",
+      "0": "wrong, unsupported, or essential requirement missing"
+    },
+    "pass": "8 points and no critical error",
+    "critical": "invented measurement/outcome, false approval/activation status, or assertion of evidence despite its established absence",
+    "limits": "Gold is source-reviewed by Codex, not human calibrated. Absence must be scoped to available corpus."
+  },
+  "gold": [
+    {
+      "id": "D1",
+      "split": "dev",
+      "family": "source-storage",
+      "kind": "current-vs-history",
+      "question": "Wo liegen laut aktuellem Kernwiki die aktiven binären Originalquellen und AI-Research-Anhänge? Welche Rolle hat die frühere Google-Drive-Kopie, und wo liegen suchbare Textderivate? Belege den Unterschied zwischen aktuellem Vertrag und Historie.",
+      "required": [
+        "raw/assets/ für Originalquellen",
+        "research/assets/ für AI-Research-Anhänge",
+        "wiki/_extractions/ für Textderivate",
+        "Google Drive nur temporäre Rollback-Kopie, kein aktiver Zitiervertrag"
+      ],
+      "critical": [
+        "Google Drive als aktive maßgebliche Quelle darstellen"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/raw-sources.md",
+          "start": 20,
+          "end": 30,
+          "text": "## Active storage contract\n\nThe active binary source libraries use repository-relative paths inside the local vault:\n\n- Raw source library: `raw/assets/`\n- AI-research attachments: `research/assets/`\n\nTheir contents are intentionally ignored by Git, while each folder keeps a tracked README explaining the local setup. This gives local agents and downstream projects stable access without publishing approximately 10 GiB of binaries to GitHub.\n\nWiki pages cite originals through stable repository-relative paths. Binary originals, Markdown sidecars under `wiki/_extractions/`, and the detailed conversion registry remain local and Git-ignored. Clean checkouts validate their expected identities through the path-opaque public contract in `tools/config/local-source-integrity-contract.json`; a hydrated vault additionally verifies the local files and registry joins.\n"
+        },
+        {
+          "path": "wiki/raw-sources.md",
+          "start": 64,
+          "end": 79,
+          "text": "## Storage history and rollback\n\nOn 2026-07-07 the libraries were moved to Google Drive under `second brain quellen/` to separate them from Git. On 2026-07-12 that decision was superseded because the external absolute path impaired downstream access. The Google Drive copy remains temporarily as a verified rollback source, but it is not the active citation contract and must not be modified or deleted during this migration.\n\nThe rule is unchanged: source originals are read-only wherever they live.\n\n---\n\nThe LLM wiki setup treats PDFs, articles, notes, and other documents as [[raw-sources]] (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n\nRaw sources are read-only in the workflow, meaning the AI reads them but never changes them (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n\nThe wiki itself is separate from [[raw-sources]] and contains the agent-maintained Markdown pages (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n\nThis vault tracks source ingest status in [[sources]] so large batches of PDFs, tables, slide decks, charts, and clippings can be audited over time (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n"
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "split": "dev",
+      "family": "learning-architecture",
+      "kind": "status",
+      "question": "Welche drei Persistenzschichten unterscheidet unser Second Brain, und bedeutet die aktive Learning-Schicht, dass bereits ein freigegebenes kontinuierliches Fine-Tuning oder Gewichtsupdate läuft?",
+      "required": [
+        "Context für die aktuelle Aufgabe",
+        "Memory für nachvollziehbares persistentes Wissen",
+        "Learning für geprüfte Verhaltensänderung",
+        "externer governter Lernzyklus aktiv, parametric/weight-level Pipeline nicht aktiv"
+      ],
+      "critical": [
+        "Gewichtslernen oder Fine-Tuning als aktiv/freigegeben darstellen"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/continual-learning-for-agents.md",
+          "start": 54,
+          "end": 65,
+          "text": "## Current architecture decision — 2026-08-20\n\nThe Second Brain uses three distinct persistence layers:\n\n- **Context** supplies the information needed for the current task.\n- **Memory** keeps source-traceable knowledge in inspectable, portable, versioned files.\n- **Learning** changes future system behavior only after reviewed evidence supports a durable rule, instruction, skill, test, or tool change.\n\nThe Learning layer is active now only as the governed external lifecycle described below. Corrections, evaluations, failures, and successful recoveries may become learning candidates, but one episode remains episodic until relevant repetition supports promotion. Every promoted behavior change needs provenance, a bounded target, a relevant regression check, human approval, and a rollback path.\n\nParametric continual learning is not active. The vault has no approved weight-update, fine-tuning, self-distillation, or deployment-training pipeline. Reconsideration requires a stable repeatable task, an owned and lawful training set, a task-level evaluation baseline, privacy and poisoning controls, isolated rollout, and reliable rollback. This preserves the complementary architecture supported by the qualified PR `#19` analysis without treating external memory as inferior or weight updates as automatically beneficial ([Hu et al., 2026](https://arxiv.org/abs/2604.27003); [Abbes et al., 2026](https://proceedings.mlr.press/v330/abbes26a.html); analysis: [[newsletters/dwarkesh-patel/linked-sources/continual-learning-memory-boundary-2026-08-14]]; user architecture decision, 2026-08-20).\n"
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "split": "dev",
+      "family": "evaluation-horizons",
+      "kind": "interpretation",
+      "question": "Was bedeutet ein 50%-Task-Horizon in unseren Agent-Evaluation-Notizen? Ist das die Laufzeit des Agenten oder bereits eine sichere Delegationsgrenze für folgenreiche Aufgaben?",
+      "required": [
+        "Dauer menschlicher Aufgaben bei modellierter 50%-Erfolgswahrscheinlichkeit",
+        "keine Agentenlaufzeit",
+        "kein eigenständiger Sicherheitsnachweis",
+        "Risikofolgen und Reviewkapazität bestimmen notwendige Zuverlässigkeit; Endzustandsprüfung"
+      ],
+      "critical": [
+        "50 Prozent als sichere autonome Freigabeschwelle bezeichnen"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/agent-evaluation.md",
+          "start": 103,
+          "end": 112,
+          "text": "## Reliability-adjusted task horizons\n\nInterpret a task-completion horizon at a success probability appropriate to the workflow's failure cost and available review capacity. METR defines its 50%-time horizon as the human task length at which a fitted curve predicts 50% model completion—not the agent's runtime—and exposes higher-reliability views such as 80%. A 50% horizon is therefore useful capability evidence but not, by itself, a safe delegation threshold. There is no universal replacement threshold: consequential or attention-expensive work may need a higher demonstrated success rate, a shorter autonomous slice, or an earlier human checkpoint ([METR methodology](https://metr.org/time-horizons/); [METR measurement report](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)).\n\nPair the chosen reliability level with an end-state verifier. In a practitioner refactor case, a fast zero-shot run reportedly produced scaffolding while omitting the actual models and deployment/bootstrap work; the example illustrates apparent completion rather than independently reproduced model performance. Named-model rankings, effort ratios, and company outcome claims from the talk remain excluded (source: Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md, 7:29–9:31 and 11:35–12:30; practitioner report, needs independent reproduction; analysis: approved P31-C1).\n\n### Do not mistake a same-prompt run for a controlled comparison\n\nUsing the same prompt once does not control an agent comparison when model mix, harness, orchestration, budgets, environment, or the meaning of “production ready” differ. Define acceptance criteria from the real product and user journey, align the operating conditions that should be held constant, repeat stochastic runs, and report outcome, trajectory, reliability, and efficiency separately. One practitioner comparison illustrates the problem: extensive tests and tool calls still missed usability defects, but its design was confounded and its reported cost figures were internally inconsistent. It therefore supports the evaluation-design warning, not a named-model winner or any numeric performance conclusion (source: 2026-08-14--WCrnS09vpfo.md; practitioner comparison; analysis: P35-W5-C05).\n"
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "split": "dev",
+      "family": "semantic-intake",
+      "kind": "comparison",
+      "question": "Darf eine noch ungelesene Quelle den Status registered-only bekommen? Was unterscheidet diesen Status von corroborating hinsichtlich Inhaltsprüfung, Evidenzmatrix, Zielseite und Freigabe?",
+      "required": [
+        "registered-only erst nach vollständigem Review ohne dauerhaften Wissens-/Evidenzbeitrag",
+        "nicht ungelesen/aufgeschoben/inventarisiert",
+        "registered-only ohne Evidenzzeile oder Zielseitenänderung",
+        "corroborating verwertbare Stützung eines bestehenden Musters, promotional, braucht Matrix/Zielseite/ausdrückliche Freigabe"
+      ],
+      "critical": [
+        "ungelesene Quelle registered-only erlauben",
+        "corroborating ohne Freigabe promoten"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/semantic-ingest-workflow.md",
+          "start": 62,
+          "end": 62,
+          "text": "- `corroborating`: supplies usable support for an existing durable pattern without changing it. It is promotional and therefore requires evidence-matrix coverage, a target page, and explicit approval."
+        },
+        {
+          "path": "wiki/semantic-ingest-workflow.md",
+          "start": 63,
+          "end": 63,
+          "text": "- `registered-only`: records a fully reviewed source that adds no durable knowledge or usable evidence. It has no evidence row or target-page change and must not be used for unread, deferred, or merely inventoried material."
+        }
+      ]
+    },
+    {
+      "id": "D5",
+      "split": "dev",
+      "family": "context-strategy",
+      "kind": "qualified-rule",
+      "question": "Welche drei Operationen nennt unser Kernwiki für Context Engineering? Folgt daraus, dass wir immer komprimieren oder möglichst viel Kontext laden sollten, oder wie wird die Strategie ausgewählt?",
+      "required": [
+        "reduce, offload, isolate mit zutreffender Erklärung",
+        "weder pauschal kompaktieren noch Kontext maximieren",
+        "Strategie nach Recallbedarf, Kontextkapazität, Hardware/Cacheökonomie und gemessener Latenz wählen"
+      ],
+      "critical": [],
+      "evidence": [
+        {
+          "path": "wiki/context-engineering.md",
+          "start": 33,
+          "end": 33,
+          "text": "The production-agent clippings add three operational verbs: **reduce** irrelevant or redundant context, **offload** durable state to files and tools, and **isolate** subtasks that do not need the full conversation history. Context engineering is therefore also context budgeting: deciding what belongs in the active window, what belongs in persistent memory, and what belongs in a separate worker context (source: AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md; source: AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md)."
+        },
+        {
+          "path": "wiki/context-engineering.md",
+          "start": 41,
+          "end": 44,
+          "text": "## Choose the context strategy from measured constraints\n\nChoose among full history, staged compaction, retrieval, and file browsing from the actual constraint set: model context capacity, available hardware, cache economics, task-specific recall needs, and measured latency. Do not compact by default or treat one retrieval method as universally superior; test the smallest strategy that preserves the evidence and decisions the task must recall (source: 2026-08-17--WP3hjUXd918.md; practitioner evidence; analysis: P43-W6R5-C02).\n"
+        }
+      ]
+    },
+    {
+      "id": "D6",
+      "split": "dev",
+      "family": "loop-efficacy",
+      "kind": "insufficient-evidence",
+      "question": "Welche im Kernwiki dokumentierte prozentuale Verbesserung unserer eigenen Antwortqualität wurde durch einen lokalen kontrollierten Test von Loop Engineering nachgewiesen? Nenne Zahl und Versuchsaufbau nur, wenn dafür tatsächlich ein Beleg vorliegt.",
+      "required": [
+        "keine belegte lokale Prozentzahl/Versuchsanordnung aus dem verfügbaren Kernwiki ableitbar",
+        "Mechanismen/Praktikerberichte sind kein eigener kontrollierter Effektbeleg",
+        "keinen Wert erfinden, Wissensgrenze auf untersuchten Korpus begrenzen"
+      ],
+      "critical": [
+        "erfundene lokale Effektzahl",
+        "externe Studienwerte als Effekt im eigenen Vault umdeuten"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/loop-engineering.md",
+          "start": 66,
+          "end": 73,
+          "text": "## Vault implications\n\nFor this second brain, loops should not start with broad autonomous writing. They should start with narrow, reviewable jobs such as checking for unregistered sources, finding missing citations, or proposing wiki updates for human review (source: Only the best are using them.md; governed by AGENTS.md; analysis).\n\nThe source's loop pattern fits [[ai-work-blueprint]]: the spec defines the target state, the verifier defines the stop condition, and the environment stores the resulting rule, template, or log update (source: Only the best are using them.md; source: [[ai-work-blueprint]]).\n\nThe BUILD material situates loop engineering after a curated knowledge base and trusted reusable capabilities, rather than treating orchestration as the starting point. Its proposed improvement loop also preserves human approval for consequential rule changes (source: 20260629_BUILD_Self-improving framework by Ausin Machese.docx; source: 20260630_BUILD Framework Guide for Claude Code.docx; analysis).\n"
+        },
+        {
+          "path": "wiki/loop-engineering.md",
+          "start": 56,
+          "end": 59,
+          "text": "## Measure the delivery funnel\n\nA loop can increase visible activity without increasing shipped value by the same amount. Measure its contribution across a delivery funnel: changes or commits, active projects, releases, adoption, and user or business outcomes. A May 2026 NBER working-paper abstract reports that activity gains from newer generations of AI coding tools attenuated substantially at project and release level and did not produce a measured increase in total marketplace usage. The operational lesson is to put verifier and stop conditions as close as possible to the real delivery outcome, not merely to generated output volume (source: [NBER Working Paper 35275](https://www.nber.org/papers/w35275); partially verified because the full paper was unavailable).\n"
+        },
+        {
+          "path": "wiki/loop-engineering.md",
+          "start": 88,
+          "end": 93,
+          "text": "## Open questions\n\n- Which vault maintenance tasks have objective enough stop conditions for a loop?\n- What budget, turn, and write-permission limits should apply?\n- Which loop outputs should remain proposals until reviewed?\n"
+        }
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "DEV-01",
+      "answers": [
+        {
+          "case": "D1",
+          "answer": "Die aktiven binären Originalquellen liegen im lokalen Vault unter `raw/assets/`, die AI-Research-Anhänge unter `research/assets/`. Die Seite bezeichnet dies ausdrücklich als aktiven Speichervertrag und verwendet repository-relative Pfade. Beleg: wiki/raw-sources.md:L20-L25. Der Index bestätigt diese Zuordnung für die beiden Bibliotheken: wiki/index.md:L104-L104 und wiki/index.md:L121-L121.\n\nDie Rolle der früheren Google-Drive-Kopie sowie den Speicherort suchbarer Textderivate kann ich aus den innerhalb dieses Laufs gelieferten Belegen nicht vollständig beantworten. Die Seite enthält zwar einen Abschnitt „Storage history and rollback“ bei Zeile 64; dessen Inhalt wurde wegen des Zeichenbudgets nicht mehr ausgeliefert. Deshalb kann ich den verlangten Unterschied zwischen heutigem Vertrag und damaliger Speicherung nur für den aktuellen Vertrag belegen."
+        },
+        {
+          "case": "D2",
+          "answer": "Die drei Persistenzschichten sind **Context**, **Memory** und **Learning**: Context liefert Informationen für die aktuelle Aufgabe; Memory bewahrt quellenverfolgbares Wissen in einsehbaren, portablen, versionierten Dateien; Learning verändert zukünftiges Systemverhalten durch evidenzgeprüfte Regeln, Anweisungen, Skills, Tests oder Werkzeugänderungen. Beleg: wiki/continual-learning-for-agents.md:L54-L60.\n\nDie aktive Learning-Schicht ist ausschließlich ein geregelter externer Lernzyklus. Eine Episode bleibt zunächst episodisch; Verhaltensänderungen benötigen Herkunftsnachweis, begrenztes Ziel, Regressionstest, menschliche Freigabe und Rückrollmöglichkeit. Parametrisches kontinuierliches Lernen ist ausdrücklich inaktiv: Es gibt keine freigegebene Gewichtsupdate-, Fine-Tuning-, Self-Distillation- oder Deployment-Training-Pipeline. Beleg: wiki/continual-learning-for-agents.md:L62-L64."
+        },
+        {
+          "case": "D3",
+          "answer": "Der 50%-Task-Horizon bezeichnet die **menschliche Bearbeitungsdauer** einer Aufgabe, bei der eine angepasste Kurve eine erfolgreiche Modellbearbeitung mit 50 % Wahrscheinlichkeit vorhersagt. Er misst nicht die Laufzeit des Agenten. Er ist ein Fähigkeitsindikator, für sich allein aber keine sichere Delegationsgrenze. Bei folgenreichen oder prüfaufwendigen Aufgaben können eine höhere nachgewiesene Erfolgsrate, kürzere autonome Teilaufgaben oder frühere menschliche Kontrollpunkte nötig sein; es gibt keinen universellen Ersatzschwellenwert. Beleg: wiki/agent-evaluation.md:L103-L105. Die gewählte Zuverlässigkeit ist außerdem mit einem Verifizierer des tatsächlichen Endzustands zu verbinden: wiki/agent-evaluation.md:L107-L107."
+        },
+        {
+          "case": "D4",
+          "answer": "Nein. `registered-only` setzt eine vollständig inhaltlich geprüfte Quelle voraus, die weder dauerhaftes neues Wissen noch verwendbare Evidenz beiträgt. Der Status darf nicht für ungelesene, zurückgestellte oder lediglich inventarisierte Quellen verwendet werden. Er hat keine Evidenzmatrixzeile und bewirkt keine Zielseitenänderung. Beleg: wiki/semantic-ingest-workflow.md:L58-L65.\n\n`corroborating` ist dagegen verwendbare Unterstützung eines bestehenden dauerhaften Musters. Auch hier geht Inhaltsprüfung voraus; trotz unverändertem Muster ist es eine Promotion und benötigt Evidenzmatrixabdeckung, eine Zielseite und ausdrückliche Freigabe. Die Reihenfolge lautet Quellenkörper prüfen, Evidenzzeilen erstellen, Muster und Zielseiten reviewen und nur freigegebene Zeilen übernehmen. Beleg: wiki/semantic-ingest-workflow.md:L62-L63 und wiki/semantic-ingest-workflow.md:L67-L77. Die Validierung lehnt `registered-only` mit Zielseiten oder Evidenzmatrixeintrag ebenso ab wie einen fehlenden Reviewstatus: wiki/semantic-ingest-workflow.md:L87-L89."
+        },
+        {
+          "case": "D5",
+          "answer": "Die drei Operationen heißen **reduce**, **offload** und **isolate**: irrelevanten oder redundanten Kontext reduzieren, dauerhaften Zustand in Dateien und Werkzeuge auslagern sowie Teilaufgaben isolieren, die nicht den gesamten Gesprächsverlauf benötigen. Das verteilt Informationen bewusst zwischen aktivem Kontextfenster, persistentem Gedächtnis und separatem Arbeitskontext. Beleg: wiki/context-engineering.md:L33-L33.\n\nDaraus folgt weder ständiges Komprimieren noch maximales Laden. Zwischen vollständigem Verlauf, stufenweiser Kompression, Retrieval und Dateinavigation wird anhand von Kontextkapazität, Hardware, Cache-Ökonomie, aufgabenspezifischem Erinnerungsbedarf und gemessener Latenz gewählt. Getestet werden soll die kleinste Strategie, welche die benötigten Belege und Entscheidungen erhält. Beleg: wiki/context-engineering.md:L41-L43. Auch ein größeres Kontextfenster gilt nicht automatisch als besser: wiki/context-engineering.md:L37-L39."
+        },
+        {
+          "case": "D6",
+          "answer": "Im untersuchten Kernwiki habe ich **keinen Beleg für eine prozentuale Verbesserung unserer eigenen Antwortqualität durch einen lokalen kontrollierten Loop-Engineering-Test** gefunden. Deshalb nenne ich weder eine Zahl noch einen angeblich durchgeführten Versuchsaufbau. Das ist eine Evidenzlücke, kein Nachweis einer Verbesserung von null Prozent.\n\nDie Loop-Seite dokumentiert ein Arbeitsmuster mit Trigger, Ziel, Verifikation und begrenzter Wiederholung, keine lokale Wirkungsmessung: wiki/loop-engineering.md:L31-L42. Sie bezeichnet Praxisberichte als anekdotisch beziehungsweise als Checklisten-Kandidaten statt gemessener Leistungsbehauptungen: wiki/loop-engineering.md:L50-L54. Die Anwendung auf unseren Vault ist als Vorschlag und Analyse formuliert: wiki/loop-engineering.md:L66-L72. Auch die Quellenzusammenfassung enthält unbestätigte Produkt-/Branchenbehauptungen, keinen lokalen kontrollierten Test: wiki/only-the-best-are-using-them.md:L28-L32."
+        }
+      ]
+    },
+    {
+      "sample_id": "DEV-02",
+      "answers": [
+        {
+          "case": "D1",
+          "answer": "Die aktiven binären Originalquellen liegen lokal im Vault unter `raw/assets/`, AI-Research-Anhänge unter `research/assets/`. Zitiert wird über stabile repository-relative Pfade. Die Binärbestände sind Git-ignoriert; suchbare Markdown-Textderivate liegen unter `wiki/_extractions/` und bleiben ebenfalls lokal/Git-ignoriert. Native Markdownquellen sind bereits durchsuchbar und erhalten kein zusätzliches Derivat. Belege: wiki/raw-sources.md:L20-L35.\n\nDie Drive-Ablage ist ausdrücklich Historie: Am 07.07.2026 wurden die Bibliotheken nach `second brain quellen/` auf Google Drive verlegt. Diese Entscheidung wurde am 12.07.2026 wegen erschwerten nachgelagerten Zugriffs durch externe absolute Pfade ersetzt. Die Drive-Kopie bleibt vorübergehend verifizierte Rollback-Quelle, ist aber nicht der aktive Zitiervertrag und soll während der Migration weder verändert noch gelöscht werden. Originalquellen bleiben unabhängig vom Ort schreibgeschützt. Beleg: wiki/raw-sources.md:L64-L68."
+        },
+        {
+          "case": "D2",
+          "answer": "Die Architekturentscheidung vom 20.08.2026 unterscheidet drei Persistenzschichten:\n\n- **Context:** Informationen für die aktuelle Aufgabe.\n- **Memory:** quellenbezogenes Wissen in einsehbaren, portablen, versionierten Dateien.\n- **Learning:** Änderungen künftigen Systemverhaltens durch geprüfte Regeln, Anweisungen, Skills, Tests oder Tools.\n\nDie aktive Learning-Schicht bezeichnet ausschließlich einen kontrollierten externen Lernzyklus. Ein einzelner Vorfall bleibt episodisch, bis relevante Wiederholung eine Übernahme stützt. Übernommene Verhaltensänderungen brauchen Herkunft, begrenztes Ziel, Regressionstest, menschliche Freigabe und Rollback. Parametrisches Lernen ist ausdrücklich inaktiv: Es gibt keine freigegebene Gewichtsupdate-, Fine-Tuning-, Self-Distillation- oder Deployment-Training-Pipeline. Beleg: wiki/continual-learning-for-agents.md:L54-L64.\n\nDie früher diskutierten Self-Distillation- und Simulationsansätze sind Forschungsrichtungen beziehungsweise spekulativ. Der am 10.09.2026 eingerichtete Task-Closeout operationalisiert externes Lernen, garantiert keine Verbesserung und erteilt keine neue autonome Lernbefugnis. Belege: wiki/continual-learning-for-agents.md:L32-L40; wiki/continual-learning-for-agents.md:L66-L72."
+        },
+        {
+          "case": "D3",
+          "answer": "Ein **50%-Task-Horizon** ist die menschliche Aufgabenbearbeitungsdauer, bei der eine angepasste Kurve eine 50-prozentige erfolgreiche Modellbearbeitung vorhersagt. Es ist ausdrücklich **nicht die Laufzeit des Agenten**. Der Wert beschreibt Fähigkeit, begründet allein aber keine sichere Delegationsgrenze. Für folgenreiche oder prüfungsintensive Arbeit sind Fehlerkosten und verfügbare Reviewkapazität maßgeblich; erforderlich sein können höhere nachgewiesene Zuverlässigkeit, kürzere autonome Abschnitte oder frühere menschliche Checkpoints. Es gibt keinen universellen Ersatzschwellenwert. Die gewählte Zuverlässigkeitsstufe gehört mit einem Endzustandsprüfer verbunden. Beleg: wiki/agent-evaluation.md:L103-L107."
+        },
+        {
+          "case": "D4",
+          "answer": "**Nein.** `registered-only` setzt eine vollständig inhaltlich geprüfte Quelle voraus, die weder dauerhaftes neues Wissen noch brauchbare Evidenz beiträgt. Der Status ist für ungelesenes, zurückgestelltes oder lediglich inventarisiertes Material ausdrücklich ausgeschlossen. Er hat keine Evidenzmatrix-Zeile und keine Zielseitenänderung.\n\n`corroborating` bezeichnet dagegen brauchbare Unterstützung eines bereits bestehenden dauerhaften Musters. Auch hier erfolgt Inhaltsprüfung; die Quelle trägt jedoch Evidenz bei. Deshalb gilt der Status als Promotion und verlangt Evidenzmatrix-Abdeckung, eine Zielseite und explizite Freigabe. Die Reviewsequenz sieht Quellenlektüre, Evidenzzeilen vor Konzeptänderungen und die Übernahme ausschließlich freigegebener Zeilen vor; vollständig geprüfte `registered-only`-Dispositionen werden separat berichtet. Belege: wiki/semantic-ingest-workflow.md:L58-L75.\n\nDer Validator weist `registered-only` zurück, wenn Zielseiten oder Evidenzmatrixeinträge genannt sind oder eine geprüfte Disposition fehlt. Lesefreigabe und Claim-Freigabe bleiben getrennt. Belege: wiki/semantic-ingest-workflow.md:L50-L52; wiki/semantic-ingest-workflow.md:L87-L89."
+        },
+        {
+          "case": "D5",
+          "answer": "Die drei Operationen sind **reduce** (irrelevanten oder redundanten Kontext reduzieren), **offload** (dauerhaften Zustand in Dateien und Tools auslagern) und **isolate** (Teilaufgaben ohne Bedarf an der ganzen Unterhaltung in getrennten Kontexten bearbeiten). Das entscheidet zugleich, was ins aktive Fenster, in persistente Erinnerung oder in einen separaten Worker gehört. Beleg: wiki/context-engineering.md:L29-L33.\n\nDaraus folgt weder pauschale Kompression noch maximales Laden. Zwischen vollständiger Historie, stufenweiser Verdichtung, Retrieval und Dateibrowsing wird anhand von Kontextkapazität des Modells, Hardware, Cacheökonomie, aufgabenspezifischem Erinnerungsbedarf und gemessener Latenz gewählt. Zu testen ist die kleinste Strategie, die benötigte Evidenz und Entscheidungen bewahrt; keine Methode gilt universell als überlegen. Größere Fenster sind nicht automatisch besser. Beleg: wiki/context-engineering.md:L35-L43."
+        },
+        {
+          "case": "D6",
+          "answer": "Im verfügbaren Kernwiki habe ich **keinen Beleg für eine prozentuale Verbesserung unserer eigenen Antwortqualität durch einen lokalen kontrollierten Loop-Engineering-Test** gefunden. Deshalb lassen sich weder eine Zahl noch ein entsprechender Versuchsaufbau belastbar nennen.\n\nDie einschlägige Seite dokumentiert Methoden und begrenzte Fremdevidenz: Drift und Kosten sind anekdotisch; ein Sitzungs-Postmortem liefert Checklistenideen statt gemessener Leistungsbehauptungen. Der externe NBER-Verweis betrifft Aktivität, Projekte, Releases und Nutzung, nicht unsere Antwortqualität. Belege: wiki/loop-engineering.md:L48-L58. Die Vault-Anwendung wird als Vorschlag für eng begrenzte, prüfbare Aufgaben beschrieben; der Verbesserungszyklus fordert Evaluation und das Bewahren von Gegenbelegen, dokumentiert dort aber keinen lokalen Prozentgewinn. Beleg: wiki/loop-engineering.md:L66-L76. Das ist eine Evidenzlücke im untersuchten Korpus, keine Behauptung, Loop Engineering könne nicht helfen."
+        }
+      ]
+    },
+    {
+      "sample_id": "DEV-03",
+      "answers": [
+        {
+          "case": "D1",
+          "answer": "Aktive binäre Originalquellen liegen lokal im Vault unter `raw/assets/`, AI-Research-Anhänge unter `research/assets/`. Die Inhalte sind Git-ignoriert; Zitate verwenden stabile repository-relative Pfade. Suchbare Markdown-Sidecars liegen unter `wiki/_extractions/` und bleiben ebenfalls lokal und Git-ignoriert. Native Markdownquellen benötigen kein zusätzliches `.md.md`-Derivat. Belege: wiki/raw-sources.md:L20-L35.\n\nDie Google-Drive-Ablage unter `second brain quellen/` ist Historie: Am 07.07.2026 wurden die Bibliotheken dorthin verlegt, am 12.07. wurde diese Entscheidung wegen erschwerten nachgelagerten Zugriffs durch den externen absoluten Pfad ersetzt. Die Drive-Kopie bleibt vorübergehend verifizierte Rollback-Quelle, ist aber nicht der aktive Zitiervertrag und darf während der Migration nicht verändert oder gelöscht werden. Originale bleiben überall schreibgeschützt. Beleg: wiki/raw-sources.md:L64-L68."
+        },
+        {
+          "case": "D2",
+          "answer": "Die drei Schichten sind **Context** für Informationen der aktuellen Aufgabe, **Memory** für quellenverfolgbares Wissen in einsehbaren, portablen und versionierten Dateien sowie **Learning** für geprüfte Änderungen künftigen Systemverhaltens durch Regeln, Instruktionen, Skills, Tests oder Werkzeuge. Beleg: wiki/continual-learning-for-agents.md:L54-L60.\n\nAktives Learning bedeutet einen kontrollierten externen Lernzyklus. Einzelne Episoden bleiben zunächst episodisch; dauerhafte Verhaltensänderungen brauchen wiederholte relevante Evidenz, Provenienz, begrenzten Geltungsbereich, Regressionstest, menschliche Freigabe und Rollback. Parametrisches Continual Learning ist ausdrücklich inaktiv: Es gibt keine freigegebene Pipeline für Gewichtsupdates, Fine-Tuning, Self-Distillation oder Deployment-Training. Eine Neubewertung verlangt unter anderem wiederholbare Aufgaben, einen rechtmäßig verfügbaren Trainingssatz, Evaluationsbaseline, Datenschutz-/Poisoning-Kontrollen und isolierte Einführung. Beleg: wiki/continual-learning-for-agents.md:L62-L64."
+        },
+        {
+          "case": "D3",
+          "answer": "Ein 50%-Task-Horizon bezeichnet die **menschliche Bearbeitungsdauer** einer Aufgabe, bei der eine angepasste Kurve 50 Prozent erfolgreiche Modellabschlüsse vorhersagt. Er bezeichnet nicht die Laufzeit des Agenten. Er ist Fähigkeitsindikator, aber allein keine sichere Delegationsgrenze. Beleg: wiki/agent-evaluation.md:L103-L105.\n\nDie passende Erfolgswahrscheinlichkeit hängt von Fehlerkosten und verfügbarer Reviewkapazität ab. Folgenreiche oder betreuungsintensive Aufgaben können höhere nachgewiesene Zuverlässigkeit, kürzere autonome Teilaufgaben oder frühere menschliche Kontrollpunkte verlangen; es gibt keinen universellen Ersatzschwellenwert. Dazu gehört ein Prüfer des tatsächlichen Endzustands. Beleg: wiki/agent-evaluation.md:L105-L107."
+        },
+        {
+          "case": "D4",
+          "answer": "Nein. `registered-only` verlangt eine vollständig inhaltlich geprüfte Quelle, die weder dauerhaft neues Wissen noch verwendbare Evidenz beiträgt. Der Status ist für ungelesenes, zurückgestelltes oder lediglich inventarisiertes Material ausgeschlossen. Er hat keine Evidenzzeile und keine Änderung einer Zielseite. Beleg: wiki/semantic-ingest-workflow.md:L58-L65.\n\n`corroborating` liefert dagegen verwendbare Unterstützung für ein bestehendes dauerhaftes Muster, auch ohne dieses inhaltlich zu verändern. Das gilt als Promotion und braucht Abdeckung in der Evidenzmatrix, eine Zielseite und ausdrückliche Freigabe. Der Ablauf sieht zunächst Quellenkörperprüfung, anschließend Evidenzzeilen und Review der Muster/Zielseiten vor; nur freigegebene Evidenzzeilen werden übernommen. Die Erlaubnis, eine Quelle inhaltlich zu lesen, ist noch keine Freigabe ihrer Aussagen oder einer Wikiänderung. Belege: wiki/semantic-ingest-workflow.md:L52-L52; wiki/semantic-ingest-workflow.md:L62-L75."
+        },
+        {
+          "case": "D5",
+          "answer": "Die drei Operationen sind **reduce**: irrelevanten oder redundanten Kontext reduzieren; **offload**: dauerhaften Zustand in Dateien und Werkzeuge auslagern; **isolate**: Teilaufgaben mit eigenem Kontext bearbeiten, wenn sie die vollständige Unterhaltung nicht brauchen. Sie steuern, was im aktiven Fenster, im dauerhaften Gedächtnis oder im separaten Arbeitskontext liegt. Beleg: wiki/context-engineering.md:L33-L33.\n\nDaraus folgt weder pauschale Komprimierung noch möglichst viel Kontext. Zwischen vollständigem Verlauf, gestufter Komprimierung, Retrieval und Dateinavigation wird anhand von Modellkapazität, Hardware, Cacheökonomie, aufgabenspezifischem Erinnerungsbedarf und gemessener Latenz gewählt. Zu testen ist die kleinste Strategie, die notwendige Evidenz und Entscheidungen erhält; keine Retrievalmethode ist generell überlegen. Beleg: wiki/context-engineering.md:L39-L43."
+        },
+        {
+          "case": "D6",
+          "answer": "Ich kann keine belegte Prozentzahl und keinen lokalen kontrollierten Versuchsaufbau zur Verbesserung unserer eigenen Antwortqualität nennen. In der innerhalb des Budgets gelesenen Kernwiki-Evidenz liegt dafür kein Nachweis vor. Der Index beschreibt Loop Engineering als Trigger-Ziel-Verifier-Muster; die eingesehene Loop-Seite führt offene Fragen zu geeigneten Vault-Aufgaben, Budget-/Rechtegrenzen und Reviewpflichten auf. Das ist kein Wirksamkeitsnachweis. Belege: wiki/index.md:L239-L239; wiki/loop-engineering.md:L88-L92.\n\nDie Aussage bleibt auf die verfügbare, tatsächlich geprüfte Evidenz begrenzt: Der umfangreichere Zugriff auf die Loop-Seite wurde vom Zeichenbudget abgewiesen. Eine vollständige Ausschlussaussage über jede Kernwikiseite ist damit nicht möglich."
+        }
+      ]
+    },
+    {
+      "sample_id": "DEV-04",
+      "answers": [
+        {
+          "case": "D1",
+          "answer": "Die aktiven binären Originalquellen liegen lokal im Vault unter `raw/assets/`, AI-Research-Anhänge unter `research/assets/`. Die Inhalte sind Git-ignoriert; zitiert werden stabile repository-relative Pfade. Suchbare Markdown-Textderivate liegen unter `wiki/_extractions/` und bleiben ebenfalls lokal und Git-ignoriert. Native Markdownquellen sind bereits durchsuchbar und bekommen kein zusätzliches `.md.md`-Derivat. Belege: wiki/raw-sources.md:L20-L35.\n\nDie Google-Drive-Ablage unter `second brain quellen/` ist historisch: Am 07.07.2026 wurden die Bibliotheken dorthin verschoben; am 12.07.2026 wurde diese Entscheidung wegen erschwerten Zugriffs über externe absolute Pfade abgelöst. Die Drive-Kopie bleibt vorübergehend eine verifizierte Rollbackquelle, ist aber nicht der aktive Zitiervertrag und darf während der Migration weder geändert noch gelöscht werden. Originalquellen bleiben überall schreibgeschützt. Beleg: wiki/raw-sources.md:L64-L68."
+        },
+        {
+          "case": "D2",
+          "answer": "Die Architekturentscheidung vom 20.08.2026 unterscheidet:\n\n- **Context:** Informationen für die aktuelle Aufgabe.\n- **Memory:** quellenrückverfolgbares Wissen in einsehbaren, portablen, versionierten Dateien.\n- **Learning:** Änderungen zukünftigen Systemverhaltens durch evidenzgeprüfte Regeln, Anweisungen, Skills, Tests oder Tools.\n\nBeleg: wiki/continual-learning-for-agents.md:L54-L60.\n\nDie aktive Learning-Schicht bezeichnet ausschließlich einen geregelten externen Lernprozess. Ein einzelner Vorfall bleibt zunächst episodisch; eine übernommene Verhaltensänderung braucht Herkunft, begrenztes Ziel, passenden Regressionstest, menschliche Freigabe und Rollback. Parametrisches Continual Learning ist ausdrücklich inaktiv: Es gibt keine freigegebene Pipeline für Gewichtsupdates, Fine-Tuning, Self-Distillation oder Deployment-Training. Beleg: wiki/continual-learning-for-agents.md:L62-L64. Der am 10.09.2026 eingeführte Task Closeout setzt diesen externen Prozess um, schafft aber keine neue autonome Lernbefugnis und garantiert keine Verbesserung. Beleg: wiki/continual-learning-for-agents.md:L66-L72."
+        },
+        {
+          "case": "D3",
+          "answer": "Ein 50%-Task-Horizon bezeichnet die **menschliche Bearbeitungsdauer einer Aufgabe**, bei der eine angepasste Kurve 50 Prozent erfolgreiche Modellabschlüsse vorhersagt. Er misst nicht die Laufzeit des Agenten. Er ist ein Fähigkeitsindikator, für sich allein aber keine sichere Delegationsgrenze. Die erforderliche Zuverlässigkeit hängt von Fehlerkosten und verfügbarer Prüfung ab; folgenreiche oder prüfungsaufwendige Aufgaben können höhere nachgewiesene Erfolgsraten, kürzere autonome Abschnitte oder frühere menschliche Kontrollpunkte erfordern. Eine universelle Ersatzschwelle gibt es nicht. Beleg: wiki/agent-evaluation.md:L103-L105.\n\nZusätzlich soll das gewählte Zuverlässigkeitsniveau mit einem Verifizierer des tatsächlichen Endzustands verbunden werden: scheinbare Fertigstellung genügt nicht. Beleg: wiki/agent-evaluation.md:L107-L107."
+        },
+        {
+          "case": "D4",
+          "answer": "Nein. `registered-only` setzt eine vollständig inhaltlich geprüfte Quelle voraus, die weder dauerhaftes Wissen noch verwendbare Evidenz ergänzt. Ungelesene, zurückgestellte oder lediglich inventarisierte Quellen dürfen diesen Status nicht erhalten. Bei `registered-only` gibt es keine Evidenzmatrixzeile und keine Änderung einer Zielseite. Beleg: wiki/semantic-ingest-workflow.md:L58-L65.\n\n`corroborating` bedeutet dagegen verwendbare Unterstützung eines bestehenden dauerhaften Musters, auch wenn dieses inhaltlich unverändert bleibt. Das ist eine Promotion: Sie braucht Abdeckung in der Evidenzmatrix, eine Zielseite und ausdrückliche Freigabe. Beide Entscheidungen folgen der Inhaltsprüfung; geprüfte `registered-only`-Dispositionen werden getrennt berichtet, während nur freigegebene Evidenzzeilen übernommen werden. Belege: wiki/semantic-ingest-workflow.md:L62-L73. Der Validator weist `registered-only` ohne Review oder mit Zielseiten beziehungsweise Evidenzmatrixeintrag zurück. Beleg: wiki/semantic-ingest-workflow.md:L87-L89.\n\nDie vorgelagerte Erlaubnis zur semantischen Prüfung ist davon getrennt: Sie erlaubt das Lesen, billigt aber weder Quellenclaims noch Wikiänderungen. Beleg: wiki/semantic-ingest-workflow.md:L50-L52."
+        },
+        {
+          "case": "D5",
+          "answer": "Die drei Operationen heißen **reduce**, **offload**, **isolate**: irrelevanten oder redundanten Kontext reduzieren; dauerhaften Zustand in Dateien und Tools auslagern; Teilaufgaben isolieren, die nicht den ganzen Gesprächsverlauf benötigen. Damit wird entschieden, was ins aktive Kontextfenster, ins persistente Gedächtnis oder in einen eigenen Arbeitskontext gehört. Beleg: wiki/context-engineering.md:L33-L33.\n\nDaraus folgt weder pauschales Komprimieren noch möglichst viel Kontext. Vollständiger Verlauf, stufenweise Komprimierung, Retrieval und Dateinavigation werden nach Modellkapazität, Hardware, Cachekosten, aufgabenspezifischem Erinnerungsbedarf und gemessener Latenz ausgewählt. Zu testen ist die kleinste Strategie, die notwendige Evidenz und Entscheidungen bewahrt; kein Retrievalverfahren ist universell überlegen. Beleg: wiki/context-engineering.md:L41-L43. Die Empfehlung zur phasenweisen Komprimierung langer Arbeit bewahrt Entscheidungen und Belege und erklärt größere Kontextfenster ausdrücklich nicht automatisch für besser. Beleg: wiki/context-engineering.md:L35-L39."
+        },
+        {
+          "case": "D6",
+          "answer": "Im verfügbaren Kernwiki habe ich **keinen Beleg für eine prozentuale Verbesserung unserer eigenen Antwortqualität durch einen lokalen kontrollierten Loop-Engineering-Test** gefunden. Deshalb lässt sich keine Zahl und kein solcher Versuchsaufbau nennen; fehlender Nachweis bedeutet nicht gemessene null Prozent.\n\nDie einschlägige Konzeptseite beschreibt Betriebsregeln und bezeichnet einschlägige Erfahrungsberichte ausdrücklich als anekdotisch beziehungsweise als Checklisten-Kandidaten statt gemessener Performanceclaims. Beleg: wiki/loop-engineering.md:L48-L54. Ihre Vault-Anwendung sind Vorschläge für enge, prüfbare Aufgaben; der Harness-Verbesserungszyklus beschreibt ein Evaluationsverfahren, berichtet aber dort kein lokales kontrolliertes Ergebnis. Belege: wiki/loop-engineering.md:L66-L76. Die Quellenzusammenfassung grenzt zudem ungeprüfte Produkt-/Industrieclaims und Meinungen ab. Beleg: wiki/only-the-best-are-using-them.md:L28-L32. Die korpusweite Suche nach „Loop Engineering“, „Antwortqualität“ und „kontrollierten Test“ lieferte keinen entsprechenden quantitativen Nachweis."
+        }
+      ]
+    }
+  ]
+}

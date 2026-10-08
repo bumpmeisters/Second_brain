@@ -1,0 +1,17 @@
+{
+  "id": "W127",
+  "url": "https://www.lunio.ai/blog/ai-max-invalid-traffic-rates",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:06:11.804480+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w127.json",
+  "title": "How AI Max can affect invalid traffic rates: 2026 data insights",
+  "final_url": "https://www.lunio.ai/blog/ai-max-invalid-traffic-rates",
+  "characters": 30792,
+  "sha256": "304bcf7272c568ffda593e65a525fe443a75184c92957866a52e8f109a0db22c",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W058",
+  "url": "https://support.6sense.com/docs/6sense-qualified-accounts-6qas",
+  "research_briefs": [
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:05.634886+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w058.json",
+  "title": "6sense Qualified Accounts (6QAs)",
+  "final_url": "https://support.6sense.com/docs/6sense-qualified-accounts-6qas",
+  "characters": 14230,
+  "sha256": "a343300534c507cbc9f028ac2a9916a27873aa374f1b9eee4a9f37dfe1a5cf14",
+  "http_status": 200
+}

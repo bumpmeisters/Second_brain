@@ -3,6 +3,18 @@ type: concept
 status: active
 trust: unverified
 sources:
+  - "raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md"
+  - "raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md"
+  - "raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md"
+  - "raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md"
+  - "raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md"
+  - "raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md"
+  - "raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Build & Sell with Codex (5+ Hour Course).md"
   - raw/Clippings/I Turned Claude Fable Into The Ultimate Second Brain.md
   - raw/Clippings/How to 10x Your Claude Code Projects (Karpathy's Method).md
   - raw/Clippings/Stop Watching Tutorials - Build These 4 Claude Projects to 10x Output.md
@@ -26,7 +38,7 @@ sources:
   - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-08-14--Ot4OPrPH4xY.md
   - raw/imports/automated-clippings/youtube/UC2UXDak6o7rBm23k3Vv5dww/2026-07-26--sbmP6i-MChk.md
 created: 2026-06-11
-updated: 2026-08-18
+updated: 2026-10-08
 ---
 
 # AI Operating System
@@ -111,6 +123,12 @@ Build learning from a source-backed initial plan, adapt it to current knowledge 
 
 This is a learning-loop extension, not evidence for the source's claimed productivity multiplier, named-product rankings, sponsorship claims, or privacy and automation assurances.
 
+## Zusätzliche Quellenstütze für die vier Schichten
+
+Ein selektiv geprüfter Codex-Kurs erläutert ebenfalls Context, Connections, Capabilities und Cadence sowie einen Routingplan zu passenden Dateien. Er stützt das bereits vorhandene Schichtenmodell und die Orientierung an einem konkret akzeptierten Arbeitsergebnis. Daraus folgt kein neues Framework und keine geprüfte Aussage über aktuelle Codex-Funktionen, Modelle, Preise oder Hosting. Geprüft wurden nur die im Quellenbrief benannten Abschnitte, nicht der gesamte Kurs. (source: raw/Clippings/Build & Sell with Codex (5+ Hour Course).md; practitioner; Analyse P60-C02; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].
+
 ## Open questions
 
 - Which live connections would be worth adding first?
@@ -122,7 +140,41 @@ This is a learning-loop extension, not evidence for the source's claimed product
 - [[reliable-ai-capability-rollout]]
 - [[shared-human-agent-delegation-queue]]
 
+## Corrections from briefings into owned memory
+
+A briefing can be a review interface for persistent memory: show the relevant facts and provenance, let an accountable person correct errors or relationships, and return reviewed corrections to the owned record. Preserve source identity, scope, permissions, and the distinction between a factual correction and a new hypothesis. Conflicts should remain visible until resolved; a briefing is not authority to broaden access or ingest an unapproved source.
+
+The Dharmesh interview suggests typed objects and relationships and separation of memory from the model. This is a vendor proposal extending the existing portable-memory model; it does not establish graph superiority over files, automatic learning, or the interview's business forecasts.
+
+Source and review boundary (P58-C05, user-approved 2026-09-21):
+
+- `raw/Clippings/Dharmesh Shah “The New AI Era Will Create Millions of One-Person Businesses”.md` — [[ai-adoption-memory-source-review-2026-09-21]].
+
+## Unternehmensfälle als Quellenstütze für Context, Connections, Capabilities und Cadence
+
+Die P61-Fallkarten stützen das bestehende Schichtenmodell mit unterschiedlichen Anwendungen: TM07/TM21 zeigen gemeinsame Prozess-/Personreferenzen; TM08/TM14 verbinden Aufgaben, Kalender, Mail und Dokumente; TM11/TM22 beschreiben auffindbare, zentral gepflegte Fähigkeiten; TM06/TM19 zeigen koordinierte Arbeit und periodische Signale. Diese Fälle sind Selbstberichte/Demos, kein neuer universeller „Company Brain“-Standard.
+
+Eigenbau bleibt eine bewusste Entscheidung: TM21 behält Notion; TM15 baut den spezifischen Creator-Kernprozess, während ein ausreichend passendes Finanztool bestehen bleibt. TM17s beschädigter Skill und TM20s Wartungsbedarf zeigen, dass auch einfache technische Fähigkeiten Betriebseigentum, Pflege und Wiederherstellung brauchen. Das stützt vorhandene Kosten-/Permission-/Reviewregeln und beweist keinen ROI aus Hosting-/Abopreisen.
+
+P61-C09: corroborating, keine zusätzliche Operating-System-Methode. Quellennahe Einzelheiten, Zeitanker und ausgeschlossene Behauptungen: [[tokenmade-ai-use-cases-source-review-2026-10-08]]. Originalquellen:
+
+- `raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm06|TM06]].
+- `raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md` — [[_outputs/semantic-ingest/p61/briefs/tm07|TM07]].
+- `raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md` — [[_outputs/semantic-ingest/p61/briefs/tm08|TM08]].
+- `raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md` — [[_outputs/semantic-ingest/p61/briefs/tm11|TM11]].
+- `raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md` — [[_outputs/semantic-ingest/p61/briefs/tm14|TM14]].
+- `raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md` — [[_outputs/semantic-ingest/p61/briefs/tm15|TM15]].
+- `raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm17|TM17]].
+- `raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md` — [[_outputs/semantic-ingest/p61/briefs/tm19|TM19]].
+- `raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm20|TM20]].
+- `raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm21|TM21]].
+- `raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm22|TM22]].
+
+Methodische Übernahme: P61-C09; Rolf, ausdrückliche Freigabe 2026-10-08. Quellen- und Verifikationsgrenzen bleiben erhalten.
+
 ## Related pages
+
+- [[tokenmade-ai-use-cases-source-review-2026-10-08]]
 
 - [[i-turned-claude-fable-into-the-ultimate-second-brain]]
 - [[personal-ai-cowork-system]]

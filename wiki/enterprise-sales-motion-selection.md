@@ -7,8 +7,9 @@ avoid_when: "The market boundary, buyer risk, reference value, product readiness
 output: "A dated sales-motion hypothesis, evidence and gaps, bounded buyer test or POC contract, owner, and reassessment decision."
 sources:
   - raw/imports/automated-clippings/youtube/UC9cn0TuPq4dnbTY-CBsm8XA/2026-08-13--aakZLqxRQfo.md
+  - wiki/newsletters/lenny-s-newsletter/linked-sources/plg-to-enterprise-transition-source-review-2026-09-14.md
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-09-14
 ---
 
 # Enterprise Sales Motion Selection
@@ -52,6 +53,10 @@ These labels are working hypotheses. A well-known logo is useful only when the r
 7. **Contract any POC.** Set scope, permitted data and systems, owner, delivery obligations, fixed end date, product-level success and failure criteria, buyer adoption responsibilities, cost boundary, security and procurement gates, and purchase or stop decision. Prevent an open-ended science project.
 8. **Review evidence, not activity.** Compare buyer behavior, implementation evidence, accepted outcomes, economics, failure modes, and reference portability with the original hypothesis. Meetings, calls, logos, trials, and generated pipeline are not success by themselves.
 9. **Reassess deliberately.** Continue, narrow, sequence the other motion, or stop. Revisit the choice when product maturity, market education, vertical focus, delivery capacity, regulation, or buyer evidence changes.
+
+### Product-generated versus sales-generated enterprise demand
+
+Before adding an enterprise sales motion to a product-led business, distinguish demand that expands from demonstrated product adoption from demand that sales must create. Use account-level evidence such as multi-user adoption, departmental spread, governance requirements, plan constraints, and expansion behavior to trigger assistance; do not treat every signup as a lead. Credit only incremental enterprise value, not revenue merely migrated from self-service, and preserve the self-service engine while enterprise capabilities solve enterprise-specific problems (source: [[plg-to-enterprise-transition-source-review-2026-09-14]]; sponsored practitioner evidence).
 
 ## Inspectable output
 

@@ -1,0 +1,17 @@
+{
+  "id": "W059",
+  "url": "https://support.6sense.com/docs/custom-fields-for-predictive-score-orchestrations",
+  "research_briefs": [
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:12.391308+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w059.json",
+  "title": "Custom Fields for Predictive Score Orchestrations",
+  "final_url": "https://support.6sense.com/docs/custom-fields-for-predictive-score-orchestrations",
+  "characters": 15875,
+  "sha256": "abffd6c07d6ad8fa9935bb924e03895ea94e46c65da9592a3664b91feab727ad",
+  "http_status": 200
+}

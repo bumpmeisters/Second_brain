@@ -1,0 +1,50 @@
+{
+  "task_id": "P01",
+  "attempt_id": "217862a60906414c8dfd2c9103b0fb2d",
+  "input_revision": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "Amber Fictional Instruments",
+      "title": "Explicitly fictional company record",
+      "kind": "fixture-text",
+      "url": "https://amber.invalid/fixture",
+      "date": "2025-12-31",
+      "retrieved_at": "2026-09-09T00:00:00Z",
+      "entity_ids": [
+        "amber-fictional-group"
+      ],
+      "budget_class": "supplementary",
+      "local_path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\originals\\record-2025.txt",
+      "sha256": "4e6d0a768b1a36ba77de09ad36a59ce0ac3628a59079aef24477c3792b815342",
+      "readiness_status": "ready",
+      "acquisition_status": "imported",
+      "limitations": [
+        "Fabricated fixture; no evidence about a real company."
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "F-WORKFORCE",
+      "statement": "Fictional 2025 year-end headcount: 120 persons.",
+      "field": "workforce",
+      "entity_id": "amber-fictional-group",
+      "region": "global",
+      "period": "2025",
+      "classification": "fact",
+      "source_id": "S1",
+      "locator": "Section workforce",
+      "value": 120,
+      "unit": "persons",
+      "metric": "headcount",
+      "definition": "global group headcount at year-end"
+    }
+  ],
+  "gaps": [],
+  "used_budget": {
+    "searches": 0
+  },
+  "problems": [],
+  "next_question": null
+}

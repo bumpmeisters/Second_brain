@@ -1,0 +1,17 @@
+{
+  "id": "W068",
+  "url": "https://support.google.com/google-ads/answer/7029393?hl=en",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:11.379460+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w068.json",
+  "title": "Understanding viewability and Active View reporting metrics - Google Ads Help",
+  "final_url": "https://support.google.com/google-ads/answer/7029393?hl=en",
+  "characters": 19394,
+  "sha256": "0c38bee3d1bafd20411c7a948dda212ac0d53f6cd0d1002cbe33b81dd2a45e65",
+  "http_status": 200
+}

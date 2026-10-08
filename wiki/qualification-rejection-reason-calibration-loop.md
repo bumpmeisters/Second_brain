@@ -6,9 +6,11 @@ use_when: "Marketing-qualified records are rejected inconsistently, MQL-to-SQL q
 avoid_when: "The reviewed records lack traceable profile, behavior, score, sales-note, or outcome evidence, or sales rejection will be treated as automatic ground truth."
 output: "A governed rejection taxonomy, discrepancy review log, error classification, revised qualification rules, shared quality measure, and dated follow-up decision."
 sources:
+  - "raw/Clippings/What Would a New MQL Have to Look Like  Episode 2 - B2B Effectiveness.md"
+  - "raw/Clippings/Why is Thought Leadership so Important Today  Q&A with Julie Smukto.md"
   - raw/Clippings/How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md
 created: 2026-07-28
-updated: 2026-07-28
+updated: 2026-09-09
 ---
 
 # Qualification Rejection-Reason Calibration Loop
@@ -46,6 +48,17 @@ The source describes rejection or disqualification reasons as structured fields 
 9. At the recurring review, inspect the shared measure, the rejection mix, newly discrepant cases, and effects of prior changes. Retain, revise, or reverse each change with a dated rationale.
 
 The source supports shared ownership of a quality measure and recurring cross-functional diagnosis, including a biweekly example; the cadence itself should be adapted to local volume and decision speed (source: How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md; transcript anchors 16:12-21:31).
+
+## Qualifikation auch auf verpasste Chancen und schwache Baselines prüfen
+
+Vor dem Outcome gespeicherte Scores mit später beobachteten qualifizierten Chancen und Abschlüssen zusammenführen. Neben hoch bewerteten, abgelehnten Leads auch niedrig bewertete spätere Käufer und Fälle ohne ausreichend lange Beobachtung prüfen. Muster bei Gewinnen mit Verlusten und anderen relevanten Fällen vergleichen. Den Nutzen eines Modells gegen eine zur Basisrate und Kapazität passende einfache Auswahlregel testen.
+
+Sales-Akzeptanz ist kein fehlerfreies Label und Nichtkonversion kein automatischer Negativnachweis. Acceptance, Precision, False-Positive-Rate und Accuracy nicht gleichsetzen. Die 5–6%-Gartner-Zahl, Krebsanalogie und pauschales Scheitern aller additiven Modelle sind nicht übernommen.
+
+Methodische Ableitung P47-C12 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/What Would a New MQL Have to Look Like  Episode 2 - B2B Effectiveness.md` — 11:51–21:35; 21:49–28:29; 30:57–33:26; practitioner.
+- `raw/Clippings/Why is Thought Leadership so Important Today  Q&A with Julie Smukto.md` — 2:04–3:22; 6:55–8:12; 27:57–35:02; 46:18–49:53; practitioner.
 
 ## Inspectable output
 

@@ -1,0 +1,47 @@
+{
+  "project_id": "violet",
+  "entity_ids": [
+    "violet-fictional-group"
+  ],
+  "company_name": "Violet Fictional Instruments",
+  "purpose": "Fictional company basis for downstream planning",
+  "language": "en",
+  "region": "global",
+  "period": "2025",
+  "core_fields": [
+    "identity",
+    "workforce"
+  ],
+  "paths": {
+    "project_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet",
+    "vault_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet",
+    "run_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\runs",
+    "source_roots": [
+      "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\originals"
+    ],
+    "publication_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\context"
+  },
+  "strategy": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\strategy.md",
+    "sha256": "ce4238f51edb1c537a65b862b17ad3c449efcfb3476870362e36fe2b7e934450",
+    "accepted": true
+  },
+  "budgets": {
+    "annual_report": 3,
+    "supplementary": 20,
+    "community": 3,
+    "searches": 12
+  },
+  "source_manifest": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\violet\\selection-baseline.json",
+    "sha256": "eb8cc73152eb4dc36bfc0850e3e7c91991c9bc63ba7f7fac7533264bc1757183"
+  },
+  "excluded_stocks": [
+    "All real companies and other fictional companies"
+  ],
+  "worker_capacity": 3,
+  "entry": {
+    "mode": "baseline",
+    "question": "Fictional company basis for downstream planning"
+  }
+}

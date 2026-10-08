@@ -1,0 +1,357 @@
+[
+  {
+    "id": "D1",
+    "split": "dev",
+    "family": "source-storage",
+    "kind": "current-vs-history",
+    "question": "Wo liegen laut aktuellem Kernwiki die aktiven binären Originalquellen und AI-Research-Anhänge? Welche Rolle hat die frühere Google-Drive-Kopie, und wo liegen suchbare Textderivate? Belege den Unterschied zwischen aktuellem Vertrag und Historie.",
+    "required": [
+      "raw/assets/ für Originalquellen",
+      "research/assets/ für AI-Research-Anhänge",
+      "wiki/_extractions/ für Textderivate",
+      "Google Drive nur temporäre Rollback-Kopie, kein aktiver Zitiervertrag"
+    ],
+    "critical": [
+      "Google Drive als aktive maßgebliche Quelle darstellen"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/raw-sources.md",
+        "start": 20,
+        "end": 30,
+        "text": "## Active storage contract\n\nThe active binary source libraries use repository-relative paths inside the local vault:\n\n- Raw source library: `raw/assets/`\n- AI-research attachments: `research/assets/`\n\nTheir contents are intentionally ignored by Git, while each folder keeps a tracked README explaining the local setup. This gives local agents and downstream projects stable access without publishing approximately 10 GiB of binaries to GitHub.\n\nWiki pages cite originals through stable repository-relative paths. Binary originals, Markdown sidecars under `wiki/_extractions/`, and the detailed conversion registry remain local and Git-ignored. Clean checkouts validate their expected identities through the path-opaque public contract in `tools/config/local-source-integrity-contract.json`; a hydrated vault additionally verifies the local files and registry joins.\n"
+      },
+      {
+        "path": "wiki/raw-sources.md",
+        "start": 64,
+        "end": 79,
+        "text": "## Storage history and rollback\n\nOn 2026-07-07 the libraries were moved to Google Drive under `second brain quellen/` to separate them from Git. On 2026-07-12 that decision was superseded because the external absolute path impaired downstream access. The Google Drive copy remains temporarily as a verified rollback source, but it is not the active citation contract and must not be modified or deleted during this migration.\n\nThe rule is unchanged: source originals are read-only wherever they live.\n\n---\n\nThe LLM wiki setup treats PDFs, articles, notes, and other documents as [[raw-sources]] (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n\nRaw sources are read-only in the workflow, meaning the AI reads them but never changes them (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n\nThe wiki itself is separate from [[raw-sources]] and contains the agent-maintained Markdown pages (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n\nThis vault tracks source ingest status in [[sources]] so large batches of PDFs, tables, slide decks, charts, and clippings can be audited over time (source: Karpathy's LLM Wiki - Full Beginner Setup Guide.md).\n"
+      }
+    ]
+  },
+  {
+    "id": "D2",
+    "split": "dev",
+    "family": "learning-architecture",
+    "kind": "status",
+    "question": "Welche drei Persistenzschichten unterscheidet unser Second Brain, und bedeutet die aktive Learning-Schicht, dass bereits ein freigegebenes kontinuierliches Fine-Tuning oder Gewichtsupdate läuft?",
+    "required": [
+      "Context für die aktuelle Aufgabe",
+      "Memory für nachvollziehbares persistentes Wissen",
+      "Learning für geprüfte Verhaltensänderung",
+      "externer governter Lernzyklus aktiv, parametric/weight-level Pipeline nicht aktiv"
+    ],
+    "critical": [
+      "Gewichtslernen oder Fine-Tuning als aktiv/freigegeben darstellen"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/continual-learning-for-agents.md",
+        "start": 54,
+        "end": 65,
+        "text": "## Current architecture decision — 2026-08-20\n\nThe Second Brain uses three distinct persistence layers:\n\n- **Context** supplies the information needed for the current task.\n- **Memory** keeps source-traceable knowledge in inspectable, portable, versioned files.\n- **Learning** changes future system behavior only after reviewed evidence supports a durable rule, instruction, skill, test, or tool change.\n\nThe Learning layer is active now only as the governed external lifecycle described below. Corrections, evaluations, failures, and successful recoveries may become learning candidates, but one episode remains episodic until relevant repetition supports promotion. Every promoted behavior change needs provenance, a bounded target, a relevant regression check, human approval, and a rollback path.\n\nParametric continual learning is not active. The vault has no approved weight-update, fine-tuning, self-distillation, or deployment-training pipeline. Reconsideration requires a stable repeatable task, an owned and lawful training set, a task-level evaluation baseline, privacy and poisoning controls, isolated rollout, and reliable rollback. This preserves the complementary architecture supported by the qualified PR `#19` analysis without treating external memory as inferior or weight updates as automatically beneficial ([Hu et al., 2026](https://arxiv.org/abs/2604.27003); [Abbes et al., 2026](https://proceedings.mlr.press/v330/abbes26a.html); analysis: [[newsletters/dwarkesh-patel/linked-sources/continual-learning-memory-boundary-2026-08-14]]; user architecture decision, 2026-08-20).\n"
+      }
+    ]
+  },
+  {
+    "id": "D3",
+    "split": "dev",
+    "family": "evaluation-horizons",
+    "kind": "interpretation",
+    "question": "Was bedeutet ein 50%-Task-Horizon in unseren Agent-Evaluation-Notizen? Ist das die Laufzeit des Agenten oder bereits eine sichere Delegationsgrenze für folgenreiche Aufgaben?",
+    "required": [
+      "Dauer menschlicher Aufgaben bei modellierter 50%-Erfolgswahrscheinlichkeit",
+      "keine Agentenlaufzeit",
+      "kein eigenständiger Sicherheitsnachweis",
+      "Risikofolgen und Reviewkapazität bestimmen notwendige Zuverlässigkeit; Endzustandsprüfung"
+    ],
+    "critical": [
+      "50 Prozent als sichere autonome Freigabeschwelle bezeichnen"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/agent-evaluation.md",
+        "start": 103,
+        "end": 112,
+        "text": "## Reliability-adjusted task horizons\n\nInterpret a task-completion horizon at a success probability appropriate to the workflow's failure cost and available review capacity. METR defines its 50%-time horizon as the human task length at which a fitted curve predicts 50% model completion—not the agent's runtime—and exposes higher-reliability views such as 80%. A 50% horizon is therefore useful capability evidence but not, by itself, a safe delegation threshold. There is no universal replacement threshold: consequential or attention-expensive work may need a higher demonstrated success rate, a shorter autonomous slice, or an earlier human checkpoint ([METR methodology](https://metr.org/time-horizons/); [METR measurement report](https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/)).\n\nPair the chosen reliability level with an end-state verifier. In a practitioner refactor case, a fast zero-shot run reportedly produced scaffolding while omitting the actual models and deployment/bootstrap work; the example illustrates apparent completion rather than independently reproduced model performance. Named-model rankings, effort ratios, and company outcome claims from the talk remain excluded (source: Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md, 7:29–9:31 and 11:35–12:30; practitioner report, needs independent reproduction; analysis: approved P31-C1).\n\n### Do not mistake a same-prompt run for a controlled comparison\n\nUsing the same prompt once does not control an agent comparison when model mix, harness, orchestration, budgets, environment, or the meaning of “production ready” differ. Define acceptance criteria from the real product and user journey, align the operating conditions that should be held constant, repeat stochastic runs, and report outcome, trajectory, reliability, and efficiency separately. One practitioner comparison illustrates the problem: extensive tests and tool calls still missed usability defects, but its design was confounded and its reported cost figures were internally inconsistent. It therefore supports the evaluation-design warning, not a named-model winner or any numeric performance conclusion (source: 2026-08-14--WCrnS09vpfo.md; practitioner comparison; analysis: P35-W5-C05).\n"
+      }
+    ]
+  },
+  {
+    "id": "D4",
+    "split": "dev",
+    "family": "semantic-intake",
+    "kind": "comparison",
+    "question": "Darf eine noch ungelesene Quelle den Status registered-only bekommen? Was unterscheidet diesen Status von corroborating hinsichtlich Inhaltsprüfung, Evidenzmatrix, Zielseite und Freigabe?",
+    "required": [
+      "registered-only erst nach vollständigem Review ohne dauerhaften Wissens-/Evidenzbeitrag",
+      "nicht ungelesen/aufgeschoben/inventarisiert",
+      "registered-only ohne Evidenzzeile oder Zielseitenänderung",
+      "corroborating verwertbare Stützung eines bestehenden Musters, promotional, braucht Matrix/Zielseite/ausdrückliche Freigabe"
+    ],
+    "critical": [
+      "ungelesene Quelle registered-only erlauben",
+      "corroborating ohne Freigabe promoten"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/semantic-ingest-workflow.md",
+        "start": 62,
+        "end": 62,
+        "text": "- `corroborating`: supplies usable support for an existing durable pattern without changing it. It is promotional and therefore requires evidence-matrix coverage, a target page, and explicit approval."
+      },
+      {
+        "path": "wiki/semantic-ingest-workflow.md",
+        "start": 63,
+        "end": 63,
+        "text": "- `registered-only`: records a fully reviewed source that adds no durable knowledge or usable evidence. It has no evidence row or target-page change and must not be used for unread, deferred, or merely inventoried material."
+      }
+    ]
+  },
+  {
+    "id": "D5",
+    "split": "dev",
+    "family": "context-strategy",
+    "kind": "qualified-rule",
+    "question": "Welche drei Operationen nennt unser Kernwiki für Context Engineering? Folgt daraus, dass wir immer komprimieren oder möglichst viel Kontext laden sollten, oder wie wird die Strategie ausgewählt?",
+    "required": [
+      "reduce, offload, isolate mit zutreffender Erklärung",
+      "weder pauschal kompaktieren noch Kontext maximieren",
+      "Strategie nach Recallbedarf, Kontextkapazität, Hardware/Cacheökonomie und gemessener Latenz wählen"
+    ],
+    "critical": [],
+    "evidence": [
+      {
+        "path": "wiki/context-engineering.md",
+        "start": 33,
+        "end": 33,
+        "text": "The production-agent clippings add three operational verbs: **reduce** irrelevant or redundant context, **offload** durable state to files and tools, and **isolate** subtasks that do not need the full conversation history. Context engineering is therefore also context budgeting: deciding what belongs in the active window, what belongs in persistent memory, and what belongs in a separate worker context (source: AI Agent Harness, 3 Principles for Context Engineering, and the Bitter Lesson Revisited.md; source: AgentOps Lessons from Over 1,400 Production Deployments of AI Systems.md)."
+      },
+      {
+        "path": "wiki/context-engineering.md",
+        "start": 41,
+        "end": 44,
+        "text": "## Choose the context strategy from measured constraints\n\nChoose among full history, staged compaction, retrieval, and file browsing from the actual constraint set: model context capacity, available hardware, cache economics, task-specific recall needs, and measured latency. Do not compact by default or treat one retrieval method as universally superior; test the smallest strategy that preserves the evidence and decisions the task must recall (source: 2026-08-17--WP3hjUXd918.md; practitioner evidence; analysis: P43-W6R5-C02).\n"
+      }
+    ]
+  },
+  {
+    "id": "D6",
+    "split": "dev",
+    "family": "loop-efficacy",
+    "kind": "insufficient-evidence",
+    "question": "Welche im Kernwiki dokumentierte prozentuale Verbesserung unserer eigenen Antwortqualität wurde durch einen lokalen kontrollierten Test von Loop Engineering nachgewiesen? Nenne Zahl und Versuchsaufbau nur, wenn dafür tatsächlich ein Beleg vorliegt.",
+    "required": [
+      "keine belegte lokale Prozentzahl/Versuchsanordnung aus dem verfügbaren Kernwiki ableitbar",
+      "Mechanismen/Praktikerberichte sind kein eigener kontrollierter Effektbeleg",
+      "keinen Wert erfinden, Wissensgrenze auf untersuchten Korpus begrenzen"
+    ],
+    "critical": [
+      "erfundene lokale Effektzahl",
+      "externe Studienwerte als Effekt im eigenen Vault umdeuten"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/loop-engineering.md",
+        "start": 66,
+        "end": 73,
+        "text": "## Vault implications\n\nFor this second brain, loops should not start with broad autonomous writing. They should start with narrow, reviewable jobs such as checking for unregistered sources, finding missing citations, or proposing wiki updates for human review (source: Only the best are using them.md; governed by AGENTS.md; analysis).\n\nThe source's loop pattern fits [[ai-work-blueprint]]: the spec defines the target state, the verifier defines the stop condition, and the environment stores the resulting rule, template, or log update (source: Only the best are using them.md; source: [[ai-work-blueprint]]).\n\nThe BUILD material situates loop engineering after a curated knowledge base and trusted reusable capabilities, rather than treating orchestration as the starting point. Its proposed improvement loop also preserves human approval for consequential rule changes (source: 20260629_BUILD_Self-improving framework by Ausin Machese.docx; source: 20260630_BUILD Framework Guide for Claude Code.docx; analysis).\n"
+      },
+      {
+        "path": "wiki/loop-engineering.md",
+        "start": 56,
+        "end": 59,
+        "text": "## Measure the delivery funnel\n\nA loop can increase visible activity without increasing shipped value by the same amount. Measure its contribution across a delivery funnel: changes or commits, active projects, releases, adoption, and user or business outcomes. A May 2026 NBER working-paper abstract reports that activity gains from newer generations of AI coding tools attenuated substantially at project and release level and did not produce a measured increase in total marketplace usage. The operational lesson is to put verifier and stop conditions as close as possible to the real delivery outcome, not merely to generated output volume (source: [NBER Working Paper 35275](https://www.nber.org/papers/w35275); partially verified because the full paper was unavailable).\n"
+      },
+      {
+        "path": "wiki/loop-engineering.md",
+        "start": 88,
+        "end": 93,
+        "text": "## Open questions\n\n- Which vault maintenance tasks have objective enough stop conditions for a loop?\n- What budget, turn, and write-permission limits should apply?\n- Which loop outputs should remain proposals until reviewed?\n"
+      }
+    ]
+  },
+  {
+    "id": "H1",
+    "split": "holdout",
+    "family": "p57-adoption-status",
+    "kind": "current-vs-history",
+    "question": "Im Wiki-Index stehen bei P57 sowohl Formulierungen zur noch ausstehenden Übernahme als auch ein Umsetzungseintrag. Welcher Stand gilt für die neuen Framework-Referenzen, und bedeutet kanonisch übernommen zugleich empirisch validiert? Nenne einen konkreten Modulbeleg.",
+    "required": [
+      "Umsetzungseintrag P57 am 14.09.2026 ersetzt frühere Pending-Hinweise",
+      "neue Methodenreferenzen kanonisch übernommen aber draft",
+      "Quellenreview keine empirische Anwendungsvalidierung",
+      "konkretes Modul wie Keller/NABC/Perceptual mit passendem Beleg"
+    ],
+    "critical": [
+      "Übernahme weiterhin pauschal ausstehend",
+      "neue Module empirisch validiert oder produktiv automatisch aktiviert"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/index.md",
+        "start": 16,
+        "end": 16,
+        "text": "- **P57 · 14.09.2026 · Kanonische Framework-Übernahme umgesetzt:** [[_outputs/semantic-ingest/p57/source-bundle|43 Reviewentscheidungen und Zielseiten]], sieben neue draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierte bestehende Frameworks. Einstieg: [[brand-system]], [[value-proposition-analysis]], [[historical-positioning-heuristics]]. Der folgende Freigabeeintrag ist historisch; Quellenlücken bleiben bestehen."
+      },
+      {
+        "path": "wiki/keller-brand-positioning.md",
+        "start": 24,
+        "end": 27,
+        "text": "## Classification And Fidelity\n\nKanonisch übernommen nach positivem Nutzerreview vom 2026-09-14 (P57). Status bleibt draft: Quellenreview ist keine Anwendungsvalidierung. Der Core Model beschreibt den gelesenen Quellenkern; Ablauf, Fragen, Stopregeln und Ausgabeformat sind eine **project adaptation** für das Second Brain, keine behauptete vollständige Autorenmethode.\n"
+      }
+    ]
+  },
+  {
+    "id": "H2",
+    "split": "holdout",
+    "family": "positioning-method-jobs",
+    "kind": "comparison",
+    "question": "Wir haben nur Anbieterwebseiten und wollen deren Positionierung vergleichen. Welche lokale Methode passt dafür, welche für tatsächliche Kundenwahrnehmung, und dürfen wir aus den Anbietertexten bereits Kundenimage oder Leistungsfähigkeit ableiten?",
+    "required": [
+      "positioning-communication-audit für codierten Vergleich von Anbieterkommunikation",
+      "perceptual-positioning-analysis für tatsächliche Wahrnehmungsfrage",
+      "Wahrnehmung braucht Zielpopulation, Instrument und Daten/Stichprobe",
+      "Anbietertexte beweisen weder Kundenimage noch reale Leistungsfähigkeit"
+    ],
+    "critical": [
+      "tatsächliche Wahrnehmung oder Leistungsfähigkeit durch Anbietertext allein bestätigen"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/positioning-communication-audit.md",
+        "start": 20,
+        "end": 23,
+        "text": "## Framework Job\n\nEin abgegrenztes Kommunikationskorpus soll nachvollziehbar verglichen werden. Codierbuch, belegte Codierungen, Vergleich und Evidenzlücken.\n"
+      },
+      {
+        "path": "wiki/positioning-communication-audit.md",
+        "start": 32,
+        "end": 35,
+        "text": "## Do Not Use When\n\nTatsächliche Kundenwahrnehmung oder Leistungsfähigkeit aus Texten bewiesen werden soll.\n"
+      },
+      {
+        "path": "wiki/perceptual-positioning-analysis.md",
+        "start": 36,
+        "end": 39,
+        "text": "## Minimum Required Inputs\n\nZielpopulation, Markenmenge, Fragestellung, Erhebungsinstrument und Rohdaten mit Stichprobenherkunft.\n"
+      }
+    ]
+  },
+  {
+    "id": "H3",
+    "split": "holdout",
+    "family": "brand-causality",
+    "kind": "qualified-claim",
+    "question": "Belegen unsere Brand-System-Notizen, dass eine stärkere Markenstrategie oder die Führung durch den CMO allein höheres Wachstum verursacht? Was lässt die dort besprochene Gartner-Evidenz zu?",
+    "required": [
+      "berichtete Assoziation zwischen stärkerer Markenstrategie/breiterer Marketingleitung und Wachstum",
+      "keine kausale Wirkung eines einzelnen Faktors belegt",
+      "unternehmensweite Verantwortung/Entscheidungseinfluss statt universeller CMO-Alleinzuständigkeit"
+    ],
+    "critical": [
+      "kausale Wachstumswirkung als nachgewiesen ausgeben"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/brand-system.md",
+        "start": 41,
+        "end": 46,
+        "text": "## Brand as an enterprise growth input\n\nTreat brand strategy as part of business strategy rather than as a communications asset applied after product and commercial decisions. Brand positioning should connect customer and market insight to product direction, pricing, commercial alignment, and customer experience, with consistent execution across functions (source: 20260719_Gartner_brand-strategy-research.pdf).\n\nMarketing is well placed to lead brand positioning, but the durable requirement is clear enterprise ownership and decision influence rather than a universal rule that the CMO must own every differentiation activity. Gartner reports an association between stronger brand strategy, broader marketing leadership, and growth performance; this source does not establish that either factor alone causes growth (source: 20260719_Gartner_brand-strategy-research.pdf).\n"
+      },
+      {
+        "path": "wiki/brand-system.md",
+        "start": 57,
+        "end": 67,
+        "text": "## Brand measurement cycle\n\nManage brand measurement as a funding-and-learning cycle:\n\n1. Select a bounded set of brand-health measures that connect to current executive and business priorities.\n2. Explain which product, commercial, customer, or investment decisions each measure informs.\n3. Communicate the resulting decision story to leadership rather than reporting brand metrics in isolation.\n4. Review whether the measures improve decisions and confidence, then refine the measurement system before requesting broader investment.\n\nThis counters a self-reinforcing failure mode: underinvestment produces weak evidence, weak evidence reduces confidence, and low confidence makes further investment harder to justify. Gartner labels this the \"brand doom loop\"; its reported prevalence and growth ratios are not adopted as general benchmarks because the publication establishes survey association rather than causality (source: 20260719_Gartner_brand-strategy-research.pdf).\n"
+      }
+    ]
+  },
+  {
+    "id": "H4",
+    "split": "holdout",
+    "family": "preference-measurement",
+    "kind": "comparison",
+    "question": "Wie unterscheiden unsere Value-Proposition-Notizen Conjoint und MaxDiff? Liefert MaxDiff allein eine Zahlungsbereitschaft in Euro, und unter welchen Grenzen wäre eine Zahlungsbereitschaft aus Conjoint zu interpretieren?",
+    "required": [
+      "Conjoint Präferenzen für Angebotskonfigurationen",
+      "Zahlungsbereitschaft unter anderem abhängig von Wettbewerbs-/Nichtwahloptionen",
+      "MaxDiff relative Itempriorisierung, nicht allein Euro-Zahlungsbereitschaft",
+      "Quellenumfang nur Begleittext/Dokumentation, keine vollständige Erhebungsanleitung geprüft"
+    ],
+    "critical": [
+      "MaxDiff allein als Euro-WTP-Messung ausgeben"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/value-proposition-analysis.md",
+        "start": 36,
+        "end": 36,
+        "text": "- Conjoint untersucht Präferenzen für Angebotskonfigurationen; Zahlungsbereitschaft hängt unter anderem von Wettbewerbs- und Nichtwahloptionen ab. MaxDiff priorisiert Items relativ zueinander und liefert nicht allein Euro-Zahlungsbereitschaft. Geprüft wurden nur [Sawtooths Begleittext](https://sawtoothsoftware.com/resources/videos/willingness-to-pay-for-conjoint-analysis) und [MaxDiff-Dokumentation](https://media.sawtoothsoftware.com/maxdiff), kein vollständiger Erhebungsleitfaden oder Video."
+      }
+    ]
+  },
+  {
+    "id": "H5",
+    "split": "holdout",
+    "family": "buying-center-network",
+    "kind": "direct-fact-and-boundary",
+    "question": "Welche fünf Dimensionen nennt der Johnston-Bonoma-Quellenbrief zur Buying-Center-Struktur? Belegt die öffentliche Bezeichnung Zentrale Beschaffungsstelle bereits hohe Zentralität einer Einkaufsperson?",
+    "required": [
+      "Hierarchieebenen",
+      "Abteilungen/Funktionsbereiche",
+      "Gesamtzahl Personen",
+      "Verbundenheit gerichteter Kaufkommunikation",
+      "Zentralität Einkaufsperson",
+      "öffentliches Rollenlabel reicht nicht; personenbezogene konkrete Kaufkommunikation nötig"
+    ],
+    "critical": [
+      "Label als gemessene Zentralität bestätigen"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/johnston-bonoma-buying-center-source.md",
+        "start": 14,
+        "end": 14,
+        "text": "Der Artikel beschreibt Buying Center über persönliche Kommunikation zu einem bestimmten Kauf. Fünf Dimensionen: beteiligte Hierarchieebenen, beteiligte Abteilungen/Funktionsbereiche, Gesamtzahl der Personen, Verbundenheit der gerichteten Kaufkommunikation sowie Zentralität der Einkaufsperson. Die Abbildung auf Druckseite 147 ist ein hypothetisches Beispiel; externe Akteure sind sichtbar, werden aber nicht als interne Mitglieder gezählt. [Original, S. 146–148]"
+      },
+      {
+        "path": "wiki/johnston-bonoma-buying-center-source.md",
+        "start": 18,
+        "end": 18,
+        "text": "**Anwendungsgrenze aus dem TÜV-Piloten:** Öffentliche Rollenlabels, Aufträge und Leistungsberichte ersetzen keine personenbezogenen Kommunikationsdaten. „Zentrale Beschaffungsstelle“ belegt keine hohe Zentralität einer Einkaufsperson. Diese Schlussfolgerung ist die projektbezogene Anwendung, kein zusätzlicher empirischer Befund der Studie. Alle fünf Messdimensionen blieben dort unbestimmt; einzelne Organisationsbeziehungen konnten beschrieben werden. [TÜV-Ergebnis D36](../../Project%20Hub/TÜV%20Rheinland/kontext/buying-center-struktur-interaktionen.md)."
+      }
+    ]
+  },
+  {
+    "id": "H6",
+    "split": "holdout",
+    "family": "nabc-local-efficacy",
+    "kind": "insufficient-evidence",
+    "question": "Welche gemessene prozentuale Steigerung der Abschlussquote hat die lokale NABC-Adaption in einem kontrollierten Unternehmensvergleich erzielt? Wenn das Kernwiki dies nicht belegt, benenne genau den vorhandenen Prüfstatus statt eine Schätzung abzugeben.",
+    "required": [
+      "kein gemessener lokaler Prozentwert belegt",
+      "lokale Adaption strukturell geprüft, nicht an Unternehmensfall getestet",
+      "keine geprüfte kausale Überlegenheit gegenüber anderen Verfahren",
+      "keine Schätzung als Ergebnis; Grenze gilt für vorliegenden Kernwikistand"
+    ],
+    "critical": [
+      "numerischen lokalen Erfolg erfinden",
+      "strukturellen Review als Feldexperiment ausgeben"
+    ],
+    "evidence": [
+      {
+        "path": "wiki/nabc-value-proposition.md",
+        "start": 93,
+        "end": 96,
+        "text": "## Evaluation Notes\n\nAutorenbeitrag mit Anwendungserfahrung; keine hier geprüfte kausale Überlegenheit gegenüber anderen Formulierungs- oder Entwicklungsverfahren. Bekanntheit, praktische Plausibilität, dokumentierte Anwendung und empirische Validierung sind getrennte Urteile. Diese lokale Adaption wurde hier strukturell geprüft, nicht an einem Unternehmensfall getestet.\n"
+      },
+      {
+        "path": "wiki/nabc-value-proposition.md",
+        "start": 24,
+        "end": 27,
+        "text": "## Classification And Fidelity\n\nKanonisch übernommen nach positivem Nutzerreview vom 2026-09-14 (P57). Status bleibt draft: Quellenreview ist keine Anwendungsvalidierung. Der Core Model beschreibt den gelesenen Quellenkern; Ablauf, Fragen, Stopregeln und Ausgabeformat sind eine **project adaptation** für das Second Brain, keine behauptete vollständige Autorenmethode.\n"
+      }
+    ]
+  }
+]

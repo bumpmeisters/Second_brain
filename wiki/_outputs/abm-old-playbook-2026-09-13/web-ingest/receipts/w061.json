@@ -1,0 +1,17 @@
+{
+  "id": "W061",
+  "url": "https://support.6sense.com/docs/match-rates-vpns-and-firewalls",
+  "research_briefs": [
+    "f05-dark-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:26.210621+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w061.json",
+  "title": "Match Rates, VPNs, and Firewalls",
+  "final_url": "https://support.6sense.com/docs/match-rates-vpns-and-firewalls",
+  "characters": 3273,
+  "sha256": "513a7d7837c0dc9312b815061bae691c53127b805cbcb04e8a5e9b3c85accc8e",
+  "http_status": 200
+}

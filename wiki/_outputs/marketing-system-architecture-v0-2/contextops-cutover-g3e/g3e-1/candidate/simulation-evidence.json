@@ -1,0 +1,49 @@
+{
+  "evidence_contract": "g3e1-isolated-roundtrip/v1",
+  "date": "2026-08-22",
+  "snapshot_id": "g3e1-2b697f4996c9313c",
+  "simulation_root_kind": "verified-temporary-vault-copy",
+  "live_authority_effect": "none",
+  "verdict": "candidate-roundtrip-pass-live-cutover-hold",
+  "forward": {
+    "physical_moves": { "passed": 95, "expected": 95, "source_remaining": 0 },
+    "component_posthashes": { "passed": 95, "expected": 95, "byte_identical": 74, "reviewed_refactors": 21 },
+    "exact_poststate": { "passed": 23, "expected": 23, "transaction_residue": 0 },
+    "wrappers": { "passed": 11, "expected": 11, "transitioned": 10, "verify_only": 1 },
+    "mos_suite": { "passed": 20, "expected": 20, "cleanup_verified": true, "vault_mutation": "none" },
+    "authority": { "single_target_controller": true, "legacy_residual_boundary": true, "mos_authority": "none" },
+    "target": { "file_count": 98, "component_hash_mismatches": 0, "local_raw_research_wiki_roots": 0 },
+    "historical_references": { "exact": 15, "append_prefix": 4, "failures": 0 },
+    "sibling_controller_mismatches": 0,
+    "root_fast": { "errors": 1, "warnings": 0, "finding_codes": ["sources.coverage-stale"] }
+  },
+  "reverse": {
+    "snapshot": { "restore_exact": 126, "append_only_prefix": 3, "verify_only": 1, "failures": 0 },
+    "legacy_register": { "exact": 214, "append_only_prefix": 1, "failures": 0 },
+    "target_shell_file_count": 3,
+    "created_cutover_files_remaining": 0,
+    "wrappers_prestate": { "passed": 11, "expected": 11 },
+    "mos_suite": { "passed": 16, "expected": 16, "cleanup_verified": true, "vault_mutation": "none" },
+    "root_fast": { "errors": 1, "warnings": 0, "finding_codes": ["sources.coverage-stale"] }
+  },
+  "fail_closed_probes": {
+    "exact_poststate_first_apply": "pass",
+    "exact_poststate_second_apply_exit": 1,
+    "exact_poststate_second_apply_post_drift": 0,
+    "exact_poststate_postcheck_after_rejection": "pass",
+    "snapshot_restore_without_explicit_allow": "not-authorized-by-tool-contract",
+    "snapshot_directory_outside_supplied_vault": "rejected"
+  },
+  "live_comparison": {
+    "root_fast": { "errors": 1, "warnings": 0, "finding_codes": ["sources.coverage-stale"] },
+    "candidate_added_findings": 0,
+    "coverage_inventory": {
+      "stored_rows": 4033,
+      "current_rows": 4034,
+      "added": 1,
+      "missing": 0,
+      "changed_metadata": 0,
+      "unrepresented_path": "raw/Clippings/Steal My AI Marketing System (One Prompt Builds It).md"
+    }
+  }
+}

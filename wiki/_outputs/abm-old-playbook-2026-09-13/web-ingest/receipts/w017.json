@@ -1,0 +1,15 @@
+{
+  "id": "W017",
+  "url": "https://cmosurvey-new.fuqua.duke.edu/wp-content/uploads/2026/03/The_CMO_Survey-Highlights_and_Insights_Report-2026.pdf",
+  "research_briefs": [
+    "s04-revops-governance.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:54:15.426624+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w017.pdf",
+  "final_url": "https://cmosurvey-new.fuqua.duke.edu/wp-content/uploads/2026/03/The_CMO_Survey-Highlights_and_Insights_Report-2026.pdf",
+  "bytes": 3127320,
+  "sha256": "e846a7043d1bc5a69ef1a4c1e3cda7d0813941e8c9bcb43588a3cd5466bde3b2"
+}

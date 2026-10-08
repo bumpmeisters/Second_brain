@@ -3,9 +3,9 @@ framework: competitive-alternative-positioning
 domain: positioning
 type: adapted
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-09-14
 source-confidence: medium
 ---
 
@@ -96,11 +96,19 @@ Feeds proof-led positioning and sales narrative.
 
 ## Evaluation Notes
 
-Draft pending direct use in a complete positioning case.
+Begrenzt angewendet; vollständiger kundenevidenzgestützter Test ausstehend. Draft bleibt bestehen; Quellenreview und Anwendungsvalidierung sind getrennt.
 
 ## Evolution Triggers
 
 Revise after win/loss evidence or repeated category confusion.
+
+## P57: genehmigte Quellen- und Schnittstellenpräzisierung
+
+[Dunfords Quickstart 2021](https://www.aprildunford.com/post/a-quickstart-guide-to-positioning) verbindet Alternativen, einzigartige Fähigkeiten, Wert, passende Kunden und Kategorie. [Positioning Prep 2026](https://aprildunford.substack.com/p/positioning-prep-part-1-decisions) beschreibt die Neuordnung der zweiten Ausgabe mit Vorbereitung, fünf Kernschritten und Nacharbeit; gelesen wurden zugängliche Vorbereitungsentscheidungen, nicht das vollständige Buch. Beide Fassungen nicht als identischen Zehn-Schritte-Prozess ausgeben.
+
+Jede Verbindung braucht Evidenz. Anbieterkommunikation ([[positioning-communication-audit]]) und Kundenwahrnehmung ([[perceptual-positioning-analysis]]) sind getrennt. Begrenzt angewendet; ein vollständiger kundenevidenzgestützter Test bleibt gesondert zu beurteilen. Keine Aktivierung durch Quellenpräzisierung.
+
+Auditspur: (source: research/2026-09-14-framework-source-verification-p57.md), sekundäre Prüfungszusammenstellung; [[_outputs/semantic-ingest/p57/source-bundle]].
 
 ## Sources And Provenance
 
@@ -108,6 +116,6 @@ Primary source:
 
 - April Dunford, positioning resources: https://www.aprildunford.com/
 
-Project source:
+Project provenance:
 
-- `projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-marktanalyse-framework-plan-v0-1.md`
+- (source: projects/No and low code_1st Marketing Agent/projects/Das-Familienbuch/wiki/_outputs/das-familienbuch-marktanalyse-framework-plan-v0-1.md)

@@ -1,0 +1,17 @@
+{
+  "id": "W088",
+  "url": "https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:08.934382+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w088.json",
+  "title": "Forrester: The State Of Business Buying, 2026",
+  "final_url": "https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying/",
+  "characters": 12457,
+  "sha256": "d945c37364bde8b44e5ed443c779f590738015c3428d8f06ca616a6f12c5e6dc",
+  "http_status": 200
+}

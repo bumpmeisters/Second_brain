@@ -1,0 +1,15 @@
+{
+  "project_id": "amber",
+  "reviewed": true,
+  "reviewer": "fixture-source-selector",
+  "sources": [
+    {
+      "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\amber\\originals\\record-2025.txt",
+      "sha256": "4e6d0a768b1a36ba77de09ad36a59ce0ac3628a59079aef24477c3792b815342",
+      "entity_ids": [
+        "amber-fictional-group"
+      ],
+      "selection_status": "approved-for-project-review"
+    }
+  ]
+}

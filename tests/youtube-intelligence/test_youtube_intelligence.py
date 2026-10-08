@@ -12,7 +12,7 @@ import urllib.error
 import urllib.request
 from datetime import timedelta
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 
 REPO = Path(__file__).resolve().parents[2]
@@ -43,6 +43,40 @@ class YouTubeIntelligenceTests(unittest.TestCase):
 
     def tearDown(self):
         self.temporary.cleanup()
+
+    def test_invalid_grant_reauth_is_interactive_only(self):
+        class RefreshError(Exception):
+            pass
+        modules = {
+            "google.auth.exceptions": MagicMock(RefreshError=RefreshError),
+            "google.auth.transport.requests": MagicMock(),
+            "google.oauth2.credentials": MagicMock(),
+            "google_auth_oauthlib.flow": MagicMock(),
+        }
+        token_path = self.root / "oauth-token.json"
+        token_path.write_text("old-token", encoding="utf-8")
+        for interactive, error_code in ((False, "invalid_grant"), (True, "server_error"), (True, "invalid_grant")):
+            with self.subTest(interactive=interactive, error_code=error_code):
+                old = MagicMock(expired=True, refresh_token="fixture")
+                old.refresh.side_effect = RefreshError("refresh failed", {"error": error_code})
+                fresh = MagicMock()
+                fresh.to_json.return_value = "new-token"
+                token_path.write_text("old-token", encoding="utf-8")
+                modules["google.oauth2.credentials"].Credentials.from_authorized_user_file.return_value = old
+                flow = modules["google_auth_oauthlib.flow"].InstalledAppFlow.from_client_secrets_file
+                flow.reset_mock()
+                with patch.object(self.app, "oauth_paths", return_value=(self.root / "client.json", token_path)), \
+                     patch.dict(sys.modules, modules):
+                    flow.return_value.run_local_server.return_value = fresh
+                    if interactive and error_code == "invalid_grant":
+                        self.assertIs(self.app.credentials(True), fresh)
+                        flow.return_value.run_local_server.assert_called_once()
+                        self.assertEqual(token_path.read_text(encoding="utf-8"), "new-token")
+                    else:
+                        with self.assertRaises(RefreshError):
+                            self.app.credentials(interactive)
+                        flow.assert_not_called()
+                        self.assertEqual(token_path.read_text(encoding="utf-8"), "old-token")
 
     def _awaiting_run_fixture(self, trigger_type="approved-supervised-live"):
         connection = self.app.connect()
@@ -283,7 +317,7 @@ class YouTubeIntelligenceTests(unittest.TestCase):
         self.assertEqual(connection.execute("SELECT COUNT(*) FROM videos WHERE selected=1").fetchone()[0], 5)
         connection.close()
 
-    def test_selected_acquisition_retries_one_rate_limit(self):
+    def test_selected_acquisition_does_not_retry_rate_limit_immediately(self):
         connection = self.app.connect()
         now = iso_utc()
         with connection:
@@ -307,8 +341,8 @@ class YouTubeIntelligenceTests(unittest.TestCase):
 
         self.app.capture = capture
         result = self.app.acquire_selected(1)
-        self.assertEqual(len(attempts), 2)
-        self.assertEqual(result[0]["status"], "captured")
+        self.assertEqual(len(attempts), 1)
+        self.assertEqual(result[0]["status"], "failed")
 
     def test_additive_migration_creates_control_plane_tables(self):
         connection = self.app.connect()
@@ -612,6 +646,9 @@ class YouTubeIntelligenceTests(unittest.TestCase):
         self.assertEqual(completed["status"], "completed")
         replay = self.app.complete_semantic_run(run_id, package_path.relative_to(self.root).as_posix())
         self.assertTrue(replay["idempotent_replay"])
+        for receipt in (completed, replay):
+            self.assertEqual(receipt["status_scope"], "source-review")
+            self.assertEqual(receipt["canonical_promotion_effect"], "none; run completion only")
         connection = self.app.connect()
         self.assertEqual(connection.execute("SELECT status FROM run_items WHERE run_id=? AND video_id='v1'", (run_id,)).fetchone()[0], "reviewed")
         connection.close()
@@ -671,7 +708,7 @@ class YouTubeIntelligenceTests(unittest.TestCase):
         result = self.app.execute_run(requested["run_id"])
         self.assertEqual(result["status"], "paused")
         self.assertEqual(result["stop_reason"], "rate-limit-circuit-breaker")
-        self.assertEqual(len(result["results"]), 2)
+        self.assertEqual(len(result["results"]), 1)
         report = json.loads((self.root / result["report"]).read_text(encoding="utf-8"))
         self.assertEqual(report["schema_version"], "youtube-intelligence-run/v1")
 

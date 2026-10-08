@@ -1,0 +1,1298 @@
+[
+  {
+    "id": "W016",
+    "url": "https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/advertising-effectiveness-and-the-95-5-rule.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w016-business-linkedin-com-advertising-effectiveness-and-the-95-5-rule-pdf.pdf",
+    "sha256": "8a6ed7ab518d88a4127a2d4db50df745980f6641f53f8c54559a0395bd859e2c",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w016.pdf",
+    "staged_at": "2026-09-13T17:57:21.573715+00:00"
+  },
+  {
+    "id": "W017",
+    "url": "https://cmosurvey-new.fuqua.duke.edu/wp-content/uploads/2026/03/The_CMO_Survey-Highlights_and_Insights_Report-2026.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w017-cmosurvey-new-fuqua-duke-edu-the-cmo-survey-highlights-and-insights-report-2026-pdf.pdf",
+    "sha256": "e846a7043d1bc5a69ef1a4c1e3cda7d0813941e8c9bcb43588a3cd5466bde3b2",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w017.pdf",
+    "staged_at": "2026-09-13T17:57:21.589713+00:00"
+  },
+  {
+    "id": "W031",
+    "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/7215_A_General_Model_for_Understanding.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w031-faculty-wharton-upenn-edu-7215-a-general-model-for-understanding-pdf.pdf",
+    "sha256": "07f0ecfef7f8457da3e6449661182eb3ce36b15afe0437488c41cc926982ee3a",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w031.pdf",
+    "staged_at": "2026-09-13T17:57:21.600715+00:00"
+  },
+  {
+    "id": "W042",
+    "url": "https://learn.seismic.com/rs/217-LXS-149/images/2023_Seismic_Content_Report-Spring-Release-Personalization-Payoff-FINAL.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w042-learn-seismic-com-2023-seismic-content-report-spring-release-personalization-payoff-final-pdf.pdf",
+    "sha256": "29bdcdcd95b35abb1690fad46d8ccd717576eb62aabfe18237c187e480f57d31",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w042.pdf",
+    "staged_at": "2026-09-13T17:57:21.626747+00:00"
+  },
+  {
+    "id": "W007",
+    "url": "https://about.fb.com/ltam/wp-content/uploads/sites/14/2023/11/LeadGenerationGuide.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w007-about-fb-com-leadgenerationguide-pdf.pdf",
+    "sha256": "f774538f7dddc6e445a8ce190c0f6e7e474e2968b080ac021034691fae85a010",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w007.pdf",
+    "staged_at": "2026-09-13T18:01:30.771107+00:00"
+  },
+  {
+    "id": "W048",
+    "url": "https://s3.amazonaws.com/media.mediapost.com/uploads/LUNIO_Global_Invalid_Traffic_2026_01.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w048-s3-amazonaws-com-lunio-global-invalid-traffic-2026-01-pdf.pdf",
+    "sha256": "a335e26185b4a1b0997412c03a17517e42eeeacdfcac8ae01ca5945d5820d170",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w048.pdf",
+    "staged_at": "2026-09-13T18:01:30.822109+00:00"
+  },
+  {
+    "id": "W052",
+    "url": "https://smart-freight-centre-media.s3.amazonaws.com/documents/GLEC_FRAMEWORK_v3_23_10_24_B.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w052-smart-freight-centre-media-s3-amazonaws-com-glec-framework-v3-23-10-24-b-pdf.pdf",
+    "sha256": "949621632866447dd74b328e5091dac85e877f83b28992f86db230f12b7bfe4f",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w052.pdf",
+    "staged_at": "2026-09-13T18:01:30.843110+00:00"
+  },
+  {
+    "id": "W071",
+    "url": "https://www.davidreiley.com/papers/OnlineAdsOfflineSales.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w071-www-davidreiley-com-onlineadsofflinesales-pdf.pdf",
+    "sha256": "876b3170e6c88d73b87b4967cd15148dc62f261cc69a6e0f2ed58a32b30dac57",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w071.pdf",
+    "staged_at": "2026-09-13T18:01:30.864114+00:00"
+  },
+  {
+    "id": "W075",
+    "url": "https://www.edpb.europa.eu/system/files/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w075-www-edpb-europa-eu-edpb-guidelines-202302-technical-scope-art-53-eprivacydirective-v2-en-0-pdf.pdf",
+    "sha256": "dbc1d37783e35ae8668925f92a590ae282eec24c98381a5a8f91b5c2048b5b03",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w075.pdf",
+    "staged_at": "2026-09-13T18:01:30.870108+00:00"
+  },
+  {
+    "id": "W001",
+    "url": "https://6sense.com/blog/b2b-form-fill-rates-are-very-low-what-are-marketing-organizations-doing-about-it",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w001-6sense-com-b2b-form-fill-rates-are-very-low-what-are-marketing-organizations-doing-about-it.md",
+    "sha256": "37a62caed1dad6541dc6b492add17a5284f3422f7fb06646cf9947e120283fe5",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w001.json",
+    "staged_at": "2026-09-13T18:05:59.478664+00:00"
+  },
+  {
+    "id": "W002",
+    "url": "https://6sense.com/blog/the-great-b2b-gate-debate-is-over-dont-gate",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w002-6sense-com-the-great-b2b-gate-debate-is-over-dont-gate.md",
+    "sha256": "f1d58f52b0cb9019f3eae0a249d4f7216d5b6b09542f37d2371e4e8417cf2ae5",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w002.json",
+    "staged_at": "2026-09-13T18:05:59.481660+00:00"
+  },
+  {
+    "id": "W003",
+    "url": "https://6sense.com/guides/how-genai-and-llms-are-changing-b2b-buyer-research-and-how-to-respond",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w003-6sense-com-how-genai-and-llms-are-changing-b2b-buyer-research-and-how-to-respond.md",
+    "sha256": "9c582664c759b7e97e7e05b53a8df2540ceffe722ad7b6960e34a7d3ad057863",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w003.json",
+    "staged_at": "2026-09-13T18:05:59.486657+00:00"
+  },
+  {
+    "id": "W004",
+    "url": "https://6sense.com/platform/predictive-analytics",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w004-6sense-com-predictive-analytics.md",
+    "sha256": "bf1c98b700a5ab8a2270ab4fba9664d5fbaf9457ee850f91b2e37cfcb828a54e",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w004.json",
+    "staged_at": "2026-09-13T18:05:59.490662+00:00"
+  },
+  {
+    "id": "W005",
+    "url": "https://6sense.com/science-of-b2b/buyer-experience-report-2025",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w005-6sense-com-buyer-experience-report-2025.md",
+    "sha256": "ffe92b75ff4162dbc8eba7285d9cda1b15fc25967c64c7b398b2583dbc1ba660",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w005.json",
+    "staged_at": "2026-09-13T18:05:59.494657+00:00"
+  },
+  {
+    "id": "W006",
+    "url": "https://about.fb.com/br/news/2025/02/impulsione-o-desempenho-da-sua-campanha-com-os-novos-recursos-de-ia-do-advantage-e-recomendacoes-testadas-e-comprovadas",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w006-about-fb-com-impulsione-o-desempenho-da-sua-campanha-com-os-novos-recursos-de-ia-do-advantage-e-reco.md",
+    "sha256": "08f2188e2ac7435a86842fbc486e60256047db1a31d720cd5bac11d3aa2ac8e8",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w006.json",
+    "staged_at": "2026-09-13T18:05:59.499660+00:00"
+  },
+  {
+    "id": "W008",
+    "url": "https://blog.google/products-and-platforms/products/search/ai-search-driving-more-queries-higher-quality-clicks",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w008-blog-google-ai-search-driving-more-queries-higher-quality-clicks.md",
+    "sha256": "3d8f6646f326670279a1de5edd7126c8513aaf1dad999d0a41d0912f7044948e",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w008.json",
+    "staged_at": "2026-09-13T18:05:59.503659+00:00"
+  },
+  {
+    "id": "W009",
+    "url": "https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w009-blogs-bing-com-introducing-ai-performance-in-bing-webmaster-tools-public-preview.md",
+    "sha256": "9443cb853f2d846a5f64a890f95ad28e69c71dced1ed2f58b687572639339d9f",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w009.json",
+    "staged_at": "2026-09-13T18:05:59.506660+00:00"
+  },
+  {
+    "id": "W010",
+    "url": "https://bombora.com/blog/7-types-of-intent-data",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w010-bombora-com-7-types-of-intent-data.md",
+    "sha256": "77dd8f380d51e66b44b988d194f759877a9ad491581085f4a4235495bd8fab04",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w010.json",
+    "staged_at": "2026-09-13T18:05:59.508663+00:00"
+  },
+  {
+    "id": "W011",
+    "url": "https://bombora.com/blog/demystifying-intent-data-myths-and-truths",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w011-bombora-com-demystifying-intent-data-myths-and-truths.md",
+    "sha256": "e6df8842210a3086bcc7b684bd331b63837c660352cd655639cc0dca1c1b46e3",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w011.json",
+    "staged_at": "2026-09-13T18:05:59.511664+00:00"
+  },
+  {
+    "id": "W012",
+    "url": "https://bombora.com/intent",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w012-bombora-com-intent.md",
+    "sha256": "ed171d1cbf28e44854fe611d335d8f56088bd0f26109063815e3e8e92ba31dfd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w012.json",
+    "staged_at": "2026-09-13T18:05:59.515658+00:00"
+  },
+  {
+    "id": "W013",
+    "url": "https://bombora.com/what-is-intent-data",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w013-bombora-com-what-is-intent-data.md",
+    "sha256": "8be5736057d9a3cd8941c8b278bbe15bf218b830472c81790c1c170bc200c2b1",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w013.json",
+    "staged_at": "2026-09-13T18:05:59.518690+00:00"
+  },
+  {
+    "id": "W014",
+    "url": "https://business.linkedin.com/advertise/ads/linkedin-audience-network",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w014-business-linkedin-com-linkedin-audience-network.md",
+    "sha256": "9b04b107844238e07089ce5884a29c0e82a474fd9d4eca0fc67045a3f5a27b6b",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w014.json",
+    "staged_at": "2026-09-13T18:05:59.530663+00:00"
+  },
+  {
+    "id": "W015",
+    "url": "https://business.linkedin.com/advertise/resources/b2b-institute/b2b-research/trends/95-5-rule",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w015-business-linkedin-com-95-5-rule.md",
+    "sha256": "051747f8321c6dff859a6fde1285f6724d1eefbddffc23b2ec6dd94aa60591c0",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w015.json",
+    "staged_at": "2026-09-13T18:05:59.533692+00:00"
+  },
+  {
+    "id": "W018",
+    "url": "https://customers.bombora.com/crc-brand/signals-beta",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w018-customers-bombora-com-signals-beta.md",
+    "sha256": "b447d3843cd6758fc45ec6b4a62b262f7822a1ef5c6a45798b5ba5d61c298acd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w018.json",
+    "staged_at": "2026-09-13T18:05:59.536663+00:00"
+  },
+  {
+    "id": "W019",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w019-developers-google-com-ai-features.md",
+    "sha256": "17551d96303765c2902f5b21b5d28bc1830cb6b6938afdbc4a9d41c585b3731b",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w019.json",
+    "staged_at": "2026-09-13T18:05:59.540661+00:00"
+  },
+  {
+    "id": "W020",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/organization",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w020-developers-google-com-organization.md",
+    "sha256": "df3ee9d384ebd158b4d4262b5a6489ad227f442c74b5ab7ecb09fe93e49e2364",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w020.json",
+    "staged_at": "2026-09-13T18:05:59.544658+00:00"
+  },
+  {
+    "id": "W021",
+    "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w021-developers-google-com-sd-policies.md",
+    "sha256": "6984422fb7159ff28c912b83020ad00c76096d6d5715c01951261ac6a887ff67",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w021.json",
+    "staged_at": "2026-09-13T18:05:59.549662+00:00"
+  },
+  {
+    "id": "W022",
+    "url": "https://developers.google.com/search/docs/appearance/video",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w022-developers-google-com-video.md",
+    "sha256": "3485e3f3935c7491a2fdb6ee4dddbf4d267a60344d5ee11a8df388cc8ede745a",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w022.json",
+    "staged_at": "2026-09-13T18:05:59.556662+00:00"
+  },
+  {
+    "id": "W023",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w023-developers-google-com-ai-optimization-guide.md",
+    "sha256": "dfbfd62c24f5699e3d891008c8bcbf01ab7c963e1780cc060a79af1457f086f2",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w023.json",
+    "staged_at": "2026-09-13T18:05:59.560657+00:00"
+  },
+  {
+    "id": "W024",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w024-developers-google-com-creating-helpful-content.md",
+    "sha256": "6783a3546fd4ae53b995960dd6b3ca9b19d38184fb35b07c5cafd128fd2687fe",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w024.json",
+    "staged_at": "2026-09-13T18:05:59.565662+00:00"
+  },
+  {
+    "id": "W025",
+    "url": "https://developers.google.com/tag-platform/tag-manager/server-side/api",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w025-developers-google-com-api.md",
+    "sha256": "a470c143e0164c0b9084380aba3b4e94b217cdda1a9c998b4a1dbc98d9d98b21",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w025.json",
+    "staged_at": "2026-09-13T18:05:59.574661+00:00"
+  },
+  {
+    "id": "W026",
+    "url": "https://developers.google.com/tag-platform/tag-manager/server-side/intro",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w026-developers-google-com-intro.md",
+    "sha256": "c20994f774d7f1f8d946358d9386c8b5f7f55c93cf985798a7cddfa7f19dcd19",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w026.json",
+    "staged_at": "2026-09-13T18:05:59.577663+00:00"
+  },
+  {
+    "id": "W027",
+    "url": "https://developers.openai.com/api/docs/bots",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w027-developers-openai-com-bots.md",
+    "sha256": "b91970acf3e14b00f89659ccad6edb940d2b51fe85ee624a903d88eb9e859087",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w027.json",
+    "staged_at": "2026-09-13T18:05:59.581659+00:00"
+  },
+  {
+    "id": "W028",
+    "url": "https://documentation.g2.com/docs/buyer-intent",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w028-documentation-g2-com-buyer-intent.md",
+    "sha256": "fbe2df6347c06d79c1d115297ae867d991104d25adecf3e76010b5ab281936c4",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w028.json",
+    "staged_at": "2026-09-13T18:05:59.592690+00:00"
+  },
+  {
+    "id": "W029",
+    "url": "https://doi.org/10.1108/JRIM-11-2020-0238",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w029-doi-org-jrim-11-2020-0238.md",
+    "sha256": "a151b5d9572cb9c6405123ec6b3454dcb1f6a199f42f49109b6414ab399cbb39",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w029.json",
+    "staged_at": "2026-09-13T18:05:59.598665+00:00"
+  },
+  {
+    "id": "W030",
+    "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w030-engineering-fb-com-meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine.md",
+    "sha256": "41407c9064c0d1ed4bade22f4311e84fac91a8053a9c3d67d5c109e00bc29108",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w030.json",
+    "staged_at": "2026-09-13T18:05:59.602663+00:00"
+  },
+  {
+    "id": "W032",
+    "url": "https://firstpagesage.com/reports/average-customer-acquisition-cost-cac-by-industry-b2b-edition-fc",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w032-firstpagesage-com-average-customer-acquisition-cost-cac-by-industry-b2b-edition-fc.md",
+    "sha256": "2e0366755a94d8db93e77ef8d9e873a484a36856e0038311e7926a4178d7d6ff",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w032.json",
+    "staged_at": "2026-09-13T18:05:59.610663+00:00"
+  },
+  {
+    "id": "W033",
+    "url": "https://help.openai.com/en/articles/12627856",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w033-help-openai-com-12627856.md",
+    "sha256": "c5a9f257742d7daa56ab2af45d2c04ac3a75655f5dc8cd4f0ccebe8741c60639",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w033.json",
+    "staged_at": "2026-09-13T18:05:59.614660+00:00"
+  },
+  {
+    "id": "W034",
+    "url": "https://help.salesforce.com/s/articleView?id=000340199&language=en_US&mode=1&type=1",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w034-help-salesforce-com-id-000340199-language-en-us-mode-1-type-1.md",
+    "sha256": "19f596207516fc2c9a93c70ec38f9f20b94ced6513d6a5a50e99e481b0c5a0f3",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w034.json",
+    "staged_at": "2026-09-13T18:05:59.622661+00:00"
+  },
+  {
+    "id": "W035",
+    "url": "https://journals.sagepub.com/doi/10.1177/00222437241256900",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w035-journals-sagepub-com-00222437241256900.md",
+    "sha256": "352cb1926da104a2510c15903ba229197df9ee28a7f91dcb16d5b2ad629cef22",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w035.json",
+    "staged_at": "2026-09-13T18:05:59.630659+00:00"
+  },
+  {
+    "id": "W036",
+    "url": "https://journals.sagepub.com/doi/10.1177/0956797611400616",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w036-journals-sagepub-com-0956797611400616.md",
+    "sha256": "5df302300276dedd2b84fb9874fa20c03a70e318b75c26a72cc753956767fc96",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w036.json",
+    "staged_at": "2026-09-13T18:05:59.636664+00:00"
+  },
+  {
+    "id": "W037",
+    "url": "https://journals.sagepub.com/doi/10.1509/jm.10.0047",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w037-journals-sagepub-com-jm-10-0047.md",
+    "sha256": "3610bf7ef21e50ae782fe360db5bf3699e59c608154fa5432c240e3cdad324df",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w037.json",
+    "staged_at": "2026-09-13T18:05:59.641660+00:00"
+  },
+  {
+    "id": "W038",
+    "url": "https://journals.sagepub.com/doi/10.1509/jmr.13.0483",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w038-journals-sagepub-com-jmr-13-0483.md",
+    "sha256": "c34cbb252ab9ee991605d654a8f8a29e1ed583f09cac9d06ae9e5b7d20066c65",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w038.json",
+    "staged_at": "2026-09-13T18:05:59.647659+00:00"
+  },
+  {
+    "id": "W039",
+    "url": "https://journals.sagepub.com/doi/10.1509/jmr.16.0163",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w039-journals-sagepub-com-jmr-16-0163.md",
+    "sha256": "8ecafe7e067b32381204adbe7a9012255d10e5e4f4e96f6f6faf11a239166c0c",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w039.json",
+    "staged_at": "2026-09-13T18:05:59.652658+00:00"
+  },
+  {
+    "id": "W040",
+    "url": "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/pricing-calculator",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w040-learn-microsoft-com-pricing-calculator.md",
+    "sha256": "b8128a8f68011062dba69a1f33d1228ae65b87a14bf2c9a3beff2cf41529b96a",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w040.json",
+    "staged_at": "2026-09-13T18:05:59.656658+00:00"
+  },
+  {
+    "id": "W041",
+    "url": "https://learn.microsoft.com/en-us/dynamics365/sales/qualify-lead-convert-opportunity-sales",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w041-learn-microsoft-com-qualify-lead-convert-opportunity-sales.md",
+    "sha256": "2f6c425f228db7391cfc81f398f15e6ca42c62843b0c2d7ebb35e744992ac94e",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w041.json",
+    "staged_at": "2026-09-13T18:05:59.660691+00:00"
+  },
+  {
+    "id": "W043",
+    "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w043-modelcontextprotocol-io-intro.md",
+    "sha256": "c072a4bb947552f4d2fbbca24e9509c812e12f0d4c00f66936d88a2b43df3a10",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w043.json",
+    "staged_at": "2026-09-13T18:05:59.666661+00:00"
+  },
+  {
+    "id": "W044",
+    "url": "https://openai.com/index/buy-it-in-chatgpt",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w044-openai-com-buy-it-in-chatgpt.md",
+    "sha256": "d7101db7bd9517dcc43c4dc05909506281e381548070ac18b20d49cee325aa08",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w044.json",
+    "staged_at": "2026-09-13T18:05:59.673657+00:00"
+  },
+  {
+    "id": "W045",
+    "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w045-openai-com-powering-product-discovery-in-chatgpt.md",
+    "sha256": "8b91cd13d7c7a5953ece6f374e347849491596598a0cc06ec8f6d2f0ee528a47",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w045.json",
+    "staged_at": "2026-09-13T18:05:59.685660+00:00"
+  },
+  {
+    "id": "W046",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10575496",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w046-pmc-ncbi-nlm-nih-gov-pmc10575496.md",
+    "sha256": "bf832903cedeb39b9c5b40ea8b95f8fd1f71780b97f8bb29ee0f5cc27019fdbd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w046.json",
+    "staged_at": "2026-09-13T18:05:59.691660+00:00"
+  },
+  {
+    "id": "W047",
+    "url": "https://revcity.6sense.com/home/discussion/1237/metric-monday-number-of-touches-buyers-have-with-vendors-on-their-short-lists",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w047-revcity-6sense-com-metric-monday-number-of-touches-buyers-have-with-vendors-on-their-short-lists.md",
+    "sha256": "2e56c2c4c36ccd2258364222f86812bf013fb7a3bc78869f67fd6688ef6ab952",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w047.json",
+    "staged_at": "2026-09-13T18:05:59.703659+00:00"
+  },
+  {
+    "id": "W109",
+    "url": "https://www.hbs.edu/ris/download.aspx?name=ascarza_jmr_18.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w109-www-hbs-edu-name-ascarza-jmr-18-pdf.pdf",
+    "sha256": "47e79a70df9884c15e305b3612f59cfea50988fb2437bfdf7a7c131564919e11",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w109.pdf",
+    "staged_at": "2026-09-13T18:07:25.535922+00:00"
+  },
+  {
+    "id": "W131",
+    "url": "https://www.mediaratingcouncil.org/sites/default/files/Standards/2024_IVT_Interim_Updates_FINAL.pdf",
+    "canonical_source": "raw/assets/abm-old-playbook-web-2026-09-13/w131-www-mediaratingcouncil-org-2024-ivt-interim-updates-final-pdf.pdf",
+    "sha256": "8d8fbf3c74eaa10a99cc9f89a70a61ad9c5f16f70f9dbeacca1e1c30d045f531",
+    "kind": "captured-pdf",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w131.pdf",
+    "staged_at": "2026-09-13T18:07:25.552628+00:00"
+  },
+  {
+    "id": "W049",
+    "url": "https://schema.org/Service",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w049-schema-org-service.md",
+    "sha256": "1ab0642e023972b13ec958bc1d59c47e1f0c545841fcde4479423ab6af315b8b",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w049.json",
+    "staged_at": "2026-09-13T18:09:47.950908+00:00"
+  },
+  {
+    "id": "W050",
+    "url": "https://sites0001.infolinks.com/press/study-86-percent-of-customers-suffer-from-banner-blindness",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w050-sites0001-infolinks-com-study-86-percent-of-customers-suffer-from-banner-blindness.md",
+    "sha256": "8f0d1b2269b11927457da6fe708ed1181d20e668274221b991d1d4fcedd300c4",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w050.json",
+    "staged_at": "2026-09-13T18:09:47.953909+00:00"
+  },
+  {
+    "id": "W051",
+    "url": "https://sites0001.infolinks.com/press/the-psychology-of-banner-blindness",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w051-sites0001-infolinks-com-the-psychology-of-banner-blindness.md",
+    "sha256": "7a795a4c8983bd10e3f7ed60fa485f00ad4f8226bce381b667fd079ade3836cb",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w051.json",
+    "staged_at": "2026-09-13T18:09:47.956883+00:00"
+  },
+  {
+    "id": "W053",
+    "url": "https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w053-sparktoro-com-2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-t.md",
+    "sha256": "500657f80dcbc8883ee95048ffcb50da820939a711aa92dcdb6c516a78b8e264",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w053.json",
+    "staged_at": "2026-09-13T18:09:47.959874+00:00"
+  },
+  {
+    "id": "W054",
+    "url": "https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w054-sparktoro-com-in-2026-less-than-one-third-of-google-searches-still-send-a-click.md",
+    "sha256": "95b744b03b2da66d29ef4d14327cc0b4a67bee2274f3d1cafba9243d4e224f47",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w054.json",
+    "staged_at": "2026-09-13T18:09:47.963874+00:00"
+  },
+  {
+    "id": "W055",
+    "url": "https://spideraf.com/articles/fraud-bots-what-they-are-how-they-drain-your-ad-budget-and-how-to-stop-them",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w055-spideraf-com-fraud-bots-what-they-are-how-they-drain-your-ad-budget-and-how-to-stop-them.md",
+    "sha256": "96b561441ea3b7c6f069e485d61bb4308409d7b33b0802750edddc56a5b9fedf",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w055.json",
+    "staged_at": "2026-09-13T18:09:47.966875+00:00"
+  },
+  {
+    "id": "W056",
+    "url": "https://spideraf.com/es/articles/tendencias-de-fraude-publicitario-en-2025-amenazas-clave-y-como-combatirlas",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w056-spideraf-com-tendencias-de-fraude-publicitario-en-2025-amenazas-clave-y-como-combatirlas.md",
+    "sha256": "17dcbced24af4b52f8fddb2725df34e3c23abaeb6b9934c4ad13c6f8cedf2642",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w056.json",
+    "staged_at": "2026-09-13T18:09:47.969875+00:00"
+  },
+  {
+    "id": "W057",
+    "url": "https://support.6sense.com/docs/6sense-product-glossary",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w057-support-6sense-com-6sense-product-glossary.md",
+    "sha256": "9d59267b5b0123c31de88cef2271106f00de17b581d570f24ce67c0dafab095e",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w057.json",
+    "staged_at": "2026-09-13T18:09:47.979875+00:00"
+  },
+  {
+    "id": "W058",
+    "url": "https://support.6sense.com/docs/6sense-qualified-accounts-6qas",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w058-support-6sense-com-6sense-qualified-accounts-6qas.md",
+    "sha256": "d8b7d020e868ec3aa3b773970758bdbcf9c31d076e53c6e4d807793a2ee648c2",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w058.json",
+    "staged_at": "2026-09-13T18:09:47.989874+00:00"
+  },
+  {
+    "id": "W059",
+    "url": "https://support.6sense.com/docs/custom-fields-for-predictive-score-orchestrations",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w059-support-6sense-com-custom-fields-for-predictive-score-orchestrations.md",
+    "sha256": "5b8626dda00a63c700b7d710c0663628862362bfb9f6ef473ec1879b6d8ffcaf",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w059.json",
+    "staged_at": "2026-09-13T18:09:47.998875+00:00"
+  },
+  {
+    "id": "W060",
+    "url": "https://support.6sense.com/docs/intent-model",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w060-support-6sense-com-intent-model.md",
+    "sha256": "3cb9d606df2380377b80a496a2cd180d8f12844b8c53f81a47bb115ff550f774",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w060.json",
+    "staged_at": "2026-09-13T18:09:48.005875+00:00"
+  },
+  {
+    "id": "W061",
+    "url": "https://support.6sense.com/docs/match-rates-vpns-and-firewalls",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w061-support-6sense-com-match-rates-vpns-and-firewalls.md",
+    "sha256": "3715659d1b128fc8ecad8b68a831feac09f6e0a68d5795130c922bf5ef8e5490",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w061.json",
+    "staged_at": "2026-09-13T18:09:48.013875+00:00"
+  },
+  {
+    "id": "W062",
+    "url": "https://support.6sense.com/docs/predictive-buying-stages",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w062-support-6sense-com-predictive-buying-stages.md",
+    "sha256": "ed8f03fb5bf1f60a8b9626a11424076c64e7f2b504fa50ac3bc8d66341dd19d0",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w062.json",
+    "staged_at": "2026-09-13T18:09:48.020874+00:00"
+  },
+  {
+    "id": "W063",
+    "url": "https://support.6sense.com/v1/docs/company-identification-api-faq",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w063-support-6sense-com-company-identification-api-faq.md",
+    "sha256": "4f83068b7b00f4ed002c2bc69aff100aea0b1c3967c4bfbc79006a8e14bc99c4",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w063.json",
+    "staged_at": "2026-09-13T18:09:48.030878+00:00"
+  },
+  {
+    "id": "W064",
+    "url": "https://support.google.com/analytics/answer/10596866",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w064-support-google-com-10596866.md",
+    "sha256": "5d742b406d9fcaad06be2d081c5bd4a61f1139774fa1bcda8cab2a3f9ed697f0",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w064.json",
+    "staged_at": "2026-09-13T18:09:48.042875+00:00"
+  },
+  {
+    "id": "W065",
+    "url": "https://support.google.com/analytics/answer/15258820?hl=en",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w065-support-google-com-15258820.md",
+    "sha256": "ca0ec43abbd103b11f02559fdda68f90cb209249e259c4e2dbc1be14bf7d1a0e",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w065.json",
+    "staged_at": "2026-09-13T18:09:48.053874+00:00"
+  },
+  {
+    "id": "W066",
+    "url": "https://support.google.com/google-ads/answer/11182074?hl=en",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w066-support-google-com-11182074.md",
+    "sha256": "8572ff2f353308a602cf18551d36201f039c6e27096ae0749cc7d22262dc2b0e",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w066.json",
+    "staged_at": "2026-09-13T18:09:48.064872+00:00"
+  },
+  {
+    "id": "W067",
+    "url": "https://support.google.com/google-ads/answer/2454071?hl=en-AU",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w067-support-google-com-2454071.md",
+    "sha256": "872ebe4d05aec92c78779c393e2345155196c8a17c0cbd990ede5655cb6c2cf6",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w067.json",
+    "staged_at": "2026-09-13T18:09:48.083875+00:00"
+  },
+  {
+    "id": "W068",
+    "url": "https://support.google.com/google-ads/answer/7029393?hl=en",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w068-support-google-com-7029393.md",
+    "sha256": "21ac94f1e28ce17c9b7e3096df839da713994a1da0b9767e9bea50b6b875d509",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w068.json",
+    "staged_at": "2026-09-13T18:09:48.096875+00:00"
+  },
+  {
+    "id": "W069",
+    "url": "https://support.google.com/webmasters/answer/16908024",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w069-support-google-com-16908024.md",
+    "sha256": "a77947d2eb6c3454a8231794072ad0bb0b7a82c9225dc568ce374743bf98c133",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w069.json",
+    "staged_at": "2026-09-13T18:09:48.107871+00:00"
+  },
+  {
+    "id": "W070",
+    "url": "https://support.google.com/webmasters/answer/16984139",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w070-support-google-com-16984139.md",
+    "sha256": "7180e17f7fc190f051721a3b117241a5a0111ce0ba84afab72faa252c26fa70c",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w070.json",
+    "staged_at": "2026-09-13T18:09:48.119890+00:00"
+  },
+  {
+    "id": "W072",
+    "url": "https://www.demandbase.com/faq/account-based-experience-101",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w072-www-demandbase-com-account-based-experience-101.md",
+    "sha256": "ede17968d291fdb10e15ccc15a753de9fe2fbdf5c6f5b934a62f8d9e90f164bd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w072.json",
+    "staged_at": "2026-09-13T18:09:48.122874+00:00"
+  },
+  {
+    "id": "W073",
+    "url": "https://www.demandbase.com/resources/playbook/account-journey-setup-best-practices",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w073-www-demandbase-com-account-journey-setup-best-practices.md",
+    "sha256": "0b9572c9b9ef9f7ff1b140d74d766efc7114fa0486698e93e152e8c120e333e1",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w073.json",
+    "staged_at": "2026-09-13T18:09:48.125875+00:00"
+  },
+  {
+    "id": "W074",
+    "url": "https://www.demandgenreport.com/resources/state-of-sales-acceleration-demand-for-customer-value-leads-to-account-mapping-uncovering-buying-intent/7787",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w074-www-demandgenreport-com-7787.md",
+    "sha256": "85ebc4d207ea952f034920e0f62aeb88d0c4052205692bcd0e526b2d0697c690",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w074.json",
+    "staged_at": "2026-09-13T18:09:48.127907+00:00"
+  },
+  {
+    "id": "W076",
+    "url": "https://www.facebook.com/business/help/273363992030035",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w076-www-facebook-com-273363992030035.md",
+    "sha256": "1fb9038c53f9f0534eab75fe8f06f34a4e57e3e33c0baa3ab185a50793f99ce2",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w076.json",
+    "staged_at": "2026-09-13T18:09:48.131908+00:00"
+  },
+  {
+    "id": "W077",
+    "url": "https://www.forrester.com/b2b-marketing/buying-group-roles",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w077-www-forrester-com-buying-group-roles.md",
+    "sha256": "a26a27781ddedd6d1d31e07abe598c64c8fff28c18cbaf313afcf0709756e9f2",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w077.json",
+    "staged_at": "2026-09-13T18:09:48.134874+00:00"
+  },
+  {
+    "id": "W078",
+    "url": "https://www.forrester.com/b2b-marketing/six-steps-to-buying-group-success",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w078-www-forrester-com-six-steps-to-buying-group-success.md",
+    "sha256": "5379f607a0c8be7f96f3a7c5e9938ad4c236f8c0add5f2e9f90d07bed8ec1ad2",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w078.json",
+    "staged_at": "2026-09-13T18:09:48.136874+00:00"
+  },
+  {
+    "id": "W079",
+    "url": "https://www.forrester.com/blogs/b2b-revenue-engine-alignment-a-cultural-transformation-that-begins-with-customer-obsession",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w079-www-forrester-com-b2b-revenue-engine-alignment-a-cultural-transformation-that-begins-with-customer-o.md",
+    "sha256": "90833c84dbb5bf2cbbc75bb25812218dde3190d2001618051dce638b606e25c7",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w079.json",
+    "staged_at": "2026-09-13T18:09:48.139873+00:00"
+  },
+  {
+    "id": "W080",
+    "url": "https://www.forrester.com/blogs/revenue-operations-nine-myths-and-two-realities",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w080-www-forrester-com-revenue-operations-nine-myths-and-two-realities.md",
+    "sha256": "4e1091ed47c5da01ad5553e923fe04f23e1bd49b19225e54f6bf90d32c22acff",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w080.json",
+    "staged_at": "2026-09-13T18:09:48.141910+00:00"
+  },
+  {
+    "id": "W081",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-accounts-buying-groups-opportunities-oh-my-how-is-it-all-connected",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w081-www-forrester-com-saying-goodbye-to-mqls-accounts-buying-groups-opportunities-oh-my-how-is-it-all-co.md",
+    "sha256": "8a5f5db58466b99af92d2e142db852bf174375ead1ddfc16d719df7fb34e06ca",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w081.json",
+    "staged_at": "2026-09-13T18:09:48.143874+00:00"
+  },
+  {
+    "id": "W082",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-how-does-the-buyers-journey-change-in-a-buying-groups-world",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w082-www-forrester-com-saying-goodbye-to-mqls-how-does-the-buyers-journey-change-in-a-buying-groups-world.md",
+    "sha256": "7086f2dc74117b1ed3e81e417172b970b45b00879bd7ff8623dd14bfad7763e2",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w082.json",
+    "staged_at": "2026-09-13T18:09:48.146874+00:00"
+  },
+  {
+    "id": "W083",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-sweet-and-no-sorrow",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w083-www-forrester-com-saying-goodbye-to-mqls-sweet-and-no-sorrow.md",
+    "sha256": "f2cb1fafc5ec549197fac99f12e0dba2baa6ac1a8806096f43b6fb4992453018",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w083.json",
+    "staged_at": "2026-09-13T18:09:48.148905+00:00"
+  },
+  {
+    "id": "W084",
+    "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-what-changes-in-the-rdr-function-when-we-move-to-buying-groups",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w084-www-forrester-com-saying-goodbye-to-mqls-what-changes-in-the-rdr-function-when-we-move-to-buying-gro.md",
+    "sha256": "b9e12cf54c2fad2843ba4e67c986cf8395921f6c1031a9c47f11c68db62ad756",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w084.json",
+    "staged_at": "2026-09-13T18:09:48.151903+00:00"
+  },
+  {
+    "id": "W085",
+    "url": "https://www.forrester.com/blogs/the-revenue-process-alignment-series-part-4-an-opportunity-centric-revenue-process-is-all-about-context",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w085-www-forrester-com-the-revenue-process-alignment-series-part-4-an-opportunity-centric-revenue-process.md",
+    "sha256": "ff432dbc2b8f4e51193de5791d1e790aa9083a3b64294db978d54a7303a7989c",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w085.json",
+    "staged_at": "2026-09-13T18:09:48.153871+00:00"
+  },
+  {
+    "id": "W086",
+    "url": "https://www.forrester.com/blogs/three-realities-about-b2b-buying-networks",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w086-www-forrester-com-three-realities-about-b2b-buying-networks.md",
+    "sha256": "aa44e1848ac440502fb53f1da152f6629af81bbd3b17bd556fa816c67c7229d1",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w086.json",
+    "staged_at": "2026-09-13T18:09:48.155872+00:00"
+  },
+  {
+    "id": "W087",
+    "url": "https://www.forrester.com/blogs/why-revenue-operations-revops-should-be-on-your-radar",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w087-www-forrester-com-why-revenue-operations-revops-should-be-on-your-radar.md",
+    "sha256": "34972bf53ac907589c3d656bef304d7f03fc90ecb88f2e1c28af513b88e6a5ea",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w087.json",
+    "staged_at": "2026-09-13T18:09:48.158872+00:00"
+  },
+  {
+    "id": "W088",
+    "url": "https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w088-www-forrester-com-forrester-2026-the-state-of-business-buying.md",
+    "sha256": "e15a2a7a8f8c41b5f65b83162a02a79bd3a005318491b19922355ac28e7967a8",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w088.json",
+    "staged_at": "2026-09-13T18:09:48.160871+00:00"
+  },
+  {
+    "id": "W089",
+    "url": "https://www.forrester.com/report/b2b-buyer-roles/RES173037?ref_search=3482829_1692110609219",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w089-www-forrester-com-res173037.md",
+    "sha256": "02941ca4f547f39285f751b7f05ac1cddf4ece2c7062c26144dfd052806a3987",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w089.json",
+    "staged_at": "2026-09-13T18:09:48.162871+00:00"
+  },
+  {
+    "id": "W090",
+    "url": "https://www.forrester.com/report/revenue-operations-success-requires-an-operating-model-not-just/RES180040",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w090-www-forrester-com-res180040.md",
+    "sha256": "e49480935f1e7bb1384dd7f1d54f2d3a28117921ad9be377edb728416192c274",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w090.json",
+    "staged_at": "2026-09-13T18:09:48.164872+00:00"
+  },
+  {
+    "id": "W091",
+    "url": "https://www.gartner.com/en/documents/5088931",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w091-www-gartner-com-5088931.md",
+    "sha256": "a9de85716523e30e596f87c22ae560235e7f9b027187ae331dc7417ed4c4c1fb",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w091.json",
+    "staged_at": "2026-09-13T18:09:48.167875+00:00"
+  },
+  {
+    "id": "W092",
+    "url": "https://www.gartner.com/en/documents/5381763",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w092-www-gartner-com-5381763.md",
+    "sha256": "a1fbf943aa7b1802c4a4f55697c150283db927e1c6c7e837f8a8cb60c92eec1b",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w092.json",
+    "staged_at": "2026-09-13T18:09:48.170874+00:00"
+  },
+  {
+    "id": "W093",
+    "url": "https://www.gartner.com/en/documents/5669155",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w093-www-gartner-com-5669155.md",
+    "sha256": "a1394d5cf21e150c62bfc89ef3ea366bc6a3117e13590fed30e99ab71c93dd3d",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w093.json",
+    "staged_at": "2026-09-13T18:09:48.173872+00:00"
+  },
+  {
+    "id": "W094",
+    "url": "https://www.gartner.com/en/documents/5990571",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w094-www-gartner-com-5990571.md",
+    "sha256": "276a0cce863e230f964ff85cac293d7e5342c1efa597f97e42ede9654b5371a3",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w094.json",
+    "staged_at": "2026-09-13T18:09:48.176871+00:00"
+  },
+  {
+    "id": "W095",
+    "url": "https://www.gartner.com/en/documents/6385743",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w095-www-gartner-com-6385743.md",
+    "sha256": "90bf1e9814ec7f9e4111d7c1827c2a7f2eab5408f508099321c924008153537f",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w095.json",
+    "staged_at": "2026-09-13T18:09:48.178871+00:00"
+  },
+  {
+    "id": "W096",
+    "url": "https://www.gartner.com/en/documents/6415075",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w096-www-gartner-com-6415075.md",
+    "sha256": "21757e95d9fcdf55f5aaff7da1a028b86069badd75f1c502a6f3e61c160f46ff",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w096.json",
+    "staged_at": "2026-09-13T18:09:48.181907+00:00"
+  },
+  {
+    "id": "W100",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w100-www-gartner-com-2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to.md",
+    "sha256": "7b171bf539299eb8646369f089628e023dbd23982cd29206298d53514d520fdd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w100.json",
+    "staged_at": "2026-09-13T18:09:48.188874+00:00"
+  },
+  {
+    "id": "W101",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-05-07-gartner-sales-survey-finds-74-percent-of-b2b-buyer-teams-demonstrate-unhealthy-conflict-during-the-decision-process",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w101-www-gartner-com-2025-05-07-gartner-sales-survey-finds-74-percent-of-b2b-buyer-teams-demonstrate-unhe.md",
+    "sha256": "42d7d88cc427a745739bbe254d02b9898a3119fdb93da6a3f2594fe72e973c51",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w101.json",
+    "staged_at": "2026-09-13T18:09:48.192873+00:00"
+  },
+  {
+    "id": "W102",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-sales-survey-finds-61-percent-of-b2b-buyers-prefer-a-rep-free-buying-experience",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w102-www-gartner-com-2025-06-25-gartner-sales-survey-finds-61-percent-of-b2b-buyers-prefer-a-rep-free-buy.md",
+    "sha256": "3dc8c247c106e47ce35b687f076cadb50770b7b9138b014d98d04a8dd2107301",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w102.json",
+    "staged_at": "2026-09-13T18:09:48.196873+00:00"
+  },
+  {
+    "id": "W103",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-25-gartner-says-by-2030-that-75-percent-of-b2b-buyers-will-prefer-sales-experiences-that-prioritize-human-interaction-over-ai",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w103-www-gartner-com-2025-08-25-gartner-says-by-2030-that-75-percent-of-b2b-buyers-will-prefer-sales-expe.md",
+    "sha256": "203ca12676a989cb65282bc8a20a1e0bd8bf7c3d436c095fac9352a0381891bf",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w103.json",
+    "staged_at": "2026-09-13T18:09:48.200873+00:00"
+  },
+  {
+    "id": "W104",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w104-www-gartner-com-2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-exp.md",
+    "sha256": "881fcaa49954dff62e9df2d07308c9985c46b8cb104ca99379d6d687fa837610",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w104.json",
+    "staged_at": "2026-09-13T18:09:48.204874+00:00"
+  },
+  {
+    "id": "W105",
+    "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w105-www-gartner-com-b2b-buying-journey.md",
+    "sha256": "e968a615ba088593164e15d1943101d66ac96667f2ac90616cd1f04da654ebe3",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w105.json",
+    "staged_at": "2026-09-13T18:09:48.209873+00:00"
+  },
+  {
+    "id": "W106",
+    "url": "https://www.gartner.com/en/sales/topics/sales-enablement",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w106-www-gartner-com-sales-enablement.md",
+    "sha256": "04ba139b3777970b8cbbf9baacfeac37d629f16d5338cd1deb6e5d98c58f4d0d",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w106.json",
+    "staged_at": "2026-09-13T18:09:48.214875+00:00"
+  },
+  {
+    "id": "W107",
+    "url": "https://www.gong.io/blog/lou-wolf-the-1-signal-a-deal-wont-close",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w107-www-gong-io-lou-wolf-the-1-signal-a-deal-wont-close.md",
+    "sha256": "0761f713e3cea67a1dbc3a3ad24c6939991047895fc7af7d9e202cf4a30054fa",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w107.json",
+    "staged_at": "2026-09-13T18:09:48.217874+00:00"
+  },
+  {
+    "id": "W108",
+    "url": "https://www.gong.io/resources/guides/the-data-backed-guide-to-multi-threading-and-team-selling",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w108-www-gong-io-the-data-backed-guide-to-multi-threading-and-team-selling.md",
+    "sha256": "87433a9ee47ab4e3c3be0678fb6109694d2f48a39d101c3307c6fbce57ff48ce",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w108.json",
+    "staged_at": "2026-09-13T18:09:48.220873+00:00"
+  },
+  {
+    "id": "W110",
+    "url": "https://www.highspot.com/en-gb/product/digital-sales-rooms",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w110-www-highspot-com-digital-sales-rooms.md",
+    "sha256": "e16e6dd0538c9e7eab3db656e5692777be2da419510cc61d87ca2bd2298e128b",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w110.json",
+    "staged_at": "2026-09-13T18:09:48.223873+00:00"
+  },
+  {
+    "id": "W111",
+    "url": "https://www.highspot.com/en-gb/solutions/sales-enablement",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w111-www-highspot-com-sales-enablement.md",
+    "sha256": "a609261d694a1b855c68c9ec4e2f2fac9303b6490f89daa71f733c74ee740bf8",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w111.json",
+    "staged_at": "2026-09-13T18:09:48.226873+00:00"
+  },
+  {
+    "id": "W112",
+    "url": "https://www.humansecurity.com/newsroom/human-disrupts-sophisticated-mobile-app-fraud-scheme-slopads",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w112-www-humansecurity-com-human-disrupts-sophisticated-mobile-app-fraud-scheme-slopads.md",
+    "sha256": "d8eb4279ccba31043ea694e66a1d84e3892dc22d59b5a6c1dfc299ec8aadd96f",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w112.json",
+    "staged_at": "2026-09-13T18:09:48.228874+00:00"
+  },
+  {
+    "id": "W113",
+    "url": "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w113-www-imperva-com-bad-bot-report-2026-bots-agentic-age.md",
+    "sha256": "36d8d890a328b08cbad4008bc52ecea098c9b5768feba47443d1d8276c56ecf9",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w113.json",
+    "staged_at": "2026-09-13T18:09:48.231873+00:00"
+  },
+  {
+    "id": "W114",
+    "url": "https://www.indexnow.org/faq",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w114-www-indexnow-org-faq.md",
+    "sha256": "3f140759795be3868d3affe66193ec000b1e034d011bf3b682da9de4018af224",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w114.json",
+    "staged_at": "2026-09-13T18:09:48.233874+00:00"
+  },
+  {
+    "id": "W115",
+    "url": "https://www.jolteffect.com",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w115-www-jolteffect-com-www-jolteffect-com.md",
+    "sha256": "434c2da091d82b96d69e3ebf51f4591a2d679cce7cca309b2daf682815b33b9f",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w115.json",
+    "staged_at": "2026-09-13T18:09:48.236873+00:00"
+  },
+  {
+    "id": "W116",
+    "url": "https://www.jolteffect.com/resources",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w116-www-jolteffect-com-resources.md",
+    "sha256": "ae021f2755ded21e67b4a658fa181d7c909a2933195fb5425f23ed3f13a2cc7a",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w116.json",
+    "staged_at": "2026-09-13T18:09:48.238874+00:00"
+  },
+  {
+    "id": "W126",
+    "url": "https://www.lunio.ai/2026-global-invalid-traffic-report",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w126-www-lunio-ai-2026-global-invalid-traffic-report.md",
+    "sha256": "2af33d889b03181ebb28ea534ec6332e652f5b7ec137a6471c10cd9a3a2a84a6",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w126.json",
+    "staged_at": "2026-09-13T18:13:41.592033+00:00"
+  },
+  {
+    "id": "W127",
+    "url": "https://www.lunio.ai/blog/ai-max-invalid-traffic-rates",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w127-www-lunio-ai-ai-max-invalid-traffic-rates.md",
+    "sha256": "603aa739f5fa623b4504074b74b82a9093a91fdf9486c08e087c2020f6b2c717",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w127.json",
+    "staged_at": "2026-09-13T18:13:41.598047+00:00"
+  },
+  {
+    "id": "W128",
+    "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w128-www-mckinsey-com-five-fundamental-truths-how-b2b-winners-keep-growing.md",
+    "sha256": "eabfb814d0294f62f8e0d6f9ff52d968fac92860f19c9879c3776a4c2bc9bfd9",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w128.json",
+    "staged_at": "2026-09-13T18:13:41.611051+00:00"
+  },
+  {
+    "id": "W129",
+    "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-surprising-economics-of-b2b-growth-the-new-survival-threshold-and-what-it-takes-to-thrive",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w129-www-mckinsey-com-the-surprising-economics-of-b2b-growth-the-new-survival-threshold-and-what-it-takes.md",
+    "sha256": "a2085dd88ffac05487d130faa2df677daa3e586b8b61b44b08afd2c40968a08a",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w129.json",
+    "staged_at": "2026-09-13T18:13:41.626033+00:00"
+  },
+  {
+    "id": "W130",
+    "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/focusing-your-m-and-a-team-on-revenue-growth",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w130-www-mckinsey-com-focusing-your-m-and-a-team-on-revenue-growth.md",
+    "sha256": "94c46aeb2acc67485872a428908d3ebab998557203b859929a74392bc0ee3699",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w130.json",
+    "staged_at": "2026-09-13T18:13:41.634034+00:00"
+  },
+  {
+    "id": "W132",
+    "url": "https://www.mediaratingcouncil.org/standards-and-guidelines",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w132-www-mediaratingcouncil-org-standards-and-guidelines.md",
+    "sha256": "782f9e2c07e4cb38a1e7d049901e1ae265f8740739c7ec99eb2a018154c75690",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w132.json",
+    "staged_at": "2026-09-13T18:13:41.636069+00:00"
+  },
+  {
+    "id": "W133",
+    "url": "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w133-www-nngroup-com-banner-blindness-old-and-new-findings.md",
+    "sha256": "5382b78470859d446f12814835c9dee7ad6207835ecbfb9c7da5bf3c9ab203d6",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w133.json",
+    "staged_at": "2026-09-13T18:13:41.641034+00:00"
+  },
+  {
+    "id": "W134",
+    "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w134-www-pewresearch-org-google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the.md",
+    "sha256": "82e2a4d673fa5d69e24bc80b40016372d9ea26e2bc16f28888308d30b0e724d5",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w134.json",
+    "staged_at": "2026-09-13T18:13:41.646030+00:00"
+  },
+  {
+    "id": "W135",
+    "url": "https://www.raconteur.net/marketing-sales/how-to-change-indecisive-customers-into-buyers",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w135-www-raconteur-net-how-to-change-indecisive-customers-into-buyers.md",
+    "sha256": "d8c48bf70dd368ade9aef81f6493b08f93f1eb502319f79afee99b0f43ca4cef",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w135.json",
+    "staged_at": "2026-09-13T18:13:41.648031+00:00"
+  },
+  {
+    "id": "W136",
+    "url": "https://www.salesforce.com/blog/sales/demand-generation-vs-lead-generation",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w136-www-salesforce-com-demand-generation-vs-lead-generation.md",
+    "sha256": "3ea488cc9f1963679db751f6e71608d02620bde571d6c191e1cc00aefcf25908",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w136.json",
+    "staged_at": "2026-09-13T18:13:41.657032+00:00"
+  },
+  {
+    "id": "W137",
+    "url": "https://www.salesforce.com/blog/sales/sales-velocity",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w137-www-salesforce-com-sales-velocity.md",
+    "sha256": "5cd8dbe93cf63badc5f809824d4f20de7baf48cbd80d98aa2ac9a928a73ac140",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w137.json",
+    "staged_at": "2026-09-13T18:13:41.665048+00:00"
+  },
+  {
+    "id": "W138",
+    "url": "https://www.salesforce.com/marketing/what-is-demand-generation-marketing?bc=OTH",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w138-www-salesforce-com-what-is-demand-generation-marketing.md",
+    "sha256": "2c35593133917ea308f545cc7c297930c0480cde795d69568f41ac4619c57b1b",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w138.json",
+    "staged_at": "2026-09-13T18:13:41.672534+00:00"
+  },
+  {
+    "id": "W139",
+    "url": "https://www.salesforce.com/sales/win-rate",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w139-www-salesforce-com-win-rate.md",
+    "sha256": "b6545ade8a069779c8ed35253e762d6e2947ad6f8376de4f2c47bc06305531f9",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w139.json",
+    "staged_at": "2026-09-13T18:13:41.680050+00:00"
+  },
+  {
+    "id": "W140",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2040712221000542",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w140-www-sciencedirect-com-s2040712221000542.md",
+    "sha256": "09becbb5ce570b3d6e40a9d0c39223e1b28643cc3c83bb1335f5bec33e112844",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w140.json",
+    "staged_at": "2026-09-13T18:13:41.682050+00:00"
+  },
+  {
+    "id": "W141",
+    "url": "https://www.sei.org/publications/air-pollutants-emissions-methodology-for-the-logistics-sector",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w141-www-sei-org-air-pollutants-emissions-methodology-for-the-logistics-sector.md",
+    "sha256": "62e5cf009d777841db4953837a84a5de49fbc4cec6fa24f12e16d53d38c99a42",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w141.json",
+    "staged_at": "2026-09-13T18:13:41.685568+00:00"
+  },
+  {
+    "id": "W142",
+    "url": "https://www.seismic.com/platform/digital-sales-rooms",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w142-www-seismic-com-digital-sales-rooms.md",
+    "sha256": "b5b78320e8ecb4dad36526e2c4a1d87f9742f1a2efba794a2271ae553f16b286",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w142.json",
+    "staged_at": "2026-09-13T18:13:41.692578+00:00"
+  },
+  {
+    "id": "W143",
+    "url": "https://www.smartinsights.com/internet-advertising/internet-advertising-analytics/display-advertising-clickthrough-rates",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w143-www-smartinsights-com-display-advertising-clickthrough-rates.md",
+    "sha256": "e25f51c8318f06d8b24a41f936a45f32b553c33d5e58fda0296b41f17b7ace74",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w143.json",
+    "staged_at": "2026-09-13T18:13:41.695090+00:00"
+  },
+  {
+    "id": "W145",
+    "url": "https://www.thequota.co/articles/an-interview-with-mathew-dixon-author-of-the-challenger-sale-and-the-jolt-effect",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w145-www-thequota-co-an-interview-with-mathew-dixon-author-of-the-challenger-sale-and-the-jolt-effect.md",
+    "sha256": "75667cc7dfcdf35a343262f701eef434ae2e539b53e412fbc8b982c7ddf9c485",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w145.json",
+    "staged_at": "2026-09-13T18:13:41.702094+00:00"
+  },
+  {
+    "id": "W097",
+    "url": "https://www.gartner.com/en/documents/6909166",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w097-www-gartner-com-6909166.md",
+    "sha256": "eb1a9647207c7b0fd1c1d3036ed7822c9e75ee16952b712decb4a7eae3bb242c",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w097.json",
+    "staged_at": "2026-09-13T18:16:27.250731+00:00"
+  },
+  {
+    "id": "W098",
+    "url": "https://www.gartner.com/en/documents/7925209",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w098-www-gartner-com-7925209.md",
+    "sha256": "8b751b43e4125c3aceef919429b9f42a41623bec932d4377321f71b78e4bb6f3",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w098.json",
+    "staged_at": "2026-09-13T18:16:27.253729+00:00"
+  },
+  {
+    "id": "W099",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w099-www-gartner-com-2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-thei.md",
+    "sha256": "c45fcfdd8836c3ac536a7e062842a29d3534cf302a284c308dc83cfee90a50aa",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w099.json",
+    "staged_at": "2026-09-13T18:16:27.257344+00:00"
+  },
+  {
+    "id": "W117",
+    "url": "https://www.linkedin.com/business/marketing/blog/linkedin-ads/a-b2b-marketers-guide-to-every-linkedin-ad-type",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w117-www-linkedin-com-a-b2b-marketers-guide-to-every-linkedin-ad-type.md",
+    "sha256": "ba81d29361fe525f90fa7f6c6095ba6d26a98601e7d50ed222ff25b753e2c1dd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w117.json",
+    "staged_at": "2026-09-13T18:16:27.260308+00:00"
+  },
+  {
+    "id": "W118",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a417950/audience-targeting-for-linkedin-ads-best-practices?lang=en",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w118-www-linkedin-com-audience-targeting-for-linkedin-ads-best-practices.md",
+    "sha256": "19f2daab093c6dba40ef7adf88c029a0d9fa7a28f2c7b597658dc98d523ccb8a",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w118.json",
+    "staged_at": "2026-09-13T18:16:27.263319+00:00"
+  },
+  {
+    "id": "W119",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a418929/audience-expansion-overview",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w119-www-linkedin-com-audience-expansion-overview.md",
+    "sha256": "b0d2082878c91616907ed6c18b1229de7339c3361fbed992eaa13c6c06fd81cc",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w119.json",
+    "staged_at": "2026-09-13T18:16:27.264308+00:00"
+  },
+  {
+    "id": "W120",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a422337",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w120-www-linkedin-com-a422337.md",
+    "sha256": "d6cd463c872b460d3dbd0f5b34764975bec13c53031d17acdbdac0697c1f1f51",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w120.json",
+    "staged_at": "2026-09-13T18:16:27.266826+00:00"
+  },
+  {
+    "id": "W121",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a422485",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w121-www-linkedin-com-a422485.md",
+    "sha256": "43d808eeeaef87b6d314a4604b71c7bb25cf98657041f39b389f513318c97d90",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w121.json",
+    "staged_at": "2026-09-13T18:16:27.267820+00:00"
+  },
+  {
+    "id": "W122",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a424655/targeting-options-and-best-practices-for-linkedin-advertisements?lang=en",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w122-www-linkedin-com-targeting-options-and-best-practices-for-linkedin-advertisements.md",
+    "sha256": "1ee3cb66bf703bb49357cb3871c21c98d4db70683d6bfe9bd944887d76a229c1",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w122.json",
+    "staged_at": "2026-09-13T18:16:27.270822+00:00"
+  },
+  {
+    "id": "W123",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a452426",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w123-www-linkedin-com-a452426.md",
+    "sha256": "25e9893207f4bea01425595123ac7f9c88a2e81b758ca7bb4c0aa45ff122aefd",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w123.json",
+    "staged_at": "2026-09-13T18:16:27.272818+00:00"
+  },
+  {
+    "id": "W124",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a785504",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w124-www-linkedin-com-a785504.md",
+    "sha256": "43f6b09097aaa874bd402ba7556601f31a2b9f432d35e615115875b67227c883",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w124.json",
+    "staged_at": "2026-09-13T18:16:27.273819+00:00"
+  },
+  {
+    "id": "W125",
+    "url": "https://www.linkedin.com/help/lms/answer/a6862237",
+    "canonical_source": "raw/imports/abm-old-playbook-web-2026-09-13/w125-www-linkedin-com-a6862237.md",
+    "sha256": "ab05f52e8ca110f3985cc447684eb32aa98e584c1740883995cbb95b7e5f02a6",
+    "kind": "captured-web",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w125.json",
+    "staged_at": "2026-09-13T18:16:27.276361+00:00"
+  }
+]

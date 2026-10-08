@@ -1,0 +1,17 @@
+{
+  "id": "W136",
+  "url": "https://www.salesforce.com/blog/sales/demand-generation-vs-lead-generation",
+  "research_briefs": [
+    "t03-lead-to-demand.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:07.810265+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w136.json",
+  "title": "Demand Generation vs. Lead Generation | Salesforce",
+  "final_url": "https://www.salesforce.com/blog/sales/demand-generation-vs-lead-generation/",
+  "characters": 36819,
+  "sha256": "1175fb6be385a279a6740a08578ea0db776550c9edaf1b7996a58c89636c316c",
+  "http_status": 200
+}

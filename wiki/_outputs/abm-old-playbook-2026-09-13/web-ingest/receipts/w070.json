@@ -1,0 +1,19 @@
+{
+  "id": "W070",
+  "url": "https://support.google.com/webmasters/answer/16984139",
+  "research_briefs": [
+    "quality-review.md",
+    "s03-aeo.md",
+    "t05-seo-to-entity.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:00:30.382368+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w070.json",
+  "title": "Generative AI performance report (Search) - Search Console Help",
+  "final_url": "https://support.google.com/webmasters/answer/16984139",
+  "characters": 8851,
+  "sha256": "9ca0b3203683601cbf2c370bfc57d432e438fae67a78c307481b8fe4dca49bba",
+  "http_status": 200
+}

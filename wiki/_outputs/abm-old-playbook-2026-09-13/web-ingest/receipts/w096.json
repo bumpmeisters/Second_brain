@@ -1,0 +1,17 @@
+{
+  "id": "W096",
+  "url": "https://www.gartner.com/en/documents/6415075",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:02:59.372560+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w096.json",
+  "title": "Case Study: Digital Sales Rooms for Faster Sales Cycles",
+  "final_url": "https://www.gartner.com/en/documents/6415075",
+  "characters": 7290,
+  "sha256": "0a164a13e8acc1e070c9a066a23313914a649a2691762dc7d63a25407d5f7ce3",
+  "http_status": 200
+}

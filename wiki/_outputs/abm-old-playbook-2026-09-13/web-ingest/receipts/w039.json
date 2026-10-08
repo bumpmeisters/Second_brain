@@ -1,0 +1,17 @@
+{
+  "id": "W039",
+  "url": "https://journals.sagepub.com/doi/10.1509/jmr.16.0163",
+  "research_briefs": [
+    "s01-abx.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:55:27.024501+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w039.json",
+  "title": "Retention Futility: Targeting High-Risk Customers Might be Ineffective - Eva Ascarza, 2018 ",
+  "final_url": "https://journals.sagepub.com/doi/10.1509/jmr.16.0163",
+  "characters": 53678,
+  "sha256": "e653a35a04b97ea03d3935cea7bb8894df6132511fc75a0be824228f63a91c8f",
+  "http_status": 200
+}

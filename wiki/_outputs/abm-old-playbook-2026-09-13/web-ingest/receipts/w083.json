@@ -1,0 +1,17 @@
+{
+  "id": "W083",
+  "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-sweet-and-no-sorrow",
+  "research_briefs": [
+    "f04-mql-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:41.961420+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w083.json",
+  "title": "Saying Goodbye To MQLs: A Parting That Is All Sweet And No Sorrow",
+  "final_url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-sweet-and-no-sorrow/",
+  "characters": 12676,
+  "sha256": "5e0cc19a33f29ede55886fd270aad70d5ca83e64a30168c1f1ec2359bc404726",
+  "http_status": 200
+}

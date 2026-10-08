@@ -1,0 +1,15 @@
+{
+  "project_id": "violet",
+  "reviewed": true,
+  "reviewer": "fixture-source-selector",
+  "sources": [
+    {
+      "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-smoke-20260909\\violet\\originals\\record-2025.txt",
+      "sha256": "82e02ddceb0463d96ccdf5bc6838543582414de65281c61abd223cae2af145b2",
+      "entity_ids": [
+        "violet-fictional-group"
+      ],
+      "selection_status": "approved-for-project-review"
+    }
+  ]
+}

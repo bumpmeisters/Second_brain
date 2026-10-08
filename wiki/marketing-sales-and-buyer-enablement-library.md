@@ -15,7 +15,7 @@ sources:
   - raw/Clippings/How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md
   - raw/imports/root-clippings-2026-08-01/Untitled 2.md
 created: 2026-06-05
-updated: 2026-08-01
+updated: 2026-09-21
 ---
 
 # Marketing Sales and Buyer Enablement Library
@@ -101,6 +101,19 @@ Seller rejection is another evidence stream, but it is not automatically ground 
 - [[customer-maturity-progression-contract]]
 - [[observable-capability-teach-back-loop]]
 - [[qualification-rejection-reason-calibration-loop]]
+
+## Resource dependence and channel alternatives
+
+When considering channels or partners, identify which resources and access a dominant relationship controls, how dependent the parties are, and which alternatives are realistically viable. Distinguish adding contacts from changing dependence. Strong buyer relationships may still be an important growth source, so diversification is not an automatic reason to avoid large customers.
+
+Australian food-supply interviews and Irish craft-food/drink relationship research support this context-bounded lens. The latter suggests that social media may open alternative relationships without changing a dominant partner's power. Transfer to other B2B sectors is an untested inference, not a demonstrated channel effect or quantified threshold.
+
+For the distinct question of scaling an outcome-based offer, use [[outcome-based-service-scaling-assessment]].
+
+Source and review boundary (P58-C10, user-approved 2026-09-21):
+
+- `raw/assets/Exploring-the-intensity-of-power-asymmetry-in-food-sup_2026_Industrial-Marke.pdf` — [[food-supply-power-source-review-2026-09-21]].
+- `raw/assets/Swipe--like--connect--A-typology-for-strategic-short-term_2026_Industrial-Ma.pdf` — [[short-term-b2b-relationships-source-review-2026-09-21]].
 
 ## Related pages
 

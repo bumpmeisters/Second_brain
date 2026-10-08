@@ -47,8 +47,11 @@ node_modules/
 /inbox/_quarantine/*
 !/inbox/_quarantine/.gitkeep
 
-# Private derived newsletter state (mail bodies remain in Gmail)
-wiki/_outputs/newsletter-intelligence/
+# Private derived newsletter state (mail bodies remain in Gmail).
+# Keep the two bounded authority registries durable; all other newsletter output stays local.
+wiki/_outputs/newsletter-intelligence/*
+!wiki/_outputs/newsletter-intelligence/source-registry.json
+!wiki/_outputs/newsletter-intelligence/identity-registry.json
 wiki/_outputs/youtube-intelligence/
 .shopify-cli-appdata/
 
@@ -73,3 +76,6 @@ wiki/_outputs/recovery-manifest/private/
 
 # Local Firecrawl research cache
 .firecrawl/
+
+# Immutable external repository source trees; dossiers and manifests remain versionable.
+/repositories/*/snapshots/

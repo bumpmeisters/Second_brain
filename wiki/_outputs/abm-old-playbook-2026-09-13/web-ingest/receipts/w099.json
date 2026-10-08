@@ -1,0 +1,17 @@
+{
+  "id": "W099",
+  "url": "https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025",
+  "research_briefs": [
+    "f09-zero-click.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:03:19.361637+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w099.json",
+  "title": " Gartner Predicts 50% of Consumers Will Significantly Limit Their Interactions with Social Media by 2025",
+  "final_url": "https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025",
+  "characters": 11347,
+  "sha256": "53cdfaa9697aec944f726f7a918ad3dfa92069c3b300aeb986e01cc68e5aba2f",
+  "http_status": 200
+}

@@ -3,9 +3,9 @@ framework: category-entry-point-demand-situations
 domain: segmentation
 type: adapted
 status: draft
-version: 0.1.0
+version: 0.1.1
 created: 2026-06-19
-updated: 2026-06-19
+updated: 2026-09-14
 source-confidence: medium
 ---
 
@@ -100,10 +100,18 @@ Draft pending stronger primary-source reconstruction and application.
 
 Revise after first association study or when B2B event adaptation is tested.
 
+## P57: genehmigte Quellen- und Schnittstellenpräzisierung
+
+[Romaniuk 2022](https://marketingscience.info/news-and-insights/category-entry-points-in-a-business-to-business-b2b-world) behandelt Einstiegssituationen als Gedächtnis-/Kaufhinweise, nicht als Kundensegmente. Die drei C heißen Credibility, Competitiveness und Commonality; letztere berücksichtigt Häufigkeit und wirtschaftliche Bedeutung. Das ist keine Multiplikationsformel.
+
+Die Segmentierungsverwendung bleibt project adaptation. Interviews, Suchdaten und Vertriebsbeobachtungen liefern Hinweise, ersetzen aber keine Käufermessung von Markenassoziationen. Kennzahlen brauchen Zähler, Nenner, Stichprobe und Zeitraum. Keine universelle ±5-Prozentpunkte-Regel, kein widersprüchliches Beispiel als Testfixture. Under-owned bleibt ohne Vergleichsmessung eine Hypothese. Anschluss: [[distinctive-brand-assets-analysis]].
+
+Auditspur: (source: research/2026-09-14-framework-source-verification-p57.md), sekundäre Prüfungszusammenstellung; [[_outputs/semantic-ingest/p57/source-bundle]].
+
 ## Sources And Provenance
 
 Source tradition: Ehrenberg-Bass Institute, Byron Sharp, Jenni Romaniuk.
 
-Project source:
+Project provenance:
 
-- `wiki/_outputs/project-framework-inventory-2026-06-19.md`
+- (source: projects/No and low code_1st Marketing Agent/wiki/_outputs/project-framework-inventory-2026-06-19.md)

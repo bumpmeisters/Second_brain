@@ -7,7 +7,7 @@ canonical_id: publication-32289c399cc723f3
 sources:
   - wiki/_outputs/newsletter-intelligence/identity-registry.json
 created: 2026-07-06
-updated: 2026-08-14
+updated: 2026-09-10
 ---
 
 # ben's bites
@@ -70,10 +70,12 @@ This dossier currently represents one sender-derived profile. Its identity remai
 ## Aggregated signal ledger
 
 - **2026-08-14 — Agent-session verification and recovery**: A reviewed practitioner postmortem supports explicit plan review, behavioral acceptance criteria, real-environment end-to-end testing, durable compaction handoffs, and exact-version checks. Evidence remains anecdotal and does not validate product or productivity claims (source: [[agent-session-verification-postmortem-2026-08-14]]; issue-19fdc4e8109fcf6f).
+- **2026-09-10 — Reproducible runtime identity**: The Fable 5.1 family supports separating cache pricing, quota, routing, output growth, and accepted-task cost. Product quality and savings claims remain unverified (source: [[agent-runtime-identity-source-family-2026-09-10]]).
 
 ## Linked-source analyses
 
 - [[agent-session-verification-postmortem-2026-08-14]] - Failure-aware field evidence for plan review, end-to-end verification, compaction handoffs, and exact-version testing.
+- [[agent-runtime-identity-source-family-2026-09-10]] - Fable-family contribution to runtime-aware cost and safety-availability evaluation.
 
 ## Feedback and corrections
 

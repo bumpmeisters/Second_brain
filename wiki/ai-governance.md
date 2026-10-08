@@ -9,8 +9,9 @@ sources:
   - https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
   - https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10
   - https://www.iso.org/standard/42001
+  - wiki/newsletters/ainauten/linked-sources/anthropic-agent-incident-assessment-source-review-2026-09-14.md
 created: 2026-07-01
-updated: 2026-07-01
+updated: 2026-09-14
 ---
 
 # AI Governance
@@ -144,6 +145,8 @@ An agent incident runbook should support:
 8. add the failure to evaluations and update controls.
 
 IMDA recommends real-time intervention, trace-based debugging, regular audit, failsafes, fallback, and continuous post-deployment testing ([IMDA, pp. 42–44](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf)). For EU high-risk AI systems, serious-incident reporting obligations and deadlines can apply under Article 73; applicability depends on the system, role, jurisdiction, and facts ([EU AI Act](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A32024R1689)).
+
+For rare agent incidents, the governance record should also preserve the evaluation denominator, model and environment versions, scope and egress configuration, escalation pipeline, observed actions, replay conditions, safeguard changes, residual rates, and status of independent investigation. First-party investigation can establish what a vendor reports about its own process, but it cannot independently establish prevalence, production safety, or cross-company policy (source: [[anthropic-agent-incident-assessment-source-review-2026-09-14]]; corroborating first-party evidence).
 
 ## Third-party agents, tools, and protocols
 

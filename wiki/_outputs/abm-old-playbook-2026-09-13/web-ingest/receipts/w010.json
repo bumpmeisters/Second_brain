@@ -1,0 +1,17 @@
+{
+  "id": "W010",
+  "url": "https://bombora.com/blog/7-types-of-intent-data",
+  "research_briefs": [
+    "t01-identity-to-intent.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:53:57.963598+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w010.json",
+  "title": "Decoding the 7 types of Intent data - Bombora",
+  "final_url": "https://bombora.com/blog/7-types-of-intent-data/",
+  "characters": 7206,
+  "sha256": "ff67f11edf1d6a22ac05eb82eaa8f7deb1228a914b101e9297d2cf042f21b7e0",
+  "http_status": 200
+}

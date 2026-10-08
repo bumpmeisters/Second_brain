@@ -1,0 +1,16 @@
+{
+  "id": "W016",
+  "url": "https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/advertising-effectiveness-and-the-95-5-rule.pdf",
+  "research_briefs": [
+    "s01-abx.md",
+    "t01-identity-to-intent.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:54:14.254410+00:00",
+  "status": "captured-pdf",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w016.pdf",
+  "final_url": "https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/advertising-effectiveness-and-the-95-5-rule.pdf",
+  "bytes": 500628,
+  "sha256": "8a6ed7ab518d88a4127a2d4db50df745980f6641f53f8c54559a0395bd859e2c"
+}

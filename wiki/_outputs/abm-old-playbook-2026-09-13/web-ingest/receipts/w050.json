@@ -1,0 +1,17 @@
+{
+  "id": "W050",
+  "url": "https://sites0001.infolinks.com/press/study-86-percent-of-customers-suffer-from-banner-blindness",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:25.683079+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w050.json",
+  "title": "Study: 86% of Consumers Suffer From Banner Blindness",
+  "final_url": "https://sites0001.infolinks.com/press/study-86-percent-of-customers-suffer-from-banner-blindness",
+  "characters": 3126,
+  "sha256": "b0e0152205f6bf7fe2b84d2ac9a7b4fc503ea92937ec7dcd740d726cb153590f",
+  "http_status": 200
+}

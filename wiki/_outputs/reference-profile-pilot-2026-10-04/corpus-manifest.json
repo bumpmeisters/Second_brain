@@ -1,0 +1,98 @@
+{
+  "captured_with": "Firecrawl CLI 1.19.27 scrape --only-main-content; see selection.json for original URLs",
+  "admission_ledger": "wiki/_outputs/source-conversions/logs/source-inbox-20261004-214055-853-ae54c5e3.csv",
+  "source_readiness": "Native Markdown admitted to raw/imports; binary readiness script rejects this root by design (policy only raw/assets and research/assets). No binaries used, no policy changed. Selection authority recorded in selection.json.",
+  "profile_frozen_utc": "2026-10-04T19:44:34.201393+00:00",
+  "profile_path": "wiki/_outputs/reference-profile-pilot-2026-10-04/matt-heinz-profile-v0-1.md",
+  "profile_sha256": "37cb6451ca34743efb4695350a7b512cb7e25547aa95bca8863e1ef81127bf8c",
+  "sources": [
+    {
+      "id": "D01",
+      "split": "derivation",
+      "title": "I Still Think Sales Should Report Into Marketing",
+      "url": "https://www.heinzmarketing.com/blog/i-still-think-sales-should-report-into-marketing/",
+      "filename": "d01-sales-report-into-marketing.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d01-sales-report-into-marketing.md",
+      "sha256": "ef0ff8a5f5de354405d73bd38c23905dd0ef8f603bc6ef74a7d5ed14246705b8",
+      "bytes": 14284,
+      "content_review": "derivation-reviewed"
+    },
+    {
+      "id": "D02",
+      "split": "derivation",
+      "title": "Brand Is a Dirty Word in B2B and That's Our Fault",
+      "url": "https://www.heinzmarketing.com/blog/brand-is-a-dirty-word-in-b2b-and-thats-our-fault/",
+      "filename": "d02-brand-dirty-word.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d02-brand-dirty-word.md",
+      "sha256": "20006f7157a71f97803c9a4dbca987876798752af6a7c05e8b59ef349576b4ea",
+      "bytes": 15307,
+      "content_review": "derivation-reviewed"
+    },
+    {
+      "id": "D03",
+      "split": "derivation",
+      "title": "AI Is Making Your Best People Slower",
+      "url": "https://www.heinzmarketing.com/blog/ai-is-making-your-best-people-slower/",
+      "filename": "d03-ai-review-bottleneck.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d03-ai-review-bottleneck.md",
+      "sha256": "b5cef4c6df2b0cfd1e0c25c39dbb143cbaecb021021e2d0d46ec73b66d7357b0",
+      "bytes": 10974,
+      "content_review": "derivation-reviewed"
+    },
+    {
+      "id": "D04",
+      "split": "derivation",
+      "title": "One Team + Multiple Operating Models = Compounding Drag",
+      "url": "https://www.heinzmarketing.com/blog/one-team-multiple-operating-models-compounding-drag/",
+      "filename": "d04-compounding-drag.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d04-compounding-drag.md",
+      "sha256": "0564b382c92c750cb371853f1c176cf58dc2fadfe32e49a1c727ad444d18de34",
+      "bytes": 12784,
+      "content_review": "derivation-reviewed"
+    },
+    {
+      "id": "D05",
+      "split": "derivation",
+      "title": "Life Lessons from a 50 Year Old",
+      "url": "https://www.heinzmarketing.com/blog/life-lessons-from-a-50-year-old/",
+      "filename": "d05-life-lessons.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d05-life-lessons.md",
+      "sha256": "d39ede7e9086ff50fc067d230401b21f226e1bde8c3f8d4a73da2d8fb5b2063b",
+      "bytes": 15442,
+      "content_review": "derivation-reviewed"
+    },
+    {
+      "id": "D06",
+      "split": "derivation",
+      "title": "You Don't Need a PowerPoint Template Anymore",
+      "url": "https://www.heinzmarketing.com/blog/you-dont-need-a-powerpoint-template-anymore/",
+      "filename": "d06-powerpoint-template.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/d06-powerpoint-template.md",
+      "sha256": "fd09f7efec54736b7346bc9e0be85372c202cdfead681c65b4c91b1401f4dc97",
+      "bytes": 9152,
+      "content_review": "derivation-reviewed"
+    },
+    {
+      "id": "H01",
+      "split": "held-back",
+      "title": "More than B2B: Changing the definition of marketing work, and its impact on careers and lives",
+      "url": "https://www.heinzmarketing.com/blog/more-than-b2b-changing-the-definition-of-marketing-work-and-its-impact-on-careers-and-lives/",
+      "filename": "h01-more-than-b2b.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/h01-more-than-b2b.md",
+      "sha256": "4b2c769ed1d7c2fed4c7af2e1b50d672f720d5e257ab3a5ba60b7b29b8ccd84d",
+      "bytes": 6814,
+      "content_review": "not-yet-read-full"
+    },
+    {
+      "id": "H02",
+      "split": "held-back",
+      "title": "Why High-Stakes Human Trust Will Outlast AI",
+      "url": "https://mattheinz.substack.com/p/why-high-stakes-human-trust-will",
+      "filename": "h02-human-trust.md",
+      "path": "raw/imports/matt-heinz-profile-2026-10-04/h02-human-trust.md",
+      "sha256": "4600753db00fc3694353f9dfca3df8f8cdb8d819e44a78ccf08a4db123cda64f",
+      "bytes": 13032,
+      "content_review": "not-yet-read-full"
+    }
+  ]
+}

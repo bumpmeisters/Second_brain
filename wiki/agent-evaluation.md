@@ -3,6 +3,20 @@ type: concept
 status: active
 trust: partially-verified
 sources:
+  - "raw/Clippings/500.000 Follower für 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md"
+  - "raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md"
+  - "raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md"
+  - "raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md"
+  - "raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md"
+  - "raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md"
+  - "raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md"
+  - "raw/Clippings/Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO.md"
+  - "raw/Clippings/I Spent $31,141 & 1,000 Hours On Claude Code To Learn This.md"
+  - "raw/Clippings/How to Understand the Next Wave of AI Before Everyone Else  Tibo Interview.md"
   - research/2026-07-01-agent-evaluation-recent-research.md
   - raw/Clippings/Benchmarking Coding Agents on New vs Legacy Codebases — Denys Linkov, Wisedocs.md
   - https://metr.org/time-horizons/
@@ -23,8 +37,12 @@ sources:
   - raw/imports/automated-clippings/youtube/UCQID78IY6EOojr5RUdD47MQ/2026-08-06--54pwkcp48Lg.md
   - raw/imports/automated-clippings/youtube/UCRYY7IEbkHLH_ScJCu9eWDQ/2026-07-24--dfre9hN0HCs.md
   - raw/imports/automated-clippings/youtube/UCxBcwypKK-W3GHd_RZ9FZrQ/2026-08-03--7PSXtru6mmY.md
+  - https://www.dwarkesh.com/p/ajeya-cotra
+  - wiki/newsletters/ainews/linked-sources/agent-runtime-identity-source-family-2026-09-10.md
+  - wiki/newsletters/the-pragmatic-engineer/linked-sources/agentic-code-review-source-review-2026-09-14.md
+  - wiki/newsletters/ainauten/linked-sources/anthropic-agent-incident-assessment-source-review-2026-09-14.md
 created: 2026-07-01
-updated: 2026-08-19
+updated: 2026-10-08
 ---
 
 # Agent Evaluation
@@ -71,7 +89,27 @@ Google describes a current version of this pattern as a quality flywheel: build 
 
 A useful eval set represents the work the agent is actually trusted to do. Include ordinary cases, rare but costly failures, ambiguous inputs, tool errors, stale or missing context, corrections, and policy boundaries. Version the dataset and separate development examples from a holdout set to reduce overfitting (source: [[ai-work-blueprint]]; analysis based on the June 2026 research report).
 
+For long-running agents, also include impossible or internally inconsistent tasks, unavailable prerequisites, and cases whose only apparent completion path would require a forbidden action. Score whether the agent recognizes the condition, stops within its attempt budget, preserves useful evidence, identifies the missing authorization or expertise, and avoids widening permissions. This extends the existing safety and escalation layer; it does not establish that impossible tasks alone caused the July 2026 incident ([Ajeya Cotra interview, 2026](https://www.dwarkesh.com/p/ajeya-cotra); secondary investigator account, causality unresolved).
+
+In multi-agent tests, record overlap in model, prompt, context, tools, and reward signal. Agreement among near-identical agents is not independent verification; include counterbalanced or genuinely independent review and measure correlated failure as well as average task success (same source; design inference, needs local validation).
+
 Control the comparison protocol. Keep tool access, answer contracts, budgets, retries, environment state, and accounting aligned when comparing agents or architectures. Otherwise, a score difference may come from the harness rather than the agent design (source: [Do More Agents Help?, 2026-06-04](https://arxiv.org/abs/2606.05670); preprint, needs verification).
+
+### Bind results to a reproducible runtime identity
+
+Before interpreting an agent result, bind it to a versioned runtime-identity record. At minimum record:
+
+- model and exact version; reasoning or effort level;
+- harness, tool contract, memory/state handling, and compaction behavior;
+- product surface, access tier, and safeguard mode;
+- routing and fallback behavior, including which system actually produced the output;
+- concurrency, attempt and quota limits;
+- input, output, and cache-token mix plus the dated price basis; and
+- permissions, environment, acceptance criteria, and accounting boundary.
+
+A model label is not a reproducible system identity when adapters, state handling, access tiers, safeguards, or server-side routing can change the observed result. Treat a changed runtime-identity field as a changed comparison condition unless equivalence has been demonstrated.
+
+Report task success and total cost per accepted outcome together with monitorability, policy-denial recall, legitimate safety stops, false positives, interrupted-task availability, retries, rework, and human review effort. A lower token price, higher benchmark score, or stronger refusal rate is not sufficient when routing, output volume, failed attempts, or legitimate interruptions differ. This is a configuration and measurement contract derived from a mixed vendor and newsletter source family; it does not validate any current model ranking, price advantage, or safeguard-effectiveness claim (source: [[newsletters/ainews/linked-sources/agent-runtime-identity-source-family-2026-09-10|agent-runtime-identity-source-family-2026-09-10]]).
 
 Use repeated runs when behavior is stochastic. Report success together with latency, cost, tool-call count, and failure categories. ITBench-AA illustrates this by fixing a harness, running three repeats per task, and scoring against known root causes; its authors also report that longer trajectories did not reliably improve accuracy (source: [IBM Research and Artificial Analysis, 2026-05-27](https://huggingface.co/blog/ibm-research/itbench-aa); benchmark-author report, partially verified).
 
@@ -138,12 +176,42 @@ The evaluation unit remains the complete task-specific workflow. General models 
 
 For long-horizon work, keep a small versioned set of high-impact process behaviors separate from output tests and runtime prompts. Domain experts and agent engineers should define each behavior, its trigger, and failure boundary; an independently calibrated trace judge can then test whether the behavior was required and exhibited. Do not inject the entire behavior catalog into every run, and do not treat the vendor's product or judge-reliability claims as validated (source: 2026-08-06--54pwkcp48Lg.md; vendor interview; analysis: P39-W6R3-C04).
 
+## Risk-routed review for agent-generated code
+
+Scale human review with blast radius, reversibility, and available evidence instead of applying one line-by-line rule to every change. Humans retain scope and exit decisions; plans, tests, public interfaces, authentication, non-additive schemas, irreversible state, and other high-risk boundaries require explicit review. Automated review should be filtered for actionable findings and accompanied by tests, observability, and static checks so higher code volume does not merely create more review noise (source: [[newsletters/the-pragmatic-engineer/linked-sources/agentic-code-review-source-review-2026-09-14|agentic-code-review-source-review-2026-09-14]]; partial practitioner evidence).
+
+Rare incident evaluation must preserve the denominator, model and environment versions, escalation path, observed actions, replay conditions, safeguard changes, residual rates, and independent-investigation status. Chain-of-thought monitoring is one fallible signal, not an oracle; calibrate it against action evidence and independent controls (source: [[newsletters/ainauten/linked-sources/anthropic-agent-incident-assessment-source-review-2026-09-14|anthropic-agent-incident-assessment-source-review-2026-09-14]]; first-party corroboration).
+
 ## Current tensions
 
 - **Static cases versus live traffic**: static cases are reproducible; production sampling detects new language, tool, model, and data drift. Maintain both.
 - **Outcome versus trajectory**: outcomes establish utility; trajectories establish safety, diagnosis, and efficiency. Score both.
 - **Automation versus human review**: automation provides scale; humans remain necessary for calibration, novel failure interpretation, and consequential approvals.
 - **Thoroughness versus speed**: evaluation depth should be proportional to action risk. Use a small blocking smoke suite and broader pre-release or sampled checks when full evaluation is too slow (source: [[2026-07-01-agent-evaluation-recent-research]]; Reddit-derived practice, needs local validation).
+
+## End-to-End-Latenz statt alleiniger Modellgeschwindigkeit
+
+Bei langsamen AI-Workflows die Zeit nach Modellinferenz, Tool- und Netzwerkwartezeit, lokaler Ausführung und menschlicher Warte-/Prüfzeit aufschlüsseln. Zuerst den tatsächlich dominierenden Abschnitt verbessern. Interaktive Unterstützung und zeitversetzte Stapelverarbeitung haben unterschiedliche Latenzanforderungen; der Vergleich bleibt an akzeptierte Aufgabenqualität und Gesamtkosten gebunden.
+
+Vendor-Interview als Architekturhinweis; keine aktuellen Preise, Nutzerzahlen, Geschwindigkeitsversprechen oder Hardwareempfehlungen. Cloud versus lokal wird erst anhand gemessener Engpässe und zulässiger Datenwege entschieden.
+
+Methodische Ableitung P47-C04 aus folgenden Quellen; Aussagen und Grenzen sind im [[new-knowledge-source-review-2026-09-09]] dokumentiert:
+
+- `raw/Clippings/How to Understand the Next Wave of AI Before Everyone Else  Tibo Interview.md` — 7:47–14:23; 30:51–31:46; 34:29–36:56; vendor.
+
+Fachliche Fehlerklassen und passende Kriterien lassen sich mit [[domain-expert-error-analysis-loop]] entwickeln.
+
+## Praxisstütze für Wiederholungstests
+
+Ein Practitioner-Transkript stützt die vorhandene Regel, einen guten Erstlauf nicht als Zuverlässigkeitsbeleg zu behandeln: mehrere Durchläufe vergleichen und Revision an prüfbare Rückmeldung binden. Diagnose vor Umschreiben, aktuelle Code-/Notizübereinstimmung und Übergaben mit offenen Punkten erhalten die Vergleichbarkeit. Die genannten zehn Läufe sind ein Beispiel und keine statistisch ausreichende Universalstichprobe. Pauschale Skill-, Modell- und Leistungsurteile werden nicht übernommen. (source: raw/Clippings/I Spent $31,141 & 1,000 Hours On Claude Code To Learn This.md; practitioner; Analyse P60-C07; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].
+
+## Determinismus und semantische Robustheit getrennt prüfen
+
+Die selektiv geprüften Interviewabschnitte unterscheiden identische Ergebnisse bei identischen Eingaben von stabilen Ergebnissen bei semantisch gleichwertigen Eingaben. Das stützt die bestehenden Wiederholungs- und Robustheitstests. Kleine strukturierte Entscheidungen können einzeln geprüft werden; Berechtigungsgrenzen gehören in durchsetzbare Programmregeln. Zerlegung kann zugleich mehr Kosten und Latenz oder schlechtere Ergebnisse erzeugen und muss gegen die gebündelte Alternative verglichen werden. Diese Vendor-Quellenstütze validiert weder Jev noch RLCD, Kalibrierung, API-Funktionen oder Sicherheitsstrategie; das restliche Interview ist nicht abgedeckt. (source: raw/Clippings/Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO.md; vendor; Analyse P60-C11; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].
 
 ## Open questions
 
@@ -153,7 +221,36 @@ For long-horizon work, keep a small versioned set of high-impact process behavio
 - Which semantic criteria need an LLM judge, and which can be replaced with deterministic checks?
 - How should security and privilege-boundary evaluations connect to [[agent-security]] once that page exists?
 
+## Quellennahe Prüffälle: Was ein überzeugender Output noch nicht beweist
+
+| Prüffrage | P61-Fall und genaue Grenze |
+|---|---|
+| Stimmen Bild und strukturierte Daten überein? | TM13: Pflanzenanzahl in Bild und Stückliste unterschiedlich; TM21: Gebäuderender verändert Umgebung/Dach. Visuelle Qualität getrennt von Mengen/Geometrie testen. |
+| Ist der relative Gewinner absolut brauchbar? | TM15: zehn Copy-Arena-Modelle, aber alle mittelmäßig; Ad-Generator wegen Markenqualität pausiert. Akzeptanzgrenze vor Ranking definieren. |
+| Ist die Extraktion/der Score fachlich richtig? | TM16: vollständiges SQL-Ergebnis validiert Churn-/Closing-Bewertung nicht; TM22: Formulierungen beweisen keine KI-Autorschaft; TM14: Confidencefarbe ersetzt kein Fachurteil. |
+| Ist ein kostspieliger Ansatz überhaupt tragfähig? | TM02: bildbasierte Schuh-Fake-Erkennung wegen Kosten/Unzuverlässigkeit verworfen. Fehlerfolgen und akzeptierte Qualität vor Skalierung prüfen. |
+| Stimmen errechnete und reale Zustände überein? | TM09: physische Zugaben und Qualitätsprüfung verbleiben beim Brauer; TM23: Alarm in Originalapp nachprüfen, lesenden Abruf und finanzielle Schreibaktion trennen. |
+| Welche Größe wurde tatsächlich beobachtet? | TM10: Listingwerte sind keine Transaktionen, Botbesuche keine Empfehlung/Käufe. TM12: zweites LLM-Audit ist keine unabhängige Sicherheitsabnahme. |
+
+Die Tabelle erweitert vorhandene Testdesign-/Outcome-Regeln mit konkreten, nicht unabhängig reproduzierten Interviewfällen. Daraus folgen weder objektive Personalbewertungen, botanische/baurechtliche Fachfreigaben noch aktuelle Bank-/Modellsicherheitsbehauptungen. P61-C05. Quellen und fallgenaue Zeitanker:
+
+- `raw/Clippings/500.000 Follower für 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md` — [[_outputs/semantic-ingest/p61/briefs/tm02|TM02]].
+- `raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md` — [[_outputs/semantic-ingest/p61/briefs/tm09|TM09]].
+- `raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm10|TM10]].
+- `raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md` — [[_outputs/semantic-ingest/p61/briefs/tm12|TM12]].
+- `raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md` — [[_outputs/semantic-ingest/p61/briefs/tm13|TM13]].
+- `raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md` — [[_outputs/semantic-ingest/p61/briefs/tm14|TM14]].
+- `raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md` — [[_outputs/semantic-ingest/p61/briefs/tm15|TM15]].
+- `raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm16|TM16]].
+- `raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm21|TM21]].
+- `raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm22|TM22]].
+- `raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md` — [[_outputs/semantic-ingest/p61/briefs/tm23|TM23]].
+
+Methodische Übernahme: P61-C05; Rolf, ausdrückliche Freigabe 2026-10-08. Quellen- und Verifikationsgrenzen bleiben erhalten.
+
 ## Related pages
+
+- [[tokenmade-ai-use-cases-source-review-2026-10-08]]
 
 - [[agentic-and-applied-ai-gap-review]]
 - [[ai-work-blueprint]]

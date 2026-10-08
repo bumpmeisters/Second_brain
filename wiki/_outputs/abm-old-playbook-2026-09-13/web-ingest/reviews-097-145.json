@@ -1,0 +1,1244 @@
+[
+  {
+    "id": "W097",
+    "url": "https://www.gartner.com/en/documents/6909166",
+    "title": "Confront Conflict Within Buying Teams to Reduce Decision Delays",
+    "trust_class": "primary",
+    "read_scope": "abstract-only",
+    "value_reason": "Abstract nennt Konflikt als Verzögerungsgrund; begrenzte Ergänzung zur gemeinsamen Entscheidungsbasis.",
+    "key_claims": [
+      "Gartner bezeichnet Konflikt in Kaufteams und Organisationen als größten Grund für Verzögerung und Unentschlossenheit bei Technologiekäufen.",
+      "Empfiehlt Teams, Konflikte konstruktiv anzusprechen."
+    ],
+    "caveats": [
+      "Nur Abstract vom 03.09.2025; Volltext und Methodik fehlen; keine Wirkungsgröße übernehmen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E06",
+      "E14"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w097.json"
+  },
+  {
+    "id": "W098",
+    "url": "https://www.gartner.com/en/documents/7925209",
+    "title": "Accelerate Sales With Digital Sales Rooms and Lift Customer Lifetime Value",
+    "trust_class": "primary",
+    "read_scope": "abstract-only",
+    "value_reason": "Dokumentiert Gartner-Empfehlung zu DSR, aber keine offen prüfbare zusätzliche Wirkungsbegründung.",
+    "key_claims": [
+      "Abstract empfiehlt DSR für schnellere Zyklen, Käufervertrauen und bessere Interaktion.",
+      "DSR sollen auch bestehende Accounts und Erkenntnisse zur Dealqualität unterstützen."
+    ],
+    "caveats": [
+      "Nur Abstract vom 01.06.2026; kein überprüfter Effekt- oder Methodenbeleg."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w098.json"
+  },
+  {
+    "id": "W099",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2023-12-14-gartner-predicts-fifty-percent-of-consumers-will-significantly-limit-their-interactions-with-social-media-by-2025",
+    "title": "Gartner Predicts 50% of Consumers Will Significantly Limit Their Interactions with Social Media by 2025",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Klärt Herkunft und Status der häufig als Messwert zitierten 50-Prozent-Suchtraffic-Aussage.",
+    "key_claims": [
+      "Pressemitteilung vom 14.12.2023 prognostiziert mindestens 50% weniger organischen Brand-Suchtraffic bis 2028.",
+      "Eine Befragung von 299 Konsumenten im August 2023 meldete 79% erwartete Nutzung KI-erweiterter Suche binnen eines Jahres.",
+      "Die 50%-Social-Media-Prognose bis 2025 ist eine separate Vorhersage."
+    ],
+    "caveats": [
+      "Prognosen, keine gemessenen Rückgänge oder jährliche Verlaufskurve; Konsumentenbefragungen nicht B2B-Trafficdaten."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E15"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w099.json"
+  },
+  {
+    "id": "W100",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents",
+    "title": "Gartner Predicts Search Engine Volume Will Drop 25% by 2026, Due to AI Chatbots and Other Virtual Agents",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Trennt Suchvolumenprognose von organischem Brand-Traffic und beobachteten Klickdaten.",
+    "key_claims": [
+      "Gartner prognostizierte am 19.02.2024 einen Rückgang traditioneller Suchmaschinenvolumina um 25% bis 2026.",
+      "Die Mitteilung empfiehlt weiterhin einzigartige nützliche Inhalte und Qualitätssignale für organische Suche."
+    ],
+    "caveats": [
+      "Keine aktuelle Messung oder nachvollziehbare Prognosemethodik; Suchvolumen nicht gleich Website-Traffic."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E15"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w100.json"
+  },
+  {
+    "id": "W101",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-05-07-gartner-sales-survey-finds-74-percent-of-b2b-buyer-teams-demonstrate-unhealthy-conflict-during-the-decision-process",
+    "title": "Gartner Sales Survey Finds 74% of B2B Buyer Teams Demonstrate Unhealthy Conflict During The Decision Process",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Direkter Beleg zur Unterscheidung individueller Relevanz und Gruppen-Konsens.",
+    "key_claims": [
+      "Befragung von 632 B2B-Käufern August–September 2024 berichtet 74% Teams mit ungesundem Konflikt.",
+      "Gruppenrelevanz wird positiv, rein individuelle Content-Relevanz negativ mit Konsens verbunden.",
+      "Gruppen mit Konsens berichten 2,5-mal häufiger einen hochwertigen Deal."
+    ],
+    "caveats": [
+      "Pressemitteilung, keine vollständigen Skalen/Modelle; berichtete Impacts nicht universelle kausale Effekte; keine Pflichtgruppengröße ableiten."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md",
+      "wiki/marketing-sales-and-buyer-enablement-library.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w101.json"
+  },
+  {
+    "id": "W102",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-sales-survey-finds-61-percent-of-b2b-buyers-prefer-a-rep-free-buying-experience",
+    "title": "Gartner Sales Survey Finds 61% of B2B Buyers Prefer a Rep-Free Buying Experience",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Starker aufgabenbezogener Gegenbeleg zu einer starren Digital-dann-Mensch-Reise.",
+    "key_claims": [
+      "632 B2B-Käufer, August–September 2024: 61% bevorzugen insgesamt rep-free, 73% meiden Anbieter mit irrelevantem Outreach.",
+      "Allgemeine Information wird eher selbstständig gesucht; für Kontext und Passung bevorzugen Käufer Verkäuferhilfe.",
+      "69% berichten Widersprüche zwischen Website und Verkäuferinformation."
+    ],
+    "caveats": [
+      "Präferenz/Selbstauskunft, keine Wirkungsmessung; rep-free bedeutet laut eigener Aufgabendifferenzierung nicht vollständigen Ausschluss menschlicher Hilfe."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E08",
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w102.json"
+  },
+  {
+    "id": "W103",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-25-gartner-says-by-2030-that-75-percent-of-b2b-buyers-will-prefer-sales-experiences-that-prioritize-human-interaction-over-ai",
+    "title": "Gartner Says By 2030 that 75% of B2B Buyers Will Prefer Sales Experiences that Prioritize Human Interaction Over AI",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Bewahrt Gegenperspektive als Prognose und Analystenempfehlung.",
+    "key_claims": [
+      "Q&A vom 25.08.2025 prognostiziert 75% Präferenz für menschlich priorisierte Verkaufserfahrungen bis 2030.",
+      "Empfiehlt hybride Modelle und Wahlmöglichkeiten zwischen KI und Menschen nach Bedarf/Komplexität."
+    ],
+    "caveats": [
+      "Keine gemessene 75%-Quote; keine prüfbare Datengrundlage für behauptete Trendumkehr; starre Früh-/Spätphasenempfehlung ist kein universeller Ablauf."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w103.json"
+  },
+  {
+    "id": "W104",
+    "url": "https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience",
+    "title": "Gartner Sales Survey Finds 67% of B2B Buyers Prefer a Rep-Free Experience",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Aktualisiert belegte Präferenz mit Population/Erhebungszeit und begrenzt Schlussfolgerungen.",
+    "key_claims": [
+      "646 B2B-Käufer August–September 2025: 67% bevorzugen rep-free; 45% nutzten KI bei einem jüngeren Kauf.",
+      "Empfiehlt modulare Inhalte und Unterstützung für selbstständige Validierung sowie Verkäuferarbeit.",
+      "Käufer mit hoher Entscheidungssicherheit berichten doppelt so häufig hochwertige Deals."
+    ],
+    "caveats": [
+      "Pressemitteilung; Vergleich mit 61% ist kein dokumentiertes Panel; Zusammenhang von Sicherheit und Dealqualität nicht Kausalnachweis."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w104.json"
+  },
+  {
+    "id": "W105",
+    "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+    "title": "B2B Buying: How Top CSOs and CMOs Optimize the Journey",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Konkrete Käuferaufgaben und variable Rolle von Selbstservice/Menschen.",
+    "key_claims": [
+      "Definiert sechs wiederkehrende Kaufaufgaben einschließlich Validierung und Konsens statt linearer Phasen.",
+      "Empfiehlt digitale Wertvalidierung durch Werkzeuge und einfachen Zugang zu Menschen auch bei hoher Produktvertrautheit.",
+      "Eine Teilbefragung von 148 Technologiekäufern beschreibt den Zusammenhang von Vertrautheit und Digitalpräferenz."
+    ],
+    "caveats": [
+      "Landingpage kombiniert unterschiedliche Studien und undatierte Quoten; 75%, 99% und 1,8x nicht ohne Methodenprüfung als allgemeine aktuelle Effekte übernehmen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08",
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w105.json"
+  },
+  {
+    "id": "W106",
+    "url": "https://www.gartner.com/en/sales/topics/sales-enablement",
+    "title": "Sales Enablement: Strategies to Drive Strong Results",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Belegt, dass Sales Enablement selbst Käuferaufgaben und organisatorischen Kontext umfasst.",
+    "key_claims": [
+      "Enablement soll organisationsspezifische Kaufbedingungen, Datenkompetenz und Sense Making unterstützen.",
+      "Erweiterung zu Revenue Enablement soll Konsistenz zwischen kundenbezogenen Rollen herstellen.",
+      "KI-Nachrichten sollen Verkäufer auf Richtigkeit, passende Sprache und beabsichtigte Punkte prüfen."
+    ],
+    "caveats": [
+      "Gemischte Studienjahre/Prognosen und nicht vollständig dokumentierte Typologie; keine allgemeine Wirkung oder universelle Kundenprofile ableiten."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08",
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md",
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w106.json"
+  },
+  {
+    "id": "W107",
+    "url": "https://www.gong.io/blog/lou-wolf-the-1-signal-a-deal-wont-close",
+    "title": "Lou Wolf: The #1 Signal a Deal Won’t Close",
+    "trust_class": "mixed",
+    "read_scope": "full-main-text",
+    "value_reason": "Quellennaher Zusammenhang zwischen Kontaktbreite und Dealgewinn; warnt vor absoluter Single-Thread-These.",
+    "key_claims": [
+      "Interview beschreibt Single-threading als diagnostischen Warnhinweis besonders in späten Dealphasen.",
+      "Gong-Analyse von mehr als 50.000 Opportunities berichtet mehr Meeting- und E-Mail-Kontakte bei gewonnenen Deals.",
+      "Interview betont Rollenklärung, Teamkontakt und Coaching bei Führung und Zusammenschlüssen."
+    ],
+    "caveats": [
+      "Anbieterdaten plus Praktikerinterview, keine Randomisierung oder Confounder-Kontrolle; publizierte 243%-Differenz nicht aus gerundeten acht versus drei Kontakten reproduzierbar; keine Pflichtkontaktzahl."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E06",
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md",
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w107.json"
+  },
+  {
+    "id": "W108",
+    "url": "https://www.gong.io/resources/guides/the-data-backed-guide-to-multi-threading-and-team-selling",
+    "title": "The data-backed guide to multi-threading and team selling",
+    "trust_class": "vendor",
+    "read_scope": "partial",
+    "value_reason": "Landingpage bestätigt Anbieterbehauptung, ergänzt aber keine prüfbare Methodik.",
+    "key_claims": [
+      "Gong nennt 67% mehr Kontakte bei gewonnenen als verlorenen Deals.",
+      "Angekündigter Guide behandelt Stakeholdermapping und internes Teamselling."
+    ],
+    "caveats": [
+      "Nur Landingpage, Guide hinter Formular; Millionen Interaktionen unzureichend spezifiziert; Kausalbehauptungen nicht belegt."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w108.json"
+  },
+  {
+    "id": "W109",
+    "url": "https://www.hbs.edu/ris/download.aspx?name=ascarza_jmr_18.pdf",
+    "title": "Retention Futility: Targeting High-Risk Customers Might Be Ineffective",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Empirischer Hinweis auf die Differenz zwischen Ereignisrisiko und Beeinflussbarkeit.",
+    "key_claims": [
+      "Ascarza kombiniert zwei Feldexperimente in Telekommunikation und professionellen Mitgliedschaften mit Modellen heterogener Interventionseffekte.",
+      "Die am stärksten churngefährdeten Kunden sind in diesen Studien nicht zwingend die am besten durch Retention beeinflussbaren.",
+      "Die Einleitung berichtet zusätzliche Churnreduktionen von 4,1 beziehungsweise 8,7 Prozentpunkten gegenüber risikobasierter Auswahl."
+    ],
+    "caveats": [
+      "Nur Seiten 1–2 der 20-seitigen Autorinnenfassung gelesen; Detailmethodik und Tabellen nicht vollständig geprüft.",
+      "Retention-Befunde sind kein direkter Wirksamkeitsbeleg für ABM-Intent-Targeting; Zahlen nicht ohne Detailprüfung promoten."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E04"
+    ],
+    "target_pages": [
+      "wiki/gtm-signals-and-contextual-intelligence.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_extractions/raw/assets/abm-old-playbook-web-2026-09-13/w109-www-hbs-edu-name-ascarza-jmr-18-pdf.pdf.md"
+  },
+  {
+    "id": "W110",
+    "url": "https://www.highspot.com/en-gb/product/digital-sales-rooms",
+    "title": "Highspot Digital Sales Rooms",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Dokumentiert technische Unterstützung gemeinsamer Käuferarbeit und geschützten Zugangs.",
+    "key_claims": [
+      "Digital Rooms bündeln Inhalte, Meetingrecaps und Ressourcen über Deal und Übergabe hinweg.",
+      "Mutual Action Plans teilen Ziele und nächste Schritte; Passwort, E-Mail-Verifikation und Domainregeln schützen Inhalte.",
+      "Engagement-Analytik und Agents liefern Dealhinweise."
+    ],
+    "caveats": [
+      "Produktmarketing und Kundenzitate, keine unabhängige Effektmessung; Engagement nicht Konsens oder bestätigte Kaufabsicht."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08",
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w110.json"
+  },
+  {
+    "id": "W111",
+    "url": "https://www.highspot.com/en-gb/solutions/sales-enablement",
+    "title": "Highspot Sales Enablement",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Anbieterbeispiel für Verkäuferbefähigung; kein zusätzlicher tragfähiger Wirkungsbeleg.",
+    "key_claims": [
+      "Produktseite beschreibt Lernpfade, KI-Rollenspiele, CRM-integrierte Trainings und Content.",
+      "Training und Verhalten sollen über Analytik mit Geschäftsergebnissen verbunden werden."
+    ],
+    "caveats": [
+      "Selektive Kundenergebnisse ohne Vergleichsdesign; technische Funktionen nicht garantierte Lern- oder Umsatzwirkung."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w111.json"
+  },
+  {
+    "id": "W112",
+    "url": "https://www.humansecurity.com/newsroom/human-disrupts-sophisticated-mobile-app-fraud-scheme-slopads",
+    "title": "HUMAN Disrupts Sophisticated Mobile App Fraud Scheme SlopAds",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Konkreter Fraud-Fall mit sauber unterscheidbaren Ereignisgrößen.",
+    "key_claims": [
+      "HUMAN berichtet 224 Apps mit versteckten WebViews und betrügerischen Anzeigenklicks.",
+      "38 Millionen Downloads und in Spitzen 2,3 Milliarden betrügerische Bid Requests pro Tag werden getrennt genannt.",
+      "Bericht nennt Entfernung der identifizierten Apps aus Google Play."
+    ],
+    "caveats": [
+      "Anbieteruntersuchung eines einzelnen Mobile-Falls; Bid Requests nicht ausgelieferte Impressionen, Personenanteil oder LinkedIn-B2B-Fraudquote."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w112.json"
+  },
+  {
+    "id": "W113",
+    "url": "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age",
+    "title": "Bad Bot Report 2026: The Internet Is No Longer Human and It’s Changing How Business Works",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Bewahrt Messscope und Unterschied legitimer Automatisierung, Bots und Werbebetrug.",
+    "key_claims": [
+      "Imperva-Blog nennt 53% automatisierten Webtraffic für 2025 gegenüber 51% 2024.",
+      "Unterscheidet legitime Agenten und schädliche Automatisierung; Trafficspitzen können Nachfragesignale verzerren.",
+      "27% der berichteten Botangriffe betreffen APIs."
+    ],
+    "caveats": [
+      "Blogzusammenfassung statt vollständiger Methodik; Anbietertelemetrie und breite Webtraffic-Größe nicht auf Anzeigenklicks oder B2B-Zielgruppen übertragbar."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w113.json"
+  },
+  {
+    "id": "W114",
+    "url": "https://www.indexnow.org/faq",
+    "title": "IndexNow FAQ",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Expliziter Betreiberbeleg für Grenzen von Benachrichtigung, Crawling und Indexierung.",
+    "key_claims": [
+      "IndexNow meldet neue, geänderte oder gelöschte URLs an teilnehmende Suchmaschinen.",
+      "Eingereichte URLs werden nach Crawlbudget, Qualitäts- und Schedulingregeln beurteilt; Einreichung garantiert keine Indexierung.",
+      "Sitemaps ergänzen IndexNow als vollständiges URL-Inventar; jede Engine entscheidet selbst."
+    ],
+    "caveats": [
+      "Dynamische technische Dokumentation; keine Garantie für Ranking, KI-Zitation oder Geschäftswirkung; Beispielcode nicht ausgeführt."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E09"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w114.json"
+  },
+  {
+    "id": "W115",
+    "url": "https://www.jolteffect.com",
+    "title": "The JOLT Effect",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Autorenprovenienz zur JOLT-Forschung, aber wenig eigenständige Evidenz auf Startseite.",
+    "key_claims": [
+      "Autoren nennen eine Studie von 2,5 Millionen Verkaufsgesprächen.",
+      "Positioniert JOLT als Ansatz für Kunden, die Veränderung zustimmen, aber nicht fortfahren; verkauft Trainings und Beratung."
+    ],
+    "caveats": [
+      "Startseite ohne Methoden, Quoten oder Volltranskript des eingebetteten Videos; keine universelle Wirksamkeit ableiten."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w115.json"
+  },
+  {
+    "id": "W116",
+    "url": "https://www.jolteffect.com/resources",
+    "title": "The JOLT Effect Resources",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Ressourcenverzeichnis ohne Inhalt der Werkzeuge; als Fundstelle erhalten.",
+    "key_claims": [
+      "Verlinkt Call-Audit, Interviewguide, Win-Loss-Fragen, Coachingguide und Indecision Gauge.",
+      "Win-Loss-Fragen sollen Unentschlossenheit in gewonnenen, verlorenen und No-decision-Deals erheben."
+    ],
+    "caveats": [
+      "Werkzeuge und Inhalte selbst nicht enthalten; kein Validitätsnachweis des Gauge oder überprüfbare Ausführungsroutine."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w116.json"
+  },
+  {
+    "id": "W117",
+    "url": "https://www.linkedin.com/business/marketing/blog/linkedin-ads/a-b2b-marketers-guide-to-every-linkedin-ad-type",
+    "title": "A B2B Marketer’s Guide to Every LinkedIn Ad Type",
+    "trust_class": "primary",
+    "read_scope": "partial",
+    "value_reason": "Technischer Beleg für frei zugängliche oder formulargebundene Dokumente.",
+    "key_claims": [
+      "Document Ads können Dokumente direkt im Feed zugänglich machen oder nach Vorschau per Lead Gen Form freischalten.",
+      "Der Guide unterscheidet mehrere Content-, Messaging- und Dynamic-Ad-Formate."
+    ],
+    "caveats": [
+      "Formatguide nur teilweise gelesen; keine unabhängige Wirksamkeitsprüfung."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w117.json"
+  },
+  {
+    "id": "W118",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a417950/audience-targeting-for-linkedin-ads-best-practices?lang=en",
+    "title": "Best practices for LinkedIn Ads audience targeting",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Erklärt Grenzen und Steuerungsmöglichkeiten der Zielgruppenauswahl.",
+    "key_claims": [
+      "Auto-Targeting kombiniert Plattformsignale und Eingaben; manuelle Zielgruppen erlauben Attributauswahl mit UND/ODER.",
+      "Bei Auto-Targeting wird keine geschätzte Zielgruppengröße angezeigt; regionale Einschränkungen betreffen einzelne Attribute."
+    ],
+    "caveats": [
+      "Produktdokumentation ist zeit- und rolloutabhängig; Zielgruppenattribute verifizieren keine Kaufrolle."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w118.json"
+  },
+  {
+    "id": "W119",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a418929/audience-expansion-overview",
+    "title": "Use audience expansion in your ad set",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Wichtige Grenze zwischen konfigurierter Zielgruppe und tatsächlicher Erweiterung.",
+    "key_claims": [
+      "Audience Expansion erreicht ähnliche Attribute und berücksichtigt Ausschlüsse.",
+      "Reporting bündelt ursprüngliche und erweiterte Zielgruppe; Forecast und gespeicherte Zielgruppengröße schließen die Erweiterung aus.",
+      "Die Funktion ist für bestimmte automatisch erzeugte Zielgruppen und Dynamic Ads nicht verfügbar."
+    ],
+    "caveats": [
+      "Öffentliches HTML direkt abgerufen; Funktionsverfügbarkeit kann variieren."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w119.json"
+  },
+  {
+    "id": "W120",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a422337",
+    "title": "Engagement ad objective",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Belegt explizite Optimierung auf Interaktion.",
+    "key_claims": [
+      "Das Engagement-Ziel umfasst Reaktionen, Kommentare, Teilen, Folgen und Klicks.",
+      "Standardziel sind Engagement-Klicks; je nach Format bestehen andere Optimierungsoptionen."
+    ],
+    "caveats": [
+      "Keine Aussage, dass alle Kampagnen auf Engagement optimieren."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w120.json"
+  },
+  {
+    "id": "W121",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a422485",
+    "title": "Traffic quality and brand safety on the LinkedIn Audience Network",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Trennt Platzierungskontrolle von Qualitätsgarantie.",
+    "key_claims": [
+      "LinkedIn beschreibt Publisher-Prüfungen, Drittanbieter-Prüfungen sowie eigene Ausschluss- und Zulassungslisten.",
+      "Delivery Reports dienen zur Prüfung tatsächlicher Auslieferung; Cookies auf ausgeschlossenen Seiten beweisen keine Anzeigenlieferung."
+    ],
+    "caveats": [
+      "Anbieterselbstauskunft; keine Garantie vollständiger IVT-Erkennung."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w121.json"
+  },
+  {
+    "id": "W122",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a424655/targeting-options-and-best-practices-for-linkedin-advertisements?lang=en",
+    "title": "Targeting options for LinkedIn Ads",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Präzisiert die Herkunft von Berufs- und Unternehmensmerkmalen.",
+    "key_claims": [
+      "Jobtitel können aus Eingaben standardisiert oder modelliert werden; Job Function und Seniority werden laut Dokumentation per proprietärer Taxonomie ohne KI-Inferenz aus Titeln abgeleitet.",
+      "Unternehmenszuordnung kann auf Profileingaben, Modellen und gegebenenfalls IP-Zuordnung beruhen.",
+      "Predictive Audiences bilden ähnliche Verhaltensmuster aus Quelldaten; Profilattribute sind damit kein Nachweis realer Buying-Group-Rollen."
+    ],
+    "caveats": [
+      "Produktdefinitionen zum Abrufzeitpunkt; letzter Punkt ist Anwendungsschluss, keine LinkedIn-Wirkungsstudie."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w122.json"
+  },
+  {
+    "id": "W123",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a452426",
+    "title": "Target audience options for boosting your LinkedIn Page posts",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Unterscheidet vereinfachtes Boosting und volle Kampagnensteuerung.",
+    "key_claims": [
+      "Vorgeschlagene Zielgruppen nutzen KI und Posttext; gespeicherte und manuelle Zielgruppen sind Alternativen.",
+      "Audience Expansion erweitert nach ähnlichen Attributen, Audience Network dagegen die Auslieferungsorte.",
+      "UND-Verknüpfung von Facetten verengt, ODER-Werte erweitern die Zielgruppe."
+    ],
+    "caveats": [
+      "Empfohlene Größen sind Plattformempfehlungen, kein universelles B2B-Optimum."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w123.json"
+  },
+  {
+    "id": "W124",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a785504",
+    "title": "Lead generation ad objective",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Belegt die technische Möglichkeit von Qualitätsfeedback statt bloßer Leadmenge.",
+    "key_claims": [
+      "Ohne Conversions API ist Leads das Standardziel; mit CAPI wird Qualified Leads empfohlen.",
+      "Qualitätsdaten können über Integrationen oder Upload einfließen; die Optimierung unterliegt Format- und Gebotsbeschränkungen.",
+      "Reporting weist qualifizierte Leads und Kosten je qualifiziertem Lead aus."
+    ],
+    "caveats": [
+      "Keine kausale Wirksamkeitsprüfung; rolloutabhängige Funktion und eigene Qualifikationsdefinition."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E01"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w124.json"
+  },
+  {
+    "id": "W125",
+    "url": "https://www.linkedin.com/help/lms/answer/a6862237",
+    "title": "How LinkedIn handles invalid traffic",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Dokumentiert Filterung und den entscheidenden Nenner einer Sicherheitsquote.",
+    "key_claims": [
+      "LinkedIn unterscheidet General und Sophisticated Invalid Traffic und beschreibt Vorab- sowie nachgelagerte Filterung.",
+      "Erkanntes und gefiltertes IVT wird laut Anbieter aus Messwerten und Abrechnung entfernt.",
+      "99,6 Prozent beziehen sich auf erkannte Fake-Accounts, die vor Mitgliedermeldung gestoppt wurden, nicht auf alle Fake-Accounts oder eine IVT-Prävalenz."
+    ],
+    "caveats": [
+      "Anbieterselbstauskunft; unerkanntes IVT wird durch diese Aussagen nicht quantifiziert."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w125.json"
+  },
+  {
+    "id": "W126",
+    "url": "https://www.lunio.ai/2026-global-invalid-traffic-report",
+    "title": "The Global Invalid Traffic Report 2026",
+    "trust_class": "vendor",
+    "read_scope": "partial",
+    "value_reason": "Report-Landingpage als Fundstelle; keine Zahlenbasis enthalten.",
+    "key_claims": [
+      "Kündigt IVT-Aufschlüsselungen nach Plattform, Kampagnentyp, Branche und Land an.",
+      "Reportdownload benötigt Kontaktdatenformular."
+    ],
+    "caveats": [
+      "Nur Landingpage, nicht Report; keine IVT-Quote aus diesem Capture belegbar."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w126.json"
+  },
+  {
+    "id": "W127",
+    "url": "https://www.lunio.ai/blog/ai-max-invalid-traffic-rates",
+    "title": "How AI Max can affect invalid traffic rates: 2026 data insights",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Methodenteil ermöglicht Eingrenzung von Stichprobe, Nenner und Kausalitätsgrenzen.",
+    "key_claims": [
+      "2026-Analyse: ca. 114,5 Mio. Search-Klicks, davon 49,5 Mio. AI Max, Q4 2025 bis Q2 2026; IVT-Anteile aus Rohzählungen.",
+      "Autor nennt Studie ausdrücklich beobachtend mit selbstgewählter AI-Max-Nutzung; berichtet Anstieg von 2,46% auf 5,28%.",
+      "Separater 2025-Einzelaccount vergleicht 404 aktivierte mit 491 unveränderten Kampagnen und nennt Difference-in-Differences."
+    ],
+    "caveats": [
+      "Anbieterinteresse; Blog verallgemeinert 35% aus Einzelfall und mischt Retail-/AI-Max-Anteile; Beobachtungsdesign beweist keine allgemeine Ursache; Nettoverluste/Refunds nicht gemessen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w127.json"
+  },
+  {
+    "id": "W128",
+    "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing",
+    "title": "Five fundamental truths: How B2B winners keep growing",
+    "trust_class": "mixed",
+    "read_scope": "full-main-text",
+    "value_reason": "Breitere B2B-Befragung als Gegenperspektive zu ausschließlich digitalen oder ausschließlich menschlichen Pfaden.",
+    "key_claims": [
+      "B2B Pulse 2024 befragt knapp 4.000 Entscheider in 13 Ländern, 34 Sektoren und acht Hauptindustrien.",
+      "Beschreibt ungefähr gedrittelte Präferenz für persönlich, remote und Selbstservice; teure/neue Käufe und einzelne Unternehmen weichen ab.",
+      "Explizit keine gleiche Betreuungsintensität für alle: Präferenzen mit Cost-to-serve balancieren; nahtlose Übergänge unterstützen."
+    ],
+    "caveats": [
+      "Selbstauskunft und Beratungsinterpretation; keine universelle Drittelquote oder Kausalwirkung von Omnichannel/Hybrid/GenAI; Online-Umsatzanteil nur Anbieter mit E-Commerce."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w128.json"
+  },
+  {
+    "id": "W129",
+    "url": "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-surprising-economics-of-b2b-growth-the-new-survival-threshold-and-what-it-takes-to-thrive",
+    "title": "The surprising economics of B2B growth: The new survival threshold—and what it takes to thrive",
+    "trust_class": "mixed",
+    "read_scope": "full-main-text",
+    "value_reason": "Verbindet Käuferkonsistenz mit klarer Accountverantwortung, begrenzt auf korrelative Surveybefunde.",
+    "key_claims": [
+      "2026 Global B2B Pulse: knapp 4.000 Entscheider aus 13 Ländern; inkonsistente Informationen und fehlende kompetente Hilfe werden als Wechselgründe berichtet.",
+      "Bericht empfiehlt einen verantwortlichen Accountleader, gemeinsame Anreize/Metriken und integrierte Abläufe.",
+      "Sales-geführte ABM-Governance korreliert mit höheren berichteten Wachstumsbändern; Autoren schlagen Verbindung von Personalisierung, KI und Governance vor."
+    ],
+    "caveats": [
+      "Selbstidentifizierte Leader/Laggards und Selbstauskunft; Erfolgsselektion und Kausalrichtung offen; Survival-Rhetorik kein Solvenzbeleg; keine Überlegenheit jedes sales-led Modells."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E10",
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/abm-sales-marketing-operating-contract.md",
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w129.json"
+  },
+  {
+    "id": "W130",
+    "url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/focusing-your-m-and-a-team-on-revenue-growth",
+    "title": "Focusing your M&A team on revenue growth",
+    "trust_class": "mixed",
+    "read_scope": "full-main-text",
+    "value_reason": "Konkretes Governancebeispiel für Definitionen, Zuständigkeiten und überprüfte Synergieannahmen.",
+    "key_claims": [
+      "Empfiehlt Umsatzsynergien bottom-up zu prüfen: gleiche Entscheider, Verkaufsarten, Fähigkeiten und Adoptionszyklen statt bloßer Cross-Sell-Annahme.",
+      "Klare Zuständigkeit für überlappende Accounts, Führungseinbindung und Kommunikation sollen Bestandsumsatz schützen.",
+      "Beispiel zeigt unterschiedliche Bedeutungen von target als Stretchziel bzw. verbindlicher Erwartung."
+    ],
+    "caveats": [
+      "Beratungsbeispiele plus 2015-Survey, keine kausale Interventionsstudie; 2017 veröffentlicht; kein genereller Nachweis realisierter Synergien."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E10"
+    ],
+    "target_pages": [
+      "wiki/abm-sales-marketing-operating-contract.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w130.json"
+  },
+  {
+    "id": "W131",
+    "url": "https://www.mediaratingcouncil.org/sites/default/files/Standards/2024_IVT_Interim_Updates_FINAL.pdf",
+    "title": "2024 IVT Interim Updates",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Autoritativer Standard trennt nicht messbaren Traffic von validem oder invalidem Traffic.",
+    "key_claims": [
+      "Bei unzureichenden Signalen ist Traffic unbekannt; er darf nicht automatisch als valide oder invalide gelten und gehört nicht in den Zähler der IVT Decision Rate.",
+      "Die Decision Rate und der Anteil invaliden Traffics sollen auf Property-Ebene mit empirisch begründeten Mindestschwellen berichtet werden.",
+      "Privacy-Einschränkungen und Auswirkungen auf Erkennung sind periodisch zu prüfen und offenzulegen; Standards erlauben keine Umgehung von Datenschutz.",
+      "MFA- beziehungsweise Qualitätsurteile ersetzen keine IVT-Feststellung; Property-Blocking wird ohne Nutzervorgabe nicht vorgeschrieben."
+    ],
+    "caveats": [
+      "Interim-Update vom 24. April 2024; hier keine Prüfung späterer Ablösung.",
+      "Anforderungen an Messanbieter und Auditierung, keine universelle Fraud-Prävalenz."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_extractions/raw/assets/abm-old-playbook-web-2026-09-13/w131-www-mediaratingcouncil-org-2024-ivt-interim-updates-final-pdf.pdf.md"
+  },
+  {
+    "id": "W132",
+    "url": "https://www.mediaratingcouncil.org/standards-and-guidelines",
+    "title": "MRC Standards & Guidelines",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Offizielles Verzeichnis präzisiert Version und unterschiedliche Messstandards.",
+    "key_claims": [
+      "MRC führt getrennte Standards für IVT, Klicks, Impressionen, Viewability und Aufmerksamkeit.",
+      "IVT-Addendum ist Juni 2020, Interim Update April 2024; Attention Guidelines November 2025.",
+      "Mindeststandards umfassen Methodikoffenlegung und operative Qualitätskontrollen."
+    ],
+    "caveats": [
+      "Verzeichnis, nicht Inhalt der verlinkten Standards; keine Detailanforderung aus Titeln ableiten."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E02",
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md",
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w132.json"
+  },
+  {
+    "id": "W133",
+    "url": "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings",
+    "title": "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Direkte Usability-Beobachtungen zur Trennung Auslieferung und Aufmerksamkeit.",
+    "key_claims": [
+      "NN/g beschreibt selektive Aufmerksamkeit: Werbeplatzierung, werbeähnliche Gestaltung und Nähe zu Anzeigen können Ignorieren auslösen.",
+      "Beispiele mit 26 Teilnehmenden zeigen geringe Fixation auf Anzeigen; auf Mobilgeräten können große Inline-Anzeigen dennoch Blicke auffangen.",
+      "Empfiehlt Usabilitytests wichtiger Inhalte und keine Vermischung mit Anzeigen in derselben visuellen Sektion."
+    ],
+    "caveats": [
+      "2018, aufgabenbezogene Usabilitytests; keine universelle Nichtwahrnehmungsquote, B2B-Wirkung oder Nachweis fehlender Markenwirkung; Videos/Bilder nicht separat vollständig geprüft."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w133.json"
+  },
+  {
+    "id": "W134",
+    "url": "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results",
+    "title": "Google users are less likely to click on links when an AI summary appears in the results",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Beobachtete Klickdaten mit transparenter Methodik als Gegenstück zu Prognosen.",
+    "key_claims": [
+      "900 US-Erwachsene teilten Browserdaten März 2025; 68.879 eindeutige Google-Suchen, 12.593 mit KI-Summary in rekonstruierter SERP.",
+      "Traditionelle Resultatklicks: 8% mit versus 15% ohne Summary; Summarylinks 1%; Sessionende 26% versus 16%.",
+      "Längere Fragen erzeugten öfter KI-Summaries."
+    ],
+    "caveats": [
+      "SERPs erst 7.–17. April nacherhoben; Querymix nicht randomisiert; nur erfasste Geräte/Google/USA; Sessionende ab fünf Sekunden; keine kausale oder B2B-Trafficquote."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E15"
+    ],
+    "target_pages": [
+      "wiki/ai-mediated-discovery-readiness-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w134.json"
+  },
+  {
+    "id": "W135",
+    "url": "https://www.raconteur.net/marketing-sales/how-to-change-indecisive-customers-into-buyers",
+    "title": "How do you change indecisive customers into buyers?",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Autorenbericht erläutert No-decision-Nenner und unterschiedliche Ursachen.",
+    "key_claims": [
+      "Dixon nennt für 2,5 Mio. Sales Calls 40–60% No-decision-Verluste im qualifizierten Pipelinebestand eines durchschnittlichen Verkäufers.",
+      "Unterscheidet Präferenz für Status quo von Unentschlossenheit aus Angst vor Fehlern.",
+      "Behauptet, zusätzliche Dringlichkeit/FOMO könne bei bereits veränderungswilligen, zögernden Kunden kontraproduktiv wirken."
+    ],
+    "caveats": [
+      "Meinungskolumne 2023 mit Autorenforschung, ohne vollständige Methodik; keine universelle Quote oder erschöpfende Ursachentaxonomie; psychologisches Trolley-Beispiel nicht als geprüften Befund übernehmen."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E14"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w135.json"
+  },
+  {
+    "id": "W136",
+    "url": "https://www.salesforce.com/blog/sales/demand-generation-vs-lead-generation",
+    "title": "Demand Generation vs. Lead Generation: What’s the Difference?",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Begrifflicher Gegenbeleg zur pauschalen Ersetzung von LeadGen.",
+    "key_claims": [
+      "Beschreibt DemandGen als Interessenaufbau und LeadGen als Identifikation/Qualifizierung mit anschließendem Gespräch.",
+      "Empfiehlt beide Strategien im Zusammenspiel und situationsabhängige Prioritäten."
+    ],
+    "caveats": [
+      "Anbieterdefinition und vereinfachte Funnelbeispiele; inkonsistente Begriffsgrenzen im Text; keine Gate-Wirkungsstudie."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w136.json"
+  },
+  {
+    "id": "W137",
+    "url": "https://www.salesforce.com/blog/sales/sales-velocity",
+    "title": "How to Supercharge Your Sales Velocity for Quicker Wins",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Formelprovenienz plus konkretes Beispiel für erforderliche Einheitenkontrolle.",
+    "key_claims": [
+      "Definiert Sales Velocity als Opportunities × Durchschnittsdealwert × Win Rate / durchschnittliche Zyklusdauer.",
+      "Beispiel rechnet 150 × 1.000 USD × 0,25 / 30 = 1.250 USD pro Tag.",
+      "Empfiehlt qualifizierte Leads, größere Deals und bessere Win Rate als Stellhebel."
+    ],
+    "caveats": [
+      "Fließtext nennt im Beispiel 0,25%, Rechnung nutzt 0,25=25%; Opportunity/Lead-Begriffe vermischt; Kennzahl kein kausaler Umsatzforecast oder Effektbeweis."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E05"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w137.json"
+  },
+  {
+    "id": "W138",
+    "url": "https://www.salesforce.com/marketing/what-is-demand-generation-marketing?bc=OTH",
+    "title": "What is Demand Generation? Strategies & Benefits",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Weitere Anbieterdefinition integriert ausdrücklich Leadgenerierung und Gating.",
+    "key_claims": [
+      "DemandGen umfasst Awareness, Leadgewinnung, Nurturing, Conversion und Lernen aus Ergebnissen.",
+      "Freie Inhalte und freiwillig gegen Kontaktdaten zugängliche Assets werden beide genannt."
+    ],
+    "caveats": [
+      "Verkaufsorientierte Anleitung, keine kausale Wirksamkeitsstudie; gleiche Plattform oder KI sind keine belegten notwendigen Voraussetzungen."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w138.json"
+  },
+  {
+    "id": "W139",
+    "url": "https://www.salesforce.com/sales/win-rate",
+    "title": "What Is A Win Rate In Sales?",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Expliziter Nenner-/Qualifikationsbeleg für Vergleichsgrenzen.",
+    "key_claims": [
+      "Win Rate wird als gewonnene Deals geteilt durch qualifizierte Opportunities im Zeitraum definiert.",
+      "Warnt vor unterschiedlichen Opportunity-Definitionen zwischen Reps und Regeländerungen im Quartal.",
+      "Strengere Eingangsauswahl schafft weniger Opportunities mit höherer erwarteter Abschlussquote."
+    ],
+    "caveats": [
+      "Abgrenzung zu Close Rate ist anbieterspezifisch; AI unterstützte Artikelproduktion offengelegt; keine Kausalwirkung aus höherer Quote; offene/verlorene Kohorten sauber definieren."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E05"
+    ],
+    "target_pages": [
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w139.json"
+  },
+  {
+    "id": "W140",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2040712221000542",
+    "title": "Does cluttered social media environment hurt advertising effectiveness? The moderation of ad types and personalization",
+    "trust_class": "primary",
+    "read_scope": "abstract-only",
+    "value_reason": "Peer-reviewed Abstract begrenzt pauschale Clutter-These auf Format und Personalisierung.",
+    "key_claims": [
+      "Eye-Tracking mit realen Facebook-Accounts untersucht Aufmerksamkeit und Klicks.",
+      "Abstract berichtet Aufmerksamkeitskonkurrenz nicht für alle Formate; Clutter betrifft besonders native Anzeigen.",
+      "Personalisierung wird als aufmerksamkeitsförderlich unabhängig von Clutter beschrieben."
+    ],
+    "caveats": [
+      "Nur Abstract; Stichprobengröße, vollständige Modelle und Effekte fehlen; keine allgemeine B2B-Wirkung; keine Universalempfehlung für Native Ads."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E12"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "partial",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w140.json"
+  },
+  {
+    "id": "W141",
+    "url": "https://www.sei.org/publications/air-pollutants-emissions-methodology-for-the-logistics-sector",
+    "title": "Air pollutant emissions methodology for the logistics sector",
+    "trust_class": "primary",
+    "read_scope": "full-main-text",
+    "value_reason": "Fachliche Fundstelle zu Emissionsrechenmethoden, aber außerhalb ABM-Claims.",
+    "key_claims": [
+      "SEI beschreibt Erweiterung des GLEC-Rahmens um Luftschadstoffe zusätzlich zu Treibhausgasen.",
+      "Nennt NOx, SOx, Feinstaub und Black Carbon über mehrere Verkehrsträger."
+    ],
+    "caveats": [
+      "Nur Veröffentlichungsbeschreibung; Methodik-PDF und aktuelle Standard-/Rechtsbezüge nicht geprüft; kein Buyer-Enablement-Effektbeleg."
+    ],
+    "proposed_decision": "registered-only",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w141.json"
+  },
+  {
+    "id": "W142",
+    "url": "https://www.seismic.com/platform/digital-sales-rooms",
+    "title": "Seismic Digital Sales Rooms",
+    "trust_class": "vendor",
+    "read_scope": "full-main-text",
+    "value_reason": "Zweites technisches Beispiel für gemeinsamen geschützten Entscheidungsraum.",
+    "key_claims": [
+      "DSR bündeln Inhalte, Kommentare, Threads und Fragen für Käuferteams.",
+      "Marketing/Enablement steuern Branding und Content; Engagementmeldungen unterstützen Folgekontakte.",
+      "Zugriffskontrollen ermöglichen Dokumentfreigabe ohne Käufer-Seismic-Account."
+    ],
+    "caveats": [
+      "Produktbeschreibung; Beschleunigung und Konsens nicht experimentell belegt; Engagementmeldungen sind keine Kaufabsichtsbestätigung."
+    ],
+    "proposed_decision": "corroborating",
+    "evidence_patterns": [
+      "E08",
+      "E06"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w142.json"
+  },
+  {
+    "id": "W143",
+    "url": "https://www.smartinsights.com/internet-advertising/internet-advertising-analytics/display-advertising-clickthrough-rates",
+    "title": "2025 update: average ad click through rates (CTRs) for paid search, display and social media",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Wichtige Datierungsprüfung: aktualisierter Titel enthält viele alte Benchmarks.",
+    "key_claims": [
+      "Autor bezeichnet 0,05% Display-CTR ausdrücklich als vor 2015 erhobene Doubleclick-Daten.",
+      "Ländertabelle stammt aus 2009, publiziert 2010; Social-Vergleiche teils Q1 2020.",
+      "Unterscheidet Klicks und weitere Anzeigeninteraktionen und weist auf mögliche Nichtklickwirkung hin."
+    ],
+    "caveats": [
+      "Sekundärkompilation; Titel 2025 und Abschnitt 2024 machen Zahlen nicht aktuell; Ausgabenvolumen ist kein Wirkungsbeweis; keine repräsentative heutige B2B-CTR."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E12",
+      "E02"
+    ],
+    "target_pages": [
+      "wiki/full-funnel-media-role-and-evidence-map.md",
+      "wiki/campaign-reporting-and-operations.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w143.json"
+  },
+  {
+    "id": "W144",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/02650487.2026.2624918",
+    "title": "The carousel effect: leveraging sideways swiping for enhanced ad effectiveness in social media",
+    "trust_class": "primary",
+    "read_scope": "blocked",
+    "value_reason": "Capture enthält nur UI-Elemente; keine semantische Review möglich.",
+    "key_claims": [],
+    "caveats": [
+      "Weder Abstract noch Haupttext vorhanden; HTTP-Erfolg nicht Inhaltszugang.",
+      "Titel/DOI durch Crossref-Metadaten bestätigt; kein Abstract vorhanden, keine Effektbehauptungen."
+    ],
+    "proposed_decision": "blocked",
+    "evidence_patterns": [],
+    "target_pages": [],
+    "canonical_duplicate_of": null,
+    "content_quality": "access-wall",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w144.json"
+  },
+  {
+    "id": "W145",
+    "url": "https://www.thequota.co/articles/an-interview-with-mathew-dixon-author-of-the-challenger-sale-and-the-jolt-effect",
+    "title": "An interview with Mathew Dixon, author of The Challenger Sale and The JOLT Effect",
+    "trust_class": "practitioner",
+    "read_scope": "full-main-text",
+    "value_reason": "Autoreninterview beschreibt Datensammlung und JOLT-Handlungen mit konkreten Beispielen.",
+    "key_claims": [
+      "Dixon beschreibt mehrere Dutzend Unternehmen und 2,5 Mio. aufgezeichnete, transkribierte, maschinell analysierte Sales Calls im Pandemieumfeld.",
+      "Drei Unentschlossenheitsgründe: falsche Auswahl, ungenügende Recherche, ungewisser Nutzen.",
+      "JOLT: Grad beurteilen, Empfehlung geben, Erkundung begrenzen, Risiko reduzieren; Beispiele umfassen passende Basisversion und ehrliche Integrationsgrenzen."
+    ],
+    "caveats": [
+      "Gekürztes Interview 2022, kein vollständiges Forschungsprotokoll; Quoten 40–60%, 84%, 90% nicht universell; Diagnose darf begründetes Nichtkaufen/Budget/Passung nicht verdrängen; Recherchebegrenzung nicht Informationsvorenthaltung."
+    ],
+    "proposed_decision": "extended-claim",
+    "evidence_patterns": [
+      "E14"
+    ],
+    "target_pages": [
+      "wiki/buyer-question-coverage-checklist.md"
+    ],
+    "canonical_duplicate_of": null,
+    "content_quality": "usable",
+    "capture_path": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w145.json"
+  }
+]

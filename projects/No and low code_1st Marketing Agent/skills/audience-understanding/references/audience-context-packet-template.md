@@ -1,5 +1,7 @@
 # Audience Context Packet Template
 
+Optional Taste additions: [source review and adoption boundaries](../../../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md). Existing evidence and stage rules remain authoritative.
+
 ```markdown
 # [Company/Product] Audience Understanding Packet
 
@@ -78,6 +80,11 @@ Validation:
 - Evidence missing:
 - Interview/sales/support questions:
 - Analytics/search/CRM signals:
+
+Optional content-context aid (HubSpot Taste adaptation, user-approved 2026-09-23):
+- Trust barriers: specific claim, wording, proof type or format; observed response; role/situation; source/date; evidence or hypothesis. Do not generalize one quote into an audience-wide preference.
+- Real customer situation: role, occasion, task, constraint and question; source/date; observed or explicitly hypothetical. Do not invent a lived scene, emotion or quote. This describes context, not a finished hook.
+- Unknown is an acceptable result; omit irrelevant fields. This aid does not establish content effectiveness.
 
 ## Cross-Segment Patterns
 

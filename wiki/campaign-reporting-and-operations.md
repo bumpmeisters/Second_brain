@@ -2,6 +2,7 @@
 type: concept
 status: active
 sources:
+  - research/2026-09-13-b2b-lead-management-diskurs.md
   - raw/Clippings/Navigating the Fog Making Sense of Attribution, Demand, and AI.md
   - raw/Clippings/How to plan long term marketing and sales programs.md
   - raw/assets/08_Reporting_und_Ops
@@ -12,7 +13,7 @@ sources:
   - raw/Clippings/How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md
   - raw/imports/automated-clippings/youtube/UCGtXqPiNV8YC0GMUzY-EUFg/2026-08-04--9zBThLCpPh4.md
 created: 2026-06-03
-updated: 2026-08-16
+updated: 2026-09-13
 ---
 
 # Campaign Reporting and Operations
@@ -38,6 +39,14 @@ The post-July-7 bundle sharpens the metric shift from activity volume to account
 Reporting should keep observation, inference, and attribution separate. A signal is observed activity; buying stage or priority is inferred; opportunity influence shows association; causal attribution requires stronger comparison evidence (source: Signals are inputs. Contextual intelligence is the advantage.md; source: How to build ABM that drives real pipeline (not just awareness) (Episode 56).md).
 
 ## Attribution as a decision service
+
+### Fehlende Rückkopplung kann Fehlsteuerung stabilisieren
+
+In B2B-Kampagnen können sich Übersetzungsverluste zwischen strategischer und technischer Zielgruppe, Optimierung auf geschäftlich schwache Ersatzgrößen und fehlende Rückmeldung zur tatsächlichen Qualität gegenseitig verstärken. Die Organisation verbessert dann möglicherweise ihre berichteten Ergebnisse, ohne ihren wirtschaftlichen Beitrag zu verbessern. Ob dieser Mechanismus vorliegt, muss anhand der konkreten Planung, Auslieferung und Folgeergebnisse geprüft werden. Das ist die freigegebene bedingte Synthese des [[b2b-lead-management-diskurs-2026-09-13]], kein Nachweis ihrer Verbreitung oder allgemeiner Unwirtschaftlichkeit. (source: research/2026-09-13-b2b-lead-management-diskurs.md)
+
+Reporting deshalb nach getrennten Qualitätsfragen lesen: Ist eine Aktivität gültig? Stammt sie von einer geschäftlich relevanten Person oder Organisation? Welche Rolle und Kaufrelevanz sind tatsächlich bekannt? Welches Folgeergebnis wurde beobachtet, und lässt es einen wirtschaftlichen Schluss zu? Echte Mitarbeiter-/Affiliate-Reaktionen nicht mit Bots gleichsetzen oder ungeprüft als Zielmarktresonanz zählen. Allgemeine Bot-Webtraffic-Quoten nicht auf Werbeklicks, Profile oder eine einzelne Audience übertragen. (source: research/2026-09-13-b2b-lead-management-diskurs.md)
+
+CPM, Klicks und Engagement sind verwendbare Betriebskennzahlen; problematisch wird ihre Verwendung als unzureichender Ersatz für das Geschäftsziel. Für jede Erfolgsinterpretation eine mögliche widerlegende Folgebeobachtung, einen Review-Zeitpunkt und eine verantwortliche Person benennen. Die sieben Fragen in [[full-funnel-media-role-and-evidence-map]] verbinden diese Rückmeldung mit Briefing, Targeting und Budgetentscheidung. Fehlende Daten bedeuten eingeschränkte Beurteilbarkeit, nicht bewiesene Wirkungslosigkeit. Auch nachträglich behauptete Awareness oder ein neuer Account-Engagement-Score ersetzen keinen passenden Nachweis. (source: research/2026-09-13-b2b-lead-management-diskurs.md)
 
 Define attribution and campaign reporting by the decisions they must support: what to stop, continue, test, or fund more heavily. For each reporting view, name the decision owner, decision cadence, evidence required, and action threshold. This keeps measurement connected to resource allocation instead of letting it collapse into an internal contest for channel or team credit (source: Navigating the Fog Making Sense of Attribution, Demand, and AI.md; mixed practitioner interview).
 
@@ -70,6 +79,16 @@ The scorecard and review decision are specified in [[partner-marketing-pilot-and
 For long-cycle accounts, report an observable state inventory, normalized events, transition counts, dwell-time ranges, confidence limits, and a stagnation list. Compare changes against a locally derived baseline and reopen diagnosis when definitions, data sources, market conditions, or sales motions change. Keep observed event, inferred state, commercial outcome, and causal attribution as separate fields (source: How ex-Google group marketing manager increased SQLs from 35% to 85% in one year.md; transcript anchors 23:16-28:40 and 39:07-46:39; analysis: [[account-progression-baseline-and-velocity-loop]]).
 
 Historical movement supports bounded planning but does not prove campaign effect or justify linear long-range forecasts.
+## Messdefinitionen vor dem Vergleich fixieren
+
+**Gültigkeit und Filterstufe (P56-E02).** Für jede Quote Ereignis, Population, Zeitraum, Zähler, Nenner und Filterstufe dokumentieren. Das MRC-Interim-Update von 2024 unterscheidet unbekannte Gültigkeit von valide/invalid: fehlende Erkennung darf nicht als gültiger Traffic zählen. Google unterscheidet vor Abrechnung gefilterte Aktivität von späteren Gutschriften; auch ein gefilterter Anzeigenklick kann noch eine Website oder ein Formular erreichen. Daher Werbeabrechnung, technische Trafficprüfung und Leadvalidierung separat führen. Weder eine globale Botquote noch eine Drittanbieter-Stichprobe misst den Verlust der eigenen Kampagne. (source: raw/assets/abm-old-playbook-web-2026-09-13/w131-www-mediaratingcouncil-org-2024-ivt-interim-updates-final-pdf.pdf; source: raw/imports/abm-old-playbook-web-2026-09-13/w066-support-google-com-11182074.md; Betreiberdefinition, keine Vollständigkeitsgarantie)
+
+**Einheiten, Kohorten und Regeln (P56-E05).** Bei einem Wechsel von MQL zu MQA oder späterer Qualifikation Conversion und Velocity nur mit offengelegten Einheiten, Eintrittszeitpunkten, Reife der Kohorte, Qualifikationsregeln und zugeordneten Kosten vergleichen. Demandbase dokumentiert konfigurierbare Ausschlüsse von Recycle/Disqualified aus Volume-, Velocity- und Conversionmetriken sowie Haltefristen für Status. Ein höherer Wert nach einer Regeländerung kann deshalb eine veränderte Messpopulation abbilden. Vorher-/Nachher-Werte mit unterschiedlichen Regeln nicht als Wirksamkeitsnachweis ausgeben. (source: raw/imports/abm-old-playbook-web-2026-09-13/w073-www-demandbase-com-account-journey-setup-best-practices.md; methodische Ableitung, keine allgemeine Effektschätzung)
+
+**Formular, Identifikation und Attribution (P56-E13).** Formularquote, Account-Matchrate, Personenidentität, Trafficquelle und beobachteter Anteil einer Journey benötigen eigene Definitionen. Die 6sense-API definiert ihre Matchrate über API-Aufrufe, nicht über vollständige Käuferreisen; Matchrate ist zudem nicht Präzision. Aus „kein Formular“ folgt weder „unbekannter Account“ noch „unsichtbare Kaufentscheidung“. Direkter Traffic, Zuordnung und Einfluss nicht automatisch kausal gutschreiben. (source: raw/imports/abm-old-playbook-web-2026-09-13/w063-support-6sense-com-company-identification-api-faq.md; ergänzend Quellennotiz W001 in [[old-marketing-playbook-web-sources-2026-09-13]])
+
+Diese Ergänzungen operationalisieren die [P56-Evidenzmatrix](_outputs/semantic-ingest/p56/evidence-matrix.csv); Quellen mit Abstract-/Teilzugang und Anbieterinteresse bleiben in den Einzelnotizen eingeschränkt. Der Messvertrag soll Fehlinterpretationen sichtbar machen, keine fehlenden Erfolgsdaten ersetzen.
+
 ## Reusable practices
 
 - [[niche-sponsorship-portfolio-experiment]]

@@ -10,6 +10,7 @@ The goal is not to create fictional personas. The goal is to explain what select
 
 | Framework | Primary contribution | Strongest use |
 |---|---|---|
+| [Buying-Role Persona Analysis](buying-role-persona-analysis.md), v0.1.0 / draft | Rollen nach Befugnis, Handlung und Anliegen prüfen; nur bei relevanten Informationsunterschieden Persona-Arbeitstypen bilden. | Abgegrenzter Leistungs-/Marktkontext; Dokumente plus sichtbare Hypothesen möglich. Risiko: Rollenliste als Käuferwahrheit. Kompatibel mit K1/B2B Buying Committee; Five Rings nur mit realen Kaufberichten, kein Ersatz durch Proto-Personas. |
 | [Crestodina Question-Driven Audience Analysis](crestodina-question-driven-audience-analysis.md) | Structured open questions plus audience/content gap analysis. | B2B services, websites, content, conversion, AI-assisted exploration. |
 | [Five Rings Of Buying Insight](five-rings-buying-insight.md) | Causal reconstruction of real buying decisions. | B2B and high-consideration decisions. |
 | [Voice Of Customer Language Mining](voice-of-customer-language-mining.md) | Exact audience language, objections, outcomes, comparisons, and proof phrases. | Landing pages, SEO/GEO, email, ads, PDPs, sales language. |
@@ -20,6 +21,8 @@ The goal is not to create fictional personas. The goal is to explain what select
 | [JTBD Demand-Side Understanding](jtbd-demand-side-understanding.md) | Progress sought, circumstances, switching forces, job steps, and desired outcomes. | B2C, D2C, product/service switching, category alternatives. |
 
 ## Default Lens Tournament
+
+**Scoped role-persona work:** The new draft can start from an explicitly agreed offering/market scope before strategic segment selection when that is the task. It produces research questions and labeled working hypotheses. This is an explicit optional branch, not a requirement to load every lens or a silent change to older framework prerequisites.
 
 Compare at least three candidates:
 

@@ -11,6 +11,7 @@ use_when: "An existing draft or expression route is weak, generic, off-voice, st
 avoid_when: "The content core, audience, evidence, rights, or publication authority is unresolved; the task is idea discovery rather than draft refinement; or similarity to another creator is being used as the quality goal."
 output: "A versioned refinement record containing the failure diagnosis, immutable core, annotated reference pack, per-dimension findings, compared variants, human choice and reasons, unresolved issues, and an accept, revise, route-upstream, or stop decision."
 sources:
+  - "raw/Clippings/Train Your AI to Write Like a Human With Just 3 Files.md"
   - wiki/riley-brown-reference-comparison-content-loops-source-summary.md
   - wiki/content-quality.md
   - wiki/creative-prompting-for-marketing.md
@@ -23,7 +24,7 @@ sources:
   - https://arxiv.org/abs/2306.05685
   - https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/kit-rubrics-refinement-workflow
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-10-07
 ---
 
 # Reference-Calibrated Content Refinement Loop
@@ -123,7 +124,7 @@ Use `pass`, `revise`, `block`, or `unknown` by dimension. Do not average the dim
 - craft and channel expression;
 - human ownership.
 
-The canonical [[editorial-quality-rubric]] controls these dimensions and their authority. When shareability and Onlyness are relevant, use the review in [[content-quality]] as one module, not as the whole quality model; the `content-taste` skill may facilitate it when available.
+The canonical [[projects/content-operating-system/frameworks/execution/editorial-quality-rubric|editorial-quality-rubric]] controls these dimensions and their authority. When shareability and Onlyness are relevant, use the review in [[content-quality]] as one module, not as the whole quality model; the `content-taste` skill may facilitate it when available.
 
 ### 5. Generate divergent repairs
 
@@ -328,3 +329,9 @@ Use either request:
 - [[agent-evaluation]]
 - [[reusable-practices-library]]
 - [[reusable-practices-router]]
+
+## Creator, Audience und Taste getrennt kalibrieren
+
+Eigene Schreibbeispiele, Audience-Evidenz und menschliche Qualitätskriterien als getrennte Eingaben verdichten. Einmalige virale Ausreißer nicht automatisch als wiederverwendbaren Stil auswählen. Wunschleser sind Hypothesen; Kommentare und externe Recherche bleiben eigenständige Evidenzarten und sind keine repräsentative Audience-Probe. Gute Beispiele mit menschlichen Gründen annotieren und den ersten Entwurf ausdrücklich gegen diese Kriterien prüfen. Das präzisiert den vorhandenen Referenzloop, ohne drei neue Pflichtdateien oder ein paralleles Creative OS einzuführen. Fremde Texte nicht imitieren; vermeintliche AI-Kommentarerkennung nicht als zuverlässigen Filter nutzen. (source: raw/Clippings/Train Your AI to Write Like a Human With Just 3 Files.md; practitioner; Analyse P60-C10; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].

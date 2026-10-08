@@ -1,0 +1,1330 @@
+<!DOCTYPE html><html lang="en-US" class=" lsow-supports lsow-no-touchevents lsow-flexbox lsow-flexboxlegacy lsow-csstransforms lsow-csstransforms3d"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+img.wp-smiley, img.emoji { display: inline !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0px 0.07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0px !important; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --wp-block-synced-color: #7a00df; --wp-block-synced-color--rgb: 122,0,223; --wp-bound-block-color: var(--wp-block-synced-color); --wp-editor-canvas-background: #ddd; --wp-admin-theme-color: #007cba; --wp-admin-theme-color--rgb: 0,124,186; --wp-admin-theme-color-darker-10: #006ba1; --wp-admin-theme-color-darker-10--rgb: 0,107,160.5; --wp-admin-theme-color-darker-20: #005a87; --wp-admin-theme-color-darker-20--rgb: 0,90,135; --wp-admin-border-width-focus: 2px; }
+
+@media (min-resolution: 192dpi) {
+  :root { --wp-admin-border-width-focus: 1.5px; }
+}
+
+.wp-element-button { cursor: pointer; }
+
+:root .has-very-light-gray-background-color { background-color: rgb(238, 238, 238); }
+
+:root .has-very-dark-gray-background-color { background-color: rgb(49, 49, 49); }
+
+:root .has-very-light-gray-color { color: rgb(238, 238, 238); }
+
+:root .has-very-dark-gray-color { color: rgb(49, 49, 49); }
+
+:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background { background: linear-gradient(135deg, rgb(0, 208, 132), rgb(6, 147, 227)); }
+
+:root .has-purple-crush-gradient-background { background: linear-gradient(135deg, rgb(52, 226, 228), rgb(71, 33, 251) 50%, rgb(171, 29, 254)); }
+
+:root .has-hazy-dawn-gradient-background { background: linear-gradient(135deg, rgb(250, 172, 168), rgb(218, 208, 236)); }
+
+:root .has-subdued-olive-gradient-background { background: linear-gradient(135deg, rgb(250, 250, 225), rgb(103, 166, 113)); }
+
+:root .has-atomic-cream-gradient-background { background: linear-gradient(135deg, rgb(253, 215, 154), rgb(0, 74, 89)); }
+
+:root .has-nightshade-gradient-background { background: linear-gradient(135deg, rgb(51, 9, 104), rgb(49, 205, 207)); }
+
+:root .has-midnight-gradient-background { background: linear-gradient(135deg, rgb(2, 3, 129), rgb(40, 116, 252)); }
+
+:root { --wp--preset--font-size--normal: 16px; --wp--preset--font-size--huge: 42px; }
+
+.has-regular-font-size { font-size: 1em; }
+
+.has-larger-font-size { font-size: 2.625em; }
+
+.has-normal-font-size { font-size: var(--wp--preset--font-size--normal); }
+
+.has-huge-font-size { font-size: var(--wp--preset--font-size--huge); }
+
+:root .has-text-align-center { text-align: center; }
+
+:root .has-text-align-left { text-align: left; }
+
+:root .has-text-align-right { text-align: right; }
+
+.has-fit-text { white-space: nowrap !important; }
+
+#end-resizable-editor-section { display: none; }
+
+.aligncenter { clear: both; }
+
+.items-justified-left { justify-content: flex-start; }
+
+.items-justified-center { justify-content: center; }
+
+.items-justified-right { justify-content: flex-end; }
+
+.items-justified-space-between { justify-content: space-between; }
+
+.screen-reader-text { border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; overflow-wrap: normal !important; }
+
+.screen-reader-text:focus { background-color: rgb(221, 221, 221); clip-path: none; color: rgb(68, 68, 68); display: block; font-size: 1em; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+
+html :where(.has-border-color) { border-style: solid; }
+
+html :where([style*="border-color"]) { border-style: solid; }
+
+html :where([style*="border-top-color"]) { border-top-style: solid; }
+
+html :where([style*="border-right-color"]) { border-right-style: solid; }
+
+html :where([style*="border-bottom-color"]) { border-bottom-style: solid; }
+
+html :where([style*="border-left-color"]) { border-left-style: solid; }
+
+html :where([style*="border-width"]) { border-style: solid; }
+
+html :where([style*="border-top-width"]) { border-top-style: solid; }
+
+html :where([style*="border-right-width"]) { border-right-style: solid; }
+
+html :where([style*="border-bottom-width"]) { border-bottom-style: solid; }
+
+html :where([style*="border-left-width"]) { border-left-style: solid; }
+
+html :where(img[class*="wp-image-"]) { height: auto; max-width: 100%; }
+
+:where(figure) { margin: 0px 0px 1em; }
+
+html :where(.is-position-sticky) { --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height,0px); }
+
+@media screen and (max-width: 600px) {
+  html :where(.is-position-sticky) { --wp-admin--admin-bar--position-offset: 0px; }
+}</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.wp-block-button__link { color: rgb(255, 255, 255); background-color: rgb(50, 55, 60); border-radius: 9999px; box-shadow: none; text-decoration: none; padding: calc(0.667em + 2px) calc(1.333em + 2px); font-size: 1.125em; }
+
+.wp-block-file__button { background: rgb(50, 55, 60); color: rgb(255, 255, 255); text-decoration: none; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+:root { --wp--preset--aspect-ratio--square: 1; --wp--preset--aspect-ratio--4-3: 4/3; --wp--preset--aspect-ratio--3-4: 3/4; --wp--preset--aspect-ratio--3-2: 3/2; --wp--preset--aspect-ratio--2-3: 2/3; --wp--preset--aspect-ratio--16-9: 16/9; --wp--preset--aspect-ratio--9-16: 9/16; --wp--preset--color--black: #000000; --wp--preset--color--cyan-bluish-gray: #abb8c3; --wp--preset--color--white: #ffffff; --wp--preset--color--pale-pink: #f78da7; --wp--preset--color--vivid-red: #cf2e2e; --wp--preset--color--luminous-vivid-orange: #ff6900; --wp--preset--color--luminous-vivid-amber: #fcb900; --wp--preset--color--light-green-cyan: #7bdcb5; --wp--preset--color--vivid-green-cyan: #00d084; --wp--preset--color--pale-cyan-blue: #8ed1fc; --wp--preset--color--vivid-cyan-blue: #0693e3; --wp--preset--color--vivid-purple: #9b51e0; --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%); --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%); --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%); --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%); --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%); --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%); --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%); --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%); --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%); --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%); --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%); --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%); --wp--preset--font-size--small: 13px; --wp--preset--font-size--medium: 20px; --wp--preset--font-size--large: 36px; --wp--preset--font-size--x-large: 42px; --wp--preset--spacing--20: 0.44rem; --wp--preset--spacing--30: 0.67rem; --wp--preset--spacing--40: 1rem; --wp--preset--spacing--50: 1.5rem; --wp--preset--spacing--60: 2.25rem; --wp--preset--spacing--70: 3.38rem; --wp--preset--spacing--80: 5.06rem; --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2); --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4); --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2); --wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0); --wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0); }
+
+:where(body) { margin: 0px; }
+
+:where(.is-layout-flex) { gap: 0.5em; }
+
+:where(.is-layout-grid) { gap: 0.5em; }
+
+body .is-layout-flex { display: flex; }
+
+.is-layout-flex { flex-wrap: wrap; align-items: center; }
+
+.is-layout-flex > :is(*, div) { margin: 0px; }
+
+body .is-layout-grid { display: grid; }
+
+.is-layout-grid > :is(*, div) { margin: 0px; }
+
+body { padding: 0px; }
+
+:root :where(.wp-element-button, .wp-block-button__link) { background-color: rgb(50, 55, 60); border-width: 0px; color: rgb(255, 255, 255); font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; padding: calc(0.667em + 2px) calc(1.333em + 2px); text-decoration: none; text-transform: inherit; }
+
+.has-black-color { color: var(--wp--preset--color--black) !important; }
+
+.has-cyan-bluish-gray-color { color: var(--wp--preset--color--cyan-bluish-gray) !important; }
+
+.has-white-color { color: var(--wp--preset--color--white) !important; }
+
+.has-pale-pink-color { color: var(--wp--preset--color--pale-pink) !important; }
+
+.has-vivid-red-color { color: var(--wp--preset--color--vivid-red) !important; }
+
+.has-luminous-vivid-orange-color { color: var(--wp--preset--color--luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-amber-color { color: var(--wp--preset--color--luminous-vivid-amber) !important; }
+
+.has-light-green-cyan-color { color: var(--wp--preset--color--light-green-cyan) !important; }
+
+.has-vivid-green-cyan-color { color: var(--wp--preset--color--vivid-green-cyan) !important; }
+
+.has-pale-cyan-blue-color { color: var(--wp--preset--color--pale-cyan-blue) !important; }
+
+.has-vivid-cyan-blue-color { color: var(--wp--preset--color--vivid-cyan-blue) !important; }
+
+.has-vivid-purple-color { color: var(--wp--preset--color--vivid-purple) !important; }
+
+.has-black-background-color { background-color: var(--wp--preset--color--black) !important; }
+
+.has-cyan-bluish-gray-background-color { background-color: var(--wp--preset--color--cyan-bluish-gray) !important; }
+
+.has-white-background-color { background-color: var(--wp--preset--color--white) !important; }
+
+.has-pale-pink-background-color { background-color: var(--wp--preset--color--pale-pink) !important; }
+
+.has-vivid-red-background-color { background-color: var(--wp--preset--color--vivid-red) !important; }
+
+.has-luminous-vivid-orange-background-color { background-color: var(--wp--preset--color--luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-amber-background-color { background-color: var(--wp--preset--color--luminous-vivid-amber) !important; }
+
+.has-light-green-cyan-background-color { background-color: var(--wp--preset--color--light-green-cyan) !important; }
+
+.has-vivid-green-cyan-background-color { background-color: var(--wp--preset--color--vivid-green-cyan) !important; }
+
+.has-pale-cyan-blue-background-color { background-color: var(--wp--preset--color--pale-cyan-blue) !important; }
+
+.has-vivid-cyan-blue-background-color { background-color: var(--wp--preset--color--vivid-cyan-blue) !important; }
+
+.has-vivid-purple-background-color { background-color: var(--wp--preset--color--vivid-purple) !important; }
+
+.has-black-border-color { border-color: var(--wp--preset--color--black) !important; }
+
+.has-cyan-bluish-gray-border-color { border-color: var(--wp--preset--color--cyan-bluish-gray) !important; }
+
+.has-white-border-color { border-color: var(--wp--preset--color--white) !important; }
+
+.has-pale-pink-border-color { border-color: var(--wp--preset--color--pale-pink) !important; }
+
+.has-vivid-red-border-color { border-color: var(--wp--preset--color--vivid-red) !important; }
+
+.has-luminous-vivid-orange-border-color { border-color: var(--wp--preset--color--luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-amber-border-color { border-color: var(--wp--preset--color--luminous-vivid-amber) !important; }
+
+.has-light-green-cyan-border-color { border-color: var(--wp--preset--color--light-green-cyan) !important; }
+
+.has-vivid-green-cyan-border-color { border-color: var(--wp--preset--color--vivid-green-cyan) !important; }
+
+.has-pale-cyan-blue-border-color { border-color: var(--wp--preset--color--pale-cyan-blue) !important; }
+
+.has-vivid-cyan-blue-border-color { border-color: var(--wp--preset--color--vivid-cyan-blue) !important; }
+
+.has-vivid-purple-border-color { border-color: var(--wp--preset--color--vivid-purple) !important; }
+
+.has-vivid-cyan-blue-to-vivid-purple-gradient-background { background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important; }
+
+.has-light-green-cyan-to-vivid-green-cyan-gradient-background { background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important; }
+
+.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background { background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important; }
+
+.has-luminous-vivid-orange-to-vivid-red-gradient-background { background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important; }
+
+.has-very-light-gray-to-cyan-bluish-gray-gradient-background { background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important; }
+
+.has-cool-to-warm-spectrum-gradient-background { background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important; }
+
+.has-blush-light-purple-gradient-background { background: var(--wp--preset--gradient--blush-light-purple) !important; }
+
+.has-blush-bordeaux-gradient-background { background: var(--wp--preset--gradient--blush-bordeaux) !important; }
+
+.has-luminous-dusk-gradient-background { background: var(--wp--preset--gradient--luminous-dusk) !important; }
+
+.has-pale-ocean-gradient-background { background: var(--wp--preset--gradient--pale-ocean) !important; }
+
+.has-electric-grass-gradient-background { background: var(--wp--preset--gradient--electric-grass) !important; }
+
+.has-midnight-gradient-background { background: var(--wp--preset--gradient--midnight) !important; }
+
+.has-small-font-size { font-size: var(--wp--preset--font-size--small) !important; }
+
+.has-medium-font-size { font-size: var(--wp--preset--font-size--medium) !important; }
+
+.has-large-font-size { font-size: var(--wp--preset--font-size--large) !important; }
+
+.has-x-large-font-size { font-size: var(--wp--preset--font-size--x-large) !important; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.feedzy-rss-link-icon::after { content: url("https://buyerpersona.com/wp-content/plugins/feedzy-rss-feeds/img/external-link.png"); margin-left: 3px; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+#pgc-24410-0-0 { width: calc(70% - 9px); }
+
+#pgc-24410-0-1 { width: calc(30% - 21px); }
+
+#pl-24410 #panel-24410-0-1-0, #pl-24410 #panel-24410-0-1-1, #pl-24410 #panel-24410-0-1-2, #pl-24410 #panel-24410-0-1-3 { margin: 0px 0px 20px; }
+
+#pl-24410 .so-panel, #pl-24410 .so-panel:last-of-type { margin-bottom: 0px; }
+
+#pg-24410-0 > .panel-row-style { border-top: 2px solid rgb(231, 231, 231); }
+
+#pg-24410-0.panel-has-style > .panel-row-style, #pg-24410-0.panel-no-style { align-items: stretch; }
+
+#pgc-24410-0-0 > .panel-cell-style { padding: 30px 40px 30px 0px; }
+
+#pgc-24410-0-0, #pgc-24410-0-1 { align-self: auto; }
+
+#pgc-24410-0-1 > .panel-cell-style { background-color: rgb(243, 243, 243); padding: 30px; }
+
+#panel-24410-0-1-2 > .panel-widget-style { background-color: rgb(243, 245, 248); border: 1px solid rgb(222, 222, 222); padding: 30px; text-align: center; }
+
+#panel-24410-0-1-3 > .panel-widget-style { background-color: rgb(243, 245, 248); background-image: url("https://buyerpersona.com/wp-content/uploads/2018/10/BPI-Blog_03.jpg"); background-position: 50% 0px; background-repeat: no-repeat; border: 1px solid rgb(222, 222, 222); padding: 150px 30px 30px; text-align: center; background-size: contain; }
+
+#panel-24410-0-1-4 > .panel-widget-style { background-color: rgb(163, 38, 13); background-image: url("https://buyerpersona.com/wp-content/uploads/2018/10/BPI-Blog_06.png"); background-position: 50% 0px; background-repeat: no-repeat; border: 1px solid rgb(222, 222, 222); padding: 150px 30px 30px; text-align: center; background-size: contain; color: rgb(255, 255, 255) !important; }
+
+@media (max-width: 730px) {
+  #pg-24410-0.panel-no-style, #pg-24410-0.panel-has-style > .panel-row-style, #pg-24410-0 { flex-direction: column; }
+  #pg-24410-0 > .panel-grid-cell, #pg-24410-0 > .panel-row-style > .panel-grid-cell { width: 100%; margin-right: 0px; }
+  #pgc-24410-0-0, #pl-24410 .panel-grid .panel-grid-cell-mobile-last { margin-bottom: 0px; }
+  #pl-24410 .panel-grid-cell { padding: 0px; }
+  #pg-24410-0 .panel-grid-cell-empty { display: none; }
+  #panel-24410-0-1-0 > .panel-widget-style, #panel-24410-0-1-1 > .panel-widget-style { padding: 0px 0px 20px; }
+  #panel-24410-0-1-3 > .panel-widget-style, #panel-24410-0-1-4 > .panel-widget-style { padding: 30px; background-image: none; }
+}</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.hs-form label { font-weight: bold; }
+
+.hs-form input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]), .hs-form select { font-size: inherit; font-family: inherit; padding: 5px 4px; letter-spacing: normal; }
+
+.hs-form input, .hs-form select, .hs-form textarea { margin-top: 8px; }
+
+.hs-form .hs-input:not(input[type="checkbox"]):not(input[type="radio"]) { width: 100% !important; }
+
+.hs-form input[type="checkbox"], .hs-form input[type="radio"] { margin-right: 5px; }
+
+.hs-form li[role="checkbox"], .hs-form li[role="radio"] { margin-bottom: 5px; }
+
+.hs-form ul { padding-left: 0px; }
+
+.hs-form ul > li::before { content: none; }
+
+.hs-form .hs-form-field { margin-top: 16px; }
+
+.hs-form input[type="submit"] { background: rgb(238, 95, 95); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px 0px; height: 40px; color: rgb(255, 255, 255); font-family: "PT Sans"; font-size: 14px; font-style: normal; font-weight: 700; line-height: 21px; text-transform: uppercase; }
+
+input.hs-button.primary.large { width: auto !important; margin-top: 32px; }
+
+.hs-form .hs-error-msg { font-size: 12px; font-weight: normal; color: rgb(207, 46, 46); }
+
+.hs-form .hs-error-msgs li { margin-bottom: 5px; }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.cky-overlay { background: rgb(0, 0, 0); opacity: 0.4; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 99999999; }
+
+.cky-hide { display: none; }
+
+.cky-btn-revisit-wrapper { display: flex; align-items: center; justify-content: center; background: rgb(0, 86, 167); width: 45px; height: 45px; border-radius: 50%; position: fixed; z-index: 999999; cursor: pointer; }
+
+.cky-revisit-bottom-left { bottom: 15px; left: 15px; }
+
+.cky-revisit-bottom-right { bottom: 15px; right: 15px; }
+
+.cky-btn-revisit-wrapper .cky-btn-revisit { display: flex; align-items: center; justify-content: center; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; position: relative; margin: 0px; padding: 0px; }
+
+.cky-btn-revisit-wrapper .cky-btn-revisit img { max-width: fit-content; margin: 0px; height: 30px; width: 30px; }
+
+.cky-revisit-bottom-left:hover::before { content: attr(data-tooltip); position: absolute; background: rgb(78, 75, 102); color: rgb(255, 255, 255); left: calc(100% + 7px); font-size: 12px; line-height: 16px; width: max-content; padding: 4px 8px; border-radius: 4px; }
+
+.cky-revisit-bottom-left:hover::after { position: absolute; content: ""; border-width: 5px 5px 5px 0px; border-style: solid; border-color: transparent rgb(78, 75, 102) transparent transparent; border-image: none; left: calc(100% + 2px); }
+
+.cky-revisit-bottom-right:hover::before { content: attr(data-tooltip); position: absolute; background: rgb(78, 75, 102); color: rgb(255, 255, 255); right: calc(100% + 7px); font-size: 12px; line-height: 16px; width: max-content; padding: 4px 8px; border-radius: 4px; }
+
+.cky-revisit-bottom-right:hover::after { position: absolute; content: ""; border-width: 5px 0px 5px 5px; border-style: solid; border-color: transparent transparent transparent rgb(78, 75, 102); border-image: none; right: calc(100% + 2px); }
+
+.cky-revisit-hide { display: none; }
+
+.cky-consent-container { position: fixed; width: 440px; box-sizing: border-box; z-index: 9999999; border-radius: 6px; }
+
+.cky-consent-container .cky-consent-bar { background: rgb(255, 255, 255); border: 1px solid; padding: 20px 26px; box-shadow: rgba(172, 171, 171, 0.3) 0px -1px 10px 0px; border-radius: 6px; }
+
+.cky-box-bottom-left { bottom: 40px; left: 40px; }
+
+.cky-box-bottom-right { bottom: 40px; right: 40px; }
+
+.cky-box-top-left { top: 40px; left: 40px; }
+
+.cky-box-top-right { top: 40px; right: 40px; }
+
+.cky-custom-brand-logo-wrapper .cky-custom-brand-logo { width: 100px; height: auto; margin: 0px 0px 12px; }
+
+.cky-notice .cky-title { color: rgb(33, 33, 33); font-weight: 700; font-size: 18px; line-height: 24px; margin: 0px 0px 12px; word-break: break-word; }
+
+.cky-notice-des *, .cky-preference-content-wrapper *, .cky-dma-content-wrapper *, .cky-accordion-header-des *, .cky-gpc-wrapper .cky-gpc-desc * { font-size: 14px; }
+
+.cky-notice-des { color: rgb(33, 33, 33); font-size: 14px; line-height: 24px; font-weight: 400; }
+
+.cky-notice-des img { min-height: 25px; min-width: 25px; }
+
+.cky-consent-bar .cky-notice-des p, .cky-gpc-wrapper .cky-gpc-desc p, .cky-preference-body-wrapper .cky-preference-content-wrapper p, .cky-accordion-header-wrapper .cky-accordion-header-des p, .cky-cookie-des-table li div:last-child p { color: inherit; margin-top: 0px; word-break: break-word; }
+
+.cky-notice-des p:last-child, .cky-preference-content-wrapper p:last-child, .cky-cookie-des-table li div:last-child p:last-child, .cky-gpc-wrapper .cky-gpc-desc p:last-child { margin-bottom: 0px; }
+
+.cky-notice-des a.cky-policy, .cky-notice-des button.cky-policy, .cky-dma-content-wrapper a.cky-policy, .cky-dma-content-wrapper button.cky-policy { font-size: 14px; color: rgb(24, 99, 220); white-space: nowrap; cursor: pointer; background: transparent; border: 1px solid; text-decoration: underline; }
+
+.cky-notice-des button.cky-policy, .cky-dma-content-wrapper button.cky-policy { padding: 0px; }
+
+.cky-notice-des a.cky-policy:focus-visible, .cky-notice-des button.cky-policy:focus-visible, .cky-dma-content-wrapper a.cky-policy:focus-visible, .cky-dma-content-wrapper button.cky-policy:focus-visible, .cky-preference-content-wrapper .cky-show-desc-btn:focus-visible, .cky-accordion-header .cky-accordion-btn:focus-visible, .cky-preference-header .cky-btn-close:focus-visible, .cky-switch input[type="checkbox"]:focus-visible, .cky-footer-wrapper a:focus-visible, .cky-btn:focus-visible { outline: rgb(24, 99, 220) solid 2px; outline-offset: 2px; }
+
+.cky-btn:focus:not(:focus-visible), .cky-accordion-header .cky-accordion-btn:focus:not(:focus-visible), .cky-preference-content-wrapper .cky-show-desc-btn:focus:not(:focus-visible), .cky-btn-revisit-wrapper .cky-btn-revisit:focus:not(:focus-visible), .cky-preference-header .cky-btn-close:focus:not(:focus-visible), .cky-consent-bar .cky-banner-btn-close:focus:not(:focus-visible) { outline: 0px; }
+
+button.cky-show-desc-btn:not(:hover):not(:active) { color: rgb(24, 99, 220); background: transparent; }
+
+button.cky-accordion-btn:not(:hover):not(:active), button.cky-banner-btn-close:not(:hover):not(:active), button.cky-btn-revisit:not(:hover):not(:active), button.cky-btn-close:not(:hover):not(:active) { background: transparent; }
+
+.cky-consent-bar button:hover, .cky-modal.cky-modal-open button:hover, .cky-consent-bar button:focus, .cky-modal.cky-modal-open button:focus { text-decoration: none; }
+
+.cky-notice-btn-wrapper { display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+.cky-notice-btn-wrapper .cky-btn { text-shadow: none; box-shadow: none; }
+
+.cky-btn { flex: 1 1 auto; max-width: 100%; font-size: 14px; font-family: inherit; line-height: 24px; padding: 8px; font-weight: 500; border-radius: 2px; cursor: pointer; text-align: center; text-transform: none; min-height: 0px; overflow-wrap: break-word; }
+
+.cky-btn:hover { opacity: 0.8; }
+
+.cky-btn-customize { color: rgb(24, 99, 220); background: transparent; border: 2px solid rgb(24, 99, 220); }
+
+.cky-btn-reject { color: rgb(24, 99, 220); background: transparent; border: 2px solid rgb(24, 99, 220); }
+
+.cky-btn-accept { background: rgb(24, 99, 220); color: rgb(255, 255, 255); border: 2px solid rgb(24, 99, 220); }
+
+.cky-btn:last-child { margin-right: 0px; }
+
+@media (max-width: 576px) {
+  .cky-box-bottom-left { bottom: 0px; left: 0px; }
+  .cky-box-bottom-right { bottom: 0px; right: 0px; }
+  .cky-box-top-left { top: 0px; left: 0px; }
+  .cky-box-top-right { top: 0px; right: 0px; }
+}
+
+@media (max-width: 440px) {
+  .cky-box-bottom-left, .cky-box-bottom-right, .cky-box-top-left, .cky-box-top-right { width: 100%; max-width: 100%; }
+  .cky-consent-container .cky-consent-bar { padding: 20px 0px; }
+  .cky-custom-brand-logo-wrapper, .cky-notice .cky-title, .cky-notice-des, .cky-notice-btn-wrapper { padding: 0px 24px; }
+  .cky-notice-des { max-height: 40vh; overflow-y: scroll; }
+  .cky-notice-btn-wrapper { gap: 10px; flex-direction: column; }
+  .cky-btn { width: 100%; }
+  .cky-notice-btn-wrapper .cky-btn-customize { order: 2; }
+  .cky-notice-btn-wrapper .cky-btn-reject { order: 3; }
+  .cky-notice-btn-wrapper .cky-btn-accept { order: 1; }
+}
+
+@media (max-width: 352px) {
+  .cky-notice .cky-title { font-size: 16px; }
+  .cky-notice-des * { font-size: 12px; }
+  .cky-notice-des, .cky-btn { font-size: 12px; }
+}
+
+.cky-modal.cky-modal-open { display: flex; visibility: visible; transform: translate(-50%, -50%); top: 50%; left: 50%; transition: 1s; max-height: 100%; }
+
+.cky-modal { box-shadow: rgba(0, 0, 0, 0.3) 0px 32px 68px; margin: 0px auto; position: fixed; max-width: 100%; background: rgb(255, 255, 255); top: 50%; box-sizing: border-box; border-radius: 6px; z-index: 999999999; color: rgb(33, 33, 33); transform: translate(-50%, 100%); visibility: hidden; transition: all; }
+
+.cky-preference-center { max-height: 79vh; width: 845px; overflow: hidden; flex: 1 1 0px; display: flex; flex-direction: column; border-radius: 6px; }
+
+.cky-preference-header { display: flex; align-items: center; justify-content: space-between; padding: 22px 24px; border-bottom: 1px solid; }
+
+.cky-preference-header .cky-preference-title { font-size: 18px; font-weight: 700; line-height: 24px; word-break: break-word; }
+
+.cky-preference-header .cky-btn-close { margin: 0px; cursor: pointer; vertical-align: middle; padding: 0px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; width: auto; height: auto; min-height: 0px; line-height: 0; text-shadow: none; box-shadow: none; }
+
+.cky-preference-header .cky-btn-close img { margin: 0px; height: 10px; width: 10px; }
+
+.cky-preference-body-wrapper { padding: 0px 24px; flex: 1 1 0%; overflow: auto; box-sizing: border-box; }
+
+.cky-preference-content-wrapper, .cky-gpc-wrapper .cky-gpc-desc { font-size: 14px; line-height: 24px; font-weight: 400; padding: 12px 0px; }
+
+.cky-preference-content-wrapper img { min-height: 25px; min-width: 25px; }
+
+.cky-preference-content-wrapper .cky-show-desc-btn { font-size: 14px; font-family: inherit; color: rgb(24, 99, 220); text-decoration: none; line-height: 24px; padding: 0px; margin: 0px; white-space: nowrap; cursor: pointer; background: transparent; border-color: transparent; text-transform: none; min-height: 0px; text-shadow: none; box-shadow: none; }
+
+.cky-accordion-wrapper { margin-bottom: 10px; }
+
+.cky-accordion { border-bottom: 1px solid; }
+
+.cky-accordion:last-child { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; }
+
+.cky-accordion .cky-accordion-item { display: flex; margin-top: 10px; }
+
+.cky-accordion .cky-accordion-body { display: none; }
+
+.cky-accordion.cky-accordion-active .cky-accordion-body { display: block; padding: 0px 22px; margin-bottom: 16px; }
+
+.cky-accordion-header-wrapper { cursor: pointer; width: 100%; }
+
+.cky-accordion-item .cky-accordion-header { display: flex; justify-content: space-between; align-items: center; }
+
+.cky-accordion-header .cky-accordion-btn { font-size: 16px; font-family: inherit; color: rgb(33, 33, 33); line-height: 24px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-weight: 700; padding: 0px; margin: 0px; cursor: pointer; text-transform: none; min-height: 0px; text-shadow: none; box-shadow: none; }
+
+.cky-accordion-header .cky-always-active { color: rgb(0, 128, 0); font-weight: 600; line-height: 24px; font-size: 14px; }
+
+.cky-accordion-header-des { font-size: 14px; line-height: 24px; margin: 10px 0px 16px; }
+
+.cky-accordion-chevron { margin-right: 22px; position: relative; cursor: pointer; }
+
+.cky-accordion-chevron-hide { display: none; }
+
+.cky-accordion .cky-accordion-chevron i::before { content: ""; position: absolute; border-right-width: 1.4px; border-right-style: solid; border-bottom-width: 1.4px; border-bottom-style: solid; border-color: inherit; height: 6px; width: 6px; transform: rotate(-45deg); transition: 0.2s ease-in-out; top: 8px; }
+
+.cky-accordion.cky-accordion-active .cky-accordion-chevron i::before { transform: rotate(45deg); }
+
+.cky-audit-table { background: rgb(244, 244, 244); border-radius: 6px; }
+
+.cky-audit-table .cky-empty-cookies-text { color: inherit; font-size: 12px; line-height: 24px; margin: 0px; padding: 10px; word-break: break-word; }
+
+.cky-audit-table .cky-cookie-des-table { font-size: 12px; line-height: 24px; font-weight: normal; padding: 15px 10px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: inherit; margin: 0px; }
+
+.cky-audit-table .cky-cookie-des-table:last-child { border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; }
+
+.cky-audit-table .cky-cookie-des-table li { list-style-type: none; display: flex; padding: 3px 0px; }
+
+.cky-audit-table .cky-cookie-des-table li:first-child { padding-top: 0px; }
+
+.cky-cookie-des-table li div:first-child { width: 100px; font-weight: 600; word-break: break-word; overflow-wrap: break-word; }
+
+.cky-cookie-des-table li div:last-child { flex: 1 1 0%; word-break: break-word; overflow-wrap: break-word; margin-left: 8px; }
+
+.cky-footer-shadow { display: block; width: 100%; height: 40px; background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); position: absolute; bottom: calc(100% - 1px); }
+
+.cky-footer-wrapper { position: relative; }
+
+.cky-prefrence-btn-wrapper { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; padding: 22px 24px; border-top: 1px solid; }
+
+.cky-prefrence-btn-wrapper .cky-btn { flex: 1 1 auto; max-width: 100%; text-shadow: none; box-shadow: none; }
+
+.cky-btn-preferences { color: rgb(24, 99, 220); background: transparent; border: 2px solid rgb(24, 99, 220); }
+
+.cky-preference-header, .cky-preference-body-wrapper, .cky-accordion-wrapper, .cky-accordion, .cky-accordion-wrapper, .cky-footer-wrapper, .cky-prefrence-btn-wrapper { border-color: inherit; }
+
+.cky-preference-body-wrapper .cky-dma-content-wrapper { font-size: 14px; line-height: 24px; font-weight: 400; padding: 4px 0px 12px; }
+
+.cky-preference-body-wrapper .cky-dma-content-wrapper p { color: inherit; word-break: break-word; }
+
+.cky-preference-body-wrapper .cky-dma-content-wrapper p:first-child { margin-top: 0px; }
+
+.cky-preference-body-wrapper .cky-dma-content-wrapper p:last-child { margin-bottom: 0px; }
+
+.cky-preference-body-wrapper .cky-horizontal-separator { border-bottom-width: 1px; border-bottom-style: solid; border-color: inherit; }
+
+@media (max-width: 845px) {
+  .cky-modal { max-width: calc(100% - 16px); }
+}
+
+@media (max-width: 576px) {
+  .cky-modal { max-width: 100%; }
+  .cky-preference-center { max-height: 100vh; }
+  .cky-prefrence-btn-wrapper { flex-direction: column; gap: 10px; }
+  .cky-accordion.cky-accordion-active .cky-accordion-body { padding-right: 0px; }
+  .cky-prefrence-btn-wrapper .cky-btn { width: 100%; }
+  .cky-prefrence-btn-wrapper .cky-btn-reject { order: 3; }
+  .cky-prefrence-btn-wrapper .cky-btn-accept { order: 1; margin-top: 0px; }
+  .cky-prefrence-btn-wrapper .cky-btn-preferences { order: 2; }
+}
+
+@media (max-width: 425px) {
+  .cky-accordion-chevron { margin-right: 15px; }
+  .cky-accordion.cky-accordion-active .cky-accordion-body { padding: 0px 15px; }
+}
+
+@media (max-width: 352px) {
+  .cky-preference-header .cky-preference-title { font-size: 16px; }
+  .cky-preference-header { padding: 16px 24px; }
+  .cky-preference-content-wrapper *, .cky-accordion-header-des *, .cky-dma-content-wrapper * { font-size: 12px; }
+  .cky-preference-content-wrapper, .cky-preference-body-wrapper .cky-dma-content-wrapper, .cky-preference-content-wrapper .cky-show-more, .cky-accordion-header .cky-always-active, .cky-accordion-header-des, .cky-preference-content-wrapper .cky-show-desc-btn, .cky-notice-des a.cky-policy, .cky-dma-content-wrapper a.cky-policy { font-size: 12px; }
+  .cky-accordion-header .cky-accordion-btn { font-size: 14px; }
+}
+
+.cky-switch { display: flex; }
+
+.cky-switch input[type="checkbox"] { position: relative; width: 44px; height: 24px; margin: 0px; background: rgb(208, 213, 210); appearance: none; border-radius: 50px; cursor: pointer; outline: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; top: 0px; }
+
+.cky-switch input[type="checkbox"]:checked { background: rgb(24, 99, 220); }
+
+.cky-switch input[type="checkbox"]::before { position: absolute; content: ""; height: 20px; width: 20px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; transition: 0.4s; margin: 0px; }
+
+.cky-switch input[type="checkbox"]::after { display: none; }
+
+.cky-switch input[type="checkbox"]:checked::before { transform: translateX(20px); }
+
+@media (max-width: 425px) {
+  .cky-switch input[type="checkbox"] { width: 38px; height: 21px; }
+  .cky-switch input[type="checkbox"]::before { height: 17px; width: 17px; }
+  .cky-switch input[type="checkbox"]:checked::before { transform: translateX(17px); }
+}
+
+.cky-consent-bar .cky-banner-btn-close { position: absolute; right: 9px; top: 5px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; padding: 0px; margin: 0px; min-height: 0px; line-height: 0; height: auto; width: auto; text-shadow: none; box-shadow: none; }
+
+.cky-consent-bar .cky-banner-btn-close img { height: 9px; width: 9px; margin: 0px; }
+
+.cky-notice-group { font-size: 14px; line-height: 24px; font-weight: 400; color: rgb(33, 33, 33); }
+
+.cky-notice-btn-wrapper .cky-btn-do-not-sell { font-size: 14px; line-height: 24px; padding: 6px 0px; margin: 0px; font-weight: 500; border-radius: 2px; border: transparent; cursor: pointer; text-align: left; color: rgb(24, 99, 220); background: transparent; box-shadow: none; text-shadow: none; word-break: break-word; }
+
+.cky-consent-bar .cky-banner-btn-close:focus-visible, .cky-notice-btn-wrapper .cky-btn-do-not-sell:focus-visible, .cky-opt-out-btn-wrapper .cky-btn:focus-visible, .cky-opt-out-checkbox-wrapper input[type="checkbox"].cky-opt-out-checkbox:focus-visible { outline: rgb(24, 99, 220) solid 2px; outline-offset: 2px; }
+
+@media (max-width: 440px) {
+  .cky-consent-container { width: 100%; }
+}
+
+@media (max-width: 352px) {
+  .cky-notice-des a.cky-policy, .cky-notice-btn-wrapper .cky-btn-do-not-sell { font-size: 12px; }
+}
+
+.cky-opt-out-wrapper { padding: 12px 0px; }
+
+.cky-opt-out-wrapper .cky-opt-out-checkbox-wrapper { display: flex; align-items: center; }
+
+.cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label { font-size: 16px; font-weight: 700; line-height: 24px; margin: 0px 0px 0px 12px; cursor: pointer; word-break: break-word; }
+
+.cky-opt-out-checkbox-wrapper input[type="checkbox"].cky-opt-out-checkbox { background-color: rgb(255, 255, 255); border: 1px solid rgb(0, 0, 0); width: 20px; height: 18.5px; margin: 0px; appearance: none; position: relative; display: flex; align-items: center; justify-content: center; border-radius: 2px; cursor: pointer; }
+
+.cky-opt-out-checkbox-wrapper input[type="checkbox"].cky-opt-out-checkbox:checked { background-color: rgb(24, 99, 220); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; }
+
+.cky-opt-out-checkbox-wrapper input[type="checkbox"].cky-opt-out-checkbox:checked::after { left: 6px; bottom: 4px; width: 7px; height: 13px; border-style: solid; border-color: rgb(255, 255, 255); border-image: none; border-width: 0px 3px 3px 0px; border-radius: 2px; transform: rotate(45deg); content: ""; position: absolute; box-sizing: border-box; }
+
+.cky-opt-out-checkbox-wrapper.cky-disabled .cky-opt-out-checkbox-label, .cky-opt-out-checkbox-wrapper.cky-disabled input[type="checkbox"].cky-opt-out-checkbox { cursor: no-drop; }
+
+.cky-gpc-wrapper { margin: 0px 0px 0px 32px; }
+
+.cky-footer-wrapper .cky-opt-out-btn-wrapper { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; padding: 22px 24px; }
+
+.cky-opt-out-btn-wrapper .cky-btn { flex: 1 1 auto; max-width: 100%; text-shadow: none; box-shadow: none; }
+
+.cky-opt-out-btn-wrapper .cky-btn-cancel { border: 1px solid rgb(222, 223, 224); background: transparent; color: rgb(133, 133, 133); }
+
+.cky-opt-out-btn-wrapper .cky-btn-confirm { background: rgb(24, 99, 220); color: rgb(255, 255, 255); border: 1px solid rgb(24, 99, 220); }
+
+@media (max-width: 440px) {
+  .cky-footer-wrapper .cky-opt-out-btn-wrapper { gap: 10px; }
+}
+
+@media (max-width: 352px) {
+  .cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label { font-size: 14px; }
+  .cky-gpc-wrapper .cky-gpc-desc, .cky-gpc-wrapper .cky-gpc-desc * { font-size: 12px; }
+  .cky-opt-out-checkbox-wrapper input[type="checkbox"].cky-opt-out-checkbox { width: 16px; height: 16px; }
+  .cky-opt-out-checkbox-wrapper input[type="checkbox"].cky-opt-out-checkbox:checked::after { left: 5px; bottom: 4px; width: 3px; height: 9px; }
+  .cky-gpc-wrapper { margin: 0px 0px 0px 28px; }
+}
+
+.video-placeholder-youtube { background-size: 100% 100%; background-position: center center; background-repeat: no-repeat; background-color: rgba(178, 176, 176, 0.35); position: relative; display: flex; align-items: center; justify-content: center; max-width: 100%; }
+
+.video-placeholder-text-youtube { text-align: center; align-items: center; padding: 10px 16px; background-color: rgba(0, 0, 0, 0.8); color: rgb(255, 255, 255); border: 1px solid; border-radius: 2px; cursor: pointer; }
+
+.video-placeholder-normal { background-image: url("https://cdn-cookieyes.com/assets/images/cky-placeholder.svg"); background-size: 80px auto; background-position: center center; background-repeat: no-repeat; background-color: rgba(178, 176, 176, 0.35); position: relative; display: flex; align-items: flex-end; justify-content: center; max-width: 100%; }
+
+.video-placeholder-text-normal { align-items: center; padding: 10px 16px; text-align: center; border: 1px solid; border-radius: 2px; cursor: pointer; }
+
+.cky-rtl { direction: rtl; text-align: right; }
+
+.cky-rtl .cky-banner-btn-close { left: 9px; right: auto; }
+
+.cky-rtl .cky-notice-btn-wrapper .cky-btn:last-child { margin-right: 8px; }
+
+.cky-rtl .cky-notice-btn-wrapper .cky-btn:first-child { margin-right: 0px; }
+
+.cky-rtl .cky-notice-btn-wrapper { margin-left: 0px; margin-right: 15px; }
+
+.cky-rtl .cky-prefrence-btn-wrapper .cky-btn { margin-right: 8px; }
+
+.cky-rtl .cky-prefrence-btn-wrapper .cky-btn:first-child { margin-right: 0px; }
+
+.cky-rtl .cky-accordion .cky-accordion-chevron i::before { border-width: 1.4px medium medium 1.4px; border-style: solid none none solid; border-color: currentcolor; border-image: none; left: 12px; }
+
+.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-chevron i::before { transform: rotate(-135deg); }
+
+@media (max-width: 768px) {
+  .cky-rtl .cky-notice-btn-wrapper { margin-right: 0px; }
+}
+
+@media (max-width: 576px) {
+  .cky-rtl .cky-notice-btn-wrapper .cky-btn:last-child { margin-right: 0px; }
+  .cky-rtl .cky-prefrence-btn-wrapper .cky-btn { margin-right: 0px; }
+  .cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-body { padding: 0px 22px 0px 0px; }
+}
+
+@media (max-width: 425px) {
+  .cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-body { padding: 0px 15px 0px 0px; }
+}
+
+.cky-rtl .cky-opt-out-btn-wrapper .cky-btn { margin-right: 12px; }
+
+.cky-rtl .cky-opt-out-btn-wrapper .cky-btn:first-child { margin-right: 0px; }
+
+.cky-rtl .cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label { margin: 0px 12px 0px 0px; }
+
+@supports not (gap: 10px) {
+  .cky-btn { margin: 0px 8px 0px 0px; }
+  @media (max-width: 440px) {
+  .cky-notice-btn-wrapper { margin-top: 0px; }
+  .cky-btn { margin: 10px 0px 0px; }
+  .cky-notice-btn-wrapper .cky-btn-accept { margin-top: 16px; }
+}
+  @media (max-width: 576px) {
+  .cky-prefrence-btn-wrapper .cky-btn { margin: 10px 0px 0px; }
+}
+  @media (max-width: 425px) {
+  .cky-notice-btn-wrapper { margin-top: 0px; }
+}
+}</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.mtsnb { position: fixed; box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 4px; }
+
+.mtsnb .mtsnb-container { width: 1080px; font-size: 17px; }
+
+.mtsnb a { color: rgb(0, 0, 0); }
+
+.mtsnb .mtsnb-button { background-color: rgb(0, 0, 0); }</style><style rel="stylesheet" type="text/css">@charset "utf-8";
+
+.buyer-persona-page-content h3 { font-size: 17px !important; font-weight: 600 !important; }</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KP5P9M6"></script><script type="text/javascript" async="" src="https://s3-us-west-2.amazonaws.com/b2bjsstore/b/Q6J2RHMEX86D/reb2b.js.gz"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TKL37PN"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WVBVKK3"></script><script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/65e524e050c41d2d00b36e04/script.js"></script><script src="https://cdn-cookieyes.com/client_data/65e524e050c41d2d00b36e04/banner.js" async="" id="cookieyes-banner"></script>
+	<!-- This site is optimized with the Yoast SEO plugin v28.2 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>What Is a Buyer Persona, Why It Matters &amp; How to Define Yours</title>
+	<meta name="description" content="What is a buyer persona? Discover why personas matter and how to create yours easily. Drive more sales and make smarter marketing decisions.">
+	<link rel="canonical" href="https://buyerpersona.com/what-is-a-buyer-persona">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="What Is a Buyer Persona, Why It Matters &amp; How to Define Yours">
+	<meta property="og:description" content="What is a buyer persona? Discover why personas matter and how to create yours easily. Drive more sales and make smarter marketing decisions.">
+	<meta property="og:url" content="https://buyerpersona.com/what-is-a-buyer-persona">
+	<meta property="og:site_name" content="Buyer Persona Institute">
+	<meta property="article:publisher" content="https://www.facebook.com/buyerpersona">
+	<meta property="article:modified_time" content="2023-07-31T19:02:19+00:00">
+	<meta property="og:image" content="https://buyerpersona.com/wp-content/uploads/2023/07/image2-300x111.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@buyerpersona">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="9 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona","url":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona","name":"What Is a Buyer Persona, Why It Matters & How to Define Yours","isPartOf":{"@id":"https:\/\/buyerpersona.com\/#website"},"primaryImageOfPage":{"@id":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona#primaryimage"},"image":{"@id":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona#primaryimage"},"thumbnailUrl":"https:\/\/buyerpersona.com\/wp-content\/uploads\/2023\/07\/image2-300x111.png","datePublished":"2023-07-19T20:46:48+00:00","dateModified":"2023-07-31T19:02:19+00:00","description":"What is a buyer persona? Discover why personas matter and how to create yours easily. Drive more sales and make smarter marketing decisions.","breadcrumb":{"@id":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/buyerpersona.com\/what-is-a-buyer-persona"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona#primaryimage","url":"https:\/\/buyerpersona.com\/wp-content\/uploads\/2023\/07\/image2.png","contentUrl":"https:\/\/buyerpersona.com\/wp-content\/uploads\/2023\/07\/image2.png","width":1587,"height":586,"caption":"5 rings of buying insight"},{"@type":"BreadcrumbList","@id":"https:\/\/buyerpersona.com\/what-is-a-buyer-persona#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/buyerpersona.com\/"},{"@type":"ListItem","position":2,"name":"What is a Buyer Persona"}]},{"@type":"WebSite","@id":"https:\/\/buyerpersona.com\/#website","url":"https:\/\/buyerpersona.com\/","name":"Buyer Persona Institute","description":"Empower Your B2B Marketing with Insightful Buyer Personas","publisher":{"@id":"https:\/\/buyerpersona.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/buyerpersona.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/buyerpersona.com\/#organization","name":"Buyer Persona Institute","url":"https:\/\/buyerpersona.com\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/buyerpersona.com\/#\/schema\/logo\/image\/","url":"https:\/\/buyerpersona.com\/wp-content\/uploads\/2020\/10\/BPI_OVERVIEW_FINAL_V1-new.jpg","contentUrl":"https:\/\/buyerpersona.com\/wp-content\/uploads\/2020\/10\/BPI_OVERVIEW_FINAL_V1-new.jpg","width":720,"height":405,"caption":"Buyer Persona Institute"},"image":{"@id":"https:\/\/buyerpersona.com\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/buyerpersona","https:\/\/x.com\/buyerpersona","https:\/\/www.linkedin.com\/in\/adelerevella"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="Buyer Persona Institute » Feed" href="https://buyerpersona.com/feed">
+<link rel="alternate" type="application/rss+xml" title="Buyer Persona Institute » Comments Feed" href="https://buyerpersona.com/comments/feed">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://buyerpersona.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbuyerpersona.com%2Fwhat-is-a-buyer-persona">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://buyerpersona.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbuyerpersona.com%2Fwhat-is-a-buyer-persona&amp;format=xml">
+
+<link rel="stylesheet" id="scap.flashblock-css" href="https://buyerpersona.com/wp-content/plugins/compact-wp-audio-player/css/flashblock.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="scap.player-css" href="https://buyerpersona.com/wp-content/plugins/compact-wp-audio-player/css/player.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="wp-notification-bars-css" href="https://buyerpersona.com/wp-content/plugins/wp-notification-bars/public/css/wp-notification-bars-public.css?ver=1.0.12" media="all">
+<link rel="stylesheet" id="mp-theme-css" href="https://buyerpersona.com/wp-content/plugins/memberpress/css/ui/theme.css?ver=1.11.35" media="all">
+<link rel="stylesheet" id="minimum-pro-theme-css" href="https://buyerpersona.com/wp-content/themes/buyer/style.css?ver=5.1" media="all">
+
+
+
+
+
+
+<link rel="stylesheet" id="bp-legacy-css-css" href="https://buyerpersona.com/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.min.css?ver=11.4.0" media="screen">
+<link rel="stylesheet" id="csbwf_sidebar_style-css" href="https://buyerpersona.com/wp-content/plugins/custom-share-buttons-with-floating-sidebar/css/csbwfs.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="collapscore-css-css" href="https://buyerpersona.com/wp-content/plugins/jquery-collapse-o-matic/css/core_style.css?ver=1.0" media="all">
+<link rel="stylesheet" id="collapseomatic-css-css" href="https://buyerpersona.com/wp-content/plugins/jquery-collapse-o-matic/css/light_style.css?ver=1.6" media="all">
+<link rel="stylesheet" id="lsow-animate-styles-css" href="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/css/animate.css?ver=2.0.1" media="all">
+<link rel="stylesheet" id="lsow-frontend-styles-css" href="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/css/lsow-frontend.css?ver=2.0.1" media="all">
+<link rel="stylesheet" id="lsow-layout-styles-css" href="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/css/lsow-layouts.css?ver=2.0.1" media="all">
+<link rel="stylesheet" id="lsow-icomoon-styles-css" href="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/css/icomoon.css?ver=2.0.1" media="all">
+<link rel="stylesheet" id="siteorigin-panels-front-css" href="https://buyerpersona.com/wp-content/plugins/siteorigin-panels/css/front-flex.min.css?ver=2.35.0" media="all">
+<link rel="stylesheet" id="sow-button-base-css" href="https://buyerpersona.com/wp-content/plugins/so-widgets-bundle/widgets/button/css/style.css?ver=1.74.2" media="all">
+<link rel="stylesheet" id="sow-button-flat-678277dc2643-css" href="https://buyerpersona.com/wp-content/uploads/siteorigin-widgets/sow-button-flat-678277dc2643.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="sow-button-atom-11bd96e85890-css" href="https://buyerpersona.com/wp-content/uploads/siteorigin-widgets/sow-button-atom-11bd96e85890.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="sow-accordion-default-2b55ed2807e6-24410-css" href="https://buyerpersona.com/wp-content/uploads/siteorigin-widgets/sow-accordion-default-2b55ed2807e6-24410.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="ivory-search-styles-css" href="https://buyerpersona.com/wp-content/plugins/add-search-to-menu/public/css/ivory-search.min.css?ver=5.5.16" media="all">
+<link rel="stylesheet" id="roboto-font-css" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="ptsans-font-css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="cabin-font-css" href="https://fonts.googleapis.com/css?family=Cabin:400,700&amp;ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="fontawsome-css" href="https://buyerpersona.com/wp-content/themes/buyer/font-awesome/web-fonts-with-css/css/fontawesome-all.css?ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+<link rel="stylesheet" id="fancybox-css" href="https://buyerpersona.com/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=b71f867e1703a86645d8f0f9c0706213" media="screen">
+<script id="scap.soundmanager2-js" src="https://buyerpersona.com/wp-content/plugins/compact-wp-audio-player/js/soundmanager2-nodebug-jsmin.js?ver=b71f867e1703a86645d8f0f9c0706213"></script>
+<script id="jquery-core-js" src="https://buyerpersona.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-core-js-after">
+	  var windWidth=jQuery( window ).width();
+	  //alert(windWidth);
+	  var animateWidth;
+	  var defaultAnimateWidth;	jQuery(document).ready(function() { 
+	animateWidth="55";
+    defaultAnimateWidth= animateWidth-10;
+	animateHeight="49";
+	defaultAnimateHeight= animateHeight-2;jQuery("div.csbwfsbtns a").hover(function(){
+  jQuery(this).animate({width:animateWidth});
+  },function(){
+    jQuery(this).stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div.csbwfs-show").hide();
+  jQuery("div.csbwfs-show a").click(function(){
+    jQuery("div#csbwfs-social-inner").show(500);
+     jQuery("div.csbwfs-show").hide(500);
+    jQuery("div.csbwfs-hide").show(500);
+    csbwfsSetCookie("csbwfs_show_hide_status","active","1");
+  });
+  
+  jQuery("div.csbwfs-hide a").click(function(){
+     jQuery("div.csbwfs-show").show(500);
+      jQuery("div.csbwfs-hide").hide(500);
+     jQuery("div#csbwfs-social-inner").hide(500);
+     csbwfsSetCookie("csbwfs_show_hide_status","in_active","1");
+  });var button_status=csbwfsGetCookie("csbwfs_show_hide_status");
+    if (button_status =="in_active") {
+      jQuery("div.csbwfs-show").show();
+      jQuery("div.csbwfs-hide").hide();
+     jQuery("div#csbwfs-social-inner").hide();
+    } else {
+      jQuery("div#csbwfs-social-inner").show();
+     jQuery("div.csbwfs-show").hide();
+    jQuery("div.csbwfs-hide").show();
+    }});
+ csbwfsCheckCookie();function csbwfsSetCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function csbwfsGetCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function csbwfsCheckCookie() {
+	var hideshowhide = "yes"
+    var button_status=csbwfsGetCookie("csbwfs_show_hide_status");
+    if (button_status != "") {
+        
+    } else {
+        csbwfsSetCookie("csbwfs_show_hide_status", "active",1);
+    }
+    if(hideshowhide=="yes")
+    {
+    csbwfsSetCookie("csbwfs_show_hide_status", "active",0);
+    }
+}
+
+//# sourceURL=jquery-core-js-after
+</script>
+<script id="jquery-migrate-js" src="https://buyerpersona.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="bp-confirm-js-extra">
+var BP_Confirm = {"are_you_sure":"Are you sure?"};
+//# sourceURL=bp-confirm-js-extra
+</script>
+<script id="bp-confirm-js" src="https://buyerpersona.com/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=11.4.0"></script>
+<script id="bp-widget-members-js" src="https://buyerpersona.com/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=11.4.0"></script>
+<script id="bp-jquery-query-js" src="https://buyerpersona.com/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=11.4.0"></script>
+<script id="bp-jquery-cookie-js" src="https://buyerpersona.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.min.js?ver=11.4.0"></script>
+<script id="bp-jquery-scroll-to-js" src="https://buyerpersona.com/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=11.4.0"></script>
+<script id="bp-legacy-js-js-extra">
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+//# sourceURL=bp-legacy-js-js-extra
+</script>
+<script id="bp-legacy-js-js" src="https://buyerpersona.com/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.min.js?ver=11.4.0"></script>
+<script id="sow-accordion-js-extra">
+var sowAccordion = {"scrollto_after_change":"1","scrollto_offset":"90"};
+//# sourceURL=sow-accordion-js-extra
+</script>
+<script id="sow-accordion-js" src="https://buyerpersona.com/wp-content/plugins/so-widgets-bundle/widgets/accordion/js/accordion.min.js?ver=1.74.2"></script>
+<script id="wp-notification-bars-js" src="https://buyerpersona.com/wp-content/plugins/wp-notification-bars/public/js/wp-notification-bars-public.js?ver=1.0.12"></script>
+<script id="minimum-responsive-menu-js" src="https://buyerpersona.com/wp-content/themes/buyer/js/responsive-menu.js?ver=1.0.0"></script>
+<script id="custom-js" src="https://buyerpersona.com/wp-content/themes/buyer/js/custom.js?ver=b71f867e1703a86645d8f0f9c0706213"></script>
+<script id="owlcarousel-js" src="https://buyerpersona.com/wp-content/themes/buyer/js/owl.carousel.min.js?ver=b71f867e1703a86645d8f0f9c0706213"></script>
+<link rel="https://api.w.org/" href="https://buyerpersona.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://buyerpersona.com/wp-json/wp/v2/pages/24410"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://buyerpersona.com/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://buyerpersona.com/?p=24410">
+
+	<script type="text/javascript">var ajaxurl = 'https://buyerpersona.com/wp-admin/admin-ajax.php';</script>
+
+
+		<meta name="google-site-verification" content="skGu-NugB9LMqpAy8KHcBZumk9kov46Oa6HqULfml8k">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVBVKK3');</script>
+<!-- End Google Tag Manager --><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKL37PN');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKL37PN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script>
+jQuery(window).resize(function() {
+  jQuery('.page-template-page_videopopup .jwplayer').each(function() {
+   jQuery(this).css('width', jQuery(window).width() - 50);
+   jQuery(this).css('height', jQuery(window).height() - 50);
+ });
+});
+</script>
+
+<script>!function () {var reb2b = window.reb2b = window.reb2b || []; if (reb2b.invoked) return;reb2b.invoked = true;reb2b.methods = ["identify", "collect"]; reb2b.factory = function (method) {return function () {var args = Array.prototype.slice.call(arguments); args.unshift(method);reb2b.push(args);return reb2b;};}; for (var i = 0; i < reb2b.methods.length; i++) {var key = reb2b.methods[i];reb2b[key] = reb2b.factory(key);} reb2b.load = function (key) {var script = document.createElement("script");script.type = "text/javascript";script.async = true; script.src = "https://s3-us-west-2.amazonaws.com/b2bjsstore/b/" + key + "/reb2b.js.gz"; var first = document.getElementsByTagName("script")[0]; first.parentNode.insertBefore(script, first);}; reb2b.SNIPPET_VERSION = "1.0.1";reb2b.load("Q6J2RHMEX86D");}();</script> <!-- START - Generated by ClassySchema.org on Tue, 18 Jul 2023 17:44:17 GMT -->
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "How Many Buyer Personas Do You Need?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p><span style=\"background-color: rgb(255, 255, 255); font-size: 16px; font-family: Calibri; color: rgb(0, 0, 0);\">A good rule of thumb is to have ONE buyer persona for each distinct product or service where you need buying insights to inform your marketing and sales strategies.</span></p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "How Many Interviews Should You Complete for Your Buyer Persona?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p><span style=\"background-color: rgb(255, 255, 255); font-size: 16px; font-family: Calibri; color: rgb(0, 0, 0);\">A good rule of thumb is to conduct a minimum of 10 interviews with recent buyers who have made the same buying decision you’re trying to influence in the past 12 months. If there is a need to segment your buyer persona – for example, to understand any differences by company size, role, industry, etc. – look to complete 6-8 interviews per segment. For example, if you did a two-segment buyer persona, you would want to complete 12-16 interviews.</span></p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "How Long Should a Buyer Persona Interview Take?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p><span style=\"background-color: rgb(255, 255, 255); font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Each buyer interview will take 30-40 minutes to complete. These are not structured surveys where you’re asking buyers to rate or rank a predetermined list of attributes. The interviews are free-flowing, semi-structured conversations where you’ll ask buyers to describe their buying journey in detail (</span><em style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Buyer’s Journey</em><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">) including what triggered the need for them to look for a solution now (</span><em style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Priority Initiatives</em><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">), what results or outcomes they need from the investment (</span><em style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Success Factors</em><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">), their fears and concerns (</span><em style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Perceived Barriers</em><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">) and the key questions they used to evaluate their options (</span><em style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Decision Criteria</em><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">).</span></p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Are There Other Ways to Create a Buyer Persona Without Conducting Buyer Interviews?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p style=\"text-align: left;\"><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Input from your own customers and sales teams are useful inputs for your buyer persona but beware of the drawbacks:</span></p><ul><li style=\"text-align: left;\"><strong style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Current Customers</strong><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\"> - since your own customers have already selected you they will have inherent biases, good or bad. They also don’t portray a full “market view” because they offer no insight on the opportunities you’re not considered for, and therefore don’t see.</span></li><li style=\"text-align: left;\"><strong style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Sales Teams</strong><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\"> – no matter how much your sales teams claims to know why they are winning or losing deals, they rarely see all the dynamics going on in a prospective buyer’s organization. And, like your current customers, they have no visibility into opportunities they never see. They also tend to inflate the importance of price.</span></li></ul><p style=\"text-align: left;\"><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">Remember that one of the primary advantages of buyer interviews is that the buying insights will be viewed as highly credible by your marketing, sales, and product teams because they come straight from the source – your prospective buyers!</span></p><p><br></p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What Should You Do After Creating Your Buyer Persona?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p style=\"text-align: left;\"><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">See “How Buyer Personas are Used in Marketing” above for the different ways you can use your buyer persona to improve marketing and sales performance.</span></p><p style=\"text-align: left;\"><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">In addition, since your fully developed buyer persona includes insights into everything a buyer needs to know and experience to have confidence in buying from you, take each of these insights and map them to your company’s ability to deliver unique value. This analysis will yield message themes that will guide sales playbooks and marketing copy, from website and thought leadership content to demand generation and lead nurturing campaigns.</span></p><p style=\"text-align: left;\"><span style=\"font-family: Calibri; font-size: 12pt; color: rgb(0, 0, 0);\">The strength in the message themes comes from knowing that they are important to buyers (from your buyer persona) AND that you have the capabilities to deliver on them.</span></p>"
+			}
+		}
+	]
+}
+</script>
+<!-- END - Generated by ClassySchema.org--><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KP5P9M6');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"><link rel="icon" href="https://buyerpersona.com/wp-content/uploads/2020/12/bpi-blog-default-120x120.png" sizes="32x32">
+<link rel="icon" href="https://buyerpersona.com/wp-content/uploads/2020/12/bpi-blog-default.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://buyerpersona.com/wp-content/uploads/2020/12/bpi-blog-default.png">
+<meta name="msapplication-TileImage" content="https://buyerpersona.com/wp-content/uploads/2020/12/bpi-blog-default.png">
+
+<link rel="stylesheet" id="so-css-genesis-css" href="https://buyerpersona.com/wp-content/uploads/so-css/so-css-genesis.css?ver=1695768999" media="all">
+<link rel="stylesheet" id="siteorigin-widget-icon-font-ionicons-css" href="https://buyerpersona.com/wp-content/plugins/so-widgets-bundle/icons/ionicons/style.css?ver=1785854264&amp;ver=b71f867e1703a86645d8f0f9c0706213" media="all">
+
+</head>
+<body class="bp-legacy wp-singular page-template-default page page-id-24410 wp-theme-genesis wp-child-theme-buyer siteorigin-panels genesis full-width-content genesis-breadcrumbs-hidden genesis-footer-widgets-hidden js has-mtsnb" style="padding-top: 38px;"><div class="cky-overlay cky-hide"></div>  <div class="cky-consent-container cky-box-bottom-right" tabindex="0"> <div class="cky-consent-bar" data-cky-tag="notice" style="border-color: #F4F4F4; background-color: #FFFFFF;">   <div class="cky-notice"> <p class="cky-title" role="heading" aria-level="1" data-cky-tag="title" style="color: #212121;"> We value your privacy </p> <div class="cky-notice-group"> <div class="cky-notice-des" data-cky-tag="description" style="color: #212121;"> <p>We use cookies to improve your user experience, tailor content, and analyze site usage. Some cookies are essential; others help us enhance our services. Please note that cookies are not used in our research and data collection activities.&nbsp;<a href="http://buyerpersona.com/privacy-policy" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://ksrinc.devloungelizard.com/privacy-policy/&amp;source=gmail&amp;ust=1729962525610000&amp;usg=AOvVaw0YnRoQ-fh87KnG1w0IcAcj">Read more</a>.</p> </div>  <div class="cky-notice-btn-wrapper" data-cky-tag="notice-buttons">  <button class="cky-btn cky-btn-reject" aria-label="Reject All" data-cky-tag="reject-button" style="color: #000000; border-color: #000000; background-color: transparent;">Reject All</button> <button class="cky-btn cky-btn-accept" aria-label="Accept All" data-cky-tag="accept-button" style="color: #FFFFFF; border-color: #000000; background-color: #040404;">Accept All</button>  </div> </div> </div> </div> </div> <div class="cky-modal" tabindex="0"> <div class="cky-preference-center" data-cky-tag="detail" style="color: #212121; border-color: #F4F4F4; background-color: #FFFFFF;"> <div class="cky-preference-header"> <span class="cky-preference-title" role="heading" aria-level="1" data-cky-tag="detail-title" style="color: #212121;">Customise Consent Preferences</span> <button class="cky-btn-close" aria-label="Close" data-cky-tag="detail-close"> <img src="https://cdn-cookieyes.com/assets/images/close.svg" alt="Close" width="10" height="10"> </button> </div> <div class="cky-preference-body-wrapper"> <div class="cky-preference-content-wrapper" data-cky-tag="detail-description" style="color: #212121;"><p>We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.</p><p>The cookies that are categorised as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. ...&nbsp;<button class="cky-show-desc-btn" data-cky-tag="show-desc-button" aria-label="Show more">Show more</button></p></div>  <div class="cky-horizontal-separator"></div> <div class="cky-accordion-wrapper" data-cky-tag="detail-categories"> <div class="cky-accordion" id="ckyDetailCategorynecessary"><div class="cky-accordion-item"><div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div><div class="cky-accordion-header-wrapper"><div class="cky-accordion-header"><button class="cky-accordion-btn" aria-expanded="false" aria-label="Necessary" data-cky-tag="detail-category-title" style="color: #212121;">Necessary</button><span class="cky-always-active">Always Active</span></div><div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color: #212121;"><p>Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.</p></div></div></div><div class="cky-accordion-body"><div class="cky-audit-table" data-cky-tag="audit-table" style="color: #212121; border-color: #ebebeb; background-color: #f4f4f4;"><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>__cf_bm</div></li><li><div>Duration</div><div>1 hour</div></li><li><div>Description</div><div>This cookie, set by Cloudflare, is used to support Cloudflare Bot Management. </div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_cfuvid</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>Calendly sets this cookie to track users across sessions to optimize user experience by maintaining session consistency and providing personalized services</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>__hssrc</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>This cookie is set by Hubspot whenever it changes the session cookie. The __hssrc cookie set to 1 indicates that the user has restarted the browser, and if the cookie does not exist, it is assumed to be a new session.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>__hssc</div></li><li><div>Duration</div><div>1 hour</div></li><li><div>Description</div><div>HubSpot sets this cookie to keep track of sessions and to determine if HubSpot should increment the session number and timestamps in the __hstc cookie.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>wpEmojiSettingsSupports</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>WordPress sets this cookie when a user interacts with emojis on a WordPress site.  It helps determine if the user's browser can display emojis properly.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>cookieyes-consent</div></li><li><div>Duration</div><div>1 year</div></li><li><div>Description</div><div>CookieYes sets this cookie to remember users' consent preferences so that their preferences are respected on subsequent visits to this site. It does not collect or store any personal information about the site visitors.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_GRECAPTCHA</div></li><li><div>Duration</div><div>6 months</div></li><li><div>Description</div><div>Google Recaptcha service sets this cookie to identify bots to protect the website against malicious spam attacks.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>rc::a</div></li><li><div>Duration</div><div>Never Expires</div></li><li><div>Description</div><div>This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>rc::f</div></li><li><div>Duration</div><div>Never Expires</div></li><li><div>Description</div><div>This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>rc::c</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>rc::b</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.</div></li></ul></div></div></div><div class="cky-accordion" id="ckyDetailCategoryfunctional"><div class="cky-accordion-item"><div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div><div class="cky-accordion-header-wrapper"><div class="cky-accordion-header"><button class="cky-accordion-btn" aria-expanded="false" aria-label="Functional" data-cky-tag="detail-category-title" style="color: #212121;">Functional</button><div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchfunctional" aria-label="Enable Functional" style="background-color: rgb(208, 213, 210);"></div></div><div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color: #212121;"><p>Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.</p></div></div></div><div class="cky-accordion-body"><div class="cky-audit-table" data-cky-tag="audit-table" style="color: #212121; border-color: #ebebeb; background-color: #f4f4f4;"><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>li_gc</div></li><li><div>Duration</div><div>6 months</div></li><li><div>Description</div><div>Linkedin set this cookie for storing visitor's consent regarding using cookies for non-essential purposes.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>lidc</div></li><li><div>Duration</div><div>1 day</div></li><li><div>Description</div><div>LinkedIn sets the lidc cookie to facilitate data center selection.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>ytidb::LAST_RESULT_ENTRY_KEY</div></li><li><div>Duration</div><div>Never Expires</div></li><li><div>Description</div><div>The cookie ytidb::LAST_RESULT_ENTRY_KEY is used by YouTube to store the last search result entry that was clicked by the user. This information is used to improve the user experience by providing more relevant search results in the future.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>yt-remote-device-id</div></li><li><div>Duration</div><div>Never Expires</div></li><li><div>Description</div><div>YouTube sets this cookie to store the user's video preferences using embedded YouTube videos.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>yt-remote-connected-devices</div></li><li><div>Duration</div><div>Never Expires</div></li><li><div>Description</div><div>YouTube sets this cookie to store the user's video preferences using embedded YouTube videos.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>yt-remote-session-app</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>The yt-remote-session-app cookie is used by YouTube to store user preferences and information about the interface of the embedded YouTube video player.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>yt-remote-cast-installed</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>The yt-remote-cast-installed cookie is used to store the user's video player preferences using embedded YouTube video.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>yt-remote-session-name</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>The yt-remote-session-name cookie is used by YouTube to store the user's video player preferences using embedded YouTube video.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>yt-remote-fast-check-period</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>The yt-remote-fast-check-period cookie is used by YouTube to store the user's video player preferences for embedded YouTube videos.</div></li></ul></div></div></div><div class="cky-accordion" id="ckyDetailCategoryanalytics"><div class="cky-accordion-item"><div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div><div class="cky-accordion-header-wrapper"><div class="cky-accordion-header"><button class="cky-accordion-btn" aria-expanded="false" aria-label="Analytics" data-cky-tag="detail-category-title" style="color: #212121;">Analytics</button><div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchanalytics" aria-label="Enable Analytics" style="background-color: rgb(208, 213, 210);"></div></div><div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color: #212121;"><p>Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.</p></div></div></div><div class="cky-accordion-body"><div class="cky-audit-table" data-cky-tag="audit-table" style="color: #212121; border-color: #ebebeb; background-color: #f4f4f4;"><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_ga</div></li><li><div>Duration</div><div>1 year 1 month 4 days</div></li><li><div>Description</div><div>Google Analytics sets this cookie to calculate visitor, session and campaign data and track site usage for the site's analytics report. The cookie stores information anonymously and assigns a randomly generated number to recognise unique visitors.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_gid</div></li><li><div>Duration</div><div>1 day</div></li><li><div>Description</div><div>Google Analytics sets this cookie to store information on how visitors use a website while also creating an analytics report of the website's performance. Some of the collected data includes the number of visitors, their source, and the pages they visit anonymously.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_gat_UA-*</div></li><li><div>Duration</div><div>1 minute</div></li><li><div>Description</div><div>Google Analytics sets this cookie for user behaviour tracking.
+</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_ga_*</div></li><li><div>Duration</div><div>1 year 1 month 4 days</div></li><li><div>Description</div><div>Google Analytics sets this cookie to store and count page views.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_hjSessionUser_*</div></li><li><div>Duration</div><div>1 year</div></li><li><div>Description</div><div>Hotjar sets this cookie to ensure data from subsequent visits to the same site is attributed to the same user ID, which persists in the Hotjar User ID, which is unique to that site.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_hjSession_*</div></li><li><div>Duration</div><div>1 hour</div></li><li><div>Description</div><div>Hotjar sets this cookie to ensure data from subsequent visits to the same site is attributed to the same user ID, which persists in the Hotjar User ID, which is unique to that site.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>__hstc</div></li><li><div>Duration</div><div>6 months</div></li><li><div>Description</div><div>Hubspot set this main cookie for tracking visitors. It contains the domain, initial timestamp (first visit), last timestamp (last visit), current timestamp (this visit), and session number (increments for each subsequent session).</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>hubspotutk</div></li><li><div>Duration</div><div>6 months</div></li><li><div>Description</div><div>HubSpot sets this cookie to keep track of the visitors to the website. This cookie is passed to HubSpot on form submission and used when deduplicating contacts.</div></li></ul></div></div></div><div class="cky-accordion" id="ckyDetailCategoryperformance"><div class="cky-accordion-item"><div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div><div class="cky-accordion-header-wrapper"><div class="cky-accordion-header"><button class="cky-accordion-btn" aria-expanded="false" aria-label="Performance" data-cky-tag="detail-category-title" style="color: #212121;">Performance</button></div><div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color: #212121;"><p>Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors.</p></div></div></div><div class="cky-accordion-body"><div class="cky-audit-table" data-cky-tag="audit-table" style="color: #212121; border-color: #ebebeb; background-color: #f4f4f4;"><p class="cky-empty-cookies-text">No cookies to display.</p></div></div></div><div class="cky-accordion" id="ckyDetailCategoryadvertisement"><div class="cky-accordion-item"><div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div><div class="cky-accordion-header-wrapper"><div class="cky-accordion-header"><button class="cky-accordion-btn" aria-expanded="false" aria-label="Advertisement" data-cky-tag="detail-category-title" style="color: #212121;">Advertisement</button><div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchadvertisement" aria-label="Enable Advertisement" style="background-color: rgb(208, 213, 210);"></div></div><div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color: #212121;"><p>Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns.</p></div></div></div><div class="cky-accordion-body"><div class="cky-audit-table" data-cky-tag="audit-table" style="color: #212121; border-color: #ebebeb; background-color: #f4f4f4;"><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>bcookie</div></li><li><div>Duration</div><div>1 year</div></li><li><div>Description</div><div>LinkedIn sets this cookie from LinkedIn share buttons and ad tags to recognize browser IDs.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>YSC</div></li><li><div>Duration</div><div>session</div></li><li><div>Description</div><div>Youtube sets this cookie to track the views of embedded videos on Youtube pages.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>VISITOR_INFO1_LIVE</div></li><li><div>Duration</div><div>6 months</div></li><li><div>Description</div><div>YouTube sets this cookie to measure bandwidth, determining whether the user gets the new or old player interface.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>VISITOR_PRIVACY_METADATA</div></li><li><div>Duration</div><div>6 months</div></li><li><div>Description</div><div>YouTube sets this cookie to store the user's cookie consent state for the current domain.	</div></li></ul></div></div></div><div class="cky-accordion" id="ckyDetailCategoryother"><div class="cky-accordion-item"><div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div><div class="cky-accordion-header-wrapper"><div class="cky-accordion-header"><button class="cky-accordion-btn" aria-expanded="false" aria-label="Uncategorised" data-cky-tag="detail-category-title" style="color: #212121;">Uncategorised</button><div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchother" aria-label="Enable Uncategorised" style="background-color: rgb(208, 213, 210);"></div></div><div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color: #212121;"><p>Other uncategorised cookies are those that are being analysed and have not been classified into a category as yet.</p></div></div></div><div class="cky-accordion-body"><div class="cky-audit-table" data-cky-tag="audit-table" style="color: #212121; border-color: #ebebeb; background-color: #f4f4f4;"><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_reb2bloaded</div></li><li><div>Duration</div><div>Less than a minute</div></li><li><div>Description</div><div>Description is currently not available.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_reb2buid</div></li><li><div>Duration</div><div>1 year</div></li><li><div>Description</div><div>Description is currently not available.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_reb2bsessionID</div></li><li><div>Duration</div><div>1 hour</div></li><li><div>Description</div><div>Description is currently not available.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>_reb2bgeo</div></li><li><div>Duration</div><div>20 days</div></li><li><div>Description</div><div>Description is currently not available.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>__Secure-YEC</div></li><li><div>Duration</div><div>1 year 1 month</div></li><li><div>Description</div><div>Description is currently not available.</div></li></ul><ul class="cky-cookie-des-table"><li><div>Cookie</div><div>csbwfs_show_hide_status</div></li><li><div>Duration</div><div>1 day</div></li><li><div>Description</div><div>No description available.</div></li></ul></div></div></div> </div> </div>  <div class="cky-footer-wrapper"> <span class="cky-footer-shadow" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);"></span> <div class="cky-prefrence-btn-wrapper" data-cky-tag="detail-buttons"> <button class="cky-btn cky-btn-reject" aria-label="Reject All" data-cky-tag="detail-reject-button" style="color: #000000; border-color: #000000; background-color: transparent;"> Reject All </button> <button class="cky-btn cky-btn-preferences" aria-label="Save My Preferences" data-cky-tag="detail-save-button" style="color: #1863DC; border-color: #1863DC; background-color: transparent;"> Save My Preferences </button> <button class="cky-btn cky-btn-accept" aria-label="Accept All" data-cky-tag="detail-accept-button" style="color: #FFFFFF; border-color: #000000; background-color: #040404;"> Accept All </button> </div> <div style="padding: 8px 24px; font-size: 12px; font-weight: 400; line-height: 20px; text-align: right; border-radius: 0 0 6px 6px; direction: ltr; display: flex; justify-content: flex-end; align-items: center; color: #293C5B; background-color: #EDEDED;" data-cky-tag="detail-powered-by"> Powered by <a target="_blank" rel="noopener" href="https://www.cookieyes.com/product/cookie-consent" style="margin-left: 5px; line-height: 0"><img src="https://cdn-cookieyes.com/assets/images/poweredbtcky.svg" alt="Cookieyes logo" style="width: 78px; height: 13px; margin: 0" width="78" height="13"></a> </div> </div> </div>  </div><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVBVKK3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KP5P9M6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="site-container"><ul class="genesis-skip-link"><li><a href="https://buyerpersona.com/what-is-a-buyer-persona#genesis-content" class="screen-reader-shortcut"> Skip to main content</a></li></ul><header class="site-header" role="banner"><div class="wrap"><div class="title-area"><div id="logo"><a href="https://buyerpersona.com/"><img src="https://buyerpersona.com/wp-content/themes/buyer/images/logo.png"></a></div></div><div class="widget-area header-widget-area"><section id="nav_menu-9" class="widget widget_nav_menu"><div class="widget-wrap"><nav class="nav-header"><div class="c-hamburger c-hamburger--htx"><span>Main Menu</span></div><ul id="menu-main-menu-new" class="menu genesis-nav-menu js-superfish responsive-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li id="menu-item-25357" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-25357"><a href="https://buyerpersona.com/what-is-a-buyer-persona#" class="sf-with-ul"><span>What We Do</span></a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-25877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25877"><a href="https://buyerpersona.com/buyer-persona-messaging-offer"><span>Buyer Persona &amp; Messaging Offer</span></a></li>
+	<li id="menu-item-25288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25288"><a href="https://buyerpersona.com/buyer-persona-research"><span>Buyer Persona Research</span></a></li>
+	<li id="menu-item-25310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25310"><a href="https://buyerpersona.com/persona-validation-segmentation"><span>Persona Validation &amp; Segmentation</span></a></li>
+	<li id="menu-item-5236" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5236"><a href="https://buyerpersona.com/persona-activation-workshop"><span>Persona Activation Workshop</span></a></li>
+	<li id="menu-item-5218" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5218"><a href="https://buyerpersona.com/masterclass-2"><span>Masterclass</span></a></li>
+</ul>
+</li>
+<li id="menu-item-25290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25290"><a href="https://buyerpersona.com/who-we-are"><span>Who We Are</span></a></li>
+<li id="menu-item-25286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25286"><a href="https://buyerpersona.com/clients-we-serve"><span>Clients We Serve</span></a></li>
+<li id="menu-item-22392" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22392"><a href="https://buyerpersona.com/resources" class="sf-with-ul"><span>Resources</span></a>
+<ul class="sub-menu" style="display: none;">
+	<li id="menu-item-5221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5221"><a href="https://buyerpersona.com/buyer-personas-book"><span>Buyer Persona Book</span></a></li>
+	<li id="menu-item-5233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5233"><a href="https://buyerpersona.com/buyer-persona-example"><span>Buyer Persona Example</span></a></li>
+	<li id="menu-item-23062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23062"><a href="https://buyerpersona.com/old-buyer-persona-templates-free-download"><span>Buyer Persona Templates</span></a></li>
+	<li id="menu-item-5172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5172"><a href="https://buyerpersona.com/resources"><span>See All Resources</span></a></li>
+</ul>
+</li>
+<li id="menu-item-22927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22927"><a href="https://buyerpersona.com/blog"><span>Blog</span></a></li>
+</ul></nav></div></section>
+<section id="sow-button-2" class="widget widget_sow-button"><div class="widget-wrap"><div class="so-widget-sow-button so-widget-sow-button-flat-678277dc2643"><div class="ow-button-base ow-button-align-center">
+			<a href="https://buyerpersona.com/contact-us" class="btn sowb-button ow-icon-placement-left ow-button-hover">
+		<span>
+			
+			Contact Us		</span>
+			</a>
+	</div>
+</div></div></section>
+</div></div></header><div class="site-inner"><div class="wrap"><div class="content-sidebar-wrap"><main class="content" id="genesis-content"><article class="post-24410 page type-page status-publish entry" aria-label="What is a Buyer Persona"><header class="entry-header"></header><div class="entry-content"><div id="pl-24410" class="panel-layout"><div id="pg-24410-0" class="panel-grid panel-has-style"><div class="panel-row-style panel-row-style-for-24410-0"><div id="pgc-24410-0-0" class="panel-grid-cell"><div class="buyer-persona-page-content panel-cell-style panel-cell-style-for-24410-0-0"><div id="panel-24410-0-0-0" class="so-panel widget widget_sow-editor panel-first-child" data-index="0"><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+	<h1 style="text-align: left;">What is a Buyer Persona, Why it Matters &amp; How to Create Yours</h1>
+<p class="p1">Built from the real words of real buyers, a buyer persona tells you what your prospective buyers are thinking and doing as they weigh their options to address a problem that your company can resolve.</p>
+<p class="p1">These buying insights take all the guesswork out of marketing, enabling you to develop strategies, content, and messaging that connects with buyers, breaks through the clutter, and drives more sales.</p>
+<h2 class="p1"><b>What is a Buyer Persona?</b></h2>
+<p class="p1">A <em>buyer persona</em> reveals insights about your buyers’ decisions — the attitudes, concerns, decision criteria, and journey that drive prospective customers to choose you, your competitor or the status quo. They tell you how to influence buyers, so they pick your solution.</p>
+<p class="p1">Conversely, <em>buyer profiles</em> that only describe characteristics of individuals involved in the buying decision reveal little insight about how to influence them when they are evaluating you and your competitors.</p>
+<h2 class="p1"><b>Why are Buyer Personas Important?</b></h2>
+<p class="p1">Understanding the mindset and actions of prospective buyers as they investigate their options, winnow down alternatives, and make a final buying decision supports:</p>
+<p><b>Data-Driven Decisions</b> – take all the guesswork out of marketing by basing your decisions on data from interviews with real buyers about their buying decisions.</p>
+<p><b>Personalized Marketing</b> – deliver tailored communications to prospective buyers at each stage in their buying journey to improve pipeline progression and conversion.</p>
+<p><b>An Improved Customer Experience</b> – anticipate buyer needs, concerns, and questions to improve a customer’s purchase experience and increase their confidence in your capabilities.</p>
+<p>&nbsp;</p>
+<h2 class="p1"><b>7 Benefits of Buyer Personas</b></h2>
+<p class="p1">1.<b> A Better Understanding of Your Ideal Customers</b> – by interviewing recent buyers that share characteristics of your ideal customer profile (ICP), you’ll understand what causes them to consider and choose you, the competition, or the status quo.</p>
+<p class="p1" style="text-align: left;"><i>“The persona insights told us what was key to say – and not to say. These insights contributed to a new tagline and to a deeper awareness of customer journey stages. It helped us build specific marketing elements for different stages: what to say to whom and when.” </i>(Chief Marketing Officer)</p>
+<p class="p1" style="text-align: left;">2.<b> Greater Market Authority </b> – deeper knowledge about the buying decision allows you to target the right media channels, produce more relevant content for each stage of the buyer’s journey, and improve your brand’s reputation as a trusted expert in the market.</p>
+<p class="p1" style="text-align: left;">3. <b>Better Lead Generation Quality</b> – aligning your marketing strategy to what buyers want most, will result in more leads that have a deeper understanding of their own needs and how your organization can help them achieve the outcomes that they seek.</p>
+<p class="p1" style="text-align: left;"><i>“We didn’t even know what the buying triggers were. Personas are like getting the answers before the test! Because we’re using the language of customers and focusing on their priorities, we’ve engaged 8,100 new buyers this year, nearly doubling the 4,400 from all of last year.”</i> (Chief Marketing Officer)</p>
+<p class="p1" style="text-align: left;">4.<b> Increased Conversions</b> – buyer personas inform strategies that influence buyers at the top, middle and bottom of the funnel, which improves pipeline progression and conversion.</p>
+<p class="p1" style="text-align: left;"><i>“We streamlined our messaging to the most important touch points, to the kind of education buyers actually want. Now we can say to our colleagues, ‘These are the messages we need to say and why.’” </i>(Director, Brand Marketing)</p>
+<p class="p1" style="text-align: left;">5.<b> A Shorter Sales Cycle </b>– buyer personas provide clarity on the needs and concerns that buyers have throughout the buying process, so marketers can help account teams anticipate and overcome sales obstacles that will move these decisions along.</p>
+<p class="p1" style="text-align: left;">6.<b> Higher ROI</b> – by understanding what buyers need most, you’ll improve your ability to prioritize marketing investments and increase their impact on sales.</p>
+<p class="p1" style="text-align: left;"><i>“At a recent trade show, our biggest competitor was directly across the aisle from us. When visitors crossed the aisle to come to our booth, they asked what made us different. Our team was ready – the persona work had made it easy for us to communicate differentiation. In fact, it was the most successful trade show we’ve ever done!” </i>(Senior VP, Marketing)</p>
+<p class="p1" style="text-align: left;">7.<b> Improved Organizational Alignment</b> – by interviewing recent buyers to develop your buyer personas, you’ll have fact-based buying insights that drives alignment across your marketing, sales, and product teams.</p>
+<p>&nbsp;</p>
+<h2 class="p1"><b>How are Buyer Personas Used in Marketing?</b></h2>
+<p class="p1">Buyer personas inform a number of important marketing activities including:</p>
+<p><b>Identify Which Types of Buyers You Need to Influence and How to Reach Them</b> – buyer personas reveal all the roles that participate in the buying decision as well as when, where, and how these individuals seek out information to inform their evaluation.</p>
+<p><b>Develop Competitive Positioning</b> – interviews with recent buyers enables you to capture how prospective customers perceive your solution and capabilities versus your competitors so you can position yourself in a way that is clear and differentiating.</p>
+<p><b>Create Effective Messaging </b>– insight into a buyers’ expectations throughout the buying journey, plus verbatim quotes describing how they weigh their options and make a choice, enables you to find the messaging sweet spot between a buyer’s needs and your solution’s capabilities.</p>
+<p><b>Develop High Quality Thought Leadership Content </b>– buyer personas enable marketers to identify problems and desired outcomes that are particularly important to decision makers and reveals opportunities to develop content that allows buyers to see things in a new and more confident light.</p>
+<p><b>Arm Your Sales Teams With Buying Insights and Tools They Need</b> – an understanding of your buyers’ needs, concerns, and what is most important in their buying decision enables marketers to develop strategies, tools, and messaging that sales can use to hit their numbers.</p>
+<p><b>Guide Product Development Decisions</b> – buying insights reveal features and capabilities that matter most to buyers as well as any gaps in your solution.</p>
+<p>&nbsp;</p>
+<h2 class="p1" style="text-align: center;"><a href="https://buyerpersona.com/buyer-persona-example"><b>Buyer Persona Example</b></a></h2>
+<p>&nbsp;</p>
+<h2 class="p1"><b>What to Include in a Buyer Persona</b></h2>
+<p class="p1">Buyer personas include five areas of buying insights<i> </i>that will inform nearly every marketing and sales decision you make including what, where, when, and how to best communicate to prospective customers in order to reach them effectively and influence their decision. We call these the <b><i>5 Rings of Buying Insight</i></b><span class="s1"><b><sup>TM</sup></b></span>, and they include:</p>
+<p><b>Priority Initiatives </b>– are the most compelling reasons that buyers begin to evaluate a solution like yours. It’s the trigger event or conditions that cause a buyer to look for a solution NOW while others are content with the status quo.</p>
+<p><b>Success Factors</b> – describes the results that buyers expect from buying a solution like yours. Success factors resemble benefits or outcomes from the buyer’s perspective – what THEY expect to achieve.</p>
+<p><b>Perceived Barriers</b> – reveals the fears and concerns that lead buyers to maintain the status quo or perceive a competitor's solution as a better fit for their needs. This insight helps identify factors that eliminate certain providers as buyers narrow down their options.</p>
+<p><b>Decision Criteria</b> – reveals the specific company and solution capabilities that matter to buyers as they evaluate your ability to deliver success. These insights are the questions that buyers are asking throughout the buying journey.</p>
+<p><b>Buyer’s Journey</b> – includes the behind-the-scenes story about the work your buyers do to evaluate their options, winnow down contenders, and settle on their final choice. These insights include who takes part in the buying decision, the specific work your buyers must do at each step, plus<span class="Apple-converted-space">&nbsp; </span>the information sources they use and trust.</p>
+<p class="p1"><img decoding="async" class=" wp-image-24411 aligncenter" src="https://buyerpersona.com/wp-content/uploads/2023/07/image2-300x111.png" alt="5 rings of buying insight" width="700" height="259"></p>
+<p class="p1">The final piece of your buyer persona is a profile of individuals that are involved in the buying decision. We call this a <b>Buyer Profile</b> and it includes demographic characteristics, challenges, and overall priorities of these decision-makers. This will be the “cover sheet” to your buyer persona as it summarizes a few useful characteristics of these individuals.</p>
+<p class="p1"><b>Read In-depth Breakdown of the 5 Rings of Buying Insight</b><span class="s1"><b><sup>TM</sup></b></span><b> for Buyer Personas <a href="https://buyerpersona.com/buyer-persona-research">here</a></b></p>
+<p>&nbsp;</p>
+<h2 class="p1" style="text-align: center;"><b>Get Your Free <a href="https://buyerpersona.com/buyer-persona-templates-free-download">Buyer Persona Template</a></b></h2>
+<p>&nbsp;</p>
+<h2 class="p1"><b>How to Create a Buyer Persona (6 Easy Steps)</b></h2>
+<p class="p1">Buyer personas are built around a story of your customers’ buying decision. To obtain that, you need to talk to recent buyers. There are no shortcuts. And, when you talk to them, give them time to tell their complete, unfiltered story to discover all the critical “moments of truth” in their buying journey. Here are steps you can follow to develop your buyer persona:</p>
+<h3>1. Determine the Buying Decision for which You Will Create a Buyer Persona</h3>
+<p>Any product or service that involves a high consideration buying decision and needs buying insights to develop effective marketing and sales strategies is a great candidate.</p>
+<h3>2. Define Your Target Market for This Buying Decision</h3>
+<p>This can include firmographic characteristics such as organizations in certain industries, locations, or of a particular size. It can also include other characteristics that make an<span class="Apple-converted-space">&nbsp; </span>organization an attractive target for your solution (e.g., does business or goes to market a certain way, deals with a high volume of certain types of business transactions, is highly regulated, etc.).</p>
+<h3>3. Find and Recruit Recent Buyers for the Interviews</h3>
+<p>Based on the target market that you’ve defined (Step 2), develop a short screening questionnaire to find recent buyers that meet these characteristics and have been involved in the buying decision that you’re trying to influence (Step 1). Since you’re not targeting your own customers directly, you may want to partner with a recruiting firm that can help you find and schedule interviews with these individuals.</p>
+<h3>4. Conduct and Record the Interviews</h3>
+<p>Individuals who have recently been involved in a buying decision ENJOY talking about the process they went through in great detail. This was an important decision for them, and they will talk freely about what triggered the need for the solution, expected outcomes, fears and concerns, decision criteria, and all the steps in their buying journey. A good rule of thumb is to complete at least 10 interviews before you compile and aggregate your findings. You’ll want to record and transcribe these discussions for your analysis.</p>
+<h3>5. Look for Patterns in the Data to Reveal the Buying Insights That You’ll Need for Your Persona</h3>
+<p>Once your interviews are complete, mark up the interview transcripts, looking for patterns across each of the <i>5 Rings of Buying Insight</i><span class="s1"><sup>TM</sup></span>. Make<span class="Apple-converted-space">&nbsp; </span>note of the frequency that different buyers mention a particular insight in the interviews to draw a distinction between a real “<i>insight”</i> (cited by several buyers) and an “<i>outlier”</i> (a single buyer).</p>
+<h3>6. Write a Headline for Each Insight and Add Buyer Quotes</h3>
+<p>Once you’ve uncovered all the buying insights for your persona, write a succinct headline summarizing each one of them and add quotes from the buyer interviews. Buyer quotes serve two important purposes. First, they add credibility to your buyer persona by linking what buyers actually said to each insight. Second, they enable you to have a deeper and more nuanced understanding of your buyer – how they think about a particular buying decision, how they talk about their needs, desired outcomes, and concerns. This understanding will be invaluable to your marketing and sales teams.</p>
+<p>&nbsp;</p>
+<h2 style="text-align: center;"><b>Need Help Building Your Buyer Personas? <a href="https://buyerpersona.com/contact-us">Let’s Talk!</a></b></h2>
+<p>&nbsp;</p>
+</div>
+</div></div><div id="panel-24410-0-0-1" class="so-panel widget widget_sow-accordion panel-last-child" data-index="1"><div class="so-widget-sow-accordion so-widget-sow-accordion-default-2b55ed2807e6-24410"><h2 class="widget-title">Buyer Persona FAQs</h2><div>
+	<div class="sow-accordion">
+			<div class="sow-accordion-panel
+					" data-anchor-id="how-many-buyer-personas-do-you-need">
+					<div class="sow-accordion-panel-header-container" role="heading" aria-level="2">
+					<div class="sow-accordion-panel-header" tabindex="0" role="button" id="accordion-label-how-many-buyer-personas-do-you-need" aria-controls="accordion-content-how-many-buyer-personas-do-you-need" aria-expanded="false">
+						<div class="sow-accordion-title sow-accordion-title-icon-left">
+																					How Many Buyer Personas Do You Need?													</div>
+						<div class="sow-accordion-open-close-button">
+							<div class="sow-accordion-open-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+							<div class="sow-accordion-close-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="sow-accordion-panel-content" role="region" aria-labelledby="accordion-label-how-many-buyer-personas-do-you-need" id="accordion-content-how-many-buyer-personas-do-you-need" style="display: none;">
+				<div class="sow-accordion-panel-border">
+					A good rule of thumb is to have ONE buyer persona for each distinct product or service where you need buying insights to inform your marketing and sales strategies.<p></p>
+Note: it is not uncommon for organizations to have too many personas. This typically happens when you try to create a buyer profile for every role that takes part in the decision process. For example, a CRM software provider might have one persona for the CIO, one for the IT Director, one for the CMO, one for the Head of Sales, and so on. Things can get unwieldy quickly for companies with a broad portfolio of products and services. We’ve seen companies try to develop marketing plans and messaging for 20, 30, 50, and up to 100 personas! Even if you have the resources to deal with this many buyer personas (doubtful in most organizations), it introduces unnecessary complexity into your marketing efforts and ignores more essential insights about the buying decision.<p></p>
+				</div>
+			</div>
+		</div>
+			<div class="sow-accordion-panel
+					" data-anchor-id="how-many-interviews-should-you-complete-for-your-buyer-persona">
+					<div class="sow-accordion-panel-header-container" role="heading" aria-level="2">
+					<div class="sow-accordion-panel-header" tabindex="0" role="button" id="accordion-label-how-many-interviews-should-you-complete-for-your-buyer-persona" aria-controls="accordion-content-how-many-interviews-should-you-complete-for-your-buyer-persona" aria-expanded="false">
+						<div class="sow-accordion-title sow-accordion-title-icon-left">
+																					How Many Interviews Should You Complete for Your Buyer Persona?													</div>
+						<div class="sow-accordion-open-close-button">
+							<div class="sow-accordion-open-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+							<div class="sow-accordion-close-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="sow-accordion-panel-content" role="region" aria-labelledby="accordion-label-how-many-interviews-should-you-complete-for-your-buyer-persona" id="accordion-content-how-many-interviews-should-you-complete-for-your-buyer-persona" style="display: none;">
+				<div class="sow-accordion-panel-border">
+					A good rule of thumb is to conduct a minimum of 10 interviews with recent buyers who have made the same buying decision you’re trying to influence in the past 12 months. If there is a need to segment your buyer persona – for example, to understand any differences by company size, role, industry, etc. – look to complete 6-8 interviews per segment. For example, if you did a two-segment buyer persona, you would want to complete 12-16 interviews.<p></p>
+				</div>
+			</div>
+		</div>
+			<div class="sow-accordion-panel
+					" data-anchor-id="how-long-should-a-buyer-persona-interview-take">
+					<div class="sow-accordion-panel-header-container" role="heading" aria-level="2">
+					<div class="sow-accordion-panel-header" tabindex="0" role="button" id="accordion-label-how-long-should-a-buyer-persona-interview-take" aria-controls="accordion-content-how-long-should-a-buyer-persona-interview-take" aria-expanded="false">
+						<div class="sow-accordion-title sow-accordion-title-icon-left">
+																					How Long Should a Buyer Persona Interview Take?													</div>
+						<div class="sow-accordion-open-close-button">
+							<div class="sow-accordion-open-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+							<div class="sow-accordion-close-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="sow-accordion-panel-content" role="region" aria-labelledby="accordion-label-how-long-should-a-buyer-persona-interview-take" id="accordion-content-how-long-should-a-buyer-persona-interview-take" style="display: none;">
+				<div class="sow-accordion-panel-border">
+					Each buyer interview will take 30-40 minutes to complete. These are not structured surveys where you’re asking buyers to rate or rank a predetermined list of attributes. The interviews are free-flowing, semi-structured conversations where you’ll ask buyers to describe their buying journey in detail (Buyer’s Journey) including what triggered the need for them to look for a solution now (Priority Initiatives), what results or outcomes they need from the investment (Success Factors), their fears and concerns (Perceived Barriers) and the key questions they used to evaluate their options (Decision Criteria).<p></p>
+				</div>
+			</div>
+		</div>
+			<div class="sow-accordion-panel
+					" data-anchor-id="are-there-other-ways-to-create-a-buyer-persona-without-conducting-buyer-interviews">
+					<div class="sow-accordion-panel-header-container" role="heading" aria-level="2">
+					<div class="sow-accordion-panel-header" tabindex="0" role="button" id="accordion-label-are-there-other-ways-to-create-a-buyer-persona-without-conducting-buyer-interviews" aria-controls="accordion-content-are-there-other-ways-to-create-a-buyer-persona-without-conducting-buyer-interviews" aria-expanded="false">
+						<div class="sow-accordion-title sow-accordion-title-icon-left">
+																					Are There Other Ways to Create a Buyer Persona Without Conducting Buyer Interviews?													</div>
+						<div class="sow-accordion-open-close-button">
+							<div class="sow-accordion-open-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+							<div class="sow-accordion-close-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="sow-accordion-panel-content" role="region" aria-labelledby="accordion-label-are-there-other-ways-to-create-a-buyer-persona-without-conducting-buyer-interviews" id="accordion-content-are-there-other-ways-to-create-a-buyer-persona-without-conducting-buyer-interviews" style="display: none;">
+				<div class="sow-accordion-panel-border">
+					Input from your own customers and sales teams are useful inputs for your buyer persona but beware of the drawbacks:<p></p>
+
+Current Customers&nbsp;- since your own customers have already selected you they will have inherent biases, good or bad. They also don’t portray a full “market view” because they offer no insight on the opportunities you’re not considered for, and therefore don’t see.
+Sales Teams&nbsp;– no matter how much your sales teams claims to know why they are winning or losing deals, they rarely see all the dynamics going on in a prospective buyer’s organization. And, like your current customers, they have no visibility into opportunities they never see. They also tend to inflate the importance of price.
+
+Remember that one of the primary advantages of buyer interviews is that the buying insights will be viewed as highly credible by your marketing, sales, and product teams because they come straight from the source – your prospective buyers!<p></p>
+				</div>
+			</div>
+		</div>
+			<div class="sow-accordion-panel
+					" data-anchor-id="what-should-you-do-after-creating-your-buyer-persona">
+					<div class="sow-accordion-panel-header-container" role="heading" aria-level="2">
+					<div class="sow-accordion-panel-header" tabindex="0" role="button" id="accordion-label-what-should-you-do-after-creating-your-buyer-persona" aria-controls="accordion-content-what-should-you-do-after-creating-your-buyer-persona" aria-expanded="false">
+						<div class="sow-accordion-title sow-accordion-title-icon-left">
+																					What Should You Do After Creating Your Buyer Persona?													</div>
+						<div class="sow-accordion-open-close-button">
+							<div class="sow-accordion-open-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+							<div class="sow-accordion-close-button">
+								<span class="sow-icon-ionicons" data-sow-icon="" aria-hidden="true"></span>							</div>
+						</div>
+					</div>
+				</div>
+
+			<div class="sow-accordion-panel-content" role="region" aria-labelledby="accordion-label-what-should-you-do-after-creating-your-buyer-persona" id="accordion-content-what-should-you-do-after-creating-your-buyer-persona" style="display: none;">
+				<div class="sow-accordion-panel-border">
+					See “How Buyer Personas are Used in Marketing” above for the different ways you can use your buyer persona to improve marketing and sales performance.<p></p>
+In addition, since your fully developed buyer persona includes insights into everything a buyer needs to know and experience to have confidence in buying from you, take each of these insights and map them to your company’s ability to deliver unique value. This analysis will yield message themes that will guide sales playbooks and marketing copy, from website and thought leadership content to demand generation and lead nurturing campaigns.<p></p>
+The strength in the message themes comes from knowing that they are important to buyers (from your buyer persona) AND that you have the capabilities to deliver on them.<p></p>
+<p></p>
+				</div>
+			</div>
+		</div>
+		</div>
+</div>
+</div></div></div></div><div id="pgc-24410-0-1" class="panel-grid-cell"><div class="so-sidebar buyer-persona-page-sidebar panel-cell-style panel-cell-style-for-24410-0-1"><div id="panel-24410-0-1-0" class="so-panel widget widget_sow-editor panel-first-child" data-index="2"><div class="panel-widget-style panel-widget-style-for-24410-0-1-0"><div class="so-widget-sow-editor so-widget-sow-editor-base"><h2 class="widget-title">Adele Revella Presents Example Buyer Persona</h2>
+<div class="siteorigin-widget-tinymce textwidget">
+	<div class="siteorigin-widget-tinymce textwidget"><a class="fancybox-youtube" href="https://youtu.be/Y8zX6fV82Eg" aria-controls="fancybox-wrap" aria-haspopup="dialog"><img decoding="async" class="aligncenter" src="https://buyerpersona.com/wp-content/uploads/2020/11/example-buyer-personas-thumbnail.png"></a></div>
+</div>
+</div></div></div><div id="panel-24410-0-1-1" class="so-panel widget widget_sow-editor" data-index="3"><div class="panel-widget-style panel-widget-style-for-24410-0-1-1"><div class="so-widget-sow-editor so-widget-sow-editor-base"><h2 class="widget-title">How Many Buyer Personas Do You Need?</h2>
+<div class="siteorigin-widget-tinymce textwidget">
+	<div class="siteorigin-widget-tinymce textwidget">
+<p><a class="fancybox-youtube" href="https://buyerpersonapublic.s3.amazonaws.com/video2.mp4" aria-controls="fancybox-wrap" aria-haspopup="dialog"><img decoding="async" class="aligncenter" src="https://buyerpersona.com/wp-content/uploads/2020/11/how-many-buyer-personas-thumbnail.png"></a></p>
+</div>
+</div>
+</div></div></div><div id="panel-24410-0-1-2" class="so-panel widget widget_sow-editor" data-index="4"><div class="panel-widget-style panel-widget-style-for-24410-0-1-2"><div class="so-widget-sow-editor so-widget-sow-editor-base"><h2 class="widget-title">Buyer Persona Research:</h2>
+<div class="siteorigin-widget-tinymce textwidget">
+	<div class="siteorigin-widget-tinymce textwidget">
+<hr style="width: 40%; height: 3px; background-color: #a3260d; border: none; margin: -10px auto 10px;">
+<p style="text-align: center;">Get buyer personas that reveal your persona's entire buying experience, plus skilled guidance on a plan to exceed their expectations.</p>
+<p style="text-align: center;"><a class="button primary" href="https://buyerpersona.com/buyer-persona-research">Learn More</a></p>
+</div>
+</div>
+</div></div></div><div id="panel-24410-0-1-3" class="so-panel widget widget_sow-editor" data-index="5"><div class="panel-widget-style panel-widget-style-for-24410-0-1-3"><div class="so-widget-sow-editor so-widget-sow-editor-base"><h2 class="widget-title">Get Buyer Persona Templates</h2>
+<div class="siteorigin-widget-tinymce textwidget">
+	<div class="siteorigin-widget-tinymce textwidget">
+<p style="text-align: center;">Free templates to help you profile your buyers and every aspect of the buying decision you want to influence.</p>
+<p style="text-align: center;"><a class="button primary" href="https://buyerpersona.com/buyer-persona-templates-free-download">Get Free Templates</a></p>
+</div>
+</div>
+</div></div></div><div id="panel-24410-0-1-4" class="widget_text so-panel widget widget_custom_html" data-index="6"><div class="widget_text white-text panel-widget-style panel-widget-style-for-24410-0-1-4"><h2 class="widget-title">Masterclass 2.0</h2><div class="textwidget custom-html-widget">
+	Learn the industry's #1 method and become a buyer persona expert.
+<p></p>
+Learn More</div></div></div></div></div></div></div></div></div></article></main></div></div></div><footer class="site-footer"><div class="wrap"><p>Copyright ©&nbsp;2026 · Buyer Persona. All Rights Reserved | <a href="https://buyerpersona.com/privacy-policy/">Privacy Policy</a></p></div></footer></div><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/buyer/*","/wp-content/themes/genesis/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<!-- WP Audio player plugin v1.9.15 - https://www.tipsandtricks-hq.com/wordpress-audio-music-player-plugin-4556/ -->
+    <script type="text/javascript">
+        soundManager.useFlashBlock = true; // optional - if used, required flashblock.css
+        soundManager.url = 'https://buyerpersona.com/wp-content/plugins/compact-wp-audio-player/swf/soundmanager2.swf';
+        function play_mp3(flg, ids, mp3url, volume, loops)
+        {
+            //Check the file URL parameter value
+            var pieces = mp3url.split("|");
+            if (pieces.length > 1) {//We have got an .ogg file too
+                mp3file = pieces[0];
+                oggfile = pieces[1];
+                //set the file URL to be an array with the mp3 and ogg file
+                mp3url = new Array(mp3file, oggfile);
+            }
+
+            soundManager.createSound({
+                id: 'btnplay_' + ids,
+                volume: volume,
+                url: mp3url
+            });
+
+            if (flg == 'play') {
+                    soundManager.play('btnplay_' + ids, {
+                    onfinish: function() {
+                        if (loops == 'true') {
+                            loopSound('btnplay_' + ids);
+                        }
+                        else {
+                            document.getElementById('btnplay_' + ids).style.display = 'inline';
+                            document.getElementById('btnstop_' + ids).style.display = 'none';
+                        }
+                    }
+                });
+            }
+            else if (flg == 'stop') {
+    //soundManager.stop('btnplay_'+ids);
+                soundManager.pause('btnplay_' + ids);
+            }
+        }
+        function show_hide(flag, ids)
+        {
+            if (flag == 'play') {
+                document.getElementById('btnplay_' + ids).style.display = 'none';
+                document.getElementById('btnstop_' + ids).style.display = 'inline';
+            }
+            else if (flag == 'stop') {
+                document.getElementById('btnplay_' + ids).style.display = 'inline';
+                document.getElementById('btnstop_' + ids).style.display = 'none';
+            }
+        }
+        function loopSound(soundID)
+        {
+            window.setTimeout(function() {
+                soundManager.play(soundID, {onfinish: function() {
+                        loopSound(soundID);
+                    }});
+            }, 1);
+        }
+        function stop_all_tracks()
+        {
+            soundManager.stopAll();
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].id.indexOf("btnplay_") == 0) {
+                    inputs[i].style.display = 'inline';//Toggle the play button
+                }
+                if (inputs[i].id.indexOf("btnstop_") == 0) {
+                    inputs[i].style.display = 'none';//Hide the stop button
+                }
+            }
+        }
+    </script>
+    <div id="csbwfs-delaydiv"><div class="csbwfs-social-widget" id="csbwfs-left" title="Share This With Your Friends" style="top:25%;left:0;"><div id="csbwfs-social-inner"><div class="csbwfs-sbutton csbwfsbtns"><div id="csbwfs-fb" class="csbwfs-fb"><a target="_blank" title="Share On Facebook"><i class="csbwfs_facebook"></i></a></div></div><div class="csbwfs-sbutton csbwfsbtns"><div id="csbwfs-tw" class="csbwfs-tw"><a title="Share On Twitter"><i class="csbwfs_twitter"></i></a></div></div><div class="csbwfs-sbutton csbwfsbtns"><div id="csbwfs-li" class="csbwfs-li"><a title="Share On Linkedin"><i class="csbwfs_linkedin"></i></a></div></div><div class="csbwfs-sbutton csbwfsbtns"><div id="csbwfs-pin" class="csbwfs-pin"><a title="Share On Pinterest"><i class="csbwfs_pinterest"></i></a></div></div></div></div></div>			<div class="mtsnb mtsnb-shown mtsnb-top mtsnb-fixed" id="mtsnb-24240" data-mtsnb-id="24240" style="background-color:#e2a700;color:#000000;">
+				
+				<div class="mtsnb-container-outer">
+					<div class="mtsnb-container mtsnb-clearfix">
+												<div class="mtsnb-button-type mtsnb-content"><span class="mtsnb-text"></span><a href="https://buyerpersona.com/buyer-persona-messaging-offer" class="mtsnb-link">Limited Time Offer: Buyer Persona Research + Value Prop &amp; Message Development</a></div>											</div>
+																		<a href="https://buyerpersona.com/what-is-a-buyer-persona#" class="mtsnb-hide" style="background-color:#e2a700;color:#000000;"><span>+</span></a>
+										</div>
+			</div>
+			<script type="text/javascript"> _linkedin_partner_id = "6117186"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script>
+
+<script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script>
+
+<noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6117186&fmt=gif" /> </noscript>					<!-- Start of Async HubSpot Analytics Code -->
+					<script type="text/javascript">
+					(function(d,s,i,r) {
+					if (d.getElementById(i)){return;}
+					var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+					n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/23255381.js';
+					e.parentNode.insertBefore(n, e);
+					})(document,"script","hs-analytics",300000);
+					</script>
+					<!-- End of Async HubSpot Analytics Code -->
+				<script async="" data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://buyerpersona.com/wp-includes/js/comment-reply.min.js?ver=b71f867e1703a86645d8f0f9c0706213"></script>
+<script id="collapseomatic-js-js-before">
+const com_options = {"colomatduration":"fast","colomatslideEffect":"slideFade","colomatpauseInit":"","colomattouchstart":""}
+//# sourceURL=collapseomatic-js-js-before
+</script>
+<script id="collapseomatic-js-js" src="https://buyerpersona.com/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.7.2"></script>
+<script id="lsow-modernizr-js" src="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/js/modernizr-custom.min.js?ver=2.0.1"></script>
+<script id="lsow-waypoints-js" src="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/js/jquery.waypoints.min.js?ver=2.0.1"></script>
+<script id="lsow-frontend-scripts-js-extra">
+var lsow_settings = {"mobile_width":"730","custom_css":""};
+var lsow_ajax_object = {"ajax_url":"https://buyerpersona.com/wp-admin/admin-ajax.php"};
+//# sourceURL=lsow-frontend-scripts-js-extra
+</script>
+<script id="lsow-frontend-scripts-js" src="https://buyerpersona.com/wp-content/plugins/livemesh-siteorigin-widgets-pro/assets/js/lsow-frontend.min.js?ver=2.0.1"></script>
+<script id="hoverIntent-js" src="https://buyerpersona.com/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="superfish-js" src="https://buyerpersona.com/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10"></script>
+<script id="superfish-args-js" src="https://buyerpersona.com/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=3.6.2"></script>
+<script id="skip-links-js" src="https://buyerpersona.com/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=3.6.2"></script>
+<script id="fancybox-purify-js" src="https://buyerpersona.com/wp-content/plugins/easy-fancybox/vendor/purify.min.js?ver=b71f867e1703a86645d8f0f9c0706213"></script>
+<script id="jquery-fancybox-js-extra">
+var efb_i18n = {"close":"Close","next":"Next","prev":"Previous","startSlideshow":"Start slideshow","toggleSize":"Toggle size"};
+//# sourceURL=jquery-fancybox-js-extra
+</script>
+<script id="jquery-fancybox-js" src="https://buyerpersona.com/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.js?ver=b71f867e1703a86645d8f0f9c0706213"></script>
+<script id="jquery-fancybox-js-after">
+var fb_timeout, fb_opts={'autoScale':true,'showCloseButton':true,'width':720,'height':480,'margin':20,'pixelRatio':'false','centerOnScroll':false,'enableEscapeButton':true,'overlayShow':true,'hideOnOverlayClick':true,'minVpHeight':320,'disableCoreLightbox':'true','enableBlockControls':'true','fancybox_openBlockControls':'true' };
+if(typeof easy_fancybox_handler==='undefined'){
+var easy_fancybox_handler=function(){
+jQuery([".nolightbox","a.wp-block-fileesc_html__button","a.pin-it-button","a[href*='pinterest.com\/pin\/create']","a[href*='facebook.com\/share']","a[href*='twitter.com\/share']"].join(',')).addClass('nofancybox');
+jQuery('a.fancybox-close').on('click',function(e){e.preventDefault();jQuery.fancybox.close()});
+/* Inline */
+jQuery('a.fancybox-inline,area.fancybox-inline,.fancybox-inline>a').each(function(){jQuery(this).fancybox(jQuery.extend(true,{},fb_opts,{'type':'inline','autoDimensions':true,'scrolling':'no','easingIn':'linear','easingOut':'linear','opacity':false,'hideOnContentClick':false,'titleShow':false}))});
+/* YouTube */
+jQuery('a[href*="youtu.be/" i],area[href*="youtu.be/" i],a[href*="youtube.com/" i],area[href*="youtube.com/" i]' ).filter(function(){return this.href.match(/\/(?:youtu\.be|watch\?|embed\/)/);}).not('.nofancybox,li.nofancybox>a').addClass('fancybox-youtube');
+jQuery('a.fancybox-youtube,area.fancybox-youtube,.fancybox-youtube>a').each(function(){jQuery(this).fancybox(jQuery.extend(true,{},fb_opts,{'type':'iframe','width':720,'height':480,'keepRatio':1,'aspectRatio':1,'titleShow':false,'titlePosition':'float','titleFromAlt':true,'onStart':function(a,i,o){var splitOn=a[i].href.indexOf("?");var urlParms=(splitOn>-1)?a[i].href.substring(splitOn):"";o.allowfullscreen=(urlParms.indexOf("fs=0")>-1)?false:true;o.href=a[i].href.replace(/https?:\/\/(?:www\.)?youtu(?:\.be\/([^\?]+)\??|be\.com\/watch\?(.*(?=v=))v=([^&]+))(.*)/gi,"https://www.youtube.com/embed/$1$3?$2$4&autoplay=1");}}))});
+/* Vimeo */
+jQuery('a[href*="vimeo.com/" i],area[href*="vimeo.com/" i]' ).filter(function(){return this.href.match(/\/(?:[0-9]+|video\/)/);}).not('.nofancybox,li.nofancybox>a').addClass('fancybox-vimeo');
+jQuery('a.fancybox-vimeo,area.fancybox-vimeo,.fancybox-vimeo>a').each(function(){jQuery(this).fancybox(jQuery.extend(true,{},fb_opts,{'type':'iframe','width':720,'height':405,'padding':0,'keepRatio':1,'aspectRatio':1,'titleShow':false,'titlePosition':'float','titleFromAlt':true,'onStart':function(a,i,o){var splitOn=a[i].href.indexOf("?");var urlParms=(splitOn>-1)?a[i].href.substring(splitOn):"";o.allowfullscreen=(urlParms.indexOf("fullscreen=0")>-1)?false:true;o.href=a[i].href.replace(/https?:\/\/(?:www\.)?vimeo\.com\/([0-9]+)\??(.*)/gi,"https://player.vimeo.com/video/$1?$2&autoplay=1");}}))});
+/* iFrame */
+jQuery('a.fancybox-iframe,area.fancybox-iframe,.fancybox-iframe>a').each(function(){jQuery(this).fancybox(jQuery.extend(true,{},fb_opts,{'type':'iframe','width':1280,'height':720,'titleShow':false,'titlePosition':'float','titleFromAlt':true,'allowfullscreen':false}))});
+};};
+jQuery(easy_fancybox_handler);jQuery(document).on('post-load',easy_fancybox_handler);
+
+//# sourceURL=jquery-fancybox-js-after
+</script>
+<script id="ivory-search-scripts-js-extra">
+var IvorySearchVars = {"is_analytics_enabled":"1"};
+//# sourceURL=ivory-search-scripts-js-extra
+</script>
+<script id="ivory-search-scripts-js" src="https://buyerpersona.com/wp-content/plugins/add-search-to-menu/public/js/ivory-search.min.js?ver=5.5.16"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://buyerpersona.com/wp-includes/js/wp-emoji-release.min.js?ver=b71f867e1703a86645d8f0f9c0706213"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://buyerpersona.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>document.body.className = document.body.className.replace("siteorigin-panels-before-js","");</script>
+<div id="fancybox-tmp"></div><div id="fancybox-loading" title="Cancel"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap" role="dialog" aria-hidden="true" aria-labelledby="fancybox-title" tabindex="-1"><div id="fancybox-outer"><div id="fancybox-content"></div><a id="fancybox-close" title="Close" class="fancy-ico" tabindex="1"><span></span></a><a id="fancybox-next" title="Next" class="fancy-ico" tabindex="2"><span></span></a><a id="fancybox-prev" title="Previous" class="fancy-ico" tabindex="3"><span></span></a><div id="fancybox-title-wrap"></div></div></div></body></html>

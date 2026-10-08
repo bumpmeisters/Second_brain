@@ -3,6 +3,7 @@ type: concept
 status: active
 trust: partially-verified
 sources:
+  - "raw/Clippings/Agents That Write Their Own Tools at Runtime — Sandhya Subramani, AWS.md"
   - research/2026-07-01-agentic-systems-recent-research.md
   - https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/
   - https://research.google/blog/towards-a-science-of-scaling-agent-systems-when-and-why-agent-systems-work/
@@ -21,7 +22,7 @@ sources:
   - raw/imports/automated-clippings/youtube/UCLKPca3kwwd-B59HNr-_lvA/2026-07-28--CgsWxRUY5Eo.md
   - raw/imports/automated-clippings/youtube/UCjNRVMBVI30Sak_p6HRWhIA/2026-08-10--4JYoTE_VKaU.md
 created: 2026-07-01
-updated: 2026-08-19
+updated: 2026-10-07
 ---
 
 # Agentic Systems
@@ -203,6 +204,12 @@ The vault should use agentic patterns where the loop can be inspected and bounde
 
 The vault itself is part of the harness: `AGENTS.md` supplies policy, wiki pages and sources supply context, skills supply reusable procedures, and the log supplies an audit trail (analysis based on this vault's operating model and the cited architecture evidence).
 
+## Dynamisch erzeugte Tools
+
+Ein Meta-Tooling-Agent kann über Editor, Shell und dynamischen Loader zur Laufzeit neue Werkzeuge erzeugen und laden. Die als „zero tools“ beschriebene Demo besitzt bereits diese drei weitreichenden Basiswerkzeuge. Auch erzeugte Werkzeuge brauchen begrenzte Ausführungsumgebung und Berechtigungen; Evaluation muss neben Zielerreichung Werkzeugwahl, Parameter und die Agentenkommunikation prüfen. Die konkrete Demo ist eine Architekturillustration und kein Produktionsnachweis. (source: raw/Clippings/Agents That Write Their Own Tools at Runtime — Sandhya Subramani, AWS.md; vendor; Analyse P60-C01; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].
+
 ## Open questions
 
 - Which vault tasks gain enough from parallel agents to justify their cost and synthesis risk?
@@ -210,6 +217,18 @@ The vault itself is part of the harness: `AGENTS.md` supplies policy, wiki pages
 - Which reliability metrics should become required checks for ingest and research workflows?
 - How should approval and rollback work for agent-authored changes beyond the wiki?
 - Can a small local benchmark distinguish model failures from harness failures in recurring vault tasks?
+
+## Evidence boundaries for factories and swarms
+
+For an agent-factory or swarm experiment, record the demonstrated task, permitted actions, review/escalation points, tooling failures, and conditions not tested. A successful prototype does not establish reliable autonomous delivery across tasks.
+
+Before adding parallel instances, state what can be decomposed and how synthesis, shared-state conflicts, latency, and resource costs will be measured. Compare against a suitable simpler baseline. Modular tools and action traces can make the experiment inspectable, but do not themselves establish a performance advantage. Brown's interview explicitly lacks a good 10,000-versus-2,000-agent scaling measurement; treat the scaling discussion as an architectural hypothesis. No additional operational autonomy follows from this page.
+
+Source and review boundary (P58-C03, user-approved 2026-09-21):
+
+- `raw/Clippings/DeepSeek Just Built the Next Generation of Coding Agents.md` — [[ai-engineering-source-review-2026-09-21]].
+- `raw/Clippings/GPT-6 Astra Just Made AI Software Factories Real (Here's How to Run One).md` — [[ai-engineering-source-review-2026-09-21]].
+- `raw/Clippings/OpenAI researcher on agent swarms & recursive self-improvement.md` — [[ai-engineering-source-review-2026-09-21]].
 
 ## Related pages
 

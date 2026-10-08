@@ -1,0 +1,47 @@
+{
+  "project_id": "amber",
+  "entity_ids": [
+    "amber-fictional-group"
+  ],
+  "company_name": "Amber Fictional Instruments",
+  "purpose": "Fictional company basis for downstream planning",
+  "language": "en",
+  "region": "global",
+  "period": "2025",
+  "core_fields": [
+    "identity",
+    "workforce"
+  ],
+  "paths": {
+    "project_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber",
+    "vault_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber",
+    "run_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\runs",
+    "source_roots": [
+      "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\originals"
+    ],
+    "publication_root": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\context"
+  },
+  "strategy": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\strategy.md",
+    "sha256": "ce4238f51edb1c537a65b862b17ad3c449efcfb3476870362e36fe2b7e934450",
+    "accepted": true
+  },
+  "budgets": {
+    "annual_report": 3,
+    "supplementary": 20,
+    "community": 3,
+    "searches": 12
+  },
+  "source_manifest": {
+    "path": "C:\\Users\\rolfp\\Vaults\\second-brain\\wiki\\_outputs\\company-intelligence-entrypoints-verified-20260909\\amber\\selection-baseline.json",
+    "sha256": "a3450b7c84948f4792c9b4ee9616bf2ad256f01f82758de8e1bfc9940142b997"
+  },
+  "excluded_stocks": [
+    "All real companies and other fictional companies"
+  ],
+  "worker_capacity": 3,
+  "entry": {
+    "mode": "baseline",
+    "question": "Fictional company basis for downstream planning"
+  }
+}

@@ -3,14 +3,285 @@ type: source-register
 status: active
 sources: []
 created: 2026-06-01
-updated: 2026-08-18
+updated: 2026-10-08
 ---
 
 # Sources
 
-**Summary**: Register of raw files, AI-generated research, and their ingest status. Binary libraries live locally in the Git-ignored `raw/assets/` and `research/assets/` folders; Google Drive remains rollback storage rather than the active citation path.
+## TokenMade AI-Use-Cases · P61 · 2026-10-08
+
+Persönlich von Rolf geprüfte und ausdrücklich zum sorgfältigen Ingest ausgewählte Downloadserie. 31 exakte Dateien/Hashes, 24 unterschiedliche Transkripte vollständig textuell reviewed, sieben identische Varianten. 98 Fallkarten inklusive Nebenbeispielen, Hobbyprojekten und geplanten Anwendungen: [[tokenmade-ai-use-cases-source-review-2026-10-08]]. [Identitätsmatrix](_outputs/semantic-ingest/p61/source-identity-map.csv), [24 Vollbriefe und Evidenzcheckpoint](_outputs/semantic-ingest/p61/checkpoint.md). 24 Dateinamen passen nicht zum enthaltenen Interview; Originalpfade bleiben Citation Identity. Practitioner-/Vendor-Interviews, keine AI-Research-Primärevidenz. Veröffentlichungsdatum unbekannt; Erfolgs-, Produkt- und Complianceangaben unverified. Quellenreview abgeschlossen; alle neun begrenzten Methoden am 08.10.2026 von Rolf ausdrücklich freigegeben und übernommen. Neue Praxisartefakte bleiben draft; berichtete Wirkungen sind weiterhin unverified.
+
+| Exakter Originalpfad | Tatsächlicher Inhalt | Typ / Verarbeitungsstatus | Quellenhub |
+|---|---|---|---|
+| `raw/Clippings/20 Web-Apps ohne Informatik-Hintergrund Ein HR-Chef baut seiner Firma einen eigenen App Store 18.md` | TM01 · Jens Bohse: Lead Lab und Agency OS | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/500.000 Follower f�r 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md` | TM02 · Elliot: Beschaffungsmonitor und Koffervermietungs-Prototyp | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Alle Mitarbeiterinnen und SaaS-Vertr�ge mit Claude ersetzt  Christoph Fahle 28.md` | TM03 · Melchior Neumann: Rechnungsrouting mit schwerwiegendem Ausfall | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Andr� M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md` | TM04 · Max Brunner: Reinigungsplanung und getrennte Datenhaltung | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Bei Volkswagen programmiert die KI nachts Thorsten Jankowsky �ber Agentic Coding im Konzern.md` | TM05 · Volkswagen: H�ndlerfragen zu gepr�fter Antwort und FAQ | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md` | TM06 · Purpose Energy: Agententeam mit Evidenz, Signalen und menschlichen Gates | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Claude Code als Betriebssystem f�rs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md` | TM07 · Hendrik Hemken: Datei-Kontext, Rechnungsentw�rfe und Statistikabruf | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Der 16-J�hrige, der nicht tippt � Sneaker-Reselling & Koffer-Vermietung aus dem Kinderzimmer 17.md` | TM01 · Jens Bohse: Lead Lab und Agency OS | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md` | TM08 · Christian Byza: Company Brain f�r teamweite Arbeitskoordination | vendor; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ein Journalist l�sst einen KI-Agenten mit seiner Stimme Interviews f�hren 07.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md` | TM10 · PlaneFox: Marktplatzdaten normalisieren und datenbasierte Distribution | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ex-Googler baut J-Brain Wie Julius sein ganzes Business mit Claude steuert.md` | TM11 · Marco Morgenstern: Lokaler App-/Skill-Katalog mit geregelter Verteilung | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md` | TM12 · Maik Klotz: Banking-/Retro-App und getrenntes Codeaudit | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md` | TM13 · Samuel Potthoff: Gartenplaner mit Bestandsbindung | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Hundephysiotherapie mit Claude als Co-Founder 03 - TokenMade.md` | TM13 · Samuel Potthoff: Gartenplaner mit Bestandsbindung | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Kundengespr�che auswerten mit Claude und n8n 06 - TokenMade - AI Use Cases.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md` | TM14 · Dr. Sara Marquart: R&D, Assistenz und Fachagenten bei Planet A Foods | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Software-Entwicklung ist gel�st Boris Fr�ndt �ber KI-Prototyping, Fable und warum UXUI der neu.md` | TM01 · Jens Bohse: Lead Lab und Agency OS | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md` | TM15 · Daniel Setzermann: Creator Operations und KI-Experimente bei HOLY | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md` | TM16 · Spotler: Kundengespr�che mit SQL und RAG auswerten | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md` | TM17 · Christoph Burseg: Vorbereitende Buchhaltung und agentische Arbeitsabl�ufe | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz �ber seine Hobby Projekte simplebanking und RetroMac 22.md` | TM18 · Andrej: Fabique als kuratierte Content-Pipeline | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md` | TM19 · Marco Alberti: Evident Flow, Fachautomation und Ticketpipeline | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in M�nchen 20.md` | TM11 · Marco Morgenstern: Lokaler App-/Skill-Katalog mit geregelter Verteilung | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md` | TM20 · Felix Koleve: Schulverwaltung und individuelle Aufgaben | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie ein CMO sein ganzes Marketing automatisiert 05 - TokenMade - AI Use Cases.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md` | TM21 · David Nellessen: F�hrungsbriefings und Syte-Produkt | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Gesch�ft mit KI disruptet 08 - TokenMade - AI Use Cases.md` | TM22 · Tim Heicks: Marketing-Agentenbibliothek bei SaaS Group | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md` | TM23 · Scalable Capital: Agentic Investing und gepr�fte Produktentwicklung | vendor; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md` | TM24 · Cedrik Dudek: Briefing, Designreview und Webflow-CMS | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+
+## Research-Inbox · 2026-10-07
+
+Rolf hat die drei Dateien ausdrücklich research zugeordnet. Ablage und Evidenzvertrauen bleiben getrennt; KI-Erzeugung ist nicht bekannt. [[research-inbox-source-review-2026-10-07]] dokumentiert Hashabgleich, Import und Grenzen.
+
+| Exakter Quellpfad | Typ und Status | Quellenbrief |
+| --- | --- | --- |
+| `research/assets/20250611_Reengineer Campaigns_draft.pptx` | Präsentationskopie; inventory-only, identisch mit raw-Original; bestehender P58-Extraktionsblock offen | [[research-inbox-source-review-2026-10-07]] |
+| `research/assets/20260212_End of the old way of Marketing_1_1.pptx` | Präsentationskopie; inventory-only, identisch mit bereits begrenzt reviewed raw-Original; kein neuer Beleg | [[research-inbox-source-review-2026-10-07]] |
+| `research/assets/Editorial-Board_2026_Industrial-Marketing-Management.pdf` | Namensverzeichnis; vollständiger Textreview, Sidecar ready; Herkunft/Aktualität unbestätigt, keine Claim-Promotion | [[research-inbox-source-review-2026-10-07]] |
+
+## Academy-Auswahlprüfung · 2026-10-07
+
+Auf Rolfs Auftrag zur Auswahlprüfung: vollständiger Metadaten-/Hashabgleich aller 3.904 PDFs, begrenzter Inhaltsreview von zwölf Gegenfällen (elf vollständig textuell, BSI-Dokument S. 1–3 und 12–14; drei Seiten visuell). [[academy-selection-review-2026-10-07]] und [exaktes Stichprobenledger mit SHA-256, Titel und Lesedeckung](_outputs/source-intake/academy-selection-2026-10-07/sample-ledger.csv). Drei Kandidaten priorisiert, noch kein vertiefter semantischer Ingest oder kanonische Methodenübernahme.
+
+| Exakte Quelle / Bereich | Typ / Zusammenfassung | Quellenstatus | Grenze |
+|---|---|---|---|
+| `raw/assets/tuev-rheinland/academy/2026-10-07/` | Academy-PDF-Archiv; vollständiges [Auswahlledger](_outputs/source-intake/academy-selection-2026-10-07/selection-ledger.csv) | inventory-only | 3.904 Originale; zwölf ausgewählte Gegenfälle separat gelesen, keine automatische Freigabe des Gesamtbestands. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/000f9d99cd6e4728971f099dd5d12c844bbc0e13f2f702e8cd4af370804c3a9d.pdf` | Anmeldeformular Filmauswertung | reviewed; selection-only | S. 1–4; Archiv empfohlen. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/0022464cb613b8aa0d0fcd0282ebe69a2636045aa969728a09ef13f5f933db5c.pdf` | Seminarinformation PowerPoint | reviewed; selection-only | S. 1–3; Projektreferenz. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/2222a263534a48c7f073869bd8cc463f3c63667c43fd62c7d243ded5ce86e424.pdf` | Praxis-Checkliste Qualitätskultur | reviewed; selection-only | S. 1–17; S. 3 visuell; Wissensreview priorisiert, kein validierter Reifegradindex. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/35d1d6bd5cc229de9dd90460fae829763d7bbacc55dd9483ba5794de65e36eea.pdf` | BSI IT-Grundschutz-Berater | partially-reviewed; selection-only | Nur S. 1–3, 12–14; bedingte Fachreferenz. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/3a65f7d70336eff2847283d51110b83a7173768abd7af609da1fdd8060e22d61.pdf` | Seminarzentrum-Konditionen München | reviewed; selection-only | S. 1; Archiv empfohlen. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/3c3af53a0f91d9f7837df742cae359648bdaf6102533374875c1d890a1b3d6d6.pdf` | Umweltauditor-FAQ | reviewed; selection-only | S. 1–5; Projektreferenz, aktuelle Qualifikationsregeln nicht geprüft. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/79aa6dc7264f2454e899face32083c7eef28adb0670a068c73b15201f71ba702.pdf` | Seminarinformation ITIL Bridge | reviewed; selection-only | S. 1–6; Projektreferenz, Aktualitätsfrage dokumentiert. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/7cf33b95fb0e0ed546f98e95d90ca8bac5c69a230c1ac72f35b397ce93215b8a.pdf` | DMS-Auswahlcheckliste | reviewed; selection-only | S. 1–7; Wissensreview priorisiert, kein Produktbenchmark. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/8405f3afc870ed575b2a322bcd01cd3a3d86483795c569c54f302467b0110b87.pdf` | Anmeldeformular Parkour | reviewed; selection-only | S. 1–4; Archiv empfohlen. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/96ef63b53221262d99627c7951995a4043bbd2cd4dc12a2550e29a5ee274b0f2.pdf` | ISO-19011-Leseprobe | reviewed; selection-only | S. 1–9; bedingte Fachreferenz, keine vollständige Auditmethode. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/d9c19062fc9bbdbe1b3683f071511599d6f3514185fcc78861c344300ca5aa16.pdf` | Vier Lernformate Qualitätsbeauftragter | reviewed; selection-only | S. 1 auch visuell; Projektvergleich, keine Effektivitätsstudie. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/ee8fe20c8e5afc333a120e85f759bdb9b4f560354e016af55377c9c2aeb9315f.pdf` | Lerntransfer-Whitepaper | reviewed; selection-only | S. 1–7; S. 2 visuell; Wissensreview priorisiert, Wirksamkeitsclaims nicht verifiziert. |
+
+## Native LinkedIn-Schreibbeispiele · 2026-10-04
+
+Auf Rolfs Auftrag gezielt ausgewählte öffentliche Originalposts. [Quellenreview, Lesedeckung und Transfergrenzen](_outputs/reference-profile-pilot-2026-10-04/linkedin-reference-pack.md). Öffentliche Haupttexte gelesen, keine Bilder/Videos geprüft. Firecrawl unterstützt diese Plattform nicht; kein Rohvolltextimport, keine lokalen Quellsnapshots oder Korpusvollständigkeit behauptet. Kurze Paraphrasen und Handwerksanalyse gespeichert; keine sachlichen Erfolgsbehauptungen oder neue kanonische Methode übernommen.
+
+| Exakte Quelle | Rolle | Quellenstatus |
+|---|---|---|
+| https://www.linkedin.com/posts/andycrestodina_contentstrategy-activity-7049391792852533249-gjSd | L01; ein konkretes Projekt erklärt Thema und Format | public-text-reviewed; URL und Quellenanalyse, kein lokaler Snapshot |
+| https://www.linkedin.com/posts/mattheinz_marketing-is-a-verb-market-is-a-noun-its-activity-7202036017644675073-hN88 | L02; ein Missverständnis wird anschaulich | public-text-reviewed; berichtete Anekdote nicht verifiziert |
+| https://www.linkedin.com/posts/andycrestodina_using-ai-as-a-content-analyst-how-to-plan-activity-7282432652954030080-ItiR | L03; konkrete Arbeitsprobe innerhalb des Posts | public-text-reviewed; keine Wirkungsvalidierung des Prompts |
+| https://www.linkedin.com/posts/kieranjflanagan_sometimes-its-worth-remembering-that-truly-activity-7483506560892129280-3Aki | L04; Beispiele als Argument, begrenzte Strukturreferenz | public-text-reviewed; historische Zahlen und Kausalität ungeprüft |
+
+## Matt-Heinz-Schreibprofil-Pilot · 2026-10-04
+
+Gezielte öffentliche Quellenauswahl im freigegebenen ersten Umsetzungsabschnitt. [[matt-heinz-writing-profile-pilot-source-review]]; [exakte Identitäten und Hashes](_outputs/reference-profile-pilot-2026-10-04/corpus-manifest.json). Acht Artikeltexte vollständig geprüft, keine Bildanalyse, Fachbehauptungen nicht als Tatsachen übernommen. Autorenprofil nur experimenteller Output; keine kanonische Methodenpromotion.
+
+| Exakte Quelle | Rolle | Quellenstatus |
+|---|---|---|
+| `raw/imports/matt-heinz-profile-2026-10-04/d01-sales-report-into-marketing.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d02-brand-dirty-word.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d03-ai-review-bottleneck.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d04-compounding-drag.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d05-life-lessons.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d06-powerpoint-template.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/h01-more-than-b2b.md` | öffentliche Autorenveröffentlichung; nachgelagerter Vergleich | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/h02-human-trust.md` | öffentliche Autorenveröffentlichung; nachgelagerter Vergleich | content-ingested |
+
+## Writing-System, Taste und Compound Writing · 2026-10-04
+
+Explizit vom Nutzer ausgewählte Vergleichsquellen; keine automatische Erweiterung des zugelassenen Rohquellenkorpus. Ergebnis: [[writing-system-taste-review-2026-10-04]]. Vorschläge sind dokumentiert, nicht in produktive Methoden promoviert.
+
+| Exakte Quelle | Typ / Zusammenfassung | Quellenstatus | Grenze |
+|---|---|---|---|
+| `research/assets/taste-writing-review-2026-10-04/taste-statt-style.docx` | AI research, ChatGPT Web, Modell/Erzeugungsdatum unbekannt; `partially-verified`; Aufnahme 04.10.2026; [[taste-statt-style-research-review]] | content-ingested; Quellenanalyse abgeschlossen | Validiertes Sidecar, zentrale Primärquellen und aktuelle Produktbeschreibungen geprüft. Kein Beweis für die Gesamtarchitektur; keine Methodenpromotion. |
+| `raw/imports/taste-writing-review-2026-10-04/taste-evals-transcript.txt` | Nutzertranskript, Gesprächs-/Methodenquelle; [[writing-system-taste-review-2026-10-04]] | content-ingested; textuell geprüft | Bottom-up-Kriterien und Kalibrierung. Audio/Demo nicht unabhängig geprüft. Hash und Herkunft im Forschungsreview. |
+| `raw/imports/taste-writing-review-2026-10-04/compound-writing-transcript.txt` | Nutzertranskript, Erfahrungs-/Methodenquelle; [[writing-system-taste-review-2026-10-04]] | content-ingested; textuell geprüft | Katie Parrotts System, Dan Shipper Intro. Feedbackpflege ist kein Wirkungsnachweis. Hash und Herkunft im Forschungsreview. |
+| `repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/` | Repo-Snapshot; [Dossier und genaue Lesedeckung](../repositories/petergyang--no-ai-slop/petergyang--no-ai-slop-analysis.md), [Manifest](../repositories/petergyang--no-ai-slop/manifests/000650b156983f5159695b441477f4e63b25dc85.json) | inventory-only; vollständige Source Custody | 14 Dateien inventarisiert; 13 Textdateien explizit statisch geprüft, PNG ungelesen. Keine Installation, Ausführung oder Qualitätsmessung. |
+
+Begleitende Web-/Paperprüfung mit Zugriffsumfang und unerreichbaren beziehungsweise ungeprüften Quellen: [[taste-statt-style-research-review]]. Keine Herstellerbehauptung wird dadurch zum unabhängigen Wirksamkeitsbeleg.
+
+- 2026-09-23: [Loop-Video qi0isefEOxk](https://www.youtube.com/watch?v=qi0isefEOxk), nutzerselektiertes Transkript vollständig gelesen; Audio/Folien nicht geprüft. Zwei methodische Anregungen ausdrücklich zur begrenzten Aufnahme freigegeben, Erfolgszahlen nicht verifiziert oder übernommen. [Quellenidentität, Hash, Zeitstellen und Ziele](_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md).
+
+## HubSpot Taste Profile · 2026-09-23
+
+| Quelle | Typ / Stand | Zusammenfassung |
+|---|---|---|
+| `wiki/_outputs/hubspot-taste-review-2026-09-23/skills/taste-profile/SKILL.md` und `skills/taste-profile/references/taste-profile-context.md` im selben Reviewordner | Hersteller-Methodenquelle; beide Texte vollständig geprüft; vier Anregungen vom Nutzer zur begrenzten Integration freigegeben. Kein empirischer Wirkungsnachweis. | [Quellenreview, Archivherkunft, Hash und Übernahmeziele](_outputs/hubspot-taste-review-2026-09-23/analyse.md); [[content-marketing-strategy]]. Originaldownload unverändert im Reviewordner; kein Plugin installiert. |
+
+## P57 · Kanonische Übernahme · 2026-09-14
+
+Die folgenden früheren Angaben zur ausstehenden Umsetzung sind abgelöst: 43 genehmigte Entscheidungen sind in [[_outputs/semantic-ingest/p57/source-bundle]] mit kanonischen Zielen umgesetzt. Neue Module bleiben draft; das Quellenvertrauen bleibt partially-verified.
+
+| Quelle | Typ / Stand | Zusammenfassung |
+|---|---|---|
+| `research/2026-09-14-framework-source-verification-p57.md` | AI research / sekundäre Prüfungszusammenstellung, 14.09.2026, partially-verified; kein Originalersatz | [[_outputs/semantic-ingest/p57/source-bundle]]; drei Quellen mit Hashes, 43 Aussagen und Lesebegrenzungen |
+
+Die beiden darunter registrierten KI-Berichte sind in P57 als sekundäre Quellen übernommen; Originalfassungen, eigene Ableitungen und zurückgestellte Rekonstruktionen bleiben getrennt.
+
+**Reviewstatus 14.09.2026:** Positiver Nutzerreview für die beiden folgenden Framework-Sammlungen: Positionierung E01–E29 und Value Proposition E01–E14 sind `approved-by-user`. Damit sind deren Übernahmeentscheidungen mit allen Einschränkungen freigegeben. Die Angaben „warten auf Review“ unten beschreiben den vorherigen Stand; Quellenvertrauen bleibt `partially-verified`, Umsetzung ist noch ausstehend.
+
+## Value-Proposition-Frameworks · KI-Forschung und Quellenprüfung · 2026-09-14
+
+| Quelle | Typ / Status | Quellenzusammenfassung | Vertrauen / Integration |
+|---|---|---|---|
+| `research/2026-09-14-b2b-value-proposition-frameworks-contextops.md` | AI research; vollständig gelesen und als Quelle integriert; 14.09.2026 | [[value-proposition-frameworks-research-review]] | `partially-verified`; 1.284 Zeilen, elf Literatur-URLs, Modell/Prompt unbekannt. Unveränderte Kopie der exakt benannten Nutzerdatei, SHA im Review. Korrekturen, Ergänzungen und Auswahlhilfe integriert; keine automatischen Runtime-/Methodenänderungen |
+
+[Quellenregister S01–S14 und Suchprotokoll](_outputs/value-proposition-landschaft-2026-09-14/quellen-und-suchprotokoll.md) unterscheidet Originaltexte, spätere Adaptionen, Autorendokumentation, Teilreproduktionen, Abstracts und Metadaten. Elf Berichtszitate einzeln mit Lesestatus versehen. [14 Evidenzzeilen](_outputs/value-proposition-landschaft-2026-09-14/evidenzmatrix.csv) warten auf Review; kein abgeschlossenes Semantic-Ingest-Paket. Bestehende ODI-/Positionierungsabdeckung verknüpft; öffentliche PDFs nur im Web gelesen, keine neuen lokalen Binäroriginale angelegt.
+
+## Positionierungslandschaft · öffentliche Methodenquellen · 2026-09-14
+
+Begrenzte Online-Quellenprüfung zur Framework-Landschaft für das Second Brain. [Quellen-/Zugangsregister S1–S30 mit Fassungen und gelesenem Umfang](_outputs/positionierungslandschaft-2026-09-13/suchstrategie.md), S1–S7 im verlinkten Pilotregister; [vergleichender Arbeitsbericht und Wissensreview RC2](_outputs/positionierungslandschaft-2026-09-13/bestand-und-pilot.md), [29 Evidenzzeilen](_outputs/positionierungslandschaft-2026-09-13/evidenzmatrix.csv). Autorenoriginale, Working Paper, Drittanbieter-Transkriptionen und reine Zugangs-/Metadatenbelege sind getrennt. S26–S30 stammen aus gezielter Verifikation des unten registrierten KI-Berichts; S30 trägt keine Methodenrekonstruktion. Keine lokalen Kopien der Weboriginale angelegt. Kein abgeschlossenes Semantic-Ingest-Paket und keine kanonische Claim-Übernahme. Arbeitsanalyse durch Codex; keine primäre Wirksamkeitsevidenz. Alle Übernahmevorschläge warten auf Evidenzreview.
+
+### KI-Forschung zur Positionierungslandschaft
+
+| Quelle | Typ / Status / Datum | Zusammenfassung | Vertrauen und Beitrag |
+|---|---|---|---|
+| `research/2026-09-14-b2b-positioning-frameworks-for-contextops.md` | AI research; vollständig gelesen und als Quelle integriert; 14.09.2026 | [[b2b-positioning-contextops-research-review]] | `partially-verified`; unveränderte Nutzerquelle, Modell/Prompt unbekannt, Exportzitate nicht auflösbar. Keller-Variante separat geprüft, CEP-Formel korrigiert, Bain/ODI/Category Design/Narrative/Vorlage als begrenzte Leads. Kein Ranking oder Composite kanonisch übernommen; E27–E29 offen |
+
+## P56 · Weboriginale zum Old Marketing Playbook · 2026-09-13
+
+[[old-marketing-playbook-web-sources-2026-09-13]] — 144 aufgenommene Quellen: 133 Markdown-Captures und elf PDFs. Exhaustives [Quellenregister mit exakten Pfaden, URLs und Hashes](_outputs/abm-old-playbook-2026-09-13/web-ingest/url-register.csv); 145 URLs geprüft, W144 ohne lesbaren Inhalt nicht aufgenommen. Volltext-/Teil-/Abstract-Scope und gemischte Evidenzqualität je Quelle in den Einzelnotizen. 15 begrenzte Muster unter Rolfs Run-Abschlussauftrag in acht Fachseiten übernommen; offener fachlicher Paketbestand null. Final/Full mit RecordResult bestanden; Paket abgeschlossen. [Output-Audit mit vollständigem Dateiverbleib](_outputs/abm-old-playbook-2026-09-13/output-audit.md). Dies ergänzt die frühere Forschungsphase, ohne deren damaligen Archivierungsstand rückwirkend umzudeuten.
+
+## Old Marketing Playbook · vollständige Quellenprüfung · 2026-09-13
+
+`raw/assets/20260212_End of the old way of Marketing_1_1.pptx` — von Rolf ausdrücklich ausgewählte Präsentation, Deckdatum 12.02.2026, 36 Slides; SHA-256 `53d0809384bebc5eff64c392118cc0b8dfd1637bc63017dd55448cb210076051`. Über autorisierten Inbox-Importer aufgenommen, Original unverändert. Native Extraktion amber, bildbasierte Argumente separat manuell geprüft und transkribiert. [[old-marketing-playbook-source-review-2026-09-13]] enthält Aufnahmebeleg, Extraktionen, Grenzen und Ergebnisse. Quellenprüfung abgeschlossen; begrenzte kanonische Übernahmen über P56 umgesetzt.
+
+### KI-Forschung zum Deck
+
+`research/abm-old-playbook-2026-09-13/` — exaktes Bundle aus den 18 F01–F09/T01–T05/S01–S04-Dateien im [Forschungsindex](../research/abm-old-playbook-2026-09-13/index.md), zuzüglich Index, Gesamtbewertung und Qualitätsreview als abgeleitete Synthese. Erstellt durch Codex und drei Subagents am 13.09.2026, `partially-verified`; Originalquellen und Methoden-/Zugriffsgrenzen pro Brief. Kein primärer Wirksamkeitsbeleg. Die [historischen Vorschläge](_outputs/abm-old-playbook-2026-09-13/evidence-proposals.md) wurden im P56-Checkpoint präzisiert und begrenzt umgesetzt; E11 und sechs Arbeitsbeispiele bleiben auffindbare Analyse. Lokale Weboriginale sind über das separate P56-Register erschlossen.
+
+## P55 · KI-gestützte Diskursrekonstruktion zu B2B Lead Management · 2026-09-13
+
+`research/2026-09-13-b2b-lead-management-diskurs.md` — KI-gestützte, selektive Rekonstruktion von Rolf/Codex; `partially-verified`, persönliche Erfahrung und bedingte Analyse, keine primäre Wirksamkeitsstudie. Sieben Nutzerfolien bytegleich als interne Wiki-Anhänge gesichert; [Attachment-Manifest](_outputs/semantic-ingest/p55/attachment-manifest.csv). Externe Originale nur verlinkt; Umfang ihrer Prüfung und verbleibende Hypothesen in [[b2b-lead-management-diskurs-2026-09-13]]. Rolf genehmigte die fünf Muster und zwei Seiten-Erweiterungen ausdrücklich im Chat. [Entscheidungsledger](_outputs/semantic-ingest/p55/decisions.csv), [Evidenzmatrix](_outputs/semantic-ingest/p55/evidence-matrix.csv), [Paket](_outputs/semantic-ingest/p55/package.json). Keine vollständige Prüfung der ursprünglichen Neuner-Slide oder erneute PPTX-Ingestion; keine pauschalen Bot-, Kaufbereitschafts- oder ROI-Werte übernommen.
+
+## Understanding by Design · TÜV-Flow-Vergleich D52 · 2026-09-12
+
+`raw/assets/tuev-rheinland/flow-frameworks-d52/mctighe-wiggins-ubd-framework-2012.pdf` — Jay McTighe/Grant Wiggins, *Understanding by Design Framework*, ASCD, ©2012, 13 pages. SHA-256 `980cd99c3e12199903949cec6d093fc5c0ed0249023cc741bc18d3a83b1082c9`. Admitted via existing importer; complete validated sidecar (13/13). Selected pp. 1–8 reviewed, pp. 2/6 visually checked. [Source-near note](ubd-framework-source-and-tuev-flow-review.md), [project source/intake register](../../Project%20Hub/TÜV%20Rheinland/arbeit/content-strategie/flow-frameworks-d52/quellenregister.md). No canonical framework promotion or effectiveness claim. Three other attempted HTML captures returned 403; their online locators remain in the project register and are not represented as local originals.
+
+## Jobrollen und LinkedIn-Targeting · TÜV D37 · 2026-09-12
+
+Four official HTML originals admitted for Rolf's requested 24-field job-role/targeting map; source-near review only, no personal buying-power or platform-audience validation. [Source brief](tuev-jobrollen-targeting-quellen.md), [project register with exact hashes and intake receipt](../../Project%20Hub/TÜV%20Rheinland/arbeit/jobrollen-targeting/quellenregister.md). Thirteen existing originals reused separately; no new customer cases.
+
+| Exact original | ID / reviewed purpose |
+|---|---|
+| `raw/imports/tuev-rheinland/jobrollen-targeting-2026-09-12/t01-qm-rollen.html` | T01 / Provider-addressed QM training roles; does not prove certification purchasing authority. |
+| `raw/imports/tuev-rheinland/jobrollen-targeting-2026-09-12/t02-regulatory-affairs.html` | T02 / Provider-addressed current/aspiring regulatory professionals and adjacent functions. |
+| `raw/imports/tuev-rheinland/jobrollen-targeting-2026-09-12/l01-linkedin-targeting.html` | L01 / Platform attribute types and limits; no individual taxonomy or reach check. |
+| `raw/imports/tuev-rheinland/jobrollen-targeting-2026-09-12/l02-linkedin-and-or.html` | L02 / AND-OR feature and example; inconsistent increase/decrease wording recorded, not adopted. |
+
+## Johnston & Bonoma · TÜV D36 · 2026-09-12
+
+`raw/assets/tuev-rheinland/johnston-bonoma/johnston-bonoma-1981.pdf` — Johnston/Bonoma (1981), *The Buying Center: Structure and Interaction Patterns*, Journal of Marketing 45(3), 143–156. New original for the explicitly requested D36 analysis; [source brief](johnston-bonoma-buying-center-source.md), [exact hash/intake receipt and review scope](../../Project%20Hub/TÜV%20Rheinland/arbeit/johnston-bonoma/quellenregister.md). Existing importer admission, ready sidecar with 15/15 pages; selected method sections and three original pages visually reviewed. Source-near method summary and project application only; no canonical framework activation or customer-claim promotion. Twelve customer-case originals and one normative source reused, no new customer research.
+
+## TÜV Persona-Fallbelege · D34 · 2026-09-12
+
+Rolf explicitly authorized targeted public case evidence to confirm, change or challenge the existing buying-role assumptions. Twelve originals admitted through the existing inbox importer; 40 search queries, source content cutoff 2026-09-11. [Project source register and locators](../../Project%20Hub/TÜV%20Rheinland/arbeit/persona-kaufrollen/fallrecherche/quellenregister.md), [exact path/hash/receipt manifest](../../Project%20Hub/TÜV%20Rheinland/arbeit/persona-kaufrollen/fallrecherche/quellenmanifest.json), [case/change matrix](../../Project%20Hub/TÜV%20Rheinland/arbeit/persona-kaufrollen/fallrecherche/fallbelege-und-aenderungen.md), [current persona context v0.2](../../Project%20Hub/TÜV%20Rheinland/kontext/personas-kaufrollen.md). Project source bookkeeping only; no shared semantic promotion or independent validation of customer/persona patterns.
+
+| Exact original | Type / source ID | Review boundary |
+|---|---|---|
+| `raw/imports/tuev-rheinland/persona-fallbelege-2026-09-12/b01-toyota.html` | Firecrawl rawHtml / B01 | Customer report with supplier quote; personal purchasing authority open. |
+| `raw/imports/tuev-rheinland/persona-fallbelege-2026-09-12/b02-havelland.html` | HTTP HTML / B02 | Historical participant/organizer report, 2011. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b03-digifit-ted.pdf` | HTTP PDF / B03 | Public award; no observed participant assignment or delivery. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b04-blb-bonn-ted.pdf` | HTTP PDF / B04 | Public award; optional stages distinguished. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b05-arbeitsmedizin-mv-ted.pdf` | HTTP PDF / B05 | Framework award with multiple providers; call-offs unknown. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b07-pentest.pdf` | HTTP PDF / B07 | Supplier case; German purchasing entity/location unconfirmed. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b08-kleve.pdf` | HTTP PDF / B08 | Public administrative report; planned reporting distinct from delivery. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b09-lohmar.pdf` | HTTP PDF / B09 | Commissioned report; buyer and technical information provider differ. |
+| `raw/imports/tuev-rheinland/persona-fallbelege-2026-09-12/b10-smed.html` | HTTP HTML / B10 | German proof communicator, Swiss manufacturer; certification buyer open. |
+| `raw/assets/tuev-rheinland/persona-fallbelege-2026-09-12/b11-kalkar.pdf` | HTTP PDF / B11 | Commissioned project report; publisher distinct from named buyer. |
+| `raw/imports/tuev-rheinland/persona-fallbelege-2026-09-12/b12-bahn.html` | HTTP HTML / B12 | Supplier contribution report; vehicle award is a different decision object. |
+| `raw/imports/tuev-rheinland/persona-fallbelege-2026-09-12/b14-vodafone.html` | HTTP HTML / B14 | Proof use in product communication, not a certification purchase record. |
+
+All seven PDFs had complete/ready sidecars before content reading; nine original pages visually checked at the documented locations. B06/B13 lacked usable originals and were not admitted. Source gaps in numbering intentional. Source snapshots and sidecars unchanged after intake; no bulk source processing. Framework `buying-role-persona-analysis` stays v0.1.0/draft.
+
+**Summary**: Register of raw files, AI-generated research, selected repository snapshots, and their ingest status. Binary libraries and repository snapshots are local and Git-ignored; their derived briefs and dossiers provide the entry points for knowledge work.
 
 ---
+
+## TÜV Audience-Methoden · D29 · 2026-09-11
+
+Nine selected public sources admitted through the existing inbox importer: eight HTML originals and one PDF. [Exact source register, provenance and locators](../../Project%20Hub/TÜV%20Rheinland/arbeit/audience-frameworks/quellenregister.md), [path/hash/admission manifest](../../Project%20Hub/TÜV%20Rheinland/arbeit/audience-frameworks/quellenmanifest.json), [project result](../../Project%20Hub/TÜV%20Rheinland/kontext/frameworklandschaft-audience-analyse.md). Project-specific content review only; no semantic promotion to shared concepts, framework changes or new selection authority.
+
+| ID | Exact admitted source | Type and review scope |
+|---|---|---|
+| E01 | `raw/assets/tuev-rheinland/audience-frameworks/webster-wind-1972.pdf` | Author-hosted original article; PDF pp. 1–7 / printed pp. 12–18 visually checked. Sidecar remains blocked/pdf-text-review-required despite 8/8 processing. |
+| E02 | `raw/imports/tuev-rheinland/audience-frameworks/shapiro-bonoma-1984-katalog.html` | Publisher catalog description only; complete article unavailable. |
+| E03 | `raw/imports/tuev-rheinland/audience-frameworks/buyer-persona-example.html` | BPI method-owner page; five rings and reported interview basis, linked PDF not reviewed. |
+| E04 | `raw/imports/tuev-rheinland/audience-frameworks/christensen-jobs-to-be-done.html` | Institutional theory account; circumstances/progress, no outcome audit. |
+| E05 | `raw/imports/tuev-rheinland/audience-frameworks/romaniuk-cep-b2b-2022.html` | Romaniuk/Ehrenberg-Bass; CEP mechanism and B2B perspectives, not brand-metric validation. |
+| E06 | `raw/imports/tuev-rheinland/audience-frameworks/wilson-information-behaviour-1999.html` | Author's original review; Wilson model sections, not independent reconstruction of every model discussed. |
+| E07 | `raw/imports/tuev-rheinland/audience-frameworks/nngroup-persona-types-2020.html` | Author's UX guidance; persona research types and limits. |
+| E08 | `raw/imports/tuev-rheinland/audience-frameworks/orbit-visitor-psychology.html` | Author's persona/page-audit method; prompts read as source content, not executed. |
+| E09 | `raw/imports/tuev-rheinland/audience-frameworks/strategyn-odi-process.html` | Method-owner process description; advertised superiority excluded. |
+
+## Repository learning library
+
+The [repo index](../repositories/index.md) routes to version-specific analytical dossiers. Snapshot custody is inventoried for every file; the dossier states which files were actually reviewed. Dossier findings are qualified source interpretations, separate from approved canonical promotion.
+
+| Source | Type | Status | Summary page | Notes |
+|---|---|---|---|---|
+| `repositories/karpathy--autoresearch/snapshots/228791fb499afffb54b46200aca536f79142f117/` | repository-snapshot | inventory-only | [Karpathy autoresearch dossier](../repositories/karpathy--autoresearch/karpathy--autoresearch-analysis.md) | 2026-09-19: user-selected full tree of 10 files; 8 text files fully reviewed, uv.lock header reviewed, progress.png unread. Eight qualified findings and bounded retrieval-pilot proposal; no runtime execution or canonical promotion. Exact coverage and limits in dossier. |
+| `repositories/obra--superpowers/snapshots/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/` | repository-snapshot | inventory-only | [Superpowers dossier](../repositories/obra--superpowers/obra--superpowers-analysis.md) | 195 files inventoried; 28 selected files reviewed statically in full or excerpts; eight findings. User delegated pilot selection on 2026-09-11. Dossier review completed; no runtime verification or canonical promotion. |
+| `repositories/garrytan--gstack/snapshots/94993f74012782fd94416dd44b8314f6363a13a4/` | repository-snapshot | inventory-only | [GStack dossier](../repositories/garrytan--gstack/garrytan--gstack-analysis.md) | 1181 files inventoried; 19 selected files reviewed statically in full or excerpts on 2026-09-11. Archived commit retained; prior review linked. User selected consolidation and deeper review. No runtime verification or new canonical promotion. |
+| `repositories/everyinc--compound-engineering-plugin/snapshots/0a2957852e2034d04eb01120fd7da6ed5307dc56/` | repository-snapshot | inventory-only | [Compound Engineering dossier](../repositories/everyinc--compound-engineering-plugin/everyinc--compound-engineering-plugin-analysis.md) | 799 files inventoried; 17 selected files reviewed statically in full or excerpts on 2026-09-11. Archived commit retained; prior review linked. User selected consolidation and deeper review. No runtime verification or new canonical promotion. |
+| `repositories/garrytan--gbrain/snapshots/15b9863d13635d173562a54f55a1d388bfcf546b/` | repository-snapshot | inventory-only | [GBrain dossier](../repositories/garrytan--gbrain/garrytan--gbrain-analysis.md) | 2868 files inventoried; 16 selected files reviewed statically in full or excerpts on 2026-09-11. Archived commit retained; prior review linked. User selected consolidation and deeper review. No runtime verification or new canonical promotion. |
+| `repositories/garrytan--gbrain-evals/snapshots/565b80754ffa6abb9afb041026f2fab048aa7553/` | repository-snapshot | inventory-only | [GBrain Evals dossier](../repositories/garrytan--gbrain-evals/garrytan--gbrain-evals-analysis.md) | 676 files inventoried; 12 selected files reviewed statically in full or excerpts on 2026-09-11. Archived commit retained; prior review linked. User selected consolidation and deeper review. No runtime verification or new canonical promotion. |
+| `repositories/firecrawl--anydoc/snapshots/261fc257d17c3eab0f673be31c408fd9fdc2171a/` | repository-snapshot | inventory-only | [AnyDoc dossier](../repositories/firecrawl--anydoc/firecrawl--anydoc-analysis.md) | 329 files inventoried; 34 text files statically reviewed. Release 0.2.4 separately compared in 96 runs and 5 prototype probes; optional PPTX/DOCX adapter subsequently [implemented and tested](_outputs/source-conversions/anydoc-integration-2026-09-11/verification.md) on explicit request. Binary snapshot fixtures remain unprocessed; automatic routing unchanged; no canonical promotion. |
+
+## P47 — approved ingest
+
+P47: all 33 selected paths were reviewed and their dispositions approved by Rolf on 2026-09-09. The 27 distinct contents yield 16 approved patterns: one new reusable method and 15 extensions. Six duplicate variants add no independent evidence; two reviewed sources are registered-only. Current validation provenance is in `wiki/_outputs/semantic-ingest/p47/package.json`.
+
+| Exact source | Type | Review status / proposed disposition | Summary |
+|---|---|---|---|
+| `raw/assets/20260821_Matt Heinz_substack posts.docx` | docx-compilation | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/(65) AI Won’t Transform Your Business Until You Redesign the Work.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/A Field Guide to Rapidly Improving AI Products.md` | markdown-clipping | ingested 2026-09-09; new-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Build Momentum in Your Demand Gen Strategy with Pam Didner of Relentless Pursuit.md` | markdown-clipping | ingested 2026-09-09; corroborating; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Build Trust and Creativity in Demand Generation with Tara Robertson of Chili Piper.md` | markdown-clipping | ingested 2026-09-09; registered-only; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Building Trust Through Thought Leadership & Lead Nurturing with Julie Smutko.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Do Automated Evals Work 1.md` | markdown-clipping | ingested 2026-09-09; duplicate-variant; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Do Automated Evals Work.md` | markdown-clipping | ingested 2026-09-09; new-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/How to Come Back From Vacation Without the Panic.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/How to Understand the Next Wave of AI Before Everyone Else  Tibo Interview.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Live Teardown An Enterprise Demand Generation Planning Masterclass.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Mastering the Full-Funnel Strategy With Natasha Tibbetts of Swell Media.md` | markdown-clipping | ingested 2026-09-09; registered-only; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Most GTM Alignment Is Theater.md` | markdown-clipping | ingested 2026-09-09; duplicate-variant; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Power Up Your Demand Gen Strategy with Ben Alvord of Akamai Technologies.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Q Why is “error analysis” so important in LLM evals, and how is it performed.md` | markdown-clipping | ingested 2026-09-09; new-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Recession-Proof Demand Generation Strategies for Sustainable Growth with Jana Pelchen.md` | markdown-clipping | ingested 2026-09-09; corroborating; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Rising Markets Break the 955 Rule  Episode 4 - B2B Effectiveness.md` | markdown-clipping | ingested 2026-09-09; duplicate-variant; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The Art of Balancing Virtual and Physical Events with Samantha Ranieri.md` | markdown-clipping | ingested 2026-09-09; corroborating; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The CMO’s Playbook Balancing Strategy, Execution & Category Creation.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The Human Element of Community Cannot Be Automated (So I Let AI Do The Rest).md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The ICP is Not Necessarily Your ICP  Episode 5 - B2B Effectiveness.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The MQL is NOT Dead!  Episode 1 - B2B Effectiveness.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The Organic Search Pity Party Is Over.md` | markdown-clipping | ingested 2026-09-09; duplicate-variant; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/The Revenge of the Data Scientist.md` | markdown-clipping | ingested 2026-09-09; new-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Uncovering The Blind Spots In The B2B Tech Buying Journey.md` | markdown-clipping | ingested 2026-09-09; duplicate-variant; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/We've Forgotten How to Hire a Marketing Leader.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/What Would a New MQL Have to Look Like  Episode 2 - B2B Effectiveness.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Who Validates the Validators Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences.md` | markdown-clipping | ingested 2026-09-09; new-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Why is Thought Leadership so Important Today  Q&A with Julie Smukto.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Your ICP should be more like a wiki than a document 1.md` | markdown-clipping | ingested 2026-09-09; duplicate-variant; no claim promotion | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Your Lead Scoring is Completely Broken!  Episode 3 - B2B Effectiveness.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/Your Scoring Model Only Knows One Kind of Buyer.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
+| `raw/Clippings/You're Prompting Claude Wrong. Use this Stanford Method Instead.md` | markdown-clipping | ingested 2026-09-09; extended-claim; evidence approved and applied | [[new-knowledge-source-review-2026-09-09]] |
 
 ## Ingested
 
@@ -35,8 +306,6 @@ updated: 2026-08-18
 | `raw/assets/09_Beispiele_HP` | Folder bundle | ingested | [[hp-examples-library]] | 29 HP example files; legacy DOC cataloged but not deeply extracted. |
 | `raw/assets/A_frameworks_templates` | Folder bundle | ingested | [[frameworks-templates-reference-library]] | 359 files; reference library plus AI and HP archive folders; inventory-level ingest. |
 | `raw/assets/B_MKT_working_library` | Folder bundle | ingested | [[marketing-working-library]] | 1,011 files; active working library with seven workstream folders; inventory-level ingest. |
-| `research/assets/06_AI_Prompting` | AI research folder bundle | partially content-ingested | [[ai-prompting-research-library]], [[ai-prompting-priority-research-synthesis-2026-07-02]] | Priority synthesis covers 46 sources plus one unreadable source; unverified and time-sensitive claims require validation before reuse. |
-| `research/assets/07_AI_fuer_Marketing` | AI research folder bundle | partially content-ingested | [[ai-marketing-research-library]], [[ai-marketing-priority-research-synthesis-2026-07-02]] | Priority synthesis covers 27 sources plus one untranscribed audio source; marketing AI claims remain secondary synthesis. |
 | `research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_Evals&Observe.docx` | AI research summary | ingested | [[minimal-evaluation-and-observability-framework-for-ai-marketing-workflows]] | Corrected current path for the prior minimal evaluation/observability source. |
 | `research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_AI Marketing Workflow Assurance Research.docx` | AI research summary | ingested | [[ai-marketing-workflow-assurance-research-gemini-2026-06-05]] | Gemini Deep Research report; partially verified against official OpenAI and Google Cloud docs; non-primary ISO-related citations remain leads only. |
 | `research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_Minimal Evaluation and Observability Framework_GEMINI.docx` | AI research summary | ingested | [[minimal-evaluation-and-observability-framework-gemini-2026-06-05]] | Gemini research variant; citations/source markers present but unchecked in this ingest. |
@@ -55,11 +324,21 @@ updated: 2026-08-18
 | Three BUILD and loop-orchestration files under `raw/assets/A_frameworks_templates/06_AI_Prompting/06_Agentic_Prompting/` | Practitioner deck and AI-assisted synthesis bundle | ingested | [[build-and-loop-orchestration-source-summary]] | Attribution and current product mechanics remain unverified. |
 | [Ben's session](https://www.bensbites.com/p/bens-session) via selected ben's bites issue `issue-19fdc4e8109fcf6f` | Newsletter-linked practitioner field analysis | ingested | [[agent-session-verification-postmortem-2026-08-14]] | Failure-aware operating lessons retained as anecdotal evidence; product, timing, and outcome claims remain unverified. |
 | [Eight predictions for the era of continual learning](https://www.dwarkesh.com/p/era-of-continual-learning), [Hu et al.](https://arxiv.org/abs/2604.27003), and [Abbes et al.](https://proceedings.mlr.press/v330/abbes26a.html) | Newsletter essay plus primary research family | partially-verified | [[continual-learning-memory-boundary-2026-08-14]] | Memory-layer distinction is supported and qualified; regulation, market, deployment, and lock-in forecasts remain speculative. |
+| [Agency and Agents](https://www.oneusefulthing.org/p/agency-and-agents) and [Ajeya Cotra interview](https://www.dwarkesh.com/p/ajeya-cotra) | Newsletter-linked practitioner and investigator analysis | partially-verified | [[facilitator-escalation-design-2026-09-09]] | Retains a bounded escalation contract; incident counts, causality, forecasts, and productivity implications remain excluded. |
+| [Astra field report](https://www.latent.space/p/astra), [Astra roundup](https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest), [ThursdAI Astra coverage](https://sub.thursdai.news/p/sep-3-part-2-welcome-to-agi-openai), [Google Gemini announcement](https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/), [OpenAI Astra safety context](https://openai.com/index/path-to-astra/), [Ben's Bites Fable 5.1](https://www.bensbites.com/p/fable-51), and [AINews Fable 5.1 roundup](https://www.latent.space/p/ainews-claude-fablemythos-51-new) | Newsletter-linked mixed vendor and secondary source family | partially-verified | [[agent-runtime-identity-source-family-2026-09-10]] | Retains only the runtime-identity evaluation contract; current rankings, prices, cost advantages, product quality, and safeguard effectiveness remain excluded. |
+| [OpenAI: A milestone in expanding access to AI](https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/) | Newsletter-linked first-party product announcement | reviewed; product intent only | [[paid-conversational-discovery-source-review-2026-09-10]] | Retains only the governance distinction between organic answers and paid conversational placement. Revenue, reach, trust, privacy-effectiveness, ROAS, adoption, and advertiser-outcome claims remain excluded. |
 | `raw/Clippings/A frontier without an ecosystem is not stable.md` | Markdown clipping | ingested | [[frontier-ecosystem-human-and-token-capital]] | Essay on human capital, token capital, model-independent learning loops, digital sovereignty, and broad value creation. |
+| [AI Strategy Is Not a Strategy](https://firmsconsulting.com/ai-strategy-vs-corporate-strategy/) | Newsletter-linked consulting analysis | unverified practitioner method | [[ai-business-value-gate-2026-09-09]] | Retains a bounded objective-and-value gate; ROIC-WACC universality, causal impact, and guaranteed financial outcomes remain excluded. |
+| [The Pragmatic Engineer: Five years](https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-five-years) | Newsletter-linked first-party publication retrospective | reviewed; process self-report only | [[newsletter-source-method-lens-source-review-2026-09-11]] | Retains only the issue-level source-method lens. Readership, growth, ranking, accuracy-effect, early-reporting, event, staffing, AI-effectiveness, and business-outcome claims remain excluded. |
+| [The Pulse: Meta wanted to reduce teams because of AI](https://newsletter.pragmaticengineer.com/p/the-pulse-meta-wanted-to-reduce-teams-43b) and [Reuters investigation](https://www.reuters.com/investigations/mark-zuckerberg-had-bold-plan-replace-meta-staff-with-ai-heres-how-it-imploded-2026-08-26/) | Newsletter-linked secondary and inaccessible reported-source family | reviewed; event claims unverified | [[ai-team-contraction-resilience-source-family-2026-09-10]] | Retains only a pre-decision resilience gate. The Reuters member was paywalled; the newsletter is derivative and does not independently confirm Meta-specific numbers, motives, actions, or effects. |
+| [The Frontier AEO Tracker](https://www.latent.space/p/aeo) | Newsletter-linked publisher-operated methodology | reviewed; unverified method | [[aeo-measurement-method-source-review-2026-09-14]] | Retains a configuration-complete measurement record. Rankings, proprietary scores, ROI, uplift, and causal AEO effects remain excluded. |
+| [What is happening with code reviews?](https://newsletter.pragmaticengineer.com/p/what-is-happening-with-code-reviews) | Newsletter-linked practitioner analysis | partially reviewed; paid sections inaccessible | [[agentic-code-review-source-review-2026-09-14]] | Retains risk-routed human review surfaces. Productivity, defect, review-time, adoption, and no-human-review conclusions remain excluded. |
+| [The Rise of the Forward Deployed Engineer](https://www.latent.space/p/forward-deployed-engineer-best-practices) | Newsletter-linked vendor-founder practitioner method | reviewed; unverified practitioner evidence | [[forward-deployed-engineering-product-learning-source-review-2026-09-14]] | Retains the field-to-platform correction loop. Universal FDE superiority and vendor, sector, speed, and outcome claims remain excluded. |
+| [Alignment assessment of cybersecurity incidents](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents) | Newsletter-linked first-party research report | reviewed; partially verified as vendor self-report | [[anthropic-agent-incident-assessment-source-review-2026-09-14]] | Corroborates layered controls only. Incident prevalence, production safety, safeguard sufficiency, and cross-company governance conclusions remain excluded. |
+| [Congrats, your sales problems in PLG are completely unoriginal](https://www.elenaverna.com/p/congrats-your-sales-problems-in-plg) | Newsletter-linked sponsored practitioner essay | reviewed; unverified practitioner method | [[plg-to-enterprise-transition-source-review-2026-09-14]] | Retains a PLG-to-enterprise transition and revenue-credit boundary. Numeric thresholds, outreach, and causal growth claims remain excluded. |
 | `raw/Clippings/Inside The AI Race DeepMind, OpenAI, Anthropic, China, and The Race to Superintelligence.md` | Markdown transcript clipping | ingested | [[ai-race-superintelligence-clipping-2026]] | Strategic interview signal on frontier labs, China, AI safety, open-weight risks, and superintelligence politics; not primary evidence. |
 | `raw/Clippings/Stripe Alternative for SaaS When to Consider an MoR.md` | Markdown clipping | ingested | [[merchant-of-record-vs-payment-service-provider]] | Commercial comparison of payment-service-provider and merchant-of-record operating models; fees and product claims need verification. |
 | `raw/assets/20260619_Deepmind_from AGI to ASI.pdf` | Research paper PDF | ingested | [[from-agi-to-asi-google-deepmind-2026]] | 57-page Google DeepMind report mapping scaling, paradigm shifts, recursive improvement, and agent collectives as pathways from AGI to ASI. |
-| `research/assets/11_Markets` | AI research folder bundle | ingested | [[logistics-market-intelligence-library]] | 597 AI-generated deep-research reports and corresponding prompts. Moved from `raw/assets/11_Markets` on 2026-06-20; treat all claims as `needs verification` until cited primary sources are checked. |
 | `raw/imports/automated-clippings/youtube/UCXZCJLdBC09xxGZ6gcdrc6A/2026-07-28--g-g6E-qtCjA.md` | YouTube transcript | ingested (P32-W1) | [[_outputs/source-briefs/2026-08-15/p32/revenue-learning-loop-source-brief]] | Vendor-authored fictional demo; only the evidence-to-review-to-action-to-feedback structure was retained. |
 | `raw/imports/automated-clippings/youtube/UCBmwzQnSoj9b6HzNmFrg_yw/2026-07-21--VnVpfOTYP0E.md` | YouTube transcript | ingested (P32-W1) | [[_outputs/source-briefs/2026-08-15/p32/on-brand-audio-iteration-source-brief]] | Vendor tutorial; rights, royalty, quality, and effectiveness claims were excluded. |
 | `raw/imports/automated-clippings/youtube/UCwvXnrOCRlhokHlJwohf2OA/2026-08-07--M3gHlwHKsBI.md` | YouTube transcript | ingested (P32-W1) | [[_outputs/source-briefs/2026-08-15/p32/agent-plugin-portability-source-brief]] | Practitioner walkthrough checked against the Agent Plugins Working Draft on 2026-08-15; exact support remains time-sensitive. |
@@ -98,6 +377,7 @@ P32 complete; 16 patterns approved across 31 fully reviewed YouTube transcripts,
 
 | Source | Type | Status | Analysis output | Notes |
 |---|---|---|---|---|
+| `raw/imports/persona-kaufrollen/2026-09-11/m01-heinz-classification.html`; `m02-nng-personas-archetypes.html`; `m03-bpi-buyer-persona.html` im selben Ordner | Drei Autor-/Institutionenseiten, Firecrawl rawHtml | reviewed; retained; bounded method synthesis | [[buying-role-persona-frameworks]] | Heinz 03.05.2023, NN/g 15.05.2022, BPI Datum offen. Befugnis/Handlung/Anliegen, Persona-Darstellung und Kaufentscheidungsbezug getrennt. NNG-Personaformen aus vorhandenem D29-Original wiederverwendet; keine Wirkungsclaims. |
 | Twelve exact Relevance AI, Gumloop, Lindy, Glean, Dust, and Box AI URLs approved on 2026-08-14 | Six official product/documentation pages plus six Reddit discussions | reviewed; not retained | `wiki/_outputs/ai-vendor-observation/focused-problem-discovery-baseline-2026-08-14.md` | Bounded problem-discovery review only. Vendor claims and selected community anecdotes remain separate; no vendor admission, claim promotion, raw capture, or monitoring authorization. |
 
 ## Generated Extraction Outputs
@@ -130,8 +410,8 @@ P32 complete; 16 patterns approved across 31 fully reviewed YouTube transcripts,
 
 | Source | Tool/model | Trust level | Status | Summary page | Verification notes |
 |---|---|---|---|---|---|
-| `research/assets/06_AI_Prompting` | Mixed/unknown AI tools and models | unverified / partially-verifiable | ingested | [[ai-prompting-research-library]] | Validation pass plus 2026-06-06 and 2026-06-11 addenda: [[ai-research-validation]]. Check primary sources before promoting claims. |
-| `research/assets/07_AI_fuer_Marketing` | Mixed/unknown AI tools and models | unverified / partially-verifiable | ingested | [[ai-marketing-research-library]] | Validation pass: [[ai-research-validation]]. Marketing AI claims are secondary synthesis until verified. |
+| `research/assets/06_AI_Prompting` | Mixed/unknown AI tools and models | unverified / partially-verifiable | partially content-ingested | [[ai-prompting-research-library]], [[ai-prompting-priority-research-synthesis-2026-07-02]] | Validation pass plus 2026-06-06 and 2026-06-11 addenda: [[ai-research-validation]]. Priority synthesis covers 46 sources plus one unreadable source; unverified and time-sensitive claims require primary-source validation before reuse or promotion. |
+| `research/assets/07_AI_fuer_Marketing` | Mixed/unknown AI tools and models | unverified / partially-verifiable | partially content-ingested | [[ai-marketing-research-library]], [[ai-marketing-priority-research-synthesis-2026-07-02]] | Validation pass: [[ai-research-validation]]. Priority synthesis covers 27 sources plus one untranscribed audio source; marketing AI claims remain secondary synthesis until verified. |
 | `research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_Evals&Observe.docx` | Unknown AI tool/model | partially-verifiable | ingested | [[minimal-evaluation-and-observability-framework-for-ai-marketing-workflows]] | Citations recorded but not checked; current-state vendor and regulatory claims need verification. |
 | `research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_AI Marketing Workflow Assurance Research.docx` | Gemini Deep Research | partially-verified | ingested | [[ai-marketing-workflow-assurance-research-gemini-2026-06-05]] | Official OpenAI and Google Cloud product mechanics partially checked; non-primary ISO commentary remains unverified. |
 | `research/assets/06_AI_Prompting/06_Agentic_Prompting/Evals & observability/20260605_Minimal Evaluation and Observability Framework_GEMINI.docx` | Gemini / unknown variant | partially-verifiable | ingested | [[minimal-evaluation-and-observability-framework-gemini-2026-06-05]] | Source markers present; citations not checked during this ingest. |
@@ -147,9 +427,135 @@ P32 complete; 16 patterns approved across 31 fully reviewed YouTube transcripts,
 | `raw/assets/A_frameworks_templates/06_AI_Prompting` | Mixed/unknown AI tools and models | unverified / partially-verifiable | ingested as raw folder content | [[frameworks-templates-reference-library]] | Treat AI-generated claims as secondary synthesis despite raw-folder placement. |
 | `raw/assets/A_frameworks_templates/07_AI_fuer_Marketing` | Mixed/unknown AI tools and models | unverified / partially-verifiable | ingested as raw folder content | [[frameworks-templates-reference-library]] | Treat AI marketing claims as secondary synthesis unless independently checked. |
 | `raw/assets/A_frameworks_templates/_Archiv_AI_veraltet` | Mixed/unknown AI tools and models | unverified / stale-risk | ingested as raw folder content | [[frameworks-templates-reference-library]] | Archive naming signals old AI material; verify before reuse. |
-| `research/assets/11_Markets` | Mixed/unknown AI tools and models | unverified | ingested | [[logistics-market-intelligence-library]] | User confirmed the 597 files are AI-generated deep-research reports and corresponding prompts. Record model/tool and check cited primary sources during deeper ingestion. |
+| `research/assets/11_Markets` | Mixed/unknown AI tools and models | unverified | ingested | [[logistics-market-intelligence-library]] | User confirmed the 597 files are AI-generated deep-research reports and corresponding prompts. Moved from `raw/assets/11_Markets` on 2026-06-20; treat all claims as `needs verification`, record model/tool, and check cited primary sources during deeper ingestion. |
+
+## Project evidence: TÜV Rheinland · 2026-09-09
+
+Newly researched under project decision D09; no earlier TÜV results reused. Exact originals were admitted by the existing inbox importer and reviewed only for the project. This records project evidence intake, not promotion into shared concept claims. Canonical summary and context: [TÜV project company basis](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md); custody, hashes and limitations: [project source index](../../Project%20Hub/TÜV%20Rheinland/quellen/quellenindex.md). Three PDF sidecars are validated but limited to the first 40 PDF pages; relevant later pages were checked directly.
+
+| Exact original / source | Type | Status | Summary / provenance |
+|---|---|---|---|
+| `raw/assets/tuev-rheinland/2026-09-09-basis-001/corporate-report-2023-de.pdf` | annual_report | project-content-reviewed; 2026-09-09 | S-AR-2023 · Unternehmensbericht 2023; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md); extraction: `wiki/_extractions/raw/assets/tuev-rheinland/2026-09-09-basis-001/corporate-report-2023-de.pdf.md`. |
+| `raw/assets/tuev-rheinland/2026-09-09-basis-001/corporate-report-2024-de.pdf` | annual_report | project-content-reviewed; 2026-09-09 | S-AR-2024 · Unternehmensbericht 2024; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md); extraction: `wiki/_extractions/raw/assets/tuev-rheinland/2026-09-09-basis-001/corporate-report-2024-de.pdf.md`. |
+| `raw/assets/tuev-rheinland/2026-09-09-basis-001/corporate-report-2025-de.pdf` | annual_report | project-content-reviewed; 2026-09-09 | S-AR-2025 · Unternehmensbericht 2025; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md); extraction: `wiki/_extractions/raw/assets/tuev-rheinland/2026-09-09-basis-001/corporate-report-2025-de.pdf.md`. |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p02-1.html` | official-legal-imprint-html | project-content-reviewed; 2026-09-09 | S-P02-1 · Impressum; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p02-2.html` | official-group-structure-html | project-content-reviewed; 2026-09-09 | S-P02-2 · Organisation und Gremien; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p02-3.html` | official-association-summary-html | project-content-reviewed; 2026-09-09 | S-P02-3 · Satzung – TÜV Rheinland Berlin Brandenburg Pfalz e.V.; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| [Registereintrag TÜV Rheinland AG – R003903](https://www.lobbyregister.bundestag.de/suche/R003903) · URL only | institutional-register-html | project-content-reviewed; 2026-09-09 | S-P02-4 · Registereintrag TÜV Rheinland AG – R003903; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p03-1.html` | official-corporate-webpage | project-content-reviewed; 2026-09-09 | S-P03-1 · TÜV Rheinland AG – Heads of the Business Streams; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p03-2.html` | official-corporate-webpage | project-content-reviewed; 2026-09-09 | S-P03-2 · About us; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p03-3.html` | official-historical-report-webpage | project-content-reviewed; 2026-09-09 | S-P03-3 · Unternehmensbericht 2023 – interaktive HTML-Übersicht; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p04-1.html` | official-service-html | project-content-reviewed; 2026-09-09 | S-P04-1 · Inspection and Certification Services; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p04-2.html` | official-service-html | project-content-reviewed; 2026-09-09 | S-P04-2 · Worldwide approvals and access to international markets; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p04-3.html` | official-service-html | project-content-reviewed; 2026-09-09 | S-P04-3 · PV Module Testing and Certification; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p04-4.html` | official-service-html | project-content-reviewed; 2026-09-09 | S-P04-4 · ISO 9001 Certification for Quality Management Systems; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p06-1.html` | official-current-company-facts-html | project-content-reviewed; 2026-09-09 | S-P06-1 · TÜV Rheinland auf einen Blick; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p06-2.html` | official-results-press-release-html | project-content-reviewed; 2026-09-09 | S-P06-2 · Unternehmensbilanz 2025: TÜV Rheinland wächst weltweit und macht neue Technologien sicher; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p07-1.html` | independent-editorial-news-html | project-content-reviewed; 2026-09-09 | S-P07-1 · Bilprovningen säljs till tyskt bolag – prislappen 1,2 miljarder kronor; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/source-p07-2.html` | independent-editorial-business-html | project-content-reviewed; 2026-09-09 | S-P07-2 · Bilanzbericht: Tüv Rheinland wächst stark durchs Ausland; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
+| `raw/imports/tuev-rheinland/2026-09-09-basis-001/corporate-reports-landing-de.html` | corporate-webpage | project-content-reviewed; 2026-09-09 | S-REPORT-HUB · Unternehmensbericht 2025: offizielle Berichtsübersicht; [canonical project context](../../Project%20Hub/TÜV%20Rheinland/kontext/unternehmensbasis.md). |
 
 ## Related pages
 
 - [[index]]
 - [[raw-sources]]
+
+## Project evidence: ISO 9001 methods comparison - 2026-09-10
+
+Project D23: 18 scoped primary sources admitted through the existing source inbox. 13 HTTP originals and five received web-tool text extracts; the latter are not original HTML/PDF. Project-specific review only, no shared semantic promotion. [Result and limitations](../../Project%20Hub/T%C3%9CV%20Rheinland/kontext/methodenvergleich-iso9001.md); [exact custody hashes and capture dates](../../Project%20Hub/T%C3%9CV%20Rheinland/arbeit/wettbewerb-frameworks/iso9001-test/quellenmanifest.json).
+
+| Exact custody path | Type | Review status | Source / scope |
+|---|---|---|---|
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/r1.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | R1 - ISO 9001 Zertifizierung – Qualitätsmanagementsystem |
+| `raw/assets/tuev-rheinland/2026-09-10-iso9001/r2.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-10 | R2 - Zertifizierungsbedingungen TR Cert / LGA InterCert |
+| `raw/assets/tuev-rheinland/2026-09-10-iso9001/r3.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-10 | R3 - DAkkS-Anlage D-ZM-16031-01-01 |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/r4.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | R4 - DAkkS-Register TÜV Rheinland Cert GmbH |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/s1-web-extrakt.txt` | received web-tool text; NOT original file | project-content-reviewed; 2026-09-10 | S1 - Zertifizierung nach ISO 9001 – TÜV SÜD |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/s2-web-extrakt.txt` | received web-tool text; NOT original file | project-content-reviewed; 2026-09-10 | S2 - PZVVO TÜV SÜD AB2C2 |
+| `raw/assets/tuev-rheinland/2026-09-10-iso9001/s3.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-10 | S3 - DAkkS-Anlage D-ZM-14143-01-01 |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/s4.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | S4 - DAkkS-Register TÜV SÜD Management Service GmbH |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/d1.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | D1 - ISO 9001 Zertifizierung mit der DQS |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/d2.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | D2 - DQS Gruppe Auditierungs- und Zertifizierungsregeln |
+| `raw/assets/tuev-rheinland/2026-09-10-iso9001/d3.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-10 | D3 - DAkkS-Anlage D-ZM-16074-01-07 |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/d4.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | D4 - DAkkS-Register DQS GmbH |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/g1-web-extrakt.txt` | received web-tool text; NOT original file | project-content-reviewed; 2026-09-10 | G1 - ISO 9001 – offizieller Normkatalog und Revision |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/g2-web-extrakt.txt` | received web-tool text; NOT original file | project-content-reviewed; 2026-09-10 | G2 - ISO 9001:2015/Amd 1:2024 – Climate action changes |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/g3.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | G3 - Ergänzungen bei Managementsystemnormen ohne Auswirkungen auf akkreditierten Geltungsbereich |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/g4.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | G4 - Global ACI – GA Resolutions |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/r0.html` | HTTP original HTML | project-content-reviewed; 2026-09-10 | R0 - TR Cert – Allgemeine Geschäftsbedingungen und Zertifizierungsordnungen |
+| `raw/imports/tuev-rheinland/2026-09-10-iso9001/s0-web-extrakt.txt` | received web-tool text; NOT original file | project-content-reviewed; 2026-09-10 | S0 - TÜV SÜD – PZVVO/PZO, Downloadübersicht |
+
+
+## Project evidence: TÜV Rheinland · PV customer perspective · 2026-09-11
+
+D27 delegated public source selection and preservation. 15 exact originals admitted with the existing inbox importer: ten HTML and five PDF. [Project register](../../Project%20Hub/TÜV%20Rheinland/arbeit/wettbewerb-kundenperspektive-pv/quellenregister.md), [custody manifest](../../Project%20Hub/TÜV%20Rheinland/arbeit/wettbewerb-kundenperspektive-pv/quellenmanifest.json), [project context](../../Project%20Hub/TÜV%20Rheinland/kontext/kundenperspektive-pv-pruefung-zertifizierung.md). Source bookkeeping only; no shared semantic claim promotion. Four PDFs ready; K07 remains blocked and was reviewed only at documented original-image locations. Search snippets and supplier/customer claims are not independent verification.
+
+| Exact original | Type | Status / date | Source ID / title |
+|---|---|---|---|
+| `raw/assets/tuev-rheinland/pv-kunden-2026-09-11/k01-qcells-qcpv-2020.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-11 | K01 — Q CELLS: Erstes Quality-Controlled-PV-Prüfsiegel |
+| `raw/assets/tuev-rheinland/pv-kunden-2026-09-11/k03-heckert-broschuere-2023.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-11 | K03 — Heckert Solar: Imagebroschüre |
+| `raw/assets/tuev-rheinland/pv-kunden-2026-09-11/k06-solarwatt-brandzertifikat.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-11 | K06 — Solarwatt: Brandzertifikat mit ergänzender Produktzuordnung |
+| `raw/assets/tuev-rheinland/pv-kunden-2026-09-11/k07-db-bahnsteigdach.pdf` | HTTP original PDF | project-original-visual-review; sidecar blocked; 2026-09-11 | K07 — DB InfraGO: TM-2024-01, PV auf Bahnsteigdächern |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/n01-iec-61215-2021.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | N01 — IEC 61215-1:2021 – offizieller Katalog |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/n02-ise-vde-testlab.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | N02 — Fraunhofer ISE: TestLab PV Modules, englische Fassung |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/n03-ise-vde-zertifizierung.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | N03 — Fraunhofer ISE: Zertifizierung von Modulen, deutsche Fassung |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p01-tuv-pv-module.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P01 — TÜV Rheinland: Prüfung und Zertifizierung von PV-Modulen |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p02-tuv-qcpv.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P02 — TÜV Rheinland: Quality Controlled PV |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p03-tuv-de-pv.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P03 — TÜV Rheinland: Photovoltaik und Solarenergie |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p04-vde-pv.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P04 — VDE Institut: PV-Module |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p05-vde-zeichen.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P05 — VDE: Zeichen und Zertifikate |
+| `raw/assets/tuev-rheinland/pv-kunden-2026-09-11/p06-vde-spec-90038-1.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-11 | P06 — VDE SPEC 90038-1 V1.1 (en): Solar Module Quality Standard, Part 1 |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p07-vde-anfrage.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P07 — VDE Institut: Angebotsanfrage |
+| `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p08-tuv-anfrage.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P08 — TÜV Rheinland: Angebotsformular für Photovoltaic Modules |
+
+## P58 — Approved first-wave source review, 2026-09-21
+
+Selection: 28 exact source paths / 26 byte hashes, approved by the user on 2026-09-21. The exhaustive per-source register is `wiki/_outputs/semantic-ingest/p58/decisions.csv`; paths, source types, hashes, reviewed scopes, aliases, and briefs are also enumerated in `wiki/_outputs/semantic-ingest/p58/source-bundle.md`. This is a review checkpoint, not completed promotion. Three aliases and three extraction-quality-blocked decks are kept separate from 22 distinct content reviews. See [[first-wave-source-review-2026-09-21]].
+
+| Source bundle | Type | Status/date | Summary |
+|---|---|---|---|
+| AI engineering clippings | mixed practitioner/vendor transcripts and playbook | reviewed within declared scope; promotion pending; 2026-09-21 | [[ai-engineering-source-review-2026-09-21]] |
+| AI-first adoption / Dharmesh memory | practitioner transcripts | full/selected review as declared; promotion pending; 2026-09-21 | [[ai-adoption-memory-source-review-2026-09-21]] |
+| Zero-click marketing | practitioner transcript | selected-section review; promotion pending; 2026-09-21 | [[zero-click-marketing-source-review-2026-09-21]] |
+| Digitalisierungsindex 2020/2021/2023 | sponsored primary study reports | selected-page review; promotion pending; 2026-09-21 | [[digital-maturity-studies-source-review-2026-09-21]] |
+| Export dynamic capabilities | systematic literature review | selected-page review; promotion pending; 2026-09-21 | [[export-dynamic-capabilities-source-review-2026-09-21]] |
+| Australian food supply power | qualitative primary study | selected-page review; promotion pending; 2026-09-21 | [[food-supply-power-source-review-2026-09-21]] |
+| Outcome-based business-model scaling | qualitative primary study | selected-page review; promotion pending; 2026-09-21 | [[outcome-based-scaling-source-review-2026-09-21]] |
+| Short-term B2B relationships | qualitative primary study | selected-page review; promotion pending; 2026-09-21 | [[short-term-b2b-relationships-source-review-2026-09-21]] |
+| Value-based customer management | conceptual literature synthesis | selected-page review; promotion pending; 2026-09-21 | [[value-based-customer-management-source-review-2026-09-21]] |
+
+### P58 AI research and generated syntheses
+
+| Source | Trust / verification | Status/date | Summary |
+|---|---|---|---|
+| `research/assets/20260118_dsv_digital_marketing_transformation_deck_GPT5.pptx` | unverified; uncited outcome claims | full extraction reviewed; registered-only proposed; 2026-09-21 | [[dsv-ai-transformation-draft-source-review-2026-09-21]] |
+| `research/assets/studien draft analyse zu Digitlaisierungsindex_2023__2020elstedig...__Digitalisierungsindex2021.pdf` | partially-verified against selected local study pages; remaining claims need verification | full extraction reviewed; registered-only proposed; 2026-09-21 | [[digital-maturity-ai-analysis-source-review-2026-09-21]] |
+| Three commercial outputs, exact paths in summary | generated synthesis; primary citations not rechecked | scoped review; retained hypotheses; 2026-09-21 | [[commercial-output-review-2026-09-21]] |
+
+## P58-C01–C11 — promotion status, 2026-09-21
+
+The user explicitly approved all eleven evidence patterns. Twenty promotional source rows are now approved and support nine existing-page updates plus [[digital-marketing-sales-maturity-diagnostic]] and [[outcome-based-service-scaling-assessment]]. Reviewed reading scopes, source identities, trust levels, and exclusions remain unchanged. The preceding review table is the pre-promotion snapshot; the current exact status is in the P58 decision ledger. Three blocked decks, three duplicate aliases, and two registered-only AI reports remain open in final approval accounting. See [[first-wave-source-review-2026-09-21]].
+
+
+## P59 / P60 — approved 2026-10-07
+
+| Exact source | Type / trust | Review status | Summary |
+|---|---|---|---|
+| `raw/assets/tuev-rheinland/academy/2026-10-07/2222a263534a48c7f073869bd8cc463f3c63667c43fd62c7d243ded5ce86e424.pdf` | pdf; vendor | text reviewed; new-claim approved; promoted; 2026-10-07 | [[academy-priority-source-review-2026-10-07]] |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/7cf33b95fb0e0ed546f98e95d90ca8bac5c69a230c1ac72f35b397ce93215b8a.pdf` | pdf; vendor | text reviewed; new-claim approved; promoted; 2026-10-07 | [[academy-priority-source-review-2026-10-07]] |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/ee8fe20c8e5afc333a120e85f759bdb9b4f560354e016af55377c9c2aeb9315f.pdf` | pdf; vendor | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[academy-priority-source-review-2026-10-07]] |
+| `raw/Clippings/Agents That Write Their Own Tools at Runtime — Sandhya Subramani, AWS.md` | markdown; vendor | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Build & Sell with Codex (5+ Hour Course).md` | markdown; practitioner | selected-section review; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Give Us 30 Minutes & We’ll Fix Your Marketing for 2027 1.md` | markdown; practitioner | reviewed duplicate variant; duplicate-variant approved; retained alias; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Give Us 30 Minutes & We’ll Fix Your Marketing for 2027.md` | markdown; vendor | text reviewed; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/How I'd Rebuild My Claude Setup From Scratch (8020 Rule).md` | markdown; practitioner | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/How to Build an AI Marketing Team That Runs Itself (Live Demo).md` | markdown; vendor | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/I Spent $31,141 & 1,000 Hours On Claude Code To Learn This.md` | markdown; practitioner | text reviewed; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/My Secret Sauce For Building Beautiful UI using AI (My design workflow).md` | markdown; practitioner | text reviewed; new-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/The Biggest AI Opportunities Are Hiding in Boring Businesses.md` | markdown; practitioner | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Train Your AI to Write Like a Human With Just 3 Files.md` | markdown; practitioner | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO.md` | markdown; vendor | selected-section review; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+
+Rolf hat alle 13 Evidenzmuster und die Dublettendisposition am 2026-10-07 mit "alles approved" freigegeben; die begrenzte Promotion ist umgesetzt. Codex-Kurs und Jev-Interview nur in ausdrücklich benannten Abschnitten geprüft. Maßgeblich: [[source-ingest-checkpoint-2026-10-07]]; Paketabschluss wird ausschließlich durch die Final/Full-Prüfungen dokumentiert.
+
+P59 / approved 2026-10-07; P60 / approved 2026-10-07.

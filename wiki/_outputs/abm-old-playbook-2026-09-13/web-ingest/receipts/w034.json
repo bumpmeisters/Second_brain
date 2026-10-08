@@ -1,0 +1,17 @@
+{
+  "id": "W034",
+  "url": "https://help.salesforce.com/s/articleView?id=000340199&language=en_US&mode=1&type=1",
+  "research_briefs": [
+    "f04-mql-funnel.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:54:46.118325+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w034.json",
+  "title": "Convert a Lead into a current Contact or Opportunity | Salesforce Help",
+  "final_url": "https://help.salesforce.com/s/articleView?id=000388015&type=1",
+  "characters": 6655,
+  "sha256": "aaf6f3f4173aa7ff6541d8b20f042354c0f28a65e4b8ca5e9014c7d0140d0137",
+  "http_status": 200
+}

@@ -1,0 +1,18 @@
+{
+  "id": "W060",
+  "url": "https://support.6sense.com/docs/intent-model",
+  "research_briefs": [
+    "s01-abx.md",
+    "t01-identity-to-intent.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:18.561227+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w060.json",
+  "title": "Intent Model",
+  "final_url": "https://support.6sense.com/docs/intent-model",
+  "characters": 3022,
+  "sha256": "fe8209f8ee02b73c5be9cdf8778e1ef55db61eb7d291885760f627e4bd9ef0db",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W143",
+  "url": "https://www.smartinsights.com/internet-advertising/internet-advertising-analytics/display-advertising-clickthrough-rates",
+  "research_briefs": [
+    "f02-banner-blindness.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:07:51.889460+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w143.json",
+  "title": "2024 average ad click through rates (CTRs) for paid search, display and social media",
+  "final_url": "https://www.smartinsights.com/internet-advertising/internet-advertising-analytics/display-advertising-clickthrough-rates/",
+  "characters": 23568,
+  "sha256": "d0d3dd92e7c6f2fa5198243391661d84f6b795c6029b63039723c743bc4ef0db",
+  "http_status": 200
+}

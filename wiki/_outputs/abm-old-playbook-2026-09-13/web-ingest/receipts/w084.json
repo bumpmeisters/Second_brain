@@ -1,0 +1,17 @@
+{
+  "id": "W084",
+  "url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-what-changes-in-the-rdr-function-when-we-move-to-buying-groups",
+  "research_briefs": [
+    "t02-mql-to-mqa.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:48.058610+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w084.json",
+  "title": "What Changes In The RDR Function When We Move To Buying Groups?",
+  "final_url": "https://www.forrester.com/blogs/saying-goodbye-to-mqls-what-changes-in-the-rdr-function-when-we-move-to-buying-groups/",
+  "characters": 10373,
+  "sha256": "7bef866daff2912a502af483b63ce9bc054b624b09dc8b94be651ae830dfff37",
+  "http_status": 200
+}

@@ -1,0 +1,17 @@
+{
+  "id": "W086",
+  "url": "https://www.forrester.com/blogs/three-realities-about-b2b-buying-networks",
+  "research_briefs": [
+    "f06-buying-committee.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:01:55.249233+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w086.json",
+  "title": "Three Realities About B2B Buying Networks",
+  "final_url": "https://www.forrester.com/blogs/three-realities-about-b2b-buying-networks/",
+  "characters": 12288,
+  "sha256": "9d781ad1f7182ffdb4a41c1d8f1c363feaf6921939bd100d13136496e58682a1",
+  "http_status": 200
+}

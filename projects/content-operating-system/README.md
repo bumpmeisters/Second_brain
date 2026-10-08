@@ -4,7 +4,7 @@ status: active
 project: content-operating-system
 version: 0.4.2
 created: 2026-07-24
-updated: 2026-08-16
+updated: 2026-10-04
 sources:
   - user architecture decision, 2026-07-24
   - user-approved Content Operating System implementation plan, 2026-07-26
@@ -62,6 +62,7 @@ Thematic and company projects remain responsible for what is known and argued. T
 - [First live audience application](../ai/authority/directions/llm-thinking-emergence-direction-v2.md) - J-Space Direction draft for one profile segment plus an explicit record of required and unused audience assumptions.
 - [Execution Calibration Pack](publishing/identity/execution-calibration-pack.md) - bounded craft examples, Rolf examples, and counterexamples.
 - [Execution Calibration Record](templates/execution-calibration-record.md) - working comparison record used before a full draft when triggered, including candidate editorial lessons from material human corrections.
+- [Optional reference-profile calibration plan](frameworks/_meta/reference-profile-calibration-plan-2026-10-04.md) - first private [Matt Heinz pilot](../../wiki/_outputs/reference-profile-pilot-2026-10-04/pilot-report.md) completed; mixed AI findings, human review pending. Manual calibration unchanged; shared runtime integration not adopted.
 - [Lifecycle Pilot Record](templates/content-lifecycle-pilot-record.md) - lean observation protocol for the first two real end-to-end runs.
 - [Publication register](publishing/publication-register.md) - cross-project asset state and evidence.
 - [Object validator](tools/validate-content-objects.ps1) - deterministic lineage, state, path, legacy, and fingerprint checks.

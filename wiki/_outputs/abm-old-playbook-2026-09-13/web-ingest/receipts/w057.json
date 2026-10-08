@@ -1,0 +1,17 @@
+{
+  "id": "W057",
+  "url": "https://support.6sense.com/docs/6sense-product-glossary",
+  "research_briefs": [
+    "s01-abx.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:58:58.975610+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w057.json",
+  "title": "6sense Product Glossary",
+  "final_url": "https://support.6sense.com/docs/6sense-product-glossary",
+  "characters": 20057,
+  "sha256": "525b0147daf9133a80ac4f2ae2a1d54bcc97f95a0d335f71a99ddb1fe7984bbb",
+  "http_status": 200
+}

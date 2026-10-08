@@ -1,0 +1,17 @@
+{
+  "id": "W066",
+  "url": "https://support.google.com/google-ads/answer/11182074?hl=en",
+  "research_briefs": [
+    "f03-ad-fraud.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T17:59:57.118411+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w066.json",
+  "title": "About invalid traffic - Google Ads Help",
+  "final_url": "https://support.google.com/google-ads/answer/11182074?hl=en",
+  "characters": 33647,
+  "sha256": "09459dbe21a97f9164351b550927fe28f6b671c5444f8bea7c46a366eb00fd00",
+  "http_status": 200
+}

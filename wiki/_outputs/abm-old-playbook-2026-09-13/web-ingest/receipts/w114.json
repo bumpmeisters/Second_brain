@@ -1,0 +1,17 @@
+{
+  "id": "W114",
+  "url": "https://www.indexnow.org/faq",
+  "research_briefs": [
+    "t05-seo-to-entity.md"
+  ],
+  "selection": "selected-for-capture-and-review",
+  "authority": "User request to transcribe and ingest valuable links from this exact research, 2026-09-13; selected as cited evidence, counterevidence, definitions or numeric provenance; not claim endorsement",
+  "attempted_at": "2026-09-13T18:04:49.738223+00:00",
+  "status": "captured-web",
+  "capture": "wiki/_outputs/abm-old-playbook-2026-09-13/web-ingest/captures/w114.json",
+  "title": "FAQ | IndexNow.org ",
+  "final_url": "https://www.indexnow.org/faq",
+  "characters": 27862,
+  "sha256": "8ac3876fb2e6bba189fee947eb0fa02d3f96db9fca5528f432b1a3a6daf456e6",
+  "http_status": 200
+}
