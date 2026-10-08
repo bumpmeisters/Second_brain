@@ -9,6 +9,8 @@ updated: 2026-07-20
 
 # Sources
 
+- 2026-09-23: HubSpot Taste Profile, Hauptdatei und Frameworkreferenz vollständig geprüft; vier Anregungen vom Nutzer als begrenzte Arbeitshilfe freigegeben. [Quellen, Hash und Übernahmeziele](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md). Hersteller-Methode, keine empirische Validierung; keine Duplikation der Quelldateien.
+
 **Summary**: Register of source material, AI-generated research, and setup references used by this vault.
 
 ---

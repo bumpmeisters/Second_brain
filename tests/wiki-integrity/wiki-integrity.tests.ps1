@@ -83,6 +83,16 @@ updated: 2026-08-08
         if (-not $finding -or $finding.severity -ne 'warning') { throw "Deferred integration was not reported as a warning: $rule" }
     }
 
+    # Exercise the integrated session check, not only its standalone validator.
+    New-Item -ItemType Directory -Path (Join-Path $tempRoot 'sessions') | Out-Null
+    Copy-Item -LiteralPath (Join-Path $repo 'tools/test-session-notes.ps1') -Destination (Join-Path $tempRoot 'tools/test-session-notes.ps1')
+    Set-Content -LiteralPath (Join-Path $tempRoot 'sessions/index.md') -Encoding UTF8 -Value '[Missing](2026-09-21-missing.md)'
+    $sessionJson = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $lintTool -VaultRoot $tempRoot -Profile Fast -Json | Out-String
+    if ($LASTEXITCODE -ne 2 -or $sessionJson -notmatch 'sessions.invalid') { throw 'Invalid session index did not fail the wiki audit.' }
+    Set-Content -LiteralPath (Join-Path $tempRoot 'sessions/index.md') -Encoding UTF8 -Value '# Sessions'
+    $sessionJson = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $lintTool -VaultRoot $tempRoot -Profile Fast -Json | Out-String
+    if ($LASTEXITCODE -ne 0 -or $sessionJson -match 'sessions.invalid') { throw 'Repaired session index did not pass the wiki audit.' }
+
     Add-Content -LiteralPath (Join-Path $tempRoot 'wiki/good-page.md') -Encoding UTF8 -Value 'C:/Users/example/outside.txt'
     $previousErrorActionPreference = $ErrorActionPreference
     $ErrorActionPreference = 'Continue'

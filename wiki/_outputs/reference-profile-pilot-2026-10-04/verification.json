@@ -1,0 +1,112 @@
+{
+  "checked_utc": "2026-10-04T19:59:08.427274+00:00",
+  "scope": "Eight source hashes, frozen profile, approved Direction identity, four private drafts and bounded links; no empirical quality guarantee",
+  "sources": [
+    {
+      "id": "D01",
+      "sha256_matches": true
+    },
+    {
+      "id": "D02",
+      "sha256_matches": true
+    },
+    {
+      "id": "D03",
+      "sha256_matches": true
+    },
+    {
+      "id": "D04",
+      "sha256_matches": true
+    },
+    {
+      "id": "D05",
+      "sha256_matches": true
+    },
+    {
+      "id": "D06",
+      "sha256_matches": true
+    },
+    {
+      "id": "H01",
+      "sha256_matches": true
+    },
+    {
+      "id": "H02",
+      "sha256_matches": true
+    }
+  ],
+  "profile_frozen_hash_matches": true,
+  "approved_direction_hash_matches": true,
+  "assets": [
+    {
+      "path": "projects/abm-operating-system/authority/linkedin/hp-box-profile-pilot-baseline.md",
+      "condition": "baseline",
+      "word_count": 271,
+      "word_range_pass": true,
+      "state_draft": true,
+      "publication_false": true,
+      "sha256": "451a4cc885930596b055deee1a6f0c0feaccfa615dd23a7a8946b863b124afcf"
+    },
+    {
+      "path": "projects/abm-operating-system/authority/linkedin/hp-box-profile-pilot-reference.md",
+      "condition": "reference",
+      "word_count": 287,
+      "word_range_pass": true,
+      "state_draft": true,
+      "publication_false": true,
+      "sha256": "052a33b3096e3f8ff29f73cdb41cb5147ea0d46a0bbfcd6fb3878e8dcf518f89"
+    },
+    {
+      "path": "projects/abm-operating-system/authority/website/hp-box-profile-pilot-baseline.md",
+      "condition": "baseline",
+      "word_count": 938,
+      "word_range_pass": true,
+      "state_draft": true,
+      "publication_false": true,
+      "sha256": "f69113a8518cab140493e66cdc3322fabd6d70858a3e45db34df90587d8853fd"
+    },
+    {
+      "path": "projects/abm-operating-system/authority/website/hp-box-profile-pilot-reference.md",
+      "condition": "reference",
+      "word_count": 985,
+      "word_range_pass": true,
+      "state_draft": true,
+      "publication_false": true,
+      "sha256": "86833444d23c015633d2b977586f5475e775194531a315ad875b24918f0d72ed"
+    }
+  ],
+  "links_checked": 80,
+  "missing_links": [],
+  "content_validator": {
+    "status": "passed",
+    "after_register_update": true,
+    "contract": "content-object-contract/v1",
+    "content_objects": 33,
+    "directions": 12,
+    "briefs": 16,
+    "legacy_fingerprints": "checked by existing validator"
+  },
+  "source_inventory": {
+    "status": "updated",
+    "total_files": 10540,
+    "pilot_sources": 8,
+    "pilot_coverage_status": "content-ingested",
+    "promotion_label_note": "Generated canonical-recorded is source/summary registration, not shared method or profile adoption."
+  },
+  "session_check": {
+    "passed": true,
+    "task_id": "01a0cb2a-8cd7-7303-8cb7-c26efb20d075",
+    "notes_checked": 14,
+    "errors": 0
+  },
+  "line_ending_policy": {
+    "passed": true,
+    "worktree_hygiene_passed": false,
+    "mixed_tracked_files": 67,
+    "normalization_performed": false
+  },
+  "diff_whitespace_check": "passed-after-final-doc-closeout",
+  "finalized_utc": "2026-10-04T20:00:59.372445+00:00",
+  "human_quality_review": "pending",
+  "runtime_contracts_changed": false
+}

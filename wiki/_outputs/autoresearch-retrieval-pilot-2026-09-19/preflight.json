@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "check": "all-240-snapshot-hashes",
+      "passed": true
+    },
+    {
+      "check": "reject-protected-path",
+      "passed": true
+    },
+    {
+      "check": "reject-traversal",
+      "passed": true
+    },
+    {
+      "check": "detect-hash-tampering",
+      "passed": true
+    },
+    {
+      "check": "index-first",
+      "passed": true
+    },
+    {
+      "check": "trace-exact-output-size-and-hash",
+      "passed": true
+    },
+    {
+      "check": "hard-call-limit",
+      "passed": true
+    },
+    {
+      "check": "hard-character-limit",
+      "passed": true
+    }
+  ],
+  "trial_runs_started": 0,
+  "note": "Temporary fixture only; no experiment trace consumed."
+}

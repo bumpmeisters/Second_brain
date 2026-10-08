@@ -1,0 +1,113 @@
+{
+  "schema": "repository-snapshot/v1",
+  "repository_id": "karpathy--autoresearch",
+  "repository_url": "https://github.com/karpathy/autoresearch",
+  "commit": "228791fb499afffb54b46200aca536f79142f117",
+  "tree_sha": "04fa7a1a3ad211e97d894bb42df7698dae5d92ba",
+  "acquired_at": "2026-09-19T13:04:35.651500+00:00",
+  "selection": {
+    "status": "approved-for-static-review",
+    "mode": "direct",
+    "actor": "Rolf",
+    "reason": "User-selected Karpathy repository: understand autonomous experiment loops and assess transfer to the Second Brain",
+    "authorization_ref": "Rolf user request 2026-09-19: analyze https://github.com/karpathy/autoresearch, preserve repository and investigate Second Brain transfer"
+  },
+  "policy_sha256": "9ec18f7f3dd83dae95f9e02448149fc426d32e176c1ec1f837df9f92e83c539f",
+  "review_depth": "deep-static",
+  "visibility": "public",
+  "license": "unknown",
+  "archive_url": "https://codeload.github.com/karpathy/autoresearch/zip/228791fb499afffb54b46200aca536f79142f117",
+  "archive_sha256": "fff2de6f3b1d34838f98a7e426bda314eda153a84aac13ddf3d9942c18889f65",
+  "archive_bytes": 390718,
+  "snapshot_path": "repositories/karpathy--autoresearch/snapshots/228791fb499afffb54b46200aca536f79142f117",
+  "file_count": 10,
+  "git_blobs_complete": true,
+  "external_payloads_complete": true,
+  "external_payloads_missing": [],
+  "limitations": [
+    "Git history, dependencies and externally linked documentation are outside the snapshot.",
+    "Symlink blobs, if present, are inert target text; executable modes are metadata only."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 279,
+      "sha256": "ab8c4b08f8558e38bf5f190b6276cf106cf82b99c455e775726c1dc9eb0c37a8",
+      "git_blob_sha": "99c30f52f1cb7b022668ec7215a604aa6b96f77a",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": ".python-version",
+      "bytes": 5,
+      "sha256": "7a41a41354ab8049091ef1a00253ca00567f5a1d3f9aef5502c0b4b5ce9ae707",
+      "git_blob_sha": "c8cfe3959183f8e9a50f83f54cd723f2dc9c252d",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8039,
+      "sha256": "3958fd4195ac2f98ed35c4eaa4f3028a335165ee24945e96426c408d25793a41",
+      "git_blob_sha": "953ea55d5599c45c1be7dad93ec03e47dfa7df9d",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "analysis.ipynb",
+      "bytes": 8208,
+      "sha256": "7c31705130d34ed8181c8c877dfb513522d54c7d987ca8de16330093ca70d291",
+      "git_blob_sha": "bef188375e292d8732a61bf1fa756a4614b76308",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "prepare.py",
+      "bytes": 15043,
+      "sha256": "4f2ba9cbb8ba8c4a3d35be405a913e2f3be3af9aea103ed52ef7b2a662058150",
+      "git_blob_sha": "06bea9165abd3ae94ea82dd733997aec7928f40c",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "program.md",
+      "bytes": 7039,
+      "sha256": "86cf987a5c381e46eefe0d0a82765223fd766d8d7acdc2afacfbbce15ecacece",
+      "git_blob_sha": "dea9bcc0174f1502d0ba64000b94b81ba605855b",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "progress.png",
+      "bytes": 252961,
+      "sha256": "a6be2ad8dece12be1907356b1254f3ba133035d264d73634dbed442887a69d8d",
+      "git_blob_sha": "999e45c2b8833884870c1d7f084bab7a7bbc9e2c",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 543,
+      "sha256": "675c150a9e0769f0e39a43eb7d836934266fa348d6e2403521f1ff99f9b9f1af",
+      "git_blob_sha": "94ae3298925ddae47821f703faf44d4e3b8381bb",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "train.py",
+      "bytes": 26230,
+      "sha256": "2954175f4ac42ad65164aef40910ef953789abcd05a5cc886ac9ba5a00814414",
+      "git_blob_sha": "2e743974c7f06b54311643b314712303fbb26e65",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 443159,
+      "sha256": "03174c5cce6387418c5b6cc9bbe8f71ad0ae1e1d6fedeaecae5cdcf7321da0a3",
+      "git_blob_sha": "c840d62f5285b5ce4b5fe62f135cfe8a47bc9915",
+      "git_mode": "100644",
+      "representation": "file"
+    }
+  ]
+}

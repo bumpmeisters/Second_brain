@@ -5,7 +5,7 @@ sources: []
 schema: reusable-practice-routing/v1
 selection_rule: "Match the task to use_when, reject conflicts with avoid_when, then load only the smallest sufficient artifact set."
 created: 2026-07-27
-updated: 2026-09-11
+updated: 2026-10-08
 ---
 
 # Reusable Practices Router
@@ -18,6 +18,13 @@ updated: 2026-09-11
 
 | Artifact | Use when | Avoid when | Output |
 |---|---|---|---|
+| `wiki/customer-conversation-evidence-workflow.md` (draft) | Eine definierte Frage an autorisierte Kundengespräche erfordert eine vollständige Fallliste und konkrete Originalbelege. | Zugriff, Datenidentität oder fachliche Bewertungskriterien fehlen oder modellierte Scores als objektive Prognose bzw. Personalentscheidung gelten sollen. | Versionierte Fallliste mit Filterdefinition, Originalpassagen, geprüften Bewertungen und offenen Widersprüchen. |
+| `wiki/reviewed-question-to-faq-workflow.md` (draft) | Ein freigegebener interner Wissensbestand soll wiederkehrende Fachfragen mit prüfbaren Antworten versorgen. | Empfänger, Wissenszugriff oder fachlicher Reviewer fehlen oder eine KI-Antwort ohne Belege verbindlich versendet werden soll. | Geprüfter Antwortentwurf mit Provenienz, dokumentierter Freigabe und begründeter FAQ-Entscheidung. |
+| `wiki/quality-culture-workshop.md` (draft) | Ein Team will konkrete Qualitätspraktiken gemeinsam einschätzen und verbessern. | Ein zertifizierendes Audit, validierter Reifegradscore oder bewiesene Wirkung erwartet wird. | Beispiele, unterschiedliche Einschätzungen und zwei bis drei Maßnahmen mit Owner, Termin und Review. |
+| `wiki/document-management-requirements-checklist.md` (draft) | Eine Dokumentenmanagement-Lösung soll fachlich geprüft oder verglichen werden. | Die Liste als Produktempfehlung, Compliance-Beleg oder Beschaffungsfreigabe verwendet würde. | Gewichtete Anforderungsmatrix mit offenen Nachweisen und einer Testauswahl. |
+| `wiki/ai-design-system-iteration-loop.md` (draft) | AI-generierte Seiten wirken inkonsistent oder eine neue UI soll eine wiederverwendbare Designsprache bekommen. | Referenzrechte, Nutzungsziel oder Reviewer fehlen oder visuelle Ähnlichkeit als Produktionsreife gilt. | Versioniertes Designsystem, begründete Variantenentscheidung und geprüfte repräsentative Seiten/Zustände. |
+| `wiki/outcome-based-service-scaling-assessment.md` | A provider must choose a scaling path for an outcome-based offer. | The offering lacks a defined outcome or the task requires a validated quantitative maturity score. | An advance/stay/redesign decision with constraints, evidence, and next test. |
+| `wiki/digital-marketing-sales-maturity-diagnostic.md` | A transformation decision needs an evidence-led capability and process diagnosis. | A validated benchmark, causal ROI estimate, or current market statistic is required. | A sourced four-dimension gap map with an owned improvement and test. |
 | `projects/No and low code_1st Marketing Agent/frameworks/audience-understanding/buying-role-persona-analysis.md` (draft) | Ein definierter Leistungs-/Marktkontext soll rollenbezogene Personas für Marketing erhalten; Belege und Hypothesen können getrennt werden. | Jobtitel als Machtbeleg, synthetische Kaufgeschichten oder bestätigte Personas ohne passende Daten erwartet werden. | Rollenkarte, begründete Persona-Arbeitstypen, Informations-/Nachweisfragen und offene Annahmen; Pilotstatus beachten. |
 | `tools/company-intelligence/workflow.md` | Authorized company research needs a new Unternehmensbasis, a targeted Nachsuche/Such- und Sammelauftrag, or an Aktualisierung of a reviewed company context. | Only source inventory is needed, scope is undefined, or unattended operation/unapproved source access is expected. | Reviewed baseline, focused evidence answer or new context version; verifiable run and explicit learning closeout. |
 | `wiki/domain-expert-error-analysis-loop.md` | New or changed AI workflow lacks reliable domain criteria, or automated evaluations disagree with qualified human review. | Reviewers lack domain knowledge or full task context, cases cannot be used lawfully, or a deterministic oracle answers the entire question. | Annotated cases, reviewed error taxonomy, versioned rubric, calibrated evaluator record and bounded improvement decision. |

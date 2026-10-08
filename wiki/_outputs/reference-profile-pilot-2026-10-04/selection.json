@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "selected_on": "2026-10-04",
+  "task_id": "01a0cb2a-8cd7-7303-8cb7-c26efb20d075",
+  "authority": "User: starte die Umsetzung; first slice of reference-profile-calibration-plan-2026-10-04.md, with delegated targeted web selection for Matt Heinz.",
+  "scope": "Author-attributed public writing for an experimental craft profile, not factual endorsement or canonical method promotion.",
+  "split_frozen_before_profile": true,
+  "holdout_limit": "Titles and search snippets may be known; H01 opening was visible during discovery. No claim of a blind holdout. Full held-back articles are not read until the profile is frozen.",
+  "sources": [
+    {"id":"D01","split":"derivation","title":"I Still Think Sales Should Report Into Marketing","url":"https://www.heinzmarketing.com/blog/i-still-think-sales-should-report-into-marketing/","filename":"d01-sales-report-into-marketing.md"},
+    {"id":"D02","split":"derivation","title":"Brand Is a Dirty Word in B2B and That's Our Fault","url":"https://www.heinzmarketing.com/blog/brand-is-a-dirty-word-in-b2b-and-thats-our-fault/","filename":"d02-brand-dirty-word.md"},
+    {"id":"D03","split":"derivation","title":"AI Is Making Your Best People Slower","url":"https://www.heinzmarketing.com/blog/ai-is-making-your-best-people-slower/","filename":"d03-ai-review-bottleneck.md"},
+    {"id":"D04","split":"derivation","title":"One Team + Multiple Operating Models = Compounding Drag","url":"https://www.heinzmarketing.com/blog/one-team-multiple-operating-models-compounding-drag/","filename":"d04-compounding-drag.md"},
+    {"id":"D05","split":"derivation","title":"Life Lessons from a 50 Year Old","url":"https://www.heinzmarketing.com/blog/life-lessons-from-a-50-year-old/","filename":"d05-life-lessons.md"},
+    {"id":"D06","split":"derivation","title":"You Don't Need a PowerPoint Template Anymore","url":"https://www.heinzmarketing.com/blog/you-dont-need-a-powerpoint-template-anymore/","filename":"d06-powerpoint-template.md"},
+    {"id":"H01","split":"held-back","title":"More than B2B: Changing the definition of marketing work, and its impact on careers and lives","url":"https://www.heinzmarketing.com/blog/more-than-b2b-changing-the-definition-of-marketing-work-and-its-impact-on-careers-and-lives/","filename":"h01-more-than-b2b.md"},
+    {"id":"H02","split":"held-back","title":"Why High-Stakes Human Trust Will Outlast AI","url":"https://mattheinz.substack.com/p/why-high-stakes-human-trust-will","filename":"h02-human-trust.md"}
+  ],
+  "excluded": [
+    {"source":"raw/assets/20260821_Matt Heinz_substack posts.docx","reason":"Existing source review identifies a mixed collection with reposts and shortened excerpts. Not reopened or used for profile derivation."},
+    {"source":"Heinz Marketing corporate FAQ, agency interview summaries, Sales Pipeline Radio and How I Work interviews","reason":"Different author, mixed speakers, or interviewee voice; a Matt Heinz mention/byline does not establish authorship of all prose."}
+  ],
+  "selection_limits": ["Purposive sample, not all writing by Matt Heinz", "Derivation emphasizes August-September 2026 essays", "English sources; German channel transfer is experimental", "Visible author attribution only; editorial or AI assistance unknown", "No engagement or quality ranking inferred"]
+}

@@ -1,0 +1,66 @@
+{
+  "status": "artifact_checks_passed_experiment_inconclusive",
+  "locks_verified": 10,
+  "runs": 8,
+  "responses": 48,
+  "unique_questions": 12,
+  "scored_responses": 48,
+  "citation_occurrences": 132,
+  "citation_known_failed_delivery_excluded": true,
+  "question_order_verified": true,
+  "timing": [
+    {
+      "run": "dev-b-1",
+      "first_query_to_answer_seconds": 144.434087,
+      "answer_written_utc": "2026-09-19T13:58:44.569239+00:00"
+    },
+    {
+      "run": "dev-b-2",
+      "first_query_to_answer_seconds": 141.012173,
+      "answer_written_utc": "2026-09-19T13:59:01.164310+00:00"
+    },
+    {
+      "run": "dev-v-1",
+      "first_query_to_answer_seconds": 150.222475,
+      "answer_written_utc": "2026-09-19T13:59:05.205172+00:00"
+    },
+    {
+      "run": "dev-v-2",
+      "first_query_to_answer_seconds": 155.974301,
+      "answer_written_utc": "2026-09-19T14:01:53.149047+00:00"
+    },
+    {
+      "run": "holdout-b-1",
+      "first_query_to_answer_seconds": 150.746449,
+      "answer_written_utc": "2026-09-19T14:08:05.251924+00:00"
+    },
+    {
+      "run": "holdout-b-2",
+      "first_query_to_answer_seconds": 118.72656,
+      "answer_written_utc": "2026-09-19T14:07:58.637213+00:00"
+    },
+    {
+      "run": "holdout-v-1",
+      "first_query_to_answer_seconds": 183.408238,
+      "answer_written_utc": "2026-09-19T14:08:49.032162+00:00"
+    },
+    {
+      "run": "holdout-v-2",
+      "first_query_to_answer_seconds": 188.585787,
+      "answer_written_utc": "2026-09-19T14:11:41.704415+00:00"
+    }
+  ],
+  "timing_limit": "File mtimes measure first corpus query to answer write; setup, reasoning tokens and active compute are not separately measured.",
+  "holdout": {
+    "baseline_recorded_chars": 207877,
+    "variant_recorded_chars": 151187,
+    "recorded_reduction_pct": 27.270934254390824,
+    "known_undelivered_baseline_chars": 19259,
+    "sensitivity_excluding_known_failure_pct": 19.84487164533607,
+    "nonshared_recorded_reduction_pct": 45.06538415676299,
+    "nonshared_sensitivity_excluding_known_failure_pct": 35.134602387925206,
+    "decision": "inconclusive",
+    "reason": "Known stdout failure was charged against baseline context budget; sensitivity also falls below fixed 20 percent threshold."
+  },
+  "completed_utc": "2026-09-19T14:14:27.017726+00:00"
+}

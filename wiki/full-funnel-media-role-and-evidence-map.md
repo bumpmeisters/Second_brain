@@ -6,13 +6,14 @@ use_when: "A paid or mixed-media plan needs to align funnel role, channel select
 avoid_when: "The audience, business objective, approved claims, conversion location, decision owner, or minimum evidence standard is undefined, or the map would be treated as a universal funnel or attribution model."
 output: "A versioned stage-role table with channel rationale, controllable levers, creative job, observable outcome, evidence class, test boundary, owner, and continue, revise, or stop decision."
 sources:
+  - "raw/Clippings/How to Build an AI Marketing Team That Runs Itself (Live Demo).md"
   - research/2026-09-13-b2b-lead-management-diskurs.md
   - "raw/Clippings/Live Teardown An Enterprise Demand Generation Planning Masterclass.md"
   - "raw/Clippings/Recession-Proof Demand Generation Strategies for Sustainable Growth with Jana Pelchen.md"
   - raw/imports/automated-clippings/youtube/UCGtXqPiNV8YC0GMUzY-EUFg/2026-08-04--9zBThLCpPh4.md
   - wiki/newsletters/mindstream/linked-sources/paid-conversational-discovery-source-review-2026-09-10.md
 created: 2026-08-16
-updated: 2026-09-13
+updated: 2026-10-07
 ---
 
 # Full-Funnel Media Role and Evidence Map
@@ -107,6 +108,12 @@ Zusätzliche Quellen und ihre begrenzte Rolle stehen in der [P56-Evidenzmatrix](
 This workflow is not a universal funnel, media-mix formula, attribution model, creative style guide, or proof that advertising caused revenue or brand growth. Platform return, click-through rate, cost per click, product-page arrival, new-to-brand share, engagement, and repeat behavior remain context-dependent observations or proxies unless stronger evidence supports a narrower claim.
 
 Do not adopt the source's fixed frequency, gain, timing, platform, or early-stage prescriptions as general thresholds. Comparison validity can fail through weak sample size, seasonality, regional or cohort differences, spillover, retailer effects, identity error, or concurrent activity. Privacy, consent, contact policy, platform terms, accessibility, brand, legal, procurement, and budget controls remain separate requirements.
+
+## Creative-Identität und gestufte Testwellen
+
+Creative-Varianten erhalten eine eindeutige ID, die Ausgangsmaterial, Problemanlass, Produktionskonfiguration und beobachtete Ergebnisse verbindet. Im Testplan eine begrenzte nächste Welle nach den Beobachtungen der vorherigen bestimmen; keine große Menge allein wegen verfügbarer Produktionskapazität gleichzeitig starten. Wiederholte Analysen können auf einer geeigneten Datenkopie erfolgen, während Live-Änderungen kontrollierte Aktionen bleiben. Die Datenkopie braucht passende Frische, Zugriff und Herkunft; das ist eine lokale Anwendungsschranke. Zehn Ads pro Tag und genannte CPL-Verbesserungen sind keine allgemeingültigen Vorgaben oder Wirkungsbeweise. (source: raw/Clippings/How to Build an AI Marketing Team That Runs Itself (Live Demo).md; vendor; Analyse P60-C06; Freigabe Rolf 2026-10-07).
+
+Quellennahe Struktur, Lesedeckung und weitere Ausschlüsse: [[ai-practice-clippings-source-review-2026-10-07]].
 
 ## Related pages
 

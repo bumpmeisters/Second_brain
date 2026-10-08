@@ -3,7 +3,7 @@ type: log
 status: active
 sources: []
 created: 2026-05-30
-updated: 2026-09-14
+updated: 2026-10-08
 ---
 
 # Wiki Log
@@ -12,7 +12,7 @@ updated: 2026-09-14
 
 **Sources**: None.
 
-**Last updated**: 2026-09-14
+**Last updated**: 2026-10-07
 
 ## 2026-09-14 | newsletter closeout | Close Batch 1 holds and weekly run
 
@@ -3124,3 +3124,296 @@ updated: 2026-09-14
   - G3E-Gesamtprüfung nicht bestanden: Der erste vollständige Versuch traf auf die veraltete feste Bindung an PowerShell 7.6.4 statt der bereitgestellten 7.6.5. Eine isolierte offizielle 7.6.4 mit exakt passender SHA-256-Prüfsumme beseitigte diese Laufzeitsperre; die Kette brach anschließend im verschachtelten A/A1-Regressionslauf ab. Der separat ausgeführte Root-Fast-Check des Prüfcheckouts meldete ebenfalls `passed: false`, Exit 2. Kein vollständiger G3E-Pass und keine neue Annahme historischer Kandidaten behauptet.
   - Inbox-Dateien und SQLite-Laufzeitdateien bleiben außerhalb des Commits. Kein Push und keine Aktivierung von Cutover, Scheduling oder Live-Probes.
   - Arbeitsreste: Der saubere, abgetrennte Prüfcheckout `.tmp/branch-merge-validation-20260919` sowie `.tmp/merge-powershell-7.6.4` und das zugehörige ZIP bleiben lokal erhalten. Die automatische Freigabeprüfung hat den Aufräumbefehl mit `blocked by policy` abgelehnt; keine Umgehung oder Löschung vorgenommen.
+
+## 2026-09-19 | repository-analysis | Karpathy autoresearch aufgenommen und auf Second-Brain-Nutzen untersucht
+
+- Sources:
+  - `repositories/karpathy--autoresearch/snapshots/228791fb499afffb54b46200aca536f79142f117/`
+  - `repositories/karpathy--autoresearch/manifests/228791fb499afffb54b46200aca536f79142f117.json`
+  - Direkter Nutzerauftrag vom 19.09.2026 zur Analyse, lokalen Ablage und Untersuchung möglicher Übernahmen.
+- Changed:
+  - [Analysedossier](../repositories/karpathy--autoresearch/karpathy--autoresearch-analysis.md) mit Architektur, Normal-/Fehlerablauf, acht Evidenzbefunden, Abgleich bestehender Methoden und begrenztem Retrieval-Pilotvorschlag.
+  - [Repository Learning Library](../repositories/index.md), [[index]], [[sources]] und lokales Quelleninventar aktualisiert.
+- Notes:
+  - Zehn Dateien unveränderlich aufgenommen; acht Textdateien vollständig und uv.lock nur im Kopf gelesen. progress.png ausschließlich inventarisiert. Keine Repositoryausführung, Installation oder Bildauswertung.
+  - Lernwert: kleine Änderungsfläche, feste Baseline, explizite Keep-/Discard-Entscheidung, Einfachheitskriterium und kompakte Ergebnisansicht. Grenzen: promptbasierte Rechte, editierbare Verlustberechnung, unvollständiges Gesamtzeitbudget und keine vollständige dauerhafte Versuchsspur.
+  - Snapshot-/Dossierprüfung bestanden, 35 Quellenverweise; Readiness für neun Textdateien bestanden. Gesamtinventar 10.444 Dateien; alle zehn neuen Snapshotdateien inventory-only, genaue Lesetiefe im Dossier. Manuelle Auffindbarkeitsprobe erfolgreich; kein Nutzenbenchmark.
+  - Zeilenendungs-Policy bestanden, separater Hygienehinweis auf 58 gemischte Dateien; keine Normalisierung. Keine geschützten Quellen oder bestehenden Inbox-/SQLite-Dateien geändert.
+  - Abschlusscheck ausgeführt. Qualifizierte Erkenntnisse als Referenz gesichert; keine kanonische Promotion, neue Skillaktivierung, Automation oder produktive Änderung. Retrieval-Probe bleibt optional, Nutzen unbewiesen. Patch-Schreibfehler bei Abschlussänderungen über den vorhandenen hashgesicherten Fallback behandelt; keine neue Harness-Regel abgeleitet.
+
+## 2026-09-19 | experiment-preparation | Zwölf-Fragen-Vergleich der Wissenssuche vorbereitet
+
+- Sources:
+  - Nutzerauftrag, den begrenzten Vergleich zu starten.
+  - 240 Kernwiki-Seiten, exakt im Korpusmanifest des Versuchs festgehalten; keine neuen Originalquellen ingestiert.
+- Changed:
+  - [Versuchsstand](_outputs/autoresearch-retrieval-pilot-2026-09-19/README.md), Protokoll, eingefrorener Korpus, zwölf quellengeprüfte Fragen/Referenzen, Reader, Vorprüfungen und Hashbindungen.
+  - [[index]] um den Fortsetzungseinstieg ergänzt.
+- Notes:
+  - Acht Reader-Vorprüfungen bestanden; noch null Antwortläufe. Kein Leistungs- oder Kostenbefund.
+  - Getrennte Unteragenten ausdrücklich angefragt, da der aktuelle Ausführungskontext ausdrückliche Autorisierung verlangt. Tester sollen keine Referenzantworten aus dem Koordinationskontext kennen. Auswahl noch offen.
+  - Offene Ausführung und Auswertung im Versuchsstand beschrieben; kein abgeschlossener Vergleich, keine Promotion, neue Betriebsregel oder Automation.
+
+## 2026-09-19 | experiment-completion | Wissenssuche mit getrennten Unteragenten geprüft
+
+- Sources:
+  - Expliziter Nutzerauftrag „starte die antwortläufe mit getrennten unteragenten“.
+  - Eingefrorener Kernwiki-Korpus, zwölf geprüfte Fragen und Rubrik im [Versuchsstand](_outputs/autoresearch-retrieval-pilot-2026-09-19/README.md).
+- Changed:
+  - [Ergebnisbericht](_outputs/autoresearch-retrieval-pilot-2026-09-19/report.md), acht Antwortsets mit Traces, zwei labelblinde Bewertungssets, reproduzierbare Kennzahlen und Abschlussprüfung.
+  - [[index]], Versuchs-README und [autoresearch-Dossier](../repositories/karpathy--autoresearch/karpathy--autoresearch-analysis.md) auf den Abschlussstand gebracht.
+- Notes:
+  - 48 Antworten auf zwölf Fragen; im Holdout beide Strategien je 6/6 und 48/48 Punkte in beiden Wiederholungen, null kritische Fehler. Development-Baseline einmal 5/6, ansonsten 6/6. Modellbewertungen ohne menschliche Kalibrierung.
+  - Entscheidung inconclusive: Development durch gekürzte Toolausgaben beeinflusst; im Holdout verbuchte ein fehlgeschlagener Baseline-Abruf 19.259 nicht ausgelieferte Zeichen. Rohreduktion 27,27 % ist verzerrt; Sensitivität ohne diese Zeichen 19,84 %, unter der vorab gesetzten 20-%-Schwelle. Mehr Reader-Abfragen der Variante (39 statt 24), kein gemessener Token-/Geld-/Geschwindigkeitsvorteil.
+  - Zehn gefrorene Bindungen und 240 Korpusdateien hashgleich; acht vollständige Läufe innerhalb aufgezeichneter Abfrage-/Zeichen-/Wortlimits, Fallreihenfolge geprüft. 48 eindeutige Urteile und 132 gültige, abgedeckte Zitatvorkommen, auch nach Ausschluss der gescheiterten Ausgabe. Originalsnapshot erneut unverändert geprüft.
+  - Abschlusscheck: Versuchsartefakte als Auditspur erhalten, keine Bereinigung. Technischer UTF-8-/Ausgabeerfassungs-Lernkandidat nur im Laufbericht; eingefrorener Reader, produktive Regeln, Skills und Automationen unverändert. Keine kanonische Promotion. Erforderliche Arbeit abgeschlossen, neuer Validierungsversuch optional und nicht gestartet.
+
+## 2026-09-21 | source-review | Approved first-wave P58 review checkpoint
+
+- Sources:
+  - User approval: “I Approve this first wave”; exact 28-path/26-hash selection retained in `wiki/_outputs/source-intake/2026-09-21-inbox-raw-research/selection-approval.md` and `approved-intake.csv`.
+  - Twelve selected inbox binaries admitted by the authorized importer; original hashes preserved. Three selected commercial output syntheses reviewed separately.
+- Changed:
+  - [[first-wave-source-review-2026-09-21]], eleven linked source briefs, and [[commercial-output-review-2026-09-21]].
+  - P58 decision ledger, evidence matrix, bundle, package validation receipt; [[index]] and [[sources]].
+  - `tools/assert-source-ingest-ready.ps1`: literal path resolution for the `[Autosaved]` source filename; no readiness policy change.
+- Notes:
+  - Twenty-two distinct content reviews include explicitly scoped selected-page/section reviews. Three aliases preserve source identities; Computer Use is a misleading filename for the GPT-6 factory clipping. Two fully reviewed AI reports are registered-only proposals.
+  - Three decks remain blocked/unread with amber extraction quality. Eleven evidence patterns are proposed, not approved; no canonical claims, reusable artifacts, skills, or automation changes were promoted.
+  - The stale September 14 importer lock was preserved as `.inbox.lock.stale-20260921` after process and exclusive-open checks; no source deletion or mutation. Conversion remains create-only; no OCR/regeneration.
+  - Scoped verification and remaining work are recorded in `wiki/_outputs/semantic-ingest/p58/verification.md`. Final/Full package completion remains pending human promotion review and blocked-source disposition. Audit artifacts and unrelated work remain intact.
+
+## 2026-09-21 | semantic-promotion | P58-C01–C11 approved and implemented
+
+- Sources:
+  - Explicit user message: “P58-C01–C11 approved”. Exact sources, hashes, and approved patterns: `wiki/_outputs/semantic-ingest/p58/evidence-matrix.csv`.
+- Changed:
+  - Nine existing target pages listed in [[first-wave-source-review-2026-09-21]].
+  - [[digital-marketing-sales-maturity-diagnostic]], [[outcome-based-service-scaling-assessment]], [[reusable-practices-library]], [[reusable-practices-router]], [[index]], and [[sources]].
+  - Source-brief promotion status, decision ledger, evidence matrix, package/backlog accounting, and validation record.
+- Notes:
+  - Twenty promotional source rows approved; all eleven patterns implemented with source limits. No current vendor, legal, pricing, market, or ROI assertions independently verified or added.
+  - Three blocked/unread decks remain open. Three duplicate and two registered-only dispositions remain reviewed, not silently approved by a pattern-only decision. Eight paths remain open in package accounting. Final package completion is not claimed.
+  - Final/Full validation passed with zero errors/warnings; current ledger hashes and provenance recorded. Added missing bundle frontmatter, qualified an existing nested source link, and used ASCII register markers to avoid a Windows PowerShell encoding mismatch. No validator changes.
+  - No source mutation, extraction regeneration, policy/skill changes, or MOS implementation resumed. See `wiki/_outputs/semantic-ingest/p58/promotion-closeout.md` for verification. The eleven-pattern promotion is complete; package remains open for the residual rows.
+
+## 2026-09-21 | workflow | Sessiongedächtnis verbindlich eingebunden
+
+- Sources:
+  - Nutzerzustimmung und Implementierungsauftrag in Task `01a0c5d6-8e3c-79b1-aa82-ec1a457127ac`; [rekonstruierter Gesprächskontext](../sessions/2026-09-21-sessiongedaechtnis.md).
+- Changed:
+  - [Sessionregister](../sessions/index.md), [Vorlage](../templates/session-note.md) und erste Sessionnotiz.
+  - AGENTS.md, bestehender Task-Closeout-Skill, [[index]] und [[obsidian-vault-design]].
+  - `tools/test-session-notes.ps1`, Integration in `tools/test-wiki-integrity.ps1`, Sessiontests und Abschluss-Akzeptanzfälle.
+- Notes:
+  - Relevante Aufgaben erhalten ohne zusätzliche Aufforderung eine rekonstruierte Notiz; Fortsetzungen aktualisieren denselben Eintrag. Routineantworten und ausdrücklicher Nicht-speichern-Wunsch bleiben ausgenommen. Kanonische Ergebnisse werden verlinkt; historische Gesprächsinhalte sind keine neue Autorisierung oder Wissenspromotion.
+  - Elf Sessiontests und Wiki-Integrationstests bestanden; aktuelle Task-ID geprüft. Gesamt-Wiki-Audit meldet sechs Fehler/32 Warnungen außerhalb der Änderung, Sessionbereich fehlerfrei. Zeilenenden-Policy bestanden, gemischte Zeilenenden im Bestand bleiben separat.
+  - Keine Quellen ingestiert, daher kein neuer Quellenregistereintrag; keine alten Chats importiert, keine Volltranskripte oder Hintergrundautomation erzeugt. Bestehende Gesprächsrekonstruktionen bleiben an ihrem Ort. Prüfgrenzen und nächster Nutzungstest stehen in der Sessionnotiz.
+
+
+## 2026-09-23 | method | Begrenzte Taste-Arbeitshilfe aufgenommen
+
+- Sources: [Quellenreview](_outputs/hubspot-taste-review-2026-09-23/analyse.md); Nutzerfreigabe in Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075.
+- Changed: bestehende Audience-Context-, Message-House- und Content-Context-Vorlagen; Content Marketing Strategy und zugehörige Quellen-/Indexeinträge.
+- Notes: Vier optionale Ergänzungen zu Vertrauensbarrieren, realen Kundensituationen, Selbstbild/Kundenwahrnehmung und kompakter Übergabe. Quellen und Hypothesen bleiben getrennt; unbekannte Felder sind zulässig. Keine neue Pflichtstufe, kein Plugin installiert, keine Wirksamkeit behauptet. Beim nächsten autorisierten Einsatz auf Klarheit und Doppelarbeit achten. Rücknahme nur der neuen optionalen Abschnitte; vorhandene Verträge bleiben gültig.
+
+
+## 2026-09-23 | method | Zwei begrenzte Loop-Video-Ergänzungen
+
+- Sources: [Review mit Transkriptherkunft und Zeitstellen](_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md); ausdrückliche Nutzerfreigabe in Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075.
+- Changed: bestehender Performance-Fed Content Ideation Loop (optionale Wahl lang nach kurz / kurz nach lang) und Content-Brief (optionale Materialbasis für Varianten); Reviewstatus, Index, Quellenregister und Sessionnotiz fortgeführt.
+- Notes: Keine neue Pflichtstufe, kein Framework oder Skill; keine empirische Wirkung behauptet. Keine Übernahme von Paid-Media-Vorschlägen oder Erfolgszahlen. Bestehende Evidenz-, Creative-Direction- und Publikationsgrenzen bleiben gültig. Nächster Nutzungstest nur im Rahmen eines autorisierten Contentauftrags; Rücknahme auf beide Ergänzungsabschnitte begrenzt.
+
+## 2026-10-04 | analysis | Writing-System gegen Taste-, Eval- und Compound-Writing-Ansätze geprüft
+
+- Sources:
+  - research/assets/taste-writing-review-2026-10-04/taste-statt-style.docx
+  - raw/imports/taste-writing-review-2026-10-04/taste-evals-transcript.txt
+  - raw/imports/taste-writing-review-2026-10-04/compound-writing-transcript.txt
+  - repositories/petergyang--no-ai-slop/manifests/000650b156983f5159695b441477f4e63b25dc85.json
+- Changed:
+  - [[writing-system-taste-review-2026-10-04]], [[taste-statt-style-research-review]].
+  - [Repo-Dossier](../repositories/petergyang--no-ai-slop/petergyang--no-ai-slop-analysis.md), [Repoindex](../repositories/index.md), [[index]], [[sources]].
+  - [Fortgeführte Sessionnotiz](../sessions/2026-09-23-hubspot-taste-skill.md).
+- Notes:
+  - Bestehendes COS vor externem Mapping geprüft. Richtungs-/Brieftrennung, granulare Annotation, A/B und begründetes Lernen bereits vorhanden; Kalibrierung und wiederholter Nutzen bleiben schwach belegt. Konkreter Zielkonflikt im globalen Content-Taste-Skill identifiziert.
+  - Drei Quellen über zugelassenen Inbox-Importer aufgenommen, DOCX-Sidecar validiert; 14 Repo-Dateien commitgebunden erfasst, alle 13 Textdateien statisch gelesen. AI-Bericht nur teilweise verifiziert, Nutzertranskripte ohne unabhängige Audio-/Videoprüfung.
+  - Fünf priorisierte Änderungsvorschläge und ein begrenzter Vergleichsversuch dokumentiert. Keine Writing-Regeln, Skills, Profile, Automationen oder Contentfreigaben verändert; keine fremden Programme ausgeführt. Die früher genehmigten Taste-Ergänzungen bleiben bestehen.
+
+## 2026-10-04 | pilot | Matt-Heinz-Profil als zusätzliche Schreibhilfe erprobt
+
+- Sources:
+  - Acht exakte Markdown-Quellen unter `raw/imports/matt-heinz-profile-2026-10-04/`, einzeln in [[sources]] und im [Korpusmanifest](_outputs/reference-profile-pilot-2026-10-04/corpus-manifest.json) registriert.
+  - Bestehende freigegebene HP-Box-Model-Direction und vorhandene Ausdrucks-/Briefgrundlagen; keine neue historische Quellenaufnahme.
+- Changed:
+  - [[matt-heinz-writing-profile-pilot-source-review]], [[index]], [[sources]].
+  - [Profil, Pilotbericht und Lesefassungen](_outputs/reference-profile-pilot-2026-10-04/pilot-report.md).
+  - Zwei source-owned Pilotbriefs, vier Drafts und ein Kalibrierungsrecord im ABM-Authority-Bereich; COS-Publikationsregister und Planungs-/Entscheidungsdokumentation.
+  - [Sessionnotiz](../sessions/2026-09-23-hubspot-taste-skill.md).
+- Notes:
+  - Rohquellen nur über den erlaubten Inbox-Importer aufgenommen und danach unverändert. Sechs Artikel abgeleitet, Profil eingefroren, zwei zurückgehaltene Artikel anschließend vollständig geprüft. Textanalyse ohne Bildprüfung; keine Zahlen oder fremden Erfahrungen als Fakten übernommen.
+  - Gemischter, ausdrücklich nicht blinder KI-Vergleich: Baseline-Post und Referenz-Blog als erste Lesefassungen empfohlen. Kein menschliches Ownership-Urteil, keine Zeitersparnis oder allgemeine Qualitätsüberlegenheit nachgewiesen.
+  - Manuelle Kalibrierung und operative Shared Contracts bleiben bestehen. Keine kanonische Methodenpromotion, neue Skills, Veröffentlichung oder Automatisierung. Weitergehende Integration nach dem im Plan vorgesehenen Ergebnisreview.
+
+## 2026-10-04 | refinement | LinkedIn-Beispiele nach menschlicher Korrektur
+
+- Sources:
+  - Vier exakte öffentliche LinkedIn-URLs in [[sources]] und im [Quellenreview](_outputs/reference-profile-pilot-2026-10-04/linkedin-reference-pack.md).
+  - Rolfs Rückmeldung: Post passt noch nicht, Beispiele fehlen; Blog hat gute Richtung. Bestehende freigegebene HP-Direction.
+- Changed:
+  - Begrenztes Referenzpaket und [privater Post mit Beispielen](../projects/abm-operating-system/authority/linkedin/hp-box-profile-pilot-examples-v0-2.md).
+  - Bestehender Pilotbrief, Kalibrierungsrecord, Publikationsregister, Pilotbericht und Hinweis in ursprünglicher Lesefassung.
+  - [[index]], [[sources]] und bestehende [Sessionnotiz](../sessions/2026-09-23-hubspot-taste-skill.md).
+- Notes:
+  - Firecrawl unterstützt LinkedIn nicht. Öffentliche Posttexte über das Webwerkzeug gelesen; ausschließlich URLs und kurze Analysen gespeichert, kein vollständiger Quelldownload behauptet.
+  - Ein ausgefüllter Beispielauftrag konkretisiert die erste Box. Als heutige Illustration formuliert, keine erfundene historische Szene. Fremde Zahlen und Erlebnisse nicht übertragen.
+  - Menschliche Korrektur als einzelne Episode dokumentiert. Neue Revision ohne menschliches Urteil; Blogrichtung positiv, keine finale Freigabe. Eingefrorenes Profil, ursprüngliche vier Drafts, manuelle Alternative und gemeinsame Regeln unverändert.
+
+## 2026-10-07 | selection review | Academy-PDFs für Wissensnutzung auswählen
+
+- Sources:
+  - `raw/assets/tuev-rheinland/academy/2026-10-07/`; zwölf exakte Quellen in [[academy-selection-review-2026-10-07]] und im [Stichprobenledger](_outputs/source-intake/academy-selection-2026-10-07/sample-ledger.csv).
+- Changed:
+  - [[academy-selection-review-2026-10-07]], [[index]], [[sources]] und [Auswahlbericht samt vollständigem Ledger](_outputs/source-intake/academy-selection-2026-10-07/README.md).
+  - Bestehende [Sessionnotiz](../sessions/2026-10-07-neue-quellen-aufnahme.md).
+- Notes:
+  - Nutzer autorisierte die Auswahlprüfung. Alle 3.904 Originalhashes passen zum bestehenden Projektregister; 3.905 Datensätze entsprechen 3.904 Dateien.
+  - Zwölf Gegenfälle: elf vollständig textuell gelesen, ein BSI-Dokument auf sechs von 14 Seiten; insgesamt 70 Textseiten, drei Originalseiten visuell. Gültige bestehende Sidecars verwendet, keine Konvertierung oder OCR ausgelöst.
+  - Drei Dokumente für weiteren Wissensreview priorisiert; 1.924 als Projektreferenz, 1.949 als Archiv, 28 nur bei konkreter Fachfrage empfohlen. Bei ungelesenen Quellen Metadatenurteil, kein Vollreview oder repräsentatives Qualitätsmaß.
+  - Keine Fachseite, Methode oder Skill aus diesen Quellen geändert. Ursprünglicher Clipping-/Inbox-Auftrag bleibt getrennt offen.
+
+
+## 2026-10-07 | source review | P59 und P60 vor Evidenzpromotion
+
+- Sources:
+  - Drei exakt ausgewählte Academy-PDFs in [[academy-priority-source-review-2026-10-07]].
+  - Elf exakt ausgewählte neue Clippings in [[ai-practice-clippings-source-review-2026-10-07]].
+- Changed:
+  - [[source-ingest-checkpoint-2026-10-07]], zwei Quellenbundles, Entscheidungsledger, Evidenzmatrizen, Praxisentwürfe, [[index]], [[sources]] und bestehende Sessionnotiz.
+- Notes:
+  - Rolf autorisierte die drei Academy-Prioritäten und anschließend die elf inventorisierten Clippings. Clipping-Auswahlgate vor Body-Lektüre gesetzt; Originale unverändert, aktuelle Hashes bestätigt.
+  - PDFs: 31 Seiten vollständig textlich geprüft; acht kurze eindeutige Clippings fachlich vollständig, eine zweite Marketing-Variante als inhaltliche Dublette bestätigt. Codex-Kurs und Jev-Interview selektiv geprüft; übrige Inhalte ausdrücklich nicht abgedeckt.
+  - 13 Vorschläge: drei neue Praktiken, sechs Erweiterungen, vier qualifizierte Quellenstützen. Keine Fachseite oder Skill geändert; Evidenzfreigabe ausstehend.
+  - Beide Pakete bestehen Wave/Full mit aufgezeichneter Validatorprovenienz. Das ist kein Final/Full-Abschluss. Inbox-Zuordnung bleibt offen.
+
+## 2026-10-07 | approved promotion | P59 / approved 2026-10-07; P60 / approved 2026-10-07
+
+- Sources:
+  - Drei Academy-PDFs und elf Clippings; exakte Identitäten und Lesedeckungen in [[academy-priority-source-review-2026-10-07]] und [[ai-practice-clippings-source-review-2026-10-07]].
+- Changed:
+  - Dreizehn freigegebene Muster auf zwölf Zielseiten umgesetzt; drei neue Praxisartefakte, neun bestehende Seiten ergänzt. Ziele vollständig in [[source-ingest-checkpoint-2026-10-07]].
+  - Library, Router, Index, Quellenregister, Paketledger und vorhandene Sessionnotiz fortgeschrieben.
+- Notes:
+  - Explizite menschliche Evidenzfreigabe durch Rolf: "alles approved", 2026-10-07, Task 01a11756-56da-7403-af8e-d6e40ed93844.
+  - Eine Dublettenvariante bleibt erhalten; keine zusätzliche unabhängige Evidenz. Lesedeckungen unverändert, zwei lange Quellen abschnittsbezogen.
+  - Keine neuen Skills, Automationen oder ungeprüften Wirkungsbehauptungen. Originalhashes vor Promotion unverändert geprüft. Final/Full-Ergebnis folgt im Checkpoint und den Manifesten.
+  - Abschluss: beide Pakete complete nach Final/Full mit RecordResult, null Fehler/Warnungen und null offenem Paket-Backlog. Library-Platzierung und sechs bereits vorhandene Kurzlinkvorkommen auf drei Zielseiten korrigiert; keine zusätzliche inhaltliche Promotion. Sessionnotiz fortgeschrieben.
+
+## 2026-10-07 | source admission | Drei Inbox-Dateien research zugeordnet
+
+- Sources:
+  - research/assets/20250611_Reengineer Campaigns_draft.pptx
+  - research/assets/20260212_End of the old way of Marketing_1_1.pptx
+  - research/assets/Editorial-Board_2026_Industrial-Marketing-Management.pdf
+- Changed:
+  - [[research-inbox-source-review-2026-10-07]]
+  - [[sources]]
+  - [[index]]
+  - [[source-ingest-checkpoint-2026-10-07]]
+- Notes:
+  - Nutzerentscheidung „research“; Importbeleg 20261007-202304-053-98381068: drei Aufnahmen, null Konflikte/Quarantäne. Alle Hashes unverändert.
+  - Beide PPTX byte-identisch mit vorhandenen raw-Dateien, inventory-only; Campaign-Extraktionsblock in P58 bleibt offen.
+  - PDF vollständig textuell geprüft nach Readiness-Gate; create-only Sidecar, eine von einer Seite, keine OCR. Namensverzeichnis ohne Claim-Promotion; aktuelle Rollen unbestätigt. Research-Lane ist kein Nachweis von KI-Erzeugung.
+
+## 2026-10-08 | source ingest | P61: TokenMade-Unternehmensfälle vollständig reviewed
+
+- Sources:
++  - raw/Clippings/20 Web-Apps ohne Informatik-Hintergrund Ein HR-Chef baut seiner Firma einen eigenen App Store 18.md
+  - raw/Clippings/500.000 Follower f�r 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md
+  - raw/Clippings/Alle Mitarbeiterinnen und SaaS-Vertr�ge mit Claude ersetzt  Christoph Fahle 28.md
+  - raw/Clippings/Andr� M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Bei Volkswagen programmiert die KI nachts Thorsten Jankowsky �ber Agentic Coding im Konzern.md
+  - raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Claude Code als Betriebssystem f�rs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md
+  - raw/Clippings/Der 16-J�hrige, der nicht tippt � Sneaker-Reselling & Koffer-Vermietung aus dem Kinderzimmer 17.md
+  - raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md
+  - raw/Clippings/Ein Journalist l�sst einen KI-Agenten mit seiner Stimme Interviews f�hren 07.md
+  - raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Ex-Googler baut J-Brain Wie Julius sein ganzes Business mit Claude steuert.md
+  - raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md
+  - raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md
+  - raw/Clippings/Hundephysiotherapie mit Claude als Co-Founder 03 - TokenMade.md
+  - raw/Clippings/Kundengespr�che auswerten mit Claude und n8n 06 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md
+  - raw/Clippings/Software-Entwicklung ist gel�st Boris Fr�ndt �ber KI-Prototyping, Fable und warum UXUI der neu.md
+  - raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md
+  - raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz �ber seine Hobby Projekte simplebanking und RetroMac 22.md
+  - raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md
+  - raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in M�nchen 20.md
+  - raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie ein CMO sein ganzes Marketing automatisiert 05 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Gesch�ft mit KI disruptet 08 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md
+  - raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md
+  - raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md
+- Changed:
+  - [[tokenmade-ai-use-cases-source-review-2026-10-08]]
+  - [[index]]
+  - [[sources]]
+- Notes:
+  - Rolf hat die heruntergeladenen Inhalte persönlich geprüft und besonders sorgfältigen Ingest beauftragt; exakte Auswahl vor Body-Lektüre mit Pfaden/SHA-256 für P61 erfasst.
+  - 31 Dateien: 24 unterschiedliche Texte vollständig gelesen, sieben bytegleiche Varianten; 98 Fallkarten inklusive Neben-/Hobbybeispielen und Plänen. Je Fall: Problem, Inputs, Ablauf, Output, KI-Rolle, Reifegrad, menschliche Grenze, Zeitanker und Fehler/Ausschlüsse.
+  - 24 Dateinamen passen nicht zum Body. Inhaltstitel und Originalpath getrennt; sieben nur im Dateinamen versprochene Themen fehlen tatsächlich. Keine Quellenmutation oder Dublettenbereinigung.
+  - Quellenhub, 24 Vollbriefe, Fallregister, Identitätsmatrix und neun konkrete Übernahmevorschläge erstellt. Sieben bestehende Zielseiten und zwei neue draft-Methoden vorgesehen; kanonische Promotion wartet auf gesonderten Evidenzcheckpoint.
+  - Keine ROI-/Erfolgs-, aktuelle Produkt-/Modell-, Rechts-/Datenschutz- oder Fachfreigabe aus den Interviews übernommen. P59/P60-Freigabe vom 07.10. gilt nicht als P61-Evidenzreview.
+
+## 2026-10-08 | promotion | P61: neun TokenMade-Muster ausdrücklich freigegeben und übernommen
+
+- Sources:
+  - raw/Clippings/20 Web-Apps ohne Informatik-Hintergrund Ein HR-Chef baut seiner Firma einen eigenen App Store 18.md
+  - raw/Clippings/500.000 Follower für 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md
+  - raw/Clippings/Alle Mitarbeiterinnen und SaaS-Verträge mit Claude ersetzt  Christoph Fahle 28.md
+  - raw/Clippings/André M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Bei Volkswagen programmiert die KI nachts Thorsten Jankowsky über Agentic Coding im Konzern.md
+  - raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md
+  - raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md
+  - raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md
+  - raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md
+  - raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md
+  - raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md
+  - raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md
+  - raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md
+  - raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz über seine Hobby Projekte simplebanking und RetroMac 22.md
+  - raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md
+  - raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md
+  - raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md
+  - raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md
+- Changed:
+  - [[applied-ai-use-cases]]
+  - [[customer-conversation-evidence-workflow]]
+  - [[reviewed-question-to-faq-workflow]]
+  - [[reliable-ai-capability-rollout]]
+  - [[agent-evaluation]]
+  - [[context-engineering]]
+  - [[ai-design-system-iteration-loop]]
+  - [[cross-functional-ai-adoption-learning-loop]]
+  - [[ai-operating-system]]
+  - [[tokenmade-ai-use-cases-source-review-2026-10-08]]
+  - [[reusable-practices-library]]
+  - [[reusable-practices-router]]
+  - [[index]]
+  - [[sources]]
+- Notes:
+  - Rolf: „alle neun methoden sind zur übernahme freigegeben“; human-checkpoint am 08.10.2026 für P61-C01 bis P61-C09. [Freigabeprovenienz](_outputs/semantic-ingest/p61/approval.json) bewahrt die überprüften Vorschlagshashes.
+  - Sieben bestehende Fach-/Praxis-Seiten ergänzt; zwei neue Workflows für Kundengesprächsevidenz sowie Fachfrage/Antwort/FAQ als draft angelegt und in beiden Praxisregistern aufgenommen. Keine Skillpromotion oder zusätzliche Ausführungsbefugnis.
+  - 31 Quellentscheidungen und neun Evidenzmuster approved; 24 repräsentative Quellen promotional, sieben bytegleiche Varianten duplicate. Originale, Vertrauensklassen und Lesedeckung unverändert; berichtete Erfolgs-, Produkt-, Rechts-/Compliance- und Zahlenclaims bleiben ausgeschlossen oder unverified.
+  - P61 Final/Full mit RecordResult bestanden, keine Fehler/Warnungen; Package complete, 31 Quellentscheidungen, neun Evidenzmuster, null offener Paket-Backlog. Ein durch eingebettetes CLAUDE.md verkürztes Zitat in context-engineering durch vollständige Originalpfad-Verknüpfung ersetzt. [Abschluss und Prüfgrenzen](_outputs/semantic-ingest/p61/checkpoint.md).

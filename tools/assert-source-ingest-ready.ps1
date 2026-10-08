@@ -37,7 +37,7 @@ $normalized=@(foreach($inputPath in $paths){
  if(-not $inputPath.Trim()){continue}
  $candidate=if([IO.Path]::IsPathRooted($inputPath)){$inputPath}else{Join-Path $vaultRoot $inputPath}
  if(-not(Test-Path -LiteralPath $candidate -PathType Leaf)){throw "Source does not exist: $inputPath"}
- $resolved=(Resolve-Path $candidate).Path
+ $resolved=(Resolve-Path -LiteralPath $candidate).Path
  $inside=$false
  foreach($root in $roots){if($resolved.StartsWith($root+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)){$inside=$true;break}}
  if(-not $inside){throw "Source path is outside approved roots: $inputPath"}

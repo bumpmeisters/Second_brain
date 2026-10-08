@@ -1,0 +1,18 @@
+{
+  "DEV-01": {
+    "run": "dev-b-2",
+    "answer_sha256": "d2801e989461445cda8fc341d2dc5b7bcdb09ae7312a6b5fd2f4f74277f4d067"
+  },
+  "DEV-02": {
+    "run": "dev-v-2",
+    "answer_sha256": "ffa95065f91f0668ed4d78df5dfc60b4a5c1cf1801e21260bfd801ba2bb72001"
+  },
+  "DEV-03": {
+    "run": "dev-b-1",
+    "answer_sha256": "e5ad61b8de1002c0ec363a2ffea350ab88d14c75f6ceeed9f03a01d23e7c3b9e"
+  },
+  "DEV-04": {
+    "run": "dev-v-1",
+    "answer_sha256": "3c8bf4603521e50a9825787ce671d13466b568842fed6264413d6a7ac307153b"
+  }
+}

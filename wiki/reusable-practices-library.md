@@ -2,6 +2,7 @@
 type: library
 status: active
 sources:
+  - wiki/_outputs/semantic-ingest/p61/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p55/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p47/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p11/evidence-matrix.csv
@@ -29,7 +30,7 @@ sources:
   - wiki/_outputs/semantic-ingest/p40/evidence-matrix.csv
   - wiki/_outputs/semantic-ingest/p41/evidence-matrix.csv
 created: 2026-07-26
-updated: 2026-09-09
+updated: 2026-10-08
 ---
 
 # Reusable Practices Library
@@ -45,6 +46,13 @@ For token-efficient agent selection, read [[reusable-practices-router]] first an
 - [Company Intelligence workflow](../tools/company-intelligence/workflow.md) — canonical executable workflow for new company baselines, targeted follow-ups and reviewed context updates. Explicit integration authorized by Rolf on 2026-09-09; code and execution instructions remain in the existing tool package. The routing metadata is on that workflow, rather than a duplicate wiki method page. [Entry point and verification](../tools/company-intelligence/README.md). This is supervised project work, not semantic promotion or a scheduled service.
 
 ## AI work and adoption
+
+- [[customer-conversation-evidence-workflow]] — Kundengespräche mit vollständigen strukturierten Filtern und überprüfbaren Textbelegen auswerten. (draft; P61-C02, Rolf approved 2026-10-08).
+- [[reviewed-question-to-faq-workflow]] — Fachfragen über belegte Antworten und tatsächlichen Fachreview selektiv in FAQ überführen. (draft; P61-C03, Rolf approved 2026-10-08).
+
+- [[outcome-based-service-scaling-assessment]] — Assess how an outcome-based service can scale within its configuration and constraints. (P58-C09, approved 2026-09-21).
+
+- [[digital-marketing-sales-maturity-diagnostic]] — Diagnose mismatches across marketing/sales capabilities, processes, instruments, and performance. (P58-C07, approved 2026-09-21).
 
 - `wiki/domain-expert-error-analysis-loop.md`
 
@@ -128,6 +136,12 @@ For token-efficient agent selection, read [[reusable-practices-router]] first an
 | `wiki/resonating-focus-value-proposition.md` (draft, P57) | Ein kundenspezifisches B2B-Nutzenversprechen soll auf entscheidende Vergleichsvorteile konzentriert werden. | Kundenprioritäten oder Vergleichsalternative unbekannt sind und eine bestätigte Aussage erwartet wird. | Belegte Nutzenargumentation mit Vergleich, Paritäten und offenen Streitpunkten. |
 | `wiki/value-proposition-design.md` (draft, P57) | Kundenaufgaben und Angebotsbeiträge müssen als prüfbare Passungshypothesen verbunden werden. | Ein ausgefüllter Canvas als Kundenbeleg oder Nachfragevalidierung gelten soll. | Priorisierter Canvas, Annahmenregister und separat vereinbarbarer Prüfplan. |
 | `wiki/nabc-value-proposition.md` (draft, P57) | Eine Nutzenidee soll als vergleichbare, kritisierbare Argumentation strukturiert werden. | Eine Pitch-Struktur als Nachweis tatsächlicher Nachfrage gelten soll. | NABC-Argumentation mit Vergleichsbelegen und priorisierten Wissenslücken. |
+
+## Freigegebene Praxisartefakte P59 / P60
+
+- [[quality-culture-workshop]] — Einen begrenzten Qualitätsdialog in ein überprüfbares Maßnahmenblatt übersetzen. (P59-C01, approved 2026-10-07; Anwendungserprobung offen).
+- [[document-management-requirements-checklist]] — Dokumentprozesse und Nutzerbedürfnisse in nachvollziehbare DMS-Anforderungen übersetzen. (P59-C02, approved 2026-10-07; Anwendungserprobung offen).
+- [[ai-design-system-iteration-loop]] — UI-Entwürfe an konkreten Seiten prüfen und akzeptierte Änderungen in ein gemeinsames Designsystem zurückführen. (P60-C08, approved 2026-10-07; Anwendungserprobung offen).
 
 ## Admission rule
 

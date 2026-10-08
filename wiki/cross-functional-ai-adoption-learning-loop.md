@@ -6,11 +6,15 @@ use_when: "AI experimentation is spreading across functions and policy, practica
 avoid_when: "A single team is running one bounded experiment that does not require cross-functional policy or shared learning."
 output: "A governed experiment portfolio, usable policy, named owners, learning register, and recurring review cadence."
 sources:
+  - "raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md"
+  - "raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz über seine Hobby Projekte simplebanking und RetroMac 22.md"
+  - "raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md"
   - "raw/Clippings/(65) AI Won’t Transform Your Business Until You Redesign the Work.md"
   - raw/Clippings/Why generative AI demands new thinking, not just new tools  OnBase podcast.md
   - raw/imports/automated-clippings/youtube/UCV_PmkQVA8YkoY7twKhj3uA/2026-07-29--UarCP7KcKJU.md
 created: 2026-07-26
-updated: 2026-09-09
+updated: 2026-10-08
 ---
 
 # Cross-Functional AI Adoption Learning Loop
@@ -54,7 +58,27 @@ A governed experiment portfolio, usable policy, named owners, learning register,
 
 This practice does not establish legal compliance or a universal return on investment. Regional, political, workforce, commercial, framework-superiority, market, forecast, and transformation-outcome claims from the sources remain excluded (source: Why generative AI demands new thinking, not just new tools  OnBase podcast.md; mixed practitioner transcript; analysis: P12-C06; source: 2026-07-29--UarCP7KcKJU.md; vendor webinar; analysis: P40-W6R3-C01).
 
+## Additional practitioner support for owned adoption
+
+The AI-first-company commentary supports the existing practice of leaders participating in real workflows, operators owning process improvements, and teams maintaining shared context and reusable skills in familiar tools. Preserve permission boundaries for connectors and name responsibility for corrections and updates. This adds qualified practitioner support to the current learning loop, not an additional operating model. Reported company gains and monetary outcomes in the commentary remain unverified and are not adopted.
+
+Source and review boundary (P58-C04, user-approved 2026-09-21):
+
+- `raw/Clippings/Anthropic Just Revealed How AI-First Companies Actually Use AI.md` — [[ai-adoption-memory-source-review-2026-09-21]].
+
+## Pflege und Auffindbarkeit als Teil des Lernsystems
+
+Shared Learning benötigt neben Training eine nutzbare, versionierte Übergabe. Für gemeinsam verteilte Apps/Skills festhalten: Zweck/Trigger, benötigte Daten, Version, Grenzen, Zuständigkeit, berechtigter Nutzerkreis, Prüfnachweis und Aktualisierungsweg. TM11 beschreibt Launcher/SharePoint-Verteilung und akzeptierte IT-Grenzen; TM22 baut Fachplaybooks in einen zentral gepflegten Agentenkatalog um. Zugriff auf ein Paket ist noch keine fachliche oder technische Abnahme. (source: raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md; 13:03–19:38; 23:37–30:26; qualifizierter Interviewbericht, nicht unabhängig verifiziert.) (source: raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md; 7:09–15:57; 22:26–25:33; qualifizierter Interviewbericht, nicht unabhängig verifiziert.)
+
+Teamversuche begrenzen und Hypothesen offen prüfen. TM21 berichtet eine Community of Practice mit dreiwöchigen Versuchen und anschließendem Hypothesenreview; der Zeitraum ist ein Beispiel, keine Pflichtfrequenz. TM18 unterscheidet Hobby-Stack und sichere Lernumgebung im Unternehmen. Anfängertraining, Fachreview und betreute Power-User-Piloten brauchen passende Voraussetzungen. (source: raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md; 11:55–14:19; qualifizierter Interviewbericht, nicht unabhängig verifiziert.) (source: raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz über seine Hobby Projekte simplebanking und RetroMac 22.md; 22:52–25:06; qualifizierter Interviewbericht, nicht unabhängig verifiziert.)
+
+P61-C08 präzisiert die vorhandenen Schritte zu kleinem Experiment, Shared Learning und Skalierung. Keine Aussage, dass bloße Lizenzen, Hackathons oder Verteilung bereits Geschäftswert/Compliance erzeugen.
+
+Methodische Übernahme: P61-C08; Rolf, ausdrückliche Freigabe 2026-10-08. Quellen- und Verifikationsgrenzen bleiben erhalten.
+
 ## Related pages
+
+- [[tokenmade-ai-use-cases-source-review-2026-10-08]]
 
 - [[ai-governance]]
 - [[applied-ai-use-cases]]

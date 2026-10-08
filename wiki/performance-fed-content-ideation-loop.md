@@ -10,7 +10,7 @@ sources:
   - raw/Clippings/Never Run Out of Content Ideas With This AI System.md
   - raw/Clippings/Use AI to Craft ‘Slop’ Free Content 1.md
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-09-23
 ---
 
 # Performance-Fed Content Ideation Loop
@@ -43,6 +43,17 @@ Use when a recurring channel or editorial program needs a replenished idea queue
 8. **Refresh periodically.** Re-import only permitted evidence, compare new observations with the prior period, and update the queue without rewriting history.
 
 This loop retains the sources' useful combination of audience profile, platform patterns, current research, human selection, queue management, and periodic refresh while rejecting autonomous scraping and virality claims (sources: How I Use This Claude Skill to Grow My LinkedIn Audience.md; Never Run Out of Content Ideas With This AI System.md; Use AI to Craft ‘Slop’ Free Content 1.md).
+
+### Optional choice of development path
+
+After human selection, choose a path only when it helps the current content decision:
+
+- **Long to short:** Start with a substantive, sourced long-form asset and derive pieces that serve specific audience needs and channels. Preserve meaning, evidence limits and freshness; do not merely multiply wording.
+- **Short to long:** Explore a small, supportable idea first. Consider deeper treatment only when qualified audience response, strategic relevance and sufficient substance support it. Name the intended audience signal and observation window before the test. Likes alone do not justify expansion; limited reach does not disprove the idea, and a successful hook does not establish truth. Account for distribution, format, audience and chance when comparing results.
+
+Either path can be deferred when evidence or capacity is insufficient. No fixed output quota, performance promise or publication authority follows from this choice. The existing Creative Direction and approval boundaries still apply.
+
+Source: user-supplied transcript of [Loop video, 15:20–16:47](https://www.youtube.com/watch?v=qi0isefEOxk&t=920s); [review and limits](_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md). User-approved on 2026-09-23 as a bounded aid, not a validated effectiveness claim.
 
 ## Inspectable output
 

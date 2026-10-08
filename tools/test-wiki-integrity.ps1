@@ -258,6 +258,19 @@ if ($Profile -eq 'Full') {
     }
 }
 
+# Session memory is optional in old test fixtures, required once the sessions area exists.
+if ((Test-Path -LiteralPath (Join-Path $VaultRoot 'sessions') -PathType Container) -or (Test-Path -LiteralPath (Join-Path $VaultRoot 'tools/test-session-notes.ps1') -PathType Leaf)) {
+    $sessionTool = Join-Path $VaultRoot 'tools/test-session-notes.ps1'
+    if (-not (Test-Path -LiteralPath $sessionTool -PathType Leaf)) {
+        Add-Finding 'sessions.validator-missing' 'error' 'sessions/index.md' 0 'Session validator is missing.' 'Restore tools/test-session-notes.ps1.'
+    } else {
+        $sessionOutput = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $sessionTool -VaultRoot $VaultRoot -Json | Out-String
+        if ($LASTEXITCODE -ne 0) {
+            Add-Finding 'sessions.invalid' 'error' 'sessions/index.md' 0 "Session validation failed: $sessionOutput" 'Run tools/test-session-notes.ps1 and repair the reported note or index.'
+        }
+    }
+}
+
 $errors = @($findings | Where-Object severity -eq 'error').Count
 $warnings = @($findings | Where-Object severity -eq 'warning').Count
 $result = [pscustomobject][ordered]@{

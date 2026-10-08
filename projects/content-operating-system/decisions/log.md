@@ -123,3 +123,31 @@
 - Added `PS-E16` for a triggered Thought Interview and transcript-bounded drafting while avoiding a duplicate mandatory Thought Packet or transcript library.
 - Mapped a central lessons registry and automatic consolidation to `PS-E04` and `PS-E06`, content opportunities to `PS-E01`, pattern learning to `PS-E03` and `PS-E04`, specialist reviewers to `PS-E05`, and a full agent team to `PS-E11`.
 - Activated no queue, monitoring system, scraper, mandatory interview, specialist agent, automated rule promotion, or publication action.
+
+
+## 2026-09-23 | method | Begrenzte Taste-Arbeitshilfe aufgenommen
+
+- Sources: [Quellenreview](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md); Nutzerfreigabe in Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075.
+- Changed: bestehende Audience-Context-, Message-House- und Content-Context-Vorlagen; Content Marketing Strategy und zugehörige Quellen-/Indexeinträge.
+- Notes: Vier optionale Ergänzungen zu Vertrauensbarrieren, realen Kundensituationen, Selbstbild/Kundenwahrnehmung und kompakter Übergabe. Quellen und Hypothesen bleiben getrennt; unbekannte Felder sind zulässig. Keine neue Pflichtstufe, kein Plugin installiert, keine Wirksamkeit behauptet. Beim nächsten autorisierten Einsatz auf Klarheit und Doppelarbeit achten. Rücknahme nur der neuen optionalen Abschnitte; vorhandene Verträge bleiben gültig.
+
+
+## 2026-09-23 | method | Zwei begrenzte Loop-Video-Ergänzungen
+
+- Sources: [Review mit Transkriptherkunft und Zeitstellen](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md); ausdrückliche Nutzerfreigabe in Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075.
+- Changed: bestehender Performance-Fed Content Ideation Loop (optionale Wahl lang nach kurz / kurz nach lang) und Content-Brief (optionale Materialbasis für Varianten); Reviewstatus, Index, Quellenregister und Sessionnotiz fortgeführt.
+- Notes: Keine neue Pflichtstufe, kein Framework oder Skill; keine empirische Wirkung behauptet. Keine Übernahme von Paid-Media-Vorschlägen oder Erfolgszahlen. Bestehende Evidenz-, Creative-Direction- und Publikationsgrenzen bleiben gültig. Nächster Nutzungstest nur im Rahmen eines autorisierten Contentauftrags; Rücknahme auf beide Ergänzungsabschnitte begrenzt.
+
+## 2026-10-04 | planning | Autorenprofile ausschließlich als zusätzliche Kalibrierungsoption
+
+- Rolf bestätigt den additiven Grundsatz: Die manuelle Kalibrierung bleibt vollständig erhalten; geplante Autorenprofile dürfen sie nicht ersetzen oder verpflichtend werden.
+- [Umsetzungsplan](../frameworks/_meta/reference-profile-calibration-plan-2026-10-04.md) erstellt: zuerst ein vorläufiges Profil und zwei Aufgabenvergleiche, erst danach optionale Vertragsintegration und weitere Profile.
+- Kandidaten, Korpusumfang, Metadaten und ergänzendes menschliches Übernahmeurteil sind Vorschläge. Keine operative Übernahmeentscheidung, kein Autorenprofil gebaut, kein Writing-Skill oder Freigabegate geändert.
+- Lernpunkt aus Rolfs Korrektur: geringe Schreib- und Bewertungssicherheit verlangt eine Alternative mit weniger redaktioneller Eigenarbeit, ohne vorhandene manuelle Möglichkeiten zu schwächen. Im künftigen Pilot Rückfragen und Überarbeitungsbedarf beobachten; Nutzen bisher ungeprüft.
+
+## 2026-10-04 | pilot | Erster privater Matt-Heinz-Referenzvergleich umgesetzt
+
+- Rolf startet die Umsetzung des Plans. Erster Abschnitt erledigt: acht öffentliche Autorenquellen, eingefrorenes vorläufiges Profil und vier private Entwürfe auf einer bestehenden freigegebenen HP-Direction; [Pilotbericht](../../../wiki/_outputs/reference-profile-pilot-2026-10-04/pilot-report.md).
+- Zwei neue Formatbriefs und vier Draft-Varianten angelegt und registriert. Keine Änderung der bestehenden manuellen Route, Shared Skills, Voice-/Kanalprofile oder Freigaberegeln. Weitere Autoren und Betriebsintegration warten auf die Entscheidung am Ergebnis.
+- Begrenzter Befund: KI-Selbstprüfung bevorzugt leicht Baseline beim Post und Referenz beim Blog. Keine Blindstudie, keine isolierte Kontrollbedingung, keine menschliche Qualitätsbestätigung. Die gehaltenen Quellen widersprechen einem universellen Autorenprofil; gewählte Muster gelten nur für den geprüften Einsatz.
+- Next-use check zum obigen Lernpunkt: Im Pilot keine fachlichen Rückfragen oder Stilinterviews an Rolf; seine Lese-/Revisionsarbeit und Akzeptanz fehlen noch. Keine Zeitersparnis behaupten. Erst spätere Rückmeldung kann den praktischen Entlastungsnutzen stützen oder widerlegen.

@@ -23,7 +23,7 @@ sources:
   - projects/marketing-operating-system/decisions/log.md
   - https://firmsconsulting.com/ai-strategy-vs-corporate-strategy/
 created: 2026-06-03
-updated: 2026-09-09
+updated: 2026-09-21
 ---
 
 # Marketing Operating System
@@ -101,6 +101,18 @@ Rolf subsequently paused further technical implementation and returned to the or
 Rolf accepted autonomous Codex review of whether a context document is final for a stated purpose and required each current context document to remain understandable when used separately in another AI project or presentation workflow. The model therefore adds an identifiable current context set, evidence and downstream-use checks, and review of affected documents when their foundations change. Rolf explicitly accepted version 1.0 on 2026-09-09; version 1.1 records his subsequent Project Hub and manual-collaboration decisions (source: Rolf's acceptance and workspace decision, current Codex task, 2026-09-09; source: wiki/_outputs/marketing-os-fachliches-arbeitsmodell.md).
 
 The TÜV project completed the authorized company-research implementation M1–M5 and a fresh, reviewed pilot. Its [project README](../../Project%20Hub/TÜV%20Rheinland/README.md), [decisions D04–D09](../../Project%20Hub/TÜV%20Rheinland/entscheidungen.md) and [technical acceptance](../../Project%20Hub/TÜV%20Rheinland/arbeit/implementation/abnahme.md) are canonical for scope, evidence, status and learning. The [shared core](../tools/company-intelligence/README.md) supports separate profiles, persistent runs, source provenance and reviewed context delivery under Codex supervision. Synthetic portability and a bounded context-use test passed; general research quality, efficiency and unattended operation are not established. Earlier technical continuation stays paused and earlier TÜV results remain unadopted (source: project D09 and implementation acceptance, 2026-09-09).
+
+## Capability claims need a unit and mechanism
+
+When diagnosing a marketing capability, state its unit of analysis (individual, team, organization, or interorganizational relationship), the capability being exercised, the proposed mechanism, the outcome, and relevant context. Separate ordinary task execution from a claimed ability to adapt or reconfigure. Mark whether the evidence is an observation, association, or a causal test.
+
+The export-performance review maps three capability orders across four analytical units. Its literature is heterogeneous and largely survey-based/cross-sectional; under-researched individual or team capabilities are not thereby valueless. This supports disciplined capability claims, not a universal performance lift. It adds knowledge only and does not resume the paused MOS implementation.
+
+Use [[digital-marketing-sales-maturity-diagnostic]] when a marketing/sales transformation needs a qualitative gap assessment across capabilities, processes, instruments, and performance.
+
+Source and review boundary (P58-C08, user-approved 2026-09-21):
+
+- `raw/assets/Dynamic-capabilities-behind-performance-of-exporting-fi_2026_Industrial-Mark.pdf` — [[export-dynamic-capabilities-source-review-2026-09-21]].
 
 ## Related pages
 

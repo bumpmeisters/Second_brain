@@ -1,0 +1,9 @@
+{
+  "protocol.md": "5f4f8abb4980801403f2e241d74e7da998c45c3d3fd3e0c5823f66517aa00813",
+  "reader.py": "bfa5744d54b107ec364422d46cd7af0a70728d1d9069bc5d8683574dee57a157",
+  "build_cases.py": "fd81502452ff07e4be71a4bfec2d6babd7139575379e2132cd018d43aa947fad",
+  "corpus-manifest.json": "5b43324789095f444c1ee0c3d0642b0ef73576c8ef25b7aa380e0a63a41a4d14",
+  "questions-dev.json": "a9d9da2eccd55b1ea8908510b1b5ea6c9a62b544e79be3d4abd3fabbdd65f185",
+  "questions-holdout.json": "0992004717514792362aa02dc1105c3d2cdce6cc2bf9661ae748555aacbf814b",
+  "gold.json": "1fb6563c4d261d9960c2c8810d7cb6e86bc4d6448dc74f5049ed31b42236e7da"
+}

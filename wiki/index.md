@@ -6,10 +6,30 @@ sources:
   - raw/Clippings/Post by @cyrilXBT on X.md
   - raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md
 created: 2026-05-30
-updated: 2026-09-14
+updated: 2026-10-08
 ---
 
 # Wiki Index
+
+- [[tokenmade-ai-use-cases-source-review-2026-10-08|AI-Use-Cases: TokenMade-Praxisbibliothek]] — P61: 31 Dateien, 24 vollständig gelesene Transkripte, 98 quellennahe Fallkarten einschließlich Nebenbeispielen/Plänen und sieben bytegleiche Kopien. KI im Betrieb und KI-gestützte Entwicklung getrennt; Dateinamenfehler, Reifegrad und Prüfpunkte dokumentiert. [Neun Muster](_outputs/semantic-ingest/p61/checkpoint.md) am 08.10.2026 von Rolf freigegeben und übernommen: sieben bestehende Seiten ergänzt sowie [[customer-conversation-evidence-workflow|Kundengesprächsauswertung]] und [[reviewed-question-to-faq-workflow|Fachfrage/Antwort/FAQ]] als Praxisentwürfe registriert.
+
+- [[research-inbox-source-review-2026-10-07|Research-Inbox aufgenommen]] — drei zugeordnete Dateien: zwei exakte Präsentationskopien inventarisiert, ein Namensverzeichnis vollständig textuell geprüft und registriert. Bestehender Campaign-Extraktionsreview bleibt offen; keine zusätzliche Claim-Promotion.
+
+- [[academy-selection-review-2026-10-07|Academy: Auswahlprüfung]] — 07.10.2026: 3.904 PDFs anhand Register/Hashes zugeordnet, zwölf Gegenfälle begrenzt geprüft. Drei priorisierte Wissenskandidaten: Lerntransfer, Qualitätskultur und DMS-Auswahl; übrige Dateien als Projekt-/Fachreferenz oder Archiv empfohlen. Keine kanonische Methodenübernahme.
+
+- [LinkedIn-Referenzen und Postrevision](_outputs/reference-profile-pilot-2026-10-04/linkedin-reference-pack.md) — 04.10.2026: vier öffentliche Originalposts von Andy Crestodina, Matt Heinz und Kieran Flanagan textuell geprüft; verlinkte Analysen, keine vollständigen lokalen Snapshots. [HP-Post mit konkretem Beispiel](../projects/abm-operating-system/authority/linkedin/hp-box-profile-pilot-examples-v0-2.md) als neuer privater Draft nach Rolfs Korrektur. Blogrichtung positiv, keine finale Freigabe.
+
+- [Autorenprofil-Pilot: Matt Heinz](_outputs/reference-profile-pilot-2026-10-04/pilot-report.md) — 04.10.2026: acht Autorenquellen, ein vorläufiges Profil und vier private HP-Schreibproben. Gemischter KI-Vergleich, keine bestätigte Qualitätsüberlegenheit; manuelle Kalibrierung unverändert. [[matt-heinz-writing-profile-pilot-source-review|Quellenreview]] und [empfohlene Lesefassungen](_outputs/reference-profile-pilot-2026-10-04/lesefassung.md).
+
+- [[writing-system-taste-review-2026-10-04|Writing-System: Bestand, Taste und Compound Writing]] — 04.10.2026: bestehendes COS zuerst geprüft, Nutzerbericht und zwei Transkripte verglichen; fünf begrenzte Änderungsvorschläge, noch keine Methodenübernahme. [[taste-statt-style-research-review|Quellenprüfung des KI-Berichts]] und [no-ai-slop-Dossier](../repositories/petergyang--no-ai-slop/petergyang--no-ai-slop-analysis.md) mit commitgebundenem Snapshot. Größter belegter Engpass: vorläufige Kalibrierung eigener Texturteile.
+
+- 23.09.2026: Zwei begrenzte Video-Ergänzungen aufgenommen: Wahl zwischen Langformat-Ableitung und Kurzformat-Erprobung in [[performance-fed-content-ideation-loop]] sowie Materialbasis im Content-Brief. [Übernahme und Grenzen](_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md).
+
+- [[content-marketing-strategy|Begrenzte Taste-Arbeitshilfe für Content]] — 23.09.2026: vier freigegebene Anregungen in bestehende Audience-, Message-House- und Content-Context-Vorlagen integriert; optional, quellengebunden und ohne Wirkungsbehauptung. [Quellenreview](_outputs/hubspot-taste-review-2026-09-23/analyse.md).
+
+- [Wissenssuche: Zwölf-Fragen-Pilot abgeschlossen](_outputs/autoresearch-retrieval-pilot-2026-09-19/report.md) — 19.09.2026: acht getrennte Antwortagenten, 48 Antworten, zwei labelblinde Bewertungen. Im Holdout beide Strategien je 6/6 in beiden Wiederholungen; keine kritischen Fehler. Mengenvergleich durch Ausgabefehler beeinflusst, Sensitivität 19,84 % unter der 20-%-Schwelle: inconclusive, keine produktive Übernahme.
+
+- [Karpathy autoresearch: Analyse und Second-Brain-Transfer](../repositories/karpathy--autoresearch/karpathy--autoresearch-analysis.md) — 19.09.2026: kompletter Commit-Snapshot, acht vollständig und eine auszugsweise gelesene Textdatei. Acht Befunde zu Experimenten, Bewertung und Lernspur; anschließender lokaler Retrieval-Pilot abgeschlossen, Ergebnis inconclusive. Repository statisch geprüft, keine Ausführung seines Codes oder kanonische Methodenübernahme.
 
 - **P57 · 14.09.2026 · Kanonische Framework-Übernahme umgesetzt:** [[_outputs/semantic-ingest/p57/source-bundle|43 Reviewentscheidungen und Zielseiten]], sieben neue draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierte bestehende Frameworks. Einstieg: [[brand-system]], [[value-proposition-analysis]], [[historical-positioning-heuristics]]. Der folgende Freigabeeintrag ist historisch; Quellenlücken bleiben bestehen.
 
@@ -45,13 +65,15 @@ updated: 2026-09-14
 
 **Sources**: raw/Clippings/Karpathy's LLM Wiki - Full Beginner Setup Guide.md; raw/Clippings/Post by @cyrilXBT on X.md; raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md.
 
-**Last updated**: 2026-09-11
+**Last updated**: 2026-09-19
 
 ---
 
 This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], [[web-scraping-tools]], a marketing knowledge library organized in [[marketing-assets-library]], an unverified AI-generated logistics and vertical-market research collection in [[logistics-market-intelligence-library]], an AI research library organized in [[ai-research-library]], and reusable agentic work patterns including [[ai-work-blueprint]], [[claude-md-project-instructions]], [[wat-framework]], [[claude-subagents]], [[loop-engineering]], [[context-engineering]], and [[ai-operating-system]]. New June 2026 sources add production-agent lessons, an agentic marketing intelligence loop, and Google DeepMind's four-pathway map from AGI to ASI (source: raw/Clippings; source: research/assets/11_Markets; source: 20260619_Deepmind_from AGI to ASI.pdf).
 
 ## Operating pages
+
+- [Sessions: Gesprächskontext und Entscheidungen](../sessions/index.md) — Selektive Notizen pro relevanter Aufgabe; verbindliche Erfassung bei Zwischenständen und Abschluss, gezieltes Nachlesen bei Fortsetzung. Rekonstruktionen sind keine Volltranskripte.
 
 - [Independent-Judge-System: pausierter Entwurf](_outputs/independent-judge-system/implementation-plan.md) — Gesicherte Architektur, Run-/Judge-/Release-Records, Rubriken, Replay, Shadow und Freigabestufen mit [Prüfbefunden und Übergabe](_outputs/independent-judge-system/evidence-and-handoff.md). Nur Ablage freigegeben; Implementierung, Automation-Änderungen und L3 bleiben offen.
 
@@ -87,7 +109,7 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 
 ## Input zones
 
-- [Repository Learning Library](../repositories/index.md) - Superpowers, GStack, Compound Engineering, GBrain with companion GBrain Evals, and AnyDoc: six pinned snapshots and current dossiers. Use this index for architecture, workflow, skill, context, document-conversion and evaluation questions. [AnyDoc dossier](../repositories/firecrawl--anydoc/firecrawl--anydoc-analysis.md): controlled comparison and [implemented optional PPTX/DOCX adapter](_outputs/source-conversions/anydoc-integration-2026-09-11/verification.md); automatic routing unchanged.
+- [Repository Learning Library](../repositories/index.md) - Superpowers, GStack, Compound Engineering, GBrain with companion GBrain Evals, AnyDoc, and Karpathy autoresearch: seven pinned snapshots and current dossiers. Use this index for architecture, workflow, skill, context, document-conversion, evaluation and bounded experiment questions. [AnyDoc dossier](../repositories/firecrawl--anydoc/firecrawl--anydoc-analysis.md): controlled comparison and [implemented optional PPTX/DOCX adapter](_outputs/source-conversions/anydoc-integration-2026-09-11/verification.md); automatic routing unchanged.
 - `raw/` - Primary or original source files, including clippings, PDFs, tables, slides, and source attachments.
 - `research/` - AI-generated deep-research reports and other uncertain secondary syntheses.
 - `wiki/` - Codex-maintained pages created from sources and analysis.
@@ -288,3 +310,26 @@ This wiki currently covers an [[llm-wiki]] workflow, [[obsidian-vault-design]], 
 - [[agentic-marketing-intelligence-clippings-june-2026]]
 - [[from-agi-to-asi-google-deepmind-2026]]
 - [[logistics-market-intelligence-library]]
+
+## Source review checkpoint — 2026-09-21
+
+- [[first-wave-source-review-2026-09-21]] — P58: 28 selected paths; eleven approved patterns promoted; three decks remain blocked by extraction quality.
+- [[commercial-output-review-2026-09-21]] — three retained commercial syntheses, explicitly hypotheses rather than verified market evidence.
+
+## P58-C01–C11 — approved promotion, 2026-09-21
+
+- [[first-wave-source-review-2026-09-21]] — eleven patterns promoted; package retains three blocked sources and five reviewed non-promotional dispositions.
+- [[digital-marketing-sales-maturity-diagnostic]] — qualitative four-dimension gap assessment.
+- [[outcome-based-service-scaling-assessment]] — configuration, scaling logic, constraints, and advance/stay/redesign decision.
+
+## P59 / P60 — approved 2026-10-07
+
+- [[source-ingest-checkpoint-2026-10-07]] — 14 ausgewählte Pfade, eine Dublettenvariante und 13 freigegebene, umgesetzte Wissensmuster.
+- [[academy-priority-source-review-2026-10-07]] — drei Academy-PDFs vollständig textlich geprüft.
+- [[ai-practice-clippings-source-review-2026-10-07]] — elf neue Clippings; zwei lange Transkripte abschnittsbezogen geprüft.
+
+- [[quality-culture-workshop]] — begrenzter Qualitätsdialog mit Maßnahmenreview.
+- [[document-management-requirements-checklist]] — DMS-Anforderungen mit Wichtigkeit und Nachweisstatus.
+- [[ai-design-system-iteration-loop]] — UI-Seiten iterieren und akzeptierte Entscheidungen ins Designsystem zurückführen.
+
+P59 / approved 2026-10-07; P60 / approved 2026-10-07.

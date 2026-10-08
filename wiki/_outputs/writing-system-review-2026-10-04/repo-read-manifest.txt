@@ -1,0 +1,13 @@
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/.gitignore
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/LICENSE
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/plugin-submission.md
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/PRIVACY.md
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/README.md
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/TERMS.md
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/.codex-plugin/plugin.json
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/.github/workflows/plugin.yml
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/agents/openai.yaml
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/scripts/build_plugin.py
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/skills/no-ai-slop/eval.md
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/skills/no-ai-slop/SKILL.md
+repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/skills/no-ai-slop/agents/openai.yaml

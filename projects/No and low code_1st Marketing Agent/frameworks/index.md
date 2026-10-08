@@ -1,5 +1,9 @@
 # Framework Library
 
+## Projektbezogener Methodenvergleich · TÜV Messaging MSG0–MSG6 abgeschlossen
+
+[Positioning-Router](positioning/index.md) führt den abgeschlossenen TÜV-Messagingvergleich: sechs lokale Draftpakete, fünf getrennte Anwendungen, unabhängiger MSG4-Review, MR03-Einzelroutenauswahl und MSG6-Nutzungsprobe/Übergabe D99. MR02 bleibt gebrauchsspezifische Alternative. Messagingkern v1.1 intern verwendbar, keine reale Empfängerwirkung oder neue Unternehmensposition bestätigt. Referenzmethoden unverändert; episodische Beiträge/Grenzen im bestehenden Usage Log/Improvement Backlog. Keine kanonische Quellenpromotion oder Methodenaktivierung.
+
 ## Kanonische Wissensübernahme P57 · 2026-09-14
 
 - [Wahrgenommene Positionierung untersuchen](../../../wiki/perceptual-positioning-analysis.md) — draft; quellenbegrenzte Adaption.
@@ -73,3 +77,7 @@ Do not load the full library. Start with the relevant domain index, compare cand
 Every framework document must follow [Framework Document Standard](framework-document-standard.md), preserve source provenance, expose its diagnostic questions, state its limits, and define the ContextOps handoff it supports.
 
 Record meaningful applications in [_meta/usage-log.md](_meta/usage-log.md) and proposed improvements in [_meta/improvement-backlog.md](_meta/improvement-backlog.md).
+
+## Projektanwendungsreferenz D89 · 2026-09-22
+
+[Journey/GTM: TÜV-Contentstrategiekern](journey-and-gtm/index.md) verweist auf den abgeschlossenen lokalen Methodenvergleich, die maßgeblichen Draftpakete und die begrenzte Projektkomposition. Eigene Anwendungserfahrung ist in den bestehenden Metadaten registriert. Kein Framework in die kanonische Bibliothek kopiert, neu aktiviert oder inhaltlich revidiert; strategischer TÜV-Kontext bleibt im Project Hub.

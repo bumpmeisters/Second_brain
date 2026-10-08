@@ -169,3 +169,10 @@ updated: 2026-07-14
 - Reverse action: Snapshot `g3e1-2b697f4996c9313c` restored the manifest-bound pre-state; all 95 Legacy component sources were restored to their original paths and hashes, and all 95 target component copies plus the three created cutover controls were removed only after identity checks.
 - Authority: The attempted transfer is not accepted. This directory retains the functional pre-cutover ContextOps state; routing remains frozen until the reverse evidence is reviewed.
 - Audit policy: The forward G3E-2 entry above is retained as append-only evidence and does not grant authority.
+
+
+## 2026-09-23 | method | Begrenzte Taste-Arbeitshilfe aufgenommen
+
+- Sources: [Quellenreview](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md); Nutzerfreigabe in Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075.
+- Changed: bestehende Audience-Context-, Message-House- und Content-Context-Vorlagen; Content Marketing Strategy und zugehörige Quellen-/Indexeinträge.
+- Notes: Vier optionale Ergänzungen zu Vertrauensbarrieren, realen Kundensituationen, Selbstbild/Kundenwahrnehmung und kompakter Übergabe. Quellen und Hypothesen bleiben getrennt; unbekannte Felder sind zulässig. Keine neue Pflichtstufe, kein Plugin installiert, keine Wirksamkeit behauptet. Beim nächsten autorisierten Einsatz auf Klarheit und Doppelarbeit achten. Rücknahme nur der neuen optionalen Abschnitte; vorhandene Verträge bleiben gültig.

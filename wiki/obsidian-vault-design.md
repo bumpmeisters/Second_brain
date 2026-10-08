@@ -4,7 +4,7 @@ status: active
 sources:
   - "raw/Clippings/The Obsidian Vault Setup That Replaced My $500 Per Month Software Stack.md"
 created: 2026-05-30
-updated: 2026-09-13
+updated: 2026-09-21
 ---
 
 # Obsidian Vault Design
@@ -32,6 +32,12 @@ Anlass ist der [[old-marketing-playbook-web-sources-2026-09-13|Old-Playbook-Run]
 Für jeden später ausgewählten Kandidaten festhalten: Zweck, kanonischer Zielort, Status, Version/Datum, Quellenbezug und welche Datei er ersetzt oder ergänzt. Nur eine maßgebliche Kopie pflegen und von anderen Themen darauf verlinken. Neue Projektordner erst für eigenständige fortlaufende Arbeit, nicht pro Recherchelauf. Beim späteren Verschieben sämtliche Referenzen, Paketpfade und Prüfnachweise kontrolliert aktualisieren; Originalquellen unverändert lassen.
 
 **Späterer Einstieg:** Mit den wenigen wertvollen ABM-Synthesen einen kleinen Vorschlag erarbeiten, aktuelle Arbeitsgrundlage versus Meilenstein klären und den bestehenden ABM-Bereich prüfen. Erst danach eine übertragbare Ablagestruktur entscheiden. Keine automatische Wiedervorlage, keine Ordner angelegt und keine Dateien verschoben.
+
+## Sessiongedächtnis — eingeführt am 21.09.2026
+
+Für relevante Second-Brain-Konversationen gibt es jetzt [Sessions](../sessions/index.md): eine rekonstruierte Notiz pro Aufgabe mit Entscheidungsgründen, Korrekturen, aktuellem Stand und Links zu Ergebnissen. Erfassung bei sinnvollen Zwischenständen und vor Übergabe sowie Nachlesen bei Fortsetzung sind in AGENTS und dem Abschluss-Skill verankert. Eine Task-ID-Prüfung erkennt fehlende Notizen für die aktuelle Aufgabe; die Wiki-Prüfung kontrolliert vorhandene Notizen und Register. Routinegespräche bleiben ausgenommen. Dies ist kein automatischer Volltranskriptexport und keine Garantie gegen Verlust bei abruptem Abbruch. (Quelle: [Nutzerentscheidung und Umsetzung](../sessions/2026-09-21-sessiongedaechtnis.md).)
+
+Die oben vorgemerkte fachliche Neuablage bestehender Outputs bleibt davon getrennt; diese Einführung verschiebt keine bestehenden Ergebnisse.
 
 ## Related pages
 

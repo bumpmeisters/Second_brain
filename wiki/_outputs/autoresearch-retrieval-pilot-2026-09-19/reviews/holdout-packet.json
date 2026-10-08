@@ -1,0 +1,322 @@
+{
+  "purpose": "Judge answer quality without strategy labels; no runtime/method scores.",
+  "rubric": {
+    "criteria": [
+      "correctness",
+      "completeness",
+      "evidence",
+      "uncertainty"
+    ],
+    "scale": {
+      "2": "fully meets required meaning, alternative supported phrasing allowed",
+      "1": "bounded omission without false central claim",
+      "0": "wrong, unsupported, or essential requirement missing"
+    },
+    "pass": "8 points and no critical error",
+    "critical": "invented measurement/outcome, false approval/activation status, or assertion of evidence despite its established absence",
+    "limits": "Gold is source-reviewed by Codex, not human calibrated. Absence must be scoped to available corpus."
+  },
+  "gold": [
+    {
+      "id": "H1",
+      "split": "holdout",
+      "family": "p57-adoption-status",
+      "kind": "current-vs-history",
+      "question": "Im Wiki-Index stehen bei P57 sowohl Formulierungen zur noch ausstehenden Übernahme als auch ein Umsetzungseintrag. Welcher Stand gilt für die neuen Framework-Referenzen, und bedeutet kanonisch übernommen zugleich empirisch validiert? Nenne einen konkreten Modulbeleg.",
+      "required": [
+        "Umsetzungseintrag P57 am 14.09.2026 ersetzt frühere Pending-Hinweise",
+        "neue Methodenreferenzen kanonisch übernommen aber draft",
+        "Quellenreview keine empirische Anwendungsvalidierung",
+        "konkretes Modul wie Keller/NABC/Perceptual mit passendem Beleg"
+      ],
+      "critical": [
+        "Übernahme weiterhin pauschal ausstehend",
+        "neue Module empirisch validiert oder produktiv automatisch aktiviert"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/index.md",
+          "start": 16,
+          "end": 16,
+          "text": "- **P57 · 14.09.2026 · Kanonische Framework-Übernahme umgesetzt:** [[_outputs/semantic-ingest/p57/source-bundle|43 Reviewentscheidungen und Zielseiten]], sieben neue draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierte bestehende Frameworks. Einstieg: [[brand-system]], [[value-proposition-analysis]], [[historical-positioning-heuristics]]. Der folgende Freigabeeintrag ist historisch; Quellenlücken bleiben bestehen."
+        },
+        {
+          "path": "wiki/keller-brand-positioning.md",
+          "start": 24,
+          "end": 27,
+          "text": "## Classification And Fidelity\n\nKanonisch übernommen nach positivem Nutzerreview vom 2026-09-14 (P57). Status bleibt draft: Quellenreview ist keine Anwendungsvalidierung. Der Core Model beschreibt den gelesenen Quellenkern; Ablauf, Fragen, Stopregeln und Ausgabeformat sind eine **project adaptation** für das Second Brain, keine behauptete vollständige Autorenmethode.\n"
+        }
+      ]
+    },
+    {
+      "id": "H2",
+      "split": "holdout",
+      "family": "positioning-method-jobs",
+      "kind": "comparison",
+      "question": "Wir haben nur Anbieterwebseiten und wollen deren Positionierung vergleichen. Welche lokale Methode passt dafür, welche für tatsächliche Kundenwahrnehmung, und dürfen wir aus den Anbietertexten bereits Kundenimage oder Leistungsfähigkeit ableiten?",
+      "required": [
+        "positioning-communication-audit für codierten Vergleich von Anbieterkommunikation",
+        "perceptual-positioning-analysis für tatsächliche Wahrnehmungsfrage",
+        "Wahrnehmung braucht Zielpopulation, Instrument und Daten/Stichprobe",
+        "Anbietertexte beweisen weder Kundenimage noch reale Leistungsfähigkeit"
+      ],
+      "critical": [
+        "tatsächliche Wahrnehmung oder Leistungsfähigkeit durch Anbietertext allein bestätigen"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/positioning-communication-audit.md",
+          "start": 20,
+          "end": 23,
+          "text": "## Framework Job\n\nEin abgegrenztes Kommunikationskorpus soll nachvollziehbar verglichen werden. Codierbuch, belegte Codierungen, Vergleich und Evidenzlücken.\n"
+        },
+        {
+          "path": "wiki/positioning-communication-audit.md",
+          "start": 32,
+          "end": 35,
+          "text": "## Do Not Use When\n\nTatsächliche Kundenwahrnehmung oder Leistungsfähigkeit aus Texten bewiesen werden soll.\n"
+        },
+        {
+          "path": "wiki/perceptual-positioning-analysis.md",
+          "start": 36,
+          "end": 39,
+          "text": "## Minimum Required Inputs\n\nZielpopulation, Markenmenge, Fragestellung, Erhebungsinstrument und Rohdaten mit Stichprobenherkunft.\n"
+        }
+      ]
+    },
+    {
+      "id": "H3",
+      "split": "holdout",
+      "family": "brand-causality",
+      "kind": "qualified-claim",
+      "question": "Belegen unsere Brand-System-Notizen, dass eine stärkere Markenstrategie oder die Führung durch den CMO allein höheres Wachstum verursacht? Was lässt die dort besprochene Gartner-Evidenz zu?",
+      "required": [
+        "berichtete Assoziation zwischen stärkerer Markenstrategie/breiterer Marketingleitung und Wachstum",
+        "keine kausale Wirkung eines einzelnen Faktors belegt",
+        "unternehmensweite Verantwortung/Entscheidungseinfluss statt universeller CMO-Alleinzuständigkeit"
+      ],
+      "critical": [
+        "kausale Wachstumswirkung als nachgewiesen ausgeben"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/brand-system.md",
+          "start": 41,
+          "end": 46,
+          "text": "## Brand as an enterprise growth input\n\nTreat brand strategy as part of business strategy rather than as a communications asset applied after product and commercial decisions. Brand positioning should connect customer and market insight to product direction, pricing, commercial alignment, and customer experience, with consistent execution across functions (source: 20260719_Gartner_brand-strategy-research.pdf).\n\nMarketing is well placed to lead brand positioning, but the durable requirement is clear enterprise ownership and decision influence rather than a universal rule that the CMO must own every differentiation activity. Gartner reports an association between stronger brand strategy, broader marketing leadership, and growth performance; this source does not establish that either factor alone causes growth (source: 20260719_Gartner_brand-strategy-research.pdf).\n"
+        },
+        {
+          "path": "wiki/brand-system.md",
+          "start": 57,
+          "end": 67,
+          "text": "## Brand measurement cycle\n\nManage brand measurement as a funding-and-learning cycle:\n\n1. Select a bounded set of brand-health measures that connect to current executive and business priorities.\n2. Explain which product, commercial, customer, or investment decisions each measure informs.\n3. Communicate the resulting decision story to leadership rather than reporting brand metrics in isolation.\n4. Review whether the measures improve decisions and confidence, then refine the measurement system before requesting broader investment.\n\nThis counters a self-reinforcing failure mode: underinvestment produces weak evidence, weak evidence reduces confidence, and low confidence makes further investment harder to justify. Gartner labels this the \"brand doom loop\"; its reported prevalence and growth ratios are not adopted as general benchmarks because the publication establishes survey association rather than causality (source: 20260719_Gartner_brand-strategy-research.pdf).\n"
+        }
+      ]
+    },
+    {
+      "id": "H4",
+      "split": "holdout",
+      "family": "preference-measurement",
+      "kind": "comparison",
+      "question": "Wie unterscheiden unsere Value-Proposition-Notizen Conjoint und MaxDiff? Liefert MaxDiff allein eine Zahlungsbereitschaft in Euro, und unter welchen Grenzen wäre eine Zahlungsbereitschaft aus Conjoint zu interpretieren?",
+      "required": [
+        "Conjoint Präferenzen für Angebotskonfigurationen",
+        "Zahlungsbereitschaft unter anderem abhängig von Wettbewerbs-/Nichtwahloptionen",
+        "MaxDiff relative Itempriorisierung, nicht allein Euro-Zahlungsbereitschaft",
+        "Quellenumfang nur Begleittext/Dokumentation, keine vollständige Erhebungsanleitung geprüft"
+      ],
+      "critical": [
+        "MaxDiff allein als Euro-WTP-Messung ausgeben"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/value-proposition-analysis.md",
+          "start": 36,
+          "end": 36,
+          "text": "- Conjoint untersucht Präferenzen für Angebotskonfigurationen; Zahlungsbereitschaft hängt unter anderem von Wettbewerbs- und Nichtwahloptionen ab. MaxDiff priorisiert Items relativ zueinander und liefert nicht allein Euro-Zahlungsbereitschaft. Geprüft wurden nur [Sawtooths Begleittext](https://sawtoothsoftware.com/resources/videos/willingness-to-pay-for-conjoint-analysis) und [MaxDiff-Dokumentation](https://media.sawtoothsoftware.com/maxdiff), kein vollständiger Erhebungsleitfaden oder Video."
+        }
+      ]
+    },
+    {
+      "id": "H5",
+      "split": "holdout",
+      "family": "buying-center-network",
+      "kind": "direct-fact-and-boundary",
+      "question": "Welche fünf Dimensionen nennt der Johnston-Bonoma-Quellenbrief zur Buying-Center-Struktur? Belegt die öffentliche Bezeichnung Zentrale Beschaffungsstelle bereits hohe Zentralität einer Einkaufsperson?",
+      "required": [
+        "Hierarchieebenen",
+        "Abteilungen/Funktionsbereiche",
+        "Gesamtzahl Personen",
+        "Verbundenheit gerichteter Kaufkommunikation",
+        "Zentralität Einkaufsperson",
+        "öffentliches Rollenlabel reicht nicht; personenbezogene konkrete Kaufkommunikation nötig"
+      ],
+      "critical": [
+        "Label als gemessene Zentralität bestätigen"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/johnston-bonoma-buying-center-source.md",
+          "start": 14,
+          "end": 14,
+          "text": "Der Artikel beschreibt Buying Center über persönliche Kommunikation zu einem bestimmten Kauf. Fünf Dimensionen: beteiligte Hierarchieebenen, beteiligte Abteilungen/Funktionsbereiche, Gesamtzahl der Personen, Verbundenheit der gerichteten Kaufkommunikation sowie Zentralität der Einkaufsperson. Die Abbildung auf Druckseite 147 ist ein hypothetisches Beispiel; externe Akteure sind sichtbar, werden aber nicht als interne Mitglieder gezählt. [Original, S. 146–148]"
+        },
+        {
+          "path": "wiki/johnston-bonoma-buying-center-source.md",
+          "start": 18,
+          "end": 18,
+          "text": "**Anwendungsgrenze aus dem TÜV-Piloten:** Öffentliche Rollenlabels, Aufträge und Leistungsberichte ersetzen keine personenbezogenen Kommunikationsdaten. „Zentrale Beschaffungsstelle“ belegt keine hohe Zentralität einer Einkaufsperson. Diese Schlussfolgerung ist die projektbezogene Anwendung, kein zusätzlicher empirischer Befund der Studie. Alle fünf Messdimensionen blieben dort unbestimmt; einzelne Organisationsbeziehungen konnten beschrieben werden. [TÜV-Ergebnis D36](../../Project%20Hub/TÜV%20Rheinland/kontext/buying-center-struktur-interaktionen.md)."
+        }
+      ]
+    },
+    {
+      "id": "H6",
+      "split": "holdout",
+      "family": "nabc-local-efficacy",
+      "kind": "insufficient-evidence",
+      "question": "Welche gemessene prozentuale Steigerung der Abschlussquote hat die lokale NABC-Adaption in einem kontrollierten Unternehmensvergleich erzielt? Wenn das Kernwiki dies nicht belegt, benenne genau den vorhandenen Prüfstatus statt eine Schätzung abzugeben.",
+      "required": [
+        "kein gemessener lokaler Prozentwert belegt",
+        "lokale Adaption strukturell geprüft, nicht an Unternehmensfall getestet",
+        "keine geprüfte kausale Überlegenheit gegenüber anderen Verfahren",
+        "keine Schätzung als Ergebnis; Grenze gilt für vorliegenden Kernwikistand"
+      ],
+      "critical": [
+        "numerischen lokalen Erfolg erfinden",
+        "strukturellen Review als Feldexperiment ausgeben"
+      ],
+      "evidence": [
+        {
+          "path": "wiki/nabc-value-proposition.md",
+          "start": 93,
+          "end": 96,
+          "text": "## Evaluation Notes\n\nAutorenbeitrag mit Anwendungserfahrung; keine hier geprüfte kausale Überlegenheit gegenüber anderen Formulierungs- oder Entwicklungsverfahren. Bekanntheit, praktische Plausibilität, dokumentierte Anwendung und empirische Validierung sind getrennte Urteile. Diese lokale Adaption wurde hier strukturell geprüft, nicht an einem Unternehmensfall getestet.\n"
+        },
+        {
+          "path": "wiki/nabc-value-proposition.md",
+          "start": 24,
+          "end": 27,
+          "text": "## Classification And Fidelity\n\nKanonisch übernommen nach positivem Nutzerreview vom 2026-09-14 (P57). Status bleibt draft: Quellenreview ist keine Anwendungsvalidierung. Der Core Model beschreibt den gelesenen Quellenkern; Ablauf, Fragen, Stopregeln und Ausgabeformat sind eine **project adaptation** für das Second Brain, keine behauptete vollständige Autorenmethode.\n"
+        }
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "HOLDOUT-01",
+      "answers": [
+        {
+          "case": "H1",
+          "answer": "Maßgeblich ist der explizite Umsetzungseintrag: P57 wurde am 14.09.2026 kanonisch übernommen, mit sieben neuen draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierten bestehenden Frameworks. Der unmittelbar folgende Freigabeeintrag mit „Umsetzung noch ausstehend“ wird ausdrücklich als historisch eingeordnet. Quellenlücken bestehen weiter. Beleg: wiki/index.md:L16-L18.\n\nKanonische Übernahme bedeutet keine empirische Validierung oder automatische Aktivierung. Konkreter Modulbeleg: NABC ist nach positivem Nutzerreview kanonisch übernommen, bleibt jedoch `draft`; Ablauf, Fragen, Stopregeln und Ausgabeformat sind eine lokale Projektadaption. Diese wurde strukturell geprüft und nicht an einem Unternehmensfall getestet. Belege: wiki/nabc-value-proposition.md:L24-L26 und wiki/nabc-value-proposition.md:L93-L95. Dieselbe Grenze formuliert die übergeordnete Brand-System-Seite: wiki/brand-system.md:L27-L27."
+        },
+        {
+          "case": "H2",
+          "answer": "Für Anbieterwebseiten passt die lokale draft-Referenz „Kommunizierte Positionierung systematisch codieren“ (`positioning-communication-audit`): abgegrenzter, datierter Korpus mit Auswahlregel, Forschungsfrage, Codierbuch und belegten Codierungen. Ihr Ergebnis ist ein nachvollziehbarer Kommunikationsvergleich samt Evidenzlücken. Belege: wiki/positioning-communication-audit.md:L10-L13, wiki/positioning-communication-audit.md:L36-L42 und wiki/positioning-communication-audit.md:L69-L75.\n\nFür tatsächliche Kundenwahrnehmung passt `perceptual-positioning-analysis`. Dafür braucht es Zielpopulation, Markenmenge, Erhebungsinstrument und Rohdaten mit Stichprobenherkunft; das Analyseverfahren folgt der Datenstruktur. Mit ausschließlich Anbietertexten lässt sich nur ein Forschungsplan erstellen, keine gemessene Wahrnehmungskarte. Belege: wiki/perceptual-positioning-analysis.md:L32-L42 und wiki/perceptual-positioning-analysis.md:L69-L75.\n\nAus Anbietertexten dürfen wir weder Kundenimage noch tatsächliche Leistungsfähigkeit als bewiesen ableiten. Kommunizierter Anspruch, unabhängig belegte Leistung und gemessene Wahrnehmung müssen getrennte Spalten beziehungsweise Belegklassen bleiben. Beleg: wiki/positioning-communication-audit.md:L81-L87; ergänzend wiki/brand-system.md:L23-L27."
+        },
+        {
+          "case": "H3",
+          "answer": "Nein. Gartner berichtet eine Assoziation zwischen stärkerer Markenstrategie, breiterer Marketingführung und Wachstumsleistung. Die Quelle begründet nicht, dass Markenstrategie oder Führung durch den CMO jeweils allein Wachstum verursachen. Marketing kann die Positionierung führen; die festgehaltene Anforderung ist klare unternehmensweite Verantwortung und Einfluss auf Entscheidungen, keine universelle Zuständigkeit des CMO für sämtliche Differenzierungsaktivitäten. Beleg: wiki/brand-system.md:L41-L45.\n\nDie Notizen nutzen die Evidenz zur Ausgestaltung eines Mess- und Lernkreislaufs. Berichtete Häufigkeiten und Wachstumsverhältnisse des „brand doom loop“ werden ausdrücklich nicht als allgemeine Benchmarks übernommen, weil die Publikation Befragungszusammenhänge statt Kausalität zeigt. Beleg: wiki/brand-system.md:L57-L66."
+        },
+        {
+          "case": "H4",
+          "answer": "Conjoint untersucht Präferenzen für Angebotskonfigurationen mit mehreren Merkmalen einschließlich Preis und deren Trade-offs. MaxDiff priorisiert vorgelegte Items über Best-/Worst-Auswahlen. Entsprechend entstehen modellierte Präferenzen beziehungsweise relative Itemprioritäten; die Verfahren sind nicht austauschbar. MaxDiff allein liefert keine Zahlungsbereitschaft in Euro. Beleg: wiki/value-proposition-frameworks-research-review.md:L66-L66.\n\nEine aus Conjoint abgeleitete Zahlungsbereitschaft ist an das Untersuchungsdesign gebunden: Wettbewerbs- und Nichtkaufoptionen, Stimuli und Stichprobe begrenzen die Ergebnisse. Im Wiki wurde keine Studie durchgeführt; geprüft wurden offizielle Implementierungsdokumentation sowie der Sawtooth-Begleittext, kein vollständiger Erhebungsleitfaden oder Video. Die Notizen tragen deshalb methodische Orientierung, keine konkrete Euro-Schätzung für unsere Kunden. Belege: wiki/value-proposition-frameworks-research-review.md:L66-L66 und wiki/value-proposition-analysis.md:L36-L36."
+        },
+        {
+          "case": "H5",
+          "answer": "Der Quellenbrief nennt fünf Dimensionen:\n\n1. beteiligte Hierarchieebenen,\n2. beteiligte Abteilungen/Funktionsbereiche,\n3. Gesamtzahl der Personen,\n4. Verbundenheit der gerichteten Kaufkommunikation,\n5. Zentralität der Einkaufsperson.\n\nEs geht um persönliche Kommunikation zu einem bestimmten Kauf, nicht allein um Organigramme oder Rollenbezeichnungen. Beleg: wiki/johnston-bonoma-buying-center-source.md:L14-L16.\n\n„Zentrale Beschaffungsstelle“ belegt deshalb keine hohe Zentralität einer Einkaufsperson. Öffentliche Rollenlabels ersetzen keine personenbezogenen Kommunikationsdaten. Im beschriebenen TÜV-Piloten blieben alle fünf Messdimensionen unbestimmt; nur einzelne Organisationsbeziehungen waren beschreibbar. Dies ist eine begrenzte Projektanwendung, kein zusätzlicher empirischer Studienbefund. Beleg: wiki/johnston-bonoma-buying-center-source.md:L18-L20."
+        },
+        {
+          "case": "H6",
+          "answer": "Eine gemessene prozentuale Steigerung der Abschlussquote durch die lokale NABC-Adaption ist im verfügbaren Kernwiki nicht belegt; eine Schätzung wäre unbegründet. Der genaue Prüfstatus lautet: kanonisch nach positivem Nutzerreview übernommen, weiterhin `draft`, Quellenreview ohne Anwendungsvalidierung. Die lokale Adaption wurde strukturell geprüft, nicht an einem Unternehmensfall getestet. Der Autorenbeitrag enthält Anwendungserfahrung, aber keine hier geprüfte kausale Überlegenheit gegenüber anderen Formulierungs- oder Entwicklungsverfahren. Belege: wiki/nabc-value-proposition.md:L24-L26 und wiki/nabc-value-proposition.md:L93-L95."
+        }
+      ]
+    },
+    {
+      "sample_id": "HOLDOUT-02",
+      "answers": [
+        {
+          "case": "H1",
+          "answer": "Es gilt der **umgesetzte Stand vom 14.09.2026**: P57 hat 43 Reviewentscheidungen umgesetzt, mit sieben neuen draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierten bestehenden Frameworks. Der unmittelbar folgende Freigabeeintrag mit „Kanonische Umsetzung noch ausstehend“ ist ausdrücklich als historisch gekennzeichnet; auch die älteren offenen Übernahmehinweise sind nicht der aktuelle Umsetzungsstand. Quellenlücken bleiben bestehen. Belege: wiki/index.md:L16-L18; wiki/index.md:L28-L30.\n\nKanonisch übernommen bedeutet **nicht empirisch validiert** und nicht automatisch aktiviert. Konkreter Modulbeleg: **positioning-communication-audit** ist nach positivem Nutzerreview vom 14.09.2026 kanonisch übernommen, bleibt jedoch `draft`; Quellenreview ist keine Anwendungsvalidierung. Sein Quellenkern und die lokale „project adaptation“ von Ablauf, Fragen, Stopregeln und Ausgabeformat werden getrennt. Beleg: wiki/positioning-communication-audit.md:L24-L26. Auch die Konzeptseite bestätigt ausdrücklich, dass die neuen Referenzen draft bleiben und der positive Evidenzreview keine empirische Anwendungsvalidierung darstellt: wiki/brand-system.md:L27-L27."
+        },
+        {
+          "case": "H2",
+          "answer": "Für ausschließlich vorliegende Anbieterwebseiten passt **positioning-communication-audit**, die lokale Methode zum systematischen Codieren kommunizierter Positionierung. Sie vergleicht ein abgegrenztes Kommunikationskorpus und liefert Codierbuch, belegte Codierungen, Vergleich und Evidenzlücken. Benötigt werden ein datierter Korpus mit Auswahlregel, Forschungsfrage, Codierende, zitierfähige Fundstellen sowie eine Abgrenzung von Marke, Angebot und Zeitraum. Beleg: wiki/positioning-communication-audit.md:L20-L42.\n\nFür tatsächliche Kundenwahrnehmung passt **perceptual-positioning-analysis**. Diese benötigt Zielpopulation, Markenmenge, Fragestellung, Erhebungsinstrument und Rohdaten mit Stichprobenherkunft. Das Analyseverfahren folgt der Datenstruktur, etwa Ähnlichkeitsurteilen oder Attributbewertungen. Nur Anbietertexte oder interne Einschätzungen reichen ausdrücklich nicht aus. Beleg: wiki/perceptual-positioning-analysis.md:L20-L42.\n\nAus Anbietertexten dürfen wir weder tatsächliches Kundenimage noch Leistungsfähigkeit als bewiesen ableiten. Selbstbeschreibung, realisierte Leistung und Kundenimage benötigen jeweils eigene Belege. Belege: wiki/brand-system.md:L23-L27; wiki/positioning-communication-audit.md:L32-L34."
+        },
+        {
+          "case": "H3",
+          "answer": "Nein. Die Brand-System-Notizen beschreiben bei Gartner eine **Assoziation** zwischen stärkerer Markenstrategie, breiterer Marketingführung und Wachstumsleistung. Sie halten ausdrücklich fest, dass die Quelle nicht belegt, dass einer dieser Faktoren allein Wachstum verursacht. Ebenso folgt daraus keine allgemeingültige Regel, nach der der CMO jede Differenzierungsaktivität führen muss. Die abgeleitete organisatorische Orientierung ist klare unternehmensweite Verantwortung und Einfluss auf Entscheidungen. Markenstrategie soll mit Produkt, Preis, kommerzieller Abstimmung und Kundenerfahrung verbunden sein. Diese Orientierung ist von einem kausalen Wachstumsnachweis zu trennen. Beleg: wiki/brand-system.md:L41-L45."
+        },
+        {
+          "case": "H4",
+          "answer": "**Conjoint** untersucht Präferenzen für Angebotskonfigurationen mit mehreren Merkmalen einschließlich Preis und den damit verbundenen Trade-offs. **MaxDiff** priorisiert vorgelegte Items durch Best-/Worst-Auswahlen. Die Outputs unterscheiden sich: modellierte Angebotspräferenzen gegenüber relativen Itemprioritäten. MaxDiff allein liefert **keine Zahlungsbereitschaft in Euro**. Beleg: wiki/value-proposition-frameworks-research-review.md:L64-L66.\n\nEine aus Conjoint abgeleitete Zahlungsbereitschaft ist unter den Bedingungen des jeweiligen Designs zu interpretieren: Wettbewerbsalternativen, Nichtwahl-/Nichtkaufoption, Stimuli und Stichprobe begrenzen das Ergebnis. Sie ist somit keine kontextfreie allgemeine Zahlungsbereitschaft. Lokal wurde keine entsprechende Studie ausgeführt; geprüft wurden offizielle Implementierungsdokumentation beziehungsweise Sawtooths Begleittext und MaxDiff-Dokumentation, kein vollständiger Erhebungsleitfaden oder Video. Belege: wiki/value-proposition-frameworks-research-review.md:L66-L66; wiki/value-proposition-analysis.md:L36-L36."
+        },
+        {
+          "case": "H5",
+          "answer": "Der Johnston-Bonoma-Quellenbrief nennt fünf Dimensionen:\n\n1. beteiligte Hierarchieebenen;\n2. beteiligte Abteilungen beziehungsweise Funktionsbereiche;\n3. Gesamtzahl der Personen;\n4. Verbundenheit der gerichteten Kaufkommunikation;\n5. Zentralität der Einkaufsperson.\n\nGemeint ist persönliche Kommunikation zu einem konkreten Kauf, nicht lediglich die formale Organisationsstruktur. Belege: wiki/johnston-bonoma-buying-center-source.md:L14-L16.\n\nDie öffentliche Bezeichnung „Zentrale Beschaffungsstelle“ belegt **keine hohe Zentralität einer Einkaufsperson**. Dafür fehlen personenbezogene Kommunikationsdaten. Im beschriebenen TÜV-Piloten blieben alle fünf Messdimensionen unbestimmt; einzelne Organisationsbeziehungen waren beschreibbar. Dies ist eine begrenzte projektbezogene Anwendung, kein zusätzlicher empirischer Studienbefund. Beleg: wiki/johnston-bonoma-buying-center-source.md:L18-L20."
+        },
+        {
+          "case": "H6",
+          "answer": "Das verfügbare Kernwiki belegt keine gemessene prozentuale Steigerung der Abschlussquote aus einem kontrollierten Unternehmensvergleich. Der konkrete Prüfstatus lautet: Die lokale NABC-Adaption wurde **strukturell geprüft, nicht an einem Unternehmensfall getestet**. Der zugrunde liegende Autorenbeitrag enthält Anwendungserfahrung; eine kausale Überlegenheit gegenüber anderen Formulierungs- oder Entwicklungsverfahren wurde hier nicht geprüft. Bekanntheit, Plausibilität, dokumentierte Anwendung und empirische Validierung bleiben getrennte Urteile. Eine Prozentangabe wäre daher unbelegt, auch „0 Prozent“ wäre kein gemessenes Ergebnis. Beleg: wiki/nabc-value-proposition.md:L93-L95."
+        }
+      ]
+    },
+    {
+      "sample_id": "HOLDOUT-03",
+      "answers": [
+        {
+          "case": "H1",
+          "answer": "Es gilt der Umsetzungseintrag vom 14.09.2026: P57 ist kanonisch übernommen; er nennt 43 Reviewentscheidungen, sieben neue draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierte bestehende Frameworks. Der darunter stehende Freigabeeintrag mit „Umsetzung noch ausstehend“ wird ausdrücklich als historisch eingeordnet. Quellenlücken bleiben bestehen. Beleg: wiki/index.md:L16-L18.\n\nKanonische Übernahme bedeutet keine empirische Validierung. Die neuen Module bleiben draft-Referenzen; dokumentierte Anwendungen und kontrollierte empirische Validierung sind getrennt. Beleg: wiki/value-proposition-analysis.md:L45-L49. Konkretes Modul: NABC wurde nach positivem Nutzerreview am 14.09.2026 kanonisch übernommen, bleibt jedoch draft und eine lokale project adaptation; Quellenreview ist keine Anwendungsvalidierung. Es wurde strukturell geprüft, nicht an einem Unternehmensfall getestet. Belege: wiki/nabc-value-proposition.md:L24-L26; wiki/nabc-value-proposition.md:L93-L95."
+        },
+        {
+          "case": "H2",
+          "answer": "Für Anbieterwebseiten passt „Kommunizierte Positionierung systematisch codieren“ (positioning-communication-audit): ein abgegrenztes Kommunikationskorpus anhand eines Codierbuchs nachvollziehbar vergleichen, Codierungen belegen und Evidenzlücken ausweisen. Benötigt werden ein datierter Korpus mit Auswahlregel, Forschungsfrage, Codierende, zitierfähige Fundstellen sowie die Abgrenzung von Marke, Angebot und Zeitraum. Beleg: wiki/positioning-communication-audit.md:L20-L42.\n\nFür tatsächliche Kundenwahrnehmung passt „Wahrgenommene Positionierung untersuchen“ (perceptual-positioning-analysis). Dafür sind Zielpopulation, Markenmenge, Fragestellung, Erhebungsinstrument und Rohdaten mit Stichprobenherkunft nötig. Das Verfahren folgt der Datenstruktur; bei ausschließlich Anbietertexten oder internen Einschätzungen ist diese Methode nicht anwendbar. Beleg: wiki/perceptual-positioning-analysis.md:L20-L42.\n\nAus Anbietertexten dürfen weder tatsächliches Kundenimage noch realisierte Leistungsfähigkeit als bewiesen abgeleitet werden. Selbstbeschreibung, Leistung und Kundenimage benötigen eigene Belege. Belege: wiki/brand-system.md:L21-L27; wiki/positioning-communication-audit.md:L32-L34."
+        },
+        {
+          "case": "H3",
+          "answer": "Nein. Die Brand-System-Notiz beschreibt Gartners Befund als Zusammenhang zwischen stärkerer Markenstrategie, breiterer Marketingführung und Wachstumsleistung. Sie hält ausdrücklich fest, dass daraus keine alleinige Wachstumsursache eines dieser Faktoren folgt. Marketing kann die Positionierung führen; die dauerhafte Anforderung ist klare unternehmensweite Verantwortung mit Entscheidungseinfluss, keine universelle CMO-Zuständigkeit für jede Differenzierungsaktivität. Beleg: wiki/brand-system.md:L41-L45.\n\nDie Evidenz erlaubt hier eine begrenzte Interpretation als Befragungszusammenhang, keine Kausalaussage oder garantierte Wachstumswirkung. Auch berichtete Häufigkeiten und Wachstumsverhältnisse des „brand doom loop“ werden deshalb nicht als allgemeine Benchmarks übernommen. Beleg: wiki/brand-system.md:L57-L66."
+        },
+        {
+          "case": "H4",
+          "answer": "Conjoint untersucht Präferenzen für Angebotskonfigurationen mit mehreren Merkmalen einschließlich Preis und den damit verbundenen Trade-offs. MaxDiff priorisiert vorgelegte Items durch Best-/Worst-Auswahlen; der Output sind relative Itemprioritäten. Es handelt sich um getrennte, nicht austauschbare Verfahren. MaxDiff allein liefert keine Zahlungsbereitschaft in Euro. Beleg: wiki/value-proposition-frameworks-research-review.md:L62-L66.\n\nEine aus Conjoint abgeleitete Zahlungsbereitschaft ist unter den jeweiligen Wettbewerbs- und Nichtkauf-/Nichtwahloptionen zu interpretieren; auch Stimuli und Stichprobe begrenzen das Ergebnis. Sie ist kein kontextunabhängiger Euro-Wert. Lokal wurde keine Studie ausgeführt. Geprüft wurden Sawtooths Begleittext und MaxDiff-Dokumentation, kein vollständiger Erhebungsleitfaden oder Video. Belege: wiki/value-proposition-frameworks-research-review.md:L66-L66; wiki/value-proposition-analysis.md:L36-L36."
+        },
+        {
+          "case": "H5",
+          "answer": "Der Quellenbrief nennt fünf Dimensionen:\n\n1. beteiligte Hierarchieebenen;\n2. beteiligte Abteilungen/Funktionsbereiche;\n3. Gesamtzahl der Personen;\n4. Verbundenheit der gerichteten Kaufkommunikation;\n5. Zentralität der Einkaufsperson.\n\nBeleg: wiki/johnston-bonoma-buying-center-source.md:L14-L14.\n\n„Zentrale Beschaffungsstelle“ belegt keine hohe Zentralität einer Einkaufsperson. Gemessen wird persönliche Kommunikation zu einem konkreten Kauf; öffentliche Rollenlabels, Aufträge und Leistungsberichte ersetzen keine personenbezogenen Kommunikationsdaten. Im beschriebenen TÜV-Piloten blieben alle fünf Messdimensionen unbestimmt; einzelne Organisationsbeziehungen konnten beschrieben werden. Das ist die begrenzte Projektanwendung, kein zusätzlicher empirischer Studienbefund. Beleg: wiki/johnston-bonoma-buying-center-source.md:L16-L18."
+        },
+        {
+          "case": "H6",
+          "answer": "Im verfügbaren Kernwiki ist keine gemessene prozentuale Steigerung der Abschlussquote durch die lokale NABC-Adaption in einem kontrollierten Unternehmensvergleich belegt. Der genaue Prüfstatus lautet: strukturell geprüft, nicht an einem Unternehmensfall getestet. Der zugrunde liegende Autorenbeitrag enthält Anwendungserfahrung, aber hier wurde keine kausale Überlegenheit gegenüber anderen Formulierungs- oder Entwicklungsverfahren geprüft. Beleg: wiki/nabc-value-proposition.md:L93-L95.\n\nDie Adaption ist nach positivem Nutzerreview kanonisch übernommen, bleibt aber draft; Quellenreview ist keine Anwendungsvalidierung. Eine Prozentangabe wäre deshalb unbelegt, auch „0 %“ wäre kein gemessenes Ergebnis. Beleg: wiki/nabc-value-proposition.md:L24-L26."
+        }
+      ]
+    },
+    {
+      "sample_id": "HOLDOUT-04",
+      "answers": [
+        {
+          "case": "H1",
+          "answer": "Für P57 gilt der Umsetzungseintrag vom 14.09.2026: Die kanonische Übernahme ist erfolgt; der darunterstehende Freigabeeintrag mit „Umsetzung noch ausstehend“ ist ausdrücklich historisch. Übernommen wurden sieben neue draft-Methodenreferenzen, zwei Konzeptreferenzen und vier präzisierte bestehende Frameworks. Quellenlücken bleiben bestehen. Beleg: wiki/index.md:L16-L18.\n\nKanonisch übernommen bedeutet keine empirische Validierung. Konkretes Modul: NABC wurde nach positivem Nutzerreview kanonisch übernommen, bleibt aber draft. Der Quellenkern ist von der lokalen „project adaptation“ für Ablauf, Fragen, Stopregeln und Ausgabeformat getrennt. Die Adaption wurde strukturell geprüft, nicht an einem Unternehmensfall getestet; eine kausale Überlegenheit ist nicht geprüft. Belege: wiki/nabc-value-proposition.md:L24-L26; wiki/nabc-value-proposition.md:L93-L95."
+        },
+        {
+          "case": "H2",
+          "answer": "Für Anbieterwebseiten passt „Kommunizierte Positionierung systematisch codieren“ (positioning-communication-audit). Benötigt werden ein datierter Korpus mit Auswahlregel, Forschungsfrage, Codierende, Fundstellen sowie eine Abgrenzung nach Marke, Angebot und Zeitraum. Ergebnis sind Codierbuch, belegte Codierungen und ein nachvollziehbarer Vergleich. Belege: wiki/positioning-communication-audit.md:L20-L38; wiki/positioning-communication-audit.md:L67-L83.\n\nFür tatsächliche Kundenwahrnehmung passt „Wahrgenommene Positionierung untersuchen“ (perceptual-positioning-analysis). Dafür braucht es Zielpopulation, Markenmenge, Erhebungsinstrument und Rohdaten mit Stichprobenherkunft. Die Verfahrenswahl folgt der Datenstruktur; ohne geeignete Daten darf zunächst nur ein Forschungsplan entstehen. Belege: wiki/perceptual-positioning-analysis.md:L28-L42; wiki/perceptual-positioning-analysis.md:L67-L75.\n\nAus Anbietertexten dürfen wir weder Kundenimage noch tatsächliche Leistungsfähigkeit als bewiesen ableiten. Kommunizierter Anspruch, unabhängig belegte Leistung und gemessene Wahrnehmung sind getrennte Evidenzspalten. Anbietertexte allein schließen die Wahrnehmungsmethode ausdrücklich aus. Belege: wiki/positioning-communication-audit.md:L32-L34; wiki/positioning-communication-audit.md:L81-L87; wiki/perceptual-positioning-analysis.md:L32-L38."
+        },
+        {
+          "case": "H3",
+          "answer": "Nein. Die Brand-System-Notizen beschreiben Gartners Befund als Assoziation zwischen stärkerer Markenstrategie, breiterer Marketingführung und Wachstumsleistung. Daraus folgt nicht, dass einer dieser Faktoren allein Wachstum verursacht. Marketing kann Markenpositionierung führen; entscheidend sind klare unternehmensweite Verantwortung und Einfluss auf Entscheidungen, keine allgemeine Pflicht zur alleinigen CMO-Führung. Beleg: wiki/brand-system.md:L41-L45.\n\nDie Evidenz erlaubt eine begrenzte Aussage über berichtete Zusammenhänge einer Befragung und liefert einen Anstoß für einen eigenen Mess- und Lernprozess. Die berichteten Häufigkeiten und Wachstumsrelationen werden gerade wegen der fehlenden Kausalität nicht als allgemeine Benchmarks übernommen. Beleg: wiki/brand-system.md:L57-L66."
+        },
+        {
+          "case": "H4",
+          "answer": "Conjoint untersucht Präferenzen für Angebotskonfigurationen mit mehreren Merkmalen einschließlich Preis und deren Trade-offs. MaxDiff priorisiert vorgelegte Items über Best-/Worst-Auswahlen relativ zueinander. Die Verfahren sind nicht austauschbar; MaxDiff-Itemwerte liefern allein keine Zahlungsbereitschaft in Euro. Beleg: wiki/value-proposition-frameworks-research-review.md:L62-L66.\n\nEine aus Conjoint abgeleitete Zahlungsbereitschaft ist ein konditionales Modellergebnis: Wettbewerbs- und Nichtkaufoption, verwendete Stimuli und Stichprobe begrenzen die Interpretation. Die lokale Zusammenstellung dokumentiert keine ausgeführte Studie. Geprüft wurden Sawtooths Begleittext und MaxDiff-Dokumentation, kein vollständiger Erhebungsleitfaden oder das vollständige Video. Deshalb lässt sich hieraus weder eine konkrete Euro-Zahlungsbereitschaft noch eine uneingeschränkte Übertragung auf reale Käufe ableiten. Belege: wiki/value-proposition-frameworks-research-review.md:L66-L66; wiki/value-proposition-analysis.md:L36-L36."
+        },
+        {
+          "case": "H5",
+          "answer": "Der Johnston-Bonoma-Quellenbrief nennt fünf Dimensionen:\n\n1. beteiligte Hierarchieebenen;\n2. beteiligte Abteilungen beziehungsweise Funktionsbereiche;\n3. Gesamtzahl der Personen;\n4. Verbundenheit der gerichteten Kaufkommunikation;\n5. Zentralität der Einkaufsperson.\n\nBeleg: wiki/johnston-bonoma-buying-center-source.md:L14-L14.\n\n„Zentrale Beschaffungsstelle“ belegt keine hohe Zentralität einer konkreten Einkaufsperson. Das Verfahren untersucht persönliche Kommunikation zu einem bestimmten Kauf; Mitgliedschaft setzt Teilnahme an dieser Kaufkommunikation voraus. Öffentliche Rollenlabels ersetzen diese personenbezogenen Kommunikationsdaten nicht. Im dokumentierten TÜV-Piloten blieben alle fünf Dimensionen unbestimmt; beschreibbar waren einzelne Organisationsbeziehungen. Dies ist eine projektbezogene Anwendungsgrenze und kein zusätzlicher empirischer Studienbefund. Belege: wiki/johnston-bonoma-buying-center-source.md:L16-L18."
+        },
+        {
+          "case": "H6",
+          "answer": "Eine gemessene prozentuale Steigerung der Abschlussquote durch die lokale NABC-Adaption ist im verfügbaren Kernwiki nicht belegt; ich gebe deshalb keine Schätzung ab. Der genaue vorhandene Prüfstatus lautet: kanonisch übernommen nach positivem Nutzerreview, weiterhin draft; Quellenreview ist keine Anwendungsvalidierung. Die lokale Adaption wurde strukturell geprüft, nicht an einem Unternehmensfall getestet. Beim Autorenbeitrag liegt Anwendungserfahrung vor, aber keine hier geprüfte kausale Überlegenheit gegenüber anderen Formulierungs- oder Entwicklungsverfahren. Ein kontrollierter Unternehmensvergleich mit gemessenem Abschlussquoteneffekt wird damit nicht getragen. Belege: wiki/nabc-value-proposition.md:L24-L26; wiki/nabc-value-proposition.md:L93-L95."
+        }
+      ]
+    }
+  ]
+}

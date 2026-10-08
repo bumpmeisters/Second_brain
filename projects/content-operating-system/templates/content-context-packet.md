@@ -60,6 +60,23 @@ State the downstream content decision this packet should enable.
 - **Freshness requirements**:
 - **Known hypotheses**:
 
+## Optional Compact Customer And Brand Context
+
+Bounded working aid adapted from HubSpot Taste Profile, approved for this use on 2026-09-23. Use when a content handoff benefits from a concise translation of existing audience and positioning context. It is optional, not a new readiness gate or evidence of improved performance. Skip when existing fields already suffice; do not duplicate upstream dossiers or create a new general company persona.
+
+| Briefing field | Concise context for this role, market and situation | Canonical reference / source / date | Evidence status / limitation |
+|---|---|---|---|
+| Customer vocabulary | Preserve actual wording; label paraphrases | | |
+| Trust barriers and credible proof | Specific claims, formats or proof that prompt distrust or credibility | | |
+| Real customer situation | Role, occasion, task, constraint and question; no finished hook | | |
+| Brand intention and customer perception | Distinguish approved positioning, reported perception and aspiration | | |
+| Allowed position and supporting example | Reference approved claim and proof; retain caveats | | |
+| Open hypotheses | Unknowns and the next verification question | | |
+
+Do not invent quotes, experiences, emotions or audience responses. A plausible scenario remains hypothetical; simulation and user confirmation alone are not customer evidence. Keep buying roles and markets distinct. Use only relevant authorized material. This packet does not decide thesis, creative angle, hook or copy.
+
+Source and adoption record: [Taste review](../../../wiki/_outputs/hubspot-taste-review-2026-09-23/analyse.md). In the next authorized use, check whether the aid clarifies the handoff without duplication or extra unsupported claims; no pilot or background work is started by this template.
+
 ## Evidence Status
 
 Explain what is sourced, approved, inferred, hypothesis, unknown, or excluded.

@@ -3,7 +3,7 @@ type: repository-index
 status: active
 description: "Kuratierte Praxisbeispiele für Architektur, Workflows, Skills und Lernen."
 created: 2026-09-11
-updated: 2026-09-11
+updated: 2026-10-04
 ---
 
 # Repository Learning Library
@@ -14,6 +14,8 @@ Hier beginnt die Suche nach praktischen Beispielen für eine konkrete Aufgabe. Z
 
 | Repo und Dossier | Beschreibung | Use when | Avoid when | Analysierter Stand |
 |---|---|---|---|---|
+| [No AI Slop](petergyang--no-ai-slop/petergyang--no-ai-slop-analysis.md) | Konkrete Textdiagnose, minimale Redaktion und Grenzen von Selbstchecklisten. | Anti-Slop-Fundstellen, Erhalt eigener Stimme und kalibrierte Evals von bloßen Checklisten unterscheiden. | Vollständiges Writing-System, deutsche Universalregeln oder belegte Qualitätsgewinne voraussetzen. | `000650b156983f5159695b441477f4e63b25dc85`; 14 Dateien inventarisiert, alle 13 Textdateien statisch gelesen; keine Ausführung. |
+| [Karpathy autoresearch](karpathy--autoresearch/karpathy--autoresearch-analysis.md) | Minimales Experimentiersystem mit fester Bewertung, kleiner Änderungsfläche und Git-Selektion; begrenzter Second-Brain-Transfer. | Retrieval-/Kontextversuche, Baseline, Lernprotokoll, Zeitbudget und tatsächliche Prüferunabhängigkeit untersuchen. | Unbegrenzte Selbständerung, autonome Wissenspromotion oder unabhängige Wirksamkeitsbelege voraussetzen. | `228791fb499afffb54b46200aca536f79142f117`; 10 Dateien inventarisiert, 8 vollständig und 1 auszugsweise statisch gelesen; keine Ausführung. |
 | [obra/superpowers](obra--superpowers/obra--superpowers-analysis.md) | Skill-basierte Entwicklungsorganisation mit Aufgaben- und Review-Paketen. | Übergaben, Wiederaufnahme, begrenzte Reviews, Skill-Auswahl, Host-Adapter und Verhaltenstests. | Validierte Produktivitätsversprechen, universeller Arbeitsprozess oder vollständiger Plattform-Audit. | `b36e0829c6d0140e93cfef2ca599b1b07d4a7797`; statisch, 28 von 195 Dateien ausgewählt. |
 | [GStack](garrytan--gstack/garrytan--gstack-analysis.md) | Reviews, Lernprotokolle, Host-Generierung und Browserzustand. | Scope-Fehler, Lernhistorie, aktuelle Wissensansicht, Generierungsstabilität und Aussagekraft von Review-Logs. | Produktivitätsbeleg, autonome Wissenspflege oder vollständiger Browser-Audit. | `94993f74012782fd94416dd44b8314f6363a13a4`; tief statisch, 19 von 1.181 Dateien ausgewählt. |
 | [Compound Engineering](everyinc--compound-engineering-plugin/everyinc--compound-engineering-plugin-analysis.md) | Review-Mechanik, Ownership, Übergaben und Lernpflege. | Unknown-Status, Befundkonsolidierung, Schutz eigener Dateien, Host-Bereitstellung und gemessene Skill-Anpassung. | Allgemeiner Vault-Cleaner oder Unabhängigkeitsbeweis allein aus Reviewer-Namen. | `0a2957852e2034d04eb01120fd7da6ed5307dc56`; tief statisch, 17 von 799 Dateien ausgewählt. |
@@ -28,7 +30,7 @@ Hier beginnt die Suche nach praktischen Beispielen für eine konkrete Aufgabe. Z
 
 ## Ordnung und Qualitätsstand
 
-Fünf ausgewählte Repo-Familien liegen in sechs technischen Repo-Ordnern unter `repositories/`. Jeder enthält genau ein aktuelles Dossier, ein Aufnahmemanifest und einen unveränderlichen Commit-Snapshot. Ein Snapshot enthält die Git-Dateien dieses Commits, keine vollständige Git-Historie oder installierten externen Abhängigkeiten.
+Sieben ausgewählte Repo-Familien liegen in acht technischen Repo-Ordnern unter `repositories/`. Jeder enthält genau ein aktuelles Dossier, ein Aufnahmemanifest und einen unveränderlichen Commit-Snapshot. Ein Snapshot enthält die Git-Dateien dieses Commits, keine vollständige Git-Historie oder installierten externen Abhängigkeiten.
 
 Alle Dossiers verwenden denselben Maßstab: Architektur, repräsentative Abläufe, Skills/Kontext, belegte Erkenntnisse, Grenzen und Anwendung bei uns. Die Auswahl ist tief statisch, kein vollständiger Audit jeder Datei. Unterschiedliche Dateizahlen sind kein Qualitätsranking. Vorhandene Tests wurden gelesen, nicht ausgeführt.
 

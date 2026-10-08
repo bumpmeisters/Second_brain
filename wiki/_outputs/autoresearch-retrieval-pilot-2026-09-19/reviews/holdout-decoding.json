@@ -1,0 +1,18 @@
+{
+  "HOLDOUT-01": {
+    "run": "holdout-b-2",
+    "answer_sha256": "cb41ef26c6adc1c607660327a37f534301903b8650d5013c842d765d2a3fd3e6"
+  },
+  "HOLDOUT-02": {
+    "run": "holdout-v-2",
+    "answer_sha256": "bd09db91f1bbded2e1958516ef58318f7425df5a331ad1cd39ef874d314d1d56"
+  },
+  "HOLDOUT-03": {
+    "run": "holdout-v-1",
+    "answer_sha256": "2e0218f3db05fd127311fb2eddcabe896302ff2f9d4fa9a82aaa415ca918201f"
+  },
+  "HOLDOUT-04": {
+    "run": "holdout-b-1",
+    "answer_sha256": "7cff1ae1bdce68f7294e426dc8eb5ef1b1e6e5a2cdc37d3095de58a7f15e1a8d"
+  }
+}

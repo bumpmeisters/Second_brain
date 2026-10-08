@@ -1,0 +1,1205 @@
+{
+  "created_utc": "2026-09-19T13:36:40.110762+00:00",
+  "files": [
+    {
+      "path": "wiki/abm-and-full-funnel-b2b-marketing-clippings-july-2026.md",
+      "sha256": "27cea997e9e8631a0582ec4575c10cc064479631cd4003d959bfd064b5b3abb9",
+      "bytes": 6462
+    },
+    {
+      "path": "wiki/abm-customer-expansion-playbook.md",
+      "sha256": "7e18b05996cce6ccff5781a1ae5e896a39990e8efefba8203462fc081c563772",
+      "bytes": 6353
+    },
+    {
+      "path": "wiki/abm-operating-models-clippings-july-2026.md",
+      "sha256": "c17569c893d6cc81ac3b02782704a13be28c9576657f8c1e322468750c8b5c2d",
+      "bytes": 6715
+    },
+    {
+      "path": "wiki/abm-play-library-external-evidence-wave-1.md",
+      "sha256": "ab2952faa5ed8f07b485149713c8912cfc8beb9b8fe6e1dd3851fe5e69440898",
+      "bytes": 5134
+    },
+    {
+      "path": "wiki/abm-sales-marketing-operating-contract.md",
+      "sha256": "895e747434bb1a492af4cbd8546b53a4e6f1fb64e9656a54f8cdbb9efe7203d5",
+      "bytes": 8073
+    },
+    {
+      "path": "wiki/account-based-marketing-strategy-deck-2023.md",
+      "sha256": "166a28cf2e56fe502647ec410f077fa885aaaab27078c69563a5b4b330f4432b",
+      "bytes": 7135
+    },
+    {
+      "path": "wiki/account-based-marketing.md",
+      "sha256": "6fae3b34e86b5a231b0cf08d7ab3293d668343bd52c1e1197e737b2a1bd49cde",
+      "bytes": 23237
+    },
+    {
+      "path": "wiki/account-data-admission-gate.md",
+      "sha256": "0cc2812c3a67922bf7ff6159cf281a1c3cc60b1aaa8b6982f3db2ac49fc94d4e",
+      "bytes": 5157
+    },
+    {
+      "path": "wiki/account-progression-baseline-and-velocity-loop.md",
+      "sha256": "c15ad863d3a3e36d555dbbfc189787bb5806ca20aca64f6f4c0e36aa0054d20b",
+      "bytes": 7295
+    },
+    {
+      "path": "wiki/account-specific-evidence-brief-workflow.md",
+      "sha256": "ff8cd71eff8e4cc9a13a020de81f57a6ef85490a75ee873ce931979ca57ea0a7",
+      "bytes": 4705
+    },
+    {
+      "path": "wiki/agency-briefs.md",
+      "sha256": "49edc413f0f392810009f7c3c500bfe23668a1e2a8653b7e9d485ba8da6610af",
+      "bytes": 1076
+    },
+    {
+      "path": "wiki/agent-evaluation.md",
+      "sha256": "582f4a06dfd23303aedb5733a4bf3e85e5dcba123d467f515caa73240c5e6284",
+      "bytes": 23849
+    },
+    {
+      "path": "wiki/agent-security.md",
+      "sha256": "720eba2e4804e2a9d8f89f6c7b5c9620b003bf45f4ee3b72864787feac23de58",
+      "bytes": 22693
+    },
+    {
+      "path": "wiki/agent-skill-design-blueprint-source-summary.md",
+      "sha256": "aa3168f08f0c3b31f3cf99b01345023f49a3c51737880c31068e4b3fc7a731f7",
+      "bytes": 3257
+    },
+    {
+      "path": "wiki/agent-skill-design.md",
+      "sha256": "b5748db90cb90428713eb37eff7e0b5148893e5d628bfdb2ece6e7f2c5af9fca",
+      "bytes": 10061
+    },
+    {
+      "path": "wiki/agentic-and-applied-ai-gap-review.md",
+      "sha256": "6027543e58cfa3ea3a029136c86048417a8d102d11996a8f1511279e1de9478d",
+      "bytes": 7850
+    },
+    {
+      "path": "wiki/agentic-marketing-intelligence-clippings-june-2026.md",
+      "sha256": "328fffcb93b0295470cb4bc4f5f58ae5bc51282f17708c5671fa9b5acc358963",
+      "bytes": 3654
+    },
+    {
+      "path": "wiki/agentic-prompting.md",
+      "sha256": "90527fa899d910bc62eb06f9017c9fd5de1043e93cd88287dca92cf47cd097c4",
+      "bytes": 4198
+    },
+    {
+      "path": "wiki/agentic-systems.md",
+      "sha256": "66d79ef7eb68ac38b4c74b1b450c0220efa2c5732e85be57ef1ee701240f0287",
+      "bytes": 20250
+    },
+    {
+      "path": "wiki/agentic-workflows-library.md",
+      "sha256": "7d89d50312f98258bfe6075b8593f26650294b08e1ef3c1b31f4b0df6393f9c5",
+      "bytes": 2131
+    },
+    {
+      "path": "wiki/agents-and-claude-md-research-2026-07-01.md",
+      "sha256": "795b3a9dc85a527e3cd835c3cde8af9fa1b4d2e906b60a93906689905931936b",
+      "bytes": 4207
+    },
+    {
+      "path": "wiki/ai-assisted-messaging-calibration-workflow.md",
+      "sha256": "da82f29139de98806fc0caea31cadbbb7c247f28a64f18037737f5fd198c884b",
+      "bytes": 2363
+    },
+    {
+      "path": "wiki/ai-assisted-problem-discovery-preflight.md",
+      "sha256": "b8cc9999e4da40805f25d93c3c33133ffbad9ff7f9fefffba1b015a17727eb98",
+      "bytes": 5113
+    },
+    {
+      "path": "wiki/ai-automation-foundation-and-separation-gate.md",
+      "sha256": "61bb8df02af9226af1d9c21eef0409bb0b7a426253c1352875e233dd6bf2cad0",
+      "bytes": 6678
+    },
+    {
+      "path": "wiki/ai-brand-and-persona-research.md",
+      "sha256": "38001b7564327100624b77e2abc817ce32e8a63641cd2b90d106c1fc10819cab",
+      "bytes": 1386
+    },
+    {
+      "path": "wiki/ai-briefing-templates-research.md",
+      "sha256": "374385391aaa884832e25e946edc64074b40e627c0970e181e51a62a57b07faa",
+      "bytes": 1378
+    },
+    {
+      "path": "wiki/ai-enabled-team-contraction-resilience-gate.md",
+      "sha256": "445f822ef92237193b13d2d42382c52d74276f2d9a8732b494dfd9f7b43e7422",
+      "bytes": 8904
+    },
+    {
+      "path": "wiki/ai-governance.md",
+      "sha256": "787c97c094aa9a5976e3b87f12373329dff7135f14d75af00dd13a50e501fe67",
+      "bytes": 18250
+    },
+    {
+      "path": "wiki/ai-marketing-priority-research-synthesis-2026-07-02.md",
+      "sha256": "b244ef2a065b64ec092033fddd8ac2aaa317ee11fa8f1e66697ffd2de9b0060f",
+      "bytes": 9819
+    },
+    {
+      "path": "wiki/ai-marketing-prompts.md",
+      "sha256": "ed16ba512f67b40d62f64a43b8f2b39ff2f55fb402790fdf2076ffaf6d0b2afb",
+      "bytes": 1554
+    },
+    {
+      "path": "wiki/ai-marketing-research-library.md",
+      "sha256": "fd6d52b34e7a0c6615bf80fe7bef231dc2a9a878eef772133efaf7e3c87adcad",
+      "bytes": 2165
+    },
+    {
+      "path": "wiki/ai-marketing-workflow-assurance-research-gemini-2026-06-05.md",
+      "sha256": "2f6d3a948c6e9d934410bc11f86fd76f1f88b23cc722072188881c6668565b28",
+      "bytes": 4238
+    },
+    {
+      "path": "wiki/ai-marketing-workflow-assurance.md",
+      "sha256": "0f2f4ea1037f9b0fcc3edf0e02fabd0769defa049cd066a73c5678f3c0f33f6a",
+      "bytes": 10311
+    },
+    {
+      "path": "wiki/ai-mediated-discovery-readiness-checklist.md",
+      "sha256": "7706164f3f19a8a8257bdf395464f76df33954cc9c7b62de5e344994421561b4",
+      "bytes": 8635
+    },
+    {
+      "path": "wiki/ai-native-gtm-operating-model.md",
+      "sha256": "1dd400fa68e3307b85ebe17adec939a97fef5cdf09d45ba8af6b1b482bf978ce",
+      "bytes": 20274
+    },
+    {
+      "path": "wiki/ai-native-product-management.md",
+      "sha256": "59d9e98f83395907457f44e04ee938aaf838510cb99f6c00953b46136f5fcc6a",
+      "bytes": 4273
+    },
+    {
+      "path": "wiki/ai-operating-system.md",
+      "sha256": "199d0f632b96982be782daa8afb7a9951f6055c81994690aa133e0e2585daa4c",
+      "bytes": 14774
+    },
+    {
+      "path": "wiki/ai-prompting-priority-research-synthesis-2026-07-02.md",
+      "sha256": "335939f6a58b540f4377b93813285f9b6fe68eb9e00b81fd8350bda146a3a884",
+      "bytes": 14583
+    },
+    {
+      "path": "wiki/ai-prompting-research-library.md",
+      "sha256": "ef87a455db66e22e0242ba86a3c58f9980d72dc34fa2f4c9780d1f69cee5a9d8",
+      "bytes": 2924
+    },
+    {
+      "path": "wiki/ai-race-superintelligence-clipping-2026.md",
+      "sha256": "608ec7dba4e32a7af10542d7b7b9387f42d276a1519c886838afc13abd2cc486",
+      "bytes": 2785
+    },
+    {
+      "path": "wiki/ai-research-library.md",
+      "sha256": "ce6ab6939395c5ba0a180c798da46354f1d51d91b698d696f3dd547c77a3b972",
+      "bytes": 5594
+    },
+    {
+      "path": "wiki/ai-research-validation.md",
+      "sha256": "de17d28c33d8fd80133cc3b2e20ab2964af8f833f672c9737b6f504c58d70f84",
+      "bytes": 3761
+    },
+    {
+      "path": "wiki/ai-scraping-pipelines.md",
+      "sha256": "ee9e56d4ff00df4de1bdcd2c2f6762faa100a999d4e187abe59d1cb7d9109992",
+      "bytes": 966
+    },
+    {
+      "path": "wiki/ai-search-measurement.md",
+      "sha256": "8fc965e368cc75c55192eb008f0ab389f1bbb329fecad3013d41603ddbbe491d",
+      "bytes": 5275
+    },
+    {
+      "path": "wiki/ai-second-brain-and-agentic-coding-clippings-july-2026.md",
+      "sha256": "cd034ce6097cf75f010c38f44d3ba170c9ae9dfd74a293e5f8c4c293e5834b65",
+      "bytes": 5363
+    },
+    {
+      "path": "wiki/ai-strategy-frameworks-research.md",
+      "sha256": "838092f03f6a03106d4ebd5870516938a3661551b8e7f1ea78700e7eb5d7fee5",
+      "bytes": 1544
+    },
+    {
+      "path": "wiki/ai-vendor-problem-observation-contract.md",
+      "sha256": "3d0de1020e7c7975f70e2527422ea3c06cd603f5195a6a2d5d587a7d2428822c",
+      "bytes": 22194
+    },
+    {
+      "path": "wiki/ai-work-blueprint.md",
+      "sha256": "e05d107d2bd005eff362f3e064cf1f195286a259f6d66ea3693edcd9e6552a9e",
+      "bytes": 19238
+    },
+    {
+      "path": "wiki/ai-workflow-builder-clippings-june-2026.md",
+      "sha256": "ba34aca18039735ee483e45f62fbcac109e39e279d27dc28c0ee0060322b1618",
+      "bytes": 3987
+    },
+    {
+      "path": "wiki/ai-writing-and-style-research.md",
+      "sha256": "bb0797ea7d37c12da6e86cc25feb74fee7e3e64e020c9a10bb1e58aad1dd78ef",
+      "bytes": 3781
+    },
+    {
+      "path": "wiki/anti-blocking-limits.md",
+      "sha256": "57dde2cf88f6522796b11582aff86343a5237cba9e7bc954ff6be60de22804bb",
+      "bytes": 1183
+    },
+    {
+      "path": "wiki/applied-ai-use-cases.md",
+      "sha256": "50cd33cc91e84713a08d06dabcdbec334912121d2c11b9d180d63199c3804e8b",
+      "bytes": 14160
+    },
+    {
+      "path": "wiki/approved-source-conversion-batch-2026-07-15.md",
+      "sha256": "887c10dba29810071110e2d5a37a832aeef53173ade5209c5a9eb095fb47a18d",
+      "bytes": 2888
+    },
+    {
+      "path": "wiki/b2b-lead-management-diskurs-2026-09-13.md",
+      "sha256": "3bfc6b538878fec653b8d6170efb253636052f3f449453c6d82134e89e1292bd",
+      "bytes": 5868
+    },
+    {
+      "path": "wiki/b2b-persona-development.md",
+      "sha256": "e69107eade64f7d81c65c5a0ed9ae918f850ad92af83610bb59f63e8d6034283",
+      "bytes": 9755
+    },
+    {
+      "path": "wiki/b2b-positioning-contextops-research-review.md",
+      "sha256": "556e4fe02e3ffc52b79ced0a1f0fa67f62cba767b39cc7a87eadb3f4fa451b8f",
+      "bytes": 13946
+    },
+    {
+      "path": "wiki/b2b-state-of-martech-and-revenue-operations-2026.md",
+      "sha256": "30aaeafe5e345395536fb8a50db5c6fd4a7769e422b9beebe43b50db59cbefd6",
+      "bytes": 3338
+    },
+    {
+      "path": "wiki/brand-and-abx-one-story-contract.md",
+      "sha256": "0cf828eaceda4a02339ab2d6e628b15a82901fb07196ad6b4cd8c77c87804fda",
+      "bytes": 3435
+    },
+    {
+      "path": "wiki/brand-library.md",
+      "sha256": "8d678d355f89561d4d28fe0f4c2ba95080e7ea2cb25b3ea2619e5c8657ba8b0d",
+      "bytes": 3094
+    },
+    {
+      "path": "wiki/brand-messaging-company-library.md",
+      "sha256": "035e69ba656eabc3ec956d541abc6aeb4adf9e5eb6fe39351c154effb36f9f90",
+      "bytes": 1875
+    },
+    {
+      "path": "wiki/brand-system.md",
+      "sha256": "adfc2ba4beb7c76e81e4ce55fa44ab1b67ac397b17747109ad5e1c899677539b",
+      "bytes": 11937
+    },
+    {
+      "path": "wiki/briefing-system.md",
+      "sha256": "232ea34796ae238559bb5864270ce98c6dbc1d03d7005e09acbf6b630c7c9959",
+      "bytes": 1431
+    },
+    {
+      "path": "wiki/briefing-template-library.md",
+      "sha256": "fbfe0d7cdf9fe7010ecd1d2f9ff40a718746572610f636bb279b5a7b1df09e4a",
+      "bytes": 2960
+    },
+    {
+      "path": "wiki/build-and-loop-orchestration-source-summary.md",
+      "sha256": "e519fbe780e31aa7d3ca208f7e8966ce37b30d44e9eef60388a0ac64c6f22938",
+      "bytes": 3510
+    },
+    {
+      "path": "wiki/buyer-question-coverage-checklist.md",
+      "sha256": "5034bfe7d3ec11ed4293574eb419b73421e6ce68612968ab6faf2b37bd4f4455",
+      "bytes": 6150
+    },
+    {
+      "path": "wiki/buying-groups-and-account-prioritization.md",
+      "sha256": "175039e885052a998f8e7a470521eb82bcc0c3ddd213f4ac1811226dd9bc342b",
+      "bytes": 11565
+    },
+    {
+      "path": "wiki/buying-role-persona-frameworks.md",
+      "sha256": "d6e2e6900cbeb187d4b053fc02af8fea3f3bd4fdb9ae2e27f4a78b9e25f1370c",
+      "bytes": 5153
+    },
+    {
+      "path": "wiki/buying-situation-message-calibration.md",
+      "sha256": "bae019b8713c62eecbc6d5b96f492297839bb4a8dbe31e290410d59b2016d365",
+      "bytes": 3514
+    },
+    {
+      "path": "wiki/c-level-presentations.md",
+      "sha256": "d534c7cb391e77d71a1414fb93018dbaf12d39fbebc45df1397cfd849e240952",
+      "bytes": 1112
+    },
+    {
+      "path": "wiki/campaign-reporting-and-operations.md",
+      "sha256": "44312172e232be81a6c1845fc21d0064163564c373e26273666999e7891a7751",
+      "bytes": 14190
+    },
+    {
+      "path": "wiki/campaign-types-and-funnel-stages.md",
+      "sha256": "a8d61910d08c898095af55ebb7072a70e4e484c13c1f8f3405030706f42f004a",
+      "bytes": 7960
+    },
+    {
+      "path": "wiki/capture-process-surface.md",
+      "sha256": "5e49e13c3ec835c9d2bb54c0d07e8609a0f1fe19420e750fb4141e308c598dc5",
+      "bytes": 1114
+    },
+    {
+      "path": "wiki/career-aspiration-to-opportunity-loop.md",
+      "sha256": "609553f6457b197aa7067a82dc7f041f3c583515ca11f3b95255759fe5016e73",
+      "bytes": 9581
+    },
+    {
+      "path": "wiki/category-brand-awareness-routing-matrix.md",
+      "sha256": "39bc2d79ae163f832ccf74888d904e58add4b2ecc1050bbe046124a436cae928",
+      "bytes": 6335
+    },
+    {
+      "path": "wiki/claude-code-executive-assistant-setup.md",
+      "sha256": "dd7e44cf05865b54782dadc139b1c28a734f99065ed46840fbfa3d8cda53f49f",
+      "bytes": 3746
+    },
+    {
+      "path": "wiki/claude-md-frameworks-research-2026-06-13.md",
+      "sha256": "b690e807d08945053e4710925b31637f8d964badceb9e236ecbb52d948e7959e",
+      "bytes": 8074
+    },
+    {
+      "path": "wiki/claude-md-project-instructions.md",
+      "sha256": "dae7e732ac54c9ca7c4242ce7cc9a7f400e9c0b835d2b4833e8a5084df4f5d28",
+      "bytes": 10422
+    },
+    {
+      "path": "wiki/claude-subagents.md",
+      "sha256": "3fc5fedbf7838011f07367a4ac9b8c69218b10af0d0d5634e3fb9e9946e1f45c",
+      "bytes": 2249
+    },
+    {
+      "path": "wiki/composable-gtm-stack-assessment.md",
+      "sha256": "d8e904ffd2dc1a4c793481e54386e0cdf0619083e7c2710385a9478428278a4f",
+      "bytes": 3771
+    },
+    {
+      "path": "wiki/content-briefs.md",
+      "sha256": "44f119e1284f246ceb39ae2c2e78d4549b7f6e9eaef2c1b78e2cffcaeddf17f9",
+      "bytes": 798
+    },
+    {
+      "path": "wiki/content-engineering-pipeline-contract.md",
+      "sha256": "7996aaf37521e95a5196cd3b2e61a7fb7bc447571be3ebf9eef14da9c8ac8544",
+      "bytes": 5833
+    },
+    {
+      "path": "wiki/content-engineering.md",
+      "sha256": "4d7577db32b2e89044059b7ffab1fe1c2510b57187e3d6d6e5383450f3f6550b",
+      "bytes": 4866
+    },
+    {
+      "path": "wiki/content-library.md",
+      "sha256": "32591b9e860dc309b5624aafa45462f755fb0fdedd9e0790bde70dff47c45b2e",
+      "bytes": 2576
+    },
+    {
+      "path": "wiki/content-marketing-strategy.md",
+      "sha256": "838ab4c5a9841eafccb4169205b2d58007c56ace630b50114d191a601109cd35",
+      "bytes": 14058
+    },
+    {
+      "path": "wiki/content-quality.md",
+      "sha256": "4010e07a54b22e4941cd6360666a05d02c039b8fd94eabbb8ba241b70a300f3c",
+      "bytes": 19256
+    },
+    {
+      "path": "wiki/context-engineering.md",
+      "sha256": "b314f53871f52d1d75ef4d54d2961a7e451c12f51da281a9eef05a1a317ac1a3",
+      "bytes": 7777
+    },
+    {
+      "path": "wiki/contextual-next-best-action-loop.md",
+      "sha256": "62cd86e50b6a5570c7bae5509b1d7a65445073dcb3d3dd3a825c75eaa49ac41d",
+      "bytes": 4885
+    },
+    {
+      "path": "wiki/continual-learning-for-agents.md",
+      "sha256": "7160e92d249f747b96f403b3a4b6702c8f118af24f231588e9f0fe9a91a72805",
+      "bytes": 8388
+    },
+    {
+      "path": "wiki/country-marketing-planning.md",
+      "sha256": "f9d1803502fc8486bf237f9f3e4cd2512d80f868e36055aabe0b35904f1bf63f",
+      "bytes": 1320
+    },
+    {
+      "path": "wiki/cowork-system-build-workflow.md",
+      "sha256": "45bdd118e5bb060eb0ab920d8e1fc609d7be757b6fe716727f8c427c851260b9",
+      "bytes": 6327
+    },
+    {
+      "path": "wiki/creative-and-video-prompting.md",
+      "sha256": "e7f6d3ca1541bb3f1f8c4bf512b57db2dd7963bd54aec00b673be6d8288c2033",
+      "bytes": 4932
+    },
+    {
+      "path": "wiki/creative-briefs.md",
+      "sha256": "b7c4fc1d9c2bfe54f506e6a18cd9718d9c7f1979ded332ba9e355bee9cdecf59",
+      "bytes": 1053
+    },
+    {
+      "path": "wiki/creative-prompting-for-marketing.md",
+      "sha256": "d2aded1d13d721629fec12f2f8189dcca52b1c3fdb4d25731b9c7cb034d2ee12",
+      "bytes": 5093
+    },
+    {
+      "path": "wiki/cross-functional-ai-adoption-learning-loop.md",
+      "sha256": "b1c0963aa69c7164bf815ef6dfd7098a23df6e6ce0d35f8d91d122ac1193140b",
+      "bytes": 3845
+    },
+    {
+      "path": "wiki/customer-journey-mapping.md",
+      "sha256": "aed5ad1030c914d4eea2dad3a22266fccb2e18244fcbb8de4f2e68e28a8880a5",
+      "bytes": 2377
+    },
+    {
+      "path": "wiki/customer-maturity-progression-contract.md",
+      "sha256": "85f52c9925b9e2f863eb5b6da1c9cae2ff18a95aaad6d42df2cfcc9cd2bfbaf8",
+      "bytes": 2417
+    },
+    {
+      "path": "wiki/daily-workflow.md",
+      "sha256": "f97fcc221e59bd305ae1bb5693c12b5f523f481bcd69a5cef43f1c8fbb18ddb2",
+      "bytes": 1148
+    },
+    {
+      "path": "wiki/db-schenker-brand-guidelines.md",
+      "sha256": "572e4d0cdf8ffbfccbedd9ad0eb6cd5a1eaa9ca9a3d444181b48f11803bba15d",
+      "bytes": 1064
+    },
+    {
+      "path": "wiki/deep-research-personal-content-operating-system-2026-08-01.md",
+      "sha256": "d22b556759f5e0e5328a6336098ce3e8b1d934446871afd5abb96935654dcaaa",
+      "bytes": 5407
+    },
+    {
+      "path": "wiki/deep-research-workflows.md",
+      "sha256": "2a9d42d7a5b32e232f0ed36e83afa3073fcdead54adecf9cb1de45ab16f9b05f",
+      "bytes": 3698
+    },
+    {
+      "path": "wiki/distinctive-brand-assets-analysis.md",
+      "sha256": "d6d423de649914e09cb28cc21febb682b4284df35849df2c3b076dd4980301f8",
+      "bytes": 5931
+    },
+    {
+      "path": "wiki/distributed-marketing-center-of-excellence-operating-model.md",
+      "sha256": "4da8939b3ad5de4d392c377f91f5441f1d3a38da656a6d38b41e23c4a907ba22",
+      "bytes": 8599
+    },
+    {
+      "path": "wiki/domain-expert-error-analysis-loop.md",
+      "sha256": "63e4b7f5a246d581f1a17600deaaf4b8d971509ac43bbb11f5d5f271ebf7dd17",
+      "bytes": 6222
+    },
+    {
+      "path": "wiki/domain-outsider-audience-learning-loop.md",
+      "sha256": "5aff9e55fc5a793fee90f0de948761af78942ee85f6f678a1ae21982f686fcf4",
+      "bytes": 6914
+    },
+    {
+      "path": "wiki/eloqua-email-operations.md",
+      "sha256": "3eccf459117160d4a2fe2eabfa0b101471750504b94f00537a7a56038a6ff7d5",
+      "bytes": 973
+    },
+    {
+      "path": "wiki/emergent-properties-in-large-language-models-ai-research-2026-07-29.md",
+      "sha256": "8c99d26cb9d2c79c77f80c20a99669b01961fcc484ef2d3c3a9ff21ea5ad9de6",
+      "bytes": 5216
+    },
+    {
+      "path": "wiki/enterprise-abm-scale-system-ten-operating-plays.md",
+      "sha256": "46b84eb0ac642dd6a2a72b8a79fd03867db55326c1be72c71f911a546da60ef9",
+      "bytes": 24440
+    },
+    {
+      "path": "wiki/enterprise-sales-motion-selection.md",
+      "sha256": "67da4ee88a0515a6129478279dff2130e6f27c890d9675bb0484fdbf1e596217",
+      "bytes": 8163
+    },
+    {
+      "path": "wiki/focused-talent-recruiting.md",
+      "sha256": "060059eaef21681cf06a339ac035e9bc550c771947d0a04983e8c14b2a1549b3",
+      "bytes": 4348
+    },
+    {
+      "path": "wiki/frameworks-templates-reference-library.md",
+      "sha256": "add9b34ec89ff0af8035f125a8d50e2ac5f226b9320399704be78ad5fda7b336",
+      "bytes": 4271
+    },
+    {
+      "path": "wiki/from-agi-to-asi-google-deepmind-2026.md",
+      "sha256": "6a2883bd33311cc623119063bcf9ec2d5e38a36342d5bc2072be4eb270c03a28",
+      "bytes": 3446
+    },
+    {
+      "path": "wiki/frontier-ecosystem-human-and-token-capital.md",
+      "sha256": "4dd69e8b7c4cdebfdc0585d91109a27e66123bb54afb128b245ee1509367f06d",
+      "bytes": 2132
+    },
+    {
+      "path": "wiki/full-funnel-media-role-and-evidence-map.md",
+      "sha256": "f368941652a6489c4261726922ecb10dba3c5b844b0d6729cb4a03fe75b21439",
+      "bytes": 14980
+    },
+    {
+      "path": "wiki/gbrain-source-summary.md",
+      "sha256": "b9bed4db59bf71516d756ad73167395672a5358d2b9c578f4200f702c2748222",
+      "bytes": 10728
+    },
+    {
+      "path": "wiki/gbrain.md",
+      "sha256": "f0f2838d9c52f70cc8e799d4a9aad95067ff12b3f311e884c8482a16ade27d60",
+      "bytes": 9393
+    },
+    {
+      "path": "wiki/global-core-regional-abm-operating-model.md",
+      "sha256": "8753e46451cff906afc294ae894560afd12e0002b06bec2ec33ed667d32bb21f",
+      "bytes": 3408
+    },
+    {
+      "path": "wiki/governed-ai-gtm-handoff-checklist.md",
+      "sha256": "393bb0307ccc003041af1d6b9ae184d71a6424dcce5767a23f084374f696726a",
+      "bytes": 4299
+    },
+    {
+      "path": "wiki/gtm-signals-and-buying-groups-clippings-july-2026.md",
+      "sha256": "bc351d5f7173687147e49c9956e2e3a85e2c07ba60a5fb8414d41392e1aabea9",
+      "bytes": 4152
+    },
+    {
+      "path": "wiki/gtm-signals-and-contextual-intelligence.md",
+      "sha256": "588336404c7d77a40619f063e781c25b996ee3cb43de1feb5c26a9267326e60b",
+      "bytes": 12685
+    },
+    {
+      "path": "wiki/historical-positioning-heuristics.md",
+      "sha256": "103821bac99170cf04403f8cbe9a9c7b8050adf6537449e75127a6576bd2e54c",
+      "bytes": 1788
+    },
+    {
+      "path": "wiki/hook-frameworks.md",
+      "sha256": "fbb22ee2bbb806743df4242c4ac918518d2a6bd93863caad00bb0ba59b3db126",
+      "bytes": 701
+    },
+    {
+      "path": "wiki/how-to-build-claude-subagents-better-than-99-percent-of-people.md",
+      "sha256": "2858625adafc8776db3639082c72aca19cfee683c060ab47da3ca6cc3a0df5cc",
+      "bytes": 2976
+    },
+    {
+      "path": "wiki/hp-enterprise-growth-system-source-summary.md",
+      "sha256": "f5f3f5f216246a95db7bb981fba96a124c20266b0926e4357c20cf1eef0c7bf0",
+      "bytes": 10449
+    },
+    {
+      "path": "wiki/hp-example-patterns.md",
+      "sha256": "e15f03386a9b8d7cbc358951557751bfabef9c849c41d7c3d87e8fe5b36401e6",
+      "bytes": 1094
+    },
+    {
+      "path": "wiki/hp-examples-library.md",
+      "sha256": "6f0622e2e865566d9029461daa0dce2bb5be781b4517c588bd04195100677c0d",
+      "bytes": 3396
+    },
+    {
+      "path": "wiki/i-turned-claude-fable-into-the-ultimate-second-brain.md",
+      "sha256": "b8bf9b97df789a1ccc9f2bc7f5fc39fd5e721112e3ac607d859adeb3b296981d",
+      "bytes": 2782
+    },
+    {
+      "path": "wiki/inbox-processing.md",
+      "sha256": "816db915f213f96d6c966b8cc38d98c6f56e9542e3fad45cc715fa82906bacca",
+      "bytes": 1107
+    },
+    {
+      "path": "wiki/incentive-aware-ai-sdr-pilot.md",
+      "sha256": "fe245d5b8f92bd81caba4c4cdd63711961701be148bb2ec0e626544373427b24",
+      "bytes": 2272
+    },
+    {
+      "path": "wiki/index.md",
+      "sha256": "d47a03d9d29b814f9e1281357429560565a4ae15e497454d0d963a7b3361e043",
+      "bytes": 39452
+    },
+    {
+      "path": "wiki/ingest-workflow.md",
+      "sha256": "7bce401adfed9f7218964d62792abb94324a2de56c772e858efea66ec7ceed71",
+      "bytes": 991
+    },
+    {
+      "path": "wiki/j-space-workspace-interpretability.md",
+      "sha256": "55188242430a04b453de83b644e3e810e1446a0251fd4798ad277fc9bd642590",
+      "bytes": 5391
+    },
+    {
+      "path": "wiki/johnston-bonoma-buying-center-source.md",
+      "sha256": "abbe9dd8da04169e59c49b1baabb5c109a2d34cc071edbab2f32de20c18d9c08",
+      "bytes": 2901
+    },
+    {
+      "path": "wiki/karpathy-spec-verifier-environment-source-summary.md",
+      "sha256": "f6b86abf0baa76f53bd6393597723251b54614ed60d2e588146bbc7557f0ed07",
+      "bytes": 4440
+    },
+    {
+      "path": "wiki/karpathys-llm-wiki-full-beginner-setup-guide.md",
+      "sha256": "5d3b1aeb3e619086888cc9f25e608c84c657f85db36c3787bd2c0360b85f3fdb",
+      "bytes": 1829
+    },
+    {
+      "path": "wiki/keller-brand-positioning.md",
+      "sha256": "68e8eba67d20f53aa805faf699880ddc1441afa5b24bc8150719e801dfe14964",
+      "bytes": 6209
+    },
+    {
+      "path": "wiki/lean-weekly-abm-pilot-loop.md",
+      "sha256": "aa5397d78f08c4a88972dbb02adfbbce4345b61a9b8eeb5ea1203438c0f5703e",
+      "bytes": 4360
+    },
+    {
+      "path": "wiki/llm-wiki.md",
+      "sha256": "e1806c8c44fea26dbaf6765293184f290df4083ebbbbb5362baa5e91af450adc",
+      "bytes": 5094
+    },
+    {
+      "path": "wiki/local-first-notes.md",
+      "sha256": "ed24531428db8a0feef30f8af573ceca04b147c2279335e14f6605b50dc17405",
+      "bytes": 1098
+    },
+    {
+      "path": "wiki/log.md",
+      "sha256": "9425c1e4fb35ddd99288da15544820912aed6b5e436594a5224c7b05fd61e4db",
+      "bytes": 254321
+    },
+    {
+      "path": "wiki/logistics-market-intelligence-library.md",
+      "sha256": "98691a0ceda73ba00d48b1361bc13665f9fa6f5acd46bff3ead3395fd48752f1",
+      "bytes": 4254
+    },
+    {
+      "path": "wiki/long-form-narrative-development-workflow.md",
+      "sha256": "44205d088294491c4a8b3b999bb0d32445d05b8ebaef6af9a01c0ffaf6613c12",
+      "bytes": 4720
+    },
+    {
+      "path": "wiki/long-horizon-marketing-program-sprint-loop.md",
+      "sha256": "b60e444ffd00121aa93db05bab1414ac1ac9a3ed8bb9206bb03f66d7f6b7e7f0",
+      "bytes": 7701
+    },
+    {
+      "path": "wiki/loop-engineering.md",
+      "sha256": "3b17c014d76a7641f7f2f8f688b7b9a419d78cd8a9862d3ae4488cfc7f4c2816",
+      "bytes": 10009
+    },
+    {
+      "path": "wiki/maintained-content-distribution-lifecycle.md",
+      "sha256": "7e8877175e75760bff57022ae1f87b30cffe0c837810dcbc1ef38442fceaa81f",
+      "bytes": 5275
+    },
+    {
+      "path": "wiki/marketing-and-frameworks-library-readme.md",
+      "sha256": "439e168ceaf3625000499388f21ce480bf5faa1bd2f137d2ce3c50c3071e56b7",
+      "bytes": 1220
+    },
+    {
+      "path": "wiki/marketing-assets-library.md",
+      "sha256": "230eafd955f3534ac814552514e81ea2d103d7387bd6166fb41962222d032c02",
+      "bytes": 6623
+    },
+    {
+      "path": "wiki/marketing-automation-analytics-ops-library.md",
+      "sha256": "fd224fbb5bc24c2250b8aa6cb92ea6595c234db34cf089ed521687059427e716",
+      "bytes": 1609
+    },
+    {
+      "path": "wiki/marketing-campaigns-missions-and-projects-library.md",
+      "sha256": "ee0fdb8ee5761434741b50e4684a392da8078796572632f5ff9bcad671b831ec",
+      "bytes": 3685
+    },
+    {
+      "path": "wiki/marketing-change-pilot-buy-in-memo.md",
+      "sha256": "8be63095a2fe199d7cc3c93bbaaa5e75f3765528a7bdb53baeb53865c702f26c",
+      "bytes": 8649
+    },
+    {
+      "path": "wiki/marketing-content-social-pr-library.md",
+      "sha256": "f6da307e4f8ba27d20c6060b19c02c1bc9c84cd6450b7826276760824d95acad",
+      "bytes": 2107
+    },
+    {
+      "path": "wiki/marketing-operating-system.md",
+      "sha256": "22721d54b9de825bc75b5885ba3ff2efd9ec897661ab9942af268016435fee5c",
+      "bytes": 15798
+    },
+    {
+      "path": "wiki/marketing-orchestration.md",
+      "sha256": "2ee07ed6790dc224501ec08c14c719946ff288fac666095f44cc6c70d5d74efe",
+      "bytes": 28561
+    },
+    {
+      "path": "wiki/marketing-peer-experiment-exchange.md",
+      "sha256": "22ab7133025a2d415c17b6b37e8ea37fe0e04c4e92b10fd45f79229ccf7f970e",
+      "bytes": 5433
+    },
+    {
+      "path": "wiki/marketing-presentations-meetings-alignment-library.md",
+      "sha256": "0bfb6db37c30930917415c39b6424a59315dbb486f673b6e4acb1cb95a8902a1",
+      "bytes": 1829
+    },
+    {
+      "path": "wiki/marketing-sales-and-buyer-enablement-library.md",
+      "sha256": "87267c3cd75ac5f76683eda0e80654fb16178687b92c484dd55314665080e933",
+      "bytes": 14448
+    },
+    {
+      "path": "wiki/marketing-strategy-and-planning-working-library.md",
+      "sha256": "60168d7dd2c07c8138fdcca8074ed770d72de293a5c60bcbd02350d84c722520",
+      "bytes": 3761
+    },
+    {
+      "path": "wiki/marketing-strategy-library.md",
+      "sha256": "e964072c675ff78041379792b141970318f5a0546c32aa597e4cdd1b7a0a0dcd",
+      "bytes": 2961
+    },
+    {
+      "path": "wiki/marketing-working-library.md",
+      "sha256": "c17061d41b3e4db8905dc83ebd3e8332e15c35bea48b3944e2023fd0749937b8",
+      "bytes": 4633
+    },
+    {
+      "path": "wiki/mcp-and-tool-access.md",
+      "sha256": "28854f5c50af024a0b84ca31636480eaa303c69ccf82393bd53a8e9a4d7dcccc",
+      "bytes": 10906
+    },
+    {
+      "path": "wiki/media-briefs.md",
+      "sha256": "cd970591773c0b80197e75e584d32858b701ab65eab760060aa62473e107c537",
+      "bytes": 1382
+    },
+    {
+      "path": "wiki/merchant-of-record-vs-payment-service-provider.md",
+      "sha256": "e171b81a1ba9b9af5585e55adf7eec473f6a8bf3397ec0dbb1de5bce9285f456",
+      "bytes": 1939
+    },
+    {
+      "path": "wiki/messaging-frameworks.md",
+      "sha256": "dcea210e47a9ee99e4f82a56f5d6f5f870e9fe13d67ed781c90d620bcda315c7",
+      "bytes": 4509
+    },
+    {
+      "path": "wiki/meta-prompting.md",
+      "sha256": "d9164ccd34e7029a71afbfd225a7ed8b7ae0a1074fc67f83ffa5e99ad69e1442",
+      "bytes": 1576
+    },
+    {
+      "path": "wiki/minimal-evaluation-and-observability-framework-for-ai-marketing-workflows.md",
+      "sha256": "9bb0595520f4f74185ed4dccf1f877d719cf39a71facd566933eeb7b114e4885",
+      "bytes": 4465
+    },
+    {
+      "path": "wiki/minimal-evaluation-and-observability-framework-gemini-2026-06-05.md",
+      "sha256": "10171195dca37652aa4fb0d86332ec7682cce876e9478b3a0a4db2b22fa2b7c3",
+      "bytes": 2739
+    },
+    {
+      "path": "wiki/multi-team-account-contact-coordination-gate.md",
+      "sha256": "af5397531a4e2e3c2cc9f2b40ba30412cca0d17ab3a853c841db5fb16009fd5d",
+      "bytes": 3756
+    },
+    {
+      "path": "wiki/nabc-value-proposition.md",
+      "sha256": "832122a208f16a2c052e0332ebac7fe0f28319fb1e07296b686e52fe9f4e010b",
+      "bytes": 5487
+    },
+    {
+      "path": "wiki/new-knowledge-source-review-2026-09-09.md",
+      "sha256": "a5ae5e166916bbe8114d314c90ec62753e9f5847e8b72aeeaa1b25f14af0f930",
+      "bytes": 38921
+    },
+    {
+      "path": "wiki/newsletter-intelligence-pipeline.md",
+      "sha256": "ac50e1b5d122b0ba910a05d77e0e29e7b41d22b97de0606708b94514cf2c7f75",
+      "bytes": 15208
+    },
+    {
+      "path": "wiki/newsletter-intelligence-week4-2026-07-18.md",
+      "sha256": "fec90150ac48db3aab220c8b3f648a98168c70f399604eee76cbdcaa3cc6148d",
+      "bytes": 4134
+    },
+    {
+      "path": "wiki/newsletter-practitioner-methods-week3-2026-07-16.md",
+      "sha256": "8aba55d518031560bd0244b2b1e3945c5350a8d0ca3a333171161bc92303849c",
+      "bytes": 2610
+    },
+    {
+      "path": "wiki/niche-fame-content-loop.md",
+      "sha256": "766ead3dc508cd4a26e1ff83d54f1281917a20ead00521b4393dd76af4734d95",
+      "bytes": 3231
+    },
+    {
+      "path": "wiki/niche-sponsorship-portfolio-experiment.md",
+      "sha256": "80530a4284a26d627157e6e61cba67c10eb4ecf117a319062644b5e8a0ef182a",
+      "bytes": 2384
+    },
+    {
+      "path": "wiki/ntt-data-embedded-account-management-playbook.md",
+      "sha256": "07b5ae801c4abe3899f27adfd317d509a03660d97ce84bf7c5e1f940b4e6f855",
+      "bytes": 17835
+    },
+    {
+      "path": "wiki/observable-capability-teach-back-loop.md",
+      "sha256": "d6c6dcc77187f822d4d6eef43519454bcb28eb9f2770633e3c654384d1265f85",
+      "bytes": 4086
+    },
+    {
+      "path": "wiki/obsidian-folder-structure.md",
+      "sha256": "81468ce5b022b20f2eeef56093f9254f2676f6bdb093dbad6967ae579db4642b",
+      "bytes": 1419
+    },
+    {
+      "path": "wiki/obsidian-plugins.md",
+      "sha256": "c83956bfbf7ba80e5dc77fd471fd134955e5871f6853d2894331d328f6ea8c64",
+      "bytes": 1333
+    },
+    {
+      "path": "wiki/obsidian-vault-design.md",
+      "sha256": "438a3d1c45021ef202449538087cf35418de3c7c66fdb64eda88b03174395da2",
+      "bytes": 3637
+    },
+    {
+      "path": "wiki/obsidian.md",
+      "sha256": "29b752c444f6e6ce657618567c17a256d9b63e4da56aa9ba987148a03a5dd9c7",
+      "bytes": 1301
+    },
+    {
+      "path": "wiki/ogsm.md",
+      "sha256": "44e61ba37fbf784be1bab65f5fdbde49d78ec7d7ce15234ebda7152cbcb0e59c",
+      "bytes": 935
+    },
+    {
+      "path": "wiki/old-marketing-playbook-source-review-2026-09-13.md",
+      "sha256": "cba81cf9537d4a077bb984cce4337507d8deebaa9630083311b702f7273f9d7c",
+      "bytes": 7001
+    },
+    {
+      "path": "wiki/old-marketing-playbook-web-sources-2026-09-13.md",
+      "sha256": "4909cb73f79ce9cc5eee00b0a9c9acdf802715b19566011278d31fb0e3cc90e3",
+      "bytes": 6069
+    },
+    {
+      "path": "wiki/only-the-best-are-using-them.md",
+      "sha256": "012b878e0104f275e877b0592b787c5a0051067135798cd632360bf16794b80e",
+      "bytes": 2074
+    },
+    {
+      "path": "wiki/operational-resilience-and-capability-continuity.md",
+      "sha256": "343cb65de82e57ce74d48925dff47b55d972dcfbc82403cc0404e8e90b8649fd",
+      "bytes": 3313
+    },
+    {
+      "path": "wiki/partner-marketing-pilot-and-scale-loop.md",
+      "sha256": "fd71630fd511d6491f7df39775a7ec7fc28c86d8b9bb3c217f755e40594c611d",
+      "bytes": 3498
+    },
+    {
+      "path": "wiki/peer-co-creation-access-loop.md",
+      "sha256": "401841cf0ca1c82561b12d356084cc1c99fd70c2561de909091f59bd7b316586",
+      "bytes": 6703
+    },
+    {
+      "path": "wiki/perceptual-positioning-analysis.md",
+      "sha256": "9ae59aac2753403e664af551e02c63d66378cae90b3eff067602495e818148c7",
+      "bytes": 6023
+    },
+    {
+      "path": "wiki/performance-fed-content-ideation-loop.md",
+      "sha256": "aeb5e17b8772d80ba575368db5e16a06d2d4280857b3aae0b8bc98b0a1851ca4",
+      "bytes": 4626
+    },
+    {
+      "path": "wiki/persona-and-audience-library.md",
+      "sha256": "b3ef6ef6c9f1db02951a64cca50ad6c1e222d859a04caad3a1936fc892997cb3",
+      "bytes": 4268
+    },
+    {
+      "path": "wiki/personal-ai-cowork-system.md",
+      "sha256": "2dc141f4fe03006efdd3a80075960a92b560bab54fe33d3df2c30250e30f6a23",
+      "bytes": 8454
+    },
+    {
+      "path": "wiki/positioning-communication-audit.md",
+      "sha256": "188c59b8d4a4e1cc59426df6ce0d69c7f22e693f3b569a49b1665a378ece071a",
+      "bytes": 5982
+    },
+    {
+      "path": "wiki/post-by-cyrilxbt-on-x.md",
+      "sha256": "481df82ac0e1e28da8c9cf34662afb72d85082f33e85b5d4f98425e668d5471a",
+      "bytes": 1215
+    },
+    {
+      "path": "wiki/production-agent-engineering-clippings-june-2026.md",
+      "sha256": "b44875c6d37027c7d726567d213802d084b71feebf76bb07ea9e5e1faac01445",
+      "bytes": 3628
+    },
+    {
+      "path": "wiki/project-delivery-tracking.md",
+      "sha256": "fe5eb2b5acd3bf438bc1752cc664042815442a15587a81d54687002487d6d6b6",
+      "bytes": 2107
+    },
+    {
+      "path": "wiki/prompt-engineering-research.md",
+      "sha256": "4f71f7a6ce36def6f3876bf09297b3d2f7de28847c6cb54d10fb6f43ec45f277",
+      "bytes": 1665
+    },
+    {
+      "path": "wiki/public-evidence-cycle-01-source-summary.md",
+      "sha256": "109689ad3b82a6ba03403d19fbfd082e9861751cd8f68ecaacd26cbbabaf755d",
+      "bytes": 5890
+    },
+    {
+      "path": "wiki/qualification-rejection-reason-calibration-loop.md",
+      "sha256": "ae48fe8a4bc4afd8b323869da91c88bc491b713f505dbfb3f8ed9dea1f26a042",
+      "bytes": 7705
+    },
+    {
+      "path": "wiki/rag.md",
+      "sha256": "6fbfd9610da22661b22c68c6908124aad12de47cd3ced2f6351cb448dacf33ef",
+      "bytes": 1070
+    },
+    {
+      "path": "wiki/raw-sources.md",
+      "sha256": "02e39c1481243fe765f8f95a90e1306d12ed88c4991080dcfa78914d11a6c841",
+      "bytes": 7687
+    },
+    {
+      "path": "wiki/reasoning-model-prompting.md",
+      "sha256": "1f83580d8a1ae069309addf1949083397a7e1e951025063b91fc506123f297e1",
+      "bytes": 1479
+    },
+    {
+      "path": "wiki/reference-calibrated-content-refinement-loop.md",
+      "sha256": "04a6665f1ce3b7e78f76197b1036f83207297d55f668cd02f125283951c23d61",
+      "bytes": 22074
+    },
+    {
+      "path": "wiki/reliable-ai-capability-rollout.md",
+      "sha256": "12554f2a45b2f64747c9ef7de3ad5311a9f8c73b78bd9077cdc3743fe371a39d",
+      "bytes": 9105
+    },
+    {
+      "path": "wiki/reporting-and-ops-library.md",
+      "sha256": "bce6644c5fd8ba95a5ed24c2d54749f32eb4d2ec3cd0d70beeba9a7ab9c6645e",
+      "bytes": 2997
+    },
+    {
+      "path": "wiki/repository-mining.md",
+      "sha256": "0d8745c41141e4706e88526a345056669ca9ccd06a3272707820fd4374546d8e",
+      "bytes": 9801
+    },
+    {
+      "path": "wiki/resonating-focus-value-proposition.md",
+      "sha256": "b7f5e92005aaf8319fea8a09818c37202f6183f01c995cf7f60cd86269546d28",
+      "bytes": 5834
+    },
+    {
+      "path": "wiki/reusable-practices-library.md",
+      "sha256": "8b75cba70cb651b028b6370b8cce89d67a390065e0367ffef4dfda444df37905",
+      "bytes": 9824
+    },
+    {
+      "path": "wiki/reusable-practices-router.md",
+      "sha256": "73e66a56972559653dcf882f74e52c2b0076c76e78d89129832cd16adeb657b7",
+      "bytes": 24318
+    },
+    {
+      "path": "wiki/revenue-execution-and-measurement-clippings-july-2026.md",
+      "sha256": "4fc49a310b3ba1f0e22a6bdc86fd82087eaae30117656c82f77142511d806833",
+      "bytes": 4540
+    },
+    {
+      "path": "wiki/revenue-operations-ai-readiness.md",
+      "sha256": "649a1f426bc7b5caba4a955f19e9183e33462e7b46f80dd9343ab504ea359167",
+      "bytes": 5880
+    },
+    {
+      "path": "wiki/reverse-benchmarking-differentiation-workflow.md",
+      "sha256": "4b66e0908a2028a3273438bb2c15c8f893e23118be388f6ff660545d8cd2a1e4",
+      "bytes": 3525
+    },
+    {
+      "path": "wiki/riley-brown-reference-comparison-content-loops-source-summary.md",
+      "sha256": "b163c6cdabdb0ec6d9bb1529fb1559042a7295d9cc39e8ec7006684bacc3b007",
+      "bytes": 8709
+    },
+    {
+      "path": "wiki/self-and-social-relevance-sharing-experiment.md",
+      "sha256": "9c29e240940e0001e5e0b3553990ab4f7243593df9d9088b7ac5d8eaa30e7694",
+      "bytes": 4085
+    },
+    {
+      "path": "wiki/semantic-ingest-workflow.md",
+      "sha256": "6a89527b3e114f637a356749d7bdf316d371af78502cd1ecbc243310ec3fe719",
+      "bytes": 14501
+    },
+    {
+      "path": "wiki/servicenow-pursuit-marketing-sprint-playbook.md",
+      "sha256": "9750db43a9f6045941bf6223cdaaa3253cae97fee0b0b38ca4423c0aaf16bc00",
+      "bytes": 22382
+    },
+    {
+      "path": "wiki/shared-human-agent-delegation-queue.md",
+      "sha256": "9b23122ef215265b78346afcad35edaa9d50449469255ca2a080a1103fd0e694",
+      "bytes": 4848
+    },
+    {
+      "path": "wiki/sources.md",
+      "sha256": "0d24c0157529ddad5999bf5045b849f4e9db5e166f78a6527f32a9fb8e4d375a",
+      "bytes": 83631
+    },
+    {
+      "path": "wiki/storytelling-frameworks.md",
+      "sha256": "cc6534d6ace545c910e6c4571c585953f95c51d52d2836ed342e03701d48ad61",
+      "bytes": 2266
+    },
+    {
+      "path": "wiki/strategic-briefs.md",
+      "sha256": "73856a3cf0503ff2d200124d18aa5c01069e72b1dc08631bcd2df513bfd01fd4",
+      "bytes": 1614
+    },
+    {
+      "path": "wiki/strategic-thought-leadership-system.md",
+      "sha256": "20fbb44164e943bf7967faf56ebb9557a575f3bd8283ca2e2b9136b5ff13b335",
+      "bytes": 3204
+    },
+    {
+      "path": "wiki/synthetic-customer-intelligence.md",
+      "sha256": "7a3fea0515bae4306074773cc721ccfefd72502fbd300cd79d359eda84593faf",
+      "bytes": 1899
+    },
+    {
+      "path": "wiki/team-working-agreement-and-feedback-loop.md",
+      "sha256": "ead7a850f2162e7edcdf3f1da43c68b4f2f15058ad76ff646d2efee91c3baf01",
+      "bytes": 9466
+    },
+    {
+      "path": "wiki/the-obsidian-vault-setup-that-replaced-my-500-per-month-software-stack.md",
+      "sha256": "2c0ab484e6caac37a82c922a8691831d13bc24b4e739d8497ee6b305a0cd96e4",
+      "bytes": 2118
+    },
+    {
+      "path": "wiki/the-shift-to-agentic-ai-evidence-from-codex.md",
+      "sha256": "0e2ab684abcc6e475b8b40c4d672a0cd04627ed00f4803659be81ca0dd74a167",
+      "bytes": 3243
+    },
+    {
+      "path": "wiki/three-x-model.md",
+      "sha256": "f0b629bfa1023450c0f50ac0b62ed1d190d1a672aede834f404b08d272d85085",
+      "bytes": 3099
+    },
+    {
+      "path": "wiki/tina-claude-cowork-system-source-summary.md",
+      "sha256": "7deeac55eb89ded283671eb1ce7168ae2a09bbc9f02ac90eacd56295780e4236",
+      "bytes": 3300
+    },
+    {
+      "path": "wiki/tuev-jobrollen-targeting-quellen.md",
+      "sha256": "027e742ec55beac4803c1604a2b75ec85c29e1bda20fba93751ba4b855624163",
+      "bytes": 2845
+    },
+    {
+      "path": "wiki/ubd-framework-source-and-tuev-flow-review.md",
+      "sha256": "766b1887458766f98ccbed736798490e7229426fa796b48ffac8387fb000b05f",
+      "bytes": 2161
+    },
+    {
+      "path": "wiki/use-case-cluster-prioritization-workflow.md",
+      "sha256": "c53ea0a2d2e73152fadaa544f9b22fe27020d9358c869eab9b134f83cfdc8c47",
+      "bytes": 6499
+    },
+    {
+      "path": "wiki/value-proposition-analysis.md",
+      "sha256": "3663dd2283de3c996ecd3b1976ea46a9b93f64606a20fb9ea8346cad61deff15",
+      "bytes": 5726
+    },
+    {
+      "path": "wiki/value-proposition-design.md",
+      "sha256": "4bc2588714fbde974cbf268a9856505357428cc5a3d3699b56a3b271f76215e0",
+      "bytes": 5896
+    },
+    {
+      "path": "wiki/value-proposition-frameworks-research-review.md",
+      "sha256": "9ed7162604a0c2ae08bcee912ef65c6b6be288c4f888216e976d94667cfc8a07",
+      "bytes": 18820
+    },
+    {
+      "path": "wiki/video-led-microsite-build-contract.md",
+      "sha256": "cc5c371118101298f455c0583154243fba32ff4cf32d6f3aa1704a1b9a1d19b1",
+      "bytes": 5181
+    },
+    {
+      "path": "wiki/wat-framework.md",
+      "sha256": "a18a52c485a2126176da581832f42ad6d9e15d62d4cb24b539a7871f5e87af8d",
+      "bytes": 4572
+    },
+    {
+      "path": "wiki/web-scraping-tools.md",
+      "sha256": "aab0be7159c2e4e38c1bd1ceb4c8238f1d89c46cf29fc689188c99e9e4a12ef1",
+      "bytes": 1568
+    },
+    {
+      "path": "wiki/week3-primary-verification-dossier-2026-07-16.md",
+      "sha256": "048bc47bfb0c0c18a989f1a978cbb7af59ced23a21a31b84a31658ebb7e4eae9",
+      "bytes": 3890
+    },
+    {
+      "path": "wiki/weekly-funnel-gap-diagnosis-loop.md",
+      "sha256": "aefcd5150c1bcee0b5ed6c6785149b64cf23ba3ded40c0a5ef7853502bdd98b2",
+      "bytes": 4240
+    },
+    {
+      "path": "wiki/weekly-review.md",
+      "sha256": "9f4c94898a15a8b7e871202f14b208194d8cdb4f1edd283befbd77a9da00b8bc",
+      "bytes": 1130
+    },
+    {
+      "path": "wiki/wiki-linting.md",
+      "sha256": "c5dffb327488d90e32e5cb0674ab0b0c31806cd287fc0139d5e65a1b2b3bdb91",
+      "bytes": 937
+    },
+    {
+      "path": "wiki/wiki-schema.md",
+      "sha256": "164b11c95ce3dc0ec53c6f3bfc28df214ec79b01007a67622017ad894e4cc535",
+      "bytes": 1125
+    },
+    {
+      "path": "wiki/writing-guidelines.md",
+      "sha256": "8f8e4da36870d00e5e70845ab1459d1f5d28766f9b4235300c8319977d2832a9",
+      "bytes": 4889
+    }
+  ]
+}

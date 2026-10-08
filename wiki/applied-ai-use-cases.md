@@ -3,6 +3,30 @@ type: concept
 status: active
 trust: partially-verified
 sources:
+  - "raw/Clippings/20 Web-Apps ohne Informatik-Hintergrund Ein HR-Chef baut seiner Firma einen eigenen App Store 18.md"
+  - "raw/Clippings/500.000 Follower für 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md"
+  - "raw/Clippings/Alle Mitarbeiterinnen und SaaS-Verträge mit Claude ersetzt  Christoph Fahle 28.md"
+  - "raw/Clippings/André M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Bei Volkswagen programmiert die KI nachts Thorsten Jankowsky über Agentic Coding im Konzern.md"
+  - "raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md"
+  - "raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md"
+  - "raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md"
+  - "raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md"
+  - "raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md"
+  - "raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md"
+  - "raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md"
+  - "raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md"
+  - "raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz über seine Hobby Projekte simplebanking und RetroMac 22.md"
+  - "raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md"
+  - "raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md"
+  - "raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md"
+  - "raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md"
   - research/2026-07-01-applied-ai-use-cases-recent-research.md
   - https://arxiv.org/abs/2606.08867
   - https://openai.com/index/how-agents-are-transforming-work/
@@ -14,7 +38,7 @@ sources:
   - raw/imports/automated-clippings/youtube/UCbmNph6atAoGfqLoCL_duAg/2026-08-03--xc2NnKThTX0.md
   - raw/imports/automated-clippings/youtube/UCxBcwypKK-W3GHd_RZ9FZrQ/2026-08-11--Qp5xklyJySI.md
 created: 2026-07-01
-updated: 2026-08-18
+updated: 2026-10-08
 ---
 
 # Applied AI Use Cases
@@ -167,7 +191,48 @@ For scientific design, model confidence, output diversity, and independent model
 - Which vendor-reported June 2026 metrics can be independently verified?
 - Where should the vault store use-case canvases and dated test results?
 
+## Quellennahe Unternehmensfälle: TokenMade
+
+[[tokenmade-ai-use-cases-source-review-2026-10-08]] erschließt 24 vollständig gelesene Interviews mit 98 Fallkarten. Das Register enthält auch Nebenbeispiele, Hobbyprojekte und Pläne; es sind keine 98 nachgewiesenen produktiven Unternehmenslösungen. Jede Karte nennt Arbeitsproblem, Daten/Voraussetzungen, Ablauf, Ergebnis, KI-Rolle, berichteten Reifegrad, menschlichen Kontrollpunkt, Fehler/Grenzen und genaue Quellenanker.
+
+Für die Auswahl die beiden Dimensionen getrennt halten: **KI entwickelt Software** beschreibt den Bauprozess; **KI im laufenden Betrieb** beschreibt eine modellgestützte Fachentscheidung oder Interpretation. Ein funktionierendes Dashboard kann regelbasiert laufen. Online-Prototyp, Demo, selbstberichteter produktiver Einsatz und belegter Nutzen bleiben ebenfalls unterschiedliche Zustände.
+
+Den vorhandenen Use-Case-Canvas an einer passenden Fallkarte konkretisieren und danach den eigenen Prozess prüfen. Konzeption, Bereinigung/Anbindung, Review, Ausnahmen, Infrastruktur, API-Kosten und Wartung gehören zur Wertprüfung. Eine geringe Hostingrechnung oder eine schnelle Demo belegt weder Gesamtkosten noch ROI. Fach-, Rechts-, Personal-, Finanz- und physische Entscheidungen behalten ihre jeweiligen Verantwortlichen.
+
+P61-C01 ist die begrenzte Integration einer quellengebundenen Fallbibliothek, kein neues Auswahlframework. Sieben bytegleiche Kopien und 24 unpassende Dateinamen werden im Quellenreview transparent zugeordnet. Quelle für die Fall- und Moduszuordnung sind diese 24 Texte:
+
+- `raw/Clippings/20 Web-Apps ohne Informatik-Hintergrund Ein HR-Chef baut seiner Firma einen eigenen App Store 18.md` — [[_outputs/semantic-ingest/p61/briefs/tm01|TM01]].
+- `raw/Clippings/500.000 Follower für 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md` — [[_outputs/semantic-ingest/p61/briefs/tm02|TM02]].
+- `raw/Clippings/Alle Mitarbeiterinnen und SaaS-Verträge mit Claude ersetzt  Christoph Fahle 28.md` — [[_outputs/semantic-ingest/p61/briefs/tm03|TM03]].
+- `raw/Clippings/André M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm04|TM04]].
+- `raw/Clippings/Bei Volkswagen programmiert die KI nachts Thorsten Jankowsky über Agentic Coding im Konzern.md` — [[_outputs/semantic-ingest/p61/briefs/tm05|TM05]].
+- `raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm06|TM06]].
+- `raw/Clippings/Claude Code als Betriebssystem fürs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md` — [[_outputs/semantic-ingest/p61/briefs/tm07|TM07]].
+- `raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md` — [[_outputs/semantic-ingest/p61/briefs/tm08|TM08]].
+- `raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md` — [[_outputs/semantic-ingest/p61/briefs/tm09|TM09]].
+- `raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm10|TM10]].
+- `raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in München 20.md` — [[_outputs/semantic-ingest/p61/briefs/tm11|TM11]].
+- `raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md` — [[_outputs/semantic-ingest/p61/briefs/tm12|TM12]].
+- `raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md` — [[_outputs/semantic-ingest/p61/briefs/tm13|TM13]].
+- `raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md` — [[_outputs/semantic-ingest/p61/briefs/tm14|TM14]].
+- `raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md` — [[_outputs/semantic-ingest/p61/briefs/tm15|TM15]].
+- `raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm16|TM16]].
+- `raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm17|TM17]].
+- `raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz über seine Hobby Projekte simplebanking und RetroMac 22.md` — [[_outputs/semantic-ingest/p61/briefs/tm18|TM18]].
+- `raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md` — [[_outputs/semantic-ingest/p61/briefs/tm19|TM19]].
+- `raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm20|TM20]].
+- `raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm21|TM21]].
+- `raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Geschäft mit KI disruptet 08 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm22|TM22]].
+- `raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md` — [[_outputs/semantic-ingest/p61/briefs/tm23|TM23]].
+- `raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md` — [[_outputs/semantic-ingest/p61/briefs/tm24|TM24]].
+
+Methodische Übernahme: P61-C01; Rolf, ausdrückliche Freigabe 2026-10-08. Quellen- und Verifikationsgrenzen bleiben erhalten.
+
 ## Related pages
+
+- [[tokenmade-ai-use-cases-source-review-2026-10-08]]
+- [[customer-conversation-evidence-workflow]]
+- [[reviewed-question-to-faq-workflow]]
 
 - [[agentic-systems]]
 - [[agent-evaluation]]

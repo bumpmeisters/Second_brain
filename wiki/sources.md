@@ -3,10 +3,125 @@ type: source-register
 status: active
 sources: []
 created: 2026-06-01
-updated: 2026-09-14
+updated: 2026-10-08
 ---
 
 # Sources
+
+## TokenMade AI-Use-Cases · P61 · 2026-10-08
+
+Persönlich von Rolf geprüfte und ausdrücklich zum sorgfältigen Ingest ausgewählte Downloadserie. 31 exakte Dateien/Hashes, 24 unterschiedliche Transkripte vollständig textuell reviewed, sieben identische Varianten. 98 Fallkarten inklusive Nebenbeispielen, Hobbyprojekten und geplanten Anwendungen: [[tokenmade-ai-use-cases-source-review-2026-10-08]]. [Identitätsmatrix](_outputs/semantic-ingest/p61/source-identity-map.csv), [24 Vollbriefe und Evidenzcheckpoint](_outputs/semantic-ingest/p61/checkpoint.md). 24 Dateinamen passen nicht zum enthaltenen Interview; Originalpfade bleiben Citation Identity. Practitioner-/Vendor-Interviews, keine AI-Research-Primärevidenz. Veröffentlichungsdatum unbekannt; Erfolgs-, Produkt- und Complianceangaben unverified. Quellenreview abgeschlossen; alle neun begrenzten Methoden am 08.10.2026 von Rolf ausdrücklich freigegeben und übernommen. Neue Praxisartefakte bleiben draft; berichtete Wirkungen sind weiterhin unverified.
+
+| Exakter Originalpfad | Tatsächlicher Inhalt | Typ / Verarbeitungsstatus | Quellenhub |
+|---|---|---|---|
+| `raw/Clippings/20 Web-Apps ohne Informatik-Hintergrund Ein HR-Chef baut seiner Firma einen eigenen App Store 18.md` | TM01 · Jens Bohse: Lead Lab und Agency OS | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/500.000 Follower f�r 26 Euro im Monat Andres selbstgebaute Content-Maschine mit Claude Code 19.md` | TM02 · Elliot: Beschaffungsmonitor und Koffervermietungs-Prototyp | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Alle Mitarbeiterinnen und SaaS-Vertr�ge mit Claude ersetzt  Christoph Fahle 28.md` | TM03 · Melchior Neumann: Rechnungsrouting mit schwerwiegendem Ausfall | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Andr� M. Bajorat Ich bau mir die Apps, wie sie mir gefallen! 13 - TokenMade - AI Use Cases.md` | TM04 · Max Brunner: Reinigungsplanung und getrennte Datenhaltung | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Bei Volkswagen programmiert die KI nachts Thorsten Jankowsky �ber Agentic Coding im Konzern.md` | TM05 · Volkswagen: H�ndlerfragen zu gepr�fter Antwort und FAQ | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Christoph Burseg Meine Buchhaltung macht jetzt eine KI 12 - TokenMade - AI Use Cases.md` | TM06 · Purpose Energy: Agententeam mit Evidenz, Signalen und menschlichen Gates | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Claude Code als Betriebssystem f�rs eigene Business CLAUDE.md, Skills & Konnektoren  Hendrik He.md` | TM07 · Hendrik Hemken: Datei-Kontext, Rechnungsentw�rfe und Statistikabruf | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Der 16-J�hrige, der nicht tippt � Sneaker-Reselling & Koffer-Vermietung aus dem Kinderzimmer 17.md` | TM01 · Jens Bohse: Lead Lab und Agency OS | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Deutschlands coolster Schulleiter baut seine Schulsoftware selbst (mit Claude Code und P0) 23.md` | TM08 · Christian Byza: Company Brain f�r teamweite Arbeitskoordination | vendor; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ein Journalist l�sst einen KI-Agenten mit seiner Stimme Interviews f�hren 07.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ex-Booking-SEO baut Flugzeug-Marktplatz  Julian Redlich 29 - TokenMade - AI Use Cases.md` | TM10 · PlaneFox: Marktplatzdaten normalisieren und datenbasierte Distribution | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ex-Googler baut J-Brain Wie Julius sein ganzes Business mit Claude steuert.md` | TM11 · Marco Morgenstern: Lokaler App-/Skill-Katalog mit geregelter Verteilung | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Fast kein Code von Hand Wie Scalable Capital Agentic Investing gebaut hat (mit CPO Alexander Sei.md` | TM12 · Maik Klotz: Banking-/Retro-App und getrenntes Codeaudit | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Gartenplaner mit OpenAI und Gemini 01.md` | TM13 · Samuel Potthoff: Gartenplaner mit Bestandsbindung | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Hundephysiotherapie mit Claude als Co-Founder 03 - TokenMade.md` | TM13 · Samuel Potthoff: Gartenplaner mit Bestandsbindung | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Kundengespr�che auswerten mit Claude und n8n 06 - TokenMade - AI Use Cases.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Notion nachgebaut, Legal Agent, Aroma-Prediction Dr. Sara Marquart von Planet A Foods zeigt ihre.md` | TM14 · Dr. Sara Marquart: R&D, Assistenz und Fachagenten bei Planet A Foods | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Software-Entwicklung ist gel�st Boris Fr�ndt �ber KI-Prototyping, Fable und warum UXUI der neu.md` | TM01 · Jens Bohse: Lead Lab und Agency OS | practitioner; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Steuerkanzlei auf Autopilot mit n8n, Claude & Notion  Melchior Neumann 26.md` | TM15 · Daniel Setzermann: Creator Operations und KI-Experimente bei HOLY | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Token Made OKR-Software mit Claude Code 09 - TokenMade - AI Use Cases.md` | TM16 · Spotler: Kundengespr�che mit SQL und RAG auswerten | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Unser Agency OS & CRM hab ich in 25h gebaut.  Jens Bohse  TokenMade 14 - TokenMade - AI Use Cases.md` | TM17 · Christoph Burseg: Vorbereitende Buchhaltung und agentische Arbeitsabl�ufe | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Vom Notizbuch zur Mac-App Maik Klotz �ber seine Hobby Projekte simplebanking und RetroMac 22.md` | TM18 · Andrej: Fabique als kuratierte Content-Pipeline | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Vom Screenshot zur Automatisierung Wie Max ohne Code-Kenntnisse ein Reinigungssystem baut 11.md` | TM19 · Marco Alberti: Evident Flow, Fachautomation und Ticketpipeline | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie Christian Byza ein Company Brain gebaut hat & TokenMade Event in M�nchen 20.md` | TM11 · Marco Morgenstern: Lokaler App-/Skill-Katalog mit geregelter Verteilung | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie ein Betriebsleiter Excel-Files durch eine eigene App ersetzt hat 25 - TokenMade - AI Use Cases.md` | TM20 · Felix Koleve: Schulverwaltung und individuelle Aufgaben | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie ein CMO sein ganzes Marketing automatisiert 05 - TokenMade - AI Use Cases.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; duplicate-variant, bytegleiche Kopie | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie ein CTO mit Claude seine 11s vorbereitet  David Nellessen 32 - TokenMade - AI Use Cases.md` | TM21 · David Nellessen: F�hrungsbriefings und Syte-Produkt | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie eine No-Code-Agentur ihr eigenes Gesch�ft mit KI disruptet 08 - TokenMade - AI Use Cases.md` | TM22 · Tim Heicks: Marketing-Agentenbibliothek bei SaaS Group | practitioner; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie sich HOLY ihre eigene Creator Plattform gebaut hat - Daniel Setzermann 26.md` | TM23 · Scalable Capital: Agentic Investing und gepr�fte Produktentwicklung | vendor; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Wie Vater und Sohn mit ihrem Bier in die NVIDIA-Keynote kamen - Lobster Lager 04 - TokenMade.md` | TM09 · Lobster Lager: Brauprozess, Rohstoffe und Sensordashboard | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+| `raw/Clippings/Ziel 5 Menschen, 1.000 AI-Agenten 10 - TokenMade - AI Use Cases.md` | TM24 · Cedrik Dudek: Briefing, Designreview und Webflow-CMS | mixed; content-ingested; begrenzte Methodenübernahme approved 2026-10-08; Wirkung unverified | [[tokenmade-ai-use-cases-source-review-2026-10-08]] |
+
+## Research-Inbox · 2026-10-07
+
+Rolf hat die drei Dateien ausdrücklich research zugeordnet. Ablage und Evidenzvertrauen bleiben getrennt; KI-Erzeugung ist nicht bekannt. [[research-inbox-source-review-2026-10-07]] dokumentiert Hashabgleich, Import und Grenzen.
+
+| Exakter Quellpfad | Typ und Status | Quellenbrief |
+| --- | --- | --- |
+| `research/assets/20250611_Reengineer Campaigns_draft.pptx` | Präsentationskopie; inventory-only, identisch mit raw-Original; bestehender P58-Extraktionsblock offen | [[research-inbox-source-review-2026-10-07]] |
+| `research/assets/20260212_End of the old way of Marketing_1_1.pptx` | Präsentationskopie; inventory-only, identisch mit bereits begrenzt reviewed raw-Original; kein neuer Beleg | [[research-inbox-source-review-2026-10-07]] |
+| `research/assets/Editorial-Board_2026_Industrial-Marketing-Management.pdf` | Namensverzeichnis; vollständiger Textreview, Sidecar ready; Herkunft/Aktualität unbestätigt, keine Claim-Promotion | [[research-inbox-source-review-2026-10-07]] |
+
+## Academy-Auswahlprüfung · 2026-10-07
+
+Auf Rolfs Auftrag zur Auswahlprüfung: vollständiger Metadaten-/Hashabgleich aller 3.904 PDFs, begrenzter Inhaltsreview von zwölf Gegenfällen (elf vollständig textuell, BSI-Dokument S. 1–3 und 12–14; drei Seiten visuell). [[academy-selection-review-2026-10-07]] und [exaktes Stichprobenledger mit SHA-256, Titel und Lesedeckung](_outputs/source-intake/academy-selection-2026-10-07/sample-ledger.csv). Drei Kandidaten priorisiert, noch kein vertiefter semantischer Ingest oder kanonische Methodenübernahme.
+
+| Exakte Quelle / Bereich | Typ / Zusammenfassung | Quellenstatus | Grenze |
+|---|---|---|---|
+| `raw/assets/tuev-rheinland/academy/2026-10-07/` | Academy-PDF-Archiv; vollständiges [Auswahlledger](_outputs/source-intake/academy-selection-2026-10-07/selection-ledger.csv) | inventory-only | 3.904 Originale; zwölf ausgewählte Gegenfälle separat gelesen, keine automatische Freigabe des Gesamtbestands. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/000f9d99cd6e4728971f099dd5d12c844bbc0e13f2f702e8cd4af370804c3a9d.pdf` | Anmeldeformular Filmauswertung | reviewed; selection-only | S. 1–4; Archiv empfohlen. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/0022464cb613b8aa0d0fcd0282ebe69a2636045aa969728a09ef13f5f933db5c.pdf` | Seminarinformation PowerPoint | reviewed; selection-only | S. 1–3; Projektreferenz. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/2222a263534a48c7f073869bd8cc463f3c63667c43fd62c7d243ded5ce86e424.pdf` | Praxis-Checkliste Qualitätskultur | reviewed; selection-only | S. 1–17; S. 3 visuell; Wissensreview priorisiert, kein validierter Reifegradindex. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/35d1d6bd5cc229de9dd90460fae829763d7bbacc55dd9483ba5794de65e36eea.pdf` | BSI IT-Grundschutz-Berater | partially-reviewed; selection-only | Nur S. 1–3, 12–14; bedingte Fachreferenz. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/3a65f7d70336eff2847283d51110b83a7173768abd7af609da1fdd8060e22d61.pdf` | Seminarzentrum-Konditionen München | reviewed; selection-only | S. 1; Archiv empfohlen. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/3c3af53a0f91d9f7837df742cae359648bdaf6102533374875c1d890a1b3d6d6.pdf` | Umweltauditor-FAQ | reviewed; selection-only | S. 1–5; Projektreferenz, aktuelle Qualifikationsregeln nicht geprüft. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/79aa6dc7264f2454e899face32083c7eef28adb0670a068c73b15201f71ba702.pdf` | Seminarinformation ITIL Bridge | reviewed; selection-only | S. 1–6; Projektreferenz, Aktualitätsfrage dokumentiert. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/7cf33b95fb0e0ed546f98e95d90ca8bac5c69a230c1ac72f35b397ce93215b8a.pdf` | DMS-Auswahlcheckliste | reviewed; selection-only | S. 1–7; Wissensreview priorisiert, kein Produktbenchmark. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/8405f3afc870ed575b2a322bcd01cd3a3d86483795c569c54f302467b0110b87.pdf` | Anmeldeformular Parkour | reviewed; selection-only | S. 1–4; Archiv empfohlen. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/96ef63b53221262d99627c7951995a4043bbd2cd4dc12a2550e29a5ee274b0f2.pdf` | ISO-19011-Leseprobe | reviewed; selection-only | S. 1–9; bedingte Fachreferenz, keine vollständige Auditmethode. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/d9c19062fc9bbdbe1b3683f071511599d6f3514185fcc78861c344300ca5aa16.pdf` | Vier Lernformate Qualitätsbeauftragter | reviewed; selection-only | S. 1 auch visuell; Projektvergleich, keine Effektivitätsstudie. |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/ee8fe20c8e5afc333a120e85f759bdb9b4f560354e016af55377c9c2aeb9315f.pdf` | Lerntransfer-Whitepaper | reviewed; selection-only | S. 1–7; S. 2 visuell; Wissensreview priorisiert, Wirksamkeitsclaims nicht verifiziert. |
+
+## Native LinkedIn-Schreibbeispiele · 2026-10-04
+
+Auf Rolfs Auftrag gezielt ausgewählte öffentliche Originalposts. [Quellenreview, Lesedeckung und Transfergrenzen](_outputs/reference-profile-pilot-2026-10-04/linkedin-reference-pack.md). Öffentliche Haupttexte gelesen, keine Bilder/Videos geprüft. Firecrawl unterstützt diese Plattform nicht; kein Rohvolltextimport, keine lokalen Quellsnapshots oder Korpusvollständigkeit behauptet. Kurze Paraphrasen und Handwerksanalyse gespeichert; keine sachlichen Erfolgsbehauptungen oder neue kanonische Methode übernommen.
+
+| Exakte Quelle | Rolle | Quellenstatus |
+|---|---|---|
+| https://www.linkedin.com/posts/andycrestodina_contentstrategy-activity-7049391792852533249-gjSd | L01; ein konkretes Projekt erklärt Thema und Format | public-text-reviewed; URL und Quellenanalyse, kein lokaler Snapshot |
+| https://www.linkedin.com/posts/mattheinz_marketing-is-a-verb-market-is-a-noun-its-activity-7202036017644675073-hN88 | L02; ein Missverständnis wird anschaulich | public-text-reviewed; berichtete Anekdote nicht verifiziert |
+| https://www.linkedin.com/posts/andycrestodina_using-ai-as-a-content-analyst-how-to-plan-activity-7282432652954030080-ItiR | L03; konkrete Arbeitsprobe innerhalb des Posts | public-text-reviewed; keine Wirkungsvalidierung des Prompts |
+| https://www.linkedin.com/posts/kieranjflanagan_sometimes-its-worth-remembering-that-truly-activity-7483506560892129280-3Aki | L04; Beispiele als Argument, begrenzte Strukturreferenz | public-text-reviewed; historische Zahlen und Kausalität ungeprüft |
+
+## Matt-Heinz-Schreibprofil-Pilot · 2026-10-04
+
+Gezielte öffentliche Quellenauswahl im freigegebenen ersten Umsetzungsabschnitt. [[matt-heinz-writing-profile-pilot-source-review]]; [exakte Identitäten und Hashes](_outputs/reference-profile-pilot-2026-10-04/corpus-manifest.json). Acht Artikeltexte vollständig geprüft, keine Bildanalyse, Fachbehauptungen nicht als Tatsachen übernommen. Autorenprofil nur experimenteller Output; keine kanonische Methodenpromotion.
+
+| Exakte Quelle | Rolle | Quellenstatus |
+|---|---|---|
+| `raw/imports/matt-heinz-profile-2026-10-04/d01-sales-report-into-marketing.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d02-brand-dirty-word.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d03-ai-review-bottleneck.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d04-compounding-drag.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d05-life-lessons.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/d06-powerpoint-template.md` | öffentliche Autorenveröffentlichung; Ableitung | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/h01-more-than-b2b.md` | öffentliche Autorenveröffentlichung; nachgelagerter Vergleich | content-ingested |
+| `raw/imports/matt-heinz-profile-2026-10-04/h02-human-trust.md` | öffentliche Autorenveröffentlichung; nachgelagerter Vergleich | content-ingested |
+
+## Writing-System, Taste und Compound Writing · 2026-10-04
+
+Explizit vom Nutzer ausgewählte Vergleichsquellen; keine automatische Erweiterung des zugelassenen Rohquellenkorpus. Ergebnis: [[writing-system-taste-review-2026-10-04]]. Vorschläge sind dokumentiert, nicht in produktive Methoden promoviert.
+
+| Exakte Quelle | Typ / Zusammenfassung | Quellenstatus | Grenze |
+|---|---|---|---|
+| `research/assets/taste-writing-review-2026-10-04/taste-statt-style.docx` | AI research, ChatGPT Web, Modell/Erzeugungsdatum unbekannt; `partially-verified`; Aufnahme 04.10.2026; [[taste-statt-style-research-review]] | content-ingested; Quellenanalyse abgeschlossen | Validiertes Sidecar, zentrale Primärquellen und aktuelle Produktbeschreibungen geprüft. Kein Beweis für die Gesamtarchitektur; keine Methodenpromotion. |
+| `raw/imports/taste-writing-review-2026-10-04/taste-evals-transcript.txt` | Nutzertranskript, Gesprächs-/Methodenquelle; [[writing-system-taste-review-2026-10-04]] | content-ingested; textuell geprüft | Bottom-up-Kriterien und Kalibrierung. Audio/Demo nicht unabhängig geprüft. Hash und Herkunft im Forschungsreview. |
+| `raw/imports/taste-writing-review-2026-10-04/compound-writing-transcript.txt` | Nutzertranskript, Erfahrungs-/Methodenquelle; [[writing-system-taste-review-2026-10-04]] | content-ingested; textuell geprüft | Katie Parrotts System, Dan Shipper Intro. Feedbackpflege ist kein Wirkungsnachweis. Hash und Herkunft im Forschungsreview. |
+| `repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85/` | Repo-Snapshot; [Dossier und genaue Lesedeckung](../repositories/petergyang--no-ai-slop/petergyang--no-ai-slop-analysis.md), [Manifest](../repositories/petergyang--no-ai-slop/manifests/000650b156983f5159695b441477f4e63b25dc85.json) | inventory-only; vollständige Source Custody | 14 Dateien inventarisiert; 13 Textdateien explizit statisch geprüft, PNG ungelesen. Keine Installation, Ausführung oder Qualitätsmessung. |
+
+Begleitende Web-/Paperprüfung mit Zugriffsumfang und unerreichbaren beziehungsweise ungeprüften Quellen: [[taste-statt-style-research-review]]. Keine Herstellerbehauptung wird dadurch zum unabhängigen Wirksamkeitsbeleg.
+
+- 2026-09-23: [Loop-Video qi0isefEOxk](https://www.youtube.com/watch?v=qi0isefEOxk), nutzerselektiertes Transkript vollständig gelesen; Audio/Folien nicht geprüft. Zwei methodische Anregungen ausdrücklich zur begrenzten Aufnahme freigegeben, Erfolgszahlen nicht verifiziert oder übernommen. [Quellenidentität, Hash, Zeitstellen und Ziele](_outputs/hubspot-taste-review-2026-09-23/video-ergaenzungsreview.md).
+
+## HubSpot Taste Profile · 2026-09-23
+
+| Quelle | Typ / Stand | Zusammenfassung |
+|---|---|---|
+| `wiki/_outputs/hubspot-taste-review-2026-09-23/skills/taste-profile/SKILL.md` und `skills/taste-profile/references/taste-profile-context.md` im selben Reviewordner | Hersteller-Methodenquelle; beide Texte vollständig geprüft; vier Anregungen vom Nutzer zur begrenzten Integration freigegeben. Kein empirischer Wirkungsnachweis. | [Quellenreview, Archivherkunft, Hash und Übernahmeziele](_outputs/hubspot-taste-review-2026-09-23/analyse.md); [[content-marketing-strategy]]. Originaldownload unverändert im Reviewordner; kein Plugin installiert. |
 
 ## P57 · Kanonische Übernahme · 2026-09-14
 
@@ -120,6 +235,7 @@ The [repo index](../repositories/index.md) routes to version-specific analytical
 
 | Source | Type | Status | Summary page | Notes |
 |---|---|---|---|---|
+| `repositories/karpathy--autoresearch/snapshots/228791fb499afffb54b46200aca536f79142f117/` | repository-snapshot | inventory-only | [Karpathy autoresearch dossier](../repositories/karpathy--autoresearch/karpathy--autoresearch-analysis.md) | 2026-09-19: user-selected full tree of 10 files; 8 text files fully reviewed, uv.lock header reviewed, progress.png unread. Eight qualified findings and bounded retrieval-pilot proposal; no runtime execution or canonical promotion. Exact coverage and limits in dossier. |
 | `repositories/obra--superpowers/snapshots/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/` | repository-snapshot | inventory-only | [Superpowers dossier](../repositories/obra--superpowers/obra--superpowers-analysis.md) | 195 files inventoried; 28 selected files reviewed statically in full or excerpts; eight findings. User delegated pilot selection on 2026-09-11. Dossier review completed; no runtime verification or canonical promotion. |
 | `repositories/garrytan--gstack/snapshots/94993f74012782fd94416dd44b8314f6363a13a4/` | repository-snapshot | inventory-only | [GStack dossier](../repositories/garrytan--gstack/garrytan--gstack-analysis.md) | 1181 files inventoried; 19 selected files reviewed statically in full or excerpts on 2026-09-11. Archived commit retained; prior review linked. User selected consolidation and deeper review. No runtime verification or new canonical promotion. |
 | `repositories/everyinc--compound-engineering-plugin/snapshots/0a2957852e2034d04eb01120fd7da6ed5307dc56/` | repository-snapshot | inventory-only | [Compound Engineering dossier](../repositories/everyinc--compound-engineering-plugin/everyinc--compound-engineering-plugin-analysis.md) | 799 files inventoried; 17 selected files reviewed statically in full or excerpts on 2026-09-11. Archived commit retained; prior review linked. User selected consolidation and deeper review. No runtime verification or new canonical promotion. |
@@ -391,3 +507,55 @@ D27 delegated public source selection and preservation. 15 exact originals admit
 | `raw/assets/tuev-rheinland/pv-kunden-2026-09-11/p06-vde-spec-90038-1.pdf` | HTTP original PDF | project-content-reviewed; 2026-09-11 | P06 — VDE SPEC 90038-1 V1.1 (en): Solar Module Quality Standard, Part 1 |
 | `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p07-vde-anfrage.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P07 — VDE Institut: Angebotsanfrage |
 | `raw/imports/tuev-rheinland/pv-kunden-2026-09-11/p08-tuv-anfrage.html` | HTTP original HTML | project-content-reviewed; 2026-09-11 | P08 — TÜV Rheinland: Angebotsformular für Photovoltaic Modules |
+
+## P58 — Approved first-wave source review, 2026-09-21
+
+Selection: 28 exact source paths / 26 byte hashes, approved by the user on 2026-09-21. The exhaustive per-source register is `wiki/_outputs/semantic-ingest/p58/decisions.csv`; paths, source types, hashes, reviewed scopes, aliases, and briefs are also enumerated in `wiki/_outputs/semantic-ingest/p58/source-bundle.md`. This is a review checkpoint, not completed promotion. Three aliases and three extraction-quality-blocked decks are kept separate from 22 distinct content reviews. See [[first-wave-source-review-2026-09-21]].
+
+| Source bundle | Type | Status/date | Summary |
+|---|---|---|---|
+| AI engineering clippings | mixed practitioner/vendor transcripts and playbook | reviewed within declared scope; promotion pending; 2026-09-21 | [[ai-engineering-source-review-2026-09-21]] |
+| AI-first adoption / Dharmesh memory | practitioner transcripts | full/selected review as declared; promotion pending; 2026-09-21 | [[ai-adoption-memory-source-review-2026-09-21]] |
+| Zero-click marketing | practitioner transcript | selected-section review; promotion pending; 2026-09-21 | [[zero-click-marketing-source-review-2026-09-21]] |
+| Digitalisierungsindex 2020/2021/2023 | sponsored primary study reports | selected-page review; promotion pending; 2026-09-21 | [[digital-maturity-studies-source-review-2026-09-21]] |
+| Export dynamic capabilities | systematic literature review | selected-page review; promotion pending; 2026-09-21 | [[export-dynamic-capabilities-source-review-2026-09-21]] |
+| Australian food supply power | qualitative primary study | selected-page review; promotion pending; 2026-09-21 | [[food-supply-power-source-review-2026-09-21]] |
+| Outcome-based business-model scaling | qualitative primary study | selected-page review; promotion pending; 2026-09-21 | [[outcome-based-scaling-source-review-2026-09-21]] |
+| Short-term B2B relationships | qualitative primary study | selected-page review; promotion pending; 2026-09-21 | [[short-term-b2b-relationships-source-review-2026-09-21]] |
+| Value-based customer management | conceptual literature synthesis | selected-page review; promotion pending; 2026-09-21 | [[value-based-customer-management-source-review-2026-09-21]] |
+
+### P58 AI research and generated syntheses
+
+| Source | Trust / verification | Status/date | Summary |
+|---|---|---|---|
+| `research/assets/20260118_dsv_digital_marketing_transformation_deck_GPT5.pptx` | unverified; uncited outcome claims | full extraction reviewed; registered-only proposed; 2026-09-21 | [[dsv-ai-transformation-draft-source-review-2026-09-21]] |
+| `research/assets/studien draft analyse zu Digitlaisierungsindex_2023__2020elstedig...__Digitalisierungsindex2021.pdf` | partially-verified against selected local study pages; remaining claims need verification | full extraction reviewed; registered-only proposed; 2026-09-21 | [[digital-maturity-ai-analysis-source-review-2026-09-21]] |
+| Three commercial outputs, exact paths in summary | generated synthesis; primary citations not rechecked | scoped review; retained hypotheses; 2026-09-21 | [[commercial-output-review-2026-09-21]] |
+
+## P58-C01–C11 — promotion status, 2026-09-21
+
+The user explicitly approved all eleven evidence patterns. Twenty promotional source rows are now approved and support nine existing-page updates plus [[digital-marketing-sales-maturity-diagnostic]] and [[outcome-based-service-scaling-assessment]]. Reviewed reading scopes, source identities, trust levels, and exclusions remain unchanged. The preceding review table is the pre-promotion snapshot; the current exact status is in the P58 decision ledger. Three blocked decks, three duplicate aliases, and two registered-only AI reports remain open in final approval accounting. See [[first-wave-source-review-2026-09-21]].
+
+
+## P59 / P60 — approved 2026-10-07
+
+| Exact source | Type / trust | Review status | Summary |
+|---|---|---|---|
+| `raw/assets/tuev-rheinland/academy/2026-10-07/2222a263534a48c7f073869bd8cc463f3c63667c43fd62c7d243ded5ce86e424.pdf` | pdf; vendor | text reviewed; new-claim approved; promoted; 2026-10-07 | [[academy-priority-source-review-2026-10-07]] |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/7cf33b95fb0e0ed546f98e95d90ca8bac5c69a230c1ac72f35b397ce93215b8a.pdf` | pdf; vendor | text reviewed; new-claim approved; promoted; 2026-10-07 | [[academy-priority-source-review-2026-10-07]] |
+| `raw/assets/tuev-rheinland/academy/2026-10-07/ee8fe20c8e5afc333a120e85f759bdb9b4f560354e016af55377c9c2aeb9315f.pdf` | pdf; vendor | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[academy-priority-source-review-2026-10-07]] |
+| `raw/Clippings/Agents That Write Their Own Tools at Runtime — Sandhya Subramani, AWS.md` | markdown; vendor | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Build & Sell with Codex (5+ Hour Course).md` | markdown; practitioner | selected-section review; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Give Us 30 Minutes & We’ll Fix Your Marketing for 2027 1.md` | markdown; practitioner | reviewed duplicate variant; duplicate-variant approved; retained alias; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Give Us 30 Minutes & We’ll Fix Your Marketing for 2027.md` | markdown; vendor | text reviewed; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/How I'd Rebuild My Claude Setup From Scratch (8020 Rule).md` | markdown; practitioner | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/How to Build an AI Marketing Team That Runs Itself (Live Demo).md` | markdown; vendor | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/I Spent $31,141 & 1,000 Hours On Claude Code To Learn This.md` | markdown; practitioner | text reviewed; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/My Secret Sauce For Building Beautiful UI using AI (My design workflow).md` | markdown; practitioner | text reviewed; new-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/The Biggest AI Opportunities Are Hiding in Boring Businesses.md` | markdown; practitioner | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Train Your AI to Write Like a Human With Just 3 Files.md` | markdown; practitioner | text reviewed; extended-claim approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+| `raw/Clippings/Why I couldn't build Jev at OpenAI — Diogo Almeida, TypeSafe Co-founder & CEO.md` | markdown; vendor | selected-section review; corroborating approved; promoted; 2026-10-07 | [[ai-practice-clippings-source-review-2026-10-07]] |
+
+Rolf hat alle 13 Evidenzmuster und die Dublettendisposition am 2026-10-07 mit "alles approved" freigegeben; die begrenzte Promotion ist umgesetzt. Codex-Kurs und Jev-Interview nur in ausdrücklich benannten Abschnitten geprüft. Maßgeblich: [[source-ingest-checkpoint-2026-10-07]]; Paketabschluss wird ausschließlich durch die Final/Full-Prüfungen dokumentiert.
+
+P59 / approved 2026-10-07; P60 / approved 2026-10-07.

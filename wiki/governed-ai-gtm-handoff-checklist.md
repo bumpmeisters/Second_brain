@@ -12,7 +12,7 @@ sources:
   - "raw/Clippings/The Art of Balancing Virtual and Physical Events with Samantha Ranieri.md"
   - raw/Clippings/Stop bolting on AI Rebuild your go-to-market from the foundation up  OnBase podcast.md
 created: 2026-07-26
-updated: 2026-09-09
+updated: 2026-09-21
 ---
 
 # Governed AI GTM Handoff Checklist
@@ -59,6 +59,22 @@ A handoff packet that another person or agent can continue without reconstructin
 ## Guardrails
 
 This is an operating checklist, not a validated maturity model. Participation, efficiency, and commercial outcome claims from the source remain anecdotal (source: Stop bolting on AI Rebuild your go-to-market from the foundation up  OnBase podcast.md; practitioner transcript; analysis: P11-C02).
+
+## Handoff from promised to realized value
+
+For a sales-to-delivery or customer-success handoff, add these fields to the existing packet:
+
+- Buyer and actual user/usage center, including any difference between them.
+- Expected value in use and the evidence that makes the promise feasible.
+- Delivery owner, prerequisites, customer contribution, and a way to observe value in use.
+- Observed realization, gaps from the promise, and who reviews the evidence.
+- Corrections to delivery and future promises, with provenance and an accountable owner.
+
+The conceptual synthesis distinguishes value-based selling around expected value, customer success around experienced value, and key-account management around relationship value across transactions. These are activity distinctions; they do not require three departments or establish revenue uplift. Keep account coordination and trust across the handoff while testing whether the promised value is actually realized.
+
+Source and review boundary (P58-C11, user-approved 2026-09-21):
+
+- `raw/assets/Untangling-value-based-customer-management-approaches-in-b_2026_Industrial-M.pdf` — [[value-based-customer-management-source-review-2026-09-21]].
 
 ## Related pages
 

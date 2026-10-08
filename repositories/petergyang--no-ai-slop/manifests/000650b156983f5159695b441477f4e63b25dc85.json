@@ -1,0 +1,145 @@
+{
+  "schema": "repository-snapshot/v1",
+  "repository_id": "petergyang--no-ai-slop",
+  "repository_url": "https://github.com/petergyang/no-ai-slop",
+  "commit": "000650b156983f5159695b441477f4e63b25dc85",
+  "tree_sha": "782e26a87b532a2859e7ee515deac6afdcb11612",
+  "acquired_at": "2026-10-04T15:29:39.308087+00:00",
+  "selection": {
+    "status": "approved-for-static-review",
+    "mode": "direct",
+    "actor": "Rolf",
+    "reason": "User-selected writing-system comparison; inspect taste calibration and anti-slop mechanisms",
+    "authorization_ref": "Task 01a0cb2a-8cd7-7303-8cb7-c26efb20d075 user request 2026-10-04"
+  },
+  "policy_sha256": "9ec18f7f3dd83dae95f9e02448149fc426d32e176c1ec1f837df9f92e83c539f",
+  "review_depth": "deep-static",
+  "visibility": "public",
+  "license": "MIT",
+  "archive_url": "https://codeload.github.com/petergyang/no-ai-slop/zip/000650b156983f5159695b441477f4e63b25dc85",
+  "archive_sha256": "74662ce43c09cc38e6950ada557db7c8889375e8b6c62c8f0eb526089df6c89a",
+  "archive_bytes": 252469,
+  "snapshot_path": "repositories/petergyang--no-ai-slop/snapshots/000650b156983f5159695b441477f4e63b25dc85",
+  "file_count": 14,
+  "git_blobs_complete": true,
+  "external_payloads_complete": true,
+  "external_payloads_missing": [],
+  "limitations": [
+    "Git history, dependencies and externally linked documentation are outside the snapshot.",
+    "Symlink blobs, if present, are inert target text; executable modes are metadata only."
+  ],
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1937,
+      "sha256": "010b63e747efb90d86ef1921e61a354643b3a076ca267d5cbb5f135b7212b0d1",
+      "git_blob_sha": "fce7963bf9fefbc7d7081e55a307548b4c96f967",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": ".github/workflows/plugin.yml",
+      "bytes": 1309,
+      "sha256": "a3a194f3fadef3808f8b8ac44ed43bb39d62362359fda0e916178ed02185ab2c",
+      "git_blob_sha": "6b922d6524fad9754d1e0445d86d742750768d26",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 6,
+      "sha256": "ed19d3c9c8a5e34d0179e0b1a9c2907d2e657738733e4a432a8cf81c76ce56f1",
+      "git_blob_sha": "849ddff3b7ec917b5f4563e9a6d3ea63ea512a70",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1067,
+      "sha256": "b7a7fe370cc4c9e974528c7cea7841cf8ac886bc9ed947edb11b289441fba4a8",
+      "git_blob_sha": "644ebee1944d0e7d03c66a25977ff0a8a8e1c7ae",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "PRIVACY.md",
+      "bytes": 470,
+      "sha256": "fbde0eed400e8b4866cc438b05aa60af9f37a5ee78f38a1b2f80f138228e5769",
+      "git_blob_sha": "21076807adccc9d85001f6ec443604739e3af425",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3248,
+      "sha256": "a2e24837d6531c2e827876123d05ea482a21bcfc25358dbdacbf581fb1e51d81",
+      "git_blob_sha": "82f8b7af7e02918077afb447f8fc83c2d33483ba",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "TERMS.md",
+      "bytes": 510,
+      "sha256": "b54589cafe3e61504491976f34cacb704e1831ec3c9c49857ac8dc0fa8e6cc43",
+      "git_blob_sha": "818e77135c291b64bfb4c525ad59c9a50796010a",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 235,
+      "sha256": "51aa33afd4a3287a618c681212a86ce01cc7da4d9c37e54e65166acffa24519a",
+      "git_blob_sha": "000608d7347d1e2465f9bf304c16ba96624c8f98",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "assets/no-ai-slop.png",
+      "bytes": 233704,
+      "sha256": "910c4a57463447925959e8d322070658eec0db0d8a6ccbe95b14f5081cbb7262",
+      "git_blob_sha": "1f7b9718a4810241d3a43358c083f0e694491a24",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "plugin-submission.md",
+      "bytes": 1746,
+      "sha256": "d1f17f36ec041708104cb04da7e87ad406d46d93089015b3252d039cef695d42",
+      "git_blob_sha": "b6eed3bec48de0b2f3be5043980305fd163b2988",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "scripts/build_plugin.py",
+      "bytes": 4581,
+      "sha256": "ac836f53d02a232945327b64d39d33d9b8205ab8846666670eb3cef3422b89e6",
+      "git_blob_sha": "7152413885649fe1dbc52ae1b8f5785138308694",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "skills/no-ai-slop/SKILL.md",
+      "bytes": 10853,
+      "sha256": "992b365f51a2f62cf4c1c5ed22049a9ee551dfea677550c1a72b371c0ceadd62",
+      "git_blob_sha": "e2008aa08d688846b0373b83d7c3d33b85eaabdd",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "skills/no-ai-slop/agents/openai.yaml",
+      "bytes": 235,
+      "sha256": "51aa33afd4a3287a618c681212a86ce01cc7da4d9c37e54e65166acffa24519a",
+      "git_blob_sha": "000608d7347d1e2465f9bf304c16ba96624c8f98",
+      "git_mode": "100644",
+      "representation": "file"
+    },
+    {
+      "path": "skills/no-ai-slop/eval.md",
+      "bytes": 3214,
+      "sha256": "8ad8d83ed1abe7fc054ad74966bfca64fc182bc71f59d701b24b962c39d11ad7",
+      "git_blob_sha": "e912b3e9246ded24b14116682c23702a4d083dc7",
+      "git_mode": "100644",
+      "representation": "file"
+    }
+  ]
+}

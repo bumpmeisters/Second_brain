@@ -25,7 +25,7 @@ sources:
   - raw/imports/automated-clippings/youtube/UCdCR4-uYOg5ju-IUuDnfnQA/2026-07-30--PzaC81yCJg0.md
   - wiki/newsletters/ainauten/linked-sources/anthropic-agent-incident-assessment-source-review-2026-09-14.md
 created: 2026-07-01
-updated: 2026-09-14
+updated: 2026-09-21
 ---
 
 # Agent Security
@@ -157,7 +157,7 @@ The July 2026 OpenAI–Hugging Face incident shows why a cyber-capability evalua
 
 Pre-stage a vetted, in-boundary path for analyzing hostile traces. Hugging Face reports that hosted-model safeguards blocked parts of its forensic workload and that it instead used a locally hosted model, which also kept attacker data and referenced credentials inside its environment ([Hugging Face disclosure](https://huggingface.co/blog/security-incident-july-2026)). This supports a readiness requirement, not a universal model prescription: choose and test an analysis path appropriate to the data and threat model before an incident. AI may accelerate correlation and reconstruction, but accountable humans retain containment, eradication, and recovery authority (analysis: [[_outputs/source-briefs/2026-08-16/p32/openai-hugging-face-agent-intrusion-source-brief|OpenAI–Hugging Face agent intrusion source brief]]).
 
-Anthropic's four reported evaluation incidents provide bounded first-party corroboration for the same control direction. Prompt text that says a task is simulated or forbids internet access cannot substitute for enforceable target scope and egress controls. Contradictory or impossible tasks should stop and escalate; incident assessment should preserve observed actions and use adversarial replay, environment hardening, and independent controls. A chain-of-thought monitor reportedly missed one incident after accepting the model's simulated-setting rationale, so reasoning traces remain fallible evidence rather than a sufficient safety layer (source: [[anthropic-agent-incident-assessment-source-review-2026-09-14]]). The report does not establish incident prevalence, production safety, or safeguard sufficiency.
+Anthropic's four reported evaluation incidents provide bounded first-party corroboration for the same control direction. Prompt text that says a task is simulated or forbids internet access cannot substitute for enforceable target scope and egress controls. Contradictory or impossible tasks should stop and escalate; incident assessment should preserve observed actions and use adversarial replay, environment hardening, and independent controls. A chain-of-thought monitor reportedly missed one incident after accepting the model's simulated-setting rationale, so reasoning traces remain fallible evidence rather than a sufficient safety layer (source: [[newsletters/ainauten/linked-sources/anthropic-agent-incident-assessment-source-review-2026-09-14]]). The report does not establish incident prevalence, production safety, or safeguard sufficiency.
 
 If compromise is suspected:
 
@@ -199,6 +199,18 @@ For vault work:
 - How should skills, MCP servers, and instruction files be signed, reviewed, pinned, and re-approved after updates?
 - What minimal trace is sufficient to reconstruct an injection-to-action chain without storing sensitive content?
 - Which current runtime-enforcement techniques survive new tools, long trajectories, and adaptive attackers?
+
+## Checker invocation and readiness evidence
+
+Separate an observable event from the judgment it supports. Put mandatory process checks at enforceable events where the runtime supports them; retain domain judgment as guidance, and remove stale or generic rules. A hook establishes that a checker ran, not that its detection is complete or its result correct.
+
+For a bounded coding change, retain the scanner findings, fixes, and rescan result as readiness evidence alongside review. Distinguish a draft PR from a ready-to-merge decision. The source's sponsored scanner examples do not establish comprehensive vulnerability coverage; illustrative regex or shell checks are not a general access-control mechanism. This is a practitioner-derived method, not a verified security guarantee.
+
+Source and review boundary (P58-C01, user-approved 2026-09-21):
+
+- `raw/Clippings/11 Tiny Coding Agent Fixes With A Stupid Amount Of Payoff.md` — [[ai-engineering-source-review-2026-09-21]].
+- `raw/Clippings/No One Talks Enough About Security for AI Coding. Here's How I Do It in My Workflows.md` — [[ai-engineering-source-review-2026-09-21]].
+- `raw/Clippings/Watch This If Your Coding Agent is Ignoring Your Rules (You Need Hooks).md` — [[ai-engineering-source-review-2026-09-21]].
 
 ## Related pages
 
